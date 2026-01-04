@@ -69,7 +69,7 @@ export async function loadGameData(): Promise<RawGameData> {
   }
 
   try {
-    const response = await fetch('/data/game_data.json');
+    const response = await fetch('/assets/game_data.json');
     if (!response.ok) {
       throw new Error(`Failed to load game data: ${response.status}`);
     }
@@ -102,6 +102,15 @@ function convertRawCommand(raw: RawCommand): Command {
 export { convertRawCommand };
 
 /**
+ * Convert BMP filename to PNG
+ */
+function bmpToPng(filename: string): string {
+  return filename.toLowerCase().endsWith('.bmp')
+    ? filename.slice(0, -4) + '.png'
+    : filename;
+}
+
+/**
  * Build scenes from raw VND data
  */
 export function buildScenesFromVnd(vnd: RawVndData, _countryId: string): Scene[] {
@@ -111,8 +120,9 @@ export function buildScenesFromVnd(vnd: RawVndData, _countryId: string): Scene[]
   const sceneIds = vnd.scenes.length > 0 ? vnd.scenes : [1];
 
   for (const sceneId of sceneIds) {
-    // Find background for this scene (use first image as default)
-    const background = vnd.resources.images[0] || undefined;
+    // Find background for this scene (use first image as default, convert to PNG)
+    const rawBackground = vnd.resources.images[0];
+    const background = rawBackground ? bmpToPng(rawBackground) : undefined;
 
     // Build hotspots from coordinates
     const hotspots: Hotspot[] = vnd.hotspots.slice(0, 10).map((coords, index) => ({

@@ -8,6 +8,8 @@ import type { Scene as SceneType, Hotspot as HotspotType } from '../../types/gam
 import { Hotspot, HotspotDebug } from './Hotspot';
 import { commandExecutor } from '../../engine/CommandInterpreter';
 import { useGameStore } from '../../store/gameStore';
+import { useAudio } from '../../hooks/useAudio';
+import { HtmlViewer } from '../UI/HtmlViewer';
 
 // Original game resolution
 const ORIGINAL_WIDTH = 640;
@@ -32,9 +34,16 @@ export const Scene: React.FC<SceneProps> = ({ scene, countryId, debug = false })
   const [dynamicImages, setDynamicImages] = useState<Map<string, DynamicImage>>(new Map());
   const [currentText, setCurrentText] = useState<{ text: string; x: number; y: number } | null>(null);
   const [hoveredHotspot, setHoveredHotspot] = useState<HotspotType | null>(null);
+  const [htmlContent, setHtmlContent] = useState<{
+    src: string;
+    rect?: { x: number; y: number; w: number; h: number };
+  } | null>(null);
 
   // Scene ID from store (for reference)
   useGameStore((state) => state.currentScene);
+
+  // Audio hook
+  const { playSound, stopAll: stopAudio } = useAudio(countryId);
 
   // Calculate scale based on container size
   useEffect(() => {
@@ -52,6 +61,30 @@ export const Scene: React.FC<SceneProps> = ({ scene, countryId, debug = false })
     window.addEventListener('resize', updateScale);
     return () => window.removeEventListener('resize', updateScale);
   }, []);
+
+  // Build asset path (convert BMP to PNG for images)
+  const getAssetPath = useCallback(
+    (filename: string, type: 'img' | 'audio' | 'video' | 'html' = 'img') => {
+      const basePath = `/assets/${countryId}`;
+      // Convert BMP to PNG for images
+      const finalFilename = type === 'img' && filename.toLowerCase().endsWith('.bmp')
+        ? filename.slice(0, -4) + '.png'
+        : filename;
+      switch (type) {
+        case 'img':
+          return `${basePath}/img24/${finalFilename}`;
+        case 'audio':
+          return `${basePath}/digit/${finalFilename}`;
+        case 'video':
+          return `${basePath}/movie/${finalFilename}`;
+        case 'html':
+          return `${basePath}/html/${finalFilename}`;
+        default:
+          return `${basePath}/${finalFilename}`;
+      }
+    },
+    [countryId]
+  );
 
   // Set up media callbacks
   useEffect(() => {
@@ -76,23 +109,22 @@ export const Scene: React.FC<SceneProps> = ({ scene, countryId, debug = false })
         setTimeout(() => setCurrentText(null), 3000);
       },
       playAudio: (src, loop) => {
-        console.log('Play audio:', src, 'loop:', loop);
-        // TODO: Implement audio player
+        playSound(src, loop);
       },
       playVideo: (src, rect) => {
         console.log('Play video:', src, 'rect:', rect);
         // TODO: Implement video player
       },
       showHtml: (src, rect) => {
-        console.log('Show HTML:', src, 'rect:', rect);
-        // TODO: Implement HTML viewer
+        const htmlPath = getAssetPath(src, 'html');
+        setHtmlContent({ src: htmlPath, rect });
       },
       setCursor: (cursor) => {
         console.log('Set cursor:', cursor);
         // TODO: Implement custom cursors
       },
     });
-  }, []);
+  }, [playSound, getAssetPath]);
 
   // Execute scene enter commands
   useEffect(() => {
@@ -100,33 +132,14 @@ export const Scene: React.FC<SceneProps> = ({ scene, countryId, debug = false })
       scene.onEnter.forEach((cmd) => commandExecutor.execute(cmd));
     }
 
-    // Cleanup: execute exit commands
+    // Cleanup: execute exit commands and stop audio
     return () => {
+      stopAudio();
       if (scene.onExit) {
         scene.onExit.forEach((cmd) => commandExecutor.execute(cmd));
       }
     };
-  }, [scene]);
-
-  // Build asset path
-  const getAssetPath = useCallback(
-    (filename: string, type: 'img' | 'audio' | 'video' | 'html' = 'img') => {
-      const basePath = `/assets/${countryId}`;
-      switch (type) {
-        case 'img':
-          return `${basePath}/img24/${filename}`;
-        case 'audio':
-          return `${basePath}/digit/${filename}`;
-        case 'video':
-          return `${basePath}/movie/${filename}`;
-        case 'html':
-          return `${basePath}/html/${filename}`;
-        default:
-          return `${basePath}/${filename}`;
-      }
-    },
-    [countryId]
-  );
+  }, [scene, stopAudio]);
 
   const HotspotComponent = debug ? HotspotDebug : Hotspot;
 
@@ -242,6 +255,16 @@ export const Scene: React.FC<SceneProps> = ({ scene, countryId, debug = false })
             <div>Hotspots: {scene.hotspots.length}</div>
             {hoveredHotspot && <div>Hovered: #{hoveredHotspot.id}</div>}
           </div>
+        )}
+
+        {/* HTML Viewer */}
+        {htmlContent && (
+          <HtmlViewer
+            src={htmlContent.src}
+            rect={htmlContent.rect}
+            scale={scale}
+            onClose={() => setHtmlContent(null)}
+          />
         )}
       </div>
     </div>
