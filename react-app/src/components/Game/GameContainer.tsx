@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { Scene } from './Scene';
 import { Toolbar } from '../UI/Toolbar';
+import { JustePrix } from '../MiniGames/JustePrix';
 import { useGameStore } from '../../store/gameStore';
 import { loadCountry, getCountryList } from '../../engine/GameDataLoader';
 import type { Country } from '../../types/game';
@@ -46,6 +47,7 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
   const [showInventory, setShowInventory] = useState(false);
   const [showCalculator, setShowCalculator] = useState(false);
   const [showCountrySelector, setShowCountrySelector] = useState(false);
+  const [showMiniGame, setShowMiniGame] = useState(false);
 
   // Load country list on mount
   useEffect(() => {
@@ -96,6 +98,10 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
 
   const handleSettings = () => {
     alert('Paramètres: Volume, Langue, Crédits...');
+  };
+
+  const handleMiniGame = () => {
+    setShowMiniGame(true);
   };
 
   const containerStyle: React.CSSProperties = {
@@ -174,6 +180,7 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
         onCalculator={handleCalculator}
         onPhone={handlePhone}
         onSettings={handleSettings}
+        onMiniGame={handleMiniGame}
       />
 
       {/* Country Selector Modal */}
@@ -387,6 +394,17 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
             </button>
           </div>
         </div>
+      )}
+
+      {/* Mini-Game: Juste Prix */}
+      {showMiniGame && (
+        <JustePrix
+          countryId={currentCountry}
+          onClose={() => setShowMiniGame(false)}
+          onWin={(points) => {
+            console.log(`Jeu gagné avec ${points} points!`);
+          }}
+        />
       )}
     </div>
   );

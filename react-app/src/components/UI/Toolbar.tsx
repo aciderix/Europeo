@@ -12,6 +12,7 @@ interface ToolbarProps {
   onCalculator?: () => void;
   onPhone?: () => void;
   onSettings?: () => void;
+  onMiniGame?: () => void;
 }
 
 export const Toolbar: React.FC<ToolbarProps> = ({
@@ -20,6 +21,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({
   onCalculator,
   onPhone,
   onSettings,
+  onMiniGame,
 }) => {
   const score = useGameStore((state) => state.score);
   const currentCountry = useGameStore((state) => state.currentCountry);
@@ -105,6 +107,19 @@ export const Toolbar: React.FC<ToolbarProps> = ({
           }}
         >
           🎒 Sac
+        </button>
+
+        <button
+          style={{ ...buttonStyle, backgroundColor: '#8e44ad', borderColor: '#9b59b6' }}
+          onClick={onMiniGame}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#9b59b6';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#8e44ad';
+          }}
+        >
+          🎮 Jeu
         </button>
       </div>
 
