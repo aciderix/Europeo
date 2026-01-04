@@ -1,0 +1,341 @@
+=================================================================
+ FICHIER TRAITÉ : bateau.dll.txt
+ IMAGES EXTRAITES : 10
+=================================================================
+ LISTE DES IMAGES :
+ * [Image 1] Type: TBitmap, Taille: 768054 octets -> Image_1.bmp
+ * [Image 2] Type: TBitmap, Taille: 4818 octets -> Image_2.bmp
+ * [Image 3] Type: TBitmap, Taille: 6598 octets -> Image_3.bmp
+ * [Image 4] Type: TBitmap, Taille: 5998 octets -> Image_4.bmp
+ * [Image 5] Type: TBitmap, Taille: 7326 octets -> Image_5.bmp
+ * [Image 6] Type: TBitmap, Taille: 6694 octets -> Image_6.bmp
+ * [Image 7] Type: TBitmap, Taille: 4614 octets -> Image_7.bmp
+ * [Image 8] Type: TBitmap, Taille: 6314 octets -> Image_8.bmp
+ * [Image 9] Type: TBitmap, Taille: 7178 octets -> Image_9.bmp
+ * [Image 10] Type: TBitmap, Taille: 11718 octets -> Image_10.bmp
+=================================================================
+
+object main: Tmain
+  Left = 234
+  Top = 141
+  BorderStyle = bsNone
+  Caption = 'main'
+  ClientHeight = 400
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = True
+  Position = poScreenCenter
+  Visible = True
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Im_fond: TImage
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 400
+    AutoSize = True
+    Picture.Data = 'Image_1.bmp'
+  end
+  object Sh_Belg_1: TShape
+    Left = 124
+    Top = 188
+    Width = 69
+    Height = 77
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_Belg_1MouseDown
+  end
+  object Sh_Aut_1: TShape
+    Left = 120
+    Top = 272
+    Width = 49
+    Height = 125
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_Aut_1MouseDown
+  end
+  object Sh_Ang: TShape
+    Left = 356
+    Top = 60
+    Width = 133
+    Height = 101
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_AngMouseDown
+  end
+  object Sh_Gre: TShape
+    Left = 488
+    Top = 160
+    Width = 73
+    Height = 105
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_GreMouseDown
+  end
+  object Sh_pays: TShape
+    Left = 360
+    Top = 168
+    Width = 121
+    Height = 113
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_paysMouseDown
+  end
+  object Sh_Ita: TShape
+    Left = 184
+    Top = 240
+    Width = 119
+    Height = 113
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_ItaMouseDown
+  end
+  object Sh_Aut_2: TShape
+    Left = 48
+    Top = 272
+    Width = 121
+    Height = 121
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_Aut_2MouseDown
+  end
+  object Sh_Belg_2: TShape
+    Left = 40
+    Top = 144
+    Width = 145
+    Height = 121
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_Belg_2MouseDown
+  end
+  object Im_sculture: TImage1
+    Tag = 5
+    Left = 0
+    Top = 302
+    Width = 43
+    Height = 85
+    AutoSize = True
+    Picture.Data = 'Image_2.bmp'
+    Transparent = True
+    OnClick = Im_scultureClick
+    top_0 = 0
+    left_0 = 0
+    top_1 = 230
+    left_1 = 32
+    top_2 = 230
+    left_2 = 178
+    top_3 = 230
+    left_3 = 326
+    curseur = 5
+  end
+  object Im_violon: TImage1
+    Tag = 2
+    Left = 192
+    Top = 342
+    Width = 118
+    Height = 46
+    AutoSize = True
+    Picture.Data = 'Image_3.bmp'
+    Transparent = True
+    OnClick = Im_violonClick
+    top_0 = 0
+    left_0 = 0
+    top_1 = 230
+    left_1 = 32
+    top_2 = 230
+    left_2 = 178
+    top_3 = 230
+    left_3 = 326
+    curseur = 2
+  end
+  object Im_bouteille: TImage1
+    Tag = 7
+    Left = 335
+    Top = 309
+    Width = 59
+    Height = 82
+    AutoSize = True
+    Picture.Data = 'Image_4.bmp'
+    Transparent = True
+    OnClick = Im_bouteilleClick
+    top_0 = 0
+    left_0 = 0
+    top_1 = 126
+    left_1 = 10
+    top_2 = 126
+    left_2 = 156
+    top_3 = 128
+    left_3 = 302
+    curseur = 7
+  end
+  object Im_chap_2: TImage1
+    Tag = 4
+    Left = 425
+    Top = 284
+    Width = 88
+    Height = 71
+    AutoSize = True
+    Picture.Data = 'Image_5.bmp'
+    Transparent = True
+    OnClick = Im_chap_2Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 232
+    left_1 = 34
+    top_2 = 232
+    left_2 = 180
+    top_3 = 232
+    left_3 = 327
+    curseur = 4
+  end
+  object Im_cheval: TImage1
+    Tag = 8
+    Left = 568
+    Top = 111
+    Width = 71
+    Height = 78
+    AutoSize = True
+    Picture.Data = 'Image_6.bmp'
+    Transparent = True
+    OnClick = Im_chevalClick
+    top_0 = 0
+    left_0 = 0
+    top_1 = 228
+    left_1 = 26
+    top_2 = 228
+    left_2 = 172
+    top_3 = 222
+    left_3 = 318
+    curseur = 8
+  end
+  object Im_chap_1: TImage1
+    Tag = 3
+    Left = 296
+    Top = 80
+    Width = 51
+    Height = 68
+    AutoSize = True
+    Picture.Data = 'Image_7.bmp'
+    Transparent = True
+    OnClick = Im_chap_1Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 20
+    left_1 = 54
+    top_2 = 24
+    left_2 = 200
+    top_3 = 22
+    left_3 = 346
+    curseur = 3
+  end
+  object Im_art: TImage1
+    Tag = 6
+    Left = 223
+    Top = 44
+    Width = 68
+    Height = 77
+    AutoSize = True
+    Picture.Data = 'Image_8.bmp'
+    Transparent = True
+    OnClick = Im_artClick
+    top_0 = 0
+    left_0 = 0
+    top_1 = 126
+    left_1 = 16
+    top_2 = 126
+    left_2 = 162
+    top_3 = 126
+    left_3 = 310
+    curseur = 6
+  end
+  object Im_bus: TImage1
+    Tag = 1
+    Left = 306
+    Top = 240
+    Width = 100
+    Height = 61
+    AutoSize = True
+    Picture.Data = 'Image_9.bmp'
+    Transparent = True
+    OnClick = Im_busClick
+    top_0 = 0
+    left_0 = 0
+    top_1 = 50
+    left_1 = 44
+    top_2 = 50
+    left_2 = 190
+    top_3 = 50
+    left_3 = 338
+    curseur = 1
+  end
+  object Perdu: TLabel
+    Left = 200
+    Top = 142
+    Width = 226
+    Height = 74
+    Caption = 'PERDU'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -64
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+    Visible = False
+  end
+  object Gagne: TLabel
+    Left = 192
+    Top = 150
+    Width = 240
+    Height = 74
+    Caption = 'GAGNE'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -64
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+    Visible = False
+  end
+  object Im_bulle: TImage
+    Left = 28
+    Top = 28
+    Width = 149
+    Height = 70
+    AutoSize = True
+    Picture.Data = 'Image_10.bmp'
+    Transparent = True
+  end
+  object chrono: TPanel
+    Left = 110
+    Top = 48
+    Width = 43
+    Height = 33
+    BevelOuter = bvNone
+    Caption = 'chrono'
+    Color = clWhite
+    Ctl3D = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -24
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsBold]
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 104
+    Top = 352
+  end
+end

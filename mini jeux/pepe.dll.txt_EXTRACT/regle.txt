@@ -1,0 +1,43 @@
+Le But du Jeu
+Thème : Culture générale / Monuments de Paris.
+La Question (reconstituée via les Labels 3, 4, 5, 6) :
+"Combien y a t-il de marches pour monter au dernier étage de la tour Eiffel ?"
+L'Interface :
+Une image de fond (Image_1.bmp) qui représente probablement la Tour Eiffel ou une vue de Paris.
+Une phrase réponse à trou : "Il y a [CHAMP DE SAISIE] marches".
+2. Analyse Technique de la Réponse
+Le composant de saisie (maskEdit) nous donne un indice crucial sur la réponse attendue grâce à sa propriété EditMask.
+Le Masque : '0000;0;*'
+Cela signifie que la réponse DOIT faire exactement 4 chiffres.
+Pas de virgule cette fois, c'est un nombre entier.
+
+La Solution 1652
+
+3. Reconstruction (Instructions pour le développeur)
+Pour refaire ce niveau, voici la disposition des éléments :
+Le Fond :
+Affichez Image_1.bmp en 640x400.
+Les Textes (Labels) :
+Affichez la question sur plusieurs lignes (vers la droite de l'écran, voir Left: 400).
+Affichez "Il y a" à gauche du champ de saisie (Left: 424, Top: 224).
+Affichez "marches" en dessous du champ (Left: 456, Top: 256).
+L'Input (Saisie) :
+Placez un champ de texte (<input>) à Left: 488, Top: 224.
+Contrainte : Limitez la saisie à 4 caractères numériques (maxlength="4").
+Logique de Validation :
+L'utilisateur tape des chiffres.
+Dès que 4 chiffres sont entrés, vérifiez si c'est 1665.
+Si oui : Affichez "Bravo" ou passez à la suite.
+Si non : Affichez un commentaire dans la zone lblComment (en bas au centre) du type 
+
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+
+  65346, 	"euh..."
+  65347, 	"Tout \xE7a !"
+  65348, 	"Non...\rEssaye encore !"
+  65349, 	"Il me semble\rqu'il y en a moins."
+  65350, 	"Je crois\rqu'il y en a plus."
+  65351, 	"1652"
+}

@@ -1,0 +1,44 @@
+1. Le Principe du Jeu : "Répétez après moi"
+Le jeu est un Simon Says musical.
+L'ordinateur joue une séquence : Il allume une grenouille (affiche son image "bouche ouverte") et joue un son (coassement), puis l'éteint. Il enchaîne plusieurs grenouilles.
+Le joueur doit reproduire : Il doit cliquer sur les grenouilles dans le même ordre.
+Progression : À chaque réussite, la séquence s'allonge d'une note.
+2. L'Analyse des Images et du Code
+Le fichier frog.dll.txt superpose des images "actives" (grenouilles qui gueulent/bougent) sur un fond statique.
+Le Fond (Image_1.bmp) : Contient les grenouilles au repos (bouche fermée).
+La Consigne (Image_2.bmp) : C'est la bulle de texte.
+Position : Left: 132, Top: 203.
+Elle s'affiche probablement au début pour dire "Écoute bien et répète !" ou pour afficher le score final.
+3. La Cartographie du Marais (Qui est qui ?)
+Voici la correspondance exacte entre le code, la position à l'écran, et l'image d'animation (la grenouille qui chante).
+Il y a 7 Grenouilles Chanteuses principales + 1 Spéciale.
+Position à l'écran	Objet Visuel (Animation)	Zone de Clic (Hitbox)	Fichier Image (Extrait)	Description Visuelle
+Haut - Gauche	Image5 (125, 19)	Image14	Image_7.bmp	Grenouille perchée haut
+Haut - Droite	Image2 (543, 7)	Image17	Image_4.bmp	Grenouille qui lève les bras
+Milieu - Gauche	Image1 (127, 96)	Image10	Image_3.bmp	Grenouille classique
+Milieu - Centre	Image6 (402, 95)	Image15	Image_8.bmp	Grenouille appuyée
+Centre - Petit	Image4 (306, 148)	Image13	Image_6.bmp	Petite grenouille au loin
+Bas - Gauche	Image8 (13, 155)	Image11	Image_10.bmp	Grenouille dans les roseaux
+Bas - Droite	Image7 (426, 239)	Image16	Image_9.bmp	Grenouille en bas à droite
+4. Le Mystère de la Grenouille Dorée (Image_5.bmp)
+Vous avez mentionné que l'Image 5 est différente ("orange/dorée").
+Dans le code : Elle correspond à l'objet Image3.
+Position : Left: 585, Top: 157 (Tout à fait à droite, à mi-hauteur).
+État : Visible = False. Elle est cachée par défaut.
+Hitbox : Image12.
+Hypothèse de gameplay :
+C'est une Grenouille Bonus ou Surprise.
+Comme il y a un Timer1 réglé sur 2000ms (2 secondes), cette grenouille apparaît peut-être aléatoirement pendant le jeu. Si le joueur clique dessus rapidement avant qu'elle ne disparaisse, il gagne des points bonus ou une vie supplémentaire.
+5. Résumé pour la reconstruction
+Pour refaire ce niveau :
+Mise en place :
+Affichez le fond (Image_1.bmp).
+Placez toutes les autres images (Image_3 à Image_10) aux coordonnées indiquées dans le tableau ci-dessus, mais mettez-les en caché (ou opacité 0).
+Créez des zones cliquables transparentes par-dessus.
+Logique "Simon" :
+L'ordi choisit "Haut-Gauche".
+Vous affichez une suite d'images /croissement de grenouilles 
+À l'utilisateur de cliquer sur les grenouilles dans le bon ordre
+Feedback Visuel :
+Quand le joueur clique sur une zone (ex: Haut-Droite), vous devez afficher momentanément l'image correspondante pour donner l'impression que la grenouille réagit au clic.
+C'est un excellent petit jeu de mémoire !

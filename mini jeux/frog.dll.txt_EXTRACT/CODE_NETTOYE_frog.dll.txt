@@ -1,0 +1,265 @@
+=================================================================
+ FICHIER TRAITÉ : frog.dll.txt
+ IMAGES EXTRAITES : 10
+=================================================================
+ LISTE DES IMAGES :
+ * [Image 1] Type: TBitmap, Taille: 257078 octets -> Image_1.bmp
+ * [Image 2] Type: TBitmap, Taille: 20762 octets -> Image_2.bmp
+ * [Image 3] Type: TBitmap, Taille: 10866 octets -> Image_3.bmp
+ * [Image 4] Type: TBitmap, Taille: 14670 octets -> Image_4.bmp
+ * [Image 5] Type: TBitmap, Taille: 16574 octets -> Image_5.bmp
+ * [Image 6] Type: TBitmap, Taille: 8150 octets -> Image_6.bmp
+ * [Image 7] Type: TBitmap, Taille: 10974 octets -> Image_7.bmp
+ * [Image 8] Type: TBitmap, Taille: 10134 octets -> Image_8.bmp
+ * [Image 9] Type: TBitmap, Taille: 12150 octets -> Image_9.bmp
+ * [Image 10] Type: TBitmap, Taille: 9630 octets -> Image_10.bmp
+=================================================================
+
+object Form1: TForm1
+  Left = 177
+  Top = 95
+  Align = alTop
+  BorderStyle = bsNone
+  Caption = 'Form1'
+  ClientHeight = 400
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image9: TImage
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 400
+    AutoSize = True
+    Picture.Data = 'Image_1.bmp'
+  end
+  object Image20: TImage
+    Left = 132
+    Top = 203
+    Width = 146
+    Height = 133
+    AutoSize = True
+    Picture.Data = 'Image_2.bmp'
+  end
+  object Image1: TImage
+    Left = 127
+    Top = 96
+    Width = 68
+    Height = 53
+    AutoSize = True
+    Picture.Data = 'Image_3.bmp'
+  end
+  object Image2: TImage
+    Left = 543
+    Top = 7
+    Width = 83
+    Height = 58
+    AutoSize = True
+    Picture.Data = 'Image_4.bmp'
+  end
+  object Image3: TImage
+    Left = 585
+    Top = 157
+    Width = 78
+    Height = 70
+    AutoSize = True
+    Picture.Data = 'Image_5.bmp'
+    Visible = False
+  end
+  object Image4: TImage
+    Left = 306
+    Top = 148
+    Width = 61
+    Height = 44
+    AutoSize = True
+    Picture.Data = 'Image_6.bmp'
+  end
+  object Image5: TImage
+    Left = 125
+    Top = 19
+    Width = 56
+    Height = 65
+    AutoSize = True
+    Picture.Data = 'Image_7.bmp'
+  end
+  object Image6: TImage
+    Left = 402
+    Top = 95
+    Width = 60
+    Height = 56
+    AutoSize = True
+    Picture.Data = 'Image_8.bmp'
+  end
+  object Image7: TImage
+    Left = 426
+    Top = 239
+    Width = 64
+    Height = 63
+    AutoSize = True
+    Picture.Data = 'Image_9.bmp'
+  end
+  object Image8: TImage
+    Left = 13
+    Top = 155
+    Width = 55
+    Height = 57
+    AutoSize = True
+    Picture.Data = 'Image_10.bmp'
+  end
+  object Image18: TImage
+    Left = 566
+    Top = 339
+    Width = 62
+    Height = 58
+    OnClick = Image18Click
+  end
+  object Label1: TLabel
+    Left = 200
+    Top = 25
+    Width = 32
+    Height = 13
+    Caption = 'Label1'
+    Visible = False
+  end
+  object Label2: TLabel
+    Left = 196
+    Top = 51
+    Width = 32
+    Height = 13
+    Caption = 'Label2'
+    Visible = False
+  end
+  object Label3: TLabel
+    Left = 200
+    Top = 81
+    Width = 32
+    Height = 13
+    Caption = 'Label3'
+    Visible = False
+  end
+  object Label4: TLabel
+    Left = 226
+    Top = 345
+    Width = 23
+    Height = 52
+    Caption = '0'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -37
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label5: TLabel
+    Left = 156
+    Top = 225
+    Width = 117
+    Height = 23
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Label5'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label6: TLabel
+    Left = 140
+    Top = 247
+    Width = 133
+    Height = 23
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'label6'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Image19: TImage
+    Left = 192
+    Top = 305
+    Width = 118
+    Height = 93
+    OnClick = Image19Click
+  end
+  object Image11: TImage
+    Left = 2
+    Top = 152
+    Width = 84
+    Height = 78
+    OnClick = Image11Click
+  end
+  object Image10: TImage
+    Left = 115
+    Top = 89
+    Width = 89
+    Height = 74
+    OnClick = Image10Click
+  end
+  object Image14: TImage
+    Left = 92
+    Top = 3
+    Width = 84
+    Height = 74
+    OnClick = Image14Click
+  end
+  object Image13: TImage
+    Left = 287
+    Top = 142
+    Width = 79
+    Height = 61
+    OnClick = Image13Click
+  end
+  object Image15: TImage
+    Left = 390
+    Top = 82
+    Width = 78
+    Height = 73
+    OnClick = Image15Click
+  end
+  object Image16: TImage
+    Left = 428
+    Top = 222
+    Width = 80
+    Height = 77
+    OnClick = Image16Click
+  end
+  object Image12: TImage
+    Left = 542
+    Top = 115
+    Width = 81
+    Height = 83
+    Visible = False
+    OnClick = Image12Click
+  end
+  object Image17: TImage
+    Left = 536
+    Top = 3
+    Width = 93
+    Height = 78
+    OnClick = Image17Click
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 2000
+    OnTimer = Timer1Timer
+    Left = 372
+    Top = 292
+  end
+end

@@ -1,0 +1,78 @@
+Le But du Jeu (Utilitaire)
+Ce n'est pas un jeu, mais un outil.
+Fonctionnalité : Une calculatrice standard qui permet de faire des opérations mathématiques (+, -, *, /) mais surtout de convertir le résultat instantanément entre une monnaie nationale (ex: Francs) et l'Euro (ou d'autres devises).
+2. Analyse des Images (Le Mapping)
+Le fichier contient une banque d'images de drapeaux/symboles pour les devises. Les objets TImage cachés (Visible = False) servent de bibliothèque.
+Voici la correspondance exacte pour votre interface :
+Les Devises (Drapeaux) :
+Image_13.bmp : 🇪🇺 Euro (EUR) - La monnaie pivot.
+Image_18.bmp : 🇫🇷 Franc Français (FRF).
+Image_2.bmp : 🇺🇸 Dollar US (USD).
+Image_3.bmp : 🇬🇷 Drachme Grecque (GRD).
+Image_4.bmp : 🇵🇹 Escudo Portugais (PTE).
+Image_5.bmp : 🇪🇸 Peseta Espagnole (ESP).
+Image_6.bmp : 🇯🇵 Yen Japonais (JPY).
+Image_7.bmp : 🇫🇮 Mark Finlandais (FIM).
+Image_8.bmp : 🇧🇪 Franc Belge (BEF).
+Image_9.bmp : 🇦🇹 Schilling Autrichien (ATS).
+Image_10.bmp : 🇸🇪 Couronne Suédoise (SEK).
+Image_11.bmp : 🇳🇱 Florin Néerlandais (NLG).
+Image_12.bmp : 🇬🇧 Livre Sterling (GBP).
+Image_14.bmp : 🇳🇴 Couronne Norvégienne (NOK).
+Image_15.bmp : 🇱🇺 Franc Luxembourgeois (LUF).
+Image_16.bmp : 🇮🇪 Livre Irlandaise (IEP).
+Image_17.bmp : 🇨🇦 Dollar Canadien (CAD).
+Image_19.bmp : 🇩🇪 Deutsche Mark (DEM).
+Image_20.bmp : 🇩🇰 Couronne Danoise (DKK).
+Image_21.bmp : 🇮🇹 Lire Italienne (ITL).
+Image_22.bmp : 🇨🇭 Franc Suisse (CHF).
+Image_1.bmp : Devise inconnue (point d'interrogation ?).
+L'Interface :
+Image_23.bmp à Image_26.bmp : Fonds des boutons de sélection de devise (état normal/cliqué).
+Image_27.bmp à Image_29.bmp : Le bouton "Swap" (flèches d'échange) pour inverser Source/Cible.
+Image_30.bmp / Image_31.bmp : Le bouton "Quitter".
+3. Les Boutons de la Calculatrice
+Notez que les boutons (0-9, +, -, =, C, CE) ne sont pas dans la liste des images extraites (Image_1 à 31). Ils sont encodés directement en hexadécimal dans le composant ECClavier1 (propriétés Glyph_0.Data, Glyph_plus.Data, etc.).
+Pour la reconstruction : Inutile d'essayer de décoder ce binaire complexe. Utilisez des boutons HTML/CSS standards ou créez vos propres petites images pour les touches.
+4. La Logique Mathématique (Les Taux de 2002)
+Pour que la calculatrice soit authentique, vous devez utiliser les Taux de Conversion Irrévocables fixés par l'Union Européenne.
+Algorithme de conversion :
+La règle stricte est : on passe toujours par l'Euro.
+Départ -> Euro -> Arrivée.
+Les Taux Officiels (1 € =) :
+FRF (France) : 6.55957 (Le plus important !)
+DEM (Allemagne) : 1.95583
+BEF (Belgique) : 40.3399
+ESP (Espagne) : 166.386
+ITL (Italie) : 1936.27
+NLG (Pays-Bas) : 2.20371
+ATS (Autriche) : 13.7603
+PTE (Portugal) : 200.482
+FIM (Finlande) : 5.94573
+IEP (Irlande) : 0.787564
+GRD (Grèce) : 340.750
+LUF (Luxembourg) : 40.3399
+(Pour USD, GBP, JPY, CHF... ce sont des taux variables. Pour un remake "historique", vous pouvez figer le taux du Dollar de 2002 autour de 1€ = 0.90
+o
+u
+1
+ou1
+ par simplicité).
+5. Reconstruction de l'Interface
+Voici comment assembler le tout :
+L'Écran (EC_Montant_Mon) :
+Un champ texte en haut.
+Affiche le montant en cours de saisie.
+Affiche le symbole de la monnaie source (ex: "FRF").
+Les Sélecteurs de Monnaie :
+Gauche (Source) : Affiche le drapeau (Image_18 par défaut pour FRF) et le code texte.
+Droite (Cible) : Affiche le drapeau (Image_13 par défaut pour EUR) et le code texte.
+Bouton Swap (b_move) : Au clic, on inverse Source et Cible.
+Le Clavier :
+Grille classique : 7 8 9 /, 4 5 6 *, 1 2 3 -, 0 , = +
+Boutons spéciaux : C (Clear), CE (Clear Entry).
+Logique JavaScript :
+L'utilisateur tape un nombre (ex: 100).
+L'écran affiche "100 FRF".
+Si l'utilisateur change la monnaie cible (ex: EUR), l'écran affiche la conversion : "15.24 EUR".
+Si l'utilisateur appuie sur Swap, le montant est converti et la devise change.

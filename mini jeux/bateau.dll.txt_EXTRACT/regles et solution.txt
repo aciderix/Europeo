@@ -1,0 +1,45 @@
+Voici le récapitulatif complet pour le développement, avec les règles, la logique culturelle et les coordonnées techniques.
+1. Le But du Jeu (Règles)
+Contexte : Le personnage (le capitaine ou le docker en haut à gauche) donne un ordre via la bulle de texte (Image 10).
+Objectif : Il y a 8 objets éparpillés sur l'écran (ou dans un inventaire). Le joueur doit les glisser-déposer (Drag & Drop) dans la bonne caisse en bois correspondante avant la fin du chronomètre (Timer1).
+Condition de victoire : Tous les objets sont placés sur leur zone de destination invisible (TShape). Le message "GAGNE" apparaît.
+Condition de défaite : Le temps est écoulé. Le message "PERDU" apparaît.
+2. Solution et Coordonnées Techniques
+Voici le tableau de correspondance pour programmer le jeu.
+Source : L'objet à déplacer.
+Cible : La zone invisible (TShape) où l'objet doit être lâché pour valider le point.
+
+3. Détails Techniques Supplémentaires
+Le Fond : Afficher Image_1.bmp en arrière-plan (640x400 pixels).
+La Bulle (Image 10) :
+Dans le code, ses coordonnées sont Left: 28, Top: 28.
+Elle doit être affichée dès le début, probablement à côté de la tête du personnage dessiné sur le fond, pour donner les instructions.
+Gestion des Zones Doubles (Autriche & Belgique) :
+Ces pays ont deux objets. Peu importe quel objet va sur quelle zone du pays, tant que les deux objets "Autrichiens" finissent dans le périmètre de la caisse "AUTRICHE".
+Note code : Le développeur a créé deux zones distinctes (Sh_Belg_1 et Sh_Belg_2) pour éviter que les images ne se chevauchent trop si le joueur les pose au même endroit.
+
+Le Tableau de Solution (Final)
+Voici ce que tu dois programmer pour que le jeu fonctionne logiquement :
+PAYS (Caisse)	OBJET 1	OBJET 2
+🇧🇪 BELGIQUE	Image_2.bmp<br>(Manneken Pis)	Image_8.bmp<br>(Atomium)
+🇦🇹 AUTRICHE	Image_3.bmp<br>(Violon)	Image_7.bmp<br>(Chapeau Tyrolien)
+🇬🇧 ANGLETERRE	Image_9.bmp<br>(Bus Rouge)	(Aucun)
+🇮🇹 ITALIE	Image_4.bmp<br>(Bouteille Chianti)	(Aucun)
+🇬🇷 GRÈCE	Image_6.bmp<br>(Cheval de Troie)	(Aucun)
+🇳🇱 PAYS-BAS	Image_5.bmp<br>(Chapeau Marron)	(Aucun)
+3. Les Coordonnées Techniques (Mise à jour)
+En reprenant les zones (TShape) du fichier texte et les nouvelles identifications d'images, voici où le code attend que tu déposes les items :
+Pour la BELGIQUE (Zone gauche Sh_Belg_1 / Sh_Belg_2) :
+Lâcher Image_2.bmp (Im_sculture) sur Left: 124, Top: 188.
+Lâcher Image_8.bmp (Im_art) sur Left: 40, Top: 144.
+Pour l'AUTRICHE (Zone bas-gauche Sh_Aut_1 / Sh_Aut_2) :
+Lâcher Image_3.bmp (Im_violon) sur Left: 120, Top: 272.
+Lâcher Image_7.bmp (Im_chap_1) sur Left: 48, Top: 272.
+Pour l'ANGLETERRE (Zone haut-droite Sh_Ang) :
+Lâcher Image_9.bmp (Im_bus) sur Left: 356, Top: 60.
+Pour l'ITALIE (Zone bas-centre Sh_Ita) :
+Lâcher Image_4.bmp (Im_bouteille) sur Left: 184, Top: 240.
+Pour la GRÈCE (Zone milieu-droite Sh_Gre) :
+Lâcher Image_6.bmp (Im_cheval) sur Left: 488, Top: 160.
+Pour les PAYS-BAS (Zone milieu Sh_pays) :
+Lâcher Image_5.bmp (Im_chap_2) sur Left: 360, Top: 168.

@@ -1,0 +1,46 @@
+Le But du Jeu
+Le joueur doit résoudre un problème écrit à l'écran :
+"Toto est parti en vacances en Italie avec 2000 francs belges. Sachant qu'il a dépensé 48000 lires, combien lui reste-t-il d'euros ?"
+2. Analyse Technique (La Solution)
+Pour trouver la réponse attendue par le programme, il faut regarder le composant de saisie (MaskEdit1) et appliquer les taux de conversion de l'époque (ou les approximations scolaires).
+Le Masque (EditMask) : '00;0;*'
+00 : Cela signifie que la réponse attendue comporte strictement 2 chiffres.
+Pas de virgule. C'est un nombre entier.
+Le Calcul (Reconstitution) :
+Ce logiciel semble utiliser des taux de conversion simplifiés (souvent utilisés dans les exercices scolaires de l'époque pour faciliter le calcul mental), ou les taux officiels arrondis.
+Étape 1 : Convertir le budget initial (Francs Belges -> Euros)
+Taux officiel : 1 € = 40,3399 BEF
+Calcul : 2000 / 40,3399 = 49,58 €
+Approximation scolaire (souvent 1€ = 40 BEF) : 2000 / 40 = 50 €
+Étape 2 : Convertir les dépenses (Lires -> Euros)
+Taux officiel : 1 € = 1936,27 ITL
+Calcul : 48000 / 1936,27 = 24,79 €
+Approximation scolaire (souvent 1€ = 2000 ITL) : 48000 / 2000 = 24 €
+Étape 3 : Le Reste (Soustraction)
+Option A (Calcul strict) : 49,58 - 24,79 = 24,79 €.
+Arrondi à l'entier le plus proche : 25.
+Option B (Calcul simplifié "scolaire") : 50 - 24 = 26 €.
+Déduction de la réponse :
+Vu que le logiciel s'appelle "Toto" (ton enfantin) et utilise Comic Sans MS, il utilise très probablement les arrondis scolaires.
+50 € (poche) - 24 € (dépense) = 26 €.
+La réponse attendue est donc 26.
+3. Reconstruction (Instructions)
+Voici comment assembler ce niveau :
+Le Fond :
+Affichez Image_1.bmp (768 Ko) en plein écran (640x400).
+Visuel probable : Une image illustrant les vacances, l'Italie, ou peut-être Toto avec une calculatrice.
+Les Textes (L'énoncé) :
+Placez les Label1 à Label4 en haut de l'écran (vers Top: 24 à 120) pour écrire le problème.
+Alignez le texte comme dans un livre.
+La Zone de Réponse :
+Texte "La réponse est " (Label6 à Left: 392).
+Champ de saisie (MaskEdit1 à Left: 424): Un <input type="text" maxlength="2">.
+Texte "euros..." (Label8 à Left: 464).
+Feedback et Boutons :
+Image1 (en bas à gauche) : Bouton pour quitter ou revenir au menu.
+Label5 ("C'est facile, voyons!") : Peut être affiché comme indice ou encouragement.
+Label7 ("...") : C'est ici que vous afficherez le résultat de la validation (ex: "Bravo !" ou "Faux !").
+Logique de validation :
+L'utilisateur tape un nombre.
+Dès que 2 chiffres sont entrés, vérifiez si c'est 26 (solution la plus probable) ou 25 (solution mathématique stricte arrondie).
+Affichez le message de réussite en conséquence.

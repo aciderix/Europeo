@@ -1,0 +1,370 @@
+=================================================================
+ FICHIER TRAITÉ : costume.dll.txt
+ IMAGES EXTRAITES : 10
+=================================================================
+ LISTE DES IMAGES :
+ * [Image 1] Type: TBitmap, Taille: 257078 octets -> Image_1.bmp
+ * [Image 2] Type: TBitmap, Taille: 14878 octets -> Image_2.bmp
+ * [Image 3] Type: TBitmap, Taille: 11402 octets -> Image_3.bmp
+ * [Image 4] Type: TBitmap, Taille: 15278 octets -> Image_4.bmp
+ * [Image 5] Type: TBitmap, Taille: 5686 octets -> Image_5.bmp
+ * [Image 6] Type: TBitmap, Taille: 4038 octets -> Image_6.bmp
+ * [Image 7] Type: TBitmap, Taille: 5878 octets -> Image_7.bmp
+ * [Image 8] Type: TBitmap, Taille: 20078 octets -> Image_8.bmp
+ * [Image 9] Type: TBitmap, Taille: 17398 octets -> Image_9.bmp
+ * [Image 10] Type: TBitmap, Taille: 28462 octets -> Image_10.bmp
+=================================================================
+
+object main: Tmain
+  Left = 348
+  Top = 115
+  BorderStyle = bsNone
+  Caption = 'main'
+  ClientHeight = 400
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Fond: TImage
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 400
+    Align = alTop
+    AutoSize = True
+    Picture.Data = 'Image_1.bmp'
+  end
+  object Im_bas_3: TImage1
+    Tag = 3
+    Left = 504
+    Top = 142
+    Width = 100
+    Height = 138
+    AutoSize = True
+    Picture.Data = 'Image_2.bmp'
+    Transparent = True
+    Visible = False
+    OnClick = Im_bas_3Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 230
+    left_1 = 32
+    top_2 = 230
+    left_2 = 178
+    top_3 = 230
+    left_3 = 326
+    curseur = 3
+  end
+  object Im_bas_2: TImage1
+    Tag = 2
+    Left = 496
+    Top = 167
+    Width = 116
+    Height = 89
+    AutoSize = True
+    Picture.Data = 'Image_3.bmp'
+    Transparent = True
+    Visible = False
+    OnClick = Im_bas_2Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 228
+    left_1 = 26
+    top_2 = 228
+    left_2 = 172
+    top_3 = 222
+    left_3 = 318
+    curseur = 2
+  end
+  object Im_bas_1: TImage1
+    Tag = 1
+    Left = 505
+    Top = 140
+    Width = 99
+    Height = 142
+    AutoSize = True
+    Picture.Data = 'Image_4.bmp'
+    Transparent = True
+    OnClick = Im_bas_1Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 232
+    left_1 = 34
+    top_2 = 232
+    left_2 = 180
+    top_3 = 232
+    left_3 = 327
+    curseur = 1
+  end
+  object im_chap_2: TImage1
+    Tag = 8
+    Left = 520
+    Top = 179
+    Width = 69
+    Height = 64
+    AutoSize = True
+    Picture.Data = 'Image_5.bmp'
+    Transparent = True
+    Visible = False
+    OnClick = im_chap_2Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 20
+    left_1 = 54
+    top_2 = 24
+    left_2 = 200
+    top_3 = 22
+    left_3 = 346
+    curseur = 8
+  end
+  object im_chap_3: TImage1
+    Tag = 9
+    Left = 514
+    Top = 193
+    Width = 80
+    Height = 37
+    AutoSize = True
+    Picture.Data = 'Image_6.bmp'
+    Transparent = True
+    Visible = False
+    OnClick = im_chap_3Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 50
+    left_1 = 44
+    top_2 = 50
+    left_2 = 190
+    top_3 = 50
+    left_3 = 338
+    curseur = 9
+  end
+  object im_chap_1: TImage1
+    Tag = 7
+    Left = 505
+    Top = 187
+    Width = 98
+    Height = 48
+    AutoSize = True
+    Picture.Data = 'Image_7.bmp'
+    Transparent = True
+    Visible = False
+    OnClick = im_chap_1Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 48
+    left_1 = 46
+    top_2 = 52
+    left_2 = 192
+    top_3 = 52
+    left_3 = 338
+    curseur = 7
+  end
+  object Im_haut_2: TImage1
+    Tag = 5
+    Left = 479
+    Top = 149
+    Width = 151
+    Height = 125
+    AutoSize = True
+    Picture.Data = 'Image_8.bmp'
+    Transparent = True
+    Visible = False
+    OnClick = Im_haut_2Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 126
+    left_1 = 10
+    top_2 = 126
+    left_2 = 156
+    top_3 = 128
+    left_3 = 302
+    curseur = 5
+  end
+  object Im_haut_1: TImage1
+    Tag = 4
+    Left = 487
+    Top = 151
+    Width = 134
+    Height = 120
+    AutoSize = True
+    Picture.Data = 'Image_9.bmp'
+    Transparent = True
+    Visible = False
+    OnClick = Im_haut_1Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 126
+    left_1 = 16
+    top_2 = 126
+    left_2 = 162
+    top_3 = 126
+    left_3 = 310
+    curseur = 4
+  end
+  object Im_haut_3: TImage1
+    Tag = 6
+    Left = 471
+    Top = 130
+    Width = 167
+    Height = 163
+    AutoSize = True
+    Picture.Data = 'Image_10.bmp'
+    Transparent = True
+    Visible = False
+    OnClick = Im_haut_3Click
+    top_0 = 0
+    left_0 = 0
+    top_1 = 126
+    left_1 = 12
+    top_2 = 126
+    left_2 = 163
+    top_3 = 126
+    left_3 = 304
+    curseur = 6
+  end
+  object Sh_chap_ga: TShape
+    Left = 40
+    Top = 14
+    Width = 111
+    Height = 107
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_chap_gaMouseDown
+  end
+  object Sh_chap_dr: TShape
+    Left = 332
+    Top = 14
+    Width = 123
+    Height = 107
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_chap_drMouseDown
+  end
+  object Sh_haut_ga: TShape
+    Left = 2
+    Top = 120
+    Width = 167
+    Height = 131
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_haut_gaMouseDown
+  end
+  object Sh_chap_mi: TShape
+    Left = 182
+    Top = 14
+    Width = 109
+    Height = 107
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_chap_miMouseDown
+  end
+  object Sh_bas_ga: TShape
+    Left = 2
+    Top = 250
+    Width = 167
+    Height = 145
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_bas_gaMouseDown
+  end
+  object Sh_haut_dr: TShape
+    Left = 302
+    Top = 120
+    Width = 185
+    Height = 131
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_haut_drMouseDown
+  end
+  object Sh_bas_dr: TShape
+    Left = 302
+    Top = 250
+    Width = 185
+    Height = 141
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_bas_drMouseDown
+  end
+  object Sh_bas_mi: TShape
+    Left = 168
+    Top = 250
+    Width = 135
+    Height = 143
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_bas_miMouseDown
+  end
+  object Sh_haut_mi: TShape
+    Left = 168
+    Top = 120
+    Width = 135
+    Height = 131
+    Brush.Style = bsClear
+    Pen.Style = psClear
+    OnMouseDown = Sh_haut_miMouseDown
+  end
+  object Gagne: TLabel
+    Left = 216
+    Top = 150
+    Width = 240
+    Height = 74
+    Caption = 'GAGNE'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -64
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+    Visible = False
+  end
+  object Perdu: TLabel
+    Left = 224
+    Top = 150
+    Width = 226
+    Height = 74
+    Caption = 'PERDU'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -64
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+    Visible = False
+  end
+  object chrono: TPanel
+    Left = 542
+    Top = 24
+    Width = 33
+    Height = 29
+    BevelOuter = bvLowered
+    BevelWidth = 2
+    Caption = 'chrono'
+    Color = clBlack
+    Ctl3D = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsBold]
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+  end
+  object Timer1: TTimer
+    Tag = 1
+    Interval = 75
+    OnTimer = Timer1Timer
+    Left = 16
+    Top = 412
+  end
+end
