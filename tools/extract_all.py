@@ -93,6 +93,57 @@ def parse_vnd_text(filepath: str) -> Dict[str, Any]:
             'action': match.group(4).strip()[:100]  # Limit length
         })
 
+    # Extract playavi commands with coordinates
+    avi_pattern = r'playavi\s+(\S+\.avi)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)'
+    for match in re.finditer(avi_pattern, text, re.I):
+        result['commands'].append({
+            'type': 'playavi',
+            'file': match.group(1),
+            'mode': int(match.group(2)),
+            'rect': {
+                'x': int(match.group(3)),
+                'y': int(match.group(4)),
+                'w': int(match.group(5)) - int(match.group(3)),
+                'h': int(match.group(6)) - int(match.group(4))
+            }
+        })
+
+    # Extract playhtml commands with coordinates
+    html_pattern = r'playhtml\s+(\S+\.htm)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)'
+    for match in re.finditer(html_pattern, text, re.I):
+        result['commands'].append({
+            'type': 'playhtml',
+            'file': match.group(1),
+            'mode': int(match.group(2)),
+            'rect': {
+                'x': int(match.group(3)),
+                'y': int(match.group(4)),
+                'w': int(match.group(5)) - int(match.group(3)),
+                'h': int(match.group(6)) - int(match.group(4))
+            }
+        })
+
+    # Extract playwav commands
+    wav_pattern = r'playwav\s+(\S+\.wav)\s+(\d+)'
+    for match in re.finditer(wav_pattern, text, re.I):
+        result['commands'].append({
+            'type': 'playwav',
+            'file': match.group(1).replace('\\', '/'),
+            'mode': int(match.group(2))  # 1=once, 2=loop
+        })
+
+    # Extract addbmp commands (add image)
+    addbmp_pattern = r'addbmp\s+(\w+)\s+(\S+\.bmp)\s+(\d+)\s+(\d+)\s+(\d+)'
+    for match in re.finditer(addbmp_pattern, text, re.I):
+        result['commands'].append({
+            'type': 'addbmp',
+            'id': match.group(1),
+            'file': match.group(2),
+            'flags': int(match.group(3)),
+            'x': int(match.group(4)),
+            'y': int(match.group(5))
+        })
+
     # Extract hotspot definitions (coordinates)
     # Look for patterns like: i X1 Y1 X2 Y2 (where i is a small number)
     hotspot_pattern = r'[idl]\s{2,}(\d{1,3})\s+(\d{1,3})\s+(\d{1,3})\s+(\d{1,3})'
@@ -104,7 +155,7 @@ def parse_vnd_text(filepath: str) -> Dict[str, Any]:
     result['hotspots'] = hotspots[:50]  # Limit
 
     # Limit commands for JSON size
-    result['commands'] = result['commands'][:100]
+    result['commands'] = result['commands'][:200]
 
     return result
 
