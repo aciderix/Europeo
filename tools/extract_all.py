@@ -147,13 +147,23 @@ def extract_country_data(base_path: Path, country_id: str) -> Dict[str, Any]:
         }
     }
 
-    # Parse VND file
+    # Parse VND file - try exact match first, then any .vnd file
     vnd_file = country_path / f"{country_id}.vnd"
+    if not vnd_file.exists():
+        # Look for any VND file in the folder
+        vnd_files = list(country_path.glob('*.vnd'))
+        if vnd_files:
+            vnd_file = vnd_files[0]
     if vnd_file.exists():
         data['vnd'] = parse_vnd_text(str(vnd_file))
 
-    # Parse VNP file
+    # Parse VNP file - try exact match first, then any .vnp file
     vnp_file = country_path / f"{country_id}.vnp"
+    if not vnp_file.exists():
+        # Look for any VNP file in the folder
+        vnp_files = list(country_path.glob('*.vnp'))
+        if vnp_files:
+            vnp_file = vnp_files[0]
     if vnp_file.exists():
         data['vnp'] = parse_vnp_file(str(vnp_file))
 
