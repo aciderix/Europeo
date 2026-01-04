@@ -6,7 +6,14 @@
 import React, { useState, useEffect } from 'react';
 import { Scene } from './Scene';
 import { Toolbar } from '../UI/Toolbar';
-import { JustePrix } from '../MiniGames/JustePrix';
+import {
+  FrancsGame,
+  TourEiffelGame,
+  ProblemeGame,
+  MemoryGame,
+  RoueGame,
+  type MiniGameType,
+} from '../MiniGames';
 import { useGameStore } from '../../store/gameStore';
 import { loadCountry, getCountryList } from '../../engine/GameDataLoader';
 import type { Country } from '../../types/game';
@@ -47,7 +54,8 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
   const [showInventory, setShowInventory] = useState(false);
   const [showCalculator, setShowCalculator] = useState(false);
   const [showCountrySelector, setShowCountrySelector] = useState(false);
-  const [showMiniGame, setShowMiniGame] = useState(false);
+  const [showMiniGameSelector, setShowMiniGameSelector] = useState(false);
+  const [activeMiniGame, setActiveMiniGame] = useState<MiniGameType | null>(null);
 
   // Load country list on mount
   useEffect(() => {
@@ -101,7 +109,16 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
   };
 
   const handleMiniGame = () => {
-    setShowMiniGame(true);
+    setShowMiniGameSelector(true);
+  };
+
+  const launchMiniGame = (gameType: MiniGameType) => {
+    setShowMiniGameSelector(false);
+    setActiveMiniGame(gameType);
+  };
+
+  const closeMiniGame = () => {
+    setActiveMiniGame(null);
   };
 
   const containerStyle: React.CSSProperties = {
@@ -396,16 +413,154 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
         </div>
       )}
 
-      {/* Mini-Game: Juste Prix */}
-      {showMiniGame && (
-        <JustePrix
-          countryId={currentCountry}
-          onClose={() => setShowMiniGame(false)}
-          onWin={(points) => {
-            console.log(`Jeu gagné avec ${points} points!`);
+      {/* Mini-Game Selector */}
+      {showMiniGameSelector && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
           }}
-        />
+          onClick={() => setShowMiniGameSelector(false)}
+        >
+          <div
+            style={{
+              backgroundColor: '#1a1a2e',
+              borderRadius: 15,
+              padding: 30,
+              maxWidth: 600,
+              width: '90%',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 style={{ color: '#f1c40f', marginTop: 0, textAlign: 'center' }}>
+              🎮 Mini-Jeux
+            </h2>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: 15,
+                marginTop: 20,
+              }}
+            >
+              <button
+                onClick={() => launchMiniGame('francs')}
+                style={{
+                  padding: '20px',
+                  fontSize: 16,
+                  backgroundColor: '#27ae60',
+                  border: 'none',
+                  borderRadius: 10,
+                  color: '#fff',
+                  cursor: 'pointer',
+                }}
+              >
+                💶 Conversion Francs
+                <br />
+                <small style={{ opacity: 0.8 }}>100 FF = ? EUR</small>
+              </button>
+              <button
+                onClick={() => launchMiniGame('pepe')}
+                style={{
+                  padding: '20px',
+                  fontSize: 16,
+                  backgroundColor: '#3498db',
+                  border: 'none',
+                  borderRadius: 10,
+                  color: '#fff',
+                  cursor: 'pointer',
+                }}
+              >
+                🗼 Tour Eiffel
+                <br />
+                <small style={{ opacity: 0.8 }}>Combien de marches ?</small>
+              </button>
+              <button
+                onClick={() => launchMiniGame('probleme')}
+                style={{
+                  padding: '20px',
+                  fontSize: 16,
+                  backgroundColor: '#9b59b6',
+                  border: 'none',
+                  borderRadius: 10,
+                  color: '#fff',
+                  cursor: 'pointer',
+                }}
+              >
+                🧮 Problème Math
+                <br />
+                <small style={{ opacity: 0.8 }}>BEF + ITL = EUR</small>
+              </button>
+              <button
+                onClick={() => launchMiniGame('memory')}
+                style={{
+                  padding: '20px',
+                  fontSize: 16,
+                  backgroundColor: '#e67e22',
+                  border: 'none',
+                  borderRadius: 10,
+                  color: '#fff',
+                  cursor: 'pointer',
+                }}
+              >
+                🃏 Memory
+                <br />
+                <small style={{ opacity: 0.8 }}>8 paires de drapeaux</small>
+              </button>
+              <button
+                onClick={() => launchMiniGame('roue')}
+                style={{
+                  padding: '20px',
+                  fontSize: 16,
+                  backgroundColor: '#e74c3c',
+                  border: 'none',
+                  borderRadius: 10,
+                  color: '#fff',
+                  cursor: 'pointer',
+                  gridColumn: 'span 2',
+                }}
+              >
+                🎡 Roue de la Fortune
+                <br />
+                <small style={{ opacity: 0.8 }}>Jackpot: 1000 points !</small>
+              </button>
+            </div>
+            <button
+              onClick={() => setShowMiniGameSelector(false)}
+              style={{
+                marginTop: 20,
+                padding: '10px 30px',
+                fontSize: 16,
+                backgroundColor: '#7f8c8d',
+                border: 'none',
+                borderRadius: 8,
+                color: '#fff',
+                cursor: 'pointer',
+                display: 'block',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            >
+              Fermer
+            </button>
+          </div>
+        </div>
       )}
+
+      {/* Active Mini-Games */}
+      {activeMiniGame === 'francs' && <FrancsGame onClose={closeMiniGame} />}
+      {activeMiniGame === 'pepe' && <TourEiffelGame onClose={closeMiniGame} />}
+      {activeMiniGame === 'probleme' && <ProblemeGame onClose={closeMiniGame} />}
+      {activeMiniGame === 'memory' && <MemoryGame onClose={closeMiniGame} />}
+      {activeMiniGame === 'roue' && <RoueGame onClose={closeMiniGame} />}
     </div>
   );
 };
