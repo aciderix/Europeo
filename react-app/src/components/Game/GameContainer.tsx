@@ -3,54 +3,30 @@
  * Main game component that manages scenes and navigation
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Scene } from './Scene';
 import { Toolbar } from '../UI/Toolbar';
 import { useGameStore } from '../../store/gameStore';
-import type { Scene as SceneType } from '../../types/game';
+import { loadCountry, getCountryList } from '../../engine/GameDataLoader';
+import type { Country } from '../../types/game';
 
-// Demo scene data (will be replaced by loaded JSON)
-const DEMO_SCENES: Record<string, SceneType[]> = {
-  france: [
-    {
-      id: 1,
-      name: 'Intro France',
-      background: 'france_bg.bmp',
-      hotspots: [
-        {
-          id: 1,
-          rect: { x1: 100, y1: 100, x2: 200, y2: 200 },
-          tooltip: 'Tour Eiffel',
-          onClick: [],
-        },
-        {
-          id: 2,
-          rect: { x1: 300, y1: 150, x2: 450, y2: 300 },
-          tooltip: 'Personnage',
-          onClick: [],
-        },
-      ],
-      onEnter: [],
-      onExit: [],
-    },
-  ],
-  allem: [
-    {
-      id: 1,
-      name: 'Berlin',
-      background: 'berlin.bmp',
-      hotspots: [
-        {
-          id: 1,
-          rect: { x1: 150, y1: 100, x2: 300, y2: 250 },
-          tooltip: 'Mur de Berlin',
-          onClick: [],
-        },
-      ],
-      onEnter: [],
-      onExit: [],
-    },
-  ],
+// Country name mappings
+const COUNTRY_NAMES: Record<string, string> = {
+  allem: 'Allemagne',
+  angl: 'Angleterre',
+  autr: 'Autriche',
+  belge: 'Belgique',
+  danem: 'Danemark',
+  ecosse: 'Écosse',
+  espa: 'Espagne',
+  finlan: 'Finlande',
+  france: 'France',
+  grece: 'Grèce',
+  holl: 'Pays-Bas',
+  irland: 'Irlande',
+  italie: 'Italie',
+  portu: 'Portugal',
+  suede: 'Suède',
 };
 
 interface GameContainerProps {
@@ -62,18 +38,47 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
   const currentScene = useGameStore((state) => state.currentScene);
   const navigateTo = useGameStore((state) => state.navigateTo);
   const addScore = useGameStore((state) => state.addScore);
+  const inventory = useGameStore((state) => state.inventory);
 
-  const [scenes] = useState<Record<string, SceneType[]>>(DEMO_SCENES);
+  const [countryData, setCountryData] = useState<Country | null>(null);
+  const [, setCountryList] = useState<{ id: string; name: string }[]>([]);
+  const [loading, setLoading] = useState(true);
   const [showInventory, setShowInventory] = useState(false);
   const [showCalculator, setShowCalculator] = useState(false);
+  const [showCountrySelector, setShowCountrySelector] = useState(false);
+
+  // Load country list on mount
+  useEffect(() => {
+    getCountryList()
+      .then(setCountryList)
+      .catch((err) => console.error('Error loading country list:', err));
+  }, []);
+
+  // Load country data when country changes
+  useEffect(() => {
+    setLoading(true);
+    loadCountry(currentCountry)
+      .then((data) => {
+        setCountryData(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error('Error loading country:', err);
+        setLoading(false);
+      });
+  }, [currentCountry]);
 
   // Get current scene
-  const countryScenes = scenes[currentCountry] || [];
-  const activeScene = countryScenes.find((s) => s.id === currentScene) || countryScenes[0];
+  const scenes = countryData?.scenes || [];
+  const activeScene = scenes.find((s) => s.id === currentScene) || scenes[0];
 
   const handleBack = () => {
-    // Return to hub (couleurs1)
-    navigateTo('couleurs1', 1);
+    setShowCountrySelector(true);
+  };
+
+  const handleSelectCountry = (countryId: string) => {
+    navigateTo(countryId, 1);
+    setShowCountrySelector(false);
   };
 
   const handleInventory = () => {
@@ -85,13 +90,11 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
   };
 
   const handlePhone = () => {
-    // Phone/help reduces score by 1
     addScore(-1);
     alert('Aide: Explore les différentes zones pour trouver des objets et gagner des points!');
   };
 
   const handleSettings = () => {
-    // Toggle debug mode or show settings
     alert('Paramètres: Volume, Langue, Crédits...');
   };
 
@@ -112,9 +115,7 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
   return (
     <div className="game-container" style={containerStyle}>
       <div style={gameAreaStyle}>
-        {activeScene ? (
-          <Scene scene={activeScene} countryId={currentCountry} debug={debug} />
-        ) : (
+        {loading ? (
           <div
             style={{
               display: 'flex',
@@ -125,10 +126,43 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
               fontSize: 24,
             }}
           >
-            <div>
-              <h2>Europeo</h2>
-              <p>Chargement de {currentCountry}...</p>
-              <p>Scène: {currentScene}</p>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: 48, marginBottom: 20 }}>🌍</div>
+              <p>Chargement de {COUNTRY_NAMES[currentCountry] || currentCountry}...</p>
+            </div>
+          </div>
+        ) : activeScene ? (
+          <Scene scene={activeScene} countryId={currentCountry} debug={debug} />
+        ) : (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '100%',
+              color: '#fff',
+            }}
+          >
+            <div style={{ textAlign: 'center' }}>
+              <h2 style={{ fontSize: 32 }}>🗺️ {COUNTRY_NAMES[currentCountry] || currentCountry}</h2>
+              <p style={{ color: '#bdc3c7' }}>
+                {countryData?.assets.images.length || 0} images disponibles
+              </p>
+              <button
+                onClick={() => setShowCountrySelector(true)}
+                style={{
+                  marginTop: 20,
+                  padding: '15px 30px',
+                  fontSize: 18,
+                  backgroundColor: '#3498db',
+                  border: 'none',
+                  borderRadius: 8,
+                  color: '#fff',
+                  cursor: 'pointer',
+                }}
+              >
+                Choisir un pays
+              </button>
             </div>
           </div>
         )}
@@ -141,6 +175,97 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
         onPhone={handlePhone}
         onSettings={handleSettings}
       />
+
+      {/* Country Selector Modal */}
+      {showCountrySelector && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+          }}
+          onClick={() => setShowCountrySelector(false)}
+        >
+          <div
+            style={{
+              backgroundColor: '#1a1a2e',
+              borderRadius: 15,
+              padding: 30,
+              maxWidth: 800,
+              maxHeight: '80vh',
+              overflow: 'auto',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 style={{ color: '#f1c40f', marginTop: 0, textAlign: 'center' }}>
+              🌍 Choisis ton pays
+            </h2>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                gap: 15,
+                marginTop: 20,
+              }}
+            >
+              {Object.entries(COUNTRY_NAMES).map(([id, name]) => (
+                <button
+                  key={id}
+                  onClick={() => handleSelectCountry(id)}
+                  style={{
+                    padding: '15px 20px',
+                    fontSize: 16,
+                    backgroundColor: currentCountry === id ? '#27ae60' : '#34495e',
+                    border: '2px solid',
+                    borderColor: currentCountry === id ? '#2ecc71' : '#3498db',
+                    borderRadius: 10,
+                    color: '#fff',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    if (currentCountry !== id) {
+                      e.currentTarget.style.backgroundColor = '#3498db';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (currentCountry !== id) {
+                      e.currentTarget.style.backgroundColor = '#34495e';
+                    }
+                  }}
+                >
+                  {name}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setShowCountrySelector(false)}
+              style={{
+                marginTop: 20,
+                padding: '10px 30px',
+                fontSize: 16,
+                backgroundColor: '#e74c3c',
+                border: 'none',
+                borderRadius: 8,
+                color: '#fff',
+                cursor: 'pointer',
+                display: 'block',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            >
+              Fermer
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Inventory Modal */}
       {showInventory && (
@@ -170,7 +295,25 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
             onClick={(e) => e.stopPropagation()}
           >
             <h2 style={{ color: '#fff', marginTop: 0 }}>🎒 Inventaire</h2>
-            <p style={{ color: '#bdc3c7' }}>Objets collectés apparaîtront ici.</p>
+            {inventory.length > 0 ? (
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                {inventory.map((item) => (
+                  <div
+                    key={item}
+                    style={{
+                      backgroundColor: '#34495e',
+                      padding: '8px 15px',
+                      borderRadius: 5,
+                      color: '#fff',
+                    }}
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p style={{ color: '#bdc3c7' }}>Aucun objet collecté pour le moment.</p>
+            )}
             <button
               onClick={() => setShowInventory(false)}
               style={{
