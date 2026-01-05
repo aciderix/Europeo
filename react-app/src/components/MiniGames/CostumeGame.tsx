@@ -2,21 +2,30 @@
  * Costume Mini-Game - Faithful port of costume.dll
  * Original: Dress-up puzzle with 3 mannequins
  *
- * Gameplay:
- * - 3 mannequin columns (Left, Middle, Right)
- * - 9 clothing items: 3 hats, 3 vests, 3 pants
- * - Drag each item to complete the outfits
- * - Each set (_1, _2, _3) must match its column for the win
+ * Original DFM Layout (640x400):
+ * Initial positions (all stacked on right side):
+ * - Im_bas_3: (504, 142) 100x138 - pants_3
+ * - Im_bas_2: (496, 167) 116x89 - pants_2
+ * - Im_bas_1: (505, 140) 99x142 - pants_1
+ * - im_chap_2: (520, 179) 69x64 - hat_2
+ * - im_chap_3: (514, 193) 80x37 - hat_3
+ * - im_chap_1: (505, 187) 98x48 - hat_1
+ * - Im_haut_2: (479, 149) 151x125 - vest_2
+ * - Im_haut_1: (487, 151) 134x120 - vest_1
+ * - Im_haut_3: (471, 130) 167x163 - vest_3
  *
- * Clothing items:
- * - Pants: Image_2 (bas_3), Image_3 (bas_2), Image_4 (bas_1)
- * - Hats: Image_5 (chap_2), Image_6 (chap_3), Image_7 (chap_1)
- * - Vests: Image_8 (haut_2), Image_9 (haut_1), Image_10 (haut_3)
+ * Drop zones (TShape):
+ * - Sh_chap_ga: (40, 14) 111x107 - left hat
+ * - Sh_chap_mi: (182, 14) 109x107 - middle hat
+ * - Sh_chap_dr: (332, 14) 123x107 - right hat
+ * - Sh_haut_ga: (2, 120) 167x131 - left vest
+ * - Sh_haut_mi: (168, 120) 135x131 - middle vest
+ * - Sh_haut_dr: (302, 120) 185x131 - right vest
+ * - Sh_bas_ga: (2, 250) 167x145 - left pants
+ * - Sh_bas_mi: (168, 250) 135x143 - middle pants
+ * - Sh_bas_dr: (302, 250) 185x141 - right pants
  *
- * Solution (to win):
- * - Left column: hat_1 + vest_1 + pants_1 (Image_7, Image_9, Image_4)
- * - Middle column: hat_2 + vest_2 + pants_2 (Image_5, Image_8, Image_3)
- * - Right column: hat_3 + vest_3 + pants_3 (Image_6, Image_10, Image_2)
+ * Solution: Match _1 items to left, _2 to middle, _3 to right
  */
 
 import React, { useState, useCallback, useRef, useEffect } from 'react';
@@ -31,39 +40,51 @@ interface CostumeGameProps {
 const ASSETS_PATH = '/assets/minigames/costume';
 const BACKGROUND = `${ASSETS_PATH}/Image_1.png`;
 
-// Column definitions (drop zones)
+// Drop zone types
+type ZoneType = 'hat' | 'vest' | 'pants';
 type ColumnId = 'left' | 'middle' | 'right';
 
-interface Column {
-  id: ColumnId;
-  index: number; // 1, 2, or 3
+interface DropZone {
+  type: ZoneType;
+  column: ColumnId;
+  columnIndex: number; // 1, 2, or 3
   x: number;
-  width: number;
+  y: number;
+  w: number;
+  h: number;
 }
 
-const COLUMNS: Column[] = [
-  { id: 'left', index: 1, x: 0, width: 120 },
-  { id: 'middle', index: 2, x: 145, width: 120 },
-  { id: 'right', index: 3, x: 290, width: 120 },
+// Drop zones from DFM TShape objects
+const DROP_ZONES: DropZone[] = [
+  // Hat zones
+  { type: 'hat', column: 'left', columnIndex: 1, x: 40, y: 14, w: 111, h: 107 },
+  { type: 'hat', column: 'middle', columnIndex: 2, x: 182, y: 14, w: 109, h: 107 },
+  { type: 'hat', column: 'right', columnIndex: 3, x: 332, y: 14, w: 123, h: 107 },
+  // Vest zones
+  { type: 'vest', column: 'left', columnIndex: 1, x: 2, y: 120, w: 167, h: 131 },
+  { type: 'vest', column: 'middle', columnIndex: 2, x: 168, y: 120, w: 135, h: 131 },
+  { type: 'vest', column: 'right', columnIndex: 3, x: 302, y: 120, w: 185, h: 131 },
+  // Pants zones
+  { type: 'pants', column: 'left', columnIndex: 1, x: 2, y: 250, w: 167, h: 145 },
+  { type: 'pants', column: 'middle', columnIndex: 2, x: 168, y: 250, w: 135, h: 143 },
+  { type: 'pants', column: 'right', columnIndex: 3, x: 302, y: 250, w: 185, h: 141 },
 ];
-
-// Clothing types
-type ClothingType = 'hat' | 'vest' | 'pants';
 
 // Clothing item definition
 interface ClothingItem {
   id: string;
-  type: ClothingType;
+  type: ZoneType;
   setNumber: number; // 1, 2, or 3 - must match column for correct solution
   image: string;
   initialX: number;
   initialY: number;
   width: number;
   height: number;
-  // Snap positions for each column
-  positions: Record<ColumnId, { x: number; y: number }>;
+  // Snap positions for each column (from DFM top_1/left_1, top_2/left_2, top_3/left_3)
+  snapPositions: Record<ColumnId, { x: number; y: number }>;
 }
 
+// Items from DFM with exact initial positions
 const CLOTHING_ITEMS: ClothingItem[] = [
   // Pants (bas)
   {
@@ -71,9 +92,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'pants',
     setNumber: 3,
     image: `${ASSETS_PATH}/Image_2.png`,
-    initialX: 450, initialY: 280,
-    width: 80, height: 90,
-    positions: {
+    initialX: 504, initialY: 142,
+    width: 100, height: 138,
+    snapPositions: {
       left: { x: 32, y: 230 },
       middle: { x: 178, y: 230 },
       right: { x: 326, y: 230 },
@@ -84,9 +105,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'pants',
     setNumber: 2,
     image: `${ASSETS_PATH}/Image_3.png`,
-    initialX: 540, initialY: 280,
-    width: 80, height: 90,
-    positions: {
+    initialX: 496, initialY: 167,
+    width: 116, height: 89,
+    snapPositions: {
       left: { x: 26, y: 228 },
       middle: { x: 172, y: 228 },
       right: { x: 318, y: 222 },
@@ -97,9 +118,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'pants',
     setNumber: 1,
     image: `${ASSETS_PATH}/Image_4.png`,
-    initialX: 490, initialY: 180,
-    width: 80, height: 90,
-    positions: {
+    initialX: 505, initialY: 140,
+    width: 99, height: 142,
+    snapPositions: {
       left: { x: 34, y: 232 },
       middle: { x: 180, y: 232 },
       right: { x: 327, y: 232 },
@@ -111,9 +132,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'hat',
     setNumber: 2,
     image: `${ASSETS_PATH}/Image_5.png`,
-    initialX: 450, initialY: 20,
-    width: 60, height: 50,
-    positions: {
+    initialX: 520, initialY: 179,
+    width: 69, height: 64,
+    snapPositions: {
       left: { x: 54, y: 20 },
       middle: { x: 200, y: 24 },
       right: { x: 346, y: 22 },
@@ -124,9 +145,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'hat',
     setNumber: 3,
     image: `${ASSETS_PATH}/Image_6.png`,
-    initialX: 520, initialY: 30,
-    width: 40, height: 35,
-    positions: {
+    initialX: 514, initialY: 193,
+    width: 80, height: 37,
+    snapPositions: {
       left: { x: 44, y: 50 },
       middle: { x: 190, y: 50 },
       right: { x: 338, y: 50 },
@@ -137,9 +158,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'hat',
     setNumber: 1,
     image: `${ASSETS_PATH}/Image_7.png`,
-    initialX: 580, initialY: 20,
-    width: 50, height: 45,
-    positions: {
+    initialX: 505, initialY: 187,
+    width: 98, height: 48,
+    snapPositions: {
       left: { x: 46, y: 48 },
       middle: { x: 192, y: 52 },
       right: { x: 338, y: 52 },
@@ -151,9 +172,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'vest',
     setNumber: 2,
     image: `${ASSETS_PATH}/Image_8.png`,
-    initialX: 450, initialY: 100,
-    width: 90, height: 100,
-    positions: {
+    initialX: 479, initialY: 149,
+    width: 151, height: 125,
+    snapPositions: {
       left: { x: 10, y: 126 },
       middle: { x: 156, y: 126 },
       right: { x: 302, y: 128 },
@@ -164,9 +185,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'vest',
     setNumber: 1,
     image: `${ASSETS_PATH}/Image_9.png`,
-    initialX: 550, initialY: 100,
-    width: 80, height: 95,
-    positions: {
+    initialX: 487, initialY: 151,
+    width: 134, height: 120,
+    snapPositions: {
       left: { x: 16, y: 126 },
       middle: { x: 162, y: 126 },
       right: { x: 310, y: 126 },
@@ -177,9 +198,9 @@ const CLOTHING_ITEMS: ClothingItem[] = [
     type: 'vest',
     setNumber: 3,
     image: `${ASSETS_PATH}/Image_10.png`,
-    initialX: 500, initialY: 90,
-    width: 85, height: 100,
-    positions: {
+    initialX: 471, initialY: 130,
+    width: 167, height: 163,
+    snapPositions: {
       left: { x: 12, y: 126 },
       middle: { x: 163, y: 126 },
       right: { x: 304, y: 126 },
@@ -219,9 +240,9 @@ export const CostumeGame: React.FC<CostumeGameProps> = ({ onClose, onSuccess }) 
     const allCorrect = placements.every(placement => {
       const item = CLOTHING_ITEMS.find(i => i.id === placement.itemId);
       if (!item) return false;
-      const column = COLUMNS.find(c => c.id === placement.column);
-      if (!column) return false;
-      return item.setNumber === column.index;
+      const zone = DROP_ZONES.find(z => z.column === placement.column && z.type === item.type);
+      if (!zone) return false;
+      return item.setNumber === zone.columnIndex;
     });
 
     if (allCorrect) {
@@ -232,18 +253,19 @@ export const CostumeGame: React.FC<CostumeGameProps> = ({ onClose, onSuccess }) 
     }
   }, [placements, gameState, addScore, setVariable, onSuccess]);
 
-  // Find which column a point is over
-  const findColumnAtPoint = useCallback((x: number): ColumnId | null => {
-    for (const col of COLUMNS) {
-      if (x >= col.x && x <= col.x + col.width) {
-        return col.id;
+  // Find which zone a point is over
+  const findZoneAtPoint = useCallback((x: number, y: number, type: ZoneType): DropZone | null => {
+    for (const zone of DROP_ZONES) {
+      if (zone.type !== type) continue;
+      if (x >= zone.x && x <= zone.x + zone.w && y >= zone.y && y <= zone.y + zone.h) {
+        return zone;
       }
     }
     return null;
   }, []);
 
   // Check if a slot is available (only one item per type per column)
-  const isSlotAvailable = useCallback((column: ColumnId, type: ClothingType, excludeItemId?: string): boolean => {
+  const isSlotAvailable = useCallback((column: ColumnId, type: ZoneType, excludeItemId?: string): boolean => {
     return !placements.some(p => {
       if (p.itemId === excludeItemId) return false;
       const item = CLOTHING_ITEMS.find(i => i.id === p.itemId);
@@ -300,17 +322,18 @@ export const CostumeGame: React.FC<CostumeGameProps> = ({ onClose, onSuccess }) 
 
     const pos = positions[draggedItem];
     const centerX = pos.x + item.width / 2;
+    const centerY = pos.y + item.height / 2;
 
-    const column = findColumnAtPoint(centerX);
+    const zone = findZoneAtPoint(centerX, centerY, item.type);
 
-    if (column && isSlotAvailable(column, item.type, draggedItem)) {
+    if (zone && isSlotAvailable(zone.column, item.type, draggedItem)) {
       // Snap to column position
-      const snapPos = item.positions[column];
+      const snapPos = item.snapPositions[zone.column];
       setPositions(prev => ({
         ...prev,
         [draggedItem]: snapPos,
       }));
-      setPlacements(prev => [...prev, { itemId: draggedItem, column }]);
+      setPlacements(prev => [...prev, { itemId: draggedItem, column: zone.column }]);
     } else {
       // Return to initial position
       setPositions(prev => ({
@@ -320,7 +343,7 @@ export const CostumeGame: React.FC<CostumeGameProps> = ({ onClose, onSuccess }) 
     }
 
     setDraggedItem(null);
-  }, [draggedItem, positions, findColumnAtPoint, isSlotAvailable]);
+  }, [draggedItem, positions, findZoneAtPoint, isSlotAvailable]);
 
   // Mouse handlers
   const handleMouseDown = (itemId: string) => (e: React.MouseEvent) => {
@@ -395,19 +418,19 @@ export const CostumeGame: React.FC<CostumeGameProps> = ({ onClose, onSuccess }) 
           draggable={false}
         />
 
-        {/* Column drop zones (invisible) */}
-        {COLUMNS.map(col => (
+        {/* Drop zones (invisible) */}
+        {DROP_ZONES.map((zone, idx) => (
           <div
-            key={col.id}
+            key={idx}
             style={{
               position: 'absolute',
-              left: col.x,
-              top: 0,
-              width: col.width,
-              height: 350,
+              left: zone.x,
+              top: zone.y,
+              width: zone.w,
+              height: zone.h,
               // Debug: uncomment to see drop zones
               // backgroundColor: 'rgba(0, 255, 0, 0.1)',
-              // border: '2px dashed green',
+              // border: '1px dashed green',
             }}
           />
         ))}
@@ -444,7 +467,7 @@ export const CostumeGame: React.FC<CostumeGameProps> = ({ onClose, onSuccess }) 
         <div style={{
           position: 'absolute',
           right: 20,
-          top: 20,
+          top: 10,
           fontFamily: '"Comic Sans MS", cursive',
           fontSize: 16,
           color: '#fff',
@@ -456,89 +479,42 @@ export const CostumeGame: React.FC<CostumeGameProps> = ({ onClose, onSuccess }) 
           {placements.length} / 9
         </div>
 
-        {/* Win overlay */}
+        {/* Win overlay - Gagne label at (216, 150) red 64px */}
         {gameState === 'won' && (
           <div style={{
             position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            backgroundColor: 'rgba(0, 128, 0, 0.95)',
-            padding: '30px 50px',
-            borderRadius: 15,
-            textAlign: 'center',
+            left: 216,
+            top: 150,
+            fontFamily: '"MS Sans Serif", sans-serif',
+            fontSize: 64,
+            fontWeight: 'bold',
+            color: '#ff0000',
           }}>
-            <div style={{
-              fontFamily: '"MS Sans Serif", sans-serif',
-              fontSize: 48,
-              fontWeight: 'bold',
-              color: '#fff',
-              marginBottom: 20,
-            }}>
-              BRAVO !
-            </div>
-            <p style={{
-              color: '#fff',
-              fontFamily: '"Comic Sans MS", cursive',
-              marginBottom: 20,
-            }}>
-              Les mannequins sont bien habillés !
-            </p>
-            <button
-              onClick={onClose}
-              style={{
-                padding: '12px 30px',
-                fontSize: 16,
-                fontWeight: 'bold',
-                backgroundColor: '#4CAF50',
-                color: '#fff',
-                border: 'none',
-                borderRadius: 8,
-                cursor: 'pointer',
-              }}
-            >
-              Continuer
-            </button>
+            GAGNE
           </div>
         )}
 
-        {/* Quit button */}
-        {gameState === 'playing' && (
+        {/* Close button after win */}
+        {gameState === 'won' && (
           <button
             onClick={onClose}
             style={{
               position: 'absolute',
-              left: 560,
-              top: 360,
-              padding: '6px 16px',
-              fontSize: 14,
+              left: 270,
+              top: 250,
+              padding: '12px 30px',
+              fontSize: 16,
               fontWeight: 'bold',
-              backgroundColor: '#8b4513',
+              backgroundColor: '#4CAF50',
               color: '#fff',
               border: 'none',
-              borderRadius: 4,
+              borderRadius: 8,
               cursor: 'pointer',
             }}
           >
-            Quitter
+            Continuer
           </button>
         )}
-
-        {/* Instructions */}
-        <div style={{
-          position: 'absolute',
-          left: 430,
-          bottom: 20,
-          fontFamily: '"Comic Sans MS", cursive',
-          fontSize: 12,
-          color: '#fff',
-          textShadow: '1px 1px 2px #000',
-          textAlign: 'center',
-          width: 180,
-        }}>
-          Habillez les 3 mannequins<br/>
-          avec les bons vêtements !
-        </div>
       </div>
     </div>
   );
