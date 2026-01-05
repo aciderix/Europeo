@@ -1,7 +1,14 @@
 /**
  * Tour Eiffel Mini-Game - Faithful port of pepe.dll
  * Original question: "Combien y a t-il de marches pour monter au dernier étage de la tour Eiffel ?"
- * Answer: 1665 marches
+ * Answer: 1652 marches (from STRINGTABLE resource)
+ *
+ * Original messages:
+ * - "euh..."
+ * - "Tout ça !"
+ * - "Non... Essaye encore !"
+ * - "Il me semble qu'il y en a moins."
+ * - "Je crois qu'il y en a plus."
  */
 
 import React, { useState, useCallback, useRef, useEffect } from 'react';
@@ -12,16 +19,19 @@ interface TourEiffelGameProps {
   onSuccess?: () => void;
 }
 
-// The Eiffel Tower has 1665 steps to the top (fact from original game)
-const CORRECT_ANSWER = 1665;
+// From STRINGTABLE: 65351 = "1652"
+const CORRECT_ANSWER = 1652;
+
+// Asset path
+const BACKGROUND_IMAGE = '/assets/minigames/pepe/Image_1.png';
 
 export const TourEiffelGame: React.FC<TourEiffelGameProps> = ({ onClose, onSuccess }) => {
   const addScore = useGameStore((state) => state.addScore);
   const setVariable = useGameStore((state) => state.setVariable);
 
   const [answer, setAnswer] = useState('');
-  const [feedback, setFeedback] = useState<'none' | 'correct' | 'wrong'>('none');
-  const [attempts, setAttempts] = useState(0);
+  const [hint, setHint] = useState('');
+  const [isCorrect, setIsCorrect] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -35,25 +45,25 @@ export const TourEiffelGame: React.FC<TourEiffelGameProps> = ({ onClose, onSucce
     const userValue = parseInt(answer, 10);
 
     if (isNaN(userValue)) {
-      setFeedback('wrong');
+      setHint('euh...');
       return;
     }
 
-    setAttempts((prev) => prev + 1);
-
     if (userValue === CORRECT_ANSWER) {
-      setFeedback('correct');
+      setIsCorrect(true);
       setShowResult(true);
-      addScore(15);
-      setVariable('TOUREIFFEL', 1);
+      setHint('Tout ça !');
+      addScore(20);
+      setVariable('PEPE', 1);
       onSuccess?.();
+    } else if (userValue > CORRECT_ANSWER) {
+      // "Il me semble qu'il y en a moins."
+      setHint('Il me semble\nqu\'il y en a moins.');
     } else {
-      setFeedback('wrong');
-      if (attempts >= 4) {
-        setShowResult(true);
-      }
+      // "Je crois qu'il y en a plus."
+      setHint('Je crois\nqu\'il y en a plus.');
     }
-  }, [answer, attempts, addScore, setVariable, onSuccess]);
+  }, [answer, addScore, setVariable, onSuccess]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
@@ -66,144 +76,163 @@ export const TourEiffelGame: React.FC<TourEiffelGameProps> = ({ onClose, onSucce
     const value = e.target.value;
     if (/^\d*$/.test(value) && value.length <= 4) {
       setAnswer(value);
+      setHint('');
     }
   };
 
-  // Styles matching the original Comic Sans MS design
-  const overlayStyle: React.CSSProperties = {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    zIndex: 1000,
-  };
-
-  const containerStyle: React.CSSProperties = {
-    backgroundColor: '#e8dcc8',
-    borderRadius: 8,
-    padding: 40,
-    maxWidth: 520,
-    width: '90%',
-    textAlign: 'center',
-    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
-    border: '3px solid #8b7355',
-    fontFamily: '"Comic Sans MS", cursive, sans-serif',
-  };
-
-  const questionLineStyle: React.CSSProperties = {
-    fontSize: 20,
-    color: '#000',
-    marginBottom: 5,
-    lineHeight: 1.4,
-  };
-
-  const answerRowStyle: React.CSSProperties = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 10,
-    marginTop: 25,
-    marginBottom: 20,
-  };
-
-  const labelStyle: React.CSSProperties = {
-    fontSize: 18,
-    color: '#000',
-  };
-
-  const inputStyle: React.CSSProperties = {
-    width: '70px',
-    padding: '8px 12px',
-    fontSize: 18,
-    fontFamily: '"Comic Sans MS", cursive, sans-serif',
-    color: '#0000ff',
-    backgroundColor: '#fff',
-    border: 'none',
-    textAlign: 'center',
-    outline: 'none',
-  };
-
-  const quitButtonStyle: React.CSSProperties = {
-    marginTop: 20,
-    padding: '8px 25px',
-    fontSize: 16,
-    fontFamily: '"Comic Sans MS", cursive, sans-serif',
-    fontWeight: 'bold',
-    backgroundColor: '#8b4513',
-    color: '#fff',
-    border: 'none',
-    borderRadius: 4,
-    cursor: 'pointer',
-  };
-
-  const feedbackStyle: React.CSSProperties = {
-    marginTop: 20,
-    padding: 15,
-    borderRadius: 8,
-    fontSize: 16,
-    backgroundColor: feedback === 'correct' ? '#4CAF50' : '#f44336',
-    color: '#fff',
-  };
-
+  // Original form: 640x400, positions from DFM
   return (
-    <div style={overlayStyle}>
-      <div style={containerStyle}>
-        {/* Original multi-line question from pepe.dll DFM */}
-        <p style={questionLineStyle}>Combien y a t-il de</p>
-        <p style={questionLineStyle}>marches pour monter</p>
-        <p style={questionLineStyle}>au dernier étage de la</p>
-        <p style={questionLineStyle}>tour Eiffel ?</p>
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: '#000',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 1000,
+    }}>
+      <div style={{
+        position: 'relative',
+        width: 640,
+        height: 400,
+        backgroundImage: `url(${BACKGROUND_IMAGE})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        fontFamily: '"Comic Sans MS", cursive, sans-serif',
+      }}>
+        {/* Question - positioned at Right side (Left: 400 area) */}
+        <div style={{
+          position: 'absolute',
+          left: 400,
+          top: 80,
+          width: 200,
+          color: '#000',
+          fontSize: 19,
+          lineHeight: 1.3,
+        }}>
+          <p style={{ margin: 0 }}>Combien y a t-il de</p>
+          <p style={{ margin: 0 }}>marches pour monter</p>
+          <p style={{ margin: 0 }}>au dernier étage de la</p>
+          <p style={{ margin: 0 }}>tour Eiffel ?</p>
+        </div>
 
-        {/* Answer input matching original layout */}
-        <div style={answerRowStyle}>
-          <span style={labelStyle}>Il y a</span>
+        {/* Answer row - "Il y a [input] marches" */}
+        <div style={{
+          position: 'absolute',
+          left: 424,
+          top: 224,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+        }}>
+          <span style={{ fontSize: 19, color: '#000' }}>Il y a</span>
           <input
             ref={inputRef}
             type="text"
             value={answer}
             onChange={handleInputChange}
             onKeyPress={handleKeyPress}
-            placeholder="0000"
-            style={inputStyle}
+            placeholder="____"
             disabled={showResult}
+            style={{
+              width: 60,
+              padding: '4px 8px',
+              fontSize: 19,
+              fontFamily: '"Comic Sans MS", cursive, sans-serif',
+              color: '#0000ff',
+              backgroundColor: '#fff',
+              border: 'none',
+              textAlign: 'center',
+              outline: 'none',
+            }}
           />
-          <span style={labelStyle}>marches</span>
         </div>
 
-        {/* Submit button */}
+        {/* "marches" label below */}
+        <span style={{
+          position: 'absolute',
+          left: 456,
+          top: 256,
+          fontSize: 19,
+          color: '#000',
+        }}>marches</span>
+
+        {/* Comment/Hint area (lblComment) */}
+        <div style={{
+          position: 'absolute',
+          left: 200,
+          top: 320,
+          width: 240,
+          textAlign: 'center',
+          fontSize: 18,
+          color: isCorrect ? '#008000' : '#cc0000',
+          whiteSpace: 'pre-line',
+          fontWeight: 'bold',
+        }}>
+          {hint}
+        </div>
+
+        {/* Validate button */}
         {!showResult && (
           <button
             onClick={handleSubmit}
             style={{
-              ...quitButtonStyle,
-              backgroundColor: '#2196F3',
-              marginBottom: 10,
+              position: 'absolute',
+              left: 500,
+              top: 300,
+              padding: '8px 20px',
+              fontSize: 16,
+              fontFamily: '"Comic Sans MS", cursive, sans-serif',
+              fontWeight: 'bold',
+              backgroundColor: '#4CAF50',
+              color: '#fff',
+              border: 'none',
+              borderRadius: 4,
+              cursor: 'pointer',
             }}
           >
             Valider
           </button>
         )}
 
-        {/* Feedback */}
-        {feedback !== 'none' && (
-          <div style={feedbackStyle}>
-            {feedback === 'correct' ? (
-              <>Bravo ! La tour Eiffel a bien {CORRECT_ANSWER} marches !</>
-            ) : showResult ? (
-              <>La bonne réponse était {CORRECT_ANSWER} marches.</>
-            ) : (
-              <>Ce n'est pas ça ! Essaie encore ! (Essai {attempts}/5)</>
-            )}
+        {/* Success message */}
+        {isCorrect && (
+          <div style={{
+            position: 'absolute',
+            left: 150,
+            top: 150,
+            padding: '20px 40px',
+            backgroundColor: 'rgba(0, 128, 0, 0.9)',
+            color: '#fff',
+            fontSize: 24,
+            fontWeight: 'bold',
+            borderRadius: 10,
+          }}>
+            Bravo ! {CORRECT_ANSWER} marches !
           </div>
         )}
 
-        {/* Quit button */}
-        <button onClick={onClose} style={quitButtonStyle}>
+        {/* Quit button (btnQuit area) */}
+        <button
+          onClick={onClose}
+          style={{
+            position: 'absolute',
+            left: 16,
+            top: 350,
+            padding: '8px 25px',
+            fontSize: 16,
+            fontFamily: '"Comic Sans MS", cursive, sans-serif',
+            fontWeight: 'bold',
+            backgroundColor: '#8b4513',
+            color: '#fff',
+            border: 'none',
+            borderRadius: 4,
+            cursor: 'pointer',
+          }}
+        >
           Quitter
         </button>
       </div>
