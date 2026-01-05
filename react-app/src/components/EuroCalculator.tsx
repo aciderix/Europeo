@@ -19,35 +19,27 @@ interface EuroCalculatorProps {
   onClose: () => void;
 }
 
-// Currency definitions with images and exchange rates (1 EUR = X currency)
-// Official irrevocable rates fixed by EU
+// Currency definitions with official irrevocable exchange rates fixed by EU
+// Only the 12 original Eurozone currencies from the game data
 const CURRENCIES: {
   code: string;
   name: string;
   image: string;
   rate: number; // Rate to EUR (1 EUR = rate units of this currency)
+  decimals: number; // Number of decimal places for display
 }[] = [
-  { code: 'EUR', name: 'Euro', image: '/assets/calculator/Image_13.png', rate: 1 },
-  { code: 'FRF', name: 'Franc Français', image: '/assets/calculator/Image_18.png', rate: 6.55957 },
-  { code: 'DEM', name: 'Deutsche Mark', image: '/assets/calculator/Image_19.png', rate: 1.95583 },
-  { code: 'BEF', name: 'Franc Belge', image: '/assets/calculator/Image_8.png', rate: 40.3399 },
-  { code: 'LUF', name: 'Franc Luxembourgeois', image: '/assets/calculator/Image_15.png', rate: 40.3399 },
-  { code: 'ESP', name: 'Peseta Espagnole', image: '/assets/calculator/Image_5.png', rate: 166.386 },
-  { code: 'ITL', name: 'Lire Italienne', image: '/assets/calculator/Image_21.png', rate: 1936.27 },
-  { code: 'NLG', name: 'Florin Néerlandais', image: '/assets/calculator/Image_11.png', rate: 2.20371 },
-  { code: 'ATS', name: 'Schilling Autrichien', image: '/assets/calculator/Image_9.png', rate: 13.7603 },
-  { code: 'PTE', name: 'Escudo Portugais', image: '/assets/calculator/Image_4.png', rate: 200.482 },
-  { code: 'FIM', name: 'Mark Finlandais', image: '/assets/calculator/Image_7.png', rate: 5.94573 },
-  { code: 'IEP', name: 'Livre Irlandaise', image: '/assets/calculator/Image_16.png', rate: 0.787564 },
-  { code: 'GRD', name: 'Drachme Grecque', image: '/assets/calculator/Image_3.png', rate: 340.750 },
-  { code: 'USD', name: 'Dollar US', image: '/assets/calculator/Image_2.png', rate: 0.90 }, // ~2002 rate
-  { code: 'GBP', name: 'Livre Sterling', image: '/assets/calculator/Image_12.png', rate: 0.63 },
-  { code: 'CHF', name: 'Franc Suisse', image: '/assets/calculator/Image_22.png', rate: 1.45 },
-  { code: 'JPY', name: 'Yen Japonais', image: '/assets/calculator/Image_6.png', rate: 118 },
-  { code: 'SEK', name: 'Couronne Suédoise', image: '/assets/calculator/Image_10.png', rate: 9.16 },
-  { code: 'DKK', name: 'Couronne Danoise', image: '/assets/calculator/Image_20.png', rate: 7.43 },
-  { code: 'NOK', name: 'Couronne Norvégienne', image: '/assets/calculator/Image_14.png', rate: 7.51 },
-  { code: 'CAD', name: 'Dollar Canadien', image: '/assets/calculator/Image_17.png', rate: 1.41 },
+  { code: 'EUR', name: 'Euro', image: '/assets/calculator/Image_13.png', rate: 1.000000, decimals: 2 },
+  { code: 'FRF', name: 'Franc Français', image: '/assets/calculator/Image_18.png', rate: 6.559570, decimals: 2 },
+  { code: 'DEM', name: 'Mark Allemand', image: '/assets/calculator/Image_19.png', rate: 1.955830, decimals: 2 },
+  { code: 'BEF', name: 'Franc Belge', image: '/assets/calculator/Image_8.png', rate: 40.33990, decimals: 0 },
+  { code: 'LUF', name: 'Franc Luxembourgeois', image: '/assets/calculator/Image_15.png', rate: 40.33990, decimals: 0 },
+  { code: 'NLG', name: 'Florin Néerlandais', image: '/assets/calculator/Image_11.png', rate: 2.203710, decimals: 2 },
+  { code: 'ITL', name: 'Lire Italienne', image: '/assets/calculator/Image_21.png', rate: 1936.270, decimals: 0 },
+  { code: 'ESP', name: 'Peseta Espagnole', image: '/assets/calculator/Image_5.png', rate: 166.3860, decimals: 0 },
+  { code: 'PTE', name: 'Escudo Portugais', image: '/assets/calculator/Image_4.png', rate: 200.4820, decimals: 0 },
+  { code: 'ATS', name: 'Schilling Autrichien', image: '/assets/calculator/Image_9.png', rate: 13.76030, decimals: 2 },
+  { code: 'FIM', name: 'Mark Finlandais', image: '/assets/calculator/Image_7.png', rate: 5.945730, decimals: 2 },
+  { code: 'IEP', name: 'Livre Irlandaise', image: '/assets/calculator/Image_16.png', rate: 0.787564, decimals: 2 },
 ];
 
 // Asset paths
@@ -77,22 +69,11 @@ export const EuroCalculator: React.FC<EuroCalculatorProps> = ({ onClose }) => {
     return inEur * to.rate;
   }, []);
 
-  // Format display value
+  // Format display value using official decimal places from game data
   const formatDisplay = useCallback((value: string, currency: typeof CURRENCIES[0]): string => {
     const num = parseFloat(value);
     if (isNaN(num)) return `0 ${currency.code}`;
-
-    // Format based on currency (more decimals for small rates like IEP)
-    let formatted: string;
-    if (currency.rate < 1) {
-      formatted = num.toFixed(4);
-    } else if (currency.rate > 100) {
-      formatted = num.toFixed(0);
-    } else {
-      formatted = num.toFixed(2);
-    }
-
-    return `${formatted} ${currency.code}`;
+    return `${num.toFixed(currency.decimals)} ${currency.code}`;
   }, []);
 
   // Handle digit input
