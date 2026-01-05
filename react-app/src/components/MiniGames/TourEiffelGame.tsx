@@ -3,12 +3,16 @@
  * Original question: "Combien y a t-il de marches pour monter au dernier étage de la tour Eiffel ?"
  * Answer: 1652 marches (from STRINGTABLE resource)
  *
- * Original messages:
- * - "euh..."
- * - "Tout ça !"
- * - "Non... Essaye encore !"
- * - "Il me semble qu'il y en a moins."
- * - "Je crois qu'il y en a plus."
+ * Original DFM Layout (640x400):
+ * - Label3: (400, 88) "Combien y a t-il de"
+ * - Label4: (376, 120) "marches pour monter"
+ * - Label5: (376, 152) "au dernier étage de la"
+ * - Label6: (416, 184) "tour Eiffel ?"
+ * - Label1: (424, 224) "Il y a"
+ * - maskEdit: (488, 224) width 49
+ * - Label2: (456, 256) "marches"
+ * - lblComment: (376, 344) 169x57 - hint area
+ * - btnQuit: (8, 296) 73x97 - quit hitbox
  */
 
 import React, { useState, useCallback, useRef, useEffect } from 'react';
@@ -57,10 +61,8 @@ export const TourEiffelGame: React.FC<TourEiffelGameProps> = ({ onClose, onSucce
       setVariable('PEPE', 1);
       onSuccess?.();
     } else if (userValue > CORRECT_ANSWER) {
-      // "Il me semble qu'il y en a moins."
       setHint('Il me semble\nqu\'il y en a moins.');
     } else {
-      // "Je crois qu'il y en a plus."
       setHint('Je crois\nqu\'il y en a plus.');
     }
   }, [answer, addScore, setVariable, onSuccess]);
@@ -80,7 +82,6 @@ export const TourEiffelGame: React.FC<TourEiffelGameProps> = ({ onClose, onSucce
     }
   };
 
-  // Original form: 640x400, positions from DFM
   return (
     <div style={{
       position: 'fixed',
@@ -103,55 +104,77 @@ export const TourEiffelGame: React.FC<TourEiffelGameProps> = ({ onClose, onSucce
         backgroundPosition: 'center',
         fontFamily: '"Comic Sans MS", cursive, sans-serif',
       }}>
-        {/* Question - positioned at Right side (Left: 400 area) */}
-        <div style={{
+        {/* Label3: "Combien y a t-il de" */}
+        <span style={{
           position: 'absolute',
           left: 400,
-          top: 80,
-          width: 200,
-          color: '#000',
+          top: 88,
           fontSize: 19,
-          lineHeight: 1.3,
-        }}>
-          <p style={{ margin: 0 }}>Combien y a t-il de</p>
-          <p style={{ margin: 0 }}>marches pour monter</p>
-          <p style={{ margin: 0 }}>au dernier étage de la</p>
-          <p style={{ margin: 0 }}>tour Eiffel ?</p>
-        </div>
+          color: '#000',
+        }}>Combien y a t-il de</span>
 
-        {/* Answer row - "Il y a [input] marches" */}
-        <div style={{
+        {/* Label4: "marches pour monter" */}
+        <span style={{
+          position: 'absolute',
+          left: 376,
+          top: 120,
+          fontSize: 19,
+          color: '#000',
+        }}>marches pour monter</span>
+
+        {/* Label5: "au dernier étage de la" */}
+        <span style={{
+          position: 'absolute',
+          left: 376,
+          top: 152,
+          fontSize: 19,
+          color: '#000',
+        }}>au dernier étage de la</span>
+
+        {/* Label6: "tour Eiffel ?" */}
+        <span style={{
+          position: 'absolute',
+          left: 416,
+          top: 184,
+          fontSize: 19,
+          color: '#000',
+        }}>tour Eiffel ?</span>
+
+        {/* Label1: "Il y a" */}
+        <span style={{
           position: 'absolute',
           left: 424,
           top: 224,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 8,
-        }}>
-          <span style={{ fontSize: 19, color: '#000' }}>Il y a</span>
-          <input
-            ref={inputRef}
-            type="text"
-            value={answer}
-            onChange={handleInputChange}
-            onKeyPress={handleKeyPress}
-            placeholder="____"
-            disabled={showResult}
-            style={{
-              width: 60,
-              padding: '4px 8px',
-              fontSize: 19,
-              fontFamily: '"Comic Sans MS", cursive, sans-serif',
-              color: '#0000ff',
-              backgroundColor: '#fff',
-              border: 'none',
-              textAlign: 'center',
-              outline: 'none',
-            }}
-          />
-        </div>
+          fontSize: 19,
+          color: '#000',
+        }}>Il y a</span>
 
-        {/* "marches" label below */}
+        {/* maskEdit: Input field at (488, 224) */}
+        <input
+          ref={inputRef}
+          type="text"
+          value={answer}
+          onChange={handleInputChange}
+          onKeyPress={handleKeyPress}
+          disabled={showResult}
+          style={{
+            position: 'absolute',
+            left: 488,
+            top: 224,
+            width: 49,
+            height: 23,
+            padding: 0,
+            fontSize: 19,
+            fontFamily: '"Comic Sans MS", cursive, sans-serif',
+            color: '#0000ff',
+            backgroundColor: '#fff',
+            border: 'none',
+            textAlign: 'left',
+            outline: 'none',
+          }}
+        />
+
+        {/* Label2: "marches" */}
         <span style={{
           position: 'absolute',
           left: 456,
@@ -160,45 +183,40 @@ export const TourEiffelGame: React.FC<TourEiffelGameProps> = ({ onClose, onSucce
           color: '#000',
         }}>marches</span>
 
-        {/* Comment/Hint area (lblComment) */}
+        {/* lblComment: Hint area at (376, 344) 169x57 */}
         <div style={{
           position: 'absolute',
-          left: 200,
-          top: 320,
-          width: 240,
+          left: 376,
+          top: 344,
+          width: 169,
+          height: 57,
           textAlign: 'center',
-          fontSize: 18,
-          color: isCorrect ? '#008000' : '#cc0000',
+          fontSize: 19,
+          color: '#000',
           whiteSpace: 'pre-line',
-          fontWeight: 'bold',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}>
           {hint}
         </div>
 
-        {/* Validate button */}
-        {!showResult && (
-          <button
-            onClick={handleSubmit}
-            style={{
-              position: 'absolute',
-              left: 500,
-              top: 300,
-              padding: '8px 20px',
-              fontSize: 16,
-              fontFamily: '"Comic Sans MS", cursive, sans-serif',
-              fontWeight: 'bold',
-              backgroundColor: '#4CAF50',
-              color: '#fff',
-              border: 'none',
-              borderRadius: 4,
-              cursor: 'pointer',
-            }}
-          >
-            Valider
-          </button>
-        )}
+        {/* btnQuit: Quit button hitbox at (8, 296) 73x97 */}
+        <div
+          onClick={onClose}
+          style={{
+            position: 'absolute',
+            left: 8,
+            top: 296,
+            width: 73,
+            height: 97,
+            cursor: 'pointer',
+            // Debug: uncomment to see hitbox
+            // backgroundColor: 'rgba(255, 0, 0, 0.2)',
+          }}
+        />
 
-        {/* Success message */}
+        {/* Success overlay */}
         {isCorrect && (
           <div style={{
             position: 'absolute',
@@ -214,27 +232,6 @@ export const TourEiffelGame: React.FC<TourEiffelGameProps> = ({ onClose, onSucce
             Bravo ! {CORRECT_ANSWER} marches !
           </div>
         )}
-
-        {/* Quit button (btnQuit area) */}
-        <button
-          onClick={onClose}
-          style={{
-            position: 'absolute',
-            left: 16,
-            top: 350,
-            padding: '8px 25px',
-            fontSize: 16,
-            fontFamily: '"Comic Sans MS", cursive, sans-serif',
-            fontWeight: 'bold',
-            backgroundColor: '#8b4513',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 4,
-            cursor: 'pointer',
-          }}
-        >
-          Quitter
-        </button>
       </div>
     </div>
   );
