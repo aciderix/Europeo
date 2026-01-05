@@ -14,6 +14,7 @@ import {
   RoueGame,
   type MiniGameType,
 } from '../MiniGames';
+import { EuroCalculator } from '../EuroCalculator';
 import { useGameStore } from '../../store/gameStore';
 import { loadCountry, getCountryList } from '../../engine/GameDataLoader';
 import type { Country } from '../../types/game';
@@ -356,61 +357,9 @@ export const GameContainer: React.FC<GameContainerProps> = ({ debug = false }) =
         </div>
       )}
 
-      {/* Calculator Modal */}
+      {/* Euro Calculator - faithful port of euro32 calculette.dll */}
       {showCalculator && (
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.8)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 1000,
-          }}
-          onClick={() => setShowCalculator(false)}
-        >
-          <div
-            style={{
-              backgroundColor: '#2c3e50',
-              borderRadius: 10,
-              padding: 30,
-              minWidth: 300,
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2 style={{ color: '#fff', marginTop: 0 }}>🧮 Convertisseur Euro</h2>
-            <p style={{ color: '#bdc3c7' }}>1 EUR = 6.55957 FRF</p>
-            <input
-              type="number"
-              placeholder="Montant en Euros"
-              style={{
-                width: '100%',
-                padding: 10,
-                borderRadius: 5,
-                border: 'none',
-                marginBottom: 10,
-              }}
-            />
-            <button
-              onClick={() => setShowCalculator(false)}
-              style={{
-                backgroundColor: '#27ae60',
-                border: 'none',
-                borderRadius: 5,
-                padding: '10px 20px',
-                color: '#fff',
-                cursor: 'pointer',
-                width: '100%',
-              }}
-            >
-              Fermer
-            </button>
-          </div>
-        </div>
+        <EuroCalculator onClose={() => setShowCalculator(false)} />
       )}
 
       {/* Mini-Game Selector */}
