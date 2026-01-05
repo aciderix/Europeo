@@ -1,0 +1,9 @@
+TITRE : Belgique
+ID : belgium
+------------------------------------------------------------
+
+[ Bruxelles ]
+  - Chocolat : Boutique de pralines.
+  - Bande Dessinée : Références culturelles.
+  - Lieux : Atomium, Manneken Pis.
+

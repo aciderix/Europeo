@@ -1,0 +1,8 @@
+TITRE : Hacks & Curiosités
+ID : dev-hacks
+------------------------------------------------------------
+
+NOTE: Variable 'BIDON' : Utilisée partout comme tampon pour éviter les bugs de lecture mémoire lors des transitions.
+
+Le système 'NON' réutilise une seule variable et une seule animation pour gérer les refus de tous les PNJ du jeu, économisant ainsi des ressources.
+

@@ -1,0 +1,8 @@
+TITRE : Irlande
+ID : ireland
+------------------------------------------------------------
+
+[ Campagne ]
+  - Mouton : Tondre avec TONDEUSE pour obtenir LAINE.
+  - Harpe : Réparer ou trouver une harpe celtique.
+

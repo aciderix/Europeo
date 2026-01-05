@@ -1,0 +1,25 @@
+TITRE : Système d'Affichage & Médias
+ID : rendering
+------------------------------------------------------------
+
+Le moteur utilise un système de coordonnées cartésiennes sur une base probable de 640x480 pixels.
+
+[ Gestion des Images (Bitmaps) ]
+  - Commande : addbmp [ID] [Chemin] [Transparence] [X] [Y]
+  - Exemple : addbmp coffre euroland\rollover\coffre.bmp 0 0 203
+  - ID : Identifiant unique pour manipulation (delbmp).
+  - Rollovers : Utilisation de 'playbmp' pour les effets de survol souris.
+
+[ Gestion de la Vidéo (AVI) ]
+  - Commande : playavi [Chemin] [Mode] [X1] [Y1] [X2] [Y2]
+  - Définit une 'Bounding Box' où la vidéo est jouée.
+  - Mode : 1 = Lecture unique, 2 = Boucle (Loop).
+
+[ Texte & Polices ]
+>>> CODE START
+Définition : [Taille] [Style] [Couleur] [Police]
+Ex: 18 0 #ffffff Comic sans MS
+
+Affichage : playtext [X] [Y] ... [Texte]
+<<< CODE END
+

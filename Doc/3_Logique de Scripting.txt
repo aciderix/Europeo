@@ -1,0 +1,21 @@
+TITRE : Logique de Scripting
+ID : scripting
+------------------------------------------------------------
+
+Le langage est procédural, piloté par événements (clics, timers), utilisant des conditions simples.
+
+[ Structure Conditionnelle ]
+>>> CODE START
+[Variable] [Opérateur] [Valeur] then [Action] else [Action]
+
+Exemple :
+sacados = 1 then if clejaune = 0 then set_var clejaune 1
+<<< CODE END
+
+[ Commandes Clés ]
+  - set_var [Nom] [Valeur] : Assigne une valeur.
+  - inc_var / dec_var : Incrémente ou décrémente.
+  - scene [ID] : Déplacement interne (GOTO).
+  - runprj [Chemin] [ID] : Chargement d'un autre fichier pays (Voyage).
+  - playwav [Fichier] [Canal] : Audio (1=SFX, 2=Musique).
+

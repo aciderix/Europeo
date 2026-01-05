@@ -1,0 +1,13 @@
+TITRE : Angleterre & Écosse
+ID : uk
+------------------------------------------------------------
+
+[ Angleterre ]
+  - Tour de Londres : Joyaux de la couronne (nécessite TICKET_A).
+  - Stonehenge : Druide (nécessite outil TAILLEPIERRE).
+  - Fantôme : Mini-jeu de mémoire (Memory.dll).
+
+[ Écosse ]
+  - Loch Ness : Prendre le monstre en photo (AP_PHOTO).
+  - Cornemuse : Instrument à trouver.
+

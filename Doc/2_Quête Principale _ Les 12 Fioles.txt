@@ -1,0 +1,15 @@
+TITRE : Quête Principale : Les 12 Fioles
+ID : main-quest
+------------------------------------------------------------
+
+Le but ultime est de récupérer 12 fioles de couleur dispersées en Europe pour alimenter la 'Fontaine à couleurs' du QG.
+
+[ Cycle de Gameplay ]
+>>> CODE START
+1. Voyage vers un pays (via Transvecteur).
+2. Résolution d'énigme locale.
+3. Gain de la fiole (set_var fiolefrance 1).
+4. Mise à jour de l'interface (f1.bmp à f12.bmp).
+5. Retour au Hub pour valider.
+<<< CODE END
+

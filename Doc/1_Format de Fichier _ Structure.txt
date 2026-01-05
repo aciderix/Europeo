@@ -1,0 +1,18 @@
+TITRE : Format de Fichier & Structure
+ID : file-format
+------------------------------------------------------------
+
+Les fichiers .vnp (VN Project) ou .vnd sont des scripts interprétés hybrides contenant logique, ressources et structure des scènes.
+
+[ En-tête (Header) ]
+>>> CODE START
+VNFILE 2.136 : Version du moteur.
+Europeo : Nom de code du projet.
+Sopra Multimedia : Développeur.
+ID Unique : 5D51F233 (Checksum/Build ID)
+<<< CODE END
+
+Immédiatement après l'en-tête se trouve la Table des Symboles. C'est une liste massive de variables (SACADOS, SCORE, FRANCE...) qui constitue la mémoire persistante du jeu.
+
+NOTE: Lors d'un changement de fichier via la commande 'runprj', le moteur effectue un 'dump' de ces variables pour les transférer vers le nouveau fichier chargé, assurant ainsi la continuité de l'inventaire et du score.
+

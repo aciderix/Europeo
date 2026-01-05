@@ -1,0 +1,11 @@
+TITRE : Quiz & Calculs (Francs/Pepe/Probleme)
+ID : quiz-games
+------------------------------------------------------------
+
+Série de mini-applications demandant une saisie clavier précise (TVNMaskEdit).
+
+[ Solutions des Énigmes ]
+  - Francs.dll (Conversion) : 100 Francs = '15,24' Euros (Masque '00,00').
+  - Pepe.dll (Tour Eiffel) : Nombre de marches = '1652'.
+  - Probleme.dll (Toto en Italie) : (2000 BEF -> 50€) - (48000 ITL -> 24€) = Reste '26' Euros.
+

@@ -1,0 +1,9 @@
+TITRE : Finlande
+ID : finland
+------------------------------------------------------------
+
+[ Laponie ]
+  - Père Noël : Réparer les jouets des lutins (NAINOK).
+  - Outils : TOURNEVIS, COLLE, PINCE.
+  - Sauna : Scène visitable.
+

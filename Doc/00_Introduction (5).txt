@@ -1,0 +1,4 @@
+5. Analyse Détaillée des Mini-Jeux (DLL)
+========================================
+
+Règles, mécanismes et solutions exactes extraites du code binaire des DLL.

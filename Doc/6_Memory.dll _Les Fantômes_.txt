@@ -1,0 +1,6 @@
+TITRE : Memory.dll (Les Fantômes)
+ID : memory-game
+------------------------------------------------------------
+
+Jeu de paires classique en Écosse. 8 paires de symboles à retrouver. Utilise un Timer de 700ms pour retourner les cartes si la paire est fausse.
+

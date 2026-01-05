@@ -1,0 +1,11 @@
+TITRE : Frog.dll (Le Concert des Grenouilles)
+ID : frog-game
+------------------------------------------------------------
+
+Un jeu de type 'Simon Says' musical. Le joueur doit reproduire des séquences de coassements qui s'allongent progressivement.
+
+[ Mécanique ]
+  - 7 Grenouilles 'Actives' réparties sur l'écran (Haut-Gauche, Centre, Bas-Droite...)
+  - 1 Grenouille 'Bonus' (Dorée) cachée (Visible=False dans le code) qui apparaît aléatoirement.
+  - Zones cliquables (Hitbox) invisibles superposées sur le fond 'Image_1.bmp'.
+

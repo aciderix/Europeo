@@ -1,0 +1,18 @@
+TITRE : Modules Externes (DLL)
+ID : dlls
+------------------------------------------------------------
+
+Le moteur délègue les logiques complexes (mini-jeux) à des DLLs via la commande 'rundll'. Voici la liste complète basée sur l'analyse binaire des fichiers.
+
+[ Liste des Modules Identifiés ]
+  - euro32.dll : Calculatrice de conversion Euro (Taux fixes 2002).
+  - francs.dll : Quiz de conversion monétaire (100F = 15,24€).
+  - roue.dll : Serrure à combinaison type 'Coffre-fort' (Code : 2002).
+  - frog.dll : Jeu de mémoire musical (Simon Says avec grenouilles).
+  - bateau.dll : Logistique portuaire (Drag & Drop d'objets culturels).
+  - costume.dll : Puzzle d'association de costumes traditionnels.
+  - Memory.dll : Jeu de paires classique (Thème fantômes/Écosse).
+  - probleme.dll : Problème mathématique (Conversion et soustraction - Toto).
+  - pepe.dll : Quiz culturel (Nombre de marches de la Tour Eiffel : 1652).
+  - tirelire.exe : Gestion du budget (Processus externe).
+

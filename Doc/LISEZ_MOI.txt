@@ -1,0 +1,11 @@
+DOCUMENTATION TECHNIQUE : BIBLE TECHNIQUE : MOTEUR VNSTUDIO & PROJET EUROPEO
+==================================================
+
+Structure de l'archive :
+  1. 1. Architecture du Moteur (VnStudio v2.136)
+  2. 2. Game Design (Projet Europeo)
+  3. 3. Analyse Détaillée par Pays
+  4. 4. Référence Technique
+  5. 5. Analyse Détaillée des Mini-Jeux (DLL)
+
+Généré le 05/01/2026

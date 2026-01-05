@@ -1,0 +1,16 @@
+TITRE : Bateau.dll (Le Chargeur de Quai)
+ID : bateau-game
+------------------------------------------------------------
+
+Jeu de Drag & Drop chronométré. Il faut charger des objets culturels dans les caisses des bons pays.
+
+[ Solution Complète (Objet -> Pays) ]
+Manneken Pis -> BELGIQUE
+Atomium -> BELGIQUE
+Violon -> AUTRICHE
+Chapeau Tyrolien -> AUTRICHE
+Bus Rouge -> ANGLETERRE
+Bouteille Chianti -> ITALIE
+Cheval de Troie -> GRÈCE
+Chapeau Marron -> PAYS-BAS
+
