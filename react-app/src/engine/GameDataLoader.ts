@@ -32,21 +32,40 @@ interface RawCountryData {
   };
 }
 
+interface RawSceneData {
+  id: number;
+  background?: string;
+  audio?: string;
+  commands?: RawCommand[];
+}
+
+interface RawHotspotData {
+  id: string;
+  image: string;
+  x: number;
+  y: number;
+  layer: number;
+  actions?: Array<{
+    condition_value: number;
+    action: RawCommand;
+  }>;
+}
+
 interface RawVndData {
   file: string;
   path: string;
   variables: string[];
-  scenes: number[];
+  scenes: RawSceneData[];
   resources: {
     images: string[];
     audio: string[];
     videos: string[];
     html: string[];
-    cursors: string[];
+    cursors?: string[];
   };
   commands: RawCommand[];
   navigation: { target: string; scene: number }[];
-  hotspots: { x1: number; y1: number; x2: number; y2: number }[];
+  hotspots: RawHotspotData[];
 }
 
 interface RawCommand {
@@ -169,86 +188,79 @@ function rawToCommand(raw: RawCommand): Command | null {
 }
 
 /**
- * Build scenes from raw VND data
+ * Build scenes from raw VND data (new format with scene objects)
  */
 export function buildScenesFromVnd(vnd: RawVndData, _countryId: string): Scene[] {
   const scenes: Scene[] = [];
 
-  // Get unique scene IDs
-  const sceneIds = vnd.scenes.length > 0 ? vnd.scenes : [1];
-
-  // Group commands by type for scene building
-  const addbmpCommands = vnd.commands.filter((c) => c.type === 'addbmp');
-  const playwavCommands = vnd.commands.filter((c) => c.type === 'playwav');
-
-  for (let i = 0; i < sceneIds.length; i++) {
-    const sceneId = sceneIds[i];
-
-    // Find background for this scene
-    // Use scene index to pick different backgrounds if available
-    const bgIndex = i % Math.max(1, vnd.resources.images.length);
-    const rawBackground = vnd.resources.images[bgIndex];
-    const background = rawBackground ? bmpToPng(rawBackground) : undefined;
-
-    // Build hotspots from coordinates with improved actions
-    const hotspots: Hotspot[] = vnd.hotspots.slice(0, 10).map((coords, index) => {
-      // Try to find a playavi command that might be for this hotspot (by position)
-      const hotspotRect = { x1: coords.x1, y1: coords.y1, x2: coords.x2, y2: coords.y2 };
-      const matchingAvi = vnd.commands.find(
-        (c) =>
-          c.type === 'playavi' &&
-          c.rect &&
-          Math.abs((c.rect.x || 0) - hotspotRect.x1) < 50 &&
-          Math.abs((c.rect.y || 0) - hotspotRect.y1) < 50
-      );
-
+  // Build hotspots from new format (with id, image, x, y, actions)
+  const buildHotspots = (): Hotspot[] => {
+    return vnd.hotspots.slice(0, 15).map((h, index) => {
+      // Build onClick commands from hotspot actions
       const onClick: Command[] = [];
-      if (matchingAvi) {
-        const cmd = rawToCommand(matchingAvi);
-        if (cmd) onClick.push(cmd);
+      if (h.actions) {
+        for (const action of h.actions.slice(0, 3)) {
+          const cmd = rawToCommand(action.action);
+          if (cmd) onClick.push(cmd);
+        }
       }
+
+      // Calculate rect from position (hotspot size ~50x50 by default)
+      const rect = { x1: h.x, y1: h.y, x2: h.x + 50, y2: h.y + 50 };
 
       return {
         id: index + 1,
-        rect: coords,
-        tooltip: matchingAvi ? `🎬 ${matchingAvi.file}` : `Zone ${index + 1}`,
+        rect,
+        cursor: undefined,
+        tooltip: h.id,
         onClick,
         onEnter: [],
         onLeave: [],
       };
     });
+  };
 
-    // Build scene enter commands
+  const hotspots = buildHotspots();
+
+  // Process each scene from the new format
+  for (const rawScene of vnd.scenes) {
     const onEnterCommands: Command[] = [];
-    const onExitCommands: Command[] = [];
 
-    // Add background images from addbmp commands
-    for (const addbmp of addbmpCommands.slice(0, 3)) {
-      const cmd = rawToCommand(addbmp);
-      if (cmd) onEnterCommands.push(cmd);
+    // Add audio command if scene has audio
+    if (rawScene.audio) {
+      onEnterCommands.push({
+        type: 'playwav',
+        params: [rawScene.audio, '2'], // Loop audio
+      });
     }
 
-    // Add audio command if available (use playwav from commands or resources)
-    const loopAudio = playwavCommands.find((c) => c.mode === 2);
-    if (loopAudio) {
-      onEnterCommands.push({
-        type: 'playwav',
-        params: [loopAudio.file || '', '2'],
-      });
-    } else if (vnd.resources.audio.length > 0) {
-      onEnterCommands.push({
-        type: 'playwav',
-        params: [vnd.resources.audio[0], '2'],
-      });
+    // Add scene commands
+    if (rawScene.commands) {
+      for (const cmd of rawScene.commands.slice(0, 5)) {
+        const converted = rawToCommand(cmd);
+        if (converted) onEnterCommands.push(converted);
+      }
     }
 
     scenes.push({
-      id: sceneId,
-      name: `Scene ${sceneId}`,
-      background,
-      hotspots,
+      id: rawScene.id,
+      name: `Scene ${rawScene.id}`,
+      background: rawScene.background ? bmpToPng(rawScene.background) : undefined,
+      hotspots, // Same hotspots for all scenes (simplification)
       onEnter: onEnterCommands,
-      onExit: onExitCommands,
+      onExit: [],
+    });
+  }
+
+  // Fallback if no scenes
+  if (scenes.length === 0) {
+    scenes.push({
+      id: 1,
+      name: 'Scene 1',
+      background: vnd.resources.images[0] ? bmpToPng(vnd.resources.images[0]) : undefined,
+      hotspots,
+      onEnter: [],
+      onExit: [],
     });
   }
 

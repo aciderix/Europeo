@@ -209,60 +209,89 @@ def parse_command_string(cmd_str: str) -> Optional[Dict]:
 
 
 def extract_scenes_from_strings(all_strings: Dict[str, str]) -> List[Dict]:
-    """Extract scene definitions from VND strings by finding scene numbers referenced"""
+    """Extract scene definitions from VND strings by analyzing the sequential structure"""
     scene_pattern = re.compile(r'\bscene\s+(\d+)', re.IGNORECASE)
-    # Match standalone BMP filenames (not paths with roll/ or rol/)
     bmp_pattern = re.compile(r'^[a-zA-Z][\w]*\.bmp$', re.IGNORECASE)
+    wav_pattern = re.compile(r'^[\w]+\.wav', re.IGNORECASE)
 
     # Collect all scene numbers referenced in commands
     scene_numbers = set([1])  # Always have scene 1
-
     for text in all_strings.values():
         for match in scene_pattern.finditer(text):
             scene_numbers.add(int(match.group(1)))
 
-    # Collect background images (standalone BMP references)
-    backgrounds = []
-    for text in all_strings.values():
-        text_clean = text.strip()
-        if bmp_pattern.match(text_clean):
-            # Exclude hotspot folders
-            if not any(x in text_clean.lower() for x in ['roll', 'rol/', 'rol\\']):
-                if text_clean not in backgrounds:
-                    backgrounds.append(text_clean)
+    # Parse sequential structure to find scene blocks
+    # Each scene block typically starts with: audio -> background -> commands
+    scene_blocks = []
+    current_block = {"background": None, "audio": None, "commands": []}
 
-    # Build scenes - one per scene number found
+    sorted_items = sorted(all_strings.items(), key=lambda x: int(x[0], 16))
+
+    for offset, text in sorted_items:
+        text_clean = text.strip()
+
+        # Check for background BMP (marks new scene)
+        if bmp_pattern.match(text_clean):
+            if not any(x in text_clean.lower() for x in ['roll', 'rol/', 'rol\\', 'barre']):
+                # Save previous block if it had a background
+                if current_block["background"]:
+                    scene_blocks.append(current_block)
+                current_block = {"background": text_clean, "audio": None, "commands": []}
+                continue
+
+        # Check for audio
+        if wav_pattern.match(text_clean):
+            current_block["audio"] = text_clean
+            continue
+
+        # Parse commands and add to current block
+        cmd = parse_command_string(text_clean)
+        if cmd:
+            current_block["commands"].append(cmd)
+
+    # Add last block
+    if current_block["background"]:
+        scene_blocks.append(current_block)
+
+    # Build scenes - map scene numbers to blocks
     scenes = []
-    sorted_scenes = sorted(scene_numbers)
-    for i, scene_id in enumerate(sorted_scenes):
-        # Assign backgrounds cyclically
-        background = backgrounds[i % len(backgrounds)] if backgrounds else None
+    sorted_scene_nums = sorted(scene_numbers)
+
+    for i, scene_id in enumerate(sorted_scene_nums):
+        block = scene_blocks[i % len(scene_blocks)] if scene_blocks else {}
         scenes.append({
             "id": scene_id,
-            "background": background,
-            "commands": []
+            "background": block.get("background"),
+            "audio": block.get("audio"),
+            "commands": block.get("commands", [])[:20]  # Limit commands
         })
 
     return scenes
 
 
 def extract_hotspots_from_strings(all_strings: Dict[str, str]) -> List[Dict]:
-    """Extract hotspot definitions from VND strings"""
+    """Extract hotspot definitions from VND strings with their actions"""
     hotspots = []
     seen_ids = set()
+    hotspot_actions = {}  # Map hotspot id to its actions
 
-    # Look for addbmp commands with roll/ or rol/ prefix (hotspots)
-    # Pattern: addbmp id rol\file.bmp layer x y
+    # Pattern for addbmp with roll/ or rol/ prefix
     addbmp_pattern = re.compile(
         r'addbmp\s+(\w+)\s+(rol[l]?[/\\][\w.]+)\s+(\d+)\s+(\d+)\s+(\d+)',
         re.IGNORECASE
     )
 
+    # Pattern for hotspot actions: "hotspot_id = value then action"
+    action_pattern = re.compile(
+        r'(\w+)\s*=\s*(\d+)\s+then\s+(.+)',
+        re.IGNORECASE
+    )
+
+    # First pass: collect all hotspot definitions
     for text in all_strings.values():
         match = addbmp_pattern.search(text)
         if match:
             hotspot_id = match.group(1)
-            # Avoid duplicates
             if hotspot_id not in seen_ids:
                 seen_ids.add(hotspot_id)
                 hotspots.append({
@@ -270,8 +299,28 @@ def extract_hotspots_from_strings(all_strings: Dict[str, str]) -> List[Dict]:
                     "image": match.group(2).replace('\\', '/'),
                     "layer": int(match.group(3)),
                     "x": int(match.group(4)),
-                    "y": int(match.group(5))
+                    "y": int(match.group(5)),
+                    "actions": []
                 })
+
+    # Second pass: find actions related to hotspots
+    for text in all_strings.values():
+        action_match = action_pattern.search(text)
+        if action_match:
+            var_name = action_match.group(1).lower()
+            action_text = action_match.group(3).strip()
+
+            # Check if this variable corresponds to a hotspot
+            for hotspot in hotspots:
+                if hotspot["id"].lower() == var_name:
+                    # Parse the action
+                    action_cmd = parse_command_string(action_text)
+                    if action_cmd and len(hotspot["actions"]) < 5:
+                        hotspot["actions"].append({
+                            "condition_value": int(action_match.group(2)),
+                            "action": action_cmd
+                        })
+                    break
 
     return hotspots
 
@@ -363,18 +412,25 @@ def process_country(folder_id: str, info: Dict) -> Dict:
         hotspots = extract_hotspots_from_strings(all_strings)
         resources = extract_resources(all_strings)
 
-        # Build VND structure
+        # Build VND structure with full scene and hotspot data
         country["vnd"] = {
             "file": f"{vnd_name}.vnd",
             "path": f"{folder_id}/{vnd_name}.vnd",
             "variables": variables[:50],  # Limit for size
-            "scenes": [s["id"] for s in scenes],
+            "scenes": scenes[:30],  # Full scene objects with background and commands
             "resources": resources,
             "commands": [],  # Would be too large, skip for now
             "navigation": [],
             "hotspots": [
-                {"x1": h["x"], "y1": h["y"], "x2": h["x"] + 50, "y2": h["y"] + 50}
-                for h in hotspots[:20]
+                {
+                    "id": h["id"],
+                    "image": h["image"],
+                    "x": h["x"],
+                    "y": h["y"],
+                    "layer": h["layer"],
+                    "actions": h.get("actions", [])
+                }
+                for h in hotspots[:30]
             ]
         }
 
