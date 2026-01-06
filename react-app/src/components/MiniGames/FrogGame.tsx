@@ -117,8 +117,8 @@ export const FrogGame: React.FC<FrogGameProps> = ({ onClose, onSuccess }) => {
   const [message, setMessage] = useState('Écoute bien');
   const [subMessage, setSubMessage] = useState('et répète !');
 
-  const goldenTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const sequenceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const goldenTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const sequenceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const MAX_LEVEL = 7; // Win after completing 7 levels
 

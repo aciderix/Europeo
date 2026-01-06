@@ -1,10 +1,10 @@
 /**
  * Europeo - Visual Novel Game
- * React Port by Claude
+ * React Port avec support des polygones
  */
 
-import { useState } from 'react';
-import { GameContainer } from './components/Game/GameContainer';
+import { useState, useEffect } from 'react';
+import { PolygonGameContainer } from './components/Game/PolygonGameContainer';
 import { useGameStore } from './store/gameStore';
 
 // Minimal global styles
@@ -142,27 +142,30 @@ function StartScreen({ onStart }: { onStart: () => void }) {
 
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
-  const [debugMode, setDebugMode] = useState(false);
+  const [debugMode, setDebugMode] = useState(() => {
+    // Check URL parameter for debug mode
+    const params = new URLSearchParams(window.location.search);
+    return params.get('debug') === 'true' || params.get('debug') === '1';
+  });
 
-  // Toggle debug mode with keyboard shortcut
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'D')) {
-      e.preventDefault();
-      setDebugMode((prev) => !prev);
-    }
-  };
+  // Toggle debug mode with keyboard shortcut (Ctrl+Shift+D)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+        e.preventDefault();
+        setDebugMode((prev) => !prev);
+      }
+    };
 
-  // Set up keyboard listener
-  useState(() => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  });
+  }, []);
 
   return (
     <>
       <style>{globalStyles}</style>
       {gameStarted ? (
-        <GameContainer debug={debugMode} />
+        <PolygonGameContainer debug={debugMode} />
       ) : (
         <StartScreen onStart={() => setGameStarted(true)} />
       )}

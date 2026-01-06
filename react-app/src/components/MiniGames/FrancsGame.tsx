@@ -26,12 +26,8 @@ interface FrancsGameProps {
   onSuccess?: () => void;
 }
 
-// Exact conversion rate from French Franc to Euro (fixed January 1, 1999)
-const FRF_TO_EUR = 6.55957;
-
-// The original question from francs.dll
-const QUESTION_AMOUNT = 100;
-const CORRECT_ANSWER = "15,24"; // String format matching EditMask
+// Original question: 100 FRF = ? EUR (rate: 6.55957)
+const CORRECT_ANSWER = "15,24"; // 100 / 6.55957 ≈ 15.24 EUR
 
 // Asset path
 const BACKGROUND_IMAGE = '/assets/minigames/francs/Image_1.png';

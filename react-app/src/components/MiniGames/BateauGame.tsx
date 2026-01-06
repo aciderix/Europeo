@@ -186,7 +186,7 @@ export const BateauGame: React.FC<BateauGameProps> = ({ onClose, onSuccess }) =>
   const [score, setScore] = useState(0);
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Timer countdown
   useEffect(() => {
