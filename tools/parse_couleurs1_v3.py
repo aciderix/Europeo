@@ -39,6 +39,17 @@ def make_scene_id(background: str) -> str:
 class SceneMapper:
     """Mappe les numéros de scène aux backgrounds"""
 
+    # Mapping manuel des vidéos vers les backgrounds (basé sur l'analyse du VND)
+    # Format: video_name -> background_name
+    VIDEO_TO_BACKGROUND = {
+        'bankbis.avi': 'banque.bmp',
+        'home2.avi': 'maison.bmp',
+        'musee.avi': 'bdmusee.bmp',       # Corrigé par l'utilisateur
+        'profbis.avi': 'biblio.bmp',      # La maison de prof -> bibliothèque?
+        'fontaine.avi': 'fontaine2.bmp',  # Corrigé par l'utilisateur
+        'biblio.avi': 'biblio.bmp',
+    }
+
     def __init__(self, vnd_path: str):
         with open(vnd_path, 'rb') as f:
             self.data = f.read()
@@ -93,6 +104,14 @@ class SceneMapper:
 
     def get_scene_id_for_video(self, video: str) -> Optional[str]:
         """Retourne l'ID de scène (nom du background) pour une vidéo"""
+        video_lower = video.lower()
+
+        # D'abord essayer le mapping manuel (plus fiable)
+        if video_lower in self.VIDEO_TO_BACKGROUND:
+            bg = self.VIDEO_TO_BACKGROUND[video_lower]
+            return make_scene_id(bg)
+
+        # Sinon, essayer le mapping automatique
         scene_num = self.get_scene_for_video(video)
         if scene_num:
             bg = self.get_background_for_scene(scene_num)

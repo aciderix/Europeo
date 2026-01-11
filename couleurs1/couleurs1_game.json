@@ -197,7 +197,7 @@
             },
             "onClick": {
               "playVideo": "profbis.avi",
-              "loadScene": "bdmusee"
+              "loadScene": "biblio"
             }
           },
           {
@@ -264,7 +264,7 @@
             },
             "onClick": {
               "playVideo": "musee.avi",
-              "loadScene": "armoire3"
+              "loadScene": "bdmusee"
             }
           },
           {
@@ -326,7 +326,8 @@
               "text": "La fontaine à couleurs"
             },
             "onClick": {
-              "playVideo": "fontaine.avi"
+              "playVideo": "fontaine.avi",
+              "loadScene": "fontaine2"
             }
           }
         ]
