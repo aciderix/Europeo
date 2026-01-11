@@ -326,7 +326,8 @@
               "text": "La fontaine à couleurs"
             },
             "onClick": {
-              "playVideo": "fontaine.avi"
+              "playVideo": "fontaine.avi",
+              "loadScene": "fontain2"
             }
           }
         ]
@@ -396,7 +397,8 @@
               "text": "Le banquier d'Eurolandl"
             },
             "onClick": {
-              "playVideo": "banq2.avi"
+              "playVideo": "banq2.avi",
+              "loadScene": "banque"
             }
           },
           {
@@ -715,7 +717,8 @@
               ]
             },
             "onClick": {
-              "playVideo": "trans.avi"
+              "playVideo": "trans.avi",
+              "loadScene": "transverteur2"
             }
           },
           {

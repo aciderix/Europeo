@@ -98,12 +98,25 @@ class SceneMapper:
         """Retourne l'ID de scène (nom du background) pour une vidéo
 
         Utilise le mapping automatique: video → scene_num (via Xi pattern) → background
+        Avec fallback par similarité de nom si le scene_num est hors limite.
         """
         scene_num = self.get_scene_for_video(video)
         if scene_num:
             bg = self.get_background_for_scene(scene_num)
             if bg:
                 return make_scene_id(bg)
+
+        # Fallback: chercher un background avec un nom similaire à la vidéo
+        # Ex: fontaine.avi → fontain2.bmp
+        video_base = video.lower().replace('.avi', '')
+        for bg in self.bg_to_num.keys():
+            bg_base = bg.replace('.bmp', '')
+            # Vérifier si le début du nom correspond (min 4 caractères)
+            if len(video_base) >= 4 and len(bg_base) >= 4:
+                if bg_base.startswith(video_base[:4]) or video_base.startswith(bg_base[:4]):
+                    print(f"  [Fallback] {video} → {bg} (par similarité de nom)")
+                    return make_scene_id(bg)
+
         return None
 
 
