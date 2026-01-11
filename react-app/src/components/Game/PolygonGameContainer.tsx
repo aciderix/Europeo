@@ -7,6 +7,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useGameStore } from '../../store/gameStore';
 import { getScene, getAssetPath, getCountryList } from '../../engine/PolygonDataLoader';
 import { PolygonScene } from './PolygonScene';
+import { GameToolbar } from '../UI/GameToolbar';
+import { VideoPlayer } from '../Media/VideoPlayer';
+import { useAudio } from '../../hooks/useAudio';
 import type { PolygonScene as SceneType, PolygonHotspot } from '../../types/polygon';
 
 // Mapping des noms de pays
@@ -36,18 +39,122 @@ interface PolygonGameContainerProps {
   debug?: boolean;
 }
 
+// Composant overlay pour l'inventaire
+const InventoryOverlay: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+  const { inventory, removeFromInventory } = useGameStore();
+
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0,0,0,0.8)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: 1000,
+      }}
+      onClick={onClose}
+    >
+      <div
+        style={{
+          backgroundColor: '#1a1a2e',
+          borderRadius: 12,
+          padding: 24,
+          minWidth: 400,
+          maxWidth: '80%',
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <h3 style={{ color: '#f1c40f', marginTop: 0, textAlign: 'center' }}>
+          Inventaire
+        </h3>
+        {inventory.length === 0 ? (
+          <p style={{ color: '#888', textAlign: 'center' }}>
+            Votre sac est vide
+          </p>
+        ) : (
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: 12,
+              marginTop: 16,
+            }}
+          >
+            {inventory.map((item) => (
+              <div
+                key={item}
+                style={{
+                  backgroundColor: '#34495e',
+                  borderRadius: 8,
+                  padding: 12,
+                  textAlign: 'center',
+                }}
+              >
+                <div style={{ color: '#fff', fontSize: 14, marginBottom: 4 }}>
+                  {item}
+                </div>
+                <button
+                  onClick={() => removeFromInventory(item)}
+                  style={{
+                    padding: '4px 8px',
+                    backgroundColor: '#e74c3c',
+                    border: 'none',
+                    borderRadius: 4,
+                    color: '#fff',
+                    fontSize: 10,
+                    cursor: 'pointer',
+                  }}
+                >
+                  Jeter
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+        <button
+          onClick={onClose}
+          style={{
+            marginTop: 20,
+            padding: '8px 24px',
+            backgroundColor: '#3498db',
+            border: 'none',
+            borderRadius: 6,
+            color: '#fff',
+            cursor: 'pointer',
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          Fermer
+        </button>
+      </div>
+    </div>
+  );
+};
+
 export const PolygonGameContainer: React.FC<PolygonGameContainerProps> = ({
   initialCountry = 'couleurs1',
   initialScene = 1,
   debug = false,
 }) => {
-  const { currentCountry, currentScene, navigateTo, score } = useGameStore();
+  const { currentCountry, currentScene, navigateTo } = useGameStore();
   const [scene, setSceneData] = useState<SceneType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentVideo, setCurrentVideo] = useState<string | null>(null);
   const [showCountryPicker, setShowCountryPicker] = useState(false);
+  const [showCalculator, setShowCalculator] = useState(false);
+  const [showInventory, setShowInventory] = useState(false);
   const [countries, setCountries] = useState<Array<{ id: string; name: string }>>([]);
+
+  // Audio
+  const { playSound, stopAll: stopAudio } = useAudio(currentCountry);
 
   // Calculer l'échelle pour s'adapter à l'écran
   const scale = Math.min(
@@ -82,6 +189,16 @@ export const PolygonGameContainer: React.FC<PolygonGameContainerProps> = ({
 
         if (sceneData) {
           setSceneData(sceneData);
+
+          // Jouer l'audio de la scène si disponible
+          if (sceneData.audio) {
+            const audioFile = sceneData.audio.toLowerCase()
+              .replace(/^.*[\\/]/, '') // Enlever le chemin
+              .replace('.wav', '.mp3'); // Convertir extension
+            playSound(audioFile, true); // Loop
+          } else {
+            stopAudio();
+          }
         } else {
           // Si la scène n'existe pas, essayer la première scène
           const firstScene = await getScene(currentCountry, 1);
@@ -106,8 +223,9 @@ export const PolygonGameContainer: React.FC<PolygonGameContainerProps> = ({
 
     return () => {
       mounted = false;
+      stopAudio();
     };
-  }, [currentCountry, currentScene, navigateTo]);
+  }, [currentCountry, currentScene, navigateTo, playSound, stopAudio]);
 
   // Gestion des clics sur hotspot
   const handleHotspotClick = useCallback((hotspot: PolygonHotspot) => {
@@ -136,6 +254,33 @@ export const PolygonGameContainer: React.FC<PolygonGameContainerProps> = ({
     setShowCountryPicker(false);
     navigateTo(countryId, 1);
   }, [navigateTo]);
+
+  // Handlers pour la toolbar
+  const handleBackClick = useCallback(() => {
+    // Retour à la scène précédente ou au menu principal
+    if (currentScene > 1) {
+      navigateTo(currentCountry, currentScene - 1);
+    } else {
+      setShowCountryPicker(true);
+    }
+  }, [currentCountry, currentScene, navigateTo]);
+
+  const handleCalculatorClick = useCallback(() => {
+    setShowCalculator((prev) => !prev);
+  }, []);
+
+  const handleInventoryClick = useCallback(() => {
+    setShowInventory((prev) => !prev);
+  }, []);
+
+  const handlePhoneClick = useCallback(() => {
+    // Afficher l'aide
+    console.log('Aide téléphonique demandée');
+  }, []);
+
+  const handleCountryClick = useCallback(() => {
+    setShowCountryPicker(true);
+  }, []);
 
   // Dimensions
   const gameWidth = 640 * scale;
@@ -222,66 +367,34 @@ export const PolygonGameContainer: React.FC<PolygonGameContainerProps> = ({
         />
       )}
 
-      {/* Barre d'outils simplifiée */}
-      <div
-        style={{
-          height: toolbarHeight,
-          backgroundColor: '#1a1a2e',
-          display: 'flex',
-          alignItems: 'center',
-          padding: '0 16px',
-          gap: 12,
-        }}
-      >
-        {/* Score */}
-        <div style={{
-          color: '#f1c40f',
-          fontFamily: '"Comic Sans MS", cursive',
-          fontSize: 16,
-          fontWeight: 'bold',
-        }}>
-          Score: {score}
-        </div>
+      {/* Barre d'outils */}
+      <GameToolbar
+        scale={scale}
+        onBackClick={handleBackClick}
+        onInventoryClick={handleInventoryClick}
+        onCalculatorClick={handleCalculatorClick}
+        onPhoneClick={handlePhoneClick}
+        onCountryClick={handleCountryClick}
+      />
 
-        {/* Pays actuel */}
-        <div style={{ color: '#fff', fontSize: 14, marginLeft: 'auto' }}>
-          📍 {COUNTRY_NAMES[currentCountry] || currentCountry}
-        </div>
-
-        {/* Scène actuelle */}
-        <div style={{ color: '#888', fontSize: 12 }}>
-          Scene {currentScene}
-        </div>
-
-        {/* Bouton pays */}
-        <button
-          onClick={() => setShowCountryPicker(true)}
+      {/* Indicateur debug */}
+      {debug && (
+        <div
           style={{
-            padding: '8px 16px',
-            backgroundColor: '#3498db',
-            border: 'none',
-            borderRadius: 6,
-            color: '#fff',
-            cursor: 'pointer',
-            fontSize: 14,
-          }}
-        >
-          🌍 Pays
-        </button>
-
-        {/* Toggle debug */}
-        {debug && (
-          <div style={{
+            position: 'absolute',
+            top: 8,
+            right: 8,
             padding: '4px 8px',
             backgroundColor: '#27ae60',
             borderRadius: 4,
             color: '#fff',
             fontSize: 11,
-          }}>
-            DEBUG
-          </div>
-        )}
-      </div>
+            zIndex: 50,
+          }}
+        >
+          DEBUG | Scene {currentScene}
+        </div>
+      )}
 
       {/* Lecteur vidéo (overlay) */}
       {currentVideo && (
@@ -300,13 +413,19 @@ export const PolygonGameContainer: React.FC<PolygonGameContainerProps> = ({
           }}
           onClick={handleVideoEnded}
         >
-          <div style={{ position: 'relative', maxWidth: '90%', maxHeight: '90%' }}>
-            <video
+          <div
+            style={{
+              position: 'relative',
+              maxWidth: '90%',
+              maxHeight: '80vh',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <VideoPlayer
               src={currentVideo}
-              autoPlay
               onEnded={handleVideoEnded}
-              onError={() => {
-                console.error('Erreur vidéo:', currentVideo);
+              onError={(err) => {
+                console.error('Erreur vidéo:', err);
                 setCurrentVideo(null);
               }}
               style={{
@@ -315,18 +434,78 @@ export const PolygonGameContainer: React.FC<PolygonGameContainerProps> = ({
                 borderRadius: 8,
               }}
             />
-            <div style={{
-              position: 'absolute',
-              bottom: -30,
-              left: '50%',
-              transform: 'translateX(-50%)',
-              color: '#888',
-              fontSize: 12,
-            }}>
-              Cliquez pour fermer
+            <div
+              style={{
+                position: 'absolute',
+                bottom: -30,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                color: '#888',
+                fontSize: 12,
+              }}
+            >
+              Cliquez en dehors pour fermer
             </div>
           </div>
         </div>
+      )}
+
+      {/* Calculatrice Euro (overlay) */}
+      {showCalculator && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0,0,0,0.8)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+          }}
+          onClick={() => setShowCalculator(false)}
+        >
+          <div
+            style={{
+              backgroundColor: '#1a1a2e',
+              borderRadius: 12,
+              padding: 24,
+              minWidth: 300,
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 style={{ color: '#f1c40f', marginTop: 0, textAlign: 'center' }}>
+              Calculatrice Euro
+            </h3>
+            <p style={{ color: '#888', textAlign: 'center' }}>
+              1 EUR = 6.55957 FRF
+            </p>
+            <button
+              onClick={() => setShowCalculator(false)}
+              style={{
+                marginTop: 16,
+                padding: '8px 24px',
+                backgroundColor: '#e74c3c',
+                border: 'none',
+                borderRadius: 6,
+                color: '#fff',
+                cursor: 'pointer',
+                display: 'block',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            >
+              Fermer
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Inventaire (overlay) */}
+      {showInventory && (
+        <InventoryOverlay onClose={() => setShowInventory(false)} />
       )}
 
       {/* Sélecteur de pays */}
