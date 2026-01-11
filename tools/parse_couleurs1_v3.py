@@ -39,17 +39,6 @@ def make_scene_id(background: str) -> str:
 class SceneMapper:
     """Mappe les numéros de scène aux backgrounds"""
 
-    # Mapping manuel des vidéos vers les backgrounds (basé sur l'analyse du VND)
-    # Format: video_name -> background_name
-    VIDEO_TO_BACKGROUND = {
-        'bankbis.avi': 'banque.bmp',
-        'home2.avi': 'maison.bmp',
-        'musee.avi': 'bdmusee.bmp',       # Corrigé par l'utilisateur
-        'profbis.avi': 'biblio.bmp',      # La maison de prof -> bibliothèque?
-        'fontaine.avi': 'fontaine2.bmp',  # Corrigé par l'utilisateur
-        'biblio.avi': 'biblio.bmp',
-    }
-
     def __init__(self, vnd_path: str):
         with open(vnd_path, 'rb') as f:
             self.data = f.read()
@@ -60,16 +49,19 @@ class SceneMapper:
         self._extract_video_scene_links()
 
     def _build_scene_map(self):
-        """Construit le mapping numéro de scène → background"""
-        # Trouver tous les backgrounds dans l'ordre
+        """Construit le mapping numéro de scène → background
+
+        Les scènes sont numérotées selon l'ordre d'apparition de TOUS les
+        backgrounds dans le fichier VND (pas seulement ceux avec music.wav).
+        """
         pattern = rb'euroland\\([a-z0-9_]+\.bmp)'
         seen = set()
         bgs = []
 
         for m in re.finditer(pattern, self.data, re.I):
             bg = m.group(1).decode().lower()
-            # Ignorer les transitions et doublons
-            if bg not in seen and not bg.startswith('trans'):
+            # Ignorer les doublons (garder la première occurrence)
+            if bg not in seen:
                 seen.add(bg)
                 bgs.append((m.start(), bg))
 
@@ -103,15 +95,10 @@ class SceneMapper:
         return self.scene_map.get(scene_num)
 
     def get_scene_id_for_video(self, video: str) -> Optional[str]:
-        """Retourne l'ID de scène (nom du background) pour une vidéo"""
-        video_lower = video.lower()
+        """Retourne l'ID de scène (nom du background) pour une vidéo
 
-        # D'abord essayer le mapping manuel (plus fiable)
-        if video_lower in self.VIDEO_TO_BACKGROUND:
-            bg = self.VIDEO_TO_BACKGROUND[video_lower]
-            return make_scene_id(bg)
-
-        # Sinon, essayer le mapping automatique
+        Utilise le mapping automatique: video → scene_num (via Xi pattern) → background
+        """
         scene_num = self.get_scene_for_video(video)
         if scene_num:
             bg = self.get_background_for_scene(scene_num)
