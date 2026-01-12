@@ -47,6 +47,7 @@ class SceneMapper:
         self.bg_to_num = {}  # background -> scene_num
         self._build_scene_map()
         self._extract_video_scene_links()
+        self._build_scene_definitions()
 
     def _build_scene_map(self):
         """Construit le mapping numéro de scène → background
@@ -94,63 +95,84 @@ class SceneMapper:
         """Retourne le background pour un numéro de scène"""
         return self.scene_map.get(scene_num)
 
-    def _find_similar_background(self, video: str) -> Optional[str]:
-        """Trouve un background avec un nom similaire à la vidéo.
+    def _build_scene_definitions(self):
+        """Construit un mapping: numéro de scène → background qui le CONTIENT.
 
-        Utilisé quand le numéro de scène est hors limite.
-        Ex: fontaine.avi → fontain2.bmp (similarité de noms)
+        Les numéros de scène (type_id 6) sont des références. Pour trouver
+        la destination, on cherche dans quelle section de background ce numéro
+        est DÉFINI (pas référencé comme source).
         """
-        # Extraire le nom de base de la vidéo (sans extension)
-        video_base = video.lower().replace('.avi', '')
+        self.scene_definitions = {}  # scene_num -> background
 
-        # Chercher un background qui contient une partie significative du nom
-        best_match = None
-        best_score = 0
+        # Scanner les type_id 6 dans chaque section de background
+        backgrounds = [(offset, bg) for bg, offset in
+                       sorted([(bg, self.bg_to_num[bg]) for bg in self.bg_to_num],
+                              key=lambda x: x[1])]
 
-        for bg in self.scene_map.values():
-            bg_base = bg.lower().replace('.bmp', '')
+        # Reconstruire la liste des backgrounds avec leurs offsets réels
+        bg_offsets = []
+        pattern = rb'euroland\\([a-z0-9_]+\.bmp)'
+        seen = set()
+        for m in re.finditer(pattern, self.data, re.I):
+            bg = m.group(1).decode().lower()
+            if bg not in seen:
+                seen.add(bg)
+                bg_offsets.append((m.start(), bg))
+        bg_offsets.sort()
 
-            # Vérifier si le nom de la vidéo est contenu dans le background ou vice versa
-            # Ex: "fontaine" contient "fontain" qui est dans "fontain2"
-            if len(video_base) >= 4 and len(bg_base) >= 4:
-                # Prendre les 4+ premiers caractères pour comparaison
-                video_prefix = video_base[:min(len(video_base), 7)]
-                bg_prefix = bg_base[:min(len(bg_base), 7)]
+        def find_section(offset):
+            prev = None
+            for bg_off, bg_name in bg_offsets:
+                if bg_off > offset:
+                    return prev
+                prev = bg_name
+            return prev
 
-                # Calculer la similarité
-                common_len = 0
-                for i in range(min(len(video_prefix), len(bg_prefix))):
-                    if video_prefix[i] == bg_prefix[i]:
-                        common_len += 1
-                    else:
-                        break
+        # Scanner les type_id 6 (numéros de scène)
+        # On ignore les occurrences après ".avi" car ce sont des RÉFÉRENCES
+        # On garde les autres qui sont des DÉFINITIONS de zones cliquables
+        i = 0
+        size = len(self.data)
+        while i < size - 12:
+            r_type = struct.unpack_from('<I', self.data, i)[0]
+            if r_type == 6:
+                length = struct.unpack_from('<I', self.data, i + 4)[0]
+                if 1 <= length <= 4 and i + 8 + length <= size:
+                    s_bytes = self.data[i+8:i+8+length]
+                    if all(48 <= b <= 57 for b in s_bytes):  # Que des chiffres
+                        scene_num = int(s_bytes.decode())
+                        section = find_section(i)
 
-                # Score basé sur les caractères communs au début
-                if common_len >= 4 and common_len > best_score:
-                    best_score = common_len
-                    best_match = bg
+                        # Vérifier si c'est après un .avi (= référence, pas définition)
+                        before = self.data[max(0, i-50):i]
+                        is_reference = b'.avi' in before
 
-        return best_match
+                        # Ne garder que les DÉFINITIONS (pas après .avi)
+                        if section and not is_reference:
+                            if scene_num not in self.scene_definitions:
+                                self.scene_definitions[scene_num] = section
+
+                        i += 8 + length
+                        continue
+            i += 1
 
     def get_scene_id_for_video(self, video: str) -> Optional[str]:
-        """Retourne l'ID de scène (nom du background) pour une vidéo
+        """Retourne l'ID de scène (nom du background) pour une vidéo.
 
-        Utilise le mapping automatique: video → scene_num (via Xi pattern) → background
-        Si le scene_num dépasse le nombre de scènes, utilise la similarité de noms.
+        Le numéro de scène après la vidéo est une RÉFÉRENCE. La destination
+        est le background qui CONTIENT la définition de ce numéro de scène.
         """
         scene_num = self.get_scene_for_video(video)
         if scene_num:
+            # Chercher dans quelle section ce numéro de scène est défini
+            if hasattr(self, 'scene_definitions') and scene_num in self.scene_definitions:
+                bg = self.scene_definitions[scene_num]
+                return make_scene_id(bg)
+
+            # Fallback: utiliser l'ordre séquentiel
             bg = self.get_background_for_scene(scene_num)
             if bg:
                 return make_scene_id(bg)
-
-            # Scene num hors limite: chercher par similarité de noms
-            total_scenes = len(self.scene_map)
-            if total_scenes > 0 and scene_num > total_scenes:
-                similar_bg = self._find_similar_background(video)
-                if similar_bg:
-                    print(f"  [Similarité] {video} → scene {scene_num} (hors limite) → {similar_bg}")
-                    return make_scene_id(similar_bg)
 
         return None
 
