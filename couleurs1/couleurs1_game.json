@@ -83,7 +83,7 @@
             },
             "onClick": {
               "playVideo": "bankbis.avi",
-              "loadScene": "bureaubanquier"
+              "loadScene": "banque"
             }
           },
           {
@@ -154,7 +154,7 @@
             },
             "onClick": {
               "playVideo": "home2.avi",
-              "loadScene": "armoire3"
+              "loadScene": "maison"
             }
           },
           {
@@ -197,7 +197,7 @@
             },
             "onClick": {
               "playVideo": "profbis.avi",
-              "loadScene": "europe"
+              "loadScene": "transverteur2"
             }
           },
           {
@@ -264,7 +264,7 @@
             },
             "onClick": {
               "playVideo": "musee.avi",
-              "loadScene": "calc"
+              "loadScene": "bdmusee"
             }
           },
           {

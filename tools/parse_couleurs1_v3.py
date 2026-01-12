@@ -73,8 +73,14 @@ class SceneMapper:
             self.bg_to_num[bg] = i
 
     def _extract_video_scene_links(self):
-        """Extrait les liens vidéo → scene_id"""
+        """Extrait les liens vidéo → scene_id
+
+        Le numéro après '.avi 1' peut être:
+        - Un INDEX de position si <= nombre de backgrounds
+        - Un SCENE_ID si > nombre de backgrounds
+        """
         self.video_to_scene = {}
+        self.video_to_index = {}  # Nouveau: stocke si c'est un index
 
         # Pattern: xxx.avi suivi de " 1" puis scene ID "Xi"
         for m in re.finditer(rb'([a-z0-9_]+\.avi)\s+1', self.data, re.I):
@@ -83,8 +89,15 @@ class SceneMapper:
             after = self.data[m.end():m.end()+30]
             scene_match = re.search(rb'([0-9]+)i', after)
             if scene_match:
-                scene_num = int(scene_match.group(1))
-                self.video_to_scene[video] = scene_num
+                num = int(scene_match.group(1))
+                nb_backgrounds = len(self.scene_map)
+
+                if num <= nb_backgrounds:
+                    # C'est un INDEX de position
+                    self.video_to_index[video] = num
+                else:
+                    # C'est un SCENE_ID
+                    self.video_to_scene[video] = num
 
     def get_scene_for_video(self, video: str) -> Optional[int]:
         """Retourne le numéro de scène pour une vidéo"""
@@ -96,18 +109,12 @@ class SceneMapper:
         return self.scene_map.get(scene_num)
 
     def _build_scene_definitions(self):
-        """Construit un mapping: numéro de scène → background qui le CONTIENT.
+        """Construit un mapping: scene_id → background.
 
-        Les numéros de scène (type_id 6) sont des références. Pour trouver
-        la destination, on cherche dans quelle section de background ce numéro
-        est DÉFINI (pas référencé comme source).
+        Pour chaque background, on trouve le PREMIER type_id 6 (numéro de scène)
+        qui apparaît dans sa section. Ce numéro est le scene_id du background.
         """
-        self.scene_definitions = {}  # scene_num -> background
-
-        # Scanner les type_id 6 dans chaque section de background
-        backgrounds = [(offset, bg) for bg, offset in
-                       sorted([(bg, self.bg_to_num[bg]) for bg in self.bg_to_num],
-                              key=lambda x: x[1])]
+        self.scene_definitions = {}  # scene_id -> background
 
         # Reconstruire la liste des backgrounds avec leurs offsets réels
         bg_offsets = []
@@ -120,58 +127,48 @@ class SceneMapper:
                 bg_offsets.append((m.start(), bg))
         bg_offsets.sort()
 
-        def find_section(offset):
-            prev = None
-            for bg_off, bg_name in bg_offsets:
-                if bg_off > offset:
-                    return prev
-                prev = bg_name
-            return prev
+        # Pour chaque section de background, trouver le premier scene_id
+        for idx, (bg_start, bg_name) in enumerate(bg_offsets):
+            bg_end = bg_offsets[idx + 1][0] if idx + 1 < len(bg_offsets) else len(self.data)
 
-        # Scanner les type_id 6 (numéros de scène)
-        # On ignore les occurrences après ".avi" car ce sont des RÉFÉRENCES
-        # On garde les autres qui sont des DÉFINITIONS de zones cliquables
-        i = 0
-        size = len(self.data)
-        while i < size - 12:
-            r_type = struct.unpack_from('<I', self.data, i)[0]
-            if r_type == 6:
-                length = struct.unpack_from('<I', self.data, i + 4)[0]
-                if 1 <= length <= 4 and i + 8 + length <= size:
-                    s_bytes = self.data[i+8:i+8+length]
-                    if all(48 <= b <= 57 for b in s_bytes):  # Que des chiffres
-                        scene_num = int(s_bytes.decode())
-                        section = find_section(i)
-
-                        # Vérifier si c'est après un .avi (= référence, pas définition)
-                        before = self.data[max(0, i-50):i]
-                        is_reference = b'.avi' in before
-
-                        # Ne garder que les DÉFINITIONS (pas après .avi)
-                        if section and not is_reference:
-                            if scene_num not in self.scene_definitions:
-                                self.scene_definitions[scene_num] = section
-
-                        i += 8 + length
-                        continue
-            i += 1
+            # Scanner les type_id 6 dans cette section
+            i = bg_start
+            while i < bg_end - 12:
+                r_type = struct.unpack_from('<I', self.data, i)[0]
+                if r_type == 6:
+                    length = struct.unpack_from('<I', self.data, i + 4)[0]
+                    if 1 <= length <= 4 and i + 8 + length <= bg_end:
+                        s_bytes = self.data[i+8:i+8+length]
+                        if all(48 <= b <= 57 for b in s_bytes):  # Que des chiffres
+                            scene_id = int(s_bytes.decode())
+                            # Premier scene_id trouvé = scene_id de ce background
+                            if scene_id not in self.scene_definitions:
+                                self.scene_definitions[scene_id] = bg_name
+                            break  # On ne garde que le premier
+                i += 1
 
     def get_scene_id_for_video(self, video: str) -> Optional[str]:
         """Retourne l'ID de scène (nom du background) pour une vidéo.
 
-        Le numéro de scène après la vidéo est une RÉFÉRENCE. La destination
-        est le background qui CONTIENT la définition de ce numéro de scène.
+        Le numéro après la vidéo peut être:
+        - Un INDEX de position (si <= nb backgrounds) → utiliser scene_map
+        - Un SCENE_ID (si > nb backgrounds) → chercher le background avec ce scene_id
         """
-        scene_num = self.get_scene_for_video(video)
-        if scene_num:
-            # Chercher dans quelle section ce numéro de scène est défini
-            if hasattr(self, 'scene_definitions') and scene_num in self.scene_definitions:
-                bg = self.scene_definitions[scene_num]
+        video_lower = video.lower()
+
+        # Cas 1: C'est un INDEX de position
+        if video_lower in self.video_to_index:
+            index = self.video_to_index[video_lower]
+            bg = self.scene_map.get(index)
+            if bg:
                 return make_scene_id(bg)
 
-            # Fallback: utiliser l'ordre séquentiel
-            bg = self.get_background_for_scene(scene_num)
-            if bg:
+        # Cas 2: C'est un SCENE_ID
+        if video_lower in self.video_to_scene:
+            scene_num = self.video_to_scene[video_lower]
+            # Chercher le background qui a ce scene_id comme premier type_id 6
+            if hasattr(self, 'scene_definitions') and scene_num in self.scene_definitions:
+                bg = self.scene_definitions[scene_num]
                 return make_scene_id(bg)
 
         return None
@@ -338,10 +335,17 @@ def transform_v2_to_game(v2_data: dict, scene_mapper: SceneMapper) -> dict:
 
     # Afficher le mapping vidéo → scène
     print("\n=== Mapping vidéo → scène ===")
+    # D'abord les INDEX (numéros <= nb backgrounds)
+    for video, index in sorted(scene_mapper.video_to_index.items()):
+        bg = scene_mapper.scene_map.get(index)
+        scene_id = make_scene_id(bg) if bg else f"index_{index}"
+        print(f"  {video} → index {index} = {bg} ({scene_id})")
+
+    # Ensuite les SCENE_IDs (numéros > nb backgrounds)
     for video, scene_num in sorted(scene_mapper.video_to_scene.items()):
-        bg = scene_mapper.get_background_for_scene(scene_num)
+        bg = scene_mapper.scene_definitions.get(scene_num)
         scene_id = make_scene_id(bg) if bg else f"scene_{scene_num}"
-        print(f"  {video} → scene {scene_num} ({scene_id})")
+        print(f"  {video} → scene_id {scene_num} = {bg} ({scene_id})")
 
     game = {
         'game': {
