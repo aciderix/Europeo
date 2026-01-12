@@ -397,8 +397,7 @@
               "text": "Le banquier d'Eurolandl"
             },
             "onClick": {
-              "playVideo": "banq2.avi",
-              "loadScene": "banque"
+              "playVideo": "banq2.avi"
             }
           },
           {
@@ -717,8 +716,7 @@
               ]
             },
             "onClick": {
-              "playVideo": "trans.avi",
-              "loadScene": "transverteur2"
+              "playVideo": "trans.avi"
             }
           },
           {

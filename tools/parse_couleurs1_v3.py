@@ -94,11 +94,49 @@ class SceneMapper:
         """Retourne le background pour un numéro de scène"""
         return self.scene_map.get(scene_num)
 
+    def _find_similar_background(self, video: str) -> Optional[str]:
+        """Trouve un background avec un nom similaire à la vidéo.
+
+        Utilisé quand le numéro de scène est hors limite.
+        Ex: fontaine.avi → fontain2.bmp (similarité de noms)
+        """
+        # Extraire le nom de base de la vidéo (sans extension)
+        video_base = video.lower().replace('.avi', '')
+
+        # Chercher un background qui contient une partie significative du nom
+        best_match = None
+        best_score = 0
+
+        for bg in self.scene_map.values():
+            bg_base = bg.lower().replace('.bmp', '')
+
+            # Vérifier si le nom de la vidéo est contenu dans le background ou vice versa
+            # Ex: "fontaine" contient "fontain" qui est dans "fontain2"
+            if len(video_base) >= 4 and len(bg_base) >= 4:
+                # Prendre les 4+ premiers caractères pour comparaison
+                video_prefix = video_base[:min(len(video_base), 7)]
+                bg_prefix = bg_base[:min(len(bg_base), 7)]
+
+                # Calculer la similarité
+                common_len = 0
+                for i in range(min(len(video_prefix), len(bg_prefix))):
+                    if video_prefix[i] == bg_prefix[i]:
+                        common_len += 1
+                    else:
+                        break
+
+                # Score basé sur les caractères communs au début
+                if common_len >= 4 and common_len > best_score:
+                    best_score = common_len
+                    best_match = bg
+
+        return best_match
+
     def get_scene_id_for_video(self, video: str) -> Optional[str]:
         """Retourne l'ID de scène (nom du background) pour une vidéo
 
         Utilise le mapping automatique: video → scene_num (via Xi pattern) → background
-        Si le scene_num dépasse le nombre de scènes, utilise le modulo pour wrap-around.
+        Si le scene_num dépasse le nombre de scènes, utilise la similarité de noms.
         """
         scene_num = self.get_scene_for_video(video)
         if scene_num:
@@ -106,15 +144,13 @@ class SceneMapper:
             if bg:
                 return make_scene_id(bg)
 
-            # Scene num hors limite: utiliser le modulo pour wrap-around
+            # Scene num hors limite: chercher par similarité de noms
             total_scenes = len(self.scene_map)
             if total_scenes > 0 and scene_num > total_scenes:
-                # Wrap-around: scene 39 avec 34 scènes → scene 5
-                wrapped_num = ((scene_num - 1) % total_scenes) + 1
-                bg = self.get_background_for_scene(wrapped_num)
-                if bg:
-                    print(f"  [Wrap-around] {video} → scene {scene_num} → scene {wrapped_num} ({bg})")
-                    return make_scene_id(bg)
+                similar_bg = self._find_similar_background(video)
+                if similar_bg:
+                    print(f"  [Similarité] {video} → scene {scene_num} (hors limite) → {similar_bg}")
+                    return make_scene_id(similar_bg)
 
         return None
 
