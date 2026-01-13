@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconstructeur de Code Source VN (Avancé)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #1e1e1e; color: #d4d4d4; padding: 20px; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; background-color: #252526; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .custom-file-upload { border: 2px dashed #569cd6; display: inline-block; padding: 20px 40px; cursor: pointer; border-radius: 5px; margin-bottom: 20px; }
+        .custom-file-upload:hover { background-color: #3e3e42; }
+        #log { margin-top: 20px; text-align: left; background: #1e1e1e; padding: 10px; border: 1px solid #333; height: 300px; overflow-y: auto; font-family: 'Consolas', monospace; font-size: 0.9em; white-space: pre-wrap; }
+        .success { color: #6a9955; } .info { color: #9cdcfe; } .warning { color: #ce9178; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Reconstructeur C++ (Dictionnaire de variables)</h1>
+    <p>Cette version détecte les variables globales contenant les noms de fichiers.</p>
+    <label for="file-upload" class="custom-file-upload">📂 Choisir pseudo code.txt</label>
+    <input id="file-upload" type="file" accept=".txt"/>
+    <div id="log">En attente...</div>
+</div>
+
+<script>
+    const fileInput = document.getElementById('file-upload');
+    const logDiv = document.getElementById('log');
+
+    function log(message, type = 'normal') {
+        const line = document.createElement('div');
+        line.textContent = message;
+        if (type) line.className = type;
+        logDiv.appendChild(line);
+        logDiv.scrollTop = logDiv.scrollHeight;
+    }
+
+    fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        log(`Lecture de ${file.name}...`, 'info');
+        const reader = new FileReader();
+        reader.onload = function(e) { processFile(e.target.result); };
+        reader.readAsText(file);
+    });
+
+    function processFile(content) {
+        log("Analyse des variables globales...", 'info');
+
+        // 1. Création du dictionnaire Variable -> Fichier
+        // On cherche: char aNomVariable[] = "chemin/fichier.cpp";
+        // Regex expliquée:
+        // char\s+        : mot clé char suivi d'espace
+        // ([a-zA-Z0-9_]+): nom de la variable (Groupe 1)
+        // (?:\[\d*\])?   : optionnellement des crochets [] ou [123]
+        // \s*=\s*        : signe égal avec espaces optionnels
+        // "              : guillemet ouvrant
+        // ((?:[^"\\]|\\.)*\.(?:cpp|c|h|hpp)) : chemin fichier se terminant par extension (Groupe 2)
+        const globalVarRegex = /char\s+([a-zA-Z0-9_]+)(?:\[\d*\])?\s*=\s*"((?:[^"\\]|\\.)*\.(?:cpp|c|h|hpp))"/g;
+        
+        const varToFileMap = new Map();
+        let match;
+        
+        while ((match = globalVarRegex.exec(content)) !== null) {
+            const varName = match[1];
+            const rawPath = match[2];
+            const cleanName = rawPath.split(/[\\/]/).pop(); // Garde juste 'fichier.cpp'
+            
+            // On filtre les noms trop courts ou bizarres
+            if (cleanName.length > 2) {
+                varToFileMap.set(varName, cleanName);
+            }
+        }
+        
+        log(`Dictionnaire construit : ${varToFileMap.size} variables de fichiers trouvées.`, 'success');
+        // Debug: afficher quelques entrées
+        let previewCount = 0;
+        for (const [v, f] of varToFileMap) {
+            if (previewCount++ < 3) log(`   Ex: ${v} -> ${f}`);
+        }
+
+        // 2. Découpage en fonctions
+        log("Découpage des fonctions...", 'info');
+        const separatorRegex = /\/\/----- \([0-9A-F]+\) -+/i;
+        const rawChunks = content.split(separatorRegex);
+
+        const filesMap = new Map();
+        // Initialisation des fichiers spéciaux
+        filesMap.set("_headers_globals.cpp", [rawChunks[0]]); 
+        filesMap.set("_common_functions.cpp", []);
+
+        let totalFunctions = 0;
+        let identifiedFunctions = 0;
+
+        // Regex pour trouver une chaîne littérale directe dans le code (cas sysinfo.cpp)
+        const literalStringRegex = /"([a-zA-Z0-9_\\\/]+\.(cpp|c|h|hpp))"/i;
+
+        for (let i = 1; i < rawChunks.length; i++) {
+            const chunk = rawChunks[i];
+            totalFunctions++;
+            let targetFile = "_common_functions.cpp";
+            let found = false;
+
+            // A. Recherche par utilisation de variable (Prioritaire)
+            // On cherche si le code contient l'un des noms de variables du dictionnaire
+            // On utilise une recherche de mot entier (\b) pour éviter les faux positifs
+            for (const [varName, fileName] of varToFileMap) {
+                // Regex dynamique pour chercher la variable comme un mot entier
+                const varUsageRegex = new RegExp(`\\b${varName}\\b`);
+                if (varUsageRegex.test(chunk)) {
+                    targetFile = fileName;
+                    found = true;
+                    break; // On a trouvé, on arrête
+                }
+            }
+
+            // B. Recherche par chaîne littérale (Fallback)
+            if (!found) {
+                const literalMatch = chunk.match(literalStringRegex);
+                if (literalMatch) {
+                    let cleanName = literalMatch[1].split(/[\\/]/).pop();
+                    if(cleanName.length > 2 && cleanName.length < 60) {
+                        targetFile = cleanName;
+                        found = true;
+                    }
+                }
+            }
+
+            if (found) identifiedFunctions++;
+
+            if (!filesMap.has(targetFile)) filesMap.set(targetFile, []);
+            
+            // Ajout du bloc avec un header propre
+            filesMap.get(targetFile).push(`\n//-------------------------------------------------------------------------\n// Function ${i}\n// Fichier identifié: ${targetFile}\n//-------------------------------------------------------------------------\n`);
+            filesMap.get(targetFile).push(chunk);
+        }
+
+        log(`Analyse terminée.`, 'success');
+        log(`Fonctions identifiées : ${identifiedFunctions} / ${totalFunctions}`);
+        log(`Fichiers sources reconstitués : ${filesMap.size}`, 'info');
+
+        createZip(filesMap);
+    }
+
+    function createZip(filesMap) {
+        log("Compression ZIP...", 'info');
+        const zip = new JSZip();
+        const sortedKeys = Array.from(filesMap.keys()).sort();
+
+        sortedKeys.forEach(filename => {
+            const chunks = filesMap.get(filename);
+            if (chunks.length > 0) {
+                zip.file(filename + ".txt", chunks.join("\n"));
+                log(`   -> ${filename} (${chunks.length/2} fonctions)`);
+            }
+        });
+
+        zip.generateAsync({type:"blob"}).then(function(content) {
+            saveAs(content, "Code_Reconstruit_V2.zip");
+            log("Fichier ZIP prêt !", 'success');
+        });
+    }
+</script>
+
+</body>
+</html>
