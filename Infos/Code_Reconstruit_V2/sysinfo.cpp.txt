@@ -1,0 +1,285 @@
+
+//-------------------------------------------------------------------------
+// Function 587
+// Fichier identifié: sysinfo.cpp
+//-------------------------------------------------------------------------
+
+
+void __cdecl sub_425AB4(int *a1, char *a2)
+{
+  _BOOL1 v2; // bl
+  const char *v3; // edx
+  const char *v4; // ecx
+  const char *v5; // eax
+  const char *v6; // edx
+  const char *v7; // ecx
+  const char *v8; // eax
+  const char *v9; // ecx
+  const char *v10; // ecx
+  unsigned int v11; // [esp-4h] [ebp-A8h]
+  char v12; // [esp+13h] [ebp-91h]
+  char v13; // [esp+1Bh] [ebp-89h]
+  char v14; // [esp+23h] [ebp-81h]
+  char v15; // [esp+2Bh] [ebp-79h]
+  char v16; // [esp+33h] [ebp-71h]
+  char v17; // [esp+3Bh] [ebp-69h]
+  char v18; // [esp+43h] [ebp-61h]
+  char v19; // [esp+4Bh] [ebp-59h]
+  _DWORD v20[4]; // [esp+4Ch] [ebp-58h] BYREF
+  __int16 v21; // [esp+5Ch] [ebp-48h]
+  int v22; // [esp+68h] [ebp-3Ch]
+  int v23; // [esp+70h] [ebp-34h] BYREF
+  int v24; // [esp+74h] [ebp-30h] BYREF
+  int v25; // [esp+78h] [ebp-2Ch] BYREF
+  int v26; // [esp+7Ch] [ebp-28h] BYREF
+  int v27; // [esp+80h] [ebp-24h] BYREF
+  int v28; // [esp+84h] [ebp-20h] BYREF
+  int v29; // [esp+88h] [ebp-1Ch] BYREF
+  int v30; // [esp+8Ch] [ebp-18h] BYREF
+  _BYTE v31[4]; // [esp+90h] [ebp-14h] BYREF
+  _BYTE v32[4]; // [esp+94h] [ebp-10h] BYREF
+  _BYTE v33[4]; // [esp+98h] [ebp-Ch] BYREF
+  _BYTE v34[8]; // [esp+9Ch] [ebp-8h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !a2 )
+  {
+    v21 = 8;
+    xerror::MakeString((xerror *)v33, "Precondition", "fn", "sysinfo.cpp", 0x105u);
+    ++v22;
+    xmsg::xmsg((xmsg *)v32, (const string *)v33);
+    ++v22;
+    v21 = 20;
+    --v22;
+    string::~string((string *)v33);
+    v21 = 8;
+    v22 += 2;
+    v22 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v32, 0, sub_403BE0, 1u, 0, 0, 0, v20);
+  }
+  sub_403FCB(aMain_0, aLimits, a1[14], a2);
+  sub_403FCB(aMain_1, aPrefs_0, a1[15], a2);
+  v11 = *(_DWORD *)(a1[1] + 6);
+  v21 = 44;
+  string::string((string *)v31, a2);
+  ++v22;
+  v2 = string::compare((string *)(a1 + 1), (const string *)v31, 0, v11) == 0;
+  --v22;
+  string::~string((string *)v31);
+  v21 = 56;
+  TProfile::TProfile((TProfile *)v34, "MAIN", a2);
+  ++v22;
+  v21 = 32;
+  if ( *(_DWORD *)(a1[10] + 6) )
+  {
+    v19 = 0;
+    if ( v2 )
+    {
+      v19 = 1;
+      v21 = 68;
+      sub_404212((string *)&v30, (string *)(a1 + 1), (string *)(a1 + 10));
+      ++v22;
+      v3 = *(const char **)(v30 + 2);
+    }
+    else
+    {
+      v3 = *(const char **)(a1[10] + 2);
+    }
+    TProfile::WriteString((TProfile *)v34, "DATFILE", v3);
+    if ( v19 )
+    {
+      --v22;
+      string::~string((string *)&v30);
+    }
+  }
+  else
+  {
+    TProfile::WriteString((TProfile *)v34, "DATFILE", 0);
+  }
+  if ( *(_DWORD *)(a1[2] + 6) && (a1[14] & 1) != 0 )
+  {
+    v18 = 0;
+    if ( v2 )
+    {
+      v18 = 1;
+      v21 = 80;
+      sub_404212((string *)&v29, (string *)(a1 + 1), (string *)(a1 + 2));
+      ++v22;
+      v4 = *(const char **)(v29 + 2);
+    }
+    else
+    {
+      v4 = *(const char **)(a1[1] + 2);
+    }
+    TProfile::WriteString((TProfile *)v34, "WAV", v4);
+    if ( v18 )
+    {
+      --v22;
+      string::~string((string *)&v29);
+    }
+  }
+  else
+  {
+    TProfile::WriteString((TProfile *)v34, "WAV", 0);
+  }
+  if ( *(_DWORD *)(a1[3] + 6) && (a1[14] & 2) != 0 )
+  {
+    v17 = 0;
+    if ( v2 )
+    {
+      v17 = 1;
+      v21 = 92;
+      sub_404212((string *)&v28, (string *)(a1 + 1), (string *)(a1 + 3));
+      ++v22;
+      v5 = *(const char **)(v28 + 2);
+    }
+    else
+    {
+      v5 = *(const char **)(a1[3] + 2);
+    }
+    TProfile::WriteString((TProfile *)v34, "MID", v5);
+    if ( v17 )
+    {
+      --v22;
+      string::~string((string *)&v28);
+    }
+  }
+  else
+  {
+    TProfile::WriteString((TProfile *)v34, "MID", 0);
+  }
+  if ( *(_DWORD *)(a1[4] + 6) )
+  {
+    v16 = 0;
+    if ( v2 )
+    {
+      v16 = 1;
+      v21 = 104;
+      sub_404212((string *)&v27, (string *)(a1 + 1), (string *)(a1 + 4));
+      ++v22;
+      v6 = *(const char **)(v27 + 2);
+    }
+    else
+    {
+      v6 = *(const char **)(a1[4] + 2);
+    }
+    TProfile::WriteString((TProfile *)v34, "PAL", v6);
+    if ( v16 )
+    {
+      --v22;
+      string::~string((string *)&v27);
+    }
+  }
+  else
+  {
+    TProfile::WriteString((TProfile *)v34, "PAL", 0);
+  }
+  if ( *(_DWORD *)(a1[5] + 6) && (a1[14] & 8) != 0 )
+  {
+    v15 = 0;
+    if ( v2 )
+    {
+      v15 = 1;
+      v21 = 116;
+      sub_404212((string *)&v26, (string *)(a1 + 1), (string *)(a1 + 5));
+      ++v22;
+      v7 = *(const char **)(v26 + 2);
+    }
+    else
+    {
+      v7 = *(const char **)(a1[5] + 2);
+    }
+    TProfile::WriteString((TProfile *)v34, "IMG8", v7);
+    if ( v15 )
+    {
+      --v22;
+      string::~string((string *)&v26);
+    }
+  }
+  else
+  {
+    TProfile::WriteString((TProfile *)v34, "IMG8", 0);
+  }
+  if ( *(_DWORD *)(a1[6] + 6) && (a1[14] & 0x10) != 0 )
+  {
+    v14 = 0;
+    if ( v2 )
+    {
+      v14 = 1;
+      v21 = 128;
+      sub_404212((string *)&v25, (string *)(a1 + 1), (string *)(a1 + 6));
+      ++v22;
+      v8 = *(const char **)(v25 + 2);
+    }
+    else
+    {
+      v8 = *(const char **)(a1[6] + 2);
+    }
+    TProfile::WriteString((TProfile *)v34, "IMG24", v8);
+    if ( v14 )
+    {
+      --v22;
+      string::~string((string *)&v25);
+    }
+  }
+  else
+  {
+    TProfile::WriteString((TProfile *)v34, "IMG24", 0);
+  }
+  if ( *(_DWORD *)(a1[7] + 6) && (a1[14] & 4) != 0 )
+  {
+    v13 = 0;
+    if ( v2 )
+    {
+      v13 = 1;
+      v21 = 140;
+      sub_404212((string *)&v24, (string *)(a1 + 1), (string *)(a1 + 7));
+      ++v22;
+      v9 = *(const char **)(v24 + 2);
+    }
+    else
+    {
+      v9 = *(const char **)(a1[7] + 2);
+    }
+    TProfile::WriteString((TProfile *)v34, "AVI", v9);
+    if ( v13 )
+    {
+      --v22;
+      string::~string((string *)&v24);
+    }
+  }
+  else
+  {
+    TProfile::WriteString((TProfile *)v34, "AVI", 0);
+  }
+  if ( *(_DWORD *)(a1[8] + 6) )
+  {
+    v12 = 0;
+    if ( v2 )
+    {
+      v12 = 1;
+      v21 = 152;
+      sub_404212((string *)&v23, (string *)(a1 + 1), (string *)(a1 + 8));
+      ++v22;
+      v10 = *(const char **)(v23 + 2);
+    }
+    else
+    {
+      v10 = *(const char **)(a1[8] + 2);
+    }
+    TProfile::WriteString((TProfile *)v34, "TXT", v10);
+    if ( v12 )
+    {
+      --v22;
+      string::~string((string *)&v23);
+    }
+  }
+  else
+  {
+    TProfile::WriteString((TProfile *)v34, "TXT", 0);
+  }
+  --v22;
+  TProfile::~TProfile((TProfile *)v34);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+

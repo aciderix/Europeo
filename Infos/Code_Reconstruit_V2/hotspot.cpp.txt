@@ -1,0 +1,471 @@
+
+//-------------------------------------------------------------------------
+// Function 283
+// Fichier identifié: hotspot.cpp
+//-------------------------------------------------------------------------
+
+
+void __cdecl sub_412324(_DWORD *a1, char *a2, int a3, char *a4)
+{
+  char *v4; // edi
+  char *v5; // edi
+  char *v6; // edi
+  int v7; // ecx
+  unsigned int v8; // eax
+  char *v9; // edi
+  char *v10; // edi
+  char *v11; // edi
+  char *v12; // edi
+  char *v13; // edi
+  int v14; // ecx
+  unsigned int v15; // eax
+  int Int; // edi
+  size_t v17; // eax
+  _DWORD *v18; // edi
+  _DWORD *v19; // edi
+  int v20; // [esp+Ch] [ebp-334h] BYREF
+  int v21; // [esp+10h] [ebp-330h] BYREF
+  int v22; // [esp+14h] [ebp-32Ch] BYREF
+  int v23; // [esp+18h] [ebp-328h] BYREF
+  char s1[256]; // [esp+1Ch] [ebp-324h] BYREF
+  CHAR v25[256]; // [esp+11Ch] [ebp-224h] BYREF
+  char *v26; // [esp+21Ch] [ebp-124h]
+  char *v27; // [esp+220h] [ebp-120h]
+  int v28; // [esp+224h] [ebp-11Ch]
+  int v29; // [esp+228h] [ebp-118h]
+  char *v30; // [esp+22Ch] [ebp-114h]
+  char *v31; // [esp+230h] [ebp-110h]
+  char *v32; // [esp+234h] [ebp-10Ch]
+  int v33; // [esp+238h] [ebp-108h]
+  char *v34; // [esp+23Ch] [ebp-104h]
+  char *v35; // [esp+240h] [ebp-100h]
+  int v36; // [esp+244h] [ebp-FCh]
+  int v37; // [esp+248h] [ebp-F8h]
+  char *s; // [esp+24Ch] [ebp-F4h]
+  unsigned int i; // [esp+250h] [ebp-F0h]
+  _BYTE v40[16]; // [esp+254h] [ebp-ECh] BYREF
+  __int16 v41; // [esp+264h] [ebp-DCh]
+  int v42; // [esp+270h] [ebp-D0h]
+  int (__cdecl **v43)(void *, char); // [esp+278h] [ebp-C8h] BYREF
+  int (__cdecl **v44)(int); // [esp+27Ch] [ebp-C4h]
+  _BYTE v45[4]; // [esp+284h] [ebp-BCh] BYREF
+  int v46; // [esp+288h] [ebp-B8h]
+  _DWORD v47[3]; // [esp+28Ch] [ebp-B4h] BYREF
+  _BYTE v48[4]; // [esp+298h] [ebp-A8h] BYREF
+  int (__cdecl **v49)(void *, char); // [esp+29Ch] [ebp-A4h] BYREF
+  int (__cdecl **v50)(int); // [esp+2A0h] [ebp-A0h]
+  _BYTE v51[4]; // [esp+2A8h] [ebp-98h] BYREF
+  int v52; // [esp+2ACh] [ebp-94h]
+  int v53[3]; // [esp+2B0h] [ebp-90h] BYREF
+  _BYTE v54[4]; // [esp+2BCh] [ebp-84h] BYREF
+  _BYTE v55[4]; // [esp+2C0h] [ebp-80h] BYREF
+  int (__cdecl **v56)(void *, char); // [esp+2C4h] [ebp-7Ch] BYREF
+  int (__cdecl **v57)(int); // [esp+2C8h] [ebp-78h]
+  _BYTE v58[4]; // [esp+2D0h] [ebp-70h] BYREF
+  int v59; // [esp+2D4h] [ebp-6Ch]
+  int v60[3]; // [esp+2D8h] [ebp-68h] BYREF
+  _BYTE v61[4]; // [esp+2E4h] [ebp-5Ch] BYREF
+  _BYTE v62[4]; // [esp+2E8h] [ebp-58h] BYREF
+  _BYTE v63[4]; // [esp+2ECh] [ebp-54h] BYREF
+  _BYTE v64[4]; // [esp+2F0h] [ebp-50h] BYREF
+  _BYTE v65[4]; // [esp+2F4h] [ebp-4Ch] BYREF
+  _BYTE v66[4]; // [esp+2F8h] [ebp-48h] BYREF
+  _BYTE v67[4]; // [esp+2FCh] [ebp-44h] BYREF
+  _BYTE v68[4]; // [esp+300h] [ebp-40h] BYREF
+  _BYTE v69[4]; // [esp+304h] [ebp-3Ch] BYREF
+  _BYTE v70[4]; // [esp+308h] [ebp-38h] BYREF
+  _BYTE v71[4]; // [esp+30Ch] [ebp-34h] BYREF
+  _BYTE v72[4]; // [esp+310h] [ebp-30h] BYREF
+  int v73; // [esp+314h] [ebp-2Ch] BYREF
+  _BYTE v74[4]; // [esp+318h] [ebp-28h] BYREF
+  _BYTE v75[4]; // [esp+31Ch] [ebp-24h] BYREF
+  _BYTE v76[4]; // [esp+320h] [ebp-20h] BYREF
+  _BYTE v77[4]; // [esp+324h] [ebp-1Ch] BYREF
+  _BYTE v78[4]; // [esp+328h] [ebp-18h] BYREF
+  _BYTE v79[4]; // [esp+32Ch] [ebp-14h] BYREF
+  _BYTE v80[4]; // [esp+330h] [ebp-10h] BYREF
+  _BYTE v81[4]; // [esp+334h] [ebp-Ch] BYREF
+  _BYTE v82[8]; // [esp+338h] [ebp-8h] BYREF
+
+  __InitExceptBlockLDTC();
+  (*(void (__cdecl **)(_DWORD *))(*a1 + 12))(a1);
+  v41 = 8;
+  TProfile::TProfile((TProfile *)v82, a2, a4);
+  ++v42;
+  v41 = 20;
+  *(_DWORD *)((char *)a1 + 45) = -1;
+  wsprintfA(v25, "HSCUR_%u", a3);
+  if ( (unsigned __int8)TProfile::GetString((TProfile *)v82, v25, s1, 0x100u, &byte_4412F5) )
+    *(_DWORD *)((char *)a1 + 45) = sub_403A55((int)&dword_440460, s1, 0);
+  if ( *(int *)((char *)a1 + 45) >= 0 )
+    *(_DWORD *)((char *)a1 + 45) += 100;
+  else
+    *(_DWORD *)((char *)a1 + 45) = 100;
+  wsprintfA(v25, "HSRGN_%u", a3);
+  TProfile::GetString((TProfile *)v82, v25, s1, 0x100u, &byte_4412FF);
+  if ( s1[0] )
+  {
+    v4 = strtok(s1, asc_441300);
+    if ( !v4 )
+    {
+      v41 = 32;
+      xerror::MakeString((xerror *)v81, aCheck, aPtrNull, aHotspotCpp, 0xD1u);
+      ++v42;
+      xmsg::xmsg((xmsg *)v80, (const string *)v81);
+      ++v42;
+      v41 = 44;
+      --v42;
+      string::~string((string *)v81);
+      v41 = 32;
+      v42 += 2;
+      v42 += 3;
+      _ThrowExceptionLDTC(stru_4068BF, v80, 0, sub_40690F, 1u, 0, 0, 0, v40);
+    }
+    s = v4;
+    *(_DWORD *)((char *)a1 + 53) = atol(v4);
+    if ( *(_DWORD *)((char *)a1 + 53) <= 1u )
+    {
+      *(_DWORD *)((char *)a1 + 53) = 0;
+    }
+    else
+    {
+      if ( *(_DWORD *)((char *)a1 + 57) )
+      {
+        v41 = 56;
+        xerror::MakeString((xerror *)v79, aCheck_0, aPointsNull, aHotspotCpp_0, 0xD4u);
+        ++v42;
+        xmsg::xmsg((xmsg *)v78, (const string *)v79);
+        ++v42;
+        v41 = 68;
+        --v42;
+        string::~string((string *)v79);
+        v41 = 56;
+        v42 += 2;
+        v42 += 3;
+        _ThrowExceptionLDTC(stru_4068BF, v78, 0, sub_40690F, 1u, 0, 0, 0, v40);
+      }
+      *(_DWORD *)((char *)a1 + 57) = _vector_new_ldtc_(0, 8u, *(_DWORD *)((char *)a1 + 53), 1u, sub_413FC9, 0, 0);
+      v41 = 20;
+      for ( i = 0; i < *(_DWORD *)((char *)a1 + 53); ++i )
+      {
+        v5 = strtok(0, asc_441341);
+        if ( !v5 )
+        {
+          v41 = 80;
+          xerror::MakeString((xerror *)v77, aCheck_1, aPtrNull_0, aHotspotCpp_1, 0xD9u);
+          ++v42;
+          xmsg::xmsg((xmsg *)v76, (const string *)v77);
+          ++v42;
+          v41 = 92;
+          --v42;
+          string::~string((string *)v77);
+          v41 = 80;
+          v42 += 2;
+          v42 += 3;
+          _ThrowExceptionLDTC(stru_4068BF, v76, 0, sub_40690F, 1u, 0, 0, 0, v40);
+        }
+        v35 = v5;
+        v36 = atol(v5);
+        v6 = strtok(0, asc_441361);
+        if ( !v6 )
+        {
+          v41 = 104;
+          xerror::MakeString((xerror *)v75, aCheck_2, aPtrNull_1, aHotspotCpp_2, 0xDCu);
+          ++v42;
+          xmsg::xmsg((xmsg *)v74, (const string *)v75);
+          ++v42;
+          v41 = 116;
+          --v42;
+          string::~string((string *)v75);
+          v41 = 104;
+          v42 += 2;
+          v42 += 3;
+          _ThrowExceptionLDTC(stru_4068BF, v74, 0, sub_40690F, 1u, 0, 0, 0, v40);
+        }
+        v34 = v6;
+        v37 = atol(v6);
+        v7 = *(_DWORD *)((char *)a1 + 57);
+        v8 = i;
+        *(_DWORD *)(v7 + 8 * i) = v36;
+        *(_DWORD *)(v7 + 8 * v8 + 4) = v37;
+      }
+      sub_412168(a1);
+    }
+  }
+  wsprintfA(v25, "HSCMD_%u", a3);
+  sub_40E6FC(a1 + 2, a2, v25, a4);
+  wsprintfA(v25, "HOTSPOT_%u", a3);
+  v33 = -1;
+  v41 = 20;
+  if ( (unsigned __int8)TProfile::GetString((TProfile *)v82, v25, s1, 0x100u, &byte_441395) )
+  {
+    v9 = strtok(s1, asc_441396);
+    if ( !v9 )
+    {
+      v41 = 128;
+      xerror::MakeString((xerror *)v72, aCheck_3, aPtrNull_2, aHotspotCpp_3, 0xEEu);
+      ++v42;
+      xmsg::xmsg((xmsg *)v71, (const string *)v72);
+      ++v42;
+      v41 = 140;
+      --v42;
+      string::~string((string *)v72);
+      v41 = 128;
+      v42 += 2;
+      v42 += 3;
+      _ThrowExceptionLDTC(stru_4068BF, v71, 0, sub_40690F, 1u, 0, 0, 0, v40);
+    }
+    v32 = v9;
+    v33 = atol(v9);
+    v10 = strtok(0, asc_4413B6);
+    if ( !v10 )
+    {
+      v41 = 152;
+      xerror::MakeString((xerror *)v70, aCheck_4, aPtrNull_3, aHotspotCpp_4, 0xF1u);
+      ++v42;
+      xmsg::xmsg((xmsg *)v69, (const string *)v70);
+      ++v42;
+      v41 = 164;
+      --v42;
+      string::~string((string *)v70);
+      v41 = 152;
+      v42 += 2;
+      v42 += 3;
+      _ThrowExceptionLDTC(stru_4068BF, v69, 0, sub_40690F, 1u, 0, 0, 0, v40);
+    }
+    v31 = v10;
+    *(_DWORD *)((char *)a1 + 45) = atol(v10) + 100;
+    v11 = strtok(0, asc_4413D6);
+    if ( !v11 )
+    {
+      v41 = 176;
+      xerror::MakeString((xerror *)v68, aCheck_5, aPtrNull_4, aHotspotCpp_5, 0xF4u);
+      ++v42;
+      xmsg::xmsg((xmsg *)v67, (const string *)v68);
+      ++v42;
+      v41 = 188;
+      --v42;
+      string::~string((string *)v68);
+      v41 = 176;
+      v42 += 2;
+      v42 += 3;
+      _ThrowExceptionLDTC(stru_4068BF, v67, 0, sub_40690F, 1u, 0, 0, 0, v40);
+    }
+    v30 = v11;
+    *(_DWORD *)((char *)a1 + 53) = atol(v11);
+    if ( *(_DWORD *)((char *)a1 + 53) )
+    {
+      if ( *(_DWORD *)((char *)a1 + 53) <= 1u )
+      {
+        *(_DWORD *)((char *)a1 + 53) = 0;
+      }
+      else
+      {
+        *(_DWORD *)((char *)a1 + 57) = _vector_new_ldtc_(0, 8u, *(_DWORD *)((char *)a1 + 53), 1u, sub_413FC9, 0, 0);
+        v41 = 20;
+        for ( i = 0; i < *(_DWORD *)((char *)a1 + 53); ++i )
+        {
+          v12 = strtok(0, asc_4413F6);
+          if ( !v12 )
+          {
+            v41 = 200;
+            xerror::MakeString((xerror *)v66, aCheck_6, aPtrNull_5, aHotspotCpp_6, 0xFCu);
+            ++v42;
+            xmsg::xmsg((xmsg *)v65, (const string *)v66);
+            ++v42;
+            v41 = 212;
+            --v42;
+            string::~string((string *)v66);
+            v41 = 200;
+            v42 += 2;
+            v42 += 3;
+            _ThrowExceptionLDTC(stru_4068BF, v65, 0, sub_40690F, 1u, 0, 0, 0, v40);
+          }
+          v27 = v12;
+          v28 = atol(v12);
+          v13 = strtok(0, asc_441416);
+          if ( !v13 )
+          {
+            v41 = 224;
+            xerror::MakeString((xerror *)v64, aCheck_7, aPtrNull_6, aHotspotCpp_7, 0xFFu);
+            ++v42;
+            xmsg::xmsg((xmsg *)v63, (const string *)v64);
+            ++v42;
+            v41 = 236;
+            --v42;
+            string::~string((string *)v64);
+            v41 = 224;
+            v42 += 2;
+            v42 += 3;
+            _ThrowExceptionLDTC(stru_4068BF, v63, 0, sub_40690F, 1u, 0, 0, 0, v40);
+          }
+          v26 = v13;
+          v29 = atol(v13);
+          v14 = *(_DWORD *)((char *)a1 + 57);
+          v15 = i;
+          *(_DWORD *)(v14 + 8 * i) = v28;
+          *(_DWORD *)(v14 + 8 * v15 + 4) = v29;
+        }
+        sub_412168(a1);
+      }
+    }
+  }
+  v41 = 248;
+  string::string((string *)&v73);
+  ++v42;
+  v41 = 260;
+  wsprintfA(v25, "HSVIDEO_%u", a3);
+  if ( (unsigned __int8)TProfile::GetString((TProfile *)v82, v25, s1, 0x100u, &byte_441441) )
+  {
+    v41 = 272;
+    string::string((string *)v62, s1);
+    ++v42;
+    string::assign((string *)&v73, (const string *)v62, 0, 0xFFFFFFFF);
+    --v42;
+    string::~string((string *)v62);
+    wsprintfA(v25, "HSVIDEOFLAGS_%u", a3);
+    Int = TProfile::GetInt((TProfile *)v82, v25, 0);
+    v41 = 260;
+    v20 = 0;
+    v21 = 0;
+    v22 = 0;
+    v23 = 0;
+    wsprintfA(v25, "HSVIDEORECT_%u", a3);
+    if ( (unsigned __int8)TProfile::GetString((TProfile *)v82, v25, s1, 0x100u, a0000) )
+    {
+      sscanf(s1, "%i,%i,%i,%i", &v20, &v21, &v22, &v23);
+      TRect::Normalize((TRect *)&v20);
+    }
+    wsprintfA(s1, " %u %i %i %i %i", Int, v20, v21, v22, v23);
+    v17 = strlen(s1);
+    string::append((string *)&v73, s1, 0, v17);
+  }
+  if ( *(_DWORD *)(v73 + 6) )
+  {
+    v41 = 284;
+    v18 = sub_40B4FE(v60, 9, (string *)&v73);
+    v42 += 5;
+    ++v42;
+    ++v42;
+    v42 += 3;
+    v56 = &off_44030C;
+    v57 = off_440324;
+    string::string((string *)v58);
+    ++v42;
+    sub_40B61D((int)&v56);
+    sub_40B686((int)&v56, (int)v18);
+    v42 += 5;
+    v56 = &off_44013C;
+    v57 = off_440158;
+    v59 = 1;
+    v42 += 6;
+    sub_40F91A((int)(a1 + 3), (int)&v56);
+    v42 -= 6;
+    v42 -= 5;
+    --v42;
+    string::~string((string *)v58);
+    v42 -= 3;
+    --v42;
+    --v42;
+    v42 -= 5;
+    --v42;
+    string::~string((string *)v61);
+    v42 -= 3;
+    --v42;
+    --v42;
+  }
+  if ( v33 <= 0 )
+  {
+    if ( !v33 )
+    {
+      v41 = 308;
+      ++v42;
+      ++v42;
+      v42 += 3;
+      v47[0] = &off_44030C;
+      v47[1] = off_440324;
+      v47[2] = 0;
+      string::string((string *)v48, &byte_441488);
+      ++v42;
+      v42 += 5;
+      ++v42;
+      ++v42;
+      v42 += 3;
+      v43 = &off_44030C;
+      v44 = off_440324;
+      string::string((string *)v45);
+      ++v42;
+      sub_40B61D((int)&v43);
+      sub_40B686((int)&v43, (int)v47);
+      v42 += 5;
+      v43 = &off_44013C;
+      v44 = off_440158;
+      v46 = 1;
+      v42 += 6;
+      sub_40F91A((int)(a1 + 3), (int)&v43);
+      v42 -= 6;
+      v42 -= 5;
+      --v42;
+      string::~string((string *)v45);
+      v42 -= 3;
+      --v42;
+      --v42;
+      v42 -= 5;
+      --v42;
+      string::~string((string *)v48);
+      v42 -= 3;
+      --v42;
+      --v42;
+    }
+  }
+  else
+  {
+    wsprintfA(s1, "%u", v33);
+    v41 = 296;
+    string::string((string *)v55, s1);
+    ++v42;
+    v19 = sub_40B4FE(v53, 6, (string *)v55);
+    v42 += 5;
+    ++v42;
+    ++v42;
+    v42 += 3;
+    v49 = &off_44030C;
+    v50 = off_440324;
+    string::string((string *)v51);
+    ++v42;
+    sub_40B61D((int)&v49);
+    sub_40B686((int)&v49, (int)v19);
+    v42 += 5;
+    v49 = &off_44013C;
+    v50 = off_440158;
+    v52 = 1;
+    v42 += 6;
+    sub_40F91A((int)(a1 + 3), (int)&v49);
+    v42 -= 6;
+    v42 -= 5;
+    --v42;
+    string::~string((string *)v51);
+    v42 -= 3;
+    --v42;
+    --v42;
+    v42 -= 5;
+    --v42;
+    string::~string((string *)v54);
+    v42 -= 3;
+    --v42;
+    --v42;
+    --v42;
+    string::~string((string *)v55);
+  }
+  --v42;
+  string::~string((string *)&v73);
+  --v42;
+  TProfile::~TProfile((TProfile *)v82);
+}
+// 4068BF: using guessed type _tpidc stru_4068BF[1];
+// 44013C: using guessed type int (__cdecl *off_44013C)(void *, char);
+// 440158: using guessed type int (__cdecl *off_440158[2])(int);
+// 44030C: using guessed type int (__cdecl *off_44030C)(void *, char);
+// 440324: using guessed type int (__cdecl *off_440324[2])(int);
+// 440460: using guessed type int dword_440460;
+

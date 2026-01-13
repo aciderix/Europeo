@@ -1,0 +1,1056 @@
+
+//-------------------------------------------------------------------------
+// Function 515
+// Fichier identifié: htmldata.cpp
+//-------------------------------------------------------------------------
+
+
+LPSTR __cdecl sub_41F028(CHAR *s)
+{
+  _DWORD v2[4]; // [esp+4h] [ebp-2Ch] BYREF
+  __int16 v3; // [esp+14h] [ebp-1Ch]
+  int v4; // [esp+20h] [ebp-10h]
+  _BYTE v5[4]; // [esp+28h] [ebp-8h] BYREF
+  _BYTE v6[4]; // [esp+2Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !s )
+  {
+    v3 = 8;
+    xerror::MakeString((xerror *)v6, aPrecondition_60, aFont, aHtmldataCpp, 0x31u);
+    ++v4;
+    xmsg::xmsg((xmsg *)v5, (const string *)v6);
+    ++v4;
+    v3 = 20;
+    --v4;
+    string::~string((string *)v6);
+    v3 = 8;
+    v4 += 2;
+    v4 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v5, 0, sub_403BE0, 1u, 0, 0, 0, v2);
+  }
+  memset(s, 0, 0x3Cu);
+  *(_DWORD *)s = -MulDiv(nNumber, nNumerator, 72);
+  *((_DWORD *)s + 4) = 400;
+  s[23] = 1;
+  s[24] = 0;
+  s[25] = 0;
+  s[26] = 0;
+  s[27] = 0;
+  return lstrcpyA(s + 28, String2);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 523
+// Fichier identifié: htmldata.cpp
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_41F790(int a1, string *a2, unsigned int a3)
+{
+  int first_of; // edi
+  _DWORD v5[4]; // [esp+Ch] [ebp-38h] BYREF
+  __int16 v6; // [esp+1Ch] [ebp-28h]
+  int v7; // [esp+28h] [ebp-1Ch]
+  _BYTE v8[4]; // [esp+30h] [ebp-14h] BYREF
+  _BYTE v9[4]; // [esp+34h] [ebp-10h] BYREF
+  _BYTE v10[4]; // [esp+38h] [ebp-Ch] BYREF
+  _BYTE v11[4]; // [esp+3Ch] [ebp-8h] BYREF
+  _BYTE v12[4]; // [esp+40h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( *(_BYTE *)string::operator()(a1 + 54, a3) != 60 )
+  {
+    v6 = 8;
+    xerror::MakeString((xerror *)v12, aPrecondition_61, aTextStart, aHtmldataCpp_0, 0xAEu);
+    ++v7;
+    xmsg::xmsg((xmsg *)v11, (const string *)v12);
+    ++v7;
+    v6 = 20;
+    --v7;
+    string::~string((string *)v12);
+    v6 = 8;
+    v7 += 2;
+    v7 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v11, 0, sub_403BE0, 1u, 0, 0, 0, v5);
+  }
+  v6 = 44;
+  string::string((string *)v10, asc_44645A);
+  ++v7;
+  first_of = string::find_first_of((string *)(a1 + 54), (const string *)v10, a3);
+  --v7;
+  string::~string((string *)v10);
+  v6 = 32;
+  if ( first_of == -1 )
+  {
+    v6 = 56;
+    string::string((string *)v9, &byte_44645C);
+    ++v7;
+    string::assign(a2, (const string *)v9, 0, 0xFFFFFFFF);
+    --v7;
+    string::~string((string *)v9);
+    return *(_DWORD *)(*(_DWORD *)(a1 + 54) + 6);
+  }
+  else
+  {
+    v6 = 68;
+    string::substr((string *)v8, a1 + 54, a3 + 1);
+    ++v7;
+    string::assign(a2, (const string *)v8, 0, 0xFFFFFFFF);
+    --v7;
+    string::~string((string *)v8);
+    return first_of + 1;
+  }
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 438EE0: using guessed type int __cdecl string::operator()(_DWORD, _DWORD);
+
+
+
+//-------------------------------------------------------------------------
+// Function 529
+// Fichier identifié: htmldata.cpp
+//-------------------------------------------------------------------------
+
+
+void __cdecl sub_4200CF(int a1, int a2, _DWORD *a3, char a4)
+{
+  _DWORD *v4; // esi
+  int v5; // ecx
+  unsigned int v6; // esi
+  HDC v7; // eax
+  HDC v8; // eax
+  TFont *v9; // eax
+  _BOOL1 v10; // al
+  _BOOL1 v11; // al
+  _BOOL1 v12; // cl
+  _BOOL1 v13; // cl
+  _BOOL1 v14; // cl
+  _BOOL1 v15; // al
+  TFont *v16; // eax
+  HDC v17; // eax
+  _BOOL1 v18; // al
+  int *v19; // eax
+  HDC v20; // eax
+  int v21; // eax
+  int v22; // edx
+  int v23; // eax
+  const CHAR *v24; // [esp-Ch] [ebp-2A4h]
+  const CHAR *v25; // [esp-Ch] [ebp-2A4h]
+  int v26; // [esp-8h] [ebp-2A0h]
+  int v27; // [esp-8h] [ebp-2A0h]
+  bool v28; // [esp-4h] [ebp-29Ch]
+  bool v29; // [esp-4h] [ebp-29Ch]
+  bool v30; // [esp-4h] [ebp-29Ch]
+  bool v31; // [esp-4h] [ebp-29Ch]
+  bool v32; // [esp-4h] [ebp-29Ch]
+  bool v33; // [esp-4h] [ebp-29Ch]
+  bool v34; // [esp-4h] [ebp-29Ch]
+  bool v35; // [esp-4h] [ebp-29Ch]
+  bool v36; // [esp-4h] [ebp-29Ch]
+  bool v37; // [esp-4h] [ebp-29Ch]
+  bool v38; // [esp-4h] [ebp-29Ch]
+  bool v39; // [esp-4h] [ebp-29Ch]
+  bool v40; // [esp-4h] [ebp-29Ch]
+  bool v41; // [esp-4h] [ebp-29Ch]
+  bool v42; // [esp-4h] [ebp-29Ch]
+  bool v43; // [esp-4h] [ebp-29Ch]
+  bool v44; // [esp-4h] [ebp-29Ch]
+  bool v45; // [esp-4h] [ebp-29Ch]
+  _BOOL1 v46; // [esp-4h] [ebp-29Ch]
+  bool v47; // [esp-4h] [ebp-29Ch]
+  _BOOL1 v48; // [esp-4h] [ebp-29Ch]
+  _BOOL1 v49; // [esp-4h] [ebp-29Ch]
+  _BOOL1 v50; // [esp-4h] [ebp-29Ch]
+  _BOOL1 v51; // [esp-4h] [ebp-29Ch]
+  _BOOL1 v52; // [esp-4h] [ebp-29Ch]
+  _BOOL1 v53; // [esp-4h] [ebp-29Ch]
+  _BOOL1 v54; // [esp-4h] [ebp-29Ch]
+  int v55; // [esp+Ch] [ebp-28Ch] BYREF
+  int v56; // [esp+10h] [ebp-288h]
+  int v57; // [esp+14h] [ebp-284h]
+  int v58; // [esp+18h] [ebp-280h]
+  int v59; // [esp+1Ch] [ebp-27Ch]
+  unsigned int v60; // [esp+20h] [ebp-278h] BYREF
+  tagLOGFONTA v61; // [esp+24h] [ebp-274h] BYREF
+  TColor *v62; // [esp+64h] [ebp-234h] BYREF
+  int v63; // [esp+68h] [ebp-230h]
+  int v64; // [esp+6Ch] [ebp-22Ch]
+  char v65; // [esp+70h] [ebp-228h]
+  unsigned __int8 v66; // [esp+71h] [ebp-227h]
+  char v67[84]; // [esp+74h] [ebp-224h] BYREF
+  _DWORD *v68; // [esp+C8h] [ebp-1D0h]
+  unsigned int v69; // [esp+CCh] [ebp-1CCh]
+  unsigned int v70; // [esp+D0h] [ebp-1C8h]
+  int v71; // [esp+D4h] [ebp-1C4h]
+  unsigned int v72; // [esp+D8h] [ebp-1C0h]
+  int v73; // [esp+DCh] [ebp-1BCh]
+  _DWORD *v74; // [esp+E0h] [ebp-1B8h]
+  int v75; // [esp+E4h] [ebp-1B4h]
+  _DWORD *v76; // [esp+E8h] [ebp-1B0h]
+  char v77[4]; // [esp+ECh] [ebp-1ACh] BYREF
+  char v78[4]; // [esp+F0h] [ebp-1A8h] BYREF
+  int v79; // [esp+F4h] [ebp-1A4h]
+  int v80; // [esp+F8h] [ebp-1A0h]
+  int v81; // [esp+FCh] [ebp-19Ch]
+  int v82; // [esp+100h] [ebp-198h]
+  _DWORD *v83; // [esp+104h] [ebp-194h]
+  int v84; // [esp+108h] [ebp-190h]
+  int v85; // [esp+10Ch] [ebp-18Ch]
+  int v86; // [esp+110h] [ebp-188h]
+  int v87; // [esp+114h] [ebp-184h]
+  int v88; // [esp+118h] [ebp-180h]
+  int v89; // [esp+11Ch] [ebp-17Ch]
+  _DWORD *v90; // [esp+120h] [ebp-178h]
+  int v91; // [esp+124h] [ebp-174h]
+  int v92; // [esp+128h] [ebp-170h]
+  char v93[4]; // [esp+12Ch] [ebp-16Ch] BYREF
+  LPCSTR v94; // [esp+130h] [ebp-168h]
+  int v95; // [esp+134h] [ebp-164h]
+  _DWORD v96[3]; // [esp+138h] [ebp-160h] BYREF
+  _BOOL1 v97; // [esp+147h] [ebp-151h]
+  LPCSTR v98; // [esp+148h] [ebp-150h]
+  int v99; // [esp+14Ch] [ebp-14Ch]
+  unsigned int v100; // [esp+150h] [ebp-148h]
+  unsigned int v101; // [esp+154h] [ebp-144h]
+  unsigned int v102; // [esp+158h] [ebp-140h]
+  unsigned int v103; // [esp+15Ch] [ebp-13Ch]
+  unsigned int v104; // [esp+160h] [ebp-138h]
+  unsigned int v105; // [esp+164h] [ebp-134h]
+  unsigned int v106; // [esp+168h] [ebp-130h]
+  unsigned int v107; // [esp+16Ch] [ebp-12Ch]
+  _BOOL1 v108; // [esp+173h] [ebp-125h]
+  TColor *v109; // [esp+174h] [ebp-124h]
+  int v110; // [esp+178h] [ebp-120h]
+  char v111; // [esp+17Fh] [ebp-119h]
+  unsigned int v112; // [esp+180h] [ebp-118h]
+  int v113; // [esp+184h] [ebp-114h]
+  struct tagSIZE v114; // [esp+188h] [ebp-110h]
+  _DWORD *v115; // [esp+190h] [ebp-108h]
+  int v116; // [esp+194h] [ebp-104h] BYREF
+  int v117; // [esp+198h] [ebp-100h]
+  unsigned int first_of; // [esp+19Ch] [ebp-FCh]
+  struct tagSIZE v119; // [esp+1A0h] [ebp-F8h] BYREF
+  int v120; // [esp+1A8h] [ebp-F0h]
+  int v121; // [esp+1ACh] [ebp-ECh]
+  unsigned int v122; // [esp+1B0h] [ebp-E8h]
+  unsigned int v123; // [esp+1B4h] [ebp-E4h]
+  int v124; // [esp+1B8h] [ebp-E0h]
+  unsigned int v125; // [esp+1BCh] [ebp-DCh]
+  int v126; // [esp+1C0h] [ebp-D8h]
+  int v127; // [esp+1C4h] [ebp-D4h]
+  int v128; // [esp+1C8h] [ebp-D0h]
+  _BYTE v129[16]; // [esp+1CCh] [ebp-CCh] BYREF
+  __int16 v130; // [esp+1DCh] [ebp-BCh]
+  int v131; // [esp+1E8h] [ebp-B0h]
+  char v132[4]; // [esp+1F0h] [ebp-A8h] BYREF
+  char v133[4]; // [esp+1F4h] [ebp-A4h] BYREF
+  char v134[4]; // [esp+1F8h] [ebp-A0h] BYREF
+  char v135[4]; // [esp+1FCh] [ebp-9Ch] BYREF
+  char v136[4]; // [esp+200h] [ebp-98h] BYREF
+  _BYTE v137[8]; // [esp+204h] [ebp-94h] BYREF
+  char v138[4]; // [esp+20Ch] [ebp-8Ch] BYREF
+  char v139[4]; // [esp+210h] [ebp-88h] BYREF
+  char v140[4]; // [esp+214h] [ebp-84h] BYREF
+  char v141[4]; // [esp+218h] [ebp-80h] BYREF
+  char v142[4]; // [esp+21Ch] [ebp-7Ch] BYREF
+  char v143[4]; // [esp+220h] [ebp-78h] BYREF
+  char v144[4]; // [esp+224h] [ebp-74h] BYREF
+  char v145[4]; // [esp+228h] [ebp-70h] BYREF
+  char v146[4]; // [esp+22Ch] [ebp-6Ch] BYREF
+  char v147[4]; // [esp+230h] [ebp-68h] BYREF
+  char v148[4]; // [esp+234h] [ebp-64h] BYREF
+  char v149[4]; // [esp+238h] [ebp-60h] BYREF
+  char v150[4]; // [esp+23Ch] [ebp-5Ch] BYREF
+  char v151[4]; // [esp+240h] [ebp-58h] BYREF
+  char v152[4]; // [esp+244h] [ebp-54h] BYREF
+  char v153[4]; // [esp+248h] [ebp-50h] BYREF
+  char v154[4]; // [esp+24Ch] [ebp-4Ch] BYREF
+  char v155[4]; // [esp+250h] [ebp-48h] BYREF
+  char v156[4]; // [esp+254h] [ebp-44h] BYREF
+  char v157[4]; // [esp+258h] [ebp-40h] BYREF
+  char v158[4]; // [esp+25Ch] [ebp-3Ch] BYREF
+  char v159[4]; // [esp+260h] [ebp-38h] BYREF
+  char v160[4]; // [esp+264h] [ebp-34h] BYREF
+  char v161[4]; // [esp+268h] [ebp-30h] BYREF
+  char v162[4]; // [esp+26Ch] [ebp-2Ch] BYREF
+  char v163[4]; // [esp+270h] [ebp-28h] BYREF
+  char v164[4]; // [esp+274h] [ebp-24h] BYREF
+  _BYTE v165[8]; // [esp+278h] [ebp-20h] BYREF
+  char v166[4]; // [esp+280h] [ebp-18h] BYREF
+  char v167[4]; // [esp+284h] [ebp-14h] BYREF
+  char v168[4]; // [esp+288h] [ebp-10h] BYREF
+  char v169[4]; // [esp+28Ch] [ebp-Ch] BYREF
+  int v170; // [esp+290h] [ebp-8h] BYREF
+  int v171; // [esp+294h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !*(_DWORD *)(*(_DWORD *)(a1 + 54) + 6) )
+  {
+    v130 = 8;
+    xerror::MakeString((xerror *)v169, aPrecondition_62, aTextLength, aHtmldataCpp_1, 0x129u);
+    ++v131;
+    xmsg::xmsg((xmsg *)v168, (const string *)v169);
+    ++v131;
+    v130 = 20;
+    --v131;
+    string::~string((string *)v169);
+    v130 = 8;
+    v131 += 2;
+    v131 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v168, 0, sub_403BE0, 1u, 0, 0, 0, v129);
+  }
+  nNumerator = (*(int (__cdecl **)(int, int))(*(_DWORD *)(a2 + 5) + 12))(a2, 90);
+  if ( !(*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 9) + 4))(a1 + 8) )
+  {
+    v128 = sub_41F121((int)v67);
+    sub_42320A(a1 + 8, v128);
+  }
+  v127 = *(_DWORD *)(a1 + 62);
+  v4 = (_DWORD *)(a1 + 4);
+  v126 = v127 + 1;
+  if ( *(_DWORD *)(a1 + 4) <= v127 + 1 )
+  {
+    v124 = *(_DWORD *)(a1 + 17);
+    if ( v124 == -1 )
+      v5 = 0x7FFFFFFF;
+    else
+      v5 = v124 + *v4;
+    if ( v5 <= v126 )
+    {
+      v123 = v126 - *v4;
+      sub_4232BC(a1 + 8, v123, 0);
+    }
+  }
+  else
+  {
+    v125 = *(_DWORD *)(a1 + 17) + v126 - *v4;
+    sub_4232BC(a1 + 8, v125, 0);
+  }
+  v122 = v127 - *v4;
+  v121 = a1 + 8;
+  if ( *(_DWORD *)(a1 + 17) && (!*(_DWORD *)(v121 + 5) || *(_DWORD *)(v121 + 9) <= v122) )
+  {
+    v130 = 32;
+    xerror::MakeString((xerror *)v167, aPrecondition_63, aLim0Data0Index_15, aCBc5IncludeCla_27, 0xC1u);
+    ++v131;
+    xmsg::xmsg((xmsg *)v166, (const string *)v167);
+    ++v131;
+    v130 = 44;
+    --v131;
+    string::~string((string *)v167);
+    v130 = 32;
+    v131 += 2;
+    v131 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v166, 0, sub_403BE0, 1u, 0, 0, 0, v129);
+  }
+  sub_41F1CF((int)&v60, 82 * v122 + *(_DWORD *)(v121 + 5));
+  v55 = -1;
+  v56 = 0;
+  v57 = 0;
+  v58 = 0;
+  v59 = 0;
+  v120 = a1 + 33;
+  *(_DWORD *)(a1 + 46) = 0;
+  v130 = 56;
+  string::string((string *)&v171);
+  ++v131;
+  v130 = 80;
+  string::string((string *)&v170);
+  ++v131;
+  v130 = 68;
+  v119.cx = 0;
+  v119.cy = 0;
+  v6 = v60;
+  first_of = v60;
+  v115 = a3;
+  v116 = *a3;
+  v117 = a3[1];
+  v116 += v63;
+  v114.cx = 0;
+  v114.cy = 0;
+  v113 = 0;
+  if ( (*(int (__cdecl **)(int))(*(_DWORD *)(a2 + 5) + 88))(a2) != *(_DWORD *)a2 )
+    SetTextAlign(*(HDC *)a2, 0x18u);
+  v7 = (HDC)(*(int (__cdecl **)(int))(*(_DWORD *)(a2 + 5) + 88))(a2);
+  SetTextAlign(v7, 0x18u);
+  v8 = (HDC)(*(int (__cdecl **)(int))(*(_DWORD *)(a2 + 5) + 88))(a2);
+  SetTextJustification(v8, 0, 0);
+  v130 = 92;
+  v9 = TFont::TFont((TFont *)v165, &v61);
+  v131 += 2;
+  (*(void (__cdecl **)(int, TFont *))(*(_DWORD *)(a2 + 5) + 20))(a2, v9);
+  v131 -= 2;
+  v131 += 2;
+  --v131;
+  TGdiObject::~TGdiObject((TGdiObject *)v165);
+  while ( *(_DWORD *)(*(_DWORD *)(a1 + 54) + 6) > first_of && v114.cy + v117 < a3[3] )
+  {
+    v112 = v6;
+    if ( *(_BYTE *)string::operator()(a1 + 54, v6) == 60 )
+    {
+      v6 = sub_41F790(a1, (string *)&v170, v6);
+      v111 = 1;
+      v130 = 68;
+      if ( *(_DWORD *)(v170 + 6) )
+      {
+        string::to_upper((string *)&v170);
+        v130 = 104;
+        string::string((string *)v164, aBr);
+        ++v131;
+        v28 = string::compare((string *)&v170, (const string *)v164) == 0;
+        --v131;
+        string::~string((string *)v164);
+        if ( v28 )
+        {
+          v113 = 1;
+          v111 = 0;
+        }
+        else
+        {
+          v130 = 116;
+          string::string((string *)v163, aOl);
+          ++v131;
+          v29 = string::compare((string *)&v170, (const string *)v163) == 0;
+          --v131;
+          string::~string((string *)v163);
+          if ( v29
+            || (string::string((string *)v162, aOl_0),
+                ++v131,
+                v30 = string::compare((string *)&v170, (const string *)v162, 0, 0xFFFFFFFF) == 0,
+                --v131,
+                string::~string((string *)v162),
+                v30) )
+          {
+            v63 += 40;
+            v66 = 1;
+            if ( !v64 )
+              v113 = 2;
+            ++v64;
+            v111 = 0;
+          }
+          else
+          {
+            v130 = 128;
+            string::string((string *)v161, aOl_1);
+            ++v131;
+            v31 = string::compare((string *)&v170, (const string *)v161) == 0;
+            --v131;
+            string::~string((string *)v161);
+            if ( !v31 || a3[1] == v117 )
+            {
+              v130 = 140;
+              string::string((string *)v160, aUl);
+              ++v131;
+              v32 = string::compare((string *)&v170, (const string *)v160) == 0;
+              --v131;
+              string::~string((string *)v160);
+              if ( v32
+                || (string::string((string *)v159, aUl_0),
+                    ++v131,
+                    v33 = string::compare((string *)&v170, (const string *)v159, 0, 0xFFFFFFFF) == 0,
+                    --v131,
+                    string::~string((string *)v159),
+                    v33) )
+              {
+                v63 += 40;
+                v66 = 0;
+                if ( !v64 )
+                  v113 = 2;
+                ++v64;
+                v111 = 0;
+              }
+              else
+              {
+                v130 = 152;
+                string::string((string *)v158, aUl_1);
+                ++v131;
+                v34 = string::compare((string *)&v170, (const string *)v158) == 0;
+                --v131;
+                string::~string((string *)v158);
+                if ( !v34 || a3[1] == v117 )
+                {
+                  v130 = 164;
+                  string::string((string *)v157, aLi_0);
+                  ++v131;
+                  v35 = string::compare((string *)&v170, (const string *)v157) == 0;
+                  --v131;
+                  string::~string((string *)v157);
+                  if ( v35 )
+                  {
+                    v65 = 1;
+                    v111 = 0;
+                  }
+                  else
+                  {
+                    v130 = 176;
+                    string::string((string *)v156, aTr);
+                    ++v131;
+                    v36 = string::compare((string *)&v170, (const string *)v156) == 0;
+                    --v131;
+                    string::~string((string *)v156);
+                    if ( !v36 || a3[1] == v117 )
+                    {
+                      v130 = 188;
+                      string::string((string *)v155, aP);
+                      ++v131;
+                      v37 = string::compare((string *)&v170, (const string *)v155) == 0;
+                      --v131;
+                      string::~string((string *)v155);
+                      if ( v37
+                        || (string::string((string *)v154, aP_0),
+                            ++v131,
+                            v38 = string::compare((string *)&v170, (const string *)v154, 0, 0xFFFFFFFF) == 0,
+                            --v131,
+                            string::~string((string *)v154),
+                            v38) )
+                      {
+                        v113 = 2;
+                        v111 = 0;
+                      }
+                      else
+                      {
+                        v130 = 200;
+                        string::string((string *)v153, aB);
+                        ++v131;
+                        v39 = string::compare((string *)&v170, (const string *)v153) == 0;
+                        --v131;
+                        string::~string((string *)v153);
+                        if ( v39 )
+                        {
+                          v61.lfWeight = 700;
+                        }
+                        else
+                        {
+                          v130 = 212;
+                          string::string((string *)v152, aB_0);
+                          ++v131;
+                          v40 = string::compare((string *)&v170, (const string *)v152) == 0;
+                          --v131;
+                          string::~string((string *)v152);
+                          if ( !v40 || a3[1] == v117 )
+                          {
+                            v130 = 224;
+                            string::string((string *)v151, aI_2);
+                            ++v131;
+                            v41 = string::compare((string *)&v170, (const string *)v151) == 0;
+                            --v131;
+                            string::~string((string *)v151);
+                            if ( v41 )
+                            {
+                              v61.lfItalic = 1;
+                            }
+                            else
+                            {
+                              v130 = 236;
+                              string::string((string *)v150, aI_3);
+                              ++v131;
+                              v42 = string::compare((string *)&v170, (const string *)v150) == 0;
+                              --v131;
+                              string::~string((string *)v150);
+                              if ( !v42 || a3[1] == v117 )
+                              {
+                                v130 = 248;
+                                string::string((string *)v149, aU_2);
+                                ++v131;
+                                v43 = string::compare((string *)&v170, (const string *)v149) == 0;
+                                --v131;
+                                string::~string((string *)v149);
+                                if ( v43 )
+                                {
+                                  v61.lfUnderline = 1;
+                                }
+                                else
+                                {
+                                  v130 = 260;
+                                  string::string((string *)v148, aU_3);
+                                  ++v131;
+                                  v44 = string::compare((string *)&v170, (const string *)v148) == 0;
+                                  --v131;
+                                  string::~string((string *)v148);
+                                  if ( !v44 || a3[1] == v117 )
+                                  {
+                                    v130 = 272;
+                                    string::string((string *)v147, aH1);
+                                    ++v131;
+                                    v10 = 0;
+                                    if ( (int)string::compare((string *)&v170, (const string *)v147, 0, 0xFFFFFFFF) >= 0 )
+                                    {
+                                      string::string((string *)v146, aH6);
+                                      ++v131;
+                                      v45 = string::compare((string *)&v170, (const string *)v146, 0, 0xFFFFFFFF) <= 0;
+                                      --v131;
+                                      string::~string((string *)v146);
+                                      if ( v45 )
+                                        v10 = 1;
+                                    }
+                                    v46 = v10;
+                                    --v131;
+                                    string::~string((string *)v147);
+                                    if ( v46 )
+                                    {
+                                      v61.lfWeight = 700;
+                                      v110 = *(char *)string::operator()(&v170, 1) - 48;
+                                      v130 = 68;
+                                      if ( v110 > 0 && v110 <= 6 )
+                                        v61.lfHeight = -MulDiv(*(&dword_444A18 + 6 - v110), nNumerator, 72);
+                                      v63 = 0;
+                                      v113 = 2;
+                                    }
+                                    else
+                                    {
+                                      v130 = 284;
+                                      string::string((string *)v145, aH1_0);
+                                      ++v131;
+                                      v11 = 0;
+                                      if ( (int)string::compare((string *)&v170, (const string *)v145, 0, 0xFFFFFFFF) >= 0 )
+                                      {
+                                        string::string((string *)v144, aH6_0);
+                                        ++v131;
+                                        v47 = string::compare((string *)&v170, (const string *)v144, 0, 0xFFFFFFFF) <= 0;
+                                        --v131;
+                                        string::~string((string *)v144);
+                                        if ( v47 && a3[1] != v117 )
+                                          v11 = 1;
+                                      }
+                                      v48 = v11;
+                                      --v131;
+                                      string::~string((string *)v145);
+                                      if ( v48 )
+                                      {
+                                        v61.lfWeight = 400;
+                                        v61.lfHeight = -MulDiv(nNumber, nNumerator, 72);
+                                        v63 = 0;
+                                        v113 = 2;
+                                      }
+                                      else
+                                      {
+                                        v130 = 296;
+                                        string::string((string *)v143, aPre);
+                                        ++v131;
+                                        v49 = string::compare((string *)&v170, (const string *)v143, 0, 0xFFFFFFFF) == 0;
+                                        --v131;
+                                        string::~string((string *)v143);
+                                        if ( v49 )
+                                        {
+                                          lstrcpyA(v61.lfFaceName, aCourierNew);
+                                          v63 = 0;
+                                          v113 = 2;
+                                        }
+                                        else
+                                        {
+                                          v130 = 308;
+                                          string::string((string *)v142, aPre_0);
+                                          ++v131;
+                                          v12 = !string::compare((string *)&v170, (const string *)v142, 0, 0xFFFFFFFF)
+                                             && a3[1] != v117;
+                                          v50 = v12;
+                                          --v131;
+                                          string::~string((string *)v142);
+                                          if ( v50 )
+                                          {
+                                            lstrcpyA(v61.lfFaceName, aTimesNewRoman_0);
+                                            v63 = 0;
+                                            v113 = 2;
+                                          }
+                                          else
+                                          {
+                                            v130 = 320;
+                                            string::string((string *)v141, aFont_0);
+                                            ++v131;
+                                            v51 = string::compare((string *)&v170, (const string *)v141, 0, 0xFFFFFFFF) == 0;
+                                            --v131;
+                                            string::~string((string *)v141);
+                                            if ( v51 )
+                                            {
+                                              sub_41FC53(a1, (int)&v60, (string *)&v170);
+                                            }
+                                            else
+                                            {
+                                              v130 = 332;
+                                              string::string((string *)v140, aFont_1);
+                                              ++v131;
+                                              v13 = !string::compare(
+                                                       (string *)&v170,
+                                                       (const string *)v140,
+                                                       0,
+                                                       0xFFFFFFFF)
+                                                 && a3[1] != v117;
+                                              v52 = v13;
+                                              --v131;
+                                              string::~string((string *)v140);
+                                              if ( v52 )
+                                              {
+                                                sub_41F231((int)&v60, 0);
+                                                v109 = TColor::Black;
+                                                v62 = TColor::Black;
+                                              }
+                                              else
+                                              {
+                                                v130 = 344;
+                                                string::string((string *)v139, aA);
+                                                ++v131;
+                                                v53 = string::compare(
+                                                        (string *)&v170,
+                                                        (const string *)v139,
+                                                        0,
+                                                        0xFFFFFFFF) == 0;
+                                                --v131;
+                                                string::~string((string *)v139);
+                                                if ( v53 )
+                                                {
+                                                  sub_41FAA4(a1, (string *)&v170, &v55);
+                                                  if ( v55 >= 0 )
+                                                    v56 = v116;
+                                                }
+                                                else
+                                                {
+                                                  v130 = 356;
+                                                  string::string((string *)v138, aA_0);
+                                                  ++v131;
+                                                  v14 = !string::compare(
+                                                           (string *)&v170,
+                                                           (const string *)v138,
+                                                           0,
+                                                           0xFFFFFFFF)
+                                                     && a3[1] != v117;
+                                                  v54 = v14;
+                                                  --v131;
+                                                  string::~string((string *)v138);
+                                                  if ( v54 )
+                                                  {
+                                                    if ( v55 >= 0 )
+                                                    {
+                                                      v58 = v116;
+                                                      v59 = v117;
+                                                      v57 = v117 - v114.cy;
+                                                      v15 = v56 >= v116 || v57 >= v59;
+                                                      v108 = v15;
+                                                      if ( !v15 )
+                                                        sub_4233B7(a1 + 33, &v55);
+                                                      v55 = -1;
+                                                    }
+                                                  }
+                                                  else
+                                                  {
+                                                    v111 = 0;
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                  else
+                                  {
+                                    v61.lfUnderline = 0;
+                                  }
+                                }
+                              }
+                              else
+                              {
+                                v61.lfItalic = 0;
+                              }
+                            }
+                          }
+                          else
+                          {
+                            v61.lfWeight = 400;
+                          }
+                        }
+                      }
+                    }
+                    else
+                    {
+                      v113 = 2;
+                      v111 = 0;
+                    }
+                  }
+                }
+                else
+                {
+                  if ( v63 <= 40 )
+                    v63 = 0;
+                  else
+                    v63 -= 40;
+                  if ( !--v64 )
+                    v113 = 2;
+                  v111 = 0;
+                }
+              }
+            }
+            else
+            {
+              if ( v63 <= 40 )
+                v63 = 0;
+              else
+                v63 -= 40;
+              v66 = 0;
+              if ( !--v64 )
+                v113 = 2;
+              v111 = 0;
+            }
+          }
+        }
+        if ( v111 )
+        {
+          (*(void (__cdecl **)(int))(*(_DWORD *)(a2 + 5) + 28))(a2);
+          v130 = 368;
+          v16 = TFont::TFont((TFont *)v137, &v61);
+          v131 += 2;
+          (*(void (__cdecl **)(int, TFont *))(*(_DWORD *)(a2 + 5) + 20))(a2, v16);
+          v131 -= 2;
+          v131 += 2;
+          --v131;
+          TGdiObject::~TGdiObject((TGdiObject *)v137);
+        }
+      }
+    }
+    while ( v6 < *(_DWORD *)(*(_DWORD *)(a1 + 54) + 6) )
+    {
+      v107 = v6;
+      if ( *(_BYTE *)string::operator()(a1 + 54, v6) != 9 )
+      {
+        v106 = v6;
+        if ( *(_BYTE *)string::operator()(a1 + 54, v6) != 32 )
+        {
+          v105 = v6;
+          if ( *(_BYTE *)string::operator()(a1 + 54, v6) != 10 )
+            break;
+        }
+      }
+      ++v6;
+    }
+    first_of = v6;
+    if ( *(_DWORD *)(*(_DWORD *)(a1 + 54) + 6) > v6 )
+    {
+      v104 = v6;
+      if ( *(_BYTE *)string::operator()(a1 + 54, v6) != 60 )
+      {
+        v130 = 380;
+        string::string((string *)v136, asc_44659A);
+        ++v131;
+        first_of = string::find_first_of((string *)(a1 + 54), (const string *)v136, v6);
+        --v131;
+        string::~string((string *)v136);
+        if ( first_of == -1 )
+        {
+          first_of = *(_DWORD *)(*(_DWORD *)(a1 + 54) + 6);
+        }
+        else
+        {
+          v103 = first_of;
+          if ( *(_BYTE *)string::operator()(a1 + 54, first_of) == 10 )
+          {
+            v102 = first_of;
+            *(_BYTE *)string::operator()(a1 + 54, first_of) = 32;
+          }
+          else
+          {
+            v101 = first_of;
+            if ( *(_BYTE *)string::operator()(a1 + 54, first_of) == 9 )
+            {
+              v100 = first_of;
+              *(_BYTE *)string::operator()(a1 + 54, first_of) = 32;
+            }
+          }
+        }
+        v130 = 392;
+        string::substr((string *)v135, a1 + 54, v6);
+        ++v131;
+        string::assign((string *)&v171, (const string *)v135, 0, 0xFFFFFFFF);
+        --v131;
+        string::~string((string *)v135);
+        sub_41F99A(a1, (string *)&v171);
+        v99 = *(_DWORD *)(v171 + 6);
+        v98 = *(LPCSTR *)(v171 + 2);
+        v26 = v99;
+        v24 = v98;
+        v17 = (HDC)(*(int (__cdecl **)(int))(*(_DWORD *)(a2 + 5) + 88))(a2);
+        GetTextExtentPointA(v17, v24, v26, &v119);
+        if ( a3[1] == v117 )
+        {
+          v117 += v119.cy;
+        }
+        else if ( v113 || v65 || v119.cx + v116 > a3[2] )
+        {
+          if ( v55 >= 0 )
+          {
+            v58 = v116;
+            v59 = v117;
+            v57 = v117 - v114.cy;
+            v18 = v56 >= v116 || v57 >= v59;
+            v97 = v18;
+            if ( !v18 )
+              sub_4233B7(a1 + 33, &v55);
+          }
+          v116 = v63 + *a3;
+          v117 += v119.cy;
+          if ( v113 == 2 )
+          {
+            v96[2] = nNumber;
+            v117 += abs32(nNumber);
+          }
+          if ( v65 && v113 != 2 )
+          {
+            v96[1] = nNumber;
+            v117 += (int)abs32(nNumber) / 4;
+          }
+          if ( v55 >= 0 )
+            v56 = v116;
+        }
+        v113 = 0;
+        if ( v65 && v119.cy + v117 < a3[3] )
+        {
+          v96[0] = v116 - 20;
+          v19 = *a3 >= v116 - 20 ? a3 : v96;
+          v116 = *v19;
+          sub_41FF8F(a1, a2, &v116, (int)a3, a4, v66);
+          v116 += 20;
+          v65 = 0;
+          if ( v66 )
+            ++v66;
+        }
+        v130 = 404;
+        string::string((string *)v134, 32);
+        ++v131;
+        string::append((string *)&v171, (const string *)v134, 0, 0xFFFFFFFF);
+        --v131;
+        string::~string((string *)v134);
+        v95 = *(_DWORD *)(v171 + 6);
+        v94 = *(LPCSTR *)(v171 + 2);
+        v27 = v95;
+        v25 = v94;
+        v20 = (HDC)(*(int (__cdecl **)(int))(*(_DWORD *)(a2 + 5) + 88))(a2);
+        GetTextExtentPointA(v20, v25, v27, &v119);
+        if ( v119.cy + v117 < a3[3] )
+        {
+          v6 = first_of;
+          if ( a4 )
+          {
+            if ( (*(_BYTE *)(a1 + 58) & 3) != 0 )
+            {
+              (*(void (__cdecl **)(char *, int, TColor *))(*(_DWORD *)(a2 + 5) + 36))(v93, a2, TColor::White);
+              v92 = *(_DWORD *)(v171 + 6);
+              v91 = *(_DWORD *)(v171 + 2);
+              v90 = a3;
+              v89 = v117 + 1;
+              v88 = v116 + 1;
+              v86 = v116 + 1;
+              v87 = v117 + 1;
+              (*(void (__cdecl **)(int, int, int, int, _DWORD *, int, int, _DWORD))(*(_DWORD *)(a2 + 5) + 72))(
+                a2,
+                v116 + 1,
+                v117 + 1,
+                4,
+                a3,
+                v91,
+                v92,
+                0);
+              if ( (*(_BYTE *)(a1 + 58) & 2) != 0 )
+              {
+                v85 = *(_DWORD *)(v171 + 6);
+                v84 = *(_DWORD *)(v171 + 2);
+                v83 = a3;
+                v82 = v117 - 1;
+                v81 = v116 - 1;
+                v79 = v116 - 1;
+                v80 = v117 - 1;
+                (*(void (__cdecl **)(int, int, int, int, _DWORD *, int, int, _DWORD))(*(_DWORD *)(a2 + 5) + 72))(
+                  a2,
+                  v116 - 1,
+                  v117 - 1,
+                  4,
+                  a3,
+                  v84,
+                  v85,
+                  0);
+              }
+            }
+          }
+          if ( v55 < 0 )
+            (*(void (__cdecl **)(char *, int, TColor **))(*(_DWORD *)(a2 + 5) + 36))(v77, a2, &v62);
+          else
+            (*(void (__cdecl **)(char *, int, _DWORD))(*(_DWORD *)(a2 + 5) + 36))(v78, a2, TColor::LtBlue);
+          v21 = *(_DWORD *)(v171 + 6);
+          v22 = *(_DWORD *)(v171 + 2);
+          v76 = a3;
+          (*(void (__cdecl **)(int, int, int, int, _DWORD *, int, int, _DWORD))(*(_DWORD *)(a2 + 5) + 72))(
+            a2,
+            v116,
+            v117,
+            4,
+            a3,
+            v22,
+            v21,
+            0);
+        }
+        v116 += v119.cx;
+        v114 = v119;
+      }
+    }
+  }
+  if ( *(_DWORD *)(*(_DWORD *)(a1 + 54) + 6) > first_of )
+  {
+    v60 = v6;
+    if ( (*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 9) + 4))(a1 + 8) <= (unsigned int)(*(_DWORD *)(a1 + 62) + 1) )
+    {
+      sub_42320A(a1 + 8, (int)&v60);
+    }
+    else
+    {
+      v75 = *(_DWORD *)(a1 + 62) + 1;
+      v74 = (_DWORD *)(a1 + 4);
+      v73 = v75 + 1;
+      if ( *(_DWORD *)(a1 + 4) <= v75 + 1 )
+      {
+        v71 = *(_DWORD *)((char *)v74 + 13);
+        if ( v71 == -1 )
+          v23 = 0x7FFFFFFF;
+        else
+          v23 = v71 + *v74;
+        if ( v23 <= v73 )
+        {
+          v70 = v73 - *v74;
+          sub_4232BC((int)(v74 + 1), v70, 0);
+        }
+      }
+      else
+      {
+        v72 = *(_DWORD *)((char *)v74 + 13) + v73 - *v74;
+        sub_4232BC((int)(v74 + 1), v72, 0);
+      }
+      v69 = v75 - *v74;
+      v68 = v74 + 1;
+      if ( *(_DWORD *)((char *)v74 + 13) && (!*(_DWORD *)((char *)v68 + 5) || *(_DWORD *)((char *)v68 + 9) <= v69) )
+      {
+        v130 = 416;
+        xerror::MakeString((xerror *)v133, aPrecondition_64, aLim0Data0Index_16, aCBc5IncludeCla_28, 0xC1u);
+        ++v131;
+        xmsg::xmsg((xmsg *)v132, (const string *)v133);
+        ++v131;
+        v130 = 428;
+        --v131;
+        string::~string((string *)v133);
+        v130 = 416;
+        v131 += 2;
+        v131 += 3;
+        _ThrowExceptionLDTC(stru_403B88, v132, 0, sub_403BE0, 1u, 0, 0, 0, v129);
+      }
+      sub_41F2BA(82 * v69 + *(_DWORD *)((char *)v68 + 5), (int)&v60);
+    }
+  }
+  (*(void (__cdecl **)(int))(*(_DWORD *)(a2 + 5) + 28))(a2);
+  --v131;
+  string::~string((string *)&v170);
+  --v131;
+  string::~string((string *)&v171);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 438EE0: using guessed type int __cdecl string::operator()(_DWORD, _DWORD);
+
