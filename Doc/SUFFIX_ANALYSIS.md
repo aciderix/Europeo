@@ -128,9 +128,67 @@ Depuis l'INI (lu par `sub_417031`):
    - Ajout au tableau de scènes
 ```
 
+## Découvertes Additionnelles (Janvier 2026)
+
+### Opérateurs de Comparaison (sub_40A479)
+
+La fonction `sub_40A479` gère les comparaisons dans les conditions `if`:
+
+```c
+switch (operator_code) {
+    case 1: result = (a == b);  // ==
+    case 2: result = (a != b);  // !=
+    case 3: result = (a > b);   // >
+    case 4: result = (a < b);   // <
+    case 5: result = (a >= b);  // >=
+    case 6: result = (a <= b);  // <=
+}
+```
+
+Table des opérateurs string à `dword_43BA24`, initialisée avec `asc_43F8FD` ("=").
+
+### Format des Conditions
+
+Les conditions sont parsées par `sub_40A5CA` en format:
+```
+"variable opérateur valeur"
+```
+Exemple: `"score >= 10"`, `"jeu == 1"`
+
+### Système de Variables Global
+
+- `dword_44ECCE` = Tableau global des variables en mémoire
+- `sub_406345` = Charge variables depuis fichier VNSAVFILE
+- `sub_40650B` = Sauvegarde variables vers fichier VNSAVFILE
+
+### Format Fichier Sauvegarde
+
+```
+VNSAVFILE (signature 9 bytes)
++ String: chemin projet
++ Word: scène courante
++ Word: nombre de variables
++ Pour chaque variable: nom (string) + valeur
++ État interface TWindow
+```
+
+### Timer Automatique
+
+Format INI: `TIMER=delay,scene_target`
+- Parsing: `sscanf(buffer, "%i,%i", &delay, &scene)`
+- Condition: `scene > 0 && delay >= 0`
+- Implémentation: `SetTimer(hwnd, 1, delay, NULL)`
+
+### Curseurs
+
+- `DEFCURSOR` dans [MAIN] définit le curseur par défaut
+- Curseurs personnalisés chargés via `LoadCursorFromFileA`
+- IDs système: 98, 99, 105, 1-4 (directionnels)
+
 ## Prochaines Étapes
 
 1. ~~Analyser le code de `TVNIndexDependant` pour comprendre l'indexation~~
-2. Tracer l'exécution avec un débogueur pour voir la logique exacte
-3. Comparer les mappings avec les résultats réels du jeu
-4. Implémenter le parseur React basé sur ces découvertes
+2. ~~Trouver les opérateurs de comparaison pour les conditions~~
+3. Tracer l'exécution avec un débogueur pour voir la logique exacte
+4. Comparer les mappings avec les résultats réels du jeu
+5. Implémenter le parseur React basé sur ces découvertes
