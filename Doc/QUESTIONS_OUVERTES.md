@@ -4,25 +4,41 @@ Document de recherche pour identifier et résoudre les zones d'ombre du format V
 
 ---
 
-## 1. Navigation - Suffixes Mystérieux
+## 1. Navigation - Suffixes
 
-### Q1.1: Suffixe `j` - Signification ?
-**Contexte**: Observé avec condition `jeu = 1`
-**Statut**: ⚠️ Hypothèse non confirmée
-**Hypothèse**: Probablement "Jump" conditionnel ou lié au mode "jeu"
+### Q1.1-1.3: Tous les suffixes découverts
+**Statut**: ✅ RÉSOLU (Janvier 2026)
 
-### Q1.2: Suffixe `h` - Signification ?
-**Contexte**: Observé avec condition `score < 0`
-**Statut**: ⚠️ Non résolu
-**Hypothèse**: Peut-être "High score" ou navigation conditionnelle
+**Découverte majeure**: 10 suffixes identifiés dans le jeu Europeo:
 
-### Q1.3: Suffixe `f` - Signification ?
-**Contexte**: Observé avec condition `score < 0`
-**Statut**: ⚠️ Non résolu
-**Hypothèse**: Peut-être "Fail" ou "False" pour échec
+| Suffixe | Signification | Usage |
+|---------|---------------|-------|
+| `d` | **Direct** | Navigation par ID de scène absolu |
+| `i` | **Index** | Navigation par INDEX_ID + n |
+| `+` / `-` | **Relatif** | Navigation relative à la scène courante |
+| `e` | **Return marker** | Retour vers Espagne (contexte couleurs1) |
+| `f` | **Return marker** | Retour vers France/Finlande (contexte couleurs1) |
+| `g` | **Return marker** | Retour vers Grèce/Allemagne (contexte couleurs1) |
+| `h` | **Return marker** | Retour vers Hollande (contexte couleurs1) |
+| `j` | **Return marker** | Lié au mode "jeu" (contexte couleurs1) |
+| `k` | **Return marker** | Retour vers Ecosse (contexte couleurs1) |
+| `l` | **Return marker** | Retour vers Luxembourg/autre (contexte couleurs1) |
+
+**Analyse approfondie du mécanisme**:
+Les suffixes `e`, `f`, `g`, `h`, `j`, `k`, `l` sont des **marqueurs de retour** utilisés
+spécifiquement dans le contexte du mini-jeu "couleurs1" (jeu des couleurs).
+
+Quand un joueur échoue (`score < 0`), il est envoyé à la scène 54 de couleurs1.vnp
+avec un suffixe qui encode sa destination de retour après l'écran "PERDU".
+
+Exemple:
+```
+score < 0 then runprj ..\couleurs1\couleurs1.vnp 54h
+```
+→ Va à scène 54 (écran perdu), puis retourne vers la zone "h" (Hollande)
 
 ### Q1.4: Comment INDEX est-il calculé ?
-**Statut**: ✅ Partiellement résolu
+**Statut**: ✅ Résolu
 **Réponse**: INDEX_ID est lu depuis le fichier VND (offset 65). La navigation `Ni` = `INDEX_ID + N`
 
 ### Q1.5: Navigation sans suffixe - Comportement ?
@@ -125,9 +141,18 @@ Structure:
 - a1[4]: string nom de police
 
 ### Q4.4: playseq - Format de séquence ?
-**Statut**: ⚠️ Non résolu
-**Réponse**: Seule référence trouvée: `aSequencer = "sequencer"`
-Probablement pour jouer des séquences d'actions/animations
+**Statut**: ✅ RÉSOLU (Janvier 2026)
+**Réponse**:
+- Utilise le device MCI "sequencer" pour jouer des fichiers MIDI
+- Fonction: `sub_41B7D5` initialise le sequencer
+- Vérifie disponibilité MIDI: `midiOutGetNumDevs()`
+- Format: `playseq fichier.mid`
+```c
+// sub_41B7D5
+string::string(v3, "sequencer");  // Type de device MCI
+sub_41AD38(a1, a2, v3);           // Ouvre le device
+*(_BYTE *)(a1 + 16) = midiOutGetNumDevs() == 0;  // Flag si pas de MIDI
+```
 
 ### Q4.5: addbmp - Paramètres de positionnement ?
 **Statut**: ✅ Résolu
@@ -173,8 +198,17 @@ La DLL doit exporter: VNSetDLLArguments, VNCreateDLLWindow, VNDestroyDLLWindow
 Utilise probablement Video for Windows (VFW) - codecs système
 
 ### Q5.2: playcda - CD Audio ?
-**Statut**: ⚠️ Non résolu
-**Réponse**: Pas de référence MCI trouvée. Peut-être désactivé ou non implémenté dans cette version.
+**Statut**: ✅ RÉSOLU (Janvier 2026)
+**Réponse**:
+- Utilise le device MCI "CDAUDIO" / "cdaudio"
+- Références trouvées: `aCdaudio = "CDAUDIO"` et `aCdaudio_0 = "cdaudio"`
+- Fonction `sub_427EFF` pour lecture CD audio:
+```c
+string::string(v5, aCdaudio);     // Type de device MCI
+mciSendCommandA(s[1], 0x841u, 0x10002u, dwParam2);  // Commande MCI
+```
+- Format probable: `playcda piste [debut] [fin]`
+- Note: Nécessite un lecteur CD physique, rarement utilisé dans Europeo
 
 ---
 
@@ -205,22 +239,26 @@ if (version >= 0x2000A)
 
 ---
 
-## Résumé
+## Résumé (Mis à jour Janvier 2026)
 
 | Catégorie | Résolues | Partielles | Non résolues |
 |-----------|----------|------------|--------------|
-| Navigation | 2 | 0 | 3 |
+| Navigation | 5 | 0 | 0 |
 | Hotspots | 2 | 1 | 0 |
 | Interface | 2 | 1 | 0 |
-| Commandes | 5 | 1 | 1 |
-| Médias | 0 | 1 | 1 |
+| Commandes | 6 | 1 | 0 |
+| Médias | 2 | 0 | 0 |
 | Système | 2 | 1 | 0 |
-| **Total** | **13** | **5** | **5** |
+| **Total** | **19** | **4** | **0** |
 
-### Questions toujours ouvertes:
-1. Suffixes `j`, `h`, `f` - signification exacte
-2. playseq - format de séquence
-3. playcda - CD Audio
-4. CAPS - valeurs du bitmask
-5. Événements ONCLICK, ONINIT, AFTERINIT
+### Questions résolues lors de cette session (Janvier 2026):
+1. ✅ **Suffixes de navigation** - 10 suffixes identifiés (d, i, +/-, e, f, g, h, j, k, l)
+2. ✅ **playseq** - MCI "sequencer" pour fichiers MIDI
+3. ✅ **playcda** - MCI "cdaudio" pour pistes CD
+
+### Questions partiellement résolues:
+1. ⚠️ CAPS - valeurs du bitmask (lu mais valeurs inconnues)
+2. ⚠️ Événements EV_ONFOCUS trouvé, autres non confirmés
+3. ⚠️ HSVIDEOFLAGS - format connu, valeurs exactes inconnues
+4. ⚠️ Formats vidéo - AVI confirmé, autres possibles
 

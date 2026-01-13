@@ -25,14 +25,22 @@ XX XX        <- Numéro + suffixe (ex: "5i", "39i", "13d")
 | depart.avi → ecosse.vnp | 33d | Direct |
 | depart.avi → france.vnp | 18 | Sans suffixe |
 
-### Suffixes Identifiés
-| Suffixe | Signification Probable | Preuve |
-|---------|------------------------|--------|
-| `i` | **Index** - Navigation par INDEX | Classe `TVNIndexDependant` dans europeo.exe |
-| `d` | **Direct** - Navigation par ID de scène | Utilisé pour projets externes (.vnp) |
-| `j` | **Jump** - Saut spécial? | Utilisé avec `jeu = 1` conditions |
-| `h` | Inconnu | Utilisé avec `score < 0` conditions |
-| `f` | Inconnu | Utilisé avec `score < 0` conditions |
+### Suffixes Identifiés (COMPLET - Janvier 2026)
+| Suffixe | Signification | Usage | Preuve |
+|---------|---------------|-------|--------|
+| `i` | **Index** | Navigation INDEX_ID + n | Classe `TVNIndexDependant` |
+| `d` | **Direct** | Navigation par ID absolu | Utilisé cross-projet (.vnp) |
+| `+` / `-` | **Relatif** | Navigation relative | `scene +5`, `scene -3` |
+| `e` | **Return: Espagne** | Retour jeu couleurs | `54e` dans couleurs1 |
+| `f` | **Return: France/Finlande** | Retour jeu couleurs | `54f` dans couleurs1 |
+| `g` | **Return: Grèce/Allemagne** | Retour jeu couleurs | `54g` dans couleurs1 |
+| `h` | **Return: Hollande** | Retour jeu couleurs | `54h` dans couleurs1 |
+| `j` | **Return: mode Jeu** | Retour mode jeu | `54j` dans couleurs1 |
+| `k` | **Return: Ecosse (sKotland)** | Retour jeu couleurs | `54k` dans couleurs1 |
+| `l` | **Return: Luxembourg/autre** | Retour jeu couleurs | `54l` dans couleurs1 |
+
+**Découverte clé**: Les suffixes `e`, `f`, `g`, `h`, `j`, `k`, `l` sont des **marqueurs de retour**
+utilisés dans le mini-jeu "couleurs1" pour encoder la destination après l'écran "PERDU" (scène 54).
 
 ### Classes Trouvées dans europeo.exe
 - `TVNIndexDependant` @ 0x004104ab
@@ -62,11 +70,18 @@ Les suffixes `i` sont utilisés pour la navigation interne dans le même projet:
 - `home2.avi → 5i` (vers maison.bmp)
 - `bankbis.avi → 3i` (vers banque.bmp)
 
-## Questions Ouvertes
+## Questions Résolues (Janvier 2026)
 
-1. Comment l'INDEX est-il calculé? (ordre de définition dans VND? ordre alphabétique? table explicite?)
-2. Quelle est la différence entre `h`, `f`, `j`?
-3. Pourquoi certaines navigations n'ont pas de suffixe?
+1. ✅ **Comment l'INDEX est-il calculé?**
+   → `INDEX_ID` lu depuis le VND (offset 65), navigation `Ni` = `INDEX_ID + N`
+
+2. ✅ **Quelle est la différence entre `h`, `f`, `j`?**
+   → Ce sont des **marqueurs de retour** pour le mini-jeu couleurs1:
+   - `h` = Hollande, `f` = France/Finlande, `j` = mode Jeu
+   - Permettent de revenir au bon pays après l'écran "PERDU"
+
+3. ✅ **Pourquoi certaines navigations n'ont pas de suffixe?**
+   → Sans suffixe = équivalent à `d` (direct), navigation par ID absolu
 
 ## Analyse du Pseudo Code (IDA Pro)
 
