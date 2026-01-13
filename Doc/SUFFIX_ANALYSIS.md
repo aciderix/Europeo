@@ -26,21 +26,30 @@ XX XX        <- Numéro + suffixe (ex: "5i", "39i", "13d")
 | depart.avi → france.vnp | 18 | Sans suffixe |
 
 ### Suffixes Identifiés (COMPLET - Janvier 2026)
-| Suffixe | Signification | Usage | Preuve |
-|---------|---------------|-------|--------|
-| `i` | **Index** | Navigation INDEX_ID + n | Classe `TVNIndexDependant` |
-| `d` | **Direct** | Navigation par ID absolu | Utilisé cross-projet (.vnp) |
-| `+` / `-` | **Relatif** | Navigation relative | `scene +5`, `scene -3` |
-| `e` | **Return: Espagne** | Retour jeu couleurs | `54e` dans couleurs1 |
-| `f` | **Return: France/Finlande** | Retour jeu couleurs | `54f` dans couleurs1 |
-| `g` | **Return: Grèce/Allemagne** | Retour jeu couleurs | `54g` dans couleurs1 |
-| `h` | **Return: Hollande** | Retour jeu couleurs | `54h` dans couleurs1 |
-| `j` | **Return: mode Jeu** | Retour mode jeu | `54j` dans couleurs1 |
-| `k` | **Return: Ecosse (sKotland)** | Retour jeu couleurs | `54k` dans couleurs1 |
-| `l` | **Return: Luxembourg/autre** | Retour jeu couleurs | `54l` dans couleurs1 |
 
-**Découverte clé**: Les suffixes `e`, `f`, `g`, `h`, `j`, `k`, `l` sont des **marqueurs de retour**
-utilisés dans le mini-jeu "couleurs1" pour encoder la destination après l'écran "PERDU" (scène 54).
+**Découverte clé**: Les suffixes sont des **opcodes de mise en scène** passés à la fonction de rendu `sub_434070`.
+Le parsing utilise `atol()` via `sub_407FE5` qui s'arrête au premier caractère non-numérique.
+
+| Suffixe | Fonction Pseudo-Code | Action du Moteur |
+|---------|---------------------|------------------|
+| `i` | `sub_4268F8` | **Immediate** - Saut immédiat, court-circuite les transitions |
+| `d` | `sub_433236` | **Droite/Direct** - Direction droite du balayage |
+| `f` | `sub_434070` + `sub_41CCDD` | **Fade** - Fondu via manipulation de palette |
+| `l` | `sub_41DB36` (StretchBlt) | **Lent** - Transition lente, ajuste le pas du BitBlt |
+| `j` | `sub_40B990` (Case 35) | **Jump/Join** - Interaction utilisateur, suspend les autres processus |
+| `k` | `sub_4314E0` | **Keyboard** - Attente de validation (Entrée ou clic) |
+| `e` | `sub_425165` | **Entrance** - Point d'entrée, exécute scripts de config |
+| `h` | `sub_43177D` (Case 31) | **Horizontal** - Wipe horizontal ou activation timer |
+| `g` | `sub_433236` | **Gauche** - Direction gauche du balayage |
+| `+` / `-` | Navigation relative | Scene courante ± n |
+
+**Mécanisme technique**:
+```c
+// sub_407FE5 - Parsing du numéro de scène
+int scene_num = atol("16l");  // → 16 (atol s'arrête à 'l')
+char suffix = remaining;       // → 'l'
+// Le suffixe modifie le comportement de sub_434070 (rendu)
+```
 
 ### Classes Trouvées dans europeo.exe
 - `TVNIndexDependant` @ 0x004104ab
@@ -76,12 +85,17 @@ Les suffixes `i` sont utilisés pour la navigation interne dans le même projet:
    → `INDEX_ID` lu depuis le VND (offset 65), navigation `Ni` = `INDEX_ID + N`
 
 2. ✅ **Quelle est la différence entre `h`, `f`, `j`?**
-   → Ce sont des **marqueurs de retour** pour le mini-jeu couleurs1:
-   - `h` = Hollande, `f` = France/Finlande, `j` = mode Jeu
-   - Permettent de revenir au bon pays après l'écran "PERDU"
+   → Ce sont des **opcodes de présentation** pour le moteur de rendu:
+   - `h` = Horizontal wipe / timer activation
+   - `f` = Fade (fondu via palette)
+   - `j` = Jump/Join (interaction utilisateur, suspend les processus)
 
 3. ✅ **Pourquoi certaines navigations n'ont pas de suffixe?**
-   → Sans suffixe = équivalent à `d` (direct), navigation par ID absolu
+   → Sans suffixe = transition par défaut du moteur
+
+4. ✅ **Comment les suffixes sont-ils parsés?**
+   → `sub_407FE5` utilise `atol()` qui s'arrête au premier caractère non-numérique.
+   Le suffixe est passé à `sub_434070` (fonction de rendu) pour modifier le comportement.
 
 ## Analyse du Pseudo Code (IDA Pro)
 

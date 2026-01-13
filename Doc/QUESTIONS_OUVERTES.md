@@ -9,33 +9,33 @@ Document de recherche pour identifier et résoudre les zones d'ombre du format V
 ### Q1.1-1.3: Tous les suffixes découverts
 **Statut**: ✅ RÉSOLU (Janvier 2026)
 
-**Découverte majeure**: 10 suffixes identifiés dans le jeu Europeo:
+**Découverte majeure**: Les suffixes sont des **opcodes de mise en scène** qui modifient le comportement du moteur de rendu sans changer le numéro de scène.
 
-| Suffixe | Signification | Usage |
-|---------|---------------|-------|
-| `d` | **Direct** | Navigation par ID de scène absolu |
-| `i` | **Index** | Navigation par INDEX_ID + n |
-| `+` / `-` | **Relatif** | Navigation relative à la scène courante |
-| `e` | **Return marker** | Retour vers Espagne (contexte couleurs1) |
-| `f` | **Return marker** | Retour vers France/Finlande (contexte couleurs1) |
-| `g` | **Return marker** | Retour vers Grèce/Allemagne (contexte couleurs1) |
-| `h` | **Return marker** | Retour vers Hollande (contexte couleurs1) |
-| `j` | **Return marker** | Lié au mode "jeu" (contexte couleurs1) |
-| `k` | **Return marker** | Retour vers Ecosse (contexte couleurs1) |
-| `l` | **Return marker** | Retour vers Luxembourg/autre (contexte couleurs1) |
+| Suffixe | Fonction Pseudo-Code | Action du Moteur |
+|---------|---------------------|------------------|
+| `i` | `sub_4268F8` | **Immediate** - Saut immédiat, pas de transition |
+| `d` | `sub_433236` | **Droite/Direct** - Direction droite du balayage OU navigation directe |
+| `f` | `sub_434070` + Palette | **Fade** - Transition par fondu (palette manipulation) |
+| `l` | `sub_41DB36` (StretchBlt) | **Lent** - Transition lente / latérale |
+| `j` | `sub_40B990` (Case 35) | **Jump/Join** - Interaction de jeu, suspend jusqu'à fin animation |
+| `k` | `sub_4314E0` | **Keyboard** - Attente validation clavier/touche Entrée |
+| `e` | `sub_425165` | **Entrance** - Initialisation au point d'entrée |
+| `h` | `sub_43177D` (Case 31) | **Horizontal** - Balayage horizontal ou timer via `sub_42E2B9` |
+| `g` | `sub_433236` | **Gauche** - Direction gauche du balayage |
 
-**Analyse approfondie du mécanisme**:
-Les suffixes `e`, `f`, `g`, `h`, `j`, `k`, `l` sont des **marqueurs de retour** utilisés
-spécifiquement dans le contexte du mini-jeu "couleurs1" (jeu des couleurs).
-
-Quand un joueur échoue (`score < 0`), il est envoyé à la scène 54 de couleurs1.vnp
-avec un suffixe qui encode sa destination de retour après l'écran "PERDU".
-
-Exemple:
+**Mécanisme de parsing** (sub_407FE5):
+```c
+// Le moteur utilise atol() qui s'arrête au premier caractère non-numérique
+scene_num = atol("16l");  // → 16
+suffix = remaining_char;  // → 'l'
+// Le suffixe est passé à sub_434070 (fonction de rendu)
 ```
-score < 0 then runprj ..\couleurs1\couleurs1.vnp 54h
-```
-→ Va à scène 54 (écran perdu), puis retourne vers la zone "h" (Hollande)
+
+**Exemples d'utilisation**:
+- `scene 16l` → Charge scène 16 avec transition lente
+- `SORTIEf` → Sortie avec fondu au noir
+- `69d` → Navigation vers scène 69 avec balayage droite
+- `réponduk` → Attend validation clavier avant de continuer
 
 ### Q1.4: Comment INDEX est-il calculé ?
 **Statut**: ✅ Résolu
