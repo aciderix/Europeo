@@ -171,23 +171,66 @@ Limites du projet (zones accessibles, etc.)
 
 ## Structure Binaire VND
 
-### En-tête
+### En-tête (sub_41721D)
 
 ```
 Offset  Size  Description
 ------  ----  -----------
-0x00    6     Signature "VNFILE"
-0x06    2     Version (word)
-0x08    ?     Propriétés projet
+0x00    var   Signature "VNFILE" (string)
++?      2     Version/Scene count (word)
 ```
 
-### Propriétés Projet (offsets dans structure)
+### Propriétés Projet (lues après signature)
 
-| Offset | Type | Description |
-|--------|------|-------------|
-| +49 | string | Titre |
-| +61 | dword | EXIT_ID |
-| +65 | dword | INDEX_ID |
+L'ordre de lecture dépend de la version:
+
+```c
+// Si version > 0:
+operator>>(stream, &project[49]);      // Title string
+if (version >= 0x2000D)
+    operator>>(stream, &project[53]);  // Autre string
+sub_416781(&project[29], stream, ctx); // Paramètres projet
+if (version >= 0x2000B)
+    read_array(&project[73], stream);  // Limites/options
+if (version >= 0x2000B)
+    project[69] = readWord(stream);    // CAPS
+project[61] = readWord(stream);        // EXIT_ID
+project[65] = readWord(stream);        // INDEX_ID
+if (version >= 0x2000A)
+    operator>>(stream, &project[57]);  // NAME
+if (version >= 0x2000A)
+    read_variables(&project[94]);      // Variables initiales
+```
+
+### Structure TVNScene (0x99 = 153 bytes)
+
+```c
+struct TVNScene {
+    void*   vtable;           // +0
+    int     unknown;          // +4
+    string  name;             // +8  (nom de la scène)
+    // ... padding ...
+    string  img_path;         // +32 (IMG)
+    string  avi_path;         // +36 (AVI)
+    string  snd_path;         // +40 (SND)
+    string  mid_path;         // +44 (MID)
+    string  txt_path;         // +48 (TXT)
+    string  palette_path;     // +52 (PALETTE)
+    int     txtrect[4];       // +60: x,y,w,h
+    int     set_txt;          // +80
+    int     set_avi;          // +84
+    int     set_img;          // +88
+    int     set_snd;          // +92
+    int     set_mid;          // +96
+    int     flags;            // +104
+    void*   commands;         // +109 (tableau de commandes)
+    void*   hotspots;         // +113 (tableau de hotspots)
+    int     hotspot_count;    // +117
+    // ...
+    void*   timer;            // +145 (objet timer si défini)
+    void*   toolbar;          // +149 (objet toolbar si défini)
+};
+```
 
 ### Record Type 6 (Scene Reference)
 
@@ -196,6 +239,16 @@ Offset  Size  Description
 06 00 00 00  <- Type 6 (scene)
 XX 00 00 00  <- Longueur de la string
 [string]     <- Numéro + suffixe (ex: "35i", "7d")
+```
+
+### Format Palette (VNPALETTE)
+
+```
+Offset  Size  Description
+------  ----  -----------
+0x00    var   Signature "VNPALETTE" (string)
++?      2     Nombre de couleurs (word)
++?      4*N   Entrées RGBA (4 bytes par couleur)
 ```
 
 ---
