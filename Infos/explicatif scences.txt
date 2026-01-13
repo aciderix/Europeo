@@ -1,0 +1,47 @@
+C'est tout à fait normal que ce soit flou : on essaie de lire un livre (le fichier VND) dont les chapitres ne sont pas séparés par de grands titres, mais par des codes invisibles.
+Pour vulgariser, imagine que le moteur du jeu est un lecteur de DVD. Le fichier VND est le disque. Les "Scènes" sont les chapitres du disque.
+Voici comment le lecteur (le code) sait quel chapitre il est en train de lire et ce qu'il contient :
+1. La commande de saut : "Va au chapitre 35"
+Dans les scripts du jeu, le changement de décor ne se fait pas au hasard. Quand tu cliques sur une zone, le programme lit une instruction de mouvement. Techniquement, il cherche une valeur numérique suivie d'une lettre signal, le "i" (qui vaut 69 en binaire).
+Exemple technique (Source, adresse 00001720) : ... 01 00 00 00 06 00 00 00 01 00 00 00 35 69
+Ici, le moteur lit le chiffre 35 puis le code hexadécimal 69. Le code 69 est le "flag" (le drapeau) qui dit à la fonction de navigation : "Ceci n'est pas un simple nombre, c'est l'adresse de la prochaine scène".
+2. Le chargement du bloc : "Ouvre la page 35"
+Une fois que le moteur a reçu l'ordre "35", il appelle une fonction de chargement (nommée sub_41721D dans le code
+int __cdecl sub_416734(int a1, int a2);
+void __cdecl sub_416781(int a1, int a2, int a3);
+void __cdecl sub_41684E(char *a1, char a2);
+int __cdecl sub_4169C5(int a1);
+int __cdecl sub_416FCD(int a1);
+int __cdecl sub_417031(_DWORD *a1, char *a2, int a3, TGauge *a4);
+int __cdecl sub_41721D(_DWORD *a1, const char *arglist, int a3, TGauge *a4);
+int __cdecl sub_4177EF(_DWORD *a1, int a2, int a3, TGauge *a4);
+_DWORD *__cdecl sub_417940(_DWORD *a1);
+void __cdecl sub_417A6B(char *a1, char a2);
+int __cdecl sub_417EE6(int a1);
+). Cette fonction parcourt le fichier VND pour trouver le bloc de données qui commence par les ressources du numéro 35.
+À ce moment-là, le moteur remplit sa mémoire avec tout ce qui concerne la maison.
+3. La définition visuelle : "Quoi afficher ?"
+C'est ici que l'on identifie quelle image appartient à quelle scène. Chaque bloc de scène commence par une liste de fichiers. La fonction sub_415A75 est chargée de lire ces étiquettes (IMG pour l'image, SND pour le son
+_DWORD *__cdecl sub_415093(_DWORD *a1, int a2, int a3);
+_DWORD *__cdecl sub_41526B(_DWORD *a1, int a2, int a3);
+void __cdecl sub_415444(char *a1, char a2);
+int __cdecl sub_415560(_DWORD *a1);
+_DWORD *__cdecl sub_415661(_DWORD *a1, _DWORD *a2);
+int __cdecl sub_4159C4(_DWORD *a1);
+int __cdecl sub_415A4D(int a1, string *a2); // idb
+void __cdecl sub_415A75(_DWORD *a1, int a2, char *a3);
+_DWORD *__cdecl sub_415FAD(_DWORD *a1, ipstream *a2);
+int __cdecl sub_4161FA(_DWORD *a1, ipstream *a2, int a3);
+void __cdecl sub_416654(int a1);
+).
+Exemple technique (Source, adresse 00003b40) : 65 75 72 6f 6c 61 6e 64 5c 6d 61 69 73 6f 6e 2e 62 6d 70
+En traduisant ces octets, on obtient : euroland\maison.bmp. Comme cette ligne se trouve au tout début du bloc de données de la scène 35, le moteur "sait" que c'est le décor de fond pour cet endroit précis.
+4. Les variables : "La preuve par les calculs"
+On sait aussi qu'on est dans la scène 35 ou 36 grâce aux variables que le moteur active. C'est comme si, en entrant dans une pièce, tu trouvais un cahier de notes spécifique à cette pièce.
+• Pour la Scène 35 (Ma maison) : Le binaire charge les variables ERREUR7OK, ERREUR7D1...
+• Pour la Scène 36 (Maison de prof) : On trouve les codes pays comme MESP (Espagne) ou MALL (Allemagne).
+Exemple technique (Source, adresse 00000ee0) : 00 09 00 00 00 45 52 52 45 55 52 37 4f 4b Ce nom de variable (ERREUR7OK) est unique. Le fait qu'il apparaisse juste avant les scripts qui pointent vers la scène 35 confirme que ce "bloc" de données définit la logique de la maison.
+En résumé, pour chaque scène :
+1. L'ID (35, 36, 39...) est un index de navigation (repéré par le flag 69 ou i).
+2. L'Image (.bmp) est le premier fichier déclaré dans le bloc de données correspondant à cet index.
+3. La Logique est confirmée par les noms des variables (comme ERREUR7... pour la maison ou BONUS29 pour la fontaine) regroupées dans la même zone du fichier.
