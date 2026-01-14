@@ -25,31 +25,77 @@ XX XX        <- Numéro + suffixe (ex: "5i", "39i", "13d")
 | depart.avi → ecosse.vnp | 33d | Direct |
 | depart.avi → france.vnp | 18 | Sans suffixe |
 
-### Suffixes Identifiés (COMPLET - Janvier 2026)
+### ⚠️ CORRECTION IMPORTANTE (Janvier 2026)
 
-**Découverte clé**: Les suffixes sont des **opcodes de mise en scène** passés à la fonction de rendu `sub_434070`.
-Le parsing utilise `atol()` via `sub_407FE5` qui s'arrête au premier caractère non-numérique.
+**Les lettres après les nombres ne sont PAS des modificateurs de transition !**
+Ce sont des **OPCODES SÉPARÉS** qui s'exécutent après que le nombre a été consommé comme paramètre.
 
-| Suffixe | Fonction Pseudo-Code | Action du Moteur |
-|---------|---------------------|------------------|
-| `i` | `sub_4268F8` | **Immediate** - Saut immédiat, court-circuite les transitions |
-| `d` | `sub_433236` | **Droite/Direct** - Direction droite du balayage |
-| `f` | `sub_434070` + `sub_41CCDD` | **Fade** - Fondu via manipulation de palette |
-| `l` | `sub_41DB36` (StretchBlt) | **Lent** - Transition lente, ajuste le pas du BitBlt |
-| `j` | `sub_40B990` (Case 35) | **Jump/Join** - Interaction utilisateur, suspend les autres processus |
-| `k` | `sub_4314E0` | **Keyboard** - Attente de validation (Entrée ou clic) |
-| `e` | `sub_425165` | **Entrance** - Point d'entrée, exécute scripts de config |
-| `h` | `sub_43177D` (Case 31) | **Horizontal** - Wipe horizontal ou activation timer |
-| `g` | `sub_433236` | **Gauche** - Direction gauche du balayage |
-| `+` / `-` | Navigation relative | Scene courante ± n |
+### Système d'Opcodes TVNApplication
 
-**Mécanisme technique**:
+Le dispatcher `sub_43177D` utilise un switch sur les indices de commande.
+Les lettres a-z correspondent aux indices 1-26, les codes numériques commencent à 27.
+
+**Conversion lettre → index**: `index = char - 'a' + 1` (donc 'f' = 6, 'h' = 8, etc.)
+
+### Table des Opcodes (Vérifiée dans le pseudo-code)
+
+| Lettre | Index | Fonction | Description |
+|--------|-------|----------|-------------|
+| a–d | 1–4 | Messages fenêtre | PostMessageA / HandleMessage (UI système) |
+| e | 5 | UI interne | Message 0x9C (mise à jour UI) |
+| **f** | **6** | `sub_4268F8` | **Saut/changement de scène** |
+| g | 7 | `sub_426B62` | Exécution de scripts avec arguments |
+| h | 8 | `sub_426D33` | Tooltips / bulles d'aide |
+| i | 9 | `sub_42703A` | Images (chargement, attributs, coords) |
+| j | 10 | `sub_4275F6` | Bitmaps (transparence/palettes) |
+| k | 11 | `sub_427B56` | Audio WAV |
+| l | 12 | `sub_427C42` | Musique MIDI |
+| m | 13 | `sub_427D34` | Chargement texte / segments script |
+| p | 16 | `sub_405010` | Pause (Sleep) |
+| q,r | 17–18 | `sub_427FAE` | Fichiers externes (ShellExecuteA) |
+| s | 19 | `sub_427EFF` | CD-Audio |
+| u | 21 | Callback | Gestion fenêtres |
+| v,w,x | 22–24 | Variables | Manipulation via dword_44ECCE |
+| y | 25 | InvalidateRect | Rafraîchissement écran |
+| z | 26 | `sub_428154` | Chargement curseurs .cur |
+
+### Codes Numériques (27+)
+
+| Code | Fonction | Description |
+|------|----------|-------------|
+| 27 | `sub_428373` | Hotspots (zones cliquables) |
+| 28–30 | `sub_428E06` | Visibilité images/boutons |
+| **31** | `sub_42908F` | **Chargement scène (nouveau .vnd)** |
+| 33 | DLL | Extensions VNCreateDLLWindow |
+| 35 | Dialogues | Boîtes interactives |
+| 39 | Police | TFont (nom, taille, styles) |
+| 41 | Hypertexte | Texte riche avec liens |
+| 45 | Sauvegarde | Écriture .sav (VNSAVFILE) |
+| 46 | Chargement | Lecture .sav |
+
+### Mécanisme de Parsing (Corrigé)
+
+**Format du flux VND**: `[Valeur Numérique][Lettre Opcode]`
+
 ```c
-// sub_407FE5 - Parsing du numéro de scène
-int scene_num = atol("16l");  // → 16 (atol s'arrête à 'l')
-char suffix = remaining;       // → 'l'
-// Le suffixe modifie le comportement de sub_434070 (rendu)
+// Exemple: "54h" dans le flux VND
+//
+// Étape 1: sub_407ED3 tokenise le flux
+// Étape 2: atol("54h") retourne 54, pointeur avance sur 'h'
+// Étape 3: La lettre 'h' est lue comme prochain opcode
+// Étape 4: Dispatcher case 8 → sub_426D33(param=54) = Tooltip
+
+// Donc "54h" signifie:
+//   1. Charger la valeur 54 comme paramètre
+//   2. Exécuter l'opcode 'h' (Tooltips) avec ce paramètre
+
+// Et "54f" signifie:
+//   1. Charger la valeur 54 comme paramètre
+//   2. Exécuter l'opcode 'f' (Saut scène) → aller à la scène 54
 ```
+
+**Ce n'est PAS**: "scène 54 avec transition fade"
+**C'est**: "paramètre 54, puis exécuter opcode f (saut de scène)"
 
 ### Classes Trouvées dans europeo.exe
 - `TVNIndexDependant` @ 0x004104ab
@@ -63,39 +109,45 @@ char suffix = remaining;       // → 'l'
 
 ## Hypothèses
 
-### INDEX vs ID de Scène
-- **Index (`i`)**: Position dans un tableau de scènes (0-based ou 1-based?)
-- **Direct (`d`)**: ID unique de la scène dans le projet
+### Interprétation des Données VND
 
-### Navigation Cross-Projet
-Les suffixes `d` sont systématiquement utilisés pour les références vers d'autres fichiers `.vnp`:
-- `..\espa\espa.vnp 13d`
-- `..\ecosse\ecosse.vnp 33d`
+Dans les dumps comme `couleurs1.vnd`, quand on voit:
+- `54h` → Paramètre 54, puis opcode 'h' (Tooltip)
+- `54f` → Paramètre 54, puis opcode 'f' (Saut scène 54)
+- `13d` → Paramètre 13, puis opcode 'd' (Message fenêtre)
 
-Cela suggère que `d` = "Direct scene ID" qui fonctionne entre projets.
+### Navigation Cross-Projet (runprj)
+Pour `runprj ..\espa\espa.vnp 13d`:
+1. Charge le projet `espa.vnp`
+2. Paramètre 13 stocké
+3. Opcode 'd' exécuté (message fenêtre)
 
-### Navigation Interne
-Les suffixes `i` sont utilisés pour la navigation interne dans le même projet:
-- `home2.avi → 5i` (vers maison.bmp)
-- `bankbis.avi → 3i` (vers banque.bmp)
+### Navigation Interne (scene)
+Pour `scene 5i`:
+1. Paramètre 5 extrait
+2. Opcode 'i' (case 9) → `sub_42703A` = chargement d'image
 
 ## Questions Résolues (Janvier 2026)
 
 1. ✅ **Comment l'INDEX est-il calculé?**
    → `INDEX_ID` lu depuis le VND (offset 65), navigation `Ni` = `INDEX_ID + N`
 
-2. ✅ **Quelle est la différence entre `h`, `f`, `j`?**
-   → Ce sont des **opcodes de présentation** pour le moteur de rendu:
-   - `h` = Horizontal wipe / timer activation
-   - `f` = Fade (fondu via palette)
-   - `j` = Jump/Join (interaction utilisateur, suspend les processus)
+2. ✅ **Quelle est la différence entre `h`, `f`, `i`, `l`?**
+   → Ce sont des **opcodes différents** du dispatcher `sub_43177D`:
+   - `f` (6) = `sub_4268F8` → Saut de scène
+   - `h` (8) = `sub_426D33` → Tooltips/bulles d'aide
+   - `i` (9) = `sub_42703A` → Chargement d'images
+   - `l` (12) = `sub_427C42` → Musique MIDI
 
 3. ✅ **Pourquoi certaines navigations n'ont pas de suffixe?**
-   → Sans suffixe = transition par défaut du moteur
+   → Sans suffixe = le nombre seul sert de paramètre pour la commande courante (scene, runprj, etc.)
 
-4. ✅ **Comment les suffixes sont-ils parsés?**
-   → `sub_407FE5` utilise `atol()` qui s'arrête au premier caractère non-numérique.
-   Le suffixe est passé à `sub_434070` (fonction de rendu) pour modifier le comportement.
+4. ✅ **Comment les "suffixes" sont-ils parsés?**
+   → `sub_407FE5` utilise `atol()` qui extrait le nombre et s'arrête à la lettre.
+   La lettre est ensuite lue comme **prochain opcode** par le parseur de flux.
+
+   **⚠️ CORRECTION**: Les lettres ne sont PAS des modificateurs du nombre,
+   mais des opcodes séparés qui s'exécutent après.
 
 ## Analyse du Pseudo Code (IDA Pro)
 
@@ -214,221 +266,131 @@ Format INI: `TIMER=delay,scene_target`
 - Curseurs personnalisés chargés via `LoadCursorFromFileA`
 - IDs système: 98, 99, 105, 1-4 (directionnels)
 
-## Implémentation Détaillée des Transitions (Janvier 2026)
+## Fonctions Techniques Utiles
 
-### Fonction sub_41DB36 - Transition Lente (`l`)
-
-Cette fonction utilise `StretchBlt` pour les transitions progressives:
+### sub_41DB36 - Rendu Bitmap avec Masque
 
 ```c
-// Line 16161 - Transition lente avec masque
+// Line 16161 - Rendu avec masque de transparence
+// Utilisé pour afficher des sprites avec transparence
 char sub_41DB36(int a1, TDC *a2, int x, int y, int w, int h)
 {
-  // Crée un DC mémoire
   TMemoryDC *memDC = new TMemoryDC(a2);
-
-  if (bitmap_mask) {  // Si masque présent
-    // Premier pass - AND avec masque (ROP: 0x8800C6 = SrcAnd)
-    TMemoryDC::SelectObject(memDC, mask_bitmap);
-    StretchBlt(a2, x, y, w, h, memDC, 0, 0, srcW, srcH, 0x8800C6);
-
-    // Second pass - OR avec bitmap (ROP: 0xEE0086 = SrcPaint)
-    TMemoryDC::SelectObject(memDC, source_bitmap);
-    StretchBlt(a2, x, y, w, h, memDC, 0, 0, srcW, srcH, 0xEE0086);
-  }
-  else {
-    // Copie simple (ROP: 0xCC0020 = SrcCopy)
-    TMemoryDC::SelectObject(memDC, source_bitmap);
-    StretchBlt(a2, x, y, w, h, memDC, 0, 0, srcW, srcH, 0xCC0020);
-  }
+  // Double-blit avec ROP codes:
+  // 0x8800C6 = SRCAND (masque)
+  // 0xEE0086 = SRCPAINT (sprite)
+  // 0xCC0020 = SRCCOPY (copie directe)
 }
 ```
 
-**ROP Codes utilisés:**
-- `0x8800C6` = SRCAND - Destination AND Source
-- `0xEE0086` = SRCPAINT - Destination OR Source
-- `0xCC0020` = SRCCOPY - Copie directe
-
-Cette technique de double-blit (AND puis OR) permet une transition avec transparence.
-
-### Fonction sub_41CCDD - Fondu Palette (`f`)
-
-Le fondu utilise la manipulation de palette Windows pour les images 8-bit:
+### sub_41CCDD - Chargement Palette
 
 ```c
-// Line 15756 - Initialisation du fondu palette
-int sub_41CCDD(int a1, int palette_file)
-{
-  // Crée un objet VNPALETTE
-  string::string(type, "VNPALETTE");
-
-  // Charge la palette cible
-  LoadPaletteFromFile(palette_file);
-
-  // Animation frame par frame:
-  // - Interpole entre palette actuelle et palette cible
-  // - Utilise AnimatePalette() ou SetPaletteEntries()
-  // - Chaque frame modifie les 256 entrées couleur
-}
+// Line 15756 - Gestion des palettes VNPALETTE
+// Utilisé pour les images 8-bit indexées
 ```
 
-### Fonction sub_433236 - Balayage Directionnel (`d`/`g`)
-
-```c
-// Line 27443 - Mise à jour de la zone de rendu
-int sub_433236(_DWORD *window, const void *rect)
-{
-  // Met à jour le rectangle invalide
-  if (window[82] >= window[84] || window[83] >= window[85])
-    qmemcpy(window + 82, rect, 0x10u);  // Copie RECT (16 bytes)
-
-  // Le rendu se fait par balayage dans la direction spécifiée
-  // 'd' = droite à gauche, 'g' = gauche à droite
-}
-```
-
-### Fonction sub_4314E0 - Attente Clavier (`k`)
-
-```c
-// Line 26216 - Gestionnaire d'entrée clavier
-int sub_4314E0(TWindow *a1, int keyCode)
-{
-  int result = TWindow::DefaultProcessing(a1);
-
-  a1->waitingKeyboard = 1;  // Flag d'attente actif
-
-  if (keyCode == 27)  // ESC
-    result = sub_432FD3(a1);  // Fermeture/annulation
-
-  a1->waitingKeyboard = 0;
-  return result;
-}
-```
-
-## Flux de Données: Suffixe → Transition
+## Flux de Données Corrigé: Opcode Parser
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  1. Commande VND: "scene 16l" ou "runprj projet.vnp 54h"   │
+│  1. Flux VND brut: "54h" ou "16l"                          │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  2. sub_407ED3: Tokenise → "16l" ou "54h"                   │
+│  2. sub_407FE5: atol("54h") → 54                           │
+│     Le pointeur de lecture avance après le nombre          │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  3. sub_407FE5: atol("16l") → 16, suffixe 'l' reste         │
+│  3. Parseur lit le caractère suivant: 'h'                  │
+│     Calcul index: 'h' - 'a' + 1 = 8                        │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  4. PostMessageA: Envoie commande navigation au dispatcher  │
+│  4. sub_43177D (Dispatcher) case 8:                        │
+│     → sub_426D33(window, param=54) = Tooltips              │
 └─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│  5. sub_43177D (Dispatcher): Route vers fonction appropriée │
-│     - 'i' → sub_4268F8 (jump immédiat)                     │
-│     - 'l' → sub_41DB36 (StretchBlt lent)                   │
-│     - 'f' → sub_434070 + sub_41CCDD (fondu palette)        │
-│     - 'd'/'g' → sub_433236 (balayage directionnel)         │
-│     - 'k' → sub_4314E0 (attente clavier)                   │
-│     - 'h' → Timer horizontal                               │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│  6. sub_434070: Rendu final avec effet de transition        │
-└─────────────────────────────────────────────────────────────┘
+
+Autres exemples:
+  "54f" → case 6  → sub_4268F8 (saut scène 54)
+  "16l" → case 12 → sub_427C42 (MIDI piste 16)
+  "5i"  → case 9  → sub_42703A (image ID 5)
 ```
 
-## Implémentation React Recommandée
+## Implémentation React (Corrigée)
 
 ```typescript
-// types.ts
-interface SceneRef {
-  relative: '+' | '-' | '';
-  number: number;
-  suffix: TransitionSuffix;
+// Le parsing doit comprendre que les lettres sont des OPCODES séparés
+
+interface VNDCommand {
+  opcode: string;      // 'f', 'h', 'i', 'l', etc.
+  parameter: number;   // Valeur numérique précédente
 }
 
-type TransitionSuffix =
-  | 'i'  // Immediate
-  | 'd'  // Direct/Droite
-  | 'f'  // Fade
-  | 'l'  // Lent/Slow
-  | 'g'  // Gauche
-  | 'h'  // Horizontal
-  | 'j'  // Jump/Join
-  | 'k'  // Keyboard
-  | 'e'  // Entrance
-  | '';  // Default
+// Parser de flux VND
+function parseVNDStream(stream: string): VNDCommand[] {
+  const commands: VNDCommand[] = [];
+  let i = 0;
 
-// parser.ts
-function parseSceneRef(param: string): SceneRef {
-  const match = param.match(/^([+-]?)(\d+)([a-z]?)$/i);
-  if (!match) throw new Error(`Invalid scene ref: ${param}`);
+  while (i < stream.length) {
+    // Extraire le nombre
+    let numStr = '';
+    while (i < stream.length && /\d/.test(stream[i])) {
+      numStr += stream[i++];
+    }
+    const param = numStr ? parseInt(numStr, 10) : 0;
 
-  return {
-    relative: (match[1] as '+' | '-' | ''),
-    number: parseInt(match[2], 10),
-    suffix: (match[3] || '') as TransitionSuffix
-  };
+    // Extraire l'opcode (lettre suivante)
+    if (i < stream.length && /[a-z]/i.test(stream[i])) {
+      commands.push({
+        opcode: stream[i++],
+        parameter: param
+      });
+    }
+  }
+  return commands;
 }
 
-// transitions.ts
-const TRANSITIONS: Record<TransitionSuffix | '', (from: Scene, to: Scene) => Promise<void>> = {
-  'i': async () => { /* Pas de transition */ },
-  'd': async (from, to) => { /* Wipe droite */ },
-  'g': async (from, to) => { /* Wipe gauche */ },
-  'l': async (from, to) => { /* Transition lente avec interpolation */ },
-  'f': async (from, to) => { /* Fondu CSS opacity */ },
-  'h': async (from, to) => { /* Wipe horizontal */ },
-  'k': async (from, to) => { /* Attente clic/touche */ },
-  'j': async (from, to) => { /* Attente fin animation */ },
-  'e': async (from, to) => { /* Animation d'entrée */ },
-  '': async (from, to) => { /* Transition par défaut */ },
+// Dispatcher React
+const OPCODE_HANDLERS: Record<string, (param: number) => void> = {
+  'f': (scene) => navigateToScene(scene),     // Saut scène
+  'h': (id) => showTooltip(id),               // Tooltip
+  'i': (id) => loadImage(id),                 // Image
+  'j': (id) => loadBitmap(id),                // Bitmap
+  'k': (id) => playWav(id),                   // Audio WAV
+  'l': (id) => playMidi(id),                  // MIDI
+  'p': (ms) => sleep(ms),                     // Pause
+  // etc.
 };
 
-// navigation.ts
-async function navigateToScene(ref: SceneRef, currentScene: number, indexId: number) {
-  let targetScene: number;
-
-  if (ref.suffix === 'i') {
-    targetScene = indexId + ref.number;  // Index-based
-  } else if (ref.relative === '+') {
-    targetScene = currentScene + ref.number;
-  } else if (ref.relative === '-') {
-    targetScene = currentScene - ref.number;
-  } else {
-    targetScene = ref.number;  // Direct
+function executeCommand(cmd: VNDCommand) {
+  const handler = OPCODE_HANDLERS[cmd.opcode];
+  if (handler) {
+    handler(cmd.parameter);
   }
-
-  const transition = TRANSITIONS[ref.suffix];
-  await transition(scenes[currentScene], scenes[targetScene]);
-
-  return targetScene;
 }
 ```
 
-## Questions Résolues - Résumé Final
+## Résumé Final (Corrigé)
 
-| Question | Réponse |
-|----------|---------|
-| Que signifient les suffixes? | Opcodes de mise en scène (transition effects) |
-| Comment sont-ils parsés? | `atol()` extrait le nombre, suffixe reste dans string |
-| Comment affectent-ils le rendu? | Chaque suffixe route vers une fonction différente |
-| Quelle est la transition 'l'? | StretchBlt avec double-blit (AND/OR) pour effet progressif |
-| Quelle est la transition 'f'? | Manipulation de palette 8-bit frame par frame |
-| Que fait 'i'? | Jump immédiat basé sur INDEX_ID + n |
-| Que fait 'k'? | Bloque jusqu'à entrée clavier (Enter ou clic) |
+| Question | Réponse Correcte |
+|----------|------------------|
+| Que sont les "suffixes" ? | Des **OPCODES** séparés, pas des modificateurs |
+| Comment sont-ils parsés ? | `atol()` extrait le nombre, la lettre est le prochain opcode |
+| Que fait `f` ? | Opcode 6 → `sub_4268F8` = Saut de scène |
+| Que fait `h` ? | Opcode 8 → `sub_426D33` = Tooltips |
+| Que fait `i` ? | Opcode 9 → `sub_42703A` = Chargement image |
+| Que fait `l` ? | Opcode 12 → `sub_427C42` = Musique MIDI |
+| Que fait `k` ? | Opcode 11 → `sub_427B56` = Audio WAV |
 
 ## Prochaines Étapes
 
 1. ~~Analyser le code de `TVNIndexDependant` pour comprendre l'indexation~~
 2. ~~Trouver les opérateurs de comparaison pour les conditions~~
-3. ~~Analyser le mécanisme des suffixes de navigation~~
-4. Implémenter le parseur VND→React avec transitions CSS/Canvas
+3. ~~Comprendre le système d'opcodes TVNApplication~~
+4. Implémenter le parseur VND→React basé sur le dispatcher d'opcodes
 5. Tester les mappings avec le jeu original pour validation
