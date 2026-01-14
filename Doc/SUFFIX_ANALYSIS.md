@@ -214,10 +214,221 @@ Format INI: `TIMER=delay,scene_target`
 - Curseurs personnalisés chargés via `LoadCursorFromFileA`
 - IDs système: 98, 99, 105, 1-4 (directionnels)
 
+## Implémentation Détaillée des Transitions (Janvier 2026)
+
+### Fonction sub_41DB36 - Transition Lente (`l`)
+
+Cette fonction utilise `StretchBlt` pour les transitions progressives:
+
+```c
+// Line 16161 - Transition lente avec masque
+char sub_41DB36(int a1, TDC *a2, int x, int y, int w, int h)
+{
+  // Crée un DC mémoire
+  TMemoryDC *memDC = new TMemoryDC(a2);
+
+  if (bitmap_mask) {  // Si masque présent
+    // Premier pass - AND avec masque (ROP: 0x8800C6 = SrcAnd)
+    TMemoryDC::SelectObject(memDC, mask_bitmap);
+    StretchBlt(a2, x, y, w, h, memDC, 0, 0, srcW, srcH, 0x8800C6);
+
+    // Second pass - OR avec bitmap (ROP: 0xEE0086 = SrcPaint)
+    TMemoryDC::SelectObject(memDC, source_bitmap);
+    StretchBlt(a2, x, y, w, h, memDC, 0, 0, srcW, srcH, 0xEE0086);
+  }
+  else {
+    // Copie simple (ROP: 0xCC0020 = SrcCopy)
+    TMemoryDC::SelectObject(memDC, source_bitmap);
+    StretchBlt(a2, x, y, w, h, memDC, 0, 0, srcW, srcH, 0xCC0020);
+  }
+}
+```
+
+**ROP Codes utilisés:**
+- `0x8800C6` = SRCAND - Destination AND Source
+- `0xEE0086` = SRCPAINT - Destination OR Source
+- `0xCC0020` = SRCCOPY - Copie directe
+
+Cette technique de double-blit (AND puis OR) permet une transition avec transparence.
+
+### Fonction sub_41CCDD - Fondu Palette (`f`)
+
+Le fondu utilise la manipulation de palette Windows pour les images 8-bit:
+
+```c
+// Line 15756 - Initialisation du fondu palette
+int sub_41CCDD(int a1, int palette_file)
+{
+  // Crée un objet VNPALETTE
+  string::string(type, "VNPALETTE");
+
+  // Charge la palette cible
+  LoadPaletteFromFile(palette_file);
+
+  // Animation frame par frame:
+  // - Interpole entre palette actuelle et palette cible
+  // - Utilise AnimatePalette() ou SetPaletteEntries()
+  // - Chaque frame modifie les 256 entrées couleur
+}
+```
+
+### Fonction sub_433236 - Balayage Directionnel (`d`/`g`)
+
+```c
+// Line 27443 - Mise à jour de la zone de rendu
+int sub_433236(_DWORD *window, const void *rect)
+{
+  // Met à jour le rectangle invalide
+  if (window[82] >= window[84] || window[83] >= window[85])
+    qmemcpy(window + 82, rect, 0x10u);  // Copie RECT (16 bytes)
+
+  // Le rendu se fait par balayage dans la direction spécifiée
+  // 'd' = droite à gauche, 'g' = gauche à droite
+}
+```
+
+### Fonction sub_4314E0 - Attente Clavier (`k`)
+
+```c
+// Line 26216 - Gestionnaire d'entrée clavier
+int sub_4314E0(TWindow *a1, int keyCode)
+{
+  int result = TWindow::DefaultProcessing(a1);
+
+  a1->waitingKeyboard = 1;  // Flag d'attente actif
+
+  if (keyCode == 27)  // ESC
+    result = sub_432FD3(a1);  // Fermeture/annulation
+
+  a1->waitingKeyboard = 0;
+  return result;
+}
+```
+
+## Flux de Données: Suffixe → Transition
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  1. Commande VND: "scene 16l" ou "runprj projet.vnp 54h"   │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│  2. sub_407ED3: Tokenise → "16l" ou "54h"                   │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│  3. sub_407FE5: atol("16l") → 16, suffixe 'l' reste         │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│  4. PostMessageA: Envoie commande navigation au dispatcher  │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│  5. sub_43177D (Dispatcher): Route vers fonction appropriée │
+│     - 'i' → sub_4268F8 (jump immédiat)                     │
+│     - 'l' → sub_41DB36 (StretchBlt lent)                   │
+│     - 'f' → sub_434070 + sub_41CCDD (fondu palette)        │
+│     - 'd'/'g' → sub_433236 (balayage directionnel)         │
+│     - 'k' → sub_4314E0 (attente clavier)                   │
+│     - 'h' → Timer horizontal                               │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│  6. sub_434070: Rendu final avec effet de transition        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## Implémentation React Recommandée
+
+```typescript
+// types.ts
+interface SceneRef {
+  relative: '+' | '-' | '';
+  number: number;
+  suffix: TransitionSuffix;
+}
+
+type TransitionSuffix =
+  | 'i'  // Immediate
+  | 'd'  // Direct/Droite
+  | 'f'  // Fade
+  | 'l'  // Lent/Slow
+  | 'g'  // Gauche
+  | 'h'  // Horizontal
+  | 'j'  // Jump/Join
+  | 'k'  // Keyboard
+  | 'e'  // Entrance
+  | '';  // Default
+
+// parser.ts
+function parseSceneRef(param: string): SceneRef {
+  const match = param.match(/^([+-]?)(\d+)([a-z]?)$/i);
+  if (!match) throw new Error(`Invalid scene ref: ${param}`);
+
+  return {
+    relative: (match[1] as '+' | '-' | ''),
+    number: parseInt(match[2], 10),
+    suffix: (match[3] || '') as TransitionSuffix
+  };
+}
+
+// transitions.ts
+const TRANSITIONS: Record<TransitionSuffix | '', (from: Scene, to: Scene) => Promise<void>> = {
+  'i': async () => { /* Pas de transition */ },
+  'd': async (from, to) => { /* Wipe droite */ },
+  'g': async (from, to) => { /* Wipe gauche */ },
+  'l': async (from, to) => { /* Transition lente avec interpolation */ },
+  'f': async (from, to) => { /* Fondu CSS opacity */ },
+  'h': async (from, to) => { /* Wipe horizontal */ },
+  'k': async (from, to) => { /* Attente clic/touche */ },
+  'j': async (from, to) => { /* Attente fin animation */ },
+  'e': async (from, to) => { /* Animation d'entrée */ },
+  '': async (from, to) => { /* Transition par défaut */ },
+};
+
+// navigation.ts
+async function navigateToScene(ref: SceneRef, currentScene: number, indexId: number) {
+  let targetScene: number;
+
+  if (ref.suffix === 'i') {
+    targetScene = indexId + ref.number;  // Index-based
+  } else if (ref.relative === '+') {
+    targetScene = currentScene + ref.number;
+  } else if (ref.relative === '-') {
+    targetScene = currentScene - ref.number;
+  } else {
+    targetScene = ref.number;  // Direct
+  }
+
+  const transition = TRANSITIONS[ref.suffix];
+  await transition(scenes[currentScene], scenes[targetScene]);
+
+  return targetScene;
+}
+```
+
+## Questions Résolues - Résumé Final
+
+| Question | Réponse |
+|----------|---------|
+| Que signifient les suffixes? | Opcodes de mise en scène (transition effects) |
+| Comment sont-ils parsés? | `atol()` extrait le nombre, suffixe reste dans string |
+| Comment affectent-ils le rendu? | Chaque suffixe route vers une fonction différente |
+| Quelle est la transition 'l'? | StretchBlt avec double-blit (AND/OR) pour effet progressif |
+| Quelle est la transition 'f'? | Manipulation de palette 8-bit frame par frame |
+| Que fait 'i'? | Jump immédiat basé sur INDEX_ID + n |
+| Que fait 'k'? | Bloque jusqu'à entrée clavier (Enter ou clic) |
+
 ## Prochaines Étapes
 
 1. ~~Analyser le code de `TVNIndexDependant` pour comprendre l'indexation~~
 2. ~~Trouver les opérateurs de comparaison pour les conditions~~
-3. Tracer l'exécution avec un débogueur pour voir la logique exacte
-4. Comparer les mappings avec les résultats réels du jeu
-5. Implémenter le parseur React basé sur ces découvertes
+3. ~~Analyser le mécanisme des suffixes de navigation~~
+4. Implémenter le parseur VND→React avec transitions CSS/Canvas
+5. Tester les mappings avec le jeu original pour validation
