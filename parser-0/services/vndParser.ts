@@ -219,16 +219,29 @@ export class VNDSequentialParser {
           validSlots++;
       }
       
-      // Validation stricte : 
+      // Validation ASSOUPLIE pour capturer toutes les scènes :
       const isToolbar = foundSpecificSignature;
       const isEndSig = foundEndSignature;
-      // Heuristique assouplie : Si on a beaucoup de slots (variables globales), c'est valide
-      const isHeuristic = (validSlots >= 2 && hasExtensions >= 1) || (validSlots > 50);
+
+      // NOUVELLE LOGIQUE : Accepter si :
+      // 1. On a trouvé toolbar
+      // 2. On a trouvé la signature de fin ET au moins 1 slot valide
+      // 3. On a au moins 1 slot avec extension valide
+      // 4. On a plus de 50 slots (variables globales)
+      const isHeuristic = (validSlots >= 1 && hasExtensions >= 1) || (validSlots > 50);
 
       if (isToolbar || (isEndSig && validSlots >= 1) || isHeuristic) {
           return current; // Retourne la position APRES la table
       }
-      
+
+      // NOUVEAU : Vérifier si la signature 0xFFFFFFDB est juste après quelques octets
+      // Cela indique une scène avec peu de fichiers
+      for (let probe = current; probe < current + 100 && probe < this.data.byteLength - 4; probe++) {
+          if (this.readU32(probe) === 0xFFFFFFDB && validSlots >= 1) {
+              return probe; // Retourne la position de la signature
+          }
+      }
+
       return -1;
   }
 
