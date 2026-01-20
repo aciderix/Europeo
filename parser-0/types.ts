@@ -41,12 +41,22 @@ export interface HotspotGeometry {
   extraFlag: number;
 }
 
+// Structure tooltip (info-bulle avec rectangle + texte)
+export interface TooltipInfo {
+  type: number;
+  rect: { x1: number; y1: number; x2: number; y2: number };
+  flag: number;
+  text: string;
+}
+
 export interface Hotspot {
   index: number;
   offset: number;
   commands: HotspotCommand[];
   geometry: HotspotGeometry;
   isRecovered?: boolean;
+  isTooltip?: boolean;
+  tooltip?: TooltipInfo;
 }
 
 export interface ParsedScene {

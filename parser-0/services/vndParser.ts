@@ -1,4 +1,4 @@
-import { ParseResult, ParsedScene, SceneFile, InitScript, SceneConfig, Hotspot, HotspotCommand, InitCommand } from '../types';
+import { ParseResult, ParsedScene, SceneFile, InitScript, SceneConfig, Hotspot, HotspotCommand, InitCommand, TooltipInfo } from '../types';
 
 export class VNDSequentialParser {
   private data: DataView;
@@ -252,6 +252,96 @@ export class VNDSequentialParser {
 
       // Par défaut
       return { id: 9999, subtype: 0 }; // Inconnu
+  }
+
+  // --- DÉTECTION DE STRUCTURE TOOLTIP ---
+  // Structure: [Type:DWORD] [x1:DWORD] [y1:DWORD] [x2:DWORD] [y2:DWORD] [flag:DWORD] [strLen:DWORD] [text...]
+  private tryParseTooltip(offset: number, limit: number): { tooltip: TooltipInfo, nextOffset: number } | null {
+      // Besoin de minimum 28 bytes (7 DWORDs) + au moins 1 char
+      if (offset + 29 > limit) return null;
+
+      const type = this.readU32(offset);
+      const x1 = this.readU32(offset + 4);
+      const y1 = this.readU32(offset + 8);
+      const x2 = this.readU32(offset + 12);
+      const y2 = this.readU32(offset + 16);
+      const flag = this.readU32(offset + 20);
+      const strLen = this.readU32(offset + 24);
+
+      // Validations STRICTES pour identifier une vraie structure tooltip
+      if (type > 20) return null;
+      if (x1 > 800 || y1 > 600 || x2 > 800 || y2 > 600) return null;
+      if (x2 < x1) return null;
+      if (y2 < y1) return null;
+
+      const width = x2 - x1;
+      const height = y2 - y1;
+      if (width < 10 || height < 10) return null;
+
+      if (flag > 10) return null;
+      if (strLen < 2 || strLen > 100) return null;
+      if (offset + 28 + strLen > limit) return null;
+
+      // Vérifier que le texte est PROPRE (pas de caractères de contrôle)
+      let validChars = 0;
+      let controlChars = 0;
+      for (let i = 0; i < strLen; i++) {
+          const c = this.uint8Data[offset + 28 + i];
+          if (c < 32 && c !== 0) controlChars++;
+          if ((c >= 32 && c <= 126) || (c >= 128 && c <= 255)) validChars++;
+      }
+
+      if (controlChars > 0) return null;
+      if (validChars < strLen * 0.9) return null;
+
+      const textBytes = this.uint8Data.slice(offset + 28, offset + 28 + strLen);
+      const text = this.textDecoder.decode(textBytes).replace(/\0/g, '').trim();
+
+      if (text.length < 2) return null;
+
+      this.log(`  [TOOLTIP] Détecté @ 0x${offset.toString(16)}: "${text}" rect(${x1},${y1},${x2},${y2})`);
+
+      return {
+          tooltip: { type, rect: { x1, y1, x2, y2 }, flag, text },
+          nextOffset: offset + 28 + strLen
+      };
+  }
+
+  // Scan pour trouver des tooltips dans une zone
+  private scanForTooltips(start: number, end: number): Hotspot[] {
+      const tooltips: Hotspot[] = [];
+      let ptr = start;
+
+      while (ptr < end - 28) {
+          const result = this.tryParseTooltip(ptr, end);
+          if (result) {
+              tooltips.push({
+                  index: -1,
+                  offset: ptr,
+                  commands: [{
+                      id: 8,  // Opcode 'h' = tooltips
+                      subtype: result.tooltip.type,
+                      param: result.tooltip.text
+                  }],
+                  geometry: {
+                      cursorId: 0,
+                      pointCount: 2,
+                      points: [
+                          { x: result.tooltip.rect.x1, y: result.tooltip.rect.y1 },
+                          { x: result.tooltip.rect.x2, y: result.tooltip.rect.y2 }
+                      ],
+                      extraFlag: result.tooltip.flag
+                  },
+                  isRecovered: true,
+                  isTooltip: true,
+                  tooltip: result.tooltip
+              });
+              ptr = result.nextOffset;
+          } else {
+              ptr++;
+          }
+      }
+      return tooltips;
   }
 
   // --- LOGIQUE DE RÉCUPÉRATION ROBUSTE (GAP RECOVERY) ---
@@ -651,13 +741,21 @@ export class VNDSequentialParser {
 
       // 6. GAP RECOVERY & CLASSIFICATION INTELLIGENTE
       const recoveredHotspots: Hotspot[] = [];
-      
+
+      // Scanner toute la zone après les hotspots standards pour les tooltips
+      const tooltipScanStart = hsPtr !== -1 ? Math.min(hsPtr, cursor) : cursor;
+      const detectedTooltips = this.scanForTooltips(tooltipScanStart, limit);
+      if (detectedTooltips.length > 0) {
+          this.log(`  [INFO] ${detectedTooltips.length} tooltip(s) trouvé(s)`);
+      }
+      recoveredHotspots.push(...detectedTooltips);
+
       // Zone 1: Le reste du bloc de script
       if (cursor < scriptEnd) {
           recoveredHotspots.push(...this.recoverCommandsFromGap(cursor, scriptEnd));
       }
 
-      // Zone 2: Le "No Man's Land" final (inclut ce qui a été abandonné par la boucle hotspots)
+      // Zone 2: Le "No Man's Land" final
       let finalGapPtr = hsPtr !== -1 ? hsPtr : cursor;
       if (finalGapPtr < limit - 16) {
           recoveredHotspots.push(...this.recoverCommandsFromGap(finalGapPtr, limit));
@@ -666,10 +764,17 @@ export class VNDSequentialParser {
       if (recoveredHotspots.length > 0) {
           let logicCount = 0;
           let orphanCount = 0;
+          let tooltipCount = 0;
 
           recoveredHotspots.forEach(hs => {
+              // Les tooltips vont directement dans hotspots
+              if (hs.isTooltip) {
+                  hotspots.push(hs);
+                  tooltipCount++;
+                  return;
+              }
+
               const cmd = hs.commands[0];
-              // Classification
               const looksLikeLogic = (cmd.id === 3) || cmd.param.includes(' = ') || cmd.param.includes('then ') || cmd.param.startsWith('run');
               const hasGeometry = hs.geometry.pointCount > 0;
 
@@ -683,12 +788,12 @@ export class VNDSequentialParser {
                   });
                   logicCount++;
               } else {
-                  // Traité comme un hotspot normal
                   hotspots.push(hs);
                   orphanCount++;
               }
           });
 
+          if (tooltipCount > 0) warnings.push(`${tooltipCount} tooltips détectés.`);
           if (logicCount > 0) warnings.push(`${logicCount} commandes logiques récupérées.`);
           if (orphanCount > 0) warnings.push(`${orphanCount} éléments interactifs récupérés.`);
       }
