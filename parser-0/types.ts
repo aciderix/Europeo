@@ -59,6 +59,16 @@ export interface Hotspot {
   tooltip?: TooltipInfo;
 }
 
+// Type de scène (pour distinguer les meta-scènes des vraies scènes de jeu)
+export type SceneType =
+  | 'game'           // Vraie scène de jeu
+  | 'global_vars'    // Scène 0 avec variables globales/ressources
+  | 'toolbar'        // Barre d'outils persistante
+  | 'options'        // Options/DLL système
+  | 'credits'        // Écran de crédits
+  | 'game_over'      // Écran de fin (perdu/gagné)
+  | 'unknown';       // Type non déterminé
+
 export interface ParsedScene {
   id: number;
   offset: number;
@@ -69,6 +79,7 @@ export interface ParsedScene {
   hotspots: Hotspot[];
   warnings: string[];
   parseMethod: 'signature' | 'heuristic' | 'heuristic_recovered' | 'fallback';
+  sceneType: SceneType;  // Nouveau: type de scène détecté
 }
 
 export interface ParseResult {

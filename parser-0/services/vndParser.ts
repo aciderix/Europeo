@@ -1,4 +1,4 @@
-import { ParseResult, ParsedScene, SceneFile, InitScript, SceneConfig, Hotspot, HotspotCommand, InitCommand, TooltipInfo } from '../types';
+import { ParseResult, ParsedScene, SceneFile, InitScript, SceneConfig, Hotspot, HotspotCommand, InitCommand, TooltipInfo, SceneType } from '../types';
 
 export class VNDSequentialParser {
   private data: DataView;
@@ -445,23 +445,39 @@ export class VNDSequentialParser {
                       const looksLikeNextCommand = knownCommandIDs.includes(potentialCursor);
 
                       if (!looksLikeNextCommand && potentialCursor < 200 && potentialPoints > 0 && potentialPoints < 50) {
-                          const sizeBytes = potentialPoints * 8; 
+                          const sizeBytes = potentialPoints * 8;
                           if (geomPtr + 8 + sizeBytes <= end) {
-                              geometry.cursorId = potentialCursor;
-                              geometry.pointCount = potentialPoints;
+                              // Lire les points temporairement pour validation
+                              const tempPoints: { x: number, y: number }[] = [];
                               let ptReadPtr = geomPtr + 8;
+                              let validGeometry = true;
+
                               for(let p=0; p<potentialPoints; p++) {
-                                  geometry.points.push({ 
-                                      x: this.readI32(ptReadPtr), 
-                                      y: this.readI32(ptReadPtr+4) 
-                                  });
+                                  const x = this.readI32(ptReadPtr);
+                                  const y = this.readI32(ptReadPtr+4);
+
+                                  // VALIDATION CRITIQUE : Rejeter coordonnées aberrantes (Buffer Overrun)
+                                  // Les écrans VGA/SVGA max ~800x600, on tolère jusqu'à 2000 pour marges
+                                  if (Math.abs(x) > 2000 || Math.abs(y) > 2000) {
+                                      validGeometry = false;
+                                      break;
+                                  }
+
+                                  tempPoints.push({ x, y });
                                   ptReadPtr += 8;
                               }
-                              if (ptReadPtr + 4 <= end) {
-                                  geometry.extraFlag = this.readU32(ptReadPtr);
-                                  ptReadPtr += 4;
+
+                              if (validGeometry) {
+                                  geometry.cursorId = potentialCursor;
+                                  geometry.pointCount = potentialPoints;
+                                  geometry.points = tempPoints;
+                                  if (ptReadPtr + 4 <= end) {
+                                      geometry.extraFlag = this.readU32(ptReadPtr);
+                                      ptReadPtr += 4;
+                                  }
+                                  tempPtr = ptReadPtr;
                               }
-                              tempPtr = ptReadPtr; 
+                              // Si géométrie invalide, on garde geometry vide (pas de points)
                           }
                       }
                   }
@@ -730,16 +746,31 @@ export class VNDSequentialParser {
 
                   hsPtr += 8;
                   const points = [];
+                  let hasInvalidCoords = false;
+
                   for(let p=0; p<pointCount; p++) {
                       if (hsPtr + 8 > limit) break;
-                      points.push({ x: this.readI32(hsPtr), y: this.readI32(hsPtr+4) });
+                      const x = this.readI32(hsPtr);
+                      const y = this.readI32(hsPtr+4);
+
+                      // VALIDATION : Rejeter coordonnées aberrantes
+                      if (Math.abs(x) > 2000 || Math.abs(y) > 2000) {
+                          hasInvalidCoords = true;
+                          this.log(`  [WARN] Hotspot ${i}: coordonnées invalides (${x}, ${y}) - rejeté`);
+                          break;
+                      }
+
+                      points.push({ x, y });
                       hsPtr += 8;
                   }
-                  
+
+                  // Si coordonnées invalides, arrêter le parsing des hotspots
+                  if (hasInvalidCoords) break;
+
                   let extraFlag = 0;
                   if (hsPtr + 4 <= limit) {
                       extraFlag = this.readU32(hsPtr);
-                      hsPtr += 4; 
+                      hsPtr += 4;
                   }
 
                   hotspots.push({
@@ -811,6 +842,9 @@ export class VNDSequentialParser {
           if (orphanCount > 0) warnings.push(`${orphanCount} éléments interactifs récupérés.`);
       }
 
+      // Inférer le type de scène
+      const sceneType = this.inferSceneType(id, files, hotspots, isToolbarScene);
+
       return {
           id,
           offset: start,
@@ -820,7 +854,48 @@ export class VNDSequentialParser {
           config,
           hotspots,
           warnings,
-          parseMethod
+          parseMethod,
+          sceneType
       };
+  }
+
+  // Détecte le type de scène basé sur son contenu
+  private inferSceneType(id: number, files: SceneFile[], hotspots: Hotspot[], isToolbar: boolean): SceneType {
+      const filenames = files.map(f => f.filename.toLowerCase());
+      const allFilenames = filenames.join(' ');
+
+      // Scène 0 avec beaucoup de fichiers = variables globales
+      if (id === 0 && files.length > 50) {
+          return 'global_vars';
+      }
+
+      // Toolbar explicite
+      if (isToolbar || filenames.some(f => f === 'toolbar')) {
+          return 'toolbar';
+      }
+
+      // Options/DLL système
+      if (filenames.some(f => f.includes('vnoption') || f.includes('option.dll'))) {
+          return 'options';
+      }
+
+      // Crédits
+      if (allFilenames.includes('credit') || allFilenames.includes('générique')) {
+          return 'credits';
+      }
+
+      // Game Over / Fin
+      if (allFilenames.includes('perdu') || allFilenames.includes('gagné') ||
+          allFilenames.includes('fin ') || filenames.some(f => f.startsWith('fin '))) {
+          return 'game_over';
+      }
+
+      // Curseur seul = probablement une meta-scène
+      if (files.length === 1 && filenames[0].endsWith('.cur')) {
+          return 'unknown';
+      }
+
+      // Sinon c'est une vraie scène de jeu
+      return 'game';
   }
 }
