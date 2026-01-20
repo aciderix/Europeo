@@ -22,14 +22,30 @@ for (const scene of data.scenes) {
     for (const cmd of hs.commands) {
       const param = cmd.param || '';
 
-      // Pattern: scene X
+      // NOUVEAU: Subtype 6 = navigation directe vers scène (param = numéro de scène)
+      if (cmd.subtype === 6) {
+        const sceneNum = parseInt(param);
+        if (!isNaN(sceneNum)) {
+          allDestinations.push({
+            from: scene.id,
+            fromType: sceneType,
+            to: sceneNum,
+            type: 'subtype6_goto',
+            context: `[subtype:6] → ${param}`,
+            source: 'hotspot',
+            cmdId: cmd.id
+          });
+        }
+      }
+
+      // Pattern: scene X (dans le texte du param)
       const sceneMatches = [...param.matchAll(/\bscene\s+(\d+)/gi)];
       for (const m of sceneMatches) {
         allDestinations.push({
           from: scene.id,
           fromType: sceneType,
           to: parseInt(m[1]),
-          type: 'scene',
+          type: 'scene_text',
           context: param.substring(0, 60),
           source: 'hotspot'
         });
@@ -59,13 +75,29 @@ for (const scene of data.scenes) {
   for (const cmd of scene.initScript?.commands || []) {
     const param = cmd.param || '';
 
+    // Subtype 6 dans initScript aussi
+    if (cmd.subtype === 6) {
+      const sceneNum = parseInt(param);
+      if (!isNaN(sceneNum)) {
+        allDestinations.push({
+          from: scene.id,
+          fromType: sceneType,
+          to: sceneNum,
+          type: 'subtype6_goto',
+          context: `[subtype:6] → ${param}`,
+          source: 'initScript',
+          cmdId: cmd.id
+        });
+      }
+    }
+
     const sceneMatches = [...param.matchAll(/\bscene\s+(\d+)/gi)];
     for (const m of sceneMatches) {
       allDestinations.push({
         from: scene.id,
         fromType: sceneType,
         to: parseInt(m[1]),
-        type: 'scene',
+        type: 'scene_text',
         context: param.substring(0, 60),
         source: 'initScript'
       });
@@ -116,10 +148,10 @@ console.log('\n' + '='.repeat(80));
 console.log('STATISTIQUES');
 console.log('='.repeat(80));
 
-// Destinations internes uniques
+// Destinations internes uniques (subtype6_goto, scene_text, runprj_internal)
 const internalDests = new Set(
   allDestinations
-    .filter(d => d.type === 'scene' || d.type === 'runprj_internal')
+    .filter(d => d.type === 'subtype6_goto' || d.type === 'scene_text' || d.type === 'runprj_internal')
     .map(d => d.to)
 );
 const sortedInternal = [...internalDests].sort((a, b) => a - b);
