@@ -5,3 +5,4 @@ __pycache__/
 
 # Extracted archives
 parser-0-extracted/
+*_v2.json
