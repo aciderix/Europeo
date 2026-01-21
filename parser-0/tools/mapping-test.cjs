@@ -3,12 +3,11 @@ const fs = require('fs');
 const data = JSON.parse(fs.readFileSync('/home/user/Europeo/couleurs1/couleurs1_parsed.json', 'utf-8'));
 
 // Exclusions:
-// - 28: Toolbar (titre vide, fait partie du bloc vnoptions)
-// - 30: fleche.cur (fait partie de la scène vnoptions.dll #29)
-const excludeIds = [28, 30];
+// - 28: Toolbar (texte indicatif, pas une vraie scène)
+const excludeIds = [28];
 const emptySlots = { 16: 2, 21: 3, 22: 3 };
 
-console.log('=== MAPPING AVEC EXCLUSION 28 (Toolbar) et 30 (fleche.cur) ===\n');
+console.log('=== MAPPING AVEC EXCLUSION 28 (Toolbar uniquement) ===\n');
 
 let slot = 1;
 const scenes = data.scenes
