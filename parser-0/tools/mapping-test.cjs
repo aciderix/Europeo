@@ -2,8 +2,8 @@
 const fs = require('fs');
 const data = JSON.parse(fs.readFileSync('/home/user/Europeo/couleurs1/couleurs1_parsed.json', 'utf-8'));
 
-// Exclure: 0 (global_vars), 25, 28 (Toolbar vide), 29, 30 (metadata)
-const excludeIds = [0, 25, 28, 29, 30];
+// Exclure: 28 (Toolbar vide), 30 (fleche.cur fait partie de vnoptions 29)
+const excludeIds = [28, 30];
 const emptySlots = { 16: 2, 21: 3, 22: 3 };
 
 console.log('=== MAPPING EXCLUANT METADATA (0, 25, 29, 30) ===\n');
