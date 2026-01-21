@@ -1,9 +1,33 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { Upload, FileCode, Play, Trash2, Layout, Terminal as TerminalIcon, Download } from 'lucide-react';
 import { VNDSequentialParser } from './services/vndParser';
-import { ParseResult } from './types';
+import { ParseResult, ParsedScene } from './types';
 import { LogViewer } from './components/LogViewer';
 import { SceneDetails } from './components/SceneDetails';
+
+// Configuration du mapping des slots (0-indexed)
+const EXCLUDE_IDS = [28]; // Toolbar = texte indicatif, pas une vraie scène
+const EMPTY_SLOTS: Record<number, number> = { 16: 2, 21: 3, 22: 3 }; // 8 trous d'index
+
+// Calcule le slot de jeu pour chaque scène (0-indexed)
+function calculateSlotMapping(scenes: ParsedScene[]): Map<number, number> {
+  const mapping = new Map<number, number>();
+  let slot = 0;
+
+  const sortedScenes = [...scenes]
+    .filter(s => !EXCLUDE_IDS.includes(s.id))
+    .sort((a, b) => a.id - b.id);
+
+  for (const scene of sortedScenes) {
+    mapping.set(scene.id, slot);
+    slot++;
+    if (EMPTY_SLOTS[scene.id]) {
+      slot += EMPTY_SLOTS[scene.id];
+    }
+  }
+
+  return mapping;
+}
 
 function App() {
   const [file, setFile] = useState<File | null>(null);
@@ -11,6 +35,12 @@ function App() {
   const [isParsing, setIsParsing] = useState(false);
   const [maxScenes, setMaxScenes] = useState(50);
   const [viewMode, setViewMode] = useState<'visual' | 'terminal'>('visual');
+
+  // Calcul du mapping des slots
+  const slotMapping = useMemo(() => {
+    if (!result) return new Map<number, number>();
+    return calculateSlotMapping(result.scenes);
+  }, [result]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
@@ -211,7 +241,12 @@ function App() {
             ) : (
                 <div className="space-y-6">
                     {result.scenes.map(scene => (
-                        <SceneDetails key={scene.id} scene={scene} />
+                        <SceneDetails
+                          key={scene.id}
+                          scene={scene}
+                          gameSlot={slotMapping.get(scene.id)}
+                          isExcluded={EXCLUDE_IDS.includes(scene.id)}
+                        />
                     ))}
                     {result.scenes.length === 0 && (
                         <div className="p-12 text-center bg-slate-900 rounded-lg border border-slate-800">

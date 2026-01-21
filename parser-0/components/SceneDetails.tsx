@@ -4,9 +4,11 @@ import { Image, Box, MousePointer2, Music, Type, Code, Move, MonitorPlay, MouseP
 
 interface SceneDetailsProps {
   scene: ParsedScene;
+  gameSlot?: number;
+  isExcluded?: boolean;
 }
 
-export const SceneDetails: React.FC<SceneDetailsProps> = ({ scene }) => {
+export const SceneDetails: React.FC<SceneDetailsProps> = ({ scene, gameSlot, isExcluded }) => {
   const [activeTab, setActiveTab] = useState<'files' | 'hotspots' | 'config'>('files');
 
   // Helper to interpret command IDs
@@ -69,13 +71,23 @@ export const SceneDetails: React.FC<SceneDetailsProps> = ({ scene }) => {
   };
 
   return (
-    <div className="bg-slate-800 rounded-lg border border-slate-700 overflow-hidden mb-6 shadow-xl">
+    <div className={`bg-slate-800 rounded-lg border overflow-hidden mb-6 shadow-xl ${isExcluded ? 'border-red-900/50 opacity-60' : 'border-slate-700'}`}>
       {/* Header avec Statut de Santé */}
       <div className="p-4 bg-slate-900 border-b border-slate-700 flex flex-wrap justify-between items-center gap-4">
         <div>
           <div className="flex items-center gap-3">
             <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                <span className="bg-blue-600 text-xs px-2 py-1 rounded shadow">SCÈNE {scene.id}</span>
+                {gameSlot !== undefined && (
+                  <span className="bg-emerald-600 text-xs px-2 py-1 rounded shadow">SLOT {gameSlot}</span>
+                )}
+                <span className={`text-xs px-2 py-1 rounded shadow ${isExcluded ? 'bg-red-900 text-red-300' : 'bg-blue-600'}`}>
+                  PARSÉ #{scene.id}
+                </span>
+                {isExcluded && (
+                  <span className="bg-red-950 text-red-400 text-[10px] uppercase px-2 py-1 rounded border border-red-900">
+                    EXCLU
+                  </span>
+                )}
                 {scene.files.length > 50 && (
                      <span className="bg-purple-600 text-[10px] uppercase px-2 py-1 rounded shadow flex items-center gap-1">
                         <Database size={12} /> Global Vars
