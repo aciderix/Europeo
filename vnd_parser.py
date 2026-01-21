@@ -1390,15 +1390,35 @@ class VNDSequentialParser:
 
 
 def dataclass_to_dict(obj):
-    """Convertit les dataclasses en dict pour JSON"""
+    """Convertit les dataclasses en dict pour JSON avec ordre exact comme référence TS"""
     if isinstance(obj, list):
         return [dataclass_to_dict(item) for item in obj]
     elif hasattr(obj, '__dataclass_fields__'):
+        # Ordre des champs selon le type (pour correspondance exacte avec référence)
+        field_orders = {
+            'InitCommand': ['id', 'subtype', 'param', 'offset', 'isRecovered'],
+            'HotspotCommand': ['id', 'subtype', 'param'],
+            'SceneFile': ['slot', 'filename', 'param', 'offset'],
+            'InitScript': ['offset', 'length', 'commands'],
+            'SceneConfig': ['offset', 'flag', 'ints', 'foundSignature'],
+            'HotspotGeometry': ['cursorId', 'pointCount', 'points', 'extraFlag'],
+            'Point': ['x', 'y'],
+            'Hotspot': ['index', 'offset', 'commands', 'geometry', 'isRecovered', 'isTooltip', 'tooltip'],
+            'TooltipInfo': ['type', 'rect', 'flag', 'text'],
+            'TooltipRect': ['x1', 'y1', 'x2', 'y2'],
+            'ParsedScene': ['id', 'offset', 'length', 'files', 'initScript', 'config', 'hotspots', 'warnings', 'parseMethod', 'sceneType', 'sceneName'],
+            'ParseResult': ['scenes', 'logs', 'totalBytes'],
+        }
+
+        class_name = obj.__class__.__name__
+        fields = field_orders.get(class_name, list(obj.__dataclass_fields__.keys()))
+
         result = {}
-        for field_name in obj.__dataclass_fields__:
-            value = getattr(obj, field_name)
-            if value is not None:
-                result[field_name] = dataclass_to_dict(value)
+        for field_name in fields:
+            if field_name in obj.__dataclass_fields__:
+                value = getattr(obj, field_name)
+                if value is not None:
+                    result[field_name] = dataclass_to_dict(value)
         return result
     else:
         return obj
