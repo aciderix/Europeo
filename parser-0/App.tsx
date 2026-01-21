@@ -5,28 +5,43 @@ import { ParseResult, ParsedScene } from './types';
 import { LogViewer } from './components/LogViewer';
 import { SceneDetails } from './components/SceneDetails';
 
-// Configuration du mapping des slots (0-indexed)
-const EXCLUDE_IDS = [28]; // Toolbar = texte indicatif, pas une vraie scène
-const EMPTY_SLOTS: Record<number, number> = { 16: 2, 21: 3, 22: 3 }; // 8 trous d'index
-
 // Calcule le slot de jeu pour chaque scène (0-indexed)
-function calculateSlotMapping(scenes: ParsedScene[]): Map<number, number> {
+// Détection automatique des Empty slots et des scènes Toolbar à exclure
+function calculateSlotMapping(scenes: ParsedScene[]): {
+  mapping: Map<number, number>;
+  excludedIds: number[];
+  emptySlots: Record<number, number>;
+  totalSlots: number;
+} {
   const mapping = new Map<number, number>();
-  let slot = 0;
 
+  // Auto-détection des scènes à exclure (Toolbar = juste un titre)
+  const excludedIds = scenes
+    .filter(s => s.sceneType === 'toolbar')
+    .map(s => s.id);
+
+  // Auto-détection des Empty slots depuis les tooltips parsés
+  const emptySlots: Record<number, number> = {};
+  scenes.forEach(s => {
+    if (s.emptyCount > 0) {
+      emptySlots[s.id] = s.emptyCount;
+    }
+  });
+
+  let slot = 0;
   const sortedScenes = [...scenes]
-    .filter(s => !EXCLUDE_IDS.includes(s.id))
+    .filter(s => !excludedIds.includes(s.id))
     .sort((a, b) => a.id - b.id);
 
   for (const scene of sortedScenes) {
     mapping.set(scene.id, slot);
     slot++;
-    if (EMPTY_SLOTS[scene.id]) {
-      slot += EMPTY_SLOTS[scene.id];
+    if (emptySlots[scene.id]) {
+      slot += emptySlots[scene.id];
     }
   }
 
-  return mapping;
+  return { mapping, excludedIds, emptySlots, totalSlots: slot };
 }
 
 function App() {
@@ -36,9 +51,14 @@ function App() {
   const [maxScenes, setMaxScenes] = useState(50);
   const [viewMode, setViewMode] = useState<'visual' | 'terminal'>('visual');
 
-  // Calcul du mapping des slots
-  const slotMapping = useMemo(() => {
-    if (!result) return new Map<number, number>();
+  // Calcul automatique du mapping des slots
+  const slotData = useMemo(() => {
+    if (!result) return {
+      mapping: new Map<number, number>(),
+      excludedIds: [] as number[],
+      emptySlots: {} as Record<number, number>,
+      totalSlots: 0
+    };
     return calculateSlotMapping(result.scenes);
   }, [result]);
 
@@ -175,10 +195,21 @@ function App() {
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Statistiques</h2>
             
             {result ? (
+                <>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
                     <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800">
                         <div className="text-2xl font-bold text-white">{result.scenes.length}</div>
                         <div className="text-xs text-slate-500 uppercase font-bold">Scènes Parsées</div>
+                    </div>
+                    <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800">
+                        <div className="text-2xl font-bold text-amber-400">{slotData.totalSlots}</div>
+                        <div className="text-xs text-slate-500 uppercase font-bold">Slots Jeu (0-indexed)</div>
+                    </div>
+                    <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800">
+                        <div className="text-2xl font-bold text-red-400">
+                            {Object.values(slotData.emptySlots).reduce((a, b) => a + b, 0)}
+                        </div>
+                        <div className="text-xs text-slate-500 uppercase font-bold">Empty Détectés</div>
                     </div>
                     <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800">
                         <div className="text-2xl font-bold text-emerald-400">
@@ -186,19 +217,22 @@ function App() {
                         </div>
                         <div className="text-xs text-slate-500 uppercase font-bold">Total Hotspots</div>
                     </div>
-                    <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800">
-                        <div className="text-2xl font-bold text-blue-400">
-                            {result.scenes.reduce((acc, s) => acc + s.files.length, 0)}
-                        </div>
-                        <div className="text-xs text-slate-500 uppercase font-bold">Total Fichiers</div>
-                    </div>
-                    <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800">
-                        <div className="text-2xl font-bold text-purple-400">
-                            {result.logs.length}
-                        </div>
-                        <div className="text-xs text-slate-500 uppercase font-bold">Lignes de Log</div>
-                    </div>
                 </div>
+                {Object.keys(slotData.emptySlots).length > 0 && (
+                    <div className="mt-3 p-2 bg-slate-950/50 rounded border border-slate-800 text-xs">
+                        <span className="text-slate-500">Empty auto-détectés: </span>
+                        <span className="text-amber-400 font-mono">
+                            {Object.entries(slotData.emptySlots).map(([id, count]) => `Scène ${id}: ${count}`).join(' | ')}
+                        </span>
+                        {slotData.excludedIds.length > 0 && (
+                            <>
+                                <span className="text-slate-500 ml-3">| Exclus: </span>
+                                <span className="text-red-400 font-mono">{slotData.excludedIds.join(', ')}</span>
+                            </>
+                        )}
+                    </div>
+                )}
+                </>
             ) : (
                 <div className="flex-1 flex items-center justify-center text-slate-600 text-sm italic">
                     En attente de fichier...
@@ -244,8 +278,8 @@ function App() {
                         <SceneDetails
                           key={scene.id}
                           scene={scene}
-                          gameSlot={slotMapping.get(scene.id)}
-                          isExcluded={EXCLUDE_IDS.includes(scene.id)}
+                          gameSlot={slotData.mapping.get(scene.id)}
+                          isExcluded={slotData.excludedIds.includes(scene.id)}
                         />
                     ))}
                     {result.scenes.length === 0 && (

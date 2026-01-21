@@ -80,6 +80,7 @@ export interface ParsedScene {
   warnings: string[];
   parseMethod: 'signature' | 'heuristic' | 'heuristic_recovered' | 'fallback';
   sceneType: SceneType;  // Nouveau: type de scène détecté
+  emptyCount: number;    // Nombre de tooltips "Empty" (slots vides après cette scène)
 }
 
 export interface ParseResult {

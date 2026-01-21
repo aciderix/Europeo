@@ -854,6 +854,11 @@ export class VNDSequentialParser {
       // Inférer le type de scène
       const sceneType = this.inferSceneType(id, files, hotspots, isToolbarScene);
 
+      // Compter les tooltips "Empty" (indicateurs de slots vides)
+      const emptyCount = hotspots.filter(hs =>
+          hs.isTooltip && hs.tooltip?.text?.toLowerCase() === 'empty'
+      ).length;
+
       return {
           id,
           offset: start,
@@ -864,7 +869,8 @@ export class VNDSequentialParser {
           hotspots,
           warnings,
           parseMethod,
-          sceneType
+          sceneType,
+          emptyCount
       };
   }
 
