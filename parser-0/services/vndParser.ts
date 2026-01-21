@@ -136,6 +136,32 @@ export class VNDSequentialParser {
     return false;
   }
 
+  /**
+   * Compte les occurrences de "Empty" (format Pascal: len=5 + "Empty") dans une plage
+   * Ces marqueurs indiquent des slots de scène vides dans le jeu
+   */
+  private countEmptyMarkersInRange(startOffset: number, endOffset: number): number {
+    // Pattern: 05 00 00 00 45 6D 70 74 79 (len=5 + "Empty")
+    const pattern = [0x05, 0x00, 0x00, 0x00, 0x45, 0x6D, 0x70, 0x74, 0x79];
+    let count = 0;
+
+    for (let i = startOffset; i < endOffset - pattern.length; i++) {
+      let match = true;
+      for (let j = 0; j < pattern.length; j++) {
+        if (this.uint8Data[i + j] !== pattern[j]) {
+          match = false;
+          break;
+        }
+      }
+      if (match) {
+        count++;
+        i += pattern.length - 1;
+      }
+    }
+
+    return count;
+  }
+
   private findSceneOffsets(): number[] {
     const offsets: number[] = [];
     let ptr = 0;
@@ -854,10 +880,8 @@ export class VNDSequentialParser {
       // Inférer le type de scène
       const sceneType = this.inferSceneType(id, files, hotspots, isToolbarScene);
 
-      // Compter les tooltips "Empty" (indicateurs de slots vides)
-      const emptyCount = hotspots.filter(hs =>
-          hs.isTooltip && hs.tooltip?.text?.toLowerCase() === 'empty'
-      ).length;
+      // Compter les marqueurs "Empty" dans le binaire (scan direct)
+      const emptyCount = this.countEmptyMarkersInRange(start, limit);
 
       return {
           id,
