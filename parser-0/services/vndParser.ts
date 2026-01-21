@@ -124,28 +124,37 @@ export class VNDSequentialParser {
 
   // --- PASSE 1 : CARTOGRAPHIE ---
 
+  /**
+   * Vérifie s'il y a une signature 0xFFFFFFDB dans une plage donnée
+   */
+  private hasSignatureInRange(startOffset: number, endOffset: number): boolean {
+    for (let i = startOffset; i < endOffset - 4; i++) {
+      if (this.readU32(i) === 0xFFFFFFDB) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   private findSceneOffsets(): number[] {
     const offsets: number[] = [];
     let ptr = 0;
     const len = this.data.byteLength;
 
-    this.log("PHASE 1: Scanning pour les signatures de scènes...");
-    
+    this.log("PHASE 1: Scanning pour les tables de fichiers...");
+
     while (ptr < len - 100) {
-        // isValidFileTable retourne maintenant l'offset de FIN de la table si valide, sinon -1
         const tableEnd = this.isValidFileTable(ptr);
-        
+
         if (tableEnd !== -1 && tableEnd > ptr) {
             offsets.push(ptr);
-            this.log(`  [+] Scène candidate détectée @ 0x${ptr.toString(16).toUpperCase()} (Fin Table @ 0x${tableEnd.toString(16).toUpperCase()})`);
-            
-            // CRUCIAL : On saute directement à la fin de la table détectée.
-            // On s'assure que ptr avance pour éviter les boucles infinies.
-            ptr = tableEnd; 
+            this.log(`  [+] Scène @ 0x${ptr.toString(16).toUpperCase()} (Table -> 0x${tableEnd.toString(16).toUpperCase()})`);
+            ptr = tableEnd;
         } else {
             ptr++;
         }
     }
+
     return offsets;
   }
 
