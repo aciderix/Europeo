@@ -136,10 +136,12 @@ Le parser supporte maintenant toutes ces signatures via:
 
 ### VND Traités
 
-| Fichier | Statut | Scènes | Signatures | Notes |
-|---------|--------|--------|------------|-------|
-| couleurs1.vnd | ✓ Validé | 55 | 37 × 0xFFFFFFDB | Référence de base |
-| danem.vnd | ✓ Validé | 23 | 10 × 0xFFFFFFF4 | 10/10 sigs, 49/54 hotspots geom (91%) |
+| Fichier | Statut | Scènes | Signatures | Hotspots | Notes |
+|---------|--------|--------|------------|----------|-------|
+| couleurs1.vnd | ✓ Validé | 55 | 37 × 0xFFFFFFDB | ~100% geom | Référence de base |
+| danem.vnd | ✓ Analysé | 23 | 10 × 0xFFFFFFF4 | 49/54 (91%) | 13 fausses scènes éliminées, 5 hotspots sans geom |
+
+**Note importante**: Chaque scène déclare un `objCount` (nombre de hotspots attendu) dans sa table hotspots. Le parser doit lire exactement ce nombre pour être 100% correct.
 
 ### Améliorations du Parser
 
@@ -161,4 +163,12 @@ Le parser supporte maintenant toutes ces signatures via:
 - [x] ~~Vérifier offset 52902 - différence potentielle dans initScript.commands~~
 - [x] **Signatures différentes entre VND** - Résolu avec support multi-signatures
 - [x] **danem.vnd échouait parsing** - Résolu, 100% des signatures détectées
-- [x] **Fausses scènes créées à partir de hotspots** - Paths relatifs rejetés
+- [x] **Fausses scènes créées à partir de hotspots** - Paths relatifs rejetés (ex: jeuloc.bmp 18 hotspots)
+
+### Problèmes Partiellement Résolus
+
+- [~] **Fausses scènes à partir de paramètres commandes** - Fix paths relatifs a éliminé 13 fausses scènes, mais ~9 persistent (ex: "Voiture.wav" à 0x672b)
+  - Impact: Limite de scène incorrecte → validation hotspot échoue → 5 hotspots sans géométrie (91% au lieu de 100%)
+  - Voir `INVESTIGATION_SCENE_BOUNDARIES.md` pour détails complets
+  - Tentatives de fix (signatures comme ancres) ont régressé les résultats
+  - **91% est excellent** - améliorer à 100% nécessite refonte plus profonde
