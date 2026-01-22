@@ -11,6 +11,18 @@ from dataclasses import dataclass, field
 from typing import List, Dict, Optional, Tuple, Any
 
 
+# === SIGNATURES MAGIQUES VND ===
+# Chaque fichier VND peut utiliser une signature différente
+VND_SIGNATURES = {
+    0xFFFFFFDB,  # couleurs1.vnd
+    0xFFFFFFF4,  # danem.vnd
+    0xFFFFFFF5,  # allem.vnd
+    0xFFFFFFB7,  # angleterre.vnd
+    0xFFFFFFE4,  # france.vnd
+    0xFFFFFFE2,  # italie.vnd
+}
+
+
 @dataclass
 class SceneFile:
     slot: int
@@ -122,6 +134,10 @@ class VNDSequentialParser:
 
     def log(self, msg: str):
         self.logs.append(msg)
+
+    def isValidSignature(self, value: int) -> bool:
+        """Vérifie si une valeur est une signature VND valide"""
+        return value in VND_SIGNATURES
 
     # === PRIMITIVES DE LECTURE SÉCURISÉES ===
 
@@ -346,7 +362,7 @@ class VNDSequentialParser:
                 break
 
             # Check for Magic End Signature
-            if self.readU32(current) == 0xFFFFFFDB:
+            if self.isValidSignature(self.readU32(current)):
                 foundEndSignature = True
                 break
 
@@ -355,7 +371,7 @@ class VNDSequentialParser:
             # 1. Gestion du Padding
             if length == 0:
                 paramCheck = self.readU32(current + 4)
-                if paramCheck == 0xFFFFFFDB:
+                if self.isValidSignature(paramCheck):
                     foundEndSignature = True
                     break
 
@@ -376,7 +392,7 @@ class VNDSequentialParser:
                 break
             param = self.readU32(res[1])
 
-            if param > 0xFFFFFF and param != 0xFFFFFFDB:
+            if param > 0xFFFFFF and not self.isValidSignature(param):
                 break
 
             name = res[0].lower()
@@ -420,7 +436,7 @@ class VNDSequentialParser:
             return current
 
         for probe in range(current, min(current + 100, len(self.data) - 4)):
-            if self.readU32(probe) == 0xFFFFFFDB and validSlots >= 1:
+            if self.isValidSignature(self.readU32(probe)) and validSlots >= 1:
                 return probe
 
         return -1
@@ -859,7 +875,7 @@ class VNDSequentialParser:
 
         while cursor < fileTableLimit:
             checkSig = self.readU32(cursor)
-            if checkSig == 0xFFFFFFDB:
+            if self.isValidSignature(checkSig):
                 break
 
             if self.isValidHotspotTable(cursor, limit):
@@ -870,7 +886,7 @@ class VNDSequentialParser:
 
             if length == 0:
                 paramCheck = self.readU32(cursor + 4)
-                if paramCheck == 0xFFFFFFDB:
+                if self.isValidSignature(paramCheck):
                     break
 
                 if cursor + 8 <= limit and paramCheck == 0:
@@ -883,7 +899,7 @@ class VNDSequentialParser:
                     if probe + 4 > limit:
                         break
 
-                    if self.readU32(probe) == 0xFFFFFFDB:
+                    if self.isValidSignature(self.readU32(probe)):
                         cursor = probe
                         foundNext = True
                         break
@@ -985,15 +1001,23 @@ class VNDSequentialParser:
         configOffset = -1
         searchLimit = min(limit, cursor + 50000)
         candidates = []
+        weak_candidates = []  # Signatures sans validation hotspot stricte
 
         for p in range(cursor, searchLimit - 4):
-            if (self.data[p] == 0xDB and self.data[p+1] == 0xFF and
-                self.data[p+2] == 0xFF and self.data[p+3] == 0xFF):
+            if self.isValidSignature(self.readU32(p)):
                 if self.isValidHotspotTable(p + 24, searchLimit):
                     candidates.append(p)
+                else:
+                    # Signature trouvée mais validation hotspot échoue
+                    # On la garde quand même comme candidat faible
+                    weak_candidates.append(p)
 
+        # Prioriser les candidats validés, sinon utiliser les faibles
         if candidates:
             configOffset = candidates[-1]
+        elif weak_candidates:
+            configOffset = weak_candidates[-1]
+            warnings.append(f"[WEAK SIG] Signature config trouvée mais validation hotspot partielle")
 
         parseMethod = 'signature'
         scriptEnd = configOffset
