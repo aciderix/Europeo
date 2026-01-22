@@ -3876,7 +3876,7 @@
     {
       "id": 8,
       "offset": 26150,
-      "length": 261,
+      "length": 799,
       "files": [
         {
           "slot": 1,
@@ -3908,200 +3908,232 @@
         ],
         "foundSignature": true
       },
-      "hotspots": [],
-      "warnings": [
-        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 26259,
+          "commands": [
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            },
+            {
+              "id": 2,
+              "subtype": 22,
+              "param": "jeugagne 1"
+            },
+            {
+              "id": 2,
+              "subtype": 22,
+              "param": "numero 0"
+            },
+            {
+              "id": 1,
+              "subtype": 22,
+              "param": "jeugagne -1"
+            },
+            {
+              "id": 1,
+              "subtype": 36,
+              "param": ""
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "Voiture.wav"
+            },
+            {
+              "id": 1,
+              "subtype": 9,
+              "param": "jeu2.avi 1"
+            },
+            {
+              "id": 1,
+              "subtype": 31,
+              "param": "..\\holl\\holl.vnp 10"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 45,
+                "y": 24
+              },
+              {
+                "x": 201,
+                "y": 72
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 1,
+          "offset": 26507,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 22,
+              "param": "jeugagne -1"
+            },
+            {
+              "id": 1,
+              "subtype": 36,
+              "param": ""
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "Voiture.wav"
+            },
+            {
+              "id": 1,
+              "subtype": 9,
+              "param": "jeu2.avi 1"
+            },
+            {
+              "id": 1,
+              "subtype": 31,
+              "param": "..\\allem\\allem.vnp 7"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 51,
+                "y": 96
+              },
+              {
+                "x": 201,
+                "y": 136
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 26651,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 22,
+              "param": "jeugagne -1"
+            },
+            {
+              "id": 1,
+              "subtype": 36,
+              "param": ""
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "Voiture.wav"
+            },
+            {
+              "id": 1,
+              "subtype": 9,
+              "param": "jeu2.avi 1"
+            },
+            {
+              "id": 1,
+              "subtype": 31,
+              "param": "..\\autr\\autr.vnp 12"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 52,
+                "y": 166
+              },
+              {
+                "x": 206,
+                "y": 214
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 3,
+          "offset": 26794,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 22,
+              "param": "jeugagne 1"
+            },
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "1"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 10,
+            "points": [
+              {
+                "x": 341,
+                "y": 255
+              },
+              {
+                "x": 343,
+                "y": 183
+              },
+              {
+                "x": 401,
+                "y": 151
+              },
+              {
+                "x": 440,
+                "y": 133
+              },
+              {
+                "x": 483,
+                "y": 154
+              },
+              {
+                "x": 486,
+                "y": 189
+              },
+              {
+                "x": 487,
+                "y": 213
+              },
+              {
+                "x": 477,
+                "y": 260
+              },
+              {
+                "x": 434,
+                "y": 263
+              },
+              {
+                "x": 367,
+                "y": 277
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
       ],
+      "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
       "id": 9,
-      "offset": 26411,
-      "length": 143,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "Voiture.wav",
-          "param": 1,
-          "offset": 26411
-        }
-      ],
-      "initScript": {
-        "offset": 26430,
-        "length": 124,
-        "commands": [
-          {
-            "id": 9,
-            "subtype": 0,
-            "param": "jeu2.avi 1",
-            "offset": 26430
-          },
-          {
-            "id": 31,
-            "subtype": 0,
-            "param": "..\\holl\\holl.vnp 10",
-            "offset": 26452
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [45,24,201,72,0,5,1]",
-            "offset": 26483
-          },
-          {
-            "id": 22,
-            "subtype": 0,
-            "param": "jeugagne -1",
-            "offset": 26515
-          },
-          {
-            "id": 36,
-            "subtype": 0,
-            "param": "",
-            "offset": 26538
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [],
-      "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
-      ],
-      "parseMethod": "heuristic",
-      "sceneType": "game"
-    },
-    {
-      "id": 10,
-      "offset": 26554,
-      "length": 144,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "Voiture.wav",
-          "param": 1,
-          "offset": 26554
-        }
-      ],
-      "initScript": {
-        "offset": 26573,
-        "length": 125,
-        "commands": [
-          {
-            "id": 9,
-            "subtype": 0,
-            "param": "jeu2.avi 1",
-            "offset": 26573
-          },
-          {
-            "id": 31,
-            "subtype": 0,
-            "param": "..\\allem\\allem.vnp 7",
-            "offset": 26595
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [51,96,201,136,0,5,1]",
-            "offset": 26627
-          },
-          {
-            "id": 22,
-            "subtype": 0,
-            "param": "jeugagne -1",
-            "offset": 26659
-          },
-          {
-            "id": 36,
-            "subtype": 0,
-            "param": "",
-            "offset": 26682
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [],
-      "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
-      ],
-      "parseMethod": "heuristic",
-      "sceneType": "game"
-    },
-    {
-      "id": 11,
-      "offset": 26698,
-      "length": 251,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "Voiture.wav",
-          "param": 1,
-          "offset": 26698
-        }
-      ],
-      "initScript": {
-        "offset": 26717,
-        "length": 202,
-        "commands": [
-          {
-            "id": 9,
-            "subtype": 0,
-            "param": "jeu2.avi 1",
-            "offset": 26717
-          },
-          {
-            "id": 31,
-            "subtype": 0,
-            "param": "..\\autr\\autr.vnp 12",
-            "offset": 26739
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [52,166,206,214,0,2,1]",
-            "offset": 26770
-          },
-          {
-            "id": 22,
-            "subtype": 0,
-            "param": "jeugagne 1",
-            "offset": 26802
-          },
-          {
-            "id": 6,
-            "subtype": 0,
-            "param": "1",
-            "offset": 26824
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x6927"
-      ],
-      "parseMethod": "heuristic_recovered",
-      "sceneType": "game"
-    },
-    {
-      "id": 12,
       "offset": 26949,
-      "length": 988,
+      "length": 1138,
       "files": [
         {
           "slot": 1,
@@ -4224,6 +4256,39 @@
               "id": 2,
               "subtype": 21,
               "param": "suede = 1  then dec_var suede 1"
+            },
+            {
+              "id": 3,
+              "subtype": 11,
+              "param": "a_dan.wav"
+            },
+            {
+              "id": 3,
+              "subtype": 9,
+              "param": "danem.avi 1"
+            },
+            {
+              "id": 3,
+              "subtype": 6,
+              "param": "1d"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
+          },
+          "isRecovered": true
+        },
+        {
+          "index": -1,
+          "offset": 28038,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 0,
+              "param": "..\\..\\ecosse\\img24\\papierbleu.bmp"
             }
           ],
           "geometry": {
@@ -4242,74 +4307,7 @@
       "sceneType": "game"
     },
     {
-      "id": 13,
-      "offset": 27937,
-      "length": 150,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "a_dan.wav",
-          "param": 3,
-          "offset": 27937
-        }
-      ],
-      "initScript": {
-        "offset": 27954,
-        "length": 133,
-        "commands": [
-          {
-            "id": 9,
-            "subtype": 0,
-            "param": "danem.avi 1",
-            "offset": 27954
-          },
-          {
-            "id": 6,
-            "subtype": 0,
-            "param": "1",
-            "offset": 27977
-          },
-          {
-            "id": 0,
-            "subtype": 0,
-            "param": "",
-            "offset": 27990
-          },
-          {
-            "id": 0,
-            "subtype": 0,
-            "param": "",
-            "offset": 28006
-          },
-          {
-            "id": 0,
-            "subtype": 0,
-            "param": "",
-            "offset": 28022
-          },
-          {
-            "id": 0,
-            "subtype": 0,
-            "param": "..\\..\\ecosse\\img24\\papierbleu.bmp",
-            "offset": 28038
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [],
-      "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
-      ],
-      "parseMethod": "heuristic",
-      "sceneType": "game"
-    },
-    {
-      "id": 14,
+      "id": 10,
       "offset": 28087,
       "length": 304,
       "files": [
@@ -4406,7 +4404,7 @@
       "sceneType": "game"
     },
     {
-      "id": 15,
+      "id": 11,
       "offset": 32719,
       "length": 6268,
       "files": [
@@ -5209,7 +5207,7 @@
       "sceneType": "unknown"
     },
     {
-      "id": 16,
+      "id": 12,
       "offset": 38987,
       "length": 447,
       "files": [
@@ -5300,9 +5298,9 @@
       "sceneType": "game"
     },
     {
-      "id": 17,
+      "id": 13,
       "offset": 39434,
-      "length": 408,
+      "length": 1978,
       "files": [
         {
           "slot": 1,
@@ -5319,7 +5317,7 @@
       ],
       "initScript": {
         "offset": 39561,
-        "length": 281,
+        "length": 1851,
         "commands": [
           {
             "id": 39,
@@ -5361,6 +5359,21 @@
               "id": 1,
               "subtype": 38,
               "param": "500 320 125 365 0 10 euros"
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "cling.wav"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "2000"
+            },
+            {
+              "id": 0,
+              "subtype": 11,
+              "param": "tic1.wav 1"
             }
           ],
           "geometry": {
@@ -5370,372 +5383,213 @@
             "extraFlag": 0
           },
           "isRecovered": true
-        }
-      ],
-      "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
-      ],
-      "parseMethod": "heuristic",
-      "sceneType": "game"
-    },
-    {
-      "id": 18,
-      "offset": 39842,
-      "length": 302,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "cling.wav",
-          "param": 1,
-          "offset": 39842
         },
         {
-          "slot": 2,
-          "filename": "score 10",
-          "param": 1,
-          "offset": 39863
-        }
-      ],
-      "initScript": {
-        "offset": 39879,
-        "length": 265,
-        "commands": [
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "2000",
-            "offset": 39879
+          "index": -1,
+          "offset": 39946,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "32 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 0,
+              "param": "220 350 125 265 0 Bisou numéro 4i"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
           },
-          {
-            "id": 22,
-            "subtype": 0,
-            "param": "bouche 2",
-            "offset": 39895
-          },
-          {
-            "id": 6,
-            "subtype": 0,
-            "param": "3",
-            "offset": 39915
-          },
-          {
-            "id": 11,
-            "subtype": 0,
-            "param": "tic1.wav 1",
-            "offset": 39928
-          },
-          {
-            "id": 39,
-            "subtype": 0,
-            "param": "32 0 #ffffff Comic sans MS",
-            "offset": 39950
-          },
-          {
-            "id": 38,
-            "subtype": 0,
-            "param": "220 350 125 265 0 Bisou numéro 4",
-            "offset": 39988
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [563,278,600,320,0,10,1]",
-            "offset": 40032
-          },
-          {
-            "id": 39,
-            "subtype": 0,
-            "param": "32 0 #ffffff Comic sans MS",
-            "offset": 40064
-          },
-          {
-            "id": 38,
-            "subtype": 0,
-            "param": "390 320 125 365 0 25 euros",
-            "offset": 40102
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [],
-      "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
-      ],
-      "parseMethod": "heuristic",
-      "sceneType": "game"
-    },
-    {
-      "id": 19,
-      "offset": 40144,
-      "length": 301,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "cling.wav",
-          "param": 1,
-          "offset": 40144
+          "isRecovered": true
         },
         {
-          "slot": 2,
-          "filename": "score 25",
-          "param": 1,
-          "offset": 40165
-        }
-      ],
-      "initScript": {
-        "offset": 40181,
-        "length": 264,
-        "commands": [
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "2000",
-            "offset": 40181
+          "index": -1,
+          "offset": 40060,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 39,
+              "param": "32 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 1,
+              "subtype": 38,
+              "param": "390 320 125 365 0 25 euros"
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "cling.wav"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "2000"
+            },
+            {
+              "id": 0,
+              "subtype": 11,
+              "param": "tic1.wav 1"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
           },
-          {
-            "id": 22,
-            "subtype": 0,
-            "param": "bouche 2",
-            "offset": 40197
-          },
-          {
-            "id": 6,
-            "subtype": 0,
-            "param": "3",
-            "offset": 40217
-          },
-          {
-            "id": 11,
-            "subtype": 0,
-            "param": "tic1.wav 1",
-            "offset": 40230
-          },
-          {
-            "id": 39,
-            "subtype": 0,
-            "param": "32 0 #ffffff Comic sans MS",
-            "offset": 40252
-          },
-          {
-            "id": 38,
-            "subtype": 0,
-            "param": "220 350 125 265 0 Bisou numéro 3",
-            "offset": 40290
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [439,278,473,318,0,10,1]",
-            "offset": 40334
-          },
-          {
-            "id": 39,
-            "subtype": 0,
-            "param": "32 0 #ffffff Comic sans MS",
-            "offset": 40366
-          },
-          {
-            "id": 38,
-            "subtype": 0,
-            "param": "280 320 125 365 0 5 euros",
-            "offset": 40404
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [],
-      "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
-      ],
-      "parseMethod": "heuristic",
-      "sceneType": "game"
-    },
-    {
-      "id": 20,
-      "offset": 40445,
-      "length": 301,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "cling.wav",
-          "param": 1,
-          "offset": 40445
+          "isRecovered": true
         },
         {
-          "slot": 2,
-          "filename": "score 5",
-          "param": 1,
-          "offset": 40466
-        }
-      ],
-      "initScript": {
-        "offset": 40481,
-        "length": 265,
-        "commands": [
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "2000",
-            "offset": 40481
+          "index": -1,
+          "offset": 40248,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "32 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 0,
+              "param": "220 350 125 265 0 Bisou numéro 3i"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
           },
-          {
-            "id": 22,
-            "subtype": 0,
-            "param": "bouche 2",
-            "offset": 40497
-          },
-          {
-            "id": 6,
-            "subtype": 0,
-            "param": "3",
-            "offset": 40517
-          },
-          {
-            "id": 11,
-            "subtype": 0,
-            "param": "tic1.wav 1",
-            "offset": 40530
-          },
-          {
-            "id": 39,
-            "subtype": 0,
-            "param": "32 0 #ffffff Comic sans MS",
-            "offset": 40552
-          },
-          {
-            "id": 38,
-            "subtype": 0,
-            "param": "220 350 125 265 0 Bisou numéro 2",
-            "offset": 40590
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [324,276,361,315,0,10,1]",
-            "offset": 40634
-          },
-          {
-            "id": 39,
-            "subtype": 0,
-            "param": "32 0 #ffffff Comic sans MS",
-            "offset": 40666
-          },
-          {
-            "id": 38,
-            "subtype": 0,
-            "param": "170 320 125 365 0 50 euros",
-            "offset": 40704
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [],
-      "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
-      ],
-      "parseMethod": "heuristic",
-      "sceneType": "game"
-    },
-    {
-      "id": 21,
-      "offset": 40746,
-      "length": 666,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "cling.wav",
-          "param": 1,
-          "offset": 40746
+          "isRecovered": true
         },
         {
-          "slot": 2,
-          "filename": "score 50",
-          "param": 1,
-          "offset": 40767
-        }
-      ],
-      "initScript": {
-        "offset": 40783,
-        "length": 629,
-        "commands": [
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "2000",
-            "offset": 40783
+          "index": -1,
+          "offset": 40362,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 39,
+              "param": "32 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 1,
+              "subtype": 38,
+              "param": "280 320 125 365 0 5 euros"
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "cling.wav"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "2000"
+            },
+            {
+              "id": 0,
+              "subtype": 11,
+              "param": "tic1.wav 1"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
           },
-          {
-            "id": 22,
-            "subtype": 0,
-            "param": "bouche 2",
-            "offset": 40799
+          "isRecovered": true
+        },
+        {
+          "index": -1,
+          "offset": 40548,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "32 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 0,
+              "param": "220 350 125 265 0 Bisou numéro 2i"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
           },
-          {
-            "id": 6,
-            "subtype": 0,
-            "param": "3",
-            "offset": 40819
+          "isRecovered": true
+        },
+        {
+          "index": -1,
+          "offset": 40662,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 39,
+              "param": "32 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 1,
+              "subtype": 38,
+              "param": "170 320 125 365 0 50 euros"
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "cling.wav"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "2000"
+            },
+            {
+              "id": 0,
+              "subtype": 11,
+              "param": "tic1.wav 1"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
           },
-          {
-            "id": 11,
-            "subtype": 0,
-            "param": "tic1.wav 1",
-            "offset": 40832
+          "isRecovered": true
+        },
+        {
+          "index": -1,
+          "offset": 40850,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "32 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 0,
+              "param": "220 350 125 265 0 Bisou numéro 1i"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
           },
-          {
-            "id": 39,
-            "subtype": 0,
-            "param": "32 0 #ffffff Comic sans MS",
-            "offset": 40854
-          },
-          {
-            "id": 38,
-            "subtype": 0,
-            "param": "220 350 125 265 0 Bisou numéro 1",
-            "offset": 40892
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [201,274,237,318,0,8,2]",
-            "offset": 40936
-          },
-          {
-            "id": 25,
-            "subtype": 0,
-            "param": "",
-            "offset": 40968
-          },
-          {
-            "id": 32,
-            "subtype": 0,
-            "param": "",
-            "offset": 40980
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [
+          "isRecovered": true
+        },
         {
           "index": -1,
           "offset": 40988,
@@ -5792,7 +5646,7 @@
       "sceneType": "game"
     },
     {
-      "id": 22,
+      "id": 14,
       "offset": 41412,
       "length": 450,
       "files": [
@@ -5927,22 +5781,14 @@
     "  [+] Scène détectée @ 0x46B4 (Table -> 0x4705)",
     "  [+] Scène détectée @ 0x4766 (Table -> 0x47B9)",
     "  [+] Scène détectée @ 0x6626 (Table -> 0x6677)",
-    "  [+] Scène détectée @ 0x672B (Table -> 0x673E)",
-    "  [+] Scène détectée @ 0x67BA (Table -> 0x67CD)",
-    "  [+] Scène détectée @ 0x684A (Table -> 0x685D)",
     "  [+] Scène détectée @ 0x6945 (Table -> 0x698E)",
-    "  [+] Scène détectée @ 0x6D21 (Table -> 0x6D32)",
     "  [+] Scène détectée @ 0x6DB7 (Table -> 0x6DCA)",
     "  [+] Scène détectée @ 0x6EE7 (Table -> 0x6F46)",
     "  [+] Scène détectée @ 0x7FCF (Table -> 0x7FE1)",
     "  [+] Scène détectée @ 0x984B (Table -> 0x9893)",
     "  [+] Scène détectée @ 0x9A0A (Table -> 0x9A6C)",
-    "  [+] Scène détectée @ 0x9BA2 (Table -> 0x9BB3)",
-    "  [+] Scène détectée @ 0x9CD0 (Table -> 0x9CE1)",
-    "  [+] Scène détectée @ 0x9DFD (Table -> 0x9E0E)",
-    "  [+] Scène détectée @ 0x9F2A (Table -> 0x9F3B)",
     "  [+] Scène détectée @ 0xA1C4 (Table -> 0xA1D8)",
-    "PHASE 2: Analyse de 24 segments détectés.",
+    "PHASE 2: Analyse de 16 segments détectés.",
     "  [INFO] Fin de table fichiers par structure Hotspot à 0x1152",
     "\n--- Analyse Scène #0 (0x8A -> 0x116A) ---",
     "\n--- Analyse Scène #1 (0x116A -> 0x13B4) ---",
@@ -5952,30 +5798,18 @@
     "\n--- Analyse Scène #5 (0x4517 -> 0x46B4) ---",
     "\n--- Analyse Scène #6 (0x46B4 -> 0x4766) ---",
     "\n--- Analyse Scène #7 (0x4766 -> 0x6626) ---",
-    "\n--- Analyse Scène #8 (0x6626 -> 0x672B) ---",
-    "\n--- Analyse Scène #9 (0x672B -> 0x67BA) ---",
-    "\n--- Analyse Scène #10 (0x67BA -> 0x684A) ---",
-    "\n--- Analyse Scène #11 (0x684A -> 0x6945) ---",
-    "\n--- Analyse Scène #12 (0x6945 -> 0x6D21) ---",
-    "\n--- Analyse Scène #13 (0x6D21 -> 0x6DB7) ---",
-    "\n--- Analyse Scène #14 (0x6DB7 -> 0x6EE7) ---",
+    "\n--- Analyse Scène #8 (0x6626 -> 0x6945) ---",
+    "\n--- Analyse Scène #9 (0x6945 -> 0x6DB7) ---",
+    "\n--- Analyse Scène #10 (0x6DB7 -> 0x6EE7) ---",
     "  [INFO] Scène 'Toolbar' à 0x6EE7 - Ignorée du mapping Slot.",
     "  [PEEK] Commande reconstruite: \"400d\" @ 0x9817",
     "  [DEEP SCAN] 1 structures géométriques orphelines.",
     "  [MERGE] Commande @0x9666 associée à Géométrie @0x9817",
-    "\n--- Analyse Scène #15 (0x7FCF -> 0x984B) ---",
-    "\n--- Analyse Scène #16 (0x984B -> 0x9A0A) ---",
+    "\n--- Analyse Scène #11 (0x7FCF -> 0x984B) ---",
+    "\n--- Analyse Scène #12 (0x984B -> 0x9A0A) ---",
     "  [RECOVERY] Saut de 20 octets de padding à 0x9a6c -> 0x9a80",
-    "\n--- Analyse Scène #17 (0x9A0A -> 0x9BA2) ---",
-    "  [RECOVERY] Structure invalide sautée (+4 bytes) à 0x9bb3",
-    "\n--- Analyse Scène #18 (0x9BA2 -> 0x9CD0) ---",
-    "  [RECOVERY] Structure invalide sautée (+4 bytes) à 0x9ce1",
-    "\n--- Analyse Scène #19 (0x9CD0 -> 0x9DFD) ---",
-    "  [RECOVERY] Structure invalide sautée (+4 bytes) à 0x9e0e",
-    "\n--- Analyse Scène #20 (0x9DFD -> 0x9F2A) ---",
-    "  [RECOVERY] Structure invalide sautée (+4 bytes) à 0x9f3b",
-    "\n--- Analyse Scène #21 (0x9F2A -> 0xA1C4) ---",
-    "\n--- Analyse Scène #22 (0xA1C4 -> 0xA386) ---"
+    "\n--- Analyse Scène #13 (0x9A0A -> 0xA1C4) ---",
+    "\n--- Analyse Scène #14 (0xA1C4 -> 0xA386) ---"
   ],
   "totalBytes": 41862
 }

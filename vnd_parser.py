@@ -308,6 +308,7 @@ class VNDSequentialParser:
 
         self.log("PHASE 1: Scanning pour les tables de fichiers...")
 
+        # Scanner pour les scènes
         while ptr < dataLen - 20:
             # 0. HACK COULEURS1 : Détection forcée des blocs logiques d2/d3/avi
             if self.isCouleurs1LogicBlock(ptr):
@@ -329,8 +330,9 @@ class VNDSequentialParser:
                 offsets.append(ptr)
                 self.log(f"  [+] Scène détectée @ 0x{ptr:X} (Table -> 0x{tableEnd:X})")
                 ptr = tableEnd
-            else:
-                ptr += 1
+                continue
+
+            ptr += 1
 
         return offsets
 
@@ -354,6 +356,7 @@ class VNDSequentialParser:
         hasExtensions = 0
         foundSpecificSignature = False
         foundEndSignature = False
+        collectedFiles = []  # Collecter les fichiers pour détection de fausses scènes
 
         maxSlotsToScan = 500
 
@@ -408,6 +411,7 @@ class VNDSequentialParser:
                 break
 
             if name and name != "empty":
+                collectedFiles.append(name)  # Collecter pour validation finale
                 if name == "toolbar":
                     foundSpecificSignature = True
                 if re.search(r'\.(bmp|wav|avi|htm|html|dll|vnp|cur|ico)$', name):
@@ -435,6 +439,18 @@ class VNDSequentialParser:
         isToolbar = foundSpecificSignature
         isEndSig = foundEndSignature
         isHeuristic = (validSlots >= 1 and hasExtensions >= 1) or (validSlots > 50)
+
+        # VALIDATION FINALE: Rejeter les fausses scènes (fichiers audio/vidéo isolés)
+        # Ces fichiers sont en fait des paramètres de commandes hotspot, pas des scènes
+        # IMPORTANT: Garder .htm, .cur, .bmp car ce sont des scènes légitimes
+        if len(collectedFiles) == 1:
+            singleFile = collectedFiles[0].lower()
+            # Rejeter SEULEMENT les .wav/.avi/.mp3 isolés (paramètres de commandes)
+            # Garder .htm, .cur, .bmp, .dll, .vnp (scènes légitimes)
+            if re.search(r'\.(wav|avi|mp3)$', singleFile):
+                # SAUF si c'est un cas spécial comme toolbar
+                if not isToolbar:
+                    return -1  # Rejeter cette fausse scène
 
         if isToolbar or (isEndSig and validSlots >= 1) or isHeuristic:
             return current
