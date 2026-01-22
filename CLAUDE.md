@@ -139,7 +139,7 @@ Le parser supporte maintenant toutes ces signatures via:
 | Fichier | Statut | Scènes | Signatures | Notes |
 |---------|--------|--------|------------|-------|
 | couleurs1.vnd | ✓ Validé | 55 | 37 × 0xFFFFFFDB | Référence de base |
-| danem.vnd | ✓ Validé | 36 | 10 × 0xFFFFFFF4 | 10/10 sigs détectées, 100% BMP+geom |
+| danem.vnd | ✓ Validé | 23 | 10 × 0xFFFFFFF4 | 10/10 sigs, 49/54 hotspots geom (91%) |
 
 ### Améliorations du Parser
 
@@ -154,9 +154,11 @@ Le parser supporte maintenant toutes ces signatures via:
 | 2026-01-22 | **Support signatures multiples** | **Déblocage parsing tous VND** |
 | - | Weak candidate system | Acceptation signatures validation partielle |
 | - | isValidSignature() | Vérification flexible 6 signatures |
+| - | **Reject relative paths** | **Fix frontière scènes - jeuloc.bmp 18 hotspots** |
 
 ### Problèmes Résolus
 
 - [x] ~~Vérifier offset 52902 - différence potentielle dans initScript.commands~~
 - [x] **Signatures différentes entre VND** - Résolu avec support multi-signatures
 - [x] **danem.vnd échouait parsing** - Résolu, 100% des signatures détectées
+- [x] **Fausses scènes créées à partir de hotspots** - Paths relatifs rejetés
