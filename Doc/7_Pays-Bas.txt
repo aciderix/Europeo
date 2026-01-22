@@ -1,0 +1,9 @@
+TITRE : Pays-Bas
+ID : netherlands
+------------------------------------------------------------
+
+[ Amsterdam ]
+  - Diamantaire : Atelier de taille de pierres.
+  - Tulipes : Trouver la TULIPEJAUNE.
+  - Vélo : Mode de déplacement.
+

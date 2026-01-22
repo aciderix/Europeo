@@ -1,0 +1,47 @@
+ L'Analyse Visuelle (Le Fond)
+Le Fond (Image1) : L'image Image_1.bmp (308 Ko) couvre tout l'écran.
+Le Visuel : Vu le nom "Roue" et la disposition des éléments, l'image de fond représente très probablement un mécanisme avec 4 compteurs (ou 4 roues codées), comme sur un coffre-fort ou une valise. Dessinés sur ce fond, il doit y avoir des flèches "Haut" et "Bas" (ou "+" et "-") pour chaque compteur.
+2. La Mécanique : Compteurs et Boutons Invisibles
+Le développeur a utilisé la même technique des "hitbox" invisibles que dans le jeu de la grenouille. Il y a des zones cliquables transparentes (Image2 à Image9) posées par-dessus le dessin des boutons du fond.
+Ces zones fonctionnent par paires verticales autour d'un Label (le chiffre affiché).
+Voici la cartographie des 4 mécanismes :
+🔢 Compteur n°1 (Gauche)
+Affichage : Label1 (positionné à 106, 156).
+Bouton Haut : Image3 (Top: 148) -> Sert à incrémenter (+).
+Bouton Bas : Image2 (Top: 198) -> Sert à décrémenter (-).
+🔢 Compteur n°2 (Centre-Haut)
+Affichage : Label2 (positionné à 266, 102).
+Bouton Haut : Image5 (Top: 87).
+Bouton Bas : Image4 (Top: 132).
+🔢 Compteur n°3 (Centre-Bas / Droite)
+Affichage : Label3 (positionné à 358, 240).
+Bouton Haut : Image7 (Top: 219).
+Bouton Bas : Image6 (Top: 284).
+🔢 Compteur n°4 (Haut Droite)
+Affichage : Label4 (positionné à 434, 62).
+Bouton Haut : Image9 (Top: 47).
+Bouton Bas : Image8 (Top: 92).
+3. Le Bouton "Retour"
+Objet : Image10
+Position : En bas à gauche (Left: 8, Top: 336).
+Fonction : C'est la zone de sortie (bouton "Quitter" ou "Valider" dessiné sur le fond).
+4. La Logique du Jeu (À programmer)
+Le but est de trouver la bonne combinaison de 4 chiffres.
+État initial : Tous les labels affichent "0".
+Interaction :
+Cliquer sur une zone "Haut" (ex: Image3) augmente le chiffre correspondant (0 -> 1 -> 2 ... -> 9 -> 0).
+Cliquer sur une zone "Bas" (ex: Image2) diminue le chiffre.
+Validation :
+Le code ne contient pas la solution (elle est dans la DLL compilée).
+Cependant, ce genre de jeu est souvent lié à des indices trouvés ailleurs dans le logiciel éducatif (une date, une opération mathématique, ou un code vu dans un autre niveau).
+Suggestion pour le remake : Vous pouvez inventer un code (ex: 1-2-3-4) ou regarder si un fichier texte ou une image annexe ne donne pas la réponse.
+Résumé pour la reconstruction
+Affichage : Placez Image_1.bmp en fond.
+Interface : Créez 4 textes (Labels) bleus en police "Century Gothic" aux positions indiquées, initialisés à "0".
+Contrôles : Créez des zones transparentes cliquables sur les flèches du fond (haut/bas pour chaque chiffre).
+Script :
+Chaque paire de boutons modifie son Label associé.
+Gérez le bouclage des chiffres (après 9, on revient à 0 ; avant 0, on passe à 9).
+Ajoutez une fonction qui vérifie si L1 + L2 + L3 + L4 == CODE_SECRET à chaque clic. Si oui -> Victoire.
+
+solution année de passage a la monnaie unique : 2002

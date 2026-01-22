@@ -1,0 +1,49 @@
+Voici l'analyse logique et technique pour reconstituer ce niveau :
+1. Le But du Jeu
+Contexte : Le passage à l'Euro. Ce logiciel date probablement du début des années 2000, quand la conversion Francs/Euros était un sujet d'actualité.
+Question : Elle est écrite en dur dans le code :
+lblQuestion.Caption = 'Combien font 100 francs français en euros ?'
+Action Joueur : Le joueur doit taper la réponse exacte dans le champ de saisie (maskEdit).
+2. L'Analyse Technique (La réponse attendue)
+C'est ici que le fichier texte est précieux. Il nous donne le format exact imposé par le composant TVNMaskEdit.
+Le Masque de Saisie (EditMask) : '00,00;0;*'
+En programmation Delphi, cela signifie :
+0 = Un chiffre est obligatoire.
+, = La virgule est pré-remplie et fixe.
+La structure est donc : XX,XX (Deux chiffres, une virgule, deux chiffres).
+La Règle de Conversion Officielle :
+Le taux de conversion officiel et immuable est : 1 € = 6,55957 Francs.
+Le Calcul :
+100 Francs / 6,55957 = 15,2449... €
+La Solution :
+Puisque le masque impose deux décimales (00,00), la réponse attendue est l'arrondi standard :
+👉 15,24
+3. Reconstruction de l'Interface
+Pour recréer ce module, voici les éléments à placer :
+Le Fond (imgBkgnd) :
+Afficher Image_1.bmp (257 Ko) en plein écran (640x400).
+Hypothèse visuelle : L'image représente sûrement un guichet de banque, un bureau de change ou une calculatrice géante.
+Les Textes (TLabel) :
+Une consigne en bas : "Entre les chiffres au clavier."
+La question en haut à gauche : "Combien font 100 francs français en euros ?"
+La phrase à compléter (vers la droite) : "100 francs font [CHAMP] euros."
+Le Champ de Réponse (maskEdit) :
+Position : Left: 428, Top: 90.
+C'est un <input type="text"> en HTML.
+Contrainte IMPORTANTE : Vous devez forcer le format. L'utilisateur ne doit pas pouvoir taper de lettres. Idéalement, il ne tape que les chiffres, et la virgule est déjà là visuellement, ou s'ajoute automatiquement.
+4. Logique de Validation (À programmer)
+Contrairement aux autres fichiers, il n'y a pas d'objets "Gagné" ou "Perdu" cachés ici. La validation se fait probablement en temps réel (via l'événement OnChange) ou à la fin de la saisie du 4ème chiffre.
+Algorithme suggéré pour le remake :
+L'utilisateur tape des chiffres.
+Si l'utilisateur tape 1, 5, 2, 4 (dans cet ordre).
+Le système détecte que la chaîne est égale à "15,24".
+Déclenchement de l'événement "Succès" (passage au niveau suivant ou affichage d'un bravo).
+Résumé
+C'est un module très simple.
+Input : Clavier numérique.
+Question : 100 Francs en Euros.
+Réponse unique : 15,24.
+
+  65345, 	"Oui\rC'est \xE7a !!!"
+  65346, 	"Non...\rEssaye encore"
+  65347, 	"1524"

@@ -1,0 +1,460 @@
+=================================================================
+ FICHIER TRAITÉ : memory.dll copy.txt
+ IMAGES EXTRAITES : 25
+=================================================================
+ LISTE DES IMAGES :
+ * [Image 1] Type: TBitmap, Taille: 257078 octets -> Image_1.bmp
+ * [Image 2] Type: TBitmap, Taille: 8874 octets -> Image_2.bmp
+ * [Image 3] Type: TBitmap, Taille: 8874 octets -> Image_3.bmp
+ * [Image 4] Type: TBitmap, Taille: 8874 octets -> Image_4.bmp
+ * [Image 5] Type: TBitmap, Taille: 8874 octets -> Image_5.bmp
+ * [Image 6] Type: TBitmap, Taille: 8874 octets -> Image_6.bmp
+ * [Image 7] Type: TBitmap, Taille: 8874 octets -> Image_7.bmp
+ * [Image 8] Type: TBitmap, Taille: 8874 octets -> Image_8.bmp
+ * [Image 9] Type: TBitmap, Taille: 8874 octets -> Image_9.bmp
+ * [Image 10] Type: TBitmap, Taille: 8874 octets -> Image_10.bmp
+ * [Image 11] Type: TBitmap, Taille: 8874 octets -> Image_11.bmp
+ * [Image 12] Type: TBitmap, Taille: 8874 octets -> Image_12.bmp
+ * [Image 13] Type: TBitmap, Taille: 8874 octets -> Image_13.bmp
+ * [Image 14] Type: TBitmap, Taille: 8874 octets -> Image_14.bmp
+ * [Image 15] Type: TBitmap, Taille: 8874 octets -> Image_15.bmp
+ * [Image 16] Type: TBitmap, Taille: 8874 octets -> Image_16.bmp
+ * [Image 17] Type: TBitmap, Taille: 8874 octets -> Image_17.bmp
+ * [Image 18] Type: TBitmap, Taille: 6894 octets -> Image_18.bmp
+ * [Image 19] Type: TBitmap, Taille: 7074 octets -> Image_19.bmp
+ * [Image 20] Type: TBitmap, Taille: 4266 octets -> Image_20.bmp
+ * [Image 21] Type: TBitmap, Taille: 6762 octets -> Image_21.bmp
+ * [Image 22] Type: TBitmap, Taille: 5386 octets -> Image_22.bmp
+ * [Image 23] Type: TBitmap, Taille: 4918 octets -> Image_23.bmp
+ * [Image 24] Type: TBitmap, Taille: 4310 octets -> Image_24.bmp
+ * [Image 25] Type: TBitmap, Taille: 4494 octets -> Image_25.bmp
+=================================================================
+
+object Form1: TForm1
+  Left = 303
+  Top = 135
+  HorzScrollBar.Visible = False
+  Align = alTop
+  BorderIcons = []
+  BorderStyle = bsNone
+  ClientHeight = 400
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = True
+  Position = poScreenCenter
+  Scaled = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Fond: TImage
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 400
+    Align = alClient
+    AutoSize = True
+    Center = True
+    ParentShowHint = False
+    Picture.Data = 'Image_1.bmp'
+    ShowHint = False
+  end
+  object Image13: TImage
+    Left = 128
+    Top = 248
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image14: TImage
+    Left = 200
+    Top = 248
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image15: TImage
+    Left = 272
+    Top = 248
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image16: TImage
+    Left = 344
+    Top = 248
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image12: TImage
+    Left = 344
+    Top = 200
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image11: TImage
+    Left = 272
+    Top = 200
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image10: TImage
+    Left = 200
+    Top = 200
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image9: TImage
+    Left = 128
+    Top = 200
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image5: TImage
+    Left = 128
+    Top = 152
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image6: TImage
+    Left = 200
+    Top = 152
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image7: TImage
+    Left = 272
+    Top = 152
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image8: TImage
+    Left = 344
+    Top = 152
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image4: TImage
+    Left = 344
+    Top = 104
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image3: TImage
+    Left = 272
+    Top = 104
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image2: TImage
+    Left = 200
+    Top = 104
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image1: TImage
+    Left = 128
+    Top = 104
+    Width = 65
+    Height = 45
+    Center = True
+    Transparent = True
+    Visible = False
+  end
+  object Image29: TImage
+    Left = 128
+    Top = 248
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_2.bmp'
+    OnClick = Image29Click
+  end
+  object Image30: TImage
+    Left = 200
+    Top = 248
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_3.bmp'
+    OnClick = Image30Click
+  end
+  object Image31: TImage
+    Left = 272
+    Top = 248
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_4.bmp'
+    OnClick = Image31Click
+  end
+  object Image32: TImage
+    Left = 344
+    Top = 248
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_5.bmp'
+    OnClick = Image32Click
+  end
+  object Image28: TImage
+    Left = 344
+    Top = 200
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_6.bmp'
+    OnClick = Image28Click
+  end
+  object Image27: TImage
+    Left = 272
+    Top = 200
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_7.bmp'
+    OnClick = Image27Click
+  end
+  object Image26: TImage
+    Left = 200
+    Top = 200
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_8.bmp'
+    OnClick = Image26Click
+  end
+  object Image25: TImage
+    Left = 128
+    Top = 200
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_9.bmp'
+    OnClick = Image25Click
+  end
+  object Image21: TImage
+    Left = 128
+    Top = 152
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_10.bmp'
+    OnClick = Image21Click
+  end
+  object Image22: TImage
+    Left = 200
+    Top = 152
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_11.bmp'
+    OnClick = Image22Click
+  end
+  object Image23: TImage
+    Left = 272
+    Top = 152
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_12.bmp'
+    OnClick = Image23Click
+  end
+  object Image24: TImage
+    Left = 344
+    Top = 152
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_13.bmp'
+    OnClick = Image24Click
+  end
+  object Image20: TImage
+    Left = 344
+    Top = 104
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_14.bmp'
+    OnClick = Image20Click
+  end
+  object Image19: TImage
+    Left = 272
+    Top = 104
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_15.bmp'
+    OnClick = Image19Click
+  end
+  object Image18: TImage
+    Left = 200
+    Top = 104
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_16.bmp'
+    OnClick = Image18Click
+  end
+  object Image17: TImage
+    Left = 128
+    Top = 104
+    Width = 65
+    Height = 45
+    Picture.Data = 'Image_17.bmp'
+    OnClick = Image17Click
+  end
+  object CommentLbl: TLabel
+    Left = 440
+    Top = 200
+    Width = 145
+    Height = 21
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Comment'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -19
+    Font.Name = 'Serpentine'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Image33: TImage
+    Left = 112
+    Top = 340
+    Width = 50
+    Height = 45
+    AutoSize = True
+    Picture.Data = 'Image_18.bmp'
+    Transparent = True
+    Visible = False
+  end
+  object Image34: TImage
+    Left = 164
+    Top = 340
+    Width = 51
+    Height = 45
+    AutoSize = True
+    Picture.Data = 'Image_19.bmp'
+    Transparent = True
+    Visible = False
+  end
+  object Image35: TImage
+    Left = 220
+    Top = 348
+    Width = 36
+    Height = 39
+    AutoSize = True
+    Picture.Data = 'Image_20.bmp'
+    Transparent = True
+    Visible = False
+  end
+  object Image36: TImage
+    Left = 260
+    Top = 344
+    Width = 52
+    Height = 43
+    AutoSize = True
+    Picture.Data = 'Image_21.bmp'
+    Transparent = True
+    Visible = False
+  end
+  object Image37: TImage
+    Left = 316
+    Top = 344
+    Width = 41
+    Height = 43
+    AutoSize = True
+    Picture.Data = 'Image_22.bmp'
+    Transparent = True
+    Visible = False
+  end
+  object Image38: TImage
+    Left = 364
+    Top = 348
+    Width = 50
+    Height = 32
+    AutoSize = True
+    Picture.Data = 'Image_23.bmp'
+    Transparent = True
+    Visible = False
+  end
+  object Image39: TImage
+    Left = 420
+    Top = 348
+    Width = 50
+    Height = 28
+    AutoSize = True
+    Picture.Data = 'Image_24.bmp'
+    Transparent = True
+    Visible = False
+  end
+  object Image40: TImage
+    Left = 472
+    Top = 344
+    Width = 39
+    Height = 37
+    AutoSize = True
+    Picture.Data = 'Image_25.bmp'
+    Transparent = True
+    Visible = False
+  end
+  object TimeLbl: TLabel
+    Left = 124
+    Top = 44
+    Width = 51
+    Height = 21
+    Caption = 'TEMPS'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Village Square'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object CacheTmr: TTimer
+    Enabled = False
+    Interval = 700
+    OnTimer = CacheTmrTimer
+    Left = 8
+    Top = 8
+  end
+  object TimeTmr: TTimer
+    OnTimer = TimeTmrTimer
+    Left = 40
+    Top = 8
+  end
+end

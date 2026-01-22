@@ -1,0 +1,174 @@
+=================================================================
+ FICHIER TRAITÉ : probleme.dll.txt
+ IMAGES EXTRAITES : 1
+=================================================================
+ LISTE DES IMAGES :
+ * [Image 1] Type: TBitmap, Taille: 768054 octets -> Image_1.bmp
+=================================================================
+
+object Form1: TForm1
+  Left = 191
+  Top = 206
+  ActiveControl = MaskEdit1
+  Align = alTop
+  BorderStyle = bsNone
+  Caption = 'Form1'
+  ClientHeight = 400
+  ClientWidth = 640
+  Color = clSilver
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image2: TImage
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 400
+    AutoSize = True
+    Picture.Data = 'Image_1.bmp'
+  end
+  object Image1: TImage
+    Left = 4
+    Top = 352
+    Width = 53
+    Height = 45
+    OnClick = Image1Click
+  end
+  object Label7: TLabel
+    Left = 540
+    Top = 360
+    Width = 12
+    Height = 26
+    Caption = '...'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label1: TLabel
+    Left = 272
+    Top = 24
+    Width = 310
+    Height = 26
+    Caption = 'Toto est parti en vacances en Italie'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label2: TLabel
+    Left = 280
+    Top = 56
+    Width = 299
+    Height = 26
+    Caption = 'avec 2000 francs belges. Sachant'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label3: TLabel
+    Left = 304
+    Top = 88
+    Width = 248
+    Height = 26
+    Caption = 'qu'#39'il a dépensé 48000 lires, '
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label4: TLabel
+    Left = 304
+    Top = 120
+    Width = 268
+    Height = 26
+    Caption = 'combien lui reste-t-il d'#39'euros ?'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label5: TLabel
+    Left = 192
+    Top = 360
+    Width = 174
+    Height = 26
+    Caption = 'C'#39'est facile, voyons!'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label6: TLabel
+    Left = 392
+    Top = 280
+    Width = 133
+    Height = 26
+    Caption = 'La réponse est '
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object Label8: TLabel
+    Left = 464
+    Top = 312
+    Width = 60
+    Height = 26
+    Caption = 'euros...'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object MaskEdit1: TMaskEdit
+    Left = 424
+    Top = 312
+    Width = 33
+    Height = 23
+    BorderStyle = bsNone
+    Color = clWhite
+    EditMask = '00;0;*'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    MaxLength = 2
+    ParentFont = False
+    TabOrder = 0
+    OnChange = MaskEdit1Change
+  end
+end

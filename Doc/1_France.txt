@@ -1,0 +1,21 @@
+TITRE : France
+ID : france
+------------------------------------------------------------
+
+Lieux : Tour Eiffel, Boulangerie, Bar 'Chez Marcel', Gare.
+
+[ Exemple de Flux : Faire du Pain ]
+>>> CODE START
+État initial : pain = 0, pate = 0
+Objectif : Collecter FARINE, SEL, EAU, LEVURE.
+
+Logique :
+- Chaque clic ingrédient : set_var [item] -1 et inc_var pate 1.
+- Validation : Si pate = 4 alors set_var pain 1.
+- Récompense : playavi boulanger2.avi + Score.
+<<< CODE END
+
+[ Autres Quêtes ]
+  - Ticket de Métro.
+  - Couturiers (Coco Chanel) et défilé.
+

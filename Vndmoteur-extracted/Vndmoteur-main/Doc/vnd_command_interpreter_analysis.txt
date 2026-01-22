@@ -1,0 +1,42 @@
+VND COMMAND INTERPRETER ANALYSIS
+================================================================================
+
+COMMAND STRINGS FOUND:
+--------------------------------------------------------------------------------
+
+'addbmp': 1 occurrence(s)
+  0x0043F82D in DATA
+
+'dec_var': 1 occurrence(s)
+  0x0043F810 in DATA
+
+'delbmp': 1 occurrence(s)
+  0x0043F834 in DATA
+
+'else': 2 occurrence(s)
+  0x0043F9F8 in DATA
+  0x0043FA14 in DATA
+
+'inc_var': 1 occurrence(s)
+  0x0043F808 in DATA
+
+'playavi': 1 occurrence(s)
+  0x0043F7A2 in DATA
+
+'playtext': 1 occurrence(s)
+  0x0043F881 in DATA
+
+'playwav': 1 occurrence(s)
+  0x0043F7B2 in DATA
+
+'runprj': 1 occurrence(s)
+  0x0043F84B in DATA
+
+'then': 3 occurrence(s)
+  0x0043F9F1 in DATA
+  0x0043FA01 in DATA
+  0x0043FA0C in DATA
+
+
+COMMAND HANDLERS (from exports):
+--------------------------------------------------------------------------------

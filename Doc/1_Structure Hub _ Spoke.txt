@@ -1,0 +1,11 @@
+TITRE : Structure Hub & Spoke
+ID : structure-hub
+------------------------------------------------------------
+
+Le jeu est construit autour d'un Hub central (Euroland) et de 15 satellites (Pays).
+
+[ Architecture ]
+  - Le Hub (euroland.vnp) : Laboratoire QG, Transvecteur, Analyse.
+  - Les Satellites : Fichiers pays (france.vnd, italie.vnd...).
+  - Noyau : frontal/start.vnd (Init) et barre/barre.vnd (Interface persistante).
+

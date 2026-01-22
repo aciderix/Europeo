@@ -1,0 +1,53 @@
+Voici le tableau de correspondance précis, extrait directement de votre fichier :
+1. Les 3 "Zones" (Colonnes)
+Le jeu définit 3 emplacements pour poser les vêtements (les propriétés _1, _2, _3 dans le code) :
+Zone 1 (Gauche) : Environ Left = 30
+Zone 2 (Milieu) : Environ Left = 170
+Zone 3 (Droite) : Environ Left = 320
+2. Où va chaque image ? (Coordonnées exactes)
+Voici où le code indique de placer chaque image si le joueur la lâche dans une colonne.
+LES PANTALONS / BAS (Doivent aller en bas)
+Image_2.bmp (Im_bas_3)
+Si Gauche : Left: 32, Top: 230
+Si Milieu : Left: 178, Top: 230
+Si Droite : Left: 326, Top: 230
+Image_3.bmp (Im_bas_2)
+Si Gauche : Left: 26, Top: 228
+Si Milieu : Left: 172, Top: 228
+Si Droite : Left: 318, Top: 222
+Image_4.bmp (Im_bas_1)
+Si Gauche : Left: 34, Top: 232
+Si Milieu : Left: 180, Top: 232
+Si Droite : Left: 327, Top: 232
+LES CHAPEAUX (Doivent aller en haut)
+Image_5.bmp (im_chap_2)
+Si Gauche : Left: 54, Top: 20
+Si Milieu : Left: 200, Top: 24
+Si Droite : Left: 346, Top: 22
+Image_6.bmp (im_chap_3)
+Si Gauche : Left: 44, Top: 50
+Si Milieu : Left: 190, Top: 50
+Si Droite : Left: 338, Top: 50
+Image_7.bmp (im_chap_1)
+Si Gauche : Left: 46, Top: 48
+Si Milieu : Left: 192, Top: 52
+Si Droite : Left: 338, Top: 52
+LES VESTES / HAUTS (Doivent aller au milieu)
+Image_8.bmp (Im_haut_2)
+Si Gauche : Left: 10, Top: 126
+Si Milieu : Left: 156, Top: 126
+Si Droite : Left: 302, Top: 128
+Image_9.bmp (Im_haut_1)
+Si Gauche : Left: 16, Top: 126
+Si Milieu : Left: 162, Top: 126
+Si Droite : Left: 310, Top: 126
+Image_10.bmp (Im_haut_3)
+Si Gauche : Left: 12, Top: 126
+Si Milieu : Left: 163, Top: 126
+Si Droite : Left: 304, Top: 126
+3. La Solution du Puzzle (Pour Gagner)
+Bien que le code permette de mettre n'importe quel chapeau sur n'importe quelle tête (techniquement), pour avoir le message "GAGNE", la logique des noms de fichiers (_1, _2, _3) indique qu'il faut les regrouper ainsi :
+Colonne	Chapeau (Tête)	Veste (Corps)	Pantalon (Jambes)
+Gauche	Image_7 (im_chap_1)	Image_9 (Im_haut_1)	Image_4 (Im_bas_1)
+Milieu	Image_5 (im_chap_2)	Image_8 (Im_haut_2)	Image_3 (Im_bas_2)
+Droite	Image_6 (im_chap_3)	Image_10 (Im_haut_3)	Image_2 (Im_bas_3)

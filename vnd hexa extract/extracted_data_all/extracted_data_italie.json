@@ -1,0 +1,5272 @@
+{
+  "file_info": {
+    "name": "italie.vnd",
+    "size": 74280,
+    "total_strings": 1623
+  },
+  "all_strings": {
+    "00000009": "VNFILE",
+    "00000013": "2.13$",
+    "0000001F": "Europeo",
+    "0000002A": "Sopra Multimedia",
+    "0000003E": "5D51F233",
+    "0000006E": "..\\VnStudio\\vnresmod.dll",
+    "0000008E": "QUESTION",
+    "0000009E": "REPONSE",
+    "000000AD": "SACADOS",
+    "000000BC": "JEU",
+    "000000C7": "BIDON",
+    "000000D4": "CAPITALE",
+    "000000E4": "CISEAUX",
+    "000000F3": "MENU",
+    "000000FF": "PIZZA",
+    "0000010C": "CPAYS",
+    "00000119": "COSTUME",
+    "00000128": "LOUPE",
+    "00000135": "CMENU1",
+    "00000143": "CMENU2",
+    "00000151": "CMENU3",
+    "0000015F": "MILLEEURO",
+    "00000170": "CALC",
+    "0000017C": "TELEPHONE",
+    "0000018D": "ACTIVE",
+    "0000019B": "FRANCS",
+    "000001A9": "DELPHITEST1",
+    "000001BC": "DELPHITEST2",
+    "000001CF": "COMPTEUR1",
+    "000001E0": "COMPTEUR2",
+    "000001F1": "COMPTEUR3",
+    "00000202": "RAQUETTE",
+    "00000212": "REPONSEM",
+    "00000222": "AFFICHEM",
+    "00000232": "PIECE",
+    "0000023F": "DICO",
+    "0000024B": "BEETHOVEN",
+    "0000025C": "PHOTO",
+    "00000269": "SCOTCH",
+    "00000277": "CLE",
+    "00000282": "NOTE",
+    "0000028E": "MAUVAISENOTE",
+    "000002A2": "TAILLEPIERRE",
+    "000002B6": "EXPO",
+    "000002C2": "CHEVAL",
+    "000002D0": "SABOT2",
+    "000002DE": "RIZ",
+    "000002E9": "NUMERO",
+    "000002F7": "PALME",
+    "00000304": "BOUEE",
+    "00000311": "RESSORT",
+    "00000320": "HARPON",
+    "0000032E": "MASQUE",
+    "0000033C": "BOUT_PLO",
+    "0000034C": "BALLON1",
+    "0000035B": "PLONGE",
+    "00000369": "GRECQUESTION",
+    "0000037D": "GRECREPONSE",
+    "00000390": "FIOLEGRECE",
+    "000003A2": "ORGUE",
+    "000003AF": "GUITARE",
+    "000003BE": "PIER_BERLIN",
+    "000003D1": "MASSE",
+    "000003DE": "JUSTEPRIXOBJ",
+    "000003F2": "JUSTEPRIXEURO",
+    "00000407": "JUSTEPRIXCLIC",
+    "0000041C": "JUSTEPRIX1",
+    "0000042E": "JUSTEPRIX10",
+    "00000441": "JUSTEPRIX15",
+    "00000454": "JUSTEPRIX20",
+    "00000467": "JUSTEPRIX25",
+    "0000047A": "JUSTEPRIX30",
+    "0000048D": "JUSTEPRIX50",
+    "000004A0": "JUSTEPRIX100",
+    "000004B4": "JUSTEPRIXSCORE",
+    "000004CA": "PAIN",
+    "000004D6": "HELICE",
+    "000004E4": "SCORE",
+    "000004F1": "CARTETOUR",
+    "00000502": "BUS",
+    "0000050D": "LEVRIERNUMERO",
+    "00000522": "LEVRIERPARI",
+    "00000535": "LEVRIERRESULTAT",
+    "0000054C": "PARFUM",
+    "0000055A": "PEPE",
+    "00000566": "CASTAGNETTE",
+    "00000579": "DANSE",
+    "00000586": "TICKET",
+    "00000594": "TICKET_A",
+    "000005A4": "RUBAN",
+    "000005B1": "CHIANTI",
+    "000005C0": "MATH",
+    "000005CC": "PALETTE",
+    "000005DB": "PEINTRE",
+    "000005EA": "SCOREPEINTRE",
+    "000005FE": "HOTTE",
+    "0000060B": "FROG",
+    "00000617": "CPHOTO",
+    "00000625": "FIOLEGRECE2",
+    "00000638": "FIOLEVASE",
+    "00000649": "ROUEDENT",
+    "00000659": "VIOLON",
+    "00000667": "MARMOTTE",
+    "00000677": "MUSIC",
+    "00000684": "FIOLEAUTR",
+    "00000695": "PARTITION",
+    "000006A6": "ORGE",
+    "000006B2": "TONDEUSE",
+    "000006C2": "SIROP",
+    "000006CF": "LEVURE",
+    "000006DD": "CLEJAUNE",
+    "000006ED": "CLEROUGE",
+    "000006FD": "CLEVERTE",
+    "0000070D": "FIOLEITALIE",
+    "00000720": "API",
+    "0000072B": "TRANS",
+    "00000738": "COLOMB",
+    "00000746": "PASTEUR",
+    "00000755": "PORTESECRETE",
+    "00000769": "BOITE",
+    "00000776": "PONPON",
+    "00000784": "PONPONOR",
+    "00000794": "FINIPONPON",
+    "000007A6": "CORNEMUSE",
+    "000007B7": "NESSIE",
+    "000007C5": "AP_PHOTO",
+    "000007D5": "ALLEMAGNE",
+    "000007E6": "FIOLE",
+    "000007F3": "FRANCE",
+    "00000801": "ANGLETERRE",
+    "00000813": "AUTRICHE",
+    "00000823": "BELGIQUE",
+    "00000833": "EUROLAND",
+    "00000843": "DANEMARK",
+    "00000853": "ECOSSE",
+    "00000861": "ESPAGNE",
+    "00000870": "FINLANDE",
+    "00000880": "GRECE",
+    "0000088D": "PAYSBAS",
+    "0000089C": "IRLANDE",
+    "000008AB": "ITALIE",
+    "000008B9": "PORTUGAL",
+    "000008C9": "SUEDE",
+    "000008D6": "FIOLEECOSSE",
+    "000008E9": "FIOLEIRLANDE",
+    "000008FD": "FIOLEESPAGNE",
+    "00000911": "FIOLESUEDE",
+    "00000923": "FIOLEFINLANDE",
+    "00000938": "FIOLEAUTRICHE",
+    "0000094D": "FIOLEPAYSBAS",
+    "00000961": "FIOLEESPAGNE2",
+    "00000976": "FIOLEANGLETERRE",
+    "0000098D": "OCCUPE1",
+    "0000099C": "OCCUPE2",
+    "000009AB": "OCCUPE3",
+    "000009BA": "OCCUPE4",
+    "000009C9": "OCCUPE5",
+    "000009D8": "OCCUPE6",
+    "000009E7": "OCCUPE7",
+    "000009F6": "OCCUPE8",
+    "00000A05": "OCCUPE9",
+    "00000A14": "OCCUPE10",
+    "00000A24": "OCCUPE11",
+    "00000A34": "OCCUPE12",
+    "00000A44": "OCCUPE",
+    "00000A52": "FIOLEOK",
+    "00000A61": "POIVROUGE",
+    "00000A72": "AIL",
+    "00000A7D": "BONNET",
+    "00000A8B": "SKATE",
+    "00000A98": "FARINE",
+    "00000AA6": "DORADE",
+    "00000AB4": "TEMPSLAPIN",
+    "00000AC6": "BOUTEILLE",
+    "00000AD7": "SAC",
+    "00000AE2": "CHEWING",
+    "00000AF1": "PAPIERCADO",
+    "00000B03": "SABOT1",
+    "00000B11": "TONO",
+    "00000B1D": "OEUF",
+    "00000B29": "BONUS4",
+    "00000B37": "BONUS1",
+    "00000B45": "ALLUMETTE",
+    "00000B56": "BONUS2",
+    "00000B64": "BURETTE",
+    "00000B73": "BONUS3",
+    "00000B81": "NUMPAYS",
+    "00000B90": "NUMPAYS2",
+    "00000BA0": "NUMPAYSSCORE",
+    "00000BB4": "BONUS6",
+    "00000BC2": "BONUS9",
+    "00000BD0": "CHAMPAGNE",
+    "00000BE1": "BONUS5",
+    "00000BEF": "TULIPEJAUNE",
+    "00000C02": "BONUS8",
+    "00000C10": "BONUS7",
+    "00000C1E": "ROUGE",
+    "00000C2B": "CHAMPAGNE2",
+    "00000C3D": "PATE",
+    "00000C49": "SALIERE",
+    "00000C58": "BOUT_EAU",
+    "00000C68": "JUSTEPRIX",
+    "00000C79": "PUCE",
+    "00000C85": "HUILE",
+    "00000C92": "LAINE",
+    "00000C9F": "FROMAGE",
+    "00000CAE": "POIVJAUNE",
+    "00000CBF": "OIGNON",
+    "00000CCD": "MOULE",
+    "00000CDA": "PEINTRE1",
+    "00000CEA": "SECHE",
+    "00000CF7": "BLEU",
+    "00000D03": "GLO",
+    "00000D0E": "CIRE",
+    "00000D1A": "MACHINE",
+    "00000D29": "BOUBOU",
+    "00000D37": "SOUSMARINOK",
+    "00000D4A": "EAUBIERE",
+    "00000D5A": "HOUBLON",
+    "00000D69": "BIEREOK",
+    "00000D78": "PISE",
+    "00000D84": "VINCI",
+    "00000D91": "NON",
+    "00000D9C": "BONUS26",
+    "00000DAB": "BONUS25",
+    "00000DBA": "BONUS24",
+    "00000DC9": "BONUS23",
+    "00000DD8": "OUTIL",
+    "00000DE5": "OUTIL2",
+    "00000DF3": "OUTIL3",
+    "00000E01": "LAPINSORTIE",
+    "00000E14": "TOURNEVIS",
+    "00000E25": "NAINOK",
+    "00000E33": "PINCE",
+    "00000E40": "PIERREOR",
+    "00000E50": "NBINGR",
+    "00000E5E": "INGROK",
+    "00000E6C": "OLIVE",
+    "00000E79": "BOUILLON",
+    "00000E89": "CHOUETTE",
+    "00000E99": "CHOUETTEOR",
+    "00000EAB": "BIERESO",
+    "00000EBA": "BETAIL",
+    "00000EC8": "VASE",
+    "00000ED4": "BOTTE",
+    "00000EE1": "HARPEOK",
+    "00000EF0": "PUBOK",
+    "00000EFD": "ERREUR7OK",
+    "00000F0E": "ERREUR7D1",
+    "00000F1F": "ERREUR7D2",
+    "00000F30": "ERREUR7D3",
+    "00000F41": "ERREUR7D4",
+    "00000F52": "ERREUR7D5",
+    "00000F63": "ERREUR7D6",
+    "00000F74": "ERREUR7D7",
+    "00000F85": "BONUS14",
+    "00000F94": "BONUS30",
+    "00000FA3": "MESP",
+    "00000FAF": "MGRE",
+    "00000FBB": "MGRA",
+    "00000FC7": "MITA",
+    "00000FD3": "MALL",
+    "00000FDF": "MFRA",
+    "00000FEB": "MARMOT",
+    "00000FF9": "BONUS15",
+    "00001008": "BONUS16",
+    "00001017": "BONUS18",
+    "00001026": "BONUS19",
+    "00001035": "BONUS20",
+    "00001044": "JUSTEPRIXQUESTION",
+    "0000105D": "JUSTEPRIXREPONSE",
+    "00001075": "JUSTEPRIXOK",
+    "00001088": "PUNK",
+    "00001094": "SOUSMARINOK2",
+    "000010A8": "ERREUR7OK2",
+    "000010BA": "CASTA",
+    "000010C7": "EAUPAIN",
+    "000010D6": "PAINOK",
+    "000010E4": "BONUS29",
+    "000010F3": "BONUS22",
+    "00001102": "BOUCHE",
+    "00001110": "LAPIN",
+    "0000113B": "LOC",
+    "00001146": "POGNON",
+    "00001154": "OBJETSFERMIER",
+    "00001169": "DRUIDE",
+    "00001177": "DEJACLEJAUNE",
+    "000011AB": "clapotis.wav",
+    "000011C7": "a_venise.bmp",
+    "0000123C": "rollover\\porte1.bmp 0 762 247",
+    "00001265": "18 0 #000000 Comic sans MS",
+    "0000128B": "850 30 125 365 0 La grande biblioth",
+    "000012AF": "que",
+    "000012BE": "850 50 125 365 0 de Venise",
+    "000012E4": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "0000135C": "18 0 #000000 Comic sans MS",
+    "00001382": "980 30 125 365 0 Le plus grand",
+    "000013AC": "980 50 125 365 0 couturier du mondef",
+    "000013FB": "18 0 #000000 Comic sans MS",
+    "00001421": "2360 30 125 365 0 Une pizzeria",
+    "0000144B": "chianti = 0 then scene 4",
+    "0000146F": "18 0 #000000 Comic sans MS",
+    "00001495": "chianti = 0 then playtext 1500 20 125 365 0 Une pizzeria",
+    "000014D9": "chianti != 0 then playtext 1500 20 125 365 0 Tu as d",
+    "00001510": "jou",
+    "00001521": "rollover\\pano.bmp 0 1593 174",
+    "00001549": "100",
+    "00001558": "rollover\\pano1.bmp 0 1593 174",
+    "00001581": "100",
+    "00001590": "rollover\\pano.bmp 0 1593 174",
+    "000015B8": "100",
+    "000015C7": "rollover\\pano1.bmp 0 1593 174",
+    "000015F0": "100",
+    "000015FF": "rollover\\pano.bmp 0 1593 174",
+    "00001627": "100",
+    "00001636": "rollover\\pano1.bmp 0 1593 174",
+    "0000165F": "100",
+    "0000166E": "rollover\\pano.bmp 0 1593 174",
+    "00001696": "100",
+    "000016A5": "rollover\\pano1.bmp 0 1593 174e",
+    "000016FA": "non 0",
+    "0000170B": "clerouge = 2 then inc_var non 1",
+    "00001736": "ballon1 = 2 then inc_var non 1",
+    "00001760": "bouee = 2 then inc_var non 1",
+    "00001788": "bout_plo = 2 then inc_var non 1",
+    "000017B3": "bus = 2 then inc_var non 1",
+    "000017D9": "castagnette = 2 then inc_var non 1",
+    "00001807": "ciseau = 2 then inc_var non 1",
+    "00001830": "clejaune = 2 then inc_var non 1",
+    "0000185B": "guitare = 2 then inc_var non 1",
+    "00001885": "harpon = 2 then inc_var non 1",
+    "000018AE": "helice = 2 then inc_var non 1",
+    "000018D7": "loupe = 2 then inc_var non 1",
+    "000018FF": "masque = 2 then inc_var non 1",
+    "00001928": "masse = 2 then inc_var non 1",
+    "00001950": "pain = 2 then inc_var non 1",
+    "00001977": "palme = 2 then inc_var non 1",
+    "0000199F": "photo = 2 then inc_var non 1",
+    "000019C7": "piece = 2 then inc_var non 1",
+    "000019EF": "pier_berlin = 2 then inc_var non 1",
+    "00001A1D": "raquette = 2 then inc_var non 1",
+    "00001A48": "ressort  = 2 then inc_var non 1",
+    "00001A73": "cheval  = 2 then inc_var non 1",
+    "00001A9D": "riz = 2 then inc_var non 1",
+    "00001AC3": "ruban = 2 then inc_var non 1",
+    "00001AEB": "sabot1 = 2 then inc_var non 1",
+    "00001B14": "sabot2 = 2 then inc_var non 1",
+    "00001B3D": "scotch = 2 then inc_var non 1",
+    "00001B66": "taillepierre = 2 then inc_var non 1",
+    "00001B95": "ap_photo = 2 then inc_var non 1",
+    "00001BC0": "houblon = 2 then inc_var non 1",
+    "00001BEA": "chewing = 2 then inc_var non 1",
+    "00001C14": "cleverte = 2 then inc_var non 1",
+    "00001C3F": "partition = 2 then inc_var non 1",
+    "00001C6B": "laine = 2 then inc_var non 1",
+    "00001C93": "tondeuse = 2 then inc_var non 1",
+    "00001CBE": "tournevis = 2 then inc_var non 1",
+    "00001CEA": "cire = 2 then inc_var non 1",
+    "00001D11": "chianti = 2 then inc_var non 1",
+    "00001D3B": "rouedent = 2 then inc_var non 1",
+    "00001D66": "pierreor = 2 then inc_var non 1",
+    "00001D91": "papiercado = 2 then inc_var non 1",
+    "00001DBE": "hotte = 2 then inc_var non 1",
+    "00001DE6": "levure = 2 then inc_var non 1",
+    "00001E0F": "bouteille = 2 then inc_var non 1",
+    "00001E3B": "parfum = 2 then inc_var non 1",
+    "00001E64": "rouge = 2 then inc_var non 1",
+    "00001E8C": "bisous = 2 then inc_var non 1",
+    "00001EB5": "api  = 2 then inc_var non 1",
+    "00001EDC": "pince = 2 then inc_var non 1",
+    "00001F04": "tulipejaune = 2 then inc_var non 1",
+    "00001F32": "tulipeorange = 2 then inc_var non 1",
+    "00001F61": "tuliperouge = 2 then inc_var non 1",
+    "00001F8F": "tulipeverte  = 2 then inc_var non 1",
+    "00001FBE": "tulipeviolet = 2 then inc_var non 1",
+    "00001FED": "farine = 2 then inc_var non 1",
+    "00002016": "saliere = 2 then inc_var non 1",
+    "00002040": "bougie = 2 then inc_var non 1",
+    "00002069": "seche = 2 then inc_var non 1",
+    "00002091": "bout_eau = 2 then inc_var non 1",
+    "000020BC": "dorade = 2 then inc_var non 1",
+    "000020E5": "moule = 2 then inc_var non 1",
+    "0000210D": "ail = 2 then inc_var non 1",
+    "00002133": "poivrouge = 2 then inc_var non 1",
+    "0000215F": "poivjaune = 2 then inc_var non 1",
+    "0000218B": "oignon  = 2 then inc_var non 1",
+    "000021B5": "olive = 2 then inc_var non 1",
+    "000021DD": "bouillon = 2 then inc_var non 1",
+    "00002208": "violon = 2 then inc_var non 1",
+    "00002231": "skate = 2 then inc_var non 1",
+    "00002259": "champagne = 2 then inc_var non 1",
+    "00002285": "fromage = 2 then inc_var non 1",
+    "000022AF": "bonnet = 2 then inc_var non 1",
+    "000022D8": "huile = 2 then inc_var non 1",
+    "00002300": "orge = 2 then inc_var non 1",
+    "00002327": "burette = 2 then inc_var non 1",
+    "00002351": "allumette = 2 then inc_var non 1",
+    "0000237D": "chouetteor = 2 then inc_var non 1",
+    "000023AA": "chouette = 2 then inc_var non 1",
+    "000023D5": "sirop = 2 then inc_var non 1",
+    "000023FD": "fiolegrece = 2 then inc_var non 1",
+    "0000242A": "fiolegrece2 = 2 then inc_var non 1",
+    "00002458": "fioleecosse = 2 then inc_var non 1",
+    "00002486": "fioleirlande = 2 then inc_var non 1",
+    "000024B5": "fioleespagne = 2 then inc_var non 1",
+    "000024E4": "fiolesuede = 2 then inc_var non 1",
+    "00002511": "fiolefinlande = 2 then inc_var non 1",
+    "00002541": "fioleautriche = 2 then inc_var non 1",
+    "00002571": "fiolepaysbas = 2 then inc_var non 1",
+    "000025A0": "fioleespagne2 = 2 then inc_var non 1",
+    "000025D0": "fioleitalie = 2 then inc_var non 1",
+    "000025FE": "fioleangleterre = 2 then inc_var non 1",
+    "00002630": "non = 0 then playavi vespa.avi 1 1786 174 1881 264",
+    "0000266E": "non = 1 then playavi ves.avi 1 1786 174 1881 264",
+    "000026B7": "18 0 #000000 Comic sans MS",
+    "000026DD": "1690 220 125 365 0 Un loueur",
+    "00002705": "1690 240 125 365 0 de scootersl",
+    "0000274F": "18 0 #000000 Comic sans MS",
+    "00002775": "345 295 125 365 0 Un gondolier",
+    "000027AB": "non 0",
+    "000027BC": "clerouge = 2 then inc_var non 1",
+    "000027E7": "ballon1 = 2 then inc_var non 1",
+    "00002811": "bouee = 2 then inc_var non 1",
+    "00002839": "bout_plo = 2 then inc_var non 1",
+    "00002864": "bus = 2 then inc_var non 1",
+    "0000288A": "castagnette = 2 then inc_var non 1",
+    "000028B8": "ciseau = 2 then inc_var non 1",
+    "000028E1": "clejaune = 2 then inc_var non 1",
+    "0000290C": "guitare = 2 then inc_var non 1",
+    "00002936": "harpon = 2 then inc_var non 1",
+    "0000295F": "helice = 2 then inc_var non 1",
+    "00002988": "loupe = 2 then inc_var non 1",
+    "000029B0": "masque = 2 then inc_var non 1",
+    "000029D9": "masse = 2 then inc_var non 1",
+    "00002A01": "pain = 2 then inc_var non 1",
+    "00002A28": "palme = 2 then inc_var non 1",
+    "00002A50": "photo = 2 then inc_var non 1",
+    "00002A78": "piece = 2 then inc_var non 1",
+    "00002AA0": "pier_berlin = 2 then inc_var non 1",
+    "00002ACE": "raquette = 2 then inc_var non 1",
+    "00002AF9": "ressort  = 2 then inc_var non 1",
+    "00002B24": "cheval  = 2 then inc_var non 1",
+    "00002B4E": "riz = 2 then inc_var non 1",
+    "00002B74": "ruban = 2 then inc_var non 1",
+    "00002B9C": "sabot1 = 2 then inc_var non 1",
+    "00002BC5": "sabot2 = 2 then inc_var non 1",
+    "00002BEE": "scotch = 2 then inc_var non 1",
+    "00002C17": "taillepierre = 2 then inc_var non 1",
+    "00002C46": "ap_photo = 2 then inc_var non 1",
+    "00002C71": "houblon = 2 then inc_var non 1",
+    "00002C9B": "chewing = 2 then inc_var non 1",
+    "00002CC5": "cleverte = 2 then inc_var non 1",
+    "00002CF0": "partition = 2 then inc_var non 1",
+    "00002D1C": "laine = 2 then inc_var non 1",
+    "00002D44": "tondeuse = 2 then inc_var non 1",
+    "00002D6F": "tournevis = 2 then inc_var non 1",
+    "00002D9B": "cire = 2 then inc_var non 1",
+    "00002DC2": "rouedent = 2 then inc_var non 1",
+    "00002DED": "pierreor = 2 then inc_var non 1",
+    "00002E18": "papiercado = 2 then inc_var non 1",
+    "00002E45": "hotte = 2 then inc_var non 1",
+    "00002E6D": "levure = 2 then inc_var non 1",
+    "00002E96": "bouteille = 2 then inc_var non 1",
+    "00002EC2": "parfum = 2 then inc_var non 1",
+    "00002EEB": "rouge = 2 then inc_var non 1",
+    "00002F13": "bisous = 2 then inc_var non 1",
+    "00002F3C": "api  = 2 then inc_var non 1",
+    "00002F63": "pince = 2 then inc_var non 1",
+    "00002F8B": "tulipejaune = 2 then inc_var non 1",
+    "00002FB9": "tulipeorange = 2 then inc_var non 1",
+    "00002FE8": "tuliperouge = 2 then inc_var non 1",
+    "00003016": "tulipeverte  = 2 then inc_var non 1",
+    "00003045": "tulipeviolet = 2 then inc_var non 1",
+    "00003074": "farine = 2 then inc_var non 1",
+    "0000309D": "saliere = 2 then inc_var non 1",
+    "000030C7": "bougie = 2 then inc_var non 1",
+    "000030F0": "seche = 2 then inc_var non 1",
+    "00003118": "bout_eau = 2 then inc_var non 1",
+    "00003143": "dorade = 2 then inc_var non 1",
+    "0000316C": "moule = 2 then inc_var non 1",
+    "00003194": "ail = 2 then inc_var non 1",
+    "000031BA": "poivrouge = 2 then inc_var non 1",
+    "000031E6": "poivjaune = 2 then inc_var non 1",
+    "00003212": "oignon  = 2 then inc_var non 1",
+    "0000323C": "olive = 2 then inc_var non 1",
+    "00003264": "bouillon = 2 then inc_var non 1",
+    "0000328F": "violon = 2 then inc_var non 1",
+    "000032B8": "skate = 2 then inc_var non 1",
+    "000032E0": "champagne = 2 then inc_var non 1",
+    "0000330C": "fromage = 2 then inc_var non 1",
+    "00003336": "bonnet = 2 then inc_var non 1",
+    "0000335F": "huile = 2 then inc_var non 1",
+    "00003387": "orge = 2 then inc_var non 1",
+    "000033AE": "burette = 2 then inc_var non 1",
+    "000033D8": "allumette = 2 then inc_var non 1",
+    "00003404": "chouetteor = 2 then inc_var non 1",
+    "00003431": "chouette = 2 then inc_var non 1",
+    "0000345C": "sirop = 2 then inc_var non 1",
+    "00003484": "fiolegrece = 2 then inc_var non 1",
+    "000034B1": "fiolegrece2 = 2 then inc_var non 1",
+    "000034DF": "fioleecosse = 2 then inc_var non 1",
+    "0000350D": "fioleirlande = 2 then inc_var non 1",
+    "0000353C": "fioleespagne = 2 then inc_var non 1",
+    "0000356B": "fiolesuede = 2 then inc_var non 1",
+    "00003598": "fiolefinlande = 2 then inc_var non 1",
+    "000035C8": "fioleautriche = 2 then inc_var non 1",
+    "000035F8": "fiolepaysbas = 2 then inc_var non 1",
+    "00003627": "fioleespagne2 = 2 then inc_var non 1",
+    "00003657": "fioleitalie = 2 then inc_var non 1",
+    "00003685": "fioleangleterre = 2 then inc_var non 1",
+    "000036B7": "chianti = 2 then inc_var non 2",
+    "000036E1": "non = 2 then playavi gond2.avi 1 553 238 617 296",
+    "0000371D": "chianti = 2 then dec_var chianti 3",
+    "0000374B": "chianti = -1 then inc_var non 4",
+    "00003776": "non = 0 then playavi gond1.avi 1 552 238 616 296",
+    "000037B2": "non = 1 then playavi gond99.avi 1 552 238 616 296",
+    "000037EF": "chianti = -1 then defcursor fleche.cur",
+    "00003821": "clapotis.wav 2",
+    "0000383B": "chianti = -1 then playavi gondol.avi 1 158 266 510 400",
+    "0000387D": "chianti = -1 then scene 5l",
+    "000038D0": "18 0 #000000 Comic sans MS",
+    "000038F6": "200 325 125 365 0 Des informations sur Venisej",
+    "0000394F": "18 0 #000000 Comic sans MS",
+    "00003975": "245 285 125 365 0 Indispensable pour passer",
+    "000039AC": "245 305 125 365 0 de l'autre cot",
+    "000039CD": "de la rive.d",
+    "00003A05": "18 0 #ff0000 Comic sans MS",
+    "00003A2B": "1500 350 125 365 0 Un scooterd",
+    "00003A74": "18 0 #000000 Comic sans MS",
+    "00003A9A": "890 30 125 365 0 Ferm",
+    "00003AB0": "pour cause",
+    "00003AC7": "890 50 125 365 0 d'inventaired",
+    "00003B24": "italie.wav",
+    "00003B3E": "biblio.bmp",
+    "00003BA6": "18 0 #ffffff Comic sans MS",
+    "00003BCC": "10 365 125 365 0 Le livre de L",
+    "00003BEB": "onard",
+    "00003BFC": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54j",
+    "00003C68": "22 0 #ffffff Comic sans MS",
+    "00003C8E": "310 365 125 365 0 SORTIEh",
+    "00003CE0": "18 0 #ffffff Comic sans MS",
+    "00003D06": "10 365 125 365 0 Le Colis",
+    "00003D5B": "18 0 #ffffff Comic sans MS",
+    "00003D81": "10 365 125 365 0 La colonne Trajanej",
+    "00003DDE": "18 0 #ffffff Comic sans MS",
+    "00003E04": "10 365 125 365 0 La fondation de Romej",
+    "00003E63": "18 0 #ffffff Comic sans MS",
+    "00003E89": "10 365 125 365 0 Le P",
+    "00003ECB": "18 0 #ffffff Comic sans MS",
+    "00003EF1": "loupe = 0 then playtext 310 325 125 365 0 Une louped",
+    "00003F74": "boutiq.bmp",
+    "00003FE7": "italie.wav 6",
+    "00003FFF": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54h",
+    "0000405E": "18 0 #000000 Comic sans MS",
+    "00004084": "120 260 125 365 0 C'est lui,",
+    "000040AC": "120 280 125 365 0 le plus grand couturier",
+    "000040E1": "120 300 125 365 0 du Mooonde !",
+    "0000410B": "non 0",
+    "0000411C": "clerouge = 2 then inc_var non 1",
+    "00004147": "ballon1 = 2 then inc_var non 1",
+    "00004171": "bouee = 2 then inc_var non 1",
+    "00004199": "bout_plo = 2 then inc_var non 1",
+    "000041C4": "bus = 2 then inc_var non 1",
+    "000041EA": "castagnette = 2 then inc_var non 1",
+    "00004218": "ciseau = 2 then inc_var non 1",
+    "00004241": "clejaune = 2 then inc_var non 1",
+    "0000426C": "guitare = 2 then inc_var non 1",
+    "00004296": "harpon = 2 then inc_var non 1",
+    "000042BF": "helice = 2 then inc_var non 1",
+    "000042E8": "loupe = 2 then inc_var non 1",
+    "00004310": "masque = 2 then inc_var non 1",
+    "00004339": "masse = 2 then inc_var non 1",
+    "00004361": "pain = 2 then inc_var non 1",
+    "00004388": "palme = 2 then inc_var non 1",
+    "000043B0": "photo = 2 then inc_var non 1",
+    "000043D8": "piece = 2 then inc_var non 1",
+    "00004400": "pier_berlin = 2 then inc_var non 1",
+    "0000442E": "raquette = 2 then inc_var non 1",
+    "00004459": "ressort  = 2 then inc_var non 1",
+    "00004484": "cheval  = 2 then inc_var non 1",
+    "000044AE": "riz = 2 then inc_var non 1",
+    "000044D4": "ruban = 2 then inc_var non 1",
+    "000044FC": "sabot1 = 2 then inc_var non 1",
+    "00004525": "sabot2 = 2 then inc_var non 1",
+    "0000454E": "scotch = 2 then inc_var non 1",
+    "00004577": "taillepierre = 2 then inc_var non 1",
+    "000045A6": "ap_photo = 2 then inc_var non 1",
+    "000045D1": "houblon = 2 then inc_var non 1",
+    "000045FB": "chewing = 2 then inc_var non 1",
+    "00004625": "cleverte = 2 then inc_var non 1",
+    "00004650": "partition = 2 then inc_var non 1",
+    "0000467C": "laine = 2 then inc_var non 1",
+    "000046A4": "tondeuse = 2 then inc_var non 1",
+    "000046CF": "tournevis = 2 then inc_var non 1",
+    "000046FB": "cire = 2 then inc_var non 1",
+    "00004722": "chianti = 2 then inc_var non 1",
+    "0000474C": "rouedent = 2 then inc_var non 1",
+    "00004777": "pierreor = 2 then inc_var non 1",
+    "000047A2": "papiercado = 2 then inc_var non 1",
+    "000047CF": "hotte = 2 then inc_var non 1",
+    "000047F7": "levure = 2 then inc_var non 1",
+    "00004820": "bouteille = 2 then inc_var non 1",
+    "0000484C": "parfum = 2 then inc_var non 1",
+    "00004875": "rouge = 2 then inc_var non 1",
+    "0000489D": "bisous = 2 then inc_var non 1",
+    "000048C6": "api  = 2 then inc_var non 1",
+    "000048ED": "pince = 2 then inc_var non 1",
+    "00004915": "tulipejaune = 2 then inc_var non 1",
+    "00004943": "tulipeorange = 2 then inc_var non 1",
+    "00004972": "tuliperouge = 2 then inc_var non 1",
+    "000049A0": "tulipeverte  = 2 then inc_var non 1",
+    "000049CF": "tulipeviolet = 2 then inc_var non 1",
+    "000049FE": "farine = 2 then inc_var non 1",
+    "00004A27": "saliere = 2 then inc_var non 1",
+    "00004A51": "bougie = 2 then inc_var non 1",
+    "00004A7A": "seche = 2 then inc_var non 1",
+    "00004AA2": "bout_eau = 2 then inc_var non 1",
+    "00004ACD": "dorade = 2 then inc_var non 1",
+    "00004AF6": "moule = 2 then inc_var non 1",
+    "00004B1E": "ail = 2 then inc_var non 1",
+    "00004B44": "poivrouge = 2 then inc_var non 1",
+    "00004B70": "poivjaune = 2 then inc_var non 1",
+    "00004B9C": "oignon  = 2 then inc_var non 1",
+    "00004BC6": "olive = 2 then inc_var non 1",
+    "00004BEE": "bouillon = 2 then inc_var non 1",
+    "00004C19": "violon = 2 then inc_var non 1",
+    "00004C42": "skate = 2 then inc_var non 1",
+    "00004C6A": "champagne = 2 then inc_var non 1",
+    "00004C96": "fromage = 2 then inc_var non 1",
+    "00004CC0": "bonnet = 2 then inc_var non 1",
+    "00004CE9": "huile = 2 then inc_var non 1",
+    "00004D11": "orge = 2 then inc_var non 1",
+    "00004D38": "burette = 2 then inc_var non 1",
+    "00004D62": "allumette = 2 then inc_var non 1",
+    "00004D8E": "chouetteor = 2 then inc_var non 1",
+    "00004DBB": "chouette = 2 then inc_var non 1",
+    "00004DE6": "sirop = 2 then inc_var non 1",
+    "00004E0E": "fiolegrece = 2 then inc_var non 1",
+    "00004E3B": "fiolegrece2 = 2 then inc_var non 1",
+    "00004E69": "fioleecosse = 2 then inc_var non 1",
+    "00004E97": "fioleirlande = 2 then inc_var non 1",
+    "00004EC6": "fioleespagne = 2 then inc_var non 1",
+    "00004EF5": "fiolesuede = 2 then inc_var non 1",
+    "00004F22": "fiolefinlande = 2 then inc_var non 1",
+    "00004F52": "fioleautriche = 2 then inc_var non 1",
+    "00004F82": "fiolepaysbas = 2 then inc_var non 1",
+    "00004FB1": "fioleespagne2 = 2 then inc_var non 1",
+    "00004FE1": "fioleitalie = 2 then inc_var non 1",
+    "0000500F": "fioleangleterre = 2 then inc_var non 1",
+    "00005041": "non = 0 then playavi coutur1.avi 1 317 100 378 146",
+    "0000507F": "non = 1 then playavi coutur.avi 1 317 100 378 146l",
+    "000050DC": "18 0 #000000 Comic sans MS",
+    "00005102": "ciseaux = 0 then playtext 395 300 125 365 0 Une paire",
+    "00005143": "ciseaux = 0 then playtext 395 320 125 365 0 de ciseauxd",
+    "000051A5": "rollover\\lampe.bmp 0 569 169d",
+    "000051ED": "api = 0 then playavi coutur3.avi 1 317 100 378 146",
+    "0000522B": "api = 0 then scene 24",
+    "0000524C": "18 0 #000000 Comic sans MS",
+    "00005272": "api = 0 then playtext 130 290 125 365 0 Quel d",
+    "000052A1": "sordre !",
+    "000052B5": "api != 0 then playtext 100 290 125 365 0 Gr",
+    "000052E5": "toi le couturier",
+    "00005302": "api != 0 then playtext 100 310 125 365 0 a tout rang",
+    "00005378": "resto.wav",
+    "00005391": "pizz3.bmp",
+    "000053F7": "18 0 #000000 Comic sans MS",
+    "0000541D": "350 365 125 365 0 SORTIE",
+    "00005441": "feu.avi 2 374 134 446 207",
+    "00005466": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54h",
+    "000054C5": "18 0 #ffffff Comic sans MS",
+    "000054EB": "135 265 125 365 0 Le cuisinier !",
+    "00005523": "non 0",
+    "00005534": "clerouge = 2 then inc_var non 1",
+    "0000555F": "ballon1 = 2 then inc_var non 1",
+    "00005589": "bouee = 2 then inc_var non 1",
+    "000055B1": "bout_plo = 2 then inc_var non 1",
+    "000055DC": "bus = 2 then inc_var non 1",
+    "00005602": "castagnette = 2 then inc_var non 1",
+    "00005630": "ciseau = 2 then inc_var non 1",
+    "00005659": "clejaune = 2 then inc_var non 1",
+    "00005684": "guitare = 2 then inc_var non 1",
+    "000056AE": "harpon = 2 then inc_var non 1",
+    "000056D7": "helice = 2 then inc_var non 1",
+    "00005700": "loupe = 2 then inc_var non 1",
+    "00005728": "masque = 2 then inc_var non 1",
+    "00005751": "masse = 2 then inc_var non 1",
+    "00005779": "pain = 2 then inc_var non 1",
+    "000057A0": "palme = 2 then inc_var non 1",
+    "000057C8": "photo = 2 then inc_var non 1",
+    "000057F0": "piece = 2 then inc_var non 1",
+    "00005818": "pier_berlin = 2 then inc_var non 1",
+    "00005846": "raquette = 2 then inc_var non 1",
+    "00005871": "ressort  = 2 then inc_var non 1",
+    "0000589C": "cheval  = 2 then inc_var non 1",
+    "000058C6": "riz = 2 then inc_var non 1",
+    "000058EC": "ruban = 2 then inc_var non 1",
+    "00005914": "sabot1 = 2 then inc_var non 1",
+    "0000593D": "sabot2 = 2 then inc_var non 1",
+    "00005966": "scotch = 2 then inc_var non 1",
+    "0000598F": "taillepierre = 2 then inc_var non 1",
+    "000059BE": "ap_photo = 2 then inc_var non 1",
+    "000059E9": "houblon = 2 then inc_var non 1",
+    "00005A13": "chewing = 2 then inc_var non 1",
+    "00005A3D": "cleverte = 2 then inc_var non 1",
+    "00005A68": "partition = 2 then inc_var non 1",
+    "00005A94": "laine = 2 then inc_var non 1",
+    "00005ABC": "tondeuse = 2 then inc_var non 1",
+    "00005AE7": "tournevis = 2 then inc_var non 1",
+    "00005B13": "cire = 2 then inc_var non 1",
+    "00005B3A": "chianti = 2 then inc_var non 1",
+    "00005B64": "rouedent = 2 then inc_var non 1",
+    "00005B8F": "pierreor = 2 then inc_var non 1",
+    "00005BBA": "papiercado = 2 then inc_var non 1",
+    "00005BE7": "hotte = 2 then inc_var non 1",
+    "00005C0F": "levure = 2 then inc_var non 1",
+    "00005C38": "bouteille = 2 then inc_var non 1",
+    "00005C64": "parfum = 2 then inc_var non 1",
+    "00005C8D": "rouge = 2 then inc_var non 1",
+    "00005CB5": "bisous = 2 then inc_var non 1",
+    "00005CDE": "api  = 2 then inc_var non 1",
+    "00005D05": "pince = 2 then inc_var non 1",
+    "00005D2D": "tulipejaune = 2 then inc_var non 1",
+    "00005D5B": "tulipeorange = 2 then inc_var non 1",
+    "00005D8A": "tuliperouge = 2 then inc_var non 1",
+    "00005DB8": "tulipeverte  = 2 then inc_var non 1",
+    "00005DE7": "tulipeviolet = 2 then inc_var non 1",
+    "00005E16": "farine = 2 then inc_var non 1",
+    "00005E3F": "saliere = 2 then inc_var non 1",
+    "00005E69": "bougie = 2 then inc_var non 1",
+    "00005E92": "seche = 2 then inc_var non 1",
+    "00005EBA": "bout_eau = 2 then inc_var non 1",
+    "00005EE5": "dorade = 2 then inc_var non 1",
+    "00005F0E": "moule = 2 then inc_var non 1",
+    "00005F36": "ail = 2 then inc_var non 1",
+    "00005F5C": "poivrouge = 2 then inc_var non 1",
+    "00005F88": "poivjaune = 2 then inc_var non 1",
+    "00005FB4": "oignon  = 2 then inc_var non 1",
+    "00005FDE": "olive = 2 then inc_var non 1",
+    "00006006": "bouillon = 2 then inc_var non 1",
+    "00006031": "violon = 2 then inc_var non 1",
+    "0000605A": "skate = 2 then inc_var non 1",
+    "00006082": "champagne = 2 then inc_var non 1",
+    "000060AE": "fromage = 2 then inc_var non 1",
+    "000060D8": "bonnet = 2 then inc_var non 1",
+    "00006101": "huile = 2 then inc_var non 1",
+    "00006129": "orge = 2 then inc_var non 1",
+    "00006150": "burette = 2 then inc_var non 1",
+    "0000617A": "allumette = 2 then inc_var non 1",
+    "000061A6": "chouetteor = 2 then inc_var non 1",
+    "000061D3": "chouette = 2 then inc_var non 1",
+    "000061FE": "sirop = 2 then inc_var non 1",
+    "00006226": "fiolegrece = 2 then inc_var non 1",
+    "00006253": "fiolegrece2 = 2 then inc_var non 1",
+    "00006281": "fioleecosse = 2 then inc_var non 1",
+    "000062AF": "fioleirlande = 2 then inc_var non 1",
+    "000062DE": "fioleespagne = 2 then inc_var non 1",
+    "0000630D": "fiolesuede = 2 then inc_var non 1",
+    "0000633A": "fiolefinlande = 2 then inc_var non 1",
+    "0000636A": "fioleautriche = 2 then inc_var non 1",
+    "0000639A": "fiolepaysbas = 2 then inc_var non 1",
+    "000063C9": "fioleespagne2 = 2 then inc_var non 1",
+    "000063F9": "fioleitalie = 2 then inc_var non 1",
+    "00006427": "fioleangleterre = 2 then inc_var non 1",
+    "00006459": "non = 1 then playavi pizz99.avi 1 55 78 129 164",
+    "00006494": "non = 0 then playavi pizz1.avi 1 55 78 129 164",
+    "000064CE": "non = 0 then scene 18 else playwav resto.wav 2l",
+    "00006578": "18 0 #000000 Comic sans MS",
+    "0000659E": "chianti = 0 then playtext 245 80 125 365 0 Une bouteille de chianti",
+    "000065ED": "chianti = 0 then playtext 285 100 125 365 0",
+    "0000661E": "gagner !",
+    "00006633": "chianti != 0 then playtext 245 80 125 365 0 Tu as d",
+    "00006669": "gagn",
+    "0000666F": "une",
+    "0000667F": "chianti != 0 then playtext 250 100 125 365 0 bouteille de chianti !d",
+    "00006722": "italie.wav",
+    "0000673C": "tourp.bmp",
+    "000067A2": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54g",
+    "0000680E": "18 0 #000000 Comic sans MS",
+    "00006834": "305 100 125 365 0 La tour de Pise.",
+    "00006862": "305 120 125 365 0 Tiens, on dirait qu'elle penche !f",
+    "000068C1": "18 0 #000000 Comic sans MS",
+    "000068E7": "213 41 125 365 0 Le gardien",
+    "0000691A": "non 0",
+    "0000692B": "clerouge = 2 then inc_var non 1",
+    "00006956": "ballon1 = 2 then inc_var non 1",
+    "00006980": "bouee = 2 then inc_var non 1",
+    "000069A8": "bout_plo = 2 then inc_var non 1",
+    "000069D3": "bus = 2 then inc_var non 1",
+    "000069F9": "castagnette = 2 then inc_var non 1",
+    "00006A27": "ciseau = 2 then inc_var non 1",
+    "00006A50": "clejaune = 2 then inc_var non 1",
+    "00006A7B": "guitare = 2 then inc_var non 1",
+    "00006AA5": "harpon = 2 then inc_var non 1",
+    "00006ACE": "helice = 2 then inc_var non 1",
+    "00006AF7": "loupe = 2 then inc_var non 1",
+    "00006B1F": "masque = 2 then inc_var non 1",
+    "00006B48": "masse = 2 then inc_var non 1",
+    "00006B70": "pain = 2 then inc_var non 1",
+    "00006B97": "palme = 2 then inc_var non 1",
+    "00006BBF": "photo = 2 then inc_var non 1",
+    "00006BE7": "piece = 2 then inc_var non 1",
+    "00006C0F": "pier_berlin = 2 then inc_var non 1",
+    "00006C3D": "raquette = 2 then inc_var non 1",
+    "00006C68": "ressort  = 2 then inc_var non 1",
+    "00006C93": "cheval  = 2 then inc_var non 1",
+    "00006CBD": "riz = 2 then inc_var non 1",
+    "00006CE3": "ruban = 2 then inc_var non 1",
+    "00006D0B": "sabot1 = 2 then inc_var non 1",
+    "00006D34": "sabot2 = 2 then inc_var non 1",
+    "00006D5D": "scotch = 2 then inc_var non 1",
+    "00006D86": "taillepierre = 2 then inc_var non 1",
+    "00006DB5": "ap_photo = 2 then inc_var non 1",
+    "00006DE0": "houblon = 2 then inc_var non 1",
+    "00006E0A": "chewing = 2 then inc_var non 1",
+    "00006E34": "cleverte = 2 then inc_var non 1",
+    "00006E5F": "partition = 2 then inc_var non 1",
+    "00006E8B": "laine = 2 then inc_var non 1",
+    "00006EB3": "tondeuse = 2 then inc_var non 1",
+    "00006EDE": "tournevis = 2 then inc_var non 1",
+    "00006F0A": "cire = 2 then inc_var non 1",
+    "00006F31": "chianti = 2 then inc_var non 1",
+    "00006F5B": "rouedent = 2 then inc_var non 1",
+    "00006F86": "pierreor = 2 then inc_var non 1",
+    "00006FB1": "papiercado = 2 then inc_var non 1",
+    "00006FDE": "hotte = 2 then inc_var non 1",
+    "00007006": "levure = 2 then inc_var non 1",
+    "0000702F": "bouteille = 2 then inc_var non 1",
+    "0000705B": "parfum = 2 then inc_var non 1",
+    "00007084": "rouge = 2 then inc_var non 1",
+    "000070AC": "bisous = 2 then inc_var non 1",
+    "000070D5": "api  = 2 then inc_var non 1",
+    "000070FC": "pince = 2 then inc_var non 1",
+    "00007124": "tulipejaune = 2 then inc_var non 1",
+    "00007152": "tulipeorange = 2 then inc_var non 1",
+    "00007181": "tuliperouge = 2 then inc_var non 1",
+    "000071AF": "tulipeverte  = 2 then inc_var non 1",
+    "000071DE": "tulipeviolet = 2 then inc_var non 1",
+    "0000720D": "farine = 2 then inc_var non 1",
+    "00007236": "saliere = 2 then inc_var non 1",
+    "00007260": "bougie = 2 then inc_var non 1",
+    "00007289": "seche = 2 then inc_var non 1",
+    "000072B1": "bout_eau = 2 then inc_var non 1",
+    "000072DC": "dorade = 2 then inc_var non 1",
+    "00007305": "moule = 2 then inc_var non 1",
+    "0000732D": "ail = 2 then inc_var non 1",
+    "00007353": "poivrouge = 2 then inc_var non 1",
+    "0000737F": "poivjaune = 2 then inc_var non 1",
+    "000073AB": "oignon  = 2 then inc_var non 1",
+    "000073D5": "olive = 2 then inc_var non 1",
+    "000073FD": "bouillon = 2 then inc_var non 1",
+    "00007428": "violon = 2 then inc_var non 1",
+    "00007451": "skate = 2 then inc_var non 1",
+    "00007479": "champagne = 2 then inc_var non 1",
+    "000074A5": "fromage = 2 then inc_var non 1",
+    "000074CF": "bonnet = 2 then inc_var non 1",
+    "000074F8": "huile = 2 then inc_var non 1",
+    "00007520": "orge = 2 then inc_var non 1",
+    "00007547": "burette = 2 then inc_var non 1",
+    "00007571": "allumette = 2 then inc_var non 1",
+    "0000759D": "chouetteor = 2 then inc_var non 1",
+    "000075CA": "chouette = 2 then inc_var non 1",
+    "000075F5": "sirop = 2 then inc_var non 1",
+    "0000761D": "fiolegrece = 2 then inc_var non 1",
+    "0000764A": "fiolegrece2 = 2 then inc_var non 1",
+    "00007678": "fioleecosse = 2 then inc_var non 1",
+    "000076A6": "fioleirlande = 2 then inc_var non 1",
+    "000076D5": "fioleespagne = 2 then inc_var non 1",
+    "00007704": "fiolesuede = 2 then inc_var non 1",
+    "00007731": "fiolefinlande = 2 then inc_var non 1",
+    "00007761": "fioleautriche = 2 then inc_var non 1",
+    "00007791": "fiolepaysbas = 2 then inc_var non 1",
+    "000077C0": "fioleespagne2 = 2 then inc_var non 1",
+    "000077F0": "fioleitalie = 2 then inc_var non 1",
+    "0000781E": "fioleangleterre = 2 then inc_var non 1",
+    "00007850": "non = 1 then playavi pise99.avi 1 79 54 128 129",
+    "0000788B": "pise = 0 then playavi pise.avi 1 79 54 128 129",
+    "000078C5": "pise = 0 then scene 8 else scene 7l",
+    "0000792D": "18 0 #000000 Comic sans MS",
+    "00007953": "490 90 125 365 0 Informations sur",
+    "00007980": "490 110 125 365 0 la Tour de Pise",
+    "000079AD": "italie.wav 2j",
+    "00007A09": "italie.wav",
+    "00007A23": "vete.bmp",
+    "00007A33": "costume.htm",
+    "00007A94": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "00007B07": "italie.wav",
+    "00007B21": "pise1.bmp",
+    "00007B87": "18 0 #ffffff Comic sans MS",
+    "00007BAD": "156 157 125 365 0 Sortie",
+    "00007BD1": "pise 1",
+    "00007BE3": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54f",
+    "00007C42": "18 0 #ffffff Comic sans MS",
+    "00007C68": "293 304 125 365 0 Un",
+    "00007C7E": "trange tapis...",
+    "00007C99": "fioleitalie = 0 then scene 13i",
+    "00007CF2": "300",
+    "00007D01": "torche.avi 2 143 21 587 116",
+    "00007D28": "18 0 #ffffff Comic sans MS",
+    "00007D4E": "cleverte = 2 then playbmp ..\\..\\ecosse\\img24\\cle.bmp 0 370 350",
+    "00007D98": "clerouge = 2 then playbmp ..\\..\\ecosse\\img24\\cle.bmp 0 370 350",
+    "00007DE2": "clejaune = 2 then playwav porte2.wav 1",
+    "00007E14": "clejaune = 2 then defcursor fleche.cur",
+    "00007E46": "clejaune = 2 then set_var clejaune -1",
+    "00007E77": "clejaune = -1 then scene 33",
+    "00007E9E": "clerouge = 2 then playtext 240 120 125 365 0 Non,",
+    "00007ED1": "a n'a pas l'air d'",
+    "00007EE4": "tre la bonne !",
+    "00007EFE": "cleverte = 2 then playtext 240 120 125 365 0 Non,",
+    "00007F31": "a n'a pas l'air d'",
+    "00007F44": "tre la bonne !",
+    "00007F5E": "18 0 #ffffff Comic sans MS",
+    "00007F84": "135 150 125 365 0 Un coffre fort",
+    "00007FB0": "135 170 125 365 0 ferm",
+    "0000801D": "tourp2.bmp",
+    "00008084": "question rollover\\qrome.bmp 0 371 74",
+    "000080B4": "reponse1 rollover\\cesar.bmp 0 295 266",
+    "000080E5": "reponse2  rollover\\rebus.bmp 0 454 350",
+    "00008117": "reponse3  rollover\\rommu.bmp 0 137 343",
+    "00008149": "question 0",
+    "0000815F": "reponse 0",
+    "00008174": "reponse1 rollover\\cesar.bmp 0 295 266",
+    "000081A5": "reponse2  rollover\\rebus.bmp 0 454 350",
+    "000081D7": "reponse3  rollover\\rommu.bmp 0 137 343",
+    "00008209": "question 0",
+    "0000821F": "reponse 0",
+    "00008234": "pise6.avi 1 79 54 128 129",
+    "00008259": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54g",
+    "000082B8": "question = 1 then inc_var reponse 1",
+    "000082E7": "question 1",
+    "000082FD": "question = 1 then addbmp question rollover\\qfleuv.bmp 0 365 77",
+    "00008347": "question = 1 then addbmp reponse1 rollover\\po.bmp 0 319 267",
+    "0000838E": "question = 1 then addbmp reponse2 rollover\\gange.bmp 0 474 349",
+    "000083D8": "question = 1 then addbmp reponse3 rollover\\euf.bmp 0 159 345",
+    "00008420": "200",
+    "0000842F": "question = 1  then playavi pise7.avi 1 79 54 128 129",
+    "0000846F": "question = 2 then addbmp question rollover\\qcolise.bmp 0 365 76",
+    "000084BA": "question = 2 then addbmp reponse1 rollover\\trois.bmp 0 335 263",
+    "00008504": "question = 2 then addbmp reponse2 rollover\\un.bmp 0 485 348",
+    "0000854B": "question = 2 then addbmp reponse3 rollover\\cinq.bmp 0 164 339",
+    "00008594": "200",
+    "000085A3": "question = 2  then playavi pise8.avi 1 79 54 128 129",
+    "000085E3": "200",
+    "000085F2": "question = 3 then  playavi pise4.avi 1 79 54 128 129",
+    "00008632": "question = 3 then dec_var score 5",
+    "0000865F": "question = 3 then scene 5",
+    "00008684": "question = 3 then dec_var score 5i",
+    "000086D1": "question = 0 then inc_var reponse 1",
+    "00008700": "question = 2 then inc_var reponse 1",
+    "0000872F": "question 1",
+    "00008745": "question = 1 then addbmp question rollover\\qfleuv.bmp 0 365 77",
+    "0000878F": "question = 1 then addbmp reponse1 rollover\\po.bmp 0 319 267",
+    "000087D6": "question = 1 then addbmp reponse2 rollover\\gange.bmp 0 474 349",
+    "00008820": "question = 1 then addbmp reponse3 rollover\\euf.bmp 0 159 345",
+    "00008868": "200",
+    "00008877": "question = 1  then playavi pise7.avi 1 79 54 128 129",
+    "000088B7": "question = 2 then addbmp question rollover\\qcolise.bmp 0 365 76",
+    "00008902": "question = 2 then addbmp reponse1 rollover\\trois.bmp 0 335 263",
+    "0000894C": "question = 2 then addbmp reponse2 rollover\\un.bmp 0 485 348",
+    "00008993": "question = 2 then addbmp reponse3 rollover\\cinq.bmp 0 164 339",
+    "000089DC": "200",
+    "000089EB": "question = 2  then playavi pise8.avi 1 79 54 128 129",
+    "00008A2B": "reponse = 3  then playavi pise9.avi 1 79 54 128 129 else if question = 3 then playavi pise4.avi 1 79 54 128 129",
+    "00008AA6": "reponse = 3 then dec_var score 0 else if question = 3 then dec_var score 5",
+    "00008AFC": "reponse = 3 then scene 7 else if question = 3 then scene 5i",
+    "00008B62": "question 1",
+    "00008B78": "question = 1 then addbmp question rollover\\qfleuv.bmp 0 365 77",
+    "00008BC2": "question = 1 then addbmp reponse1 rollover\\po.bmp 0 319 267",
+    "00008C09": "question = 1 then addbmp reponse2 rollover\\gange.bmp 0 474 349",
+    "00008C53": "question = 1 then addbmp reponse3 rollover\\euf.bmp 0 159 345",
+    "00008C9B": "200",
+    "00008CAA": "question = 1  then playavi pise7.avi 1 79 54 128 129",
+    "00008CEA": "question = 2 then addbmp question rollover\\qcolise.bmp 0 365 76",
+    "00008D35": "question = 2 then addbmp reponse1 rollover\\trois.bmp 0 335 263",
+    "00008D7F": "question = 2 then addbmp reponse2 rollover\\un.bmp 0 485 348",
+    "00008DC6": "question = 2 then addbmp reponse3 rollover\\cinq.bmp 0 164 339",
+    "00008E0F": "200",
+    "00008E1E": "question = 2  then playavi pise8.avi 1 79 54 128 129",
+    "00008E5E": "200",
+    "00008E6D": "question = 3 then  playavi pise4.avi 1 79 54 128 129",
+    "00008EAD": "question = 3 then dec_var score 5",
+    "00008EDA": "question = 3 then scene 5i",
+    "00008F33": "clapotis.wav",
+    "00008F4F": "vendeur.bmp",
+    "00008FB6": "200",
+    "00008FD3": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "0000906B": "vespa1.avi 1 506 174 601 265",
+    "00009093": "500",
+    "000090A2": "22i",
+    "000090F4": "vendeur2.bmp",
+    "00009150": "vespa4 vespa4.bmp 0 0 0",
+    "00009173": "200",
+    "00009182": "vespa2.avi 1 8 224 415 400",
+    "000091A8": "..\\france\\france.vnp 18",
+    "000091CB": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "0000922A": "vespa4 vespa4.bmp 0 0 0",
+    "0000924D": "200",
+    "0000925C": "vespa2.avi 1 8 224 415 400",
+    "00009282": "..\\autr\\autr.vnp 12i",
+    "000092C1": "vespa4 vespa4.bmp 0 0 0",
+    "000092E4": "200",
+    "000092F3": "vespa2.avi 1 8 224 415 400",
+    "00009319": "..\\espa\\espa.vnp 13i",
+    "000093A9": "vespa4.bmp",
+    "00009403": "vespa2.avi 1 8 224 415 400",
+    "00009429": "200",
+    "00009438": "vf = 1 then runprj ..\\france\\france.vnp 18",
+    "0000946E": "va = 1 then runprj ..\\autr\\autr.vnp 12",
+    "000094A0": "ve = 1 then runprj ..\\espa\\espa.vnp 13",
+    "000094D2": "200",
+    "000094E1": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "00009520": "score >= 0 then if vf = 1 then runprj ..\\france\\france.vnp 18",
+    "00009569": "score >= 0 then if va = 1 then runprj ..\\autr\\autr.vnp 12",
+    "000095AE": "score >= 0 then if ve = 1 then runprj ..\\espa\\espa.vnp 13",
+    "000095F3": "vespa.wav 2",
+    "0000960A": "vespa2.avi 1 8 224 415 400d",
+    "00009674": "papier.bmp",
+    "00009686": "tourp2_2.htm",
+    "000096C6": "essais Italie.bmp 0 53 148",
+    "000096EC": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "00009743": "18 1 #ffffff Comic sans MS",
+    "00009769": "110 380 125 365 0 Quitteri",
+    "000097D2": "pise3.bmp",
+    "0000982B": "capitale 0",
+    "0000984F": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "0000992C": "papier.bmp",
+    "0000993E": "tourp2_3.htm",
+    "0000997E": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "000099BD": "essait trajane.bmp 0 63 68",
+    "000099FB": "18 1 #ffffff Comic sans MS",
+    "00009A21": "110 380 125 365 0 Quitteri",
+    "00009A7A": "pise.wav",
+    "00009A92": "..\\..\\ecosse\\img24\\papier.bmp",
+    "00009AB7": "pise.htm",
+    "00009AF3": "tour tourpise.bmp 0 425 180",
+    "00009B1A": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "00009B71": "18 1 #000000 Comic sans MS",
+    "00009B97": "480 410 125 365 0 Quitteri",
+    "00009C00": "pise2.bmp",
+    "00009C59": "18 0 #000000 Comic sans MS",
+    "00009C7F": "90 100 125 365 0 de la France ?",
+    "00009CAA": "18 0 #ffffff Comic sans MS",
+    "00009CD0": "18 0 #ffffff Comic sans MS",
+    "00009CF6": "capitale != 0 then dec_var score 10",
+    "00009D25": "capitale = 0 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "00009D82": "capitale = 0 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "00009DFA": "capitale = 0 then  addtext lib1 6 90 60 600 70 0 Londres",
+    "00009E3E": "capitale = 0 then invalidate 70 30 300 250",
+    "00009E74": "capitale = 0 then update",
+    "00009E98": "capitale = 0 then inc_var capitale 1",
+    "00009EC8": "18 0 #ffffff Comic sans MS",
+    "00009EEE": "score 6 15 415 160 470 0 <score>",
+    "00009F1A": "18 0 #000000 Comic sans MS",
+    "00009F40": "capitale 0",
+    "00009F56": "lib1 6   90 60 600 75 0 Paris",
+    "00009F7F": "lib2 6   90 80 600 95 0 est la capitale",
+    "00009FB2": "70 30 300 250",
+    "00009FD7": "18 0 #ffffff Comic sans MS",
+    "00009FFD": "lib1 6   90 60 600 75 0 Paris",
+    "0000A026": "18 0 #000000 Comic sans MS",
+    "0000A04C": "lib2 6   90 80 600 95 0 est la capitale",
+    "0000A07F": "70 30 300 250",
+    "0000A0A4": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54d",
+    "0000A173": "18 0 #000000 Comic sans MS",
+    "0000A199": "90 100 125 365 0 de l'Angleterre ?",
+    "0000A1C7": "18 0 #ffffff Comic sans MS",
+    "0000A1ED": "18 0 #ffffff Comic sans MS",
+    "0000A213": "capitale != 1 then dec_var score 10",
+    "0000A242": "capitale = 1 then playtext 100 170 1 1 0 \"OUI !\" else playtext 100 170 1 1 0 \"NON... \"",
+    "0000A2A4": "capitale = 1 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000A31C": "capitale = 1 then  addtext lib1 6 90 60 600 70 0 Ath",
+    "0000A351": "nes",
+    "0000A360": "capitale = 1 then invalidate 70 30 300 250",
+    "0000A396": "capitale = 1 then update",
+    "0000A3BA": "capitale = 1 then inc_var capitale  1",
+    "0000A3EB": "18 0 #ffffff Comic sans MS",
+    "0000A411": "score 6 15 415 160 470 0 <score>d",
+    "0000A495": "18 0 #000000 Comic sans MS",
+    "0000A4BB": "90 100 125 365 0 de la Gr",
+    "0000A4D5": "ce ?",
+    "0000A4E5": "18 0 #ffffff Comic sans MS",
+    "0000A50B": "18 0 #ffffff Comic sans MS",
+    "0000A531": "capitale != 2 then dec_var score 10",
+    "0000A560": "capitale = 2 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000A5BD": "capitale = 2 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000A635": "capitale = 2 then  addtext lib1 6 90 60 600 70 0 Rome",
+    "0000A676": "capitale = 2 then invalidate 70 30 300 250",
+    "0000A6AC": "capitale = 2 then update",
+    "0000A6D0": "capitale = 2 then inc_var capitale  1",
+    "0000A701": "18 0 #ffffff Comic sans MS",
+    "0000A727": "score 6 15 415 160 470 0 <score>d",
+    "0000A79B": "18 0 #000000 Comic sans MS",
+    "0000A7C1": "90 100 125 365 0 de l'Italie ?",
+    "0000A7EB": "18 0 #ffffff Comic sans MS",
+    "0000A811": "18 0 #ffffff Comic sans MS",
+    "0000A837": "capitale != 3 then dec_var score 10",
+    "0000A866": "capitale = 3 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000A8C3": "capitale = 3 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000A93B": "capitale = 3 then  addtext lib1 6 90 60 600 70 0 Stockolm",
+    "0000A980": "capitale = 3 then invalidate 70 30 300 250",
+    "0000A9B6": "capitale = 3 then update",
+    "0000A9DA": "capitale = 3 then inc_var capitale  1",
+    "0000AA0B": "18 0 #ffffff Comic sans MS",
+    "0000AA31": "score 6 15 415 160 470 0 <score>d",
+    "0000AACD": "18 0 #000000 Comic sans MS",
+    "0000AAF3": "90 100 125 365 0 de la Su",
+    "0000AB0D": "de ?",
+    "0000AB1D": "18 0 #ffffff Comic sans MS",
+    "0000AB43": "18 0 #ffffff Comic sans MS",
+    "0000AB69": "capitale != 4 then dec_var score 10",
+    "0000AB98": "capitale = 4 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000ABF5": "capitale = 4 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000AC6D": "capitale = 4 then  addtext lib1 6 90 60 600 70 0 Copenhague",
+    "0000ACB4": "capitale = 4 then invalidate 70 30 300 250",
+    "0000ACEA": "capitale = 4 then update",
+    "0000AD0E": "capitale = 4 then inc_var capitale  1",
+    "0000AD3F": "18 0 #ffffff Comic sans MS",
+    "0000AD65": "score 6 15 415 160 470 0 <score>d",
+    "0000ADF9": "18 0 #000000 Comic sans MS",
+    "0000AE1F": "90 100 125 365 0 du Danemark ?",
+    "0000AE49": "18 0 #ffffff Comic sans MS",
+    "0000AE6F": "18 0 #ffffff Comic sans MS",
+    "0000AE95": "capitale != 5 then dec_var score 10",
+    "0000AEC4": "capitale = 5 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000AF21": "capitale = 5 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000AF99": "capitale = 5 then  addtext lib1 6 90 60 600 70 0 Madrid",
+    "0000AFDC": "capitale = 5 then invalidate 70 30 300 250",
+    "0000B012": "capitale = 5 then update",
+    "0000B036": "capitale = 5 then inc_var capitale  1",
+    "0000B067": "18 0 #ffffff Comic sans MS",
+    "0000B08D": "score 6 15 415 160 470 0 <score>d",
+    "0000B0F1": "18 0 #000000 Comic sans MS",
+    "0000B117": "90 100 125 365 0 de l'Espagne ?",
+    "0000B142": "18 0 #ffffff Comic sans MS",
+    "0000B168": "18 0 #ffffff Comic sans MS",
+    "0000B18E": "capitale != 6 then dec_var score 10",
+    "0000B1BD": "capitale = 6 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000B21A": "capitale = 6 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000B292": "capitale = 6 then  addtext lib1 6 90 60 600 70 0 Helsinki",
+    "0000B2D7": "capitale = 6 then invalidate 70 30 300 250",
+    "0000B30D": "capitale = 6 then update",
+    "0000B331": "capitale = 6 then inc_var capitale  1",
+    "0000B362": "18 0 #ffffff Comic sans MS",
+    "0000B388": "score 6 15 415 160 470 0 <score>d",
+    "0000B3FC": "18 0 #000000 Comic sans MS",
+    "0000B422": "90 100 125 365 0 de la Finlande ?",
+    "0000B44F": "18 0 #ffffff Comic sans MS",
+    "0000B475": "18 0 #ffffff Comic sans MS",
+    "0000B49B": "capitale != 7 then dec_var score 10",
+    "0000B4CA": "capitale = 7 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000B527": "capitale = 7 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000B59F": "capitale = 7 then  addtext lib1 6 90 60 600 70 0 Bruxelles",
+    "0000B5E5": "capitale = 7 then invalidate 70 30 300 250",
+    "0000B61B": "capitale = 7 then update",
+    "0000B63F": "capitale = 7 then inc_var capitale  1",
+    "0000B670": "18 0 #ffffff Comic sans MS",
+    "0000B696": "score 6 15 415 160 470 0 <score>d",
+    "0000B712": "18 0 #000000 Comic sans MS",
+    "0000B738": "90 100 125 365 0 de la Belgique ?",
+    "0000B765": "18 0 #ffffff Comic sans MS",
+    "0000B78B": "18 0 #ffffff Comic sans MS",
+    "0000B7B1": "capitale != 8 then dec_var score 10",
+    "0000B7E0": "capitale = 8 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000B83D": "capitale = 8 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000B8B5": "capitale = 8 then  addtext lib1 6 90 60 600 70 0 Lisbonne",
+    "0000B8FA": "capitale = 8 then invalidate 70 30 300 250",
+    "0000B930": "capitale = 8 then update",
+    "0000B954": "capitale = 8 then inc_var capitale  1",
+    "0000B985": "18 0 #ffffff Comic sans MS",
+    "0000B9AB": "score 6 15 415 160 470 0 <score>d",
+    "0000BA0F": "18 0 #000000 Comic sans MS",
+    "0000BA35": "90 100 125 365 0 du Portugal ?",
+    "0000BA5F": "18 0 #ffffff Comic sans MS",
+    "0000BA85": "capitale != 9 then dec_var score 10",
+    "0000BAB4": "capitale = 9 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000BB11": "capitale = 9 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000BB89": "capitale = 9 then  addtext lib1 6 90 60 600 70 0 Vienne",
+    "0000BBCC": "capitale = 9 then invalidate 70 30 300 250",
+    "0000BC02": "capitale = 9 then update",
+    "0000BC26": "capitale = 9 then inc_var capitale  1",
+    "0000BC57": "18 0 #ffffff Comic sans MS",
+    "0000BC7D": "score 6 15 415 160 470 0 <score>d",
+    "0000BCE1": "18 0 #000000 Comic sans MS",
+    "0000BD07": "90 100 125 365 0 de l'Autriche ?",
+    "0000BD33": "18 0 #ffffff Comic sans MS",
+    "0000BD59": "18 0 #ffffff Comic sans MS",
+    "0000BD7F": "capitale != 10 then dec_var score 10",
+    "0000BDAF": "capitale = 10 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000BE0D": "capitale = 10 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000BE86": "capitale = 10 then  addtext lib1 6 90 60 600 70 0 Dublin",
+    "0000BECA": "capitale = 10 then invalidate 70 30 300 250",
+    "0000BF01": "capitale = 10 then update",
+    "0000BF26": "capitale = 10 then inc_var capitale  1",
+    "0000BF58": "18 0 #ffffff Comic sans MS",
+    "0000BF7E": "score 6 15 415 160 470 0 <score>d",
+    "0000BFEA": "18 0 #000000 Comic sans MS",
+    "0000C010": "90 100 125 365 0 de l'Irlande ?",
+    "0000C03B": "18 0 #ffffff Comic sans MS",
+    "0000C061": "18 0 #ffffff Comic sans MS",
+    "0000C087": "capitale != 11 then dec_var score 10",
+    "0000C0B7": "capitale = 11 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000C115": "capitale = 11 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000C18E": "capitale = 11 then  addtext lib1 6 90 60 600 70 0 Berlin",
+    "0000C1D2": "capitale = 11 then invalidate 70 30 300 250",
+    "0000C209": "capitale = 11 then update",
+    "0000C22E": "capitale = 11 then inc_var capitale  1",
+    "0000C260": "18 0 #ffffff Comic sans MS",
+    "0000C286": "score 6 15 415 160 470 0 <score>d",
+    "0000C2F2": "18 0 #000000 Comic sans MS",
+    "0000C318": "90 100 125 365 0 de l'Allemagne ?",
+    "0000C345": "18 0 #ffffff Comic sans MS",
+    "0000C36B": "18 0 #ffffff Comic sans MS",
+    "0000C391": "capitale != 12 then dec_var score 10",
+    "0000C3C1": "capitale = 12 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000C41F": "capitale = 12 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000C498": "capitale = 12 then  addtext lib1 6 90 60 600 70 0 Amsterdam",
+    "0000C4DF": "capitale = 12 then invalidate 70 30 300 250",
+    "0000C516": "capitale = 12 then update",
+    "0000C53B": "capitale = 12 then inc_var capitale  1",
+    "0000C56D": "18 0 #ffffff Comic sans MS",
+    "0000C593": "score 6 15 415 160 470 0 <score>d",
+    "0000C61F": "18 0 #000000 Comic sans MS",
+    "0000C645": "90 100 125 365 0 des Pays-Bas ?",
+    "0000C670": "18 0 #ffffff Comic sans MS",
+    "0000C696": "18 0 #ffffff Comic sans MS",
+    "0000C6BC": "capitale != 13 then dec_var score 10",
+    "0000C6EC": "capitale = 13 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "0000C74A": "capitale = 13 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000C7C3": "capitale = 13 then scene 17",
+    "0000C7EA": "capitale = 13 then invalidate 70 30 300 250",
+    "0000C821": "capitale = 13 then update",
+    "0000C846": "capitale = 13 then inc_var capitale  1",
+    "0000C878": "18 0 #ffffff Comic sans MS",
+    "0000C89E": "score 6 15 415 160 470 0 <score>d",
+    "0000C90F": "70 30 300 250",
+    "0000C954": "70 30 300 250",
+    "0000C999": "70 30 300 250",
+    "0000CAFE": "18 0 #000000 Comic sans MS",
+    "0000CB24": "90 100 125 365 0 de la Norv",
+    "0000CB40": "ge ?",
+    "0000CB50": "18 0 #ffffff Comic sans MS",
+    "0000CB76": "18 0 #ffffff Comic sans MS",
+    "0000CB9C": "score 10",
+    "0000CBB0": "100 170 1 1 0 NON...",
+    "0000CBD0": "..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000CBFF": "18 0 #ffffff Comic sans MS",
+    "0000CC25": "score 6 25 410 160 470 0 <score>d",
+    "0000CCB9": "18 0 #000000 Comic sans MS",
+    "0000CCDF": "90 100 125 365 0 du Luxembourg ?",
+    "0000CD0B": "18 0 #ffffff Comic sans MS",
+    "0000CD31": "18 0 #ffffff Comic sans MS",
+    "0000CD57": "score 10",
+    "0000CD6B": "100 170 1 1 0 NON...",
+    "0000CD8B": "..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000CDBA": "18 0 #ffffff Comic sans MS",
+    "0000CDE0": "score 6 25 410 160 470 0 <score>d",
+    "0000CE34": "18 0 #000000 Comic sans MS",
+    "0000CE5A": "90 100 125 365 0 de la Suisse ?",
+    "0000CE85": "18 0 #ffffff Comic sans MS",
+    "0000CEAB": "18 0 #ffffff Comic sans MS",
+    "0000CED1": "score 10",
+    "0000CEE5": "100 170 1 1 0 NON...",
+    "0000CF05": "..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000CF34": "18 0 #ffffff Comic sans MS",
+    "0000CF5A": "score 6 25 410 160 470 0 <score>d",
+    "0000CFDA": "papierfiole2.bmp",
+    "0000D053": "fioleitalie = 0 then playavi fiole.avi 2 340 94 580 400 else scene 7",
+    "0000D0A3": "fioleitalie = 0 then set_var fioleitalie 1",
+    "0000D0D9": "..\\..\\holl\\digit\\a_hol.wavi",
+    "0000D143": "pizz2.bmp",
+    "0000D1A9": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "0000D208": "19i",
+    "0000D24A": "italie.wav",
+    "0000D264": "menu.bmp",
+    "0000D2C9": "bouteille1 rollover\\bout1.bmp 0 409 215",
+    "0000D2FC": "bouteille2 rollover\\bout2.bmp 0 419 322",
+    "0000D32F": "bouteille3 rollover\\bout3.bmp 0 423 360",
+    "0000D362": "menu11 rollover\\menu11.bmp 0 57 75",
+    "0000D390": "menu12 rollover\\menu12.bmp 0 243 77",
+    "0000D3BF": "menu13 rollover\\menu13.bmp 0 419 68",
+    "0000D3EE": "menu14 rollover\\menu14.bmp 0 56 263",
+    "0000D41D": "menu15 rollover\\menu15.bmp 0 240 262",
+    "0000D44D": "menu 0",
+    "0000D45F": "pizza 0i",
+    "0000D492": "score 5",
+    "0000D4A5": "18 0 #ffffff Comic sans MS",
+    "0000D4CB": "score 6 15 415 160 470 0 <score>",
+    "0000D4F7": "..\\..\\couleurs1\\digit\\cartoon.wav 1i",
+    "0000D546": "pizza != 2 then dec_var score 5",
+    "0000D571": "pizza != 2 then playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000D5B8": "pizza = 2 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1",
+    "0000D5FC": "pizza = 2 then inc_var pizza 1",
+    "0000D626": "18 0 #ffffff Comic sans MS",
+    "0000D64C": "score 6 15 415 160 470 0 <score>",
+    "0000D678": "pizza = 3 then delbmp bouteille1",
+    "0000D6A4": "pizza = 3 then scene 20i",
+    "0000D6E7": "pizza != 0 then playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000D72E": "pizza != 0 then dec_var score 5",
+    "0000D759": "pizza = 0 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1",
+    "0000D79D": "pizza = 0 then inc_var pizza 1",
+    "0000D7C7": "18 0 #ffffff Comic sans MS",
+    "0000D7ED": "score 6 15 415 160 470 0 <score>",
+    "0000D819": "pizza = 1 then delbmp bouteille3",
+    "0000D845": "pizza = 1 then delbmp menu11",
+    "0000D86D": "pizza = 1 then delbmp menu12",
+    "0000D895": "pizza = 1 then delbmp menu13",
+    "0000D8BD": "pizza = 1 then delbmp menu14",
+    "0000D8E5": "pizza = 1 then delbmp menu15",
+    "0000D90D": "pizza = 1 then addbmp menu24 rollover\\menu24.bmp 0 57 266",
+    "0000D952": "pizza = 1 then addbmp menu21 rollover\\menu21.bmp 0 61 53",
+    "0000D996": "pizza = 1 then addbmp menu25 rollover\\menu25.bmp 0 244 268",
+    "0000D9DC": "pizza = 1 then addbmp menu22 rollover\\menu22.bmp 0 241 74",
+    "0000DA21": "pizza = 1 then addbmp menu23 rollover\\menu23.bmp 0 419 72i",
+    "0000DA86": "pizza != 1 then playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "0000DACD": "pizza != 1 then dec_var score 5",
+    "0000DAF8": "pizza = 1 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1",
+    "0000DB3C": "pizza = 1 then inc_var pizza 1",
+    "0000DB66": "18 0 #ffffff Comic sans MS",
+    "0000DB8C": "score 6 15 415 160 470 0 <score>",
+    "0000DBB8": "pizza = 2 then delbmp bouteille2",
+    "0000DBE4": "pizza = 2 then delbmp menu21",
+    "0000DC0C": "pizza = 2 then delbmp menu22",
+    "0000DC34": "pizza = 2 then delbmp menu23",
+    "0000DC5C": "pizza = 2 then delbmp menu24",
+    "0000DC84": "pizza = 2 then delbmp menu25",
+    "0000DCAC": "pizza = 2 then addbmp menu31 rollover\\menu31.bmp 0 61 73",
+    "0000DCF0": "pizza = 2 then addbmp menu32 rollover\\menu32.bmp 0 242 71",
+    "0000DD35": "pizza = 2 then addbmp menu33 rollover\\menu33.bmp 0 424 69",
+    "0000DD7A": "pizza = 2 then addbmp menu34 rollover\\menu34.bmp 0 59 272",
+    "0000DDBF": "pizza = 2 then addbmp menu35 rollover\\menu35.bmp 0 241 269i",
+    "0000DE25": "score 5",
+    "0000DE38": "18 0 #ffffff Comic sans MS",
+    "0000DE5E": "score 6 15 415 160 470 0 <score>",
+    "0000DE8A": "..\\..\\couleurs1\\digit\\cartoon.wav 1i",
+    "0000DEED": "italie.wav",
+    "0000DF07": "bouteille.bmp",
+    "0000DF71": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "0000DFB0": "chianti 1i",
+    "0000E009": "papier.bmp",
+    "0000E01B": "rome.htm",
+    "0000E057": "louve louve.bmp 0 80 101",
+    "0000E07B": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "0000E0D2": "18 1 #ffffff Comic sans MS",
+    "0000E0F8": "110 380 125 365 0 Quitteri",
+    "0000E151": "clapotis.wav",
+    "0000E16D": "vendeur3.bmp",
+    "0000E1D6": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "0000E241": "vespa3.avi 1 506 174 601 265",
+    "0000E269": "clapotis.wav 2",
+    "0000E2D4": "papier.bmp",
+    "0000E2E6": "po.htm",
+    "0000E339": "carte0 ..\\..\\biblio\\img24\\cartes\\c121.bmp 0 20 52",
+    "0000E376": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "0000E3B5": "18 1 #ffffff Comic sans MS",
+    "0000E3DB": "110 380 125 365 0 Quitteri",
+    "0000E444": "boutiq2.bmp",
+    "0000E4AC": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "0000E55C": "boutiq3.bmp",
+    "0000E5B7": "coutur4.avi 1 317 100 378 146",
+    "0000E5E0": "api 1",
+    "0000E5F1": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 3d",
+    "0000E681": "boutiq.bmp",
+    "0000E6F3": "coutur2.avi 1 317 100 378 146",
+    "0000E71C": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 3d",
+    "0000E79C": "leo1.bmp",
+    "0000E7AC": "leo.htm",
+    "0000E7F3": "leonard.avi 0 0 0 328 480",
+    "0000E818": "leonard leonard.bmp 0 0 0",
+    "0000E855": "18 1 #000000 Comic sans MS",
+    "0000E87B": "490 420 125 365 0 Quitteri",
+    "0000E8B4": "Intro",
+    "0000E925": "italie.wav",
+    "0000E93B": "italie.avi 1",
+    "0000E953": "italie 1",
+    "0000E967": "euroland = 1 then dec_var euroland 1",
+    "0000E997": "angleterre = 1 then dec_var angleterre 1",
+    "0000E9CB": "autriche = 1  then dec_var autriche 1",
+    "0000E9FC": "allemagne = 1  then dec_var allemagne 1",
+    "0000EA2F": "ecosse = 1  then dec_var ecosse 1",
+    "0000EA5C": "espagne = 1  then dec_var espagne 1",
+    "0000EA8B": "france = 1  then dec_var france 1",
+    "0000EAB8": "finlande = 1  then dec_var finlande 1",
+    "0000EAE9": "irlande = 1  then dec_var irlande 1",
+    "0000EB18": "belgique = 1  then dec_var belgique 1",
+    "0000EB49": "paysbas = 1  then dec_var paysbas 1",
+    "0000EB78": "grece = 1  then dec_var grece 1",
+    "0000EBA3": "danemark = 1  then dec_var danemark 1",
+    "0000EBD4": "portugal = 1  then dec_var portugal 1",
+    "0000EC05": "suede = 1  then dec_var suede 1",
+    "0000EC61": "italie.wav",
+    "0000EC7B": "..\\..\\ecosse\\img24\\papier.bmp",
+    "0000ECA0": "venise.htm",
+    "0000ECDE": "ven venise2.bmp 0 350 120",
+    "0000ED03": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "0000ED5A": "18 1 #000000 Comic sans MS",
+    "0000ED80": "470 410 125 365 0 Quitteri",
+    "0000EDB9": "Toolbar",
+    "0000EE2C": "18 0 #ffffff Comic sans MS",
+    "0000EE52": "toolbar ..\\..\\barre\\images\\barre.bmp 6 0 400 640 480",
+    "0000EE92": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "0000EEE5": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "0000EF33": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+    "0000EF80": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "0000EFD0": "fiole = 1 then addbmp fiole ..\\..\\barre\\images\\f1.bmp 6 197 461",
+    "0000F01B": "fiole = 2 then addbmp fiole ..\\..\\barre\\images\\f2.bmp 6 196 461",
+    "0000F066": "fiole = 3 then addbmp fiole ..\\..\\barre\\images\\f3.bmp 6 196 461",
+    "0000F0B1": "fiole = 4 then addbmp fiole ..\\..\\barre\\images\\f4.bmp 6 197 461",
+    "0000F0FC": "fiole = 5 then addbmp fiole ..\\..\\barre\\images\\f5.bmp 6 197 461",
+    "0000F147": "fiole = 6 then addbmp fiole ..\\..\\barre\\images\\f6.bmp 6 196 461",
+    "0000F192": "fiole = 7 then addbmp fiole ..\\..\\barre\\images\\f7.bmp 6 197 461",
+    "0000F1DD": "fiole = 8 then addbmp fiole ..\\..\\barre\\images\\f8.bmp 6 197 461",
+    "0000F228": "fiole = 9 then addbmp fiole ..\\..\\barre\\images\\f9.bmp 6 196 461",
+    "0000F273": "fiole = 10 then addbmp fiole ..\\..\\barre\\images\\f10.bmp 6 197 461",
+    "0000F2C0": "fiole = 11 then addbmp fiole ..\\..\\barre\\images\\f11.bmp 6 196 461",
+    "0000F30D": "fiole = 12 then addbmp fiole ..\\..\\barre\\images\\f12.bmp 6 196 461",
+    "0000F35A": "suede = 1 then  addbmp info ..\\..\\barre\\images\\p_suede.bmp 6 452 400",
+    "0000F3AA": "portugal = 1 then  addbmp info ..\\..\\barre\\images\\p_port.bmp 6 452 400",
+    "0000F3FC": "allemagne = 1 then  addbmp info ..\\..\\barre\\images\\p_all.bmp 6 452 400",
+    "0000F44E": "france = 1 then  addbmp info ..\\..\\barre\\images\\p_france.bmp 6 452 400",
+    "0000F4A0": "angleterre = 1 then  addbmp info ..\\..\\barre\\images\\p_angl.bmp 6 452 400",
+    "0000F4F4": "autriche = 1 then  addbmp info ..\\..\\barre\\images\\p_autriche.bmp 6 452 400",
+    "0000F54A": "danemark = 1 then  addbmp info ..\\..\\barre\\images\\p_danemark.bmp 6 452 400",
+    "0000F5A0": "ecosse = 1 then  addbmp info ..\\..\\barre\\images\\p_ecosse.bmp 6 452 400",
+    "0000F5F2": "euroland = 1 then  addbmp info ..\\..\\barre\\images\\p_euroland.bmp 6 452 400",
+    "0000F648": "espagne = 1 then  addbmp info ..\\..\\barre\\images\\p_espagne.bmp 6 452 400",
+    "0000F69C": "finlande = 1 then  addbmp info ..\\..\\barre\\images\\p_finland.bmp 6 452 400",
+    "0000F6F1": "grece = 1 then  addbmp info ..\\..\\barre\\images\\p_grece.bmp 6 452 400",
+    "0000F741": "irlande = 1 then  addbmp info ..\\..\\barre\\images\\p_irlande.bmp 6 452 400",
+    "0000F795": "italie = 1 then  addbmp info ..\\..\\barre\\images\\p_italie.bmp 6 452 400",
+    "0000F7E7": "belgique = 1 then  addbmp info ..\\..\\barre\\images\\p_belgique.bmp 6 452 400",
+    "0000F83D": "paysbas = 1 then  addbmp info ..\\..\\barre\\images\\p_pays.bmp 6 452 400",
+    "0000F88E": "score 6 15 415 160 470 0 <score>",
+    "0000F8BA": "etoile ..\\..\\barre\\images\\ordi.bmp 6 564 400",
+    "0000F8F2": "etoile1 ..\\..\\barre\\images\\textetm.bmp 6 0 449",
+    "0000F92C": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "0000F97C": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "0000F9CA": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "0000FA1D": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+    "0000FA6A": "..\\frontal\\vnoption.dlld",
+    "0000FAAD": "calc = 1 then rundll ..\\barre\\euro32.dll",
+    "0000FAE1": "calc1",
+    "0000FAF2": "calc = 1 then addbmp etoile ..\\..\\barre\\images\\calc2.bmp 6 249 400",
+    "0000FB40": "calc = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetc.bmp 6 0 450",
+    "0000FB8F": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "0000FBDF": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "0000FC32": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400d",
+    "0000FC9F": "sac",
+    "0000FCAE": "sacados = 1 then addbmp etoile ..\\..\\barre\\images\\sac2.bmp 6 385 400",
+    "0000FCFE": "sacados = 1 then addbmp etoile1 ..\\..\\barre\\images\\textes.bmp 6 0 454",
+    "0000FD4F": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "0000FD9F": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "0000FDED": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "0000FE40": "sacados = 1 then rundll ..\\barre\\inv.dlld",
+    "0000FEA1": "fleche.cur",
+    "0000FEB7": "clerouge = 2 then dec_var clerouge 1",
+    "0000FEE7": "ballon1 = 2 then dec_var ballon1 1",
+    "0000FF15": "bouee = 2 then dec_var bouee 1",
+    "0000FF3F": "bout_plo = 2 then dec_var bout_plo 1",
+    "0000FF6F": "bus = 2 then dec_var bus 1",
+    "0000FF95": "castagnette = 2 then dec_var castagnette 1",
+    "0000FFCB": "ciseaux = 2 then dec_var ciseaux 1",
+    "0000FFF9": "clejaune = 2 then dec_var clejaune 1",
+    "00010029": "guitare = 2 then dec_var guitare 1",
+    "00010057": "harpon = 2 then dec_var harpon 1",
+    "00010083": "helice = 2 then dec_var helice 1",
+    "000100AF": "loupe = 2 then dec_var loupe 1",
+    "000100D9": "masque = 2 then dec_var masque 1",
+    "00010105": "masse = 2 then dec_var masse 1",
+    "0001012F": "pain = 2 then dec_var pain 1",
+    "00010157": "palme = 2 then dec_var palme 1",
+    "00010181": "photo = 2 then dec_var photo 1",
+    "000101AB": "piece = 2 then dec_var piece 1",
+    "000101D5": "pier_berlin = 2 then dec_var pier_berlin 1",
+    "0001020B": "raquette = 2 then dec_var raquette 1",
+    "0001023B": "ressort = 2 then dec_var ressort 1",
+    "00010269": "cheval = 2 then dec_var cheval 1",
+    "00010295": "riz = 2 then dec_var riz 1",
+    "000102BB": "ruban = 2 then dec_var ruban 1",
+    "000102E5": "sabot1 = 2 then dec_var sabot1 1",
+    "00010311": "sabot2 = 2 then dec_var sabot2 1",
+    "0001033D": "scotch = 2 then dec_var scotch 1",
+    "00010369": "taillepierre = 2 then dec_var taillepierre 1",
+    "000103A1": "ap_photo = 2 then dec_var ap_photo 1",
+    "000103D1": "houblon = 2 then dec_var houblon 1",
+    "000103FF": "chewing = 2 then dec_var chewing 1",
+    "0001042D": "cleverte = 2 then dec_var cleverte 1",
+    "0001045D": "partition = 2 then dec_var partition 1",
+    "0001048F": "laine = 2 then dec_var laine 1",
+    "000104B9": "tondeuse = 2 then dec_var tondeuse 1",
+    "000104E9": "tournevis = 2 then dec_var tournevis 1",
+    "0001051B": "cire = 2 then dec_var cire 1",
+    "00010543": "chianti = 2 then dec_var chianti 1",
+    "00010571": "rouedent = 2 then dec_var rouedent 1",
+    "000105A1": "pierreor = 2 then dec_var pierreor 1",
+    "000105D1": "papiercado = 2 then dec_var papiercado 1",
+    "00010605": "hotte = 2 then dec_var  hotte 1",
+    "00010630": "levure = 2 then dec_var  levure 1",
+    "0001065D": "bouteille = 2 then dec_var bouteille 1",
+    "0001068F": "parfum = 2 then dec_var parfum 1",
+    "000106BB": "rouge = 2 then dec_var rouge 1",
+    "000106E5": "bisous = 2 then dec_var bisous 1",
+    "00010711": "ap = 2 then dec_var api 1",
+    "00010736": "pince = 2 then dec_var pince 1",
+    "00010760": "tulipejaune = 2 then dec_var tulipejaune 1",
+    "00010796": "tulipeorange = 2 then dec_var tulipeorange 1",
+    "000107CE": "tuliperouge = 2 then dec_var tuliperouge 1",
+    "00010804": "tulipeverte = 2 then dec_var tulipeverte 1",
+    "0001083A": "tulipeviolet = 2 then dec_var tulipeviolet 1",
+    "00010872": "farine = 2 then dec_var farine 1",
+    "0001089E": "saliere = 2 then dec_var saliere 1",
+    "000108CC": "bougie = 2 then dec_var bougie 1",
+    "000108F8": "seche = 2 then dec_var seche 1",
+    "00010922": "bout_eau = 2 then dec_var bout_eau 1",
+    "00010952": "dorade = 2 then dec_var dorade 1",
+    "0001097E": "moule = 2 then dec_var moule 1",
+    "000109A8": "ail = 2 then dec_var ail 1",
+    "000109CE": "poivrouge = 2 then dec_var poivrouge 1",
+    "00010A00": "poivjaune = 2 then dec_var poivjaune 1",
+    "00010A32": "oignon = 2 then dec_var oignon 1",
+    "00010A5E": "olive = 2 then dec_var olive 1",
+    "00010A88": "bouillon = 2 then dec_var bouillon 1",
+    "00010AB8": "violon = 2 then dec_var violon 1",
+    "00010AE4": "skate = 2 then dec_var skate 1",
+    "00010B0E": "champagne = 2 then dec_var champagne 1",
+    "00010B40": "fromage = 2 then dec_var fromage 1",
+    "00010B6E": "bonnet = 2 then dec_var bonnet 1",
+    "00010B9A": "huile = 2 then dec_var huile 1",
+    "00010BC4": "orge = 2 then dec_var orge 1",
+    "00010BEC": "burette = 2 then dec_var burette 1",
+    "00010C1A": "allumette = 2 then dec_var allumette 1",
+    "00010C4C": "chouetteor = 2 then dec_var chouetteor 1",
+    "00010C80": "chouette = 2 then dec_var chouette 1",
+    "00010CB0": "sirop = 2 then dec_var sirop 1",
+    "00010CDA": "fiolegrece = 2 then dec_var  fiolegrece 1",
+    "00010D0F": "fiolegrece2 = 2 then dec_var  fiolegrece2 1",
+    "00010D46": "fioleecosse = 2 then dec_var  fioleecosse 1",
+    "00010D7D": "fioleirlande = 2 then dec_var  fioleirlande 1",
+    "00010DB6": "fioleespagne = 2 then dec_var  fioleespagne 1",
+    "00010DEF": "fiolesuede = 2 then dec_var  fiolesuede 1",
+    "00010E24": "fiolefinlande = 2 then dec_var  fiolefinlande 1",
+    "00010E5F": "fioleautriche = 2 then dec_var  fioleautriche 1",
+    "00010E9A": "fiolepaysbas = 2 then dec_var  fiolepaysbas 1",
+    "00010ED3": "fioleespagne2 = 2 then dec_var  fioleespagne2 1",
+    "00010F0E": "fioleitalie = 2 then dec_var  fioleitalie 1",
+    "00010F45": "fioleangleterre = 2 then dec_var  fioleangleterre 1d",
+    "00010FA4": "active",
+    "00010FB6": "trans = 1 then addbmp etoile ..\\..\\barre\\images\\trans2.bmp 6 162 400",
+    "00011006": "trans = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetr.bmp 6 0 450",
+    "00011056": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "000110A4": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "000110F7": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+    "00011144": "trans = 1 then closewav",
+    "00011167": "trans = 1 then closedll",
+    "0001118A": "trans = 1 then playavi ..\\..\\couleurs1\\movie\\retour.avi 1",
+    "000111CF": "..\\couleurs1\\couleurs1.vnp 6",
+    "000111F7": "trans = 1 then dec_var score 50",
+    "00011222": "score 6 15 415 160 470 0 <score>d",
+    "0001126E": "telep",
+    "0001127F": "telephone = 1 then addbmp etoile ..\\..\\barre\\images\\telep2.bmp 6 317 400",
+    "000112D3": "telephone = 1 then addbmp etoile1 ..\\..\\barre\\images\\textet.bmp 6 0 450",
+    "00011326": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "00011376": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "000113C4": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+    "00011411": "telephone = 1 then closedll",
+    "00011438": "telephone = 1 then runprj ..\\couleurs1\\couleurs1.vnp 4",
+    "0001147A": "telephone = 1 then dec_var score 1",
+    "000114A8": "score 6 15 415 160 470 0 <score>d",
+    "00011534": "etoile1 ..\\..\\barre\\images\\texteam.bmp 6 0 452d",
+    "0001158E": "etoile",
+    "000115A0": "etoile1",
+    "000115B3": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "00011603": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "00011651": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "000116A4": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400d",
+    "0001179D": "costume.dlld",
+    "00011875": "..\\..\\ecosse\\img24\\interc.bmp",
+    "000118E2": "22 0 #ffffff Comic sans MS",
+    "00011908": "100 303 125 365 0 Un Parchemin",
+    "00011940": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "0001199F": "vinci = 0 then scene 35",
+    "000119C2": "22 0 #ffffff Comic sans MS",
+    "000119E8": "vinci = 0 then playtext 300 283 125 365 0 Une question",
+    "00011A20": "50 euros.",
+    "00011A36": "vinci = 0 then playtext 300 303 125 365 0 Si tu r",
+    "00011A68": "ponds juste, la somme",
+    "00011A89": "vinci = 0 then playtext 300 323 125 365 0 est pour toi, sinon tu perds",
+    "00011ADB": "vinci = 0 then playtext 300 343 125 365 0  25 euros.",
+    "00011B1B": "vinci = 0 then playtext 300 363 125 365 0 Veux tu tenter ta chance ?",
+    "00011B6B": "vinci = 1 then playtext 300 323 125 365 0 La r",
+    "00011B9A": "ponse se trouve dans",
+    "00011BBA": "vinci = 1 then playtext 300 343 125 365 0 la biblioth",
+    "00011BF0": "que.",
+    "00011C00": "vinci = 2 then playtext 300 323 125 365 0 Bien jou",
+    "00011C33": "la question",
+    "00011C4B": "vinci = 2 then playtext 300 343 125 365 0",
+    "00011C76": "tait difficile.i",
+    "00011D02": "interc3.bmp",
+    "00011D15": "coffre.htm",
+    "00011D75": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i",
+    "00011DF8": "question.bmp",
+    "00011E40": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+    "00011E8D": "18 1 #000000 Comic sans MS",
+    "00011EB3": "490 410 125 365 0 Quitteri",
+    "00011EF8": "vinci 1",
+    "00011F0B": "score 25",
+    "00011F1F": "score 6 25 410 160 470 0 <score>",
+    "00011F4B": "..\\..\\grece\\digit\\cartoon.wav 1",
+    "00011F76": "33i",
+    "00011FA4": "vinci 1",
+    "00011FB7": "score 25",
+    "00011FCB": "score 6 25 410 160 470 0 <score>",
+    "00011FF7": "..\\..\\grece\\digit\\cartoon.wav 1",
+    "00012022": "33i",
+    "00012050": "vinci 2",
+    "00012063": "score 50",
+    "00012077": "score 6 25 410 160 470 0 <score>",
+    "000120A3": "..\\..\\grece\\digit\\cling.wav 1",
+    "000120CC": "33i",
+    "000120FA": "vinci 1",
+    "0001210D": "score 25",
+    "00012121": "score 6 25 410 160 470 0 <score>",
+    "0001214D": "..\\..\\grece\\digit\\cartoon.wav 1",
+    "00012178": "33i",
+    "00012206": "..\\frontal\\start.vnp 3d"
+  },
+  "variables": [
+    "5D51F233",
+    "ACTIVE",
+    "AFFICHEM",
+    "ALLEMAGNE",
+    "ALLUMETTE",
+    "ANGLETERRE",
+    "AP_PHOTO",
+    "AUTRICHE",
+    "BALLON1",
+    "BEETHOVEN",
+    "BELGIQUE",
+    "BETAIL",
+    "BIDON",
+    "BIEREOK",
+    "BIERESO",
+    "BLEU",
+    "BOITE",
+    "BONNET",
+    "BONUS1",
+    "BONUS14",
+    "BONUS15",
+    "BONUS16",
+    "BONUS18",
+    "BONUS19",
+    "BONUS2",
+    "BONUS20",
+    "BONUS22",
+    "BONUS23",
+    "BONUS24",
+    "BONUS25",
+    "BONUS26",
+    "BONUS29",
+    "BONUS3",
+    "BONUS30",
+    "BONUS4",
+    "BONUS5",
+    "BONUS6",
+    "BONUS7",
+    "BONUS8",
+    "BONUS9",
+    "BOTTE",
+    "BOUBOU",
+    "BOUCHE",
+    "BOUEE",
+    "BOUILLON",
+    "BOUTEILLE",
+    "BOUT_EAU",
+    "BOUT_PLO",
+    "BURETTE",
+    "CALC",
+    "CAPITALE",
+    "CARTETOUR",
+    "CASTA",
+    "CASTAGNETTE",
+    "CHAMPAGNE",
+    "CHAMPAGNE2",
+    "CHEVAL",
+    "CHEWING",
+    "CHIANTI",
+    "CHOUETTE",
+    "CHOUETTEOR",
+    "CIRE",
+    "CISEAUX",
+    "CLEJAUNE",
+    "CLEROUGE",
+    "CLEVERTE",
+    "CMENU1",
+    "CMENU2",
+    "CMENU3",
+    "COLOMB",
+    "COMPTEUR1",
+    "COMPTEUR2",
+    "COMPTEUR3",
+    "CORNEMUSE",
+    "COSTUME",
+    "CPAYS",
+    "CPHOTO",
+    "DANEMARK",
+    "DANSE",
+    "DEJACLEJAUNE",
+    "DELPHITEST1",
+    "DELPHITEST2",
+    "DICO",
+    "DORADE",
+    "DRUIDE",
+    "EAUBIERE",
+    "EAUPAIN",
+    "ECOSSE",
+    "ERREUR7D1",
+    "ERREUR7D2",
+    "ERREUR7D3",
+    "ERREUR7D4",
+    "ERREUR7D5",
+    "ERREUR7D6",
+    "ERREUR7D7",
+    "ERREUR7OK",
+    "ERREUR7OK2",
+    "ESPAGNE",
+    "EUROLAND",
+    "EXPO",
+    "Europeo",
+    "FARINE",
+    "FINIPONPON",
+    "FINLANDE",
+    "FIOLE",
+    "FIOLEANGLETERRE",
+    "FIOLEAUTR",
+    "FIOLEAUTRICHE",
+    "FIOLEECOSSE",
+    "FIOLEESPAGNE",
+    "FIOLEESPAGNE2",
+    "FIOLEFINLANDE",
+    "FIOLEGRECE",
+    "FIOLEGRECE2",
+    "FIOLEIRLANDE",
+    "FIOLEITALIE",
+    "FIOLEOK",
+    "FIOLEPAYSBAS",
+    "FIOLESUEDE",
+    "FIOLEVASE",
+    "FRANCE",
+    "FRANCS",
+    "FROG",
+    "FROMAGE",
+    "GRECE",
+    "GRECQUESTION",
+    "GRECREPONSE",
+    "GUITARE",
+    "HARPEOK",
+    "HARPON",
+    "HELICE",
+    "HOTTE",
+    "HOUBLON",
+    "HUILE",
+    "INGROK",
+    "IRLANDE",
+    "ITALIE",
+    "Intro",
+    "JUSTEPRIX",
+    "JUSTEPRIX1",
+    "JUSTEPRIX10",
+    "JUSTEPRIX100",
+    "JUSTEPRIX15",
+    "JUSTEPRIX20",
+    "JUSTEPRIX25",
+    "JUSTEPRIX30",
+    "JUSTEPRIX50",
+    "JUSTEPRIXCLIC",
+    "JUSTEPRIXEURO",
+    "JUSTEPRIXOBJ",
+    "JUSTEPRIXOK",
+    "JUSTEPRIXQUESTION",
+    "JUSTEPRIXREPONSE",
+    "JUSTEPRIXSCORE",
+    "LAINE",
+    "LAPIN",
+    "LAPINSORTIE",
+    "LEVRIERNUMERO",
+    "LEVRIERPARI",
+    "LEVRIERRESULTAT",
+    "LEVURE",
+    "LOUPE",
+    "MACHINE",
+    "MALL",
+    "MARMOT",
+    "MARMOTTE",
+    "MASQUE",
+    "MASSE",
+    "MATH",
+    "MAUVAISENOTE",
+    "MENU",
+    "MESP",
+    "MFRA",
+    "MGRA",
+    "MGRE",
+    "MILLEEURO",
+    "MITA",
+    "MOULE",
+    "MUSIC",
+    "NAINOK",
+    "NBINGR",
+    "NESSIE",
+    "NOTE",
+    "NUMERO",
+    "NUMPAYS",
+    "NUMPAYS2",
+    "NUMPAYSSCORE",
+    "OBJETSFERMIER",
+    "OCCUPE",
+    "OCCUPE1",
+    "OCCUPE10",
+    "OCCUPE11",
+    "OCCUPE12",
+    "OCCUPE2",
+    "OCCUPE3",
+    "OCCUPE4",
+    "OCCUPE5",
+    "OCCUPE6",
+    "OCCUPE7",
+    "OCCUPE8",
+    "OCCUPE9",
+    "OEUF",
+    "OIGNON",
+    "OLIVE",
+    "ORGE",
+    "ORGUE",
+    "OUTIL",
+    "OUTIL2",
+    "OUTIL3",
+    "PAIN",
+    "PAINOK",
+    "PALETTE",
+    "PALME",
+    "PAPIERCADO",
+    "PARFUM",
+    "PARTITION",
+    "PASTEUR",
+    "PATE",
+    "PAYSBAS",
+    "PEINTRE",
+    "PEINTRE1",
+    "PEPE",
+    "PHOTO",
+    "PIECE",
+    "PIERREOR",
+    "PIER_BERLIN",
+    "PINCE",
+    "PISE",
+    "PIZZA",
+    "PLONGE",
+    "POGNON",
+    "POIVJAUNE",
+    "POIVROUGE",
+    "PONPON",
+    "PONPONOR",
+    "PORTESECRETE",
+    "PORTUGAL",
+    "PUBOK",
+    "PUCE",
+    "PUNK",
+    "QUESTION",
+    "RAQUETTE",
+    "REPONSE",
+    "REPONSEM",
+    "RESSORT",
+    "ROUEDENT",
+    "ROUGE",
+    "RUBAN",
+    "SABOT1",
+    "SABOT2",
+    "SACADOS",
+    "SALIERE",
+    "SCORE",
+    "SCOREPEINTRE",
+    "SCOTCH",
+    "SECHE",
+    "SIROP",
+    "SKATE",
+    "SOUSMARINOK",
+    "SOUSMARINOK2",
+    "SUEDE",
+    "TAILLEPIERRE",
+    "TELEPHONE",
+    "TEMPSLAPIN",
+    "TICKET",
+    "TICKET_A",
+    "TONDEUSE",
+    "TONO",
+    "TOURNEVIS",
+    "TRANS",
+    "TULIPEJAUNE",
+    "Toolbar",
+    "VASE",
+    "VINCI",
+    "VIOLON",
+    "VNFILE",
+    "active",
+    "calc1",
+    "etoile",
+    "etoile1",
+    "gagn",
+    "onard",
+    "telep"
+  ],
+  "conditions": [
+    "chianti = 0 then scene 4",
+    "chianti = 0 then playtext 1500 20 125 365 0 Une pizzeria",
+    "chianti != 0 then playtext 1500 20 125 365 0 Tu as d",
+    "clerouge = 2 then inc_var non 1",
+    "ballon1 = 2 then inc_var non 1",
+    "bouee = 2 then inc_var non 1",
+    "bout_plo = 2 then inc_var non 1",
+    "bus = 2 then inc_var non 1",
+    "castagnette = 2 then inc_var non 1",
+    "ciseau = 2 then inc_var non 1",
+    "clejaune = 2 then inc_var non 1",
+    "guitare = 2 then inc_var non 1",
+    "harpon = 2 then inc_var non 1",
+    "helice = 2 then inc_var non 1",
+    "loupe = 2 then inc_var non 1",
+    "masque = 2 then inc_var non 1",
+    "masse = 2 then inc_var non 1",
+    "pain = 2 then inc_var non 1",
+    "palme = 2 then inc_var non 1",
+    "photo = 2 then inc_var non 1",
+    "piece = 2 then inc_var non 1",
+    "pier_berlin = 2 then inc_var non 1",
+    "raquette = 2 then inc_var non 1",
+    "ressort  = 2 then inc_var non 1",
+    "cheval  = 2 then inc_var non 1",
+    "riz = 2 then inc_var non 1",
+    "ruban = 2 then inc_var non 1",
+    "sabot1 = 2 then inc_var non 1",
+    "sabot2 = 2 then inc_var non 1",
+    "scotch = 2 then inc_var non 1",
+    "taillepierre = 2 then inc_var non 1",
+    "ap_photo = 2 then inc_var non 1",
+    "houblon = 2 then inc_var non 1",
+    "chewing = 2 then inc_var non 1",
+    "cleverte = 2 then inc_var non 1",
+    "partition = 2 then inc_var non 1",
+    "laine = 2 then inc_var non 1",
+    "tondeuse = 2 then inc_var non 1",
+    "tournevis = 2 then inc_var non 1",
+    "cire = 2 then inc_var non 1",
+    "chianti = 2 then inc_var non 1",
+    "rouedent = 2 then inc_var non 1",
+    "pierreor = 2 then inc_var non 1",
+    "papiercado = 2 then inc_var non 1",
+    "hotte = 2 then inc_var non 1",
+    "levure = 2 then inc_var non 1",
+    "bouteille = 2 then inc_var non 1",
+    "parfum = 2 then inc_var non 1",
+    "rouge = 2 then inc_var non 1",
+    "bisous = 2 then inc_var non 1",
+    "api  = 2 then inc_var non 1",
+    "pince = 2 then inc_var non 1",
+    "tulipejaune = 2 then inc_var non 1",
+    "tulipeorange = 2 then inc_var non 1",
+    "tuliperouge = 2 then inc_var non 1",
+    "tulipeverte  = 2 then inc_var non 1",
+    "tulipeviolet = 2 then inc_var non 1",
+    "farine = 2 then inc_var non 1",
+    "saliere = 2 then inc_var non 1",
+    "bougie = 2 then inc_var non 1",
+    "seche = 2 then inc_var non 1",
+    "bout_eau = 2 then inc_var non 1",
+    "dorade = 2 then inc_var non 1",
+    "moule = 2 then inc_var non 1",
+    "ail = 2 then inc_var non 1",
+    "poivrouge = 2 then inc_var non 1",
+    "poivjaune = 2 then inc_var non 1",
+    "oignon  = 2 then inc_var non 1",
+    "olive = 2 then inc_var non 1",
+    "bouillon = 2 then inc_var non 1",
+    "violon = 2 then inc_var non 1",
+    "skate = 2 then inc_var non 1",
+    "champagne = 2 then inc_var non 1",
+    "fromage = 2 then inc_var non 1",
+    "bonnet = 2 then inc_var non 1",
+    "huile = 2 then inc_var non 1",
+    "orge = 2 then inc_var non 1",
+    "burette = 2 then inc_var non 1",
+    "allumette = 2 then inc_var non 1",
+    "chouetteor = 2 then inc_var non 1",
+    "chouette = 2 then inc_var non 1",
+    "sirop = 2 then inc_var non 1",
+    "fiolegrece = 2 then inc_var non 1",
+    "fiolegrece2 = 2 then inc_var non 1",
+    "fioleecosse = 2 then inc_var non 1",
+    "fioleirlande = 2 then inc_var non 1",
+    "fioleespagne = 2 then inc_var non 1",
+    "fiolesuede = 2 then inc_var non 1",
+    "fiolefinlande = 2 then inc_var non 1",
+    "fioleautriche = 2 then inc_var non 1",
+    "fiolepaysbas = 2 then inc_var non 1",
+    "fioleespagne2 = 2 then inc_var non 1",
+    "fioleitalie = 2 then inc_var non 1",
+    "fioleangleterre = 2 then inc_var non 1",
+    "non = 0 then playavi vespa.avi 1 1786 174 1881 264",
+    "non = 1 then playavi ves.avi 1 1786 174 1881 264",
+    "clerouge = 2 then inc_var non 1",
+    "ballon1 = 2 then inc_var non 1",
+    "bouee = 2 then inc_var non 1",
+    "bout_plo = 2 then inc_var non 1",
+    "bus = 2 then inc_var non 1",
+    "castagnette = 2 then inc_var non 1",
+    "ciseau = 2 then inc_var non 1",
+    "clejaune = 2 then inc_var non 1",
+    "guitare = 2 then inc_var non 1",
+    "harpon = 2 then inc_var non 1",
+    "helice = 2 then inc_var non 1",
+    "loupe = 2 then inc_var non 1",
+    "masque = 2 then inc_var non 1",
+    "masse = 2 then inc_var non 1",
+    "pain = 2 then inc_var non 1",
+    "palme = 2 then inc_var non 1",
+    "photo = 2 then inc_var non 1",
+    "piece = 2 then inc_var non 1",
+    "pier_berlin = 2 then inc_var non 1",
+    "raquette = 2 then inc_var non 1",
+    "ressort  = 2 then inc_var non 1",
+    "cheval  = 2 then inc_var non 1",
+    "riz = 2 then inc_var non 1",
+    "ruban = 2 then inc_var non 1",
+    "sabot1 = 2 then inc_var non 1",
+    "sabot2 = 2 then inc_var non 1",
+    "scotch = 2 then inc_var non 1",
+    "taillepierre = 2 then inc_var non 1",
+    "ap_photo = 2 then inc_var non 1",
+    "houblon = 2 then inc_var non 1",
+    "chewing = 2 then inc_var non 1",
+    "cleverte = 2 then inc_var non 1",
+    "partition = 2 then inc_var non 1",
+    "laine = 2 then inc_var non 1",
+    "tondeuse = 2 then inc_var non 1",
+    "tournevis = 2 then inc_var non 1",
+    "cire = 2 then inc_var non 1",
+    "rouedent = 2 then inc_var non 1",
+    "pierreor = 2 then inc_var non 1",
+    "papiercado = 2 then inc_var non 1",
+    "hotte = 2 then inc_var non 1",
+    "levure = 2 then inc_var non 1",
+    "bouteille = 2 then inc_var non 1",
+    "parfum = 2 then inc_var non 1",
+    "rouge = 2 then inc_var non 1",
+    "bisous = 2 then inc_var non 1",
+    "api  = 2 then inc_var non 1",
+    "pince = 2 then inc_var non 1",
+    "tulipejaune = 2 then inc_var non 1",
+    "tulipeorange = 2 then inc_var non 1",
+    "tuliperouge = 2 then inc_var non 1",
+    "tulipeverte  = 2 then inc_var non 1",
+    "tulipeviolet = 2 then inc_var non 1",
+    "farine = 2 then inc_var non 1",
+    "saliere = 2 then inc_var non 1",
+    "bougie = 2 then inc_var non 1",
+    "seche = 2 then inc_var non 1",
+    "bout_eau = 2 then inc_var non 1",
+    "dorade = 2 then inc_var non 1",
+    "moule = 2 then inc_var non 1",
+    "ail = 2 then inc_var non 1",
+    "poivrouge = 2 then inc_var non 1",
+    "poivjaune = 2 then inc_var non 1",
+    "oignon  = 2 then inc_var non 1",
+    "olive = 2 then inc_var non 1",
+    "bouillon = 2 then inc_var non 1",
+    "violon = 2 then inc_var non 1",
+    "skate = 2 then inc_var non 1",
+    "champagne = 2 then inc_var non 1",
+    "fromage = 2 then inc_var non 1",
+    "bonnet = 2 then inc_var non 1",
+    "huile = 2 then inc_var non 1",
+    "orge = 2 then inc_var non 1",
+    "burette = 2 then inc_var non 1",
+    "allumette = 2 then inc_var non 1",
+    "chouetteor = 2 then inc_var non 1",
+    "chouette = 2 then inc_var non 1",
+    "sirop = 2 then inc_var non 1",
+    "fiolegrece = 2 then inc_var non 1",
+    "fiolegrece2 = 2 then inc_var non 1",
+    "fioleecosse = 2 then inc_var non 1",
+    "fioleirlande = 2 then inc_var non 1",
+    "fioleespagne = 2 then inc_var non 1",
+    "fiolesuede = 2 then inc_var non 1",
+    "fiolefinlande = 2 then inc_var non 1",
+    "fioleautriche = 2 then inc_var non 1",
+    "fiolepaysbas = 2 then inc_var non 1",
+    "fioleespagne2 = 2 then inc_var non 1",
+    "fioleitalie = 2 then inc_var non 1",
+    "fioleangleterre = 2 then inc_var non 1",
+    "chianti = 2 then inc_var non 2",
+    "non = 2 then playavi gond2.avi 1 553 238 617 296",
+    "chianti = 2 then dec_var chianti 3",
+    "chianti = -1 then inc_var non 4",
+    "non = 0 then playavi gond1.avi 1 552 238 616 296",
+    "non = 1 then playavi gond99.avi 1 552 238 616 296",
+    "chianti = -1 then defcursor fleche.cur",
+    "chianti = -1 then playavi gondol.avi 1 158 266 510 400",
+    "chianti = -1 then scene 5l",
+    "loupe = 0 then playtext 310 325 125 365 0 Une louped",
+    "clerouge = 2 then inc_var non 1",
+    "ballon1 = 2 then inc_var non 1",
+    "bouee = 2 then inc_var non 1",
+    "bout_plo = 2 then inc_var non 1",
+    "bus = 2 then inc_var non 1",
+    "castagnette = 2 then inc_var non 1",
+    "ciseau = 2 then inc_var non 1",
+    "clejaune = 2 then inc_var non 1",
+    "guitare = 2 then inc_var non 1",
+    "harpon = 2 then inc_var non 1",
+    "helice = 2 then inc_var non 1",
+    "loupe = 2 then inc_var non 1",
+    "masque = 2 then inc_var non 1",
+    "masse = 2 then inc_var non 1",
+    "pain = 2 then inc_var non 1",
+    "palme = 2 then inc_var non 1",
+    "photo = 2 then inc_var non 1",
+    "piece = 2 then inc_var non 1",
+    "pier_berlin = 2 then inc_var non 1",
+    "raquette = 2 then inc_var non 1",
+    "ressort  = 2 then inc_var non 1",
+    "cheval  = 2 then inc_var non 1",
+    "riz = 2 then inc_var non 1",
+    "ruban = 2 then inc_var non 1",
+    "sabot1 = 2 then inc_var non 1",
+    "sabot2 = 2 then inc_var non 1",
+    "scotch = 2 then inc_var non 1",
+    "taillepierre = 2 then inc_var non 1",
+    "ap_photo = 2 then inc_var non 1",
+    "houblon = 2 then inc_var non 1",
+    "chewing = 2 then inc_var non 1",
+    "cleverte = 2 then inc_var non 1",
+    "partition = 2 then inc_var non 1",
+    "laine = 2 then inc_var non 1",
+    "tondeuse = 2 then inc_var non 1",
+    "tournevis = 2 then inc_var non 1",
+    "cire = 2 then inc_var non 1",
+    "chianti = 2 then inc_var non 1",
+    "rouedent = 2 then inc_var non 1",
+    "pierreor = 2 then inc_var non 1",
+    "papiercado = 2 then inc_var non 1",
+    "hotte = 2 then inc_var non 1",
+    "levure = 2 then inc_var non 1",
+    "bouteille = 2 then inc_var non 1",
+    "parfum = 2 then inc_var non 1",
+    "rouge = 2 then inc_var non 1",
+    "bisous = 2 then inc_var non 1",
+    "api  = 2 then inc_var non 1",
+    "pince = 2 then inc_var non 1",
+    "tulipejaune = 2 then inc_var non 1",
+    "tulipeorange = 2 then inc_var non 1",
+    "tuliperouge = 2 then inc_var non 1",
+    "tulipeverte  = 2 then inc_var non 1",
+    "tulipeviolet = 2 then inc_var non 1",
+    "farine = 2 then inc_var non 1",
+    "saliere = 2 then inc_var non 1",
+    "bougie = 2 then inc_var non 1",
+    "seche = 2 then inc_var non 1",
+    "bout_eau = 2 then inc_var non 1",
+    "dorade = 2 then inc_var non 1",
+    "moule = 2 then inc_var non 1",
+    "ail = 2 then inc_var non 1",
+    "poivrouge = 2 then inc_var non 1",
+    "poivjaune = 2 then inc_var non 1",
+    "oignon  = 2 then inc_var non 1",
+    "olive = 2 then inc_var non 1",
+    "bouillon = 2 then inc_var non 1",
+    "violon = 2 then inc_var non 1",
+    "skate = 2 then inc_var non 1",
+    "champagne = 2 then inc_var non 1",
+    "fromage = 2 then inc_var non 1",
+    "bonnet = 2 then inc_var non 1",
+    "huile = 2 then inc_var non 1",
+    "orge = 2 then inc_var non 1",
+    "burette = 2 then inc_var non 1",
+    "allumette = 2 then inc_var non 1",
+    "chouetteor = 2 then inc_var non 1",
+    "chouette = 2 then inc_var non 1",
+    "sirop = 2 then inc_var non 1",
+    "fiolegrece = 2 then inc_var non 1",
+    "fiolegrece2 = 2 then inc_var non 1",
+    "fioleecosse = 2 then inc_var non 1",
+    "fioleirlande = 2 then inc_var non 1",
+    "fioleespagne = 2 then inc_var non 1",
+    "fiolesuede = 2 then inc_var non 1",
+    "fiolefinlande = 2 then inc_var non 1",
+    "fioleautriche = 2 then inc_var non 1",
+    "fiolepaysbas = 2 then inc_var non 1",
+    "fioleespagne2 = 2 then inc_var non 1",
+    "fioleitalie = 2 then inc_var non 1",
+    "fioleangleterre = 2 then inc_var non 1",
+    "non = 0 then playavi coutur1.avi 1 317 100 378 146",
+    "non = 1 then playavi coutur.avi 1 317 100 378 146l",
+    "ciseaux = 0 then playtext 395 300 125 365 0 Une paire",
+    "ciseaux = 0 then playtext 395 320 125 365 0 de ciseauxd",
+    "api = 0 then playavi coutur3.avi 1 317 100 378 146",
+    "api = 0 then scene 24",
+    "api = 0 then playtext 130 290 125 365 0 Quel d",
+    "api != 0 then playtext 100 290 125 365 0 Gr",
+    "api != 0 then playtext 100 310 125 365 0 a tout rang",
+    "clerouge = 2 then inc_var non 1",
+    "ballon1 = 2 then inc_var non 1",
+    "bouee = 2 then inc_var non 1",
+    "bout_plo = 2 then inc_var non 1",
+    "bus = 2 then inc_var non 1",
+    "castagnette = 2 then inc_var non 1",
+    "ciseau = 2 then inc_var non 1",
+    "clejaune = 2 then inc_var non 1",
+    "guitare = 2 then inc_var non 1",
+    "harpon = 2 then inc_var non 1",
+    "helice = 2 then inc_var non 1",
+    "loupe = 2 then inc_var non 1",
+    "masque = 2 then inc_var non 1",
+    "masse = 2 then inc_var non 1",
+    "pain = 2 then inc_var non 1",
+    "palme = 2 then inc_var non 1",
+    "photo = 2 then inc_var non 1",
+    "piece = 2 then inc_var non 1",
+    "pier_berlin = 2 then inc_var non 1",
+    "raquette = 2 then inc_var non 1",
+    "ressort  = 2 then inc_var non 1",
+    "cheval  = 2 then inc_var non 1",
+    "riz = 2 then inc_var non 1",
+    "ruban = 2 then inc_var non 1",
+    "sabot1 = 2 then inc_var non 1",
+    "sabot2 = 2 then inc_var non 1",
+    "scotch = 2 then inc_var non 1",
+    "taillepierre = 2 then inc_var non 1",
+    "ap_photo = 2 then inc_var non 1",
+    "houblon = 2 then inc_var non 1",
+    "chewing = 2 then inc_var non 1",
+    "cleverte = 2 then inc_var non 1",
+    "partition = 2 then inc_var non 1",
+    "laine = 2 then inc_var non 1",
+    "tondeuse = 2 then inc_var non 1",
+    "tournevis = 2 then inc_var non 1",
+    "cire = 2 then inc_var non 1",
+    "chianti = 2 then inc_var non 1",
+    "rouedent = 2 then inc_var non 1",
+    "pierreor = 2 then inc_var non 1",
+    "papiercado = 2 then inc_var non 1",
+    "hotte = 2 then inc_var non 1",
+    "levure = 2 then inc_var non 1",
+    "bouteille = 2 then inc_var non 1",
+    "parfum = 2 then inc_var non 1",
+    "rouge = 2 then inc_var non 1",
+    "bisous = 2 then inc_var non 1",
+    "api  = 2 then inc_var non 1",
+    "pince = 2 then inc_var non 1",
+    "tulipejaune = 2 then inc_var non 1",
+    "tulipeorange = 2 then inc_var non 1",
+    "tuliperouge = 2 then inc_var non 1",
+    "tulipeverte  = 2 then inc_var non 1",
+    "tulipeviolet = 2 then inc_var non 1",
+    "farine = 2 then inc_var non 1",
+    "saliere = 2 then inc_var non 1",
+    "bougie = 2 then inc_var non 1",
+    "seche = 2 then inc_var non 1",
+    "bout_eau = 2 then inc_var non 1",
+    "dorade = 2 then inc_var non 1",
+    "moule = 2 then inc_var non 1",
+    "ail = 2 then inc_var non 1",
+    "poivrouge = 2 then inc_var non 1",
+    "poivjaune = 2 then inc_var non 1",
+    "oignon  = 2 then inc_var non 1",
+    "olive = 2 then inc_var non 1",
+    "bouillon = 2 then inc_var non 1",
+    "violon = 2 then inc_var non 1",
+    "skate = 2 then inc_var non 1",
+    "champagne = 2 then inc_var non 1",
+    "fromage = 2 then inc_var non 1",
+    "bonnet = 2 then inc_var non 1",
+    "huile = 2 then inc_var non 1",
+    "orge = 2 then inc_var non 1",
+    "burette = 2 then inc_var non 1",
+    "allumette = 2 then inc_var non 1",
+    "chouetteor = 2 then inc_var non 1",
+    "chouette = 2 then inc_var non 1",
+    "sirop = 2 then inc_var non 1",
+    "fiolegrece = 2 then inc_var non 1",
+    "fiolegrece2 = 2 then inc_var non 1",
+    "fioleecosse = 2 then inc_var non 1",
+    "fioleirlande = 2 then inc_var non 1",
+    "fioleespagne = 2 then inc_var non 1",
+    "fiolesuede = 2 then inc_var non 1",
+    "fiolefinlande = 2 then inc_var non 1",
+    "fioleautriche = 2 then inc_var non 1",
+    "fiolepaysbas = 2 then inc_var non 1",
+    "fioleespagne2 = 2 then inc_var non 1",
+    "fioleitalie = 2 then inc_var non 1",
+    "fioleangleterre = 2 then inc_var non 1",
+    "non = 1 then playavi pizz99.avi 1 55 78 129 164",
+    "non = 0 then playavi pizz1.avi 1 55 78 129 164",
+    "non = 0 then scene 18 else playwav resto.wav 2l",
+    "chianti = 0 then playtext 245 80 125 365 0 Une bouteille de chianti",
+    "chianti = 0 then playtext 285 100 125 365 0",
+    "chianti != 0 then playtext 245 80 125 365 0 Tu as d",
+    "chianti != 0 then playtext 250 100 125 365 0 bouteille de chianti !d",
+    "clerouge = 2 then inc_var non 1",
+    "ballon1 = 2 then inc_var non 1",
+    "bouee = 2 then inc_var non 1",
+    "bout_plo = 2 then inc_var non 1",
+    "bus = 2 then inc_var non 1",
+    "castagnette = 2 then inc_var non 1",
+    "ciseau = 2 then inc_var non 1",
+    "clejaune = 2 then inc_var non 1",
+    "guitare = 2 then inc_var non 1",
+    "harpon = 2 then inc_var non 1",
+    "helice = 2 then inc_var non 1",
+    "loupe = 2 then inc_var non 1",
+    "masque = 2 then inc_var non 1",
+    "masse = 2 then inc_var non 1",
+    "pain = 2 then inc_var non 1",
+    "palme = 2 then inc_var non 1",
+    "photo = 2 then inc_var non 1",
+    "piece = 2 then inc_var non 1",
+    "pier_berlin = 2 then inc_var non 1",
+    "raquette = 2 then inc_var non 1",
+    "ressort  = 2 then inc_var non 1",
+    "cheval  = 2 then inc_var non 1",
+    "riz = 2 then inc_var non 1",
+    "ruban = 2 then inc_var non 1",
+    "sabot1 = 2 then inc_var non 1",
+    "sabot2 = 2 then inc_var non 1",
+    "scotch = 2 then inc_var non 1",
+    "taillepierre = 2 then inc_var non 1",
+    "ap_photo = 2 then inc_var non 1",
+    "houblon = 2 then inc_var non 1",
+    "chewing = 2 then inc_var non 1",
+    "cleverte = 2 then inc_var non 1",
+    "partition = 2 then inc_var non 1",
+    "laine = 2 then inc_var non 1",
+    "tondeuse = 2 then inc_var non 1",
+    "tournevis = 2 then inc_var non 1",
+    "cire = 2 then inc_var non 1",
+    "chianti = 2 then inc_var non 1",
+    "rouedent = 2 then inc_var non 1",
+    "pierreor = 2 then inc_var non 1",
+    "papiercado = 2 then inc_var non 1",
+    "hotte = 2 then inc_var non 1",
+    "levure = 2 then inc_var non 1",
+    "bouteille = 2 then inc_var non 1",
+    "parfum = 2 then inc_var non 1",
+    "rouge = 2 then inc_var non 1",
+    "bisous = 2 then inc_var non 1",
+    "api  = 2 then inc_var non 1",
+    "pince = 2 then inc_var non 1",
+    "tulipejaune = 2 then inc_var non 1",
+    "tulipeorange = 2 then inc_var non 1",
+    "tuliperouge = 2 then inc_var non 1",
+    "tulipeverte  = 2 then inc_var non 1",
+    "tulipeviolet = 2 then inc_var non 1",
+    "farine = 2 then inc_var non 1",
+    "saliere = 2 then inc_var non 1",
+    "bougie = 2 then inc_var non 1",
+    "seche = 2 then inc_var non 1",
+    "bout_eau = 2 then inc_var non 1",
+    "dorade = 2 then inc_var non 1",
+    "moule = 2 then inc_var non 1",
+    "ail = 2 then inc_var non 1",
+    "poivrouge = 2 then inc_var non 1",
+    "poivjaune = 2 then inc_var non 1",
+    "oignon  = 2 then inc_var non 1",
+    "olive = 2 then inc_var non 1",
+    "bouillon = 2 then inc_var non 1",
+    "violon = 2 then inc_var non 1",
+    "skate = 2 then inc_var non 1",
+    "champagne = 2 then inc_var non 1",
+    "fromage = 2 then inc_var non 1",
+    "bonnet = 2 then inc_var non 1",
+    "huile = 2 then inc_var non 1",
+    "orge = 2 then inc_var non 1",
+    "burette = 2 then inc_var non 1",
+    "allumette = 2 then inc_var non 1",
+    "chouetteor = 2 then inc_var non 1",
+    "chouette = 2 then inc_var non 1",
+    "sirop = 2 then inc_var non 1",
+    "fiolegrece = 2 then inc_var non 1",
+    "fiolegrece2 = 2 then inc_var non 1",
+    "fioleecosse = 2 then inc_var non 1",
+    "fioleirlande = 2 then inc_var non 1",
+    "fioleespagne = 2 then inc_var non 1",
+    "fiolesuede = 2 then inc_var non 1",
+    "fiolefinlande = 2 then inc_var non 1",
+    "fioleautriche = 2 then inc_var non 1",
+    "fiolepaysbas = 2 then inc_var non 1",
+    "fioleespagne2 = 2 then inc_var non 1",
+    "fioleitalie = 2 then inc_var non 1",
+    "fioleangleterre = 2 then inc_var non 1",
+    "non = 1 then playavi pise99.avi 1 79 54 128 129",
+    "pise = 0 then playavi pise.avi 1 79 54 128 129",
+    "pise = 0 then scene 8 else scene 7l",
+    "fioleitalie = 0 then scene 13i",
+    "cleverte = 2 then playbmp ..\\..\\ecosse\\img24\\cle.bmp 0 370 350",
+    "clerouge = 2 then playbmp ..\\..\\ecosse\\img24\\cle.bmp 0 370 350",
+    "clejaune = 2 then playwav porte2.wav 1",
+    "clejaune = 2 then defcursor fleche.cur",
+    "clejaune = 2 then set_var clejaune -1",
+    "clejaune = -1 then scene 33",
+    "clerouge = 2 then playtext 240 120 125 365 0 Non,",
+    "cleverte = 2 then playtext 240 120 125 365 0 Non,",
+    "question = 1 then inc_var reponse 1",
+    "question = 1 then addbmp question rollover\\qfleuv.bmp 0 365 77",
+    "question = 1 then addbmp reponse1 rollover\\po.bmp 0 319 267",
+    "question = 1 then addbmp reponse2 rollover\\gange.bmp 0 474 349",
+    "question = 1 then addbmp reponse3 rollover\\euf.bmp 0 159 345",
+    "question = 1  then playavi pise7.avi 1 79 54 128 129",
+    "question = 2 then addbmp question rollover\\qcolise.bmp 0 365 76",
+    "question = 2 then addbmp reponse1 rollover\\trois.bmp 0 335 263",
+    "question = 2 then addbmp reponse2 rollover\\un.bmp 0 485 348",
+    "question = 2 then addbmp reponse3 rollover\\cinq.bmp 0 164 339",
+    "question = 2  then playavi pise8.avi 1 79 54 128 129",
+    "question = 3 then  playavi pise4.avi 1 79 54 128 129",
+    "question = 3 then dec_var score 5",
+    "question = 3 then scene 5",
+    "question = 3 then dec_var score 5i",
+    "question = 0 then inc_var reponse 1",
+    "question = 2 then inc_var reponse 1",
+    "question = 1 then addbmp question rollover\\qfleuv.bmp 0 365 77",
+    "question = 1 then addbmp reponse1 rollover\\po.bmp 0 319 267",
+    "question = 1 then addbmp reponse2 rollover\\gange.bmp 0 474 349",
+    "question = 1 then addbmp reponse3 rollover\\euf.bmp 0 159 345",
+    "question = 1  then playavi pise7.avi 1 79 54 128 129",
+    "question = 2 then addbmp question rollover\\qcolise.bmp 0 365 76",
+    "question = 2 then addbmp reponse1 rollover\\trois.bmp 0 335 263",
+    "question = 2 then addbmp reponse2 rollover\\un.bmp 0 485 348",
+    "question = 2 then addbmp reponse3 rollover\\cinq.bmp 0 164 339",
+    "question = 2  then playavi pise8.avi 1 79 54 128 129",
+    "reponse = 3  then playavi pise9.avi 1 79 54 128 129 else if question = 3 then playavi pise4.avi 1 79 54 128 129",
+    "reponse = 3 then dec_var score 0 else if question = 3 then dec_var score 5",
+    "reponse = 3 then scene 7 else if question = 3 then scene 5i",
+    "question = 1 then addbmp question rollover\\qfleuv.bmp 0 365 77",
+    "question = 1 then addbmp reponse1 rollover\\po.bmp 0 319 267",
+    "question = 1 then addbmp reponse2 rollover\\gange.bmp 0 474 349",
+    "question = 1 then addbmp reponse3 rollover\\euf.bmp 0 159 345",
+    "question = 1  then playavi pise7.avi 1 79 54 128 129",
+    "question = 2 then addbmp question rollover\\qcolise.bmp 0 365 76",
+    "question = 2 then addbmp reponse1 rollover\\trois.bmp 0 335 263",
+    "question = 2 then addbmp reponse2 rollover\\un.bmp 0 485 348",
+    "question = 2 then addbmp reponse3 rollover\\cinq.bmp 0 164 339",
+    "question = 2  then playavi pise8.avi 1 79 54 128 129",
+    "question = 3 then  playavi pise4.avi 1 79 54 128 129",
+    "question = 3 then dec_var score 5",
+    "question = 3 then scene 5i",
+    "vf = 1 then runprj ..\\france\\france.vnp 18",
+    "va = 1 then runprj ..\\autr\\autr.vnp 12",
+    "ve = 1 then runprj ..\\espa\\espa.vnp 13",
+    "score >= 0 then if vf = 1 then runprj ..\\france\\france.vnp 18",
+    "score >= 0 then if va = 1 then runprj ..\\autr\\autr.vnp 12",
+    "score >= 0 then if ve = 1 then runprj ..\\espa\\espa.vnp 13",
+    "capitale != 0 then dec_var score 10",
+    "capitale = 0 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 0 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 0 then  addtext lib1 6 90 60 600 70 0 Londres",
+    "capitale = 0 then invalidate 70 30 300 250",
+    "capitale = 0 then update",
+    "capitale = 0 then inc_var capitale 1",
+    "capitale != 1 then dec_var score 10",
+    "capitale = 1 then playtext 100 170 1 1 0 \"OUI !\" else playtext 100 170 1 1 0 \"NON... \"",
+    "capitale = 1 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 1 then  addtext lib1 6 90 60 600 70 0 Ath",
+    "capitale = 1 then invalidate 70 30 300 250",
+    "capitale = 1 then update",
+    "capitale = 1 then inc_var capitale  1",
+    "capitale != 2 then dec_var score 10",
+    "capitale = 2 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 2 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 2 then  addtext lib1 6 90 60 600 70 0 Rome",
+    "capitale = 2 then invalidate 70 30 300 250",
+    "capitale = 2 then update",
+    "capitale = 2 then inc_var capitale  1",
+    "capitale != 3 then dec_var score 10",
+    "capitale = 3 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 3 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 3 then  addtext lib1 6 90 60 600 70 0 Stockolm",
+    "capitale = 3 then invalidate 70 30 300 250",
+    "capitale = 3 then update",
+    "capitale = 3 then inc_var capitale  1",
+    "capitale != 4 then dec_var score 10",
+    "capitale = 4 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 4 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 4 then  addtext lib1 6 90 60 600 70 0 Copenhague",
+    "capitale = 4 then invalidate 70 30 300 250",
+    "capitale = 4 then update",
+    "capitale = 4 then inc_var capitale  1",
+    "capitale != 5 then dec_var score 10",
+    "capitale = 5 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 5 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 5 then  addtext lib1 6 90 60 600 70 0 Madrid",
+    "capitale = 5 then invalidate 70 30 300 250",
+    "capitale = 5 then update",
+    "capitale = 5 then inc_var capitale  1",
+    "capitale != 6 then dec_var score 10",
+    "capitale = 6 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 6 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 6 then  addtext lib1 6 90 60 600 70 0 Helsinki",
+    "capitale = 6 then invalidate 70 30 300 250",
+    "capitale = 6 then update",
+    "capitale = 6 then inc_var capitale  1",
+    "capitale != 7 then dec_var score 10",
+    "capitale = 7 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 7 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 7 then  addtext lib1 6 90 60 600 70 0 Bruxelles",
+    "capitale = 7 then invalidate 70 30 300 250",
+    "capitale = 7 then update",
+    "capitale = 7 then inc_var capitale  1",
+    "capitale != 8 then dec_var score 10",
+    "capitale = 8 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 8 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 8 then  addtext lib1 6 90 60 600 70 0 Lisbonne",
+    "capitale = 8 then invalidate 70 30 300 250",
+    "capitale = 8 then update",
+    "capitale = 8 then inc_var capitale  1",
+    "capitale != 9 then dec_var score 10",
+    "capitale = 9 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 9 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 9 then  addtext lib1 6 90 60 600 70 0 Vienne",
+    "capitale = 9 then invalidate 70 30 300 250",
+    "capitale = 9 then update",
+    "capitale = 9 then inc_var capitale  1",
+    "capitale != 10 then dec_var score 10",
+    "capitale = 10 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 10 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 10 then  addtext lib1 6 90 60 600 70 0 Dublin",
+    "capitale = 10 then invalidate 70 30 300 250",
+    "capitale = 10 then update",
+    "capitale = 10 then inc_var capitale  1",
+    "capitale != 11 then dec_var score 10",
+    "capitale = 11 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 11 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 11 then  addtext lib1 6 90 60 600 70 0 Berlin",
+    "capitale = 11 then invalidate 70 30 300 250",
+    "capitale = 11 then update",
+    "capitale = 11 then inc_var capitale  1",
+    "capitale != 12 then dec_var score 10",
+    "capitale = 12 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 12 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 12 then  addtext lib1 6 90 60 600 70 0 Amsterdam",
+    "capitale = 12 then invalidate 70 30 300 250",
+    "capitale = 12 then update",
+    "capitale = 12 then inc_var capitale  1",
+    "capitale != 13 then dec_var score 10",
+    "capitale = 13 then playtext 100 170 1 1 0 OUI ! else playtext 100 170 1 1 0 NON...",
+    "capitale = 13 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1 else playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "capitale = 13 then scene 17",
+    "capitale = 13 then invalidate 70 30 300 250",
+    "capitale = 13 then update",
+    "capitale = 13 then inc_var capitale  1",
+    "fioleitalie = 0 then playavi fiole.avi 2 340 94 580 400 else scene 7",
+    "fioleitalie = 0 then set_var fioleitalie 1",
+    "pizza != 2 then dec_var score 5",
+    "pizza != 2 then playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "pizza = 2 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1",
+    "pizza = 2 then inc_var pizza 1",
+    "pizza = 3 then delbmp bouteille1",
+    "pizza = 3 then scene 20i",
+    "pizza != 0 then playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "pizza != 0 then dec_var score 5",
+    "pizza = 0 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1",
+    "pizza = 0 then inc_var pizza 1",
+    "pizza = 1 then delbmp bouteille3",
+    "pizza = 1 then delbmp menu11",
+    "pizza = 1 then delbmp menu12",
+    "pizza = 1 then delbmp menu13",
+    "pizza = 1 then delbmp menu14",
+    "pizza = 1 then delbmp menu15",
+    "pizza = 1 then addbmp menu24 rollover\\menu24.bmp 0 57 266",
+    "pizza = 1 then addbmp menu21 rollover\\menu21.bmp 0 61 53",
+    "pizza = 1 then addbmp menu25 rollover\\menu25.bmp 0 244 268",
+    "pizza = 1 then addbmp menu22 rollover\\menu22.bmp 0 241 74",
+    "pizza = 1 then addbmp menu23 rollover\\menu23.bmp 0 419 72i",
+    "pizza != 1 then playwav ..\\..\\couleurs1\\digit\\cartoon.wav 1",
+    "pizza != 1 then dec_var score 5",
+    "pizza = 1 then playwav ..\\..\\couleurs1\\digit\\cling.wav 1",
+    "pizza = 1 then inc_var pizza 1",
+    "pizza = 2 then delbmp bouteille2",
+    "pizza = 2 then delbmp menu21",
+    "pizza = 2 then delbmp menu22",
+    "pizza = 2 then delbmp menu23",
+    "pizza = 2 then delbmp menu24",
+    "pizza = 2 then delbmp menu25",
+    "pizza = 2 then addbmp menu31 rollover\\menu31.bmp 0 61 73",
+    "pizza = 2 then addbmp menu32 rollover\\menu32.bmp 0 242 71",
+    "pizza = 2 then addbmp menu33 rollover\\menu33.bmp 0 424 69",
+    "pizza = 2 then addbmp menu34 rollover\\menu34.bmp 0 59 272",
+    "pizza = 2 then addbmp menu35 rollover\\menu35.bmp 0 241 269i",
+    "euroland = 1 then dec_var euroland 1",
+    "angleterre = 1 then dec_var angleterre 1",
+    "autriche = 1  then dec_var autriche 1",
+    "allemagne = 1  then dec_var allemagne 1",
+    "ecosse = 1  then dec_var ecosse 1",
+    "espagne = 1  then dec_var espagne 1",
+    "france = 1  then dec_var france 1",
+    "finlande = 1  then dec_var finlande 1",
+    "irlande = 1  then dec_var irlande 1",
+    "belgique = 1  then dec_var belgique 1",
+    "paysbas = 1  then dec_var paysbas 1",
+    "grece = 1  then dec_var grece 1",
+    "danemark = 1  then dec_var danemark 1",
+    "portugal = 1  then dec_var portugal 1",
+    "suede = 1  then dec_var suede 1",
+    "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+    "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "fiole = 1 then addbmp fiole ..\\..\\barre\\images\\f1.bmp 6 197 461",
+    "fiole = 2 then addbmp fiole ..\\..\\barre\\images\\f2.bmp 6 196 461",
+    "fiole = 3 then addbmp fiole ..\\..\\barre\\images\\f3.bmp 6 196 461",
+    "fiole = 4 then addbmp fiole ..\\..\\barre\\images\\f4.bmp 6 197 461",
+    "fiole = 5 then addbmp fiole ..\\..\\barre\\images\\f5.bmp 6 197 461",
+    "fiole = 6 then addbmp fiole ..\\..\\barre\\images\\f6.bmp 6 196 461",
+    "fiole = 7 then addbmp fiole ..\\..\\barre\\images\\f7.bmp 6 197 461",
+    "fiole = 8 then addbmp fiole ..\\..\\barre\\images\\f8.bmp 6 197 461",
+    "fiole = 9 then addbmp fiole ..\\..\\barre\\images\\f9.bmp 6 196 461",
+    "fiole = 10 then addbmp fiole ..\\..\\barre\\images\\f10.bmp 6 197 461",
+    "fiole = 11 then addbmp fiole ..\\..\\barre\\images\\f11.bmp 6 196 461",
+    "fiole = 12 then addbmp fiole ..\\..\\barre\\images\\f12.bmp 6 196 461",
+    "suede = 1 then  addbmp info ..\\..\\barre\\images\\p_suede.bmp 6 452 400",
+    "portugal = 1 then  addbmp info ..\\..\\barre\\images\\p_port.bmp 6 452 400",
+    "allemagne = 1 then  addbmp info ..\\..\\barre\\images\\p_all.bmp 6 452 400",
+    "france = 1 then  addbmp info ..\\..\\barre\\images\\p_france.bmp 6 452 400",
+    "angleterre = 1 then  addbmp info ..\\..\\barre\\images\\p_angl.bmp 6 452 400",
+    "autriche = 1 then  addbmp info ..\\..\\barre\\images\\p_autriche.bmp 6 452 400",
+    "danemark = 1 then  addbmp info ..\\..\\barre\\images\\p_danemark.bmp 6 452 400",
+    "ecosse = 1 then  addbmp info ..\\..\\barre\\images\\p_ecosse.bmp 6 452 400",
+    "euroland = 1 then  addbmp info ..\\..\\barre\\images\\p_euroland.bmp 6 452 400",
+    "espagne = 1 then  addbmp info ..\\..\\barre\\images\\p_espagne.bmp 6 452 400",
+    "finlande = 1 then  addbmp info ..\\..\\barre\\images\\p_finland.bmp 6 452 400",
+    "grece = 1 then  addbmp info ..\\..\\barre\\images\\p_grece.bmp 6 452 400",
+    "irlande = 1 then  addbmp info ..\\..\\barre\\images\\p_irlande.bmp 6 452 400",
+    "italie = 1 then  addbmp info ..\\..\\barre\\images\\p_italie.bmp 6 452 400",
+    "belgique = 1 then  addbmp info ..\\..\\barre\\images\\p_belgique.bmp 6 452 400",
+    "paysbas = 1 then  addbmp info ..\\..\\barre\\images\\p_pays.bmp 6 452 400",
+    "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+    "calc = 1 then rundll ..\\barre\\euro32.dll",
+    "calc = 1 then addbmp etoile ..\\..\\barre\\images\\calc2.bmp 6 249 400",
+    "calc = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetc.bmp 6 0 450",
+    "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400d",
+    "sacados = 1 then addbmp etoile ..\\..\\barre\\images\\sac2.bmp 6 385 400",
+    "sacados = 1 then addbmp etoile1 ..\\..\\barre\\images\\textes.bmp 6 0 454",
+    "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "sacados = 1 then rundll ..\\barre\\inv.dlld",
+    "clerouge = 2 then dec_var clerouge 1",
+    "ballon1 = 2 then dec_var ballon1 1",
+    "bouee = 2 then dec_var bouee 1",
+    "bout_plo = 2 then dec_var bout_plo 1",
+    "bus = 2 then dec_var bus 1",
+    "castagnette = 2 then dec_var castagnette 1",
+    "ciseaux = 2 then dec_var ciseaux 1",
+    "clejaune = 2 then dec_var clejaune 1",
+    "guitare = 2 then dec_var guitare 1",
+    "harpon = 2 then dec_var harpon 1",
+    "helice = 2 then dec_var helice 1",
+    "loupe = 2 then dec_var loupe 1",
+    "masque = 2 then dec_var masque 1",
+    "masse = 2 then dec_var masse 1",
+    "pain = 2 then dec_var pain 1",
+    "palme = 2 then dec_var palme 1",
+    "photo = 2 then dec_var photo 1",
+    "piece = 2 then dec_var piece 1",
+    "pier_berlin = 2 then dec_var pier_berlin 1",
+    "raquette = 2 then dec_var raquette 1",
+    "ressort = 2 then dec_var ressort 1",
+    "cheval = 2 then dec_var cheval 1",
+    "riz = 2 then dec_var riz 1",
+    "ruban = 2 then dec_var ruban 1",
+    "sabot1 = 2 then dec_var sabot1 1",
+    "sabot2 = 2 then dec_var sabot2 1",
+    "scotch = 2 then dec_var scotch 1",
+    "taillepierre = 2 then dec_var taillepierre 1",
+    "ap_photo = 2 then dec_var ap_photo 1",
+    "houblon = 2 then dec_var houblon 1",
+    "chewing = 2 then dec_var chewing 1",
+    "cleverte = 2 then dec_var cleverte 1",
+    "partition = 2 then dec_var partition 1",
+    "laine = 2 then dec_var laine 1",
+    "tondeuse = 2 then dec_var tondeuse 1",
+    "tournevis = 2 then dec_var tournevis 1",
+    "cire = 2 then dec_var cire 1",
+    "chianti = 2 then dec_var chianti 1",
+    "rouedent = 2 then dec_var rouedent 1",
+    "pierreor = 2 then dec_var pierreor 1",
+    "papiercado = 2 then dec_var papiercado 1",
+    "hotte = 2 then dec_var  hotte 1",
+    "levure = 2 then dec_var  levure 1",
+    "bouteille = 2 then dec_var bouteille 1",
+    "parfum = 2 then dec_var parfum 1",
+    "rouge = 2 then dec_var rouge 1",
+    "bisous = 2 then dec_var bisous 1",
+    "ap = 2 then dec_var api 1",
+    "pince = 2 then dec_var pince 1",
+    "tulipejaune = 2 then dec_var tulipejaune 1",
+    "tulipeorange = 2 then dec_var tulipeorange 1",
+    "tuliperouge = 2 then dec_var tuliperouge 1",
+    "tulipeverte = 2 then dec_var tulipeverte 1",
+    "tulipeviolet = 2 then dec_var tulipeviolet 1",
+    "farine = 2 then dec_var farine 1",
+    "saliere = 2 then dec_var saliere 1",
+    "bougie = 2 then dec_var bougie 1",
+    "seche = 2 then dec_var seche 1",
+    "bout_eau = 2 then dec_var bout_eau 1",
+    "dorade = 2 then dec_var dorade 1",
+    "moule = 2 then dec_var moule 1",
+    "ail = 2 then dec_var ail 1",
+    "poivrouge = 2 then dec_var poivrouge 1",
+    "poivjaune = 2 then dec_var poivjaune 1",
+    "oignon = 2 then dec_var oignon 1",
+    "olive = 2 then dec_var olive 1",
+    "bouillon = 2 then dec_var bouillon 1",
+    "violon = 2 then dec_var violon 1",
+    "skate = 2 then dec_var skate 1",
+    "champagne = 2 then dec_var champagne 1",
+    "fromage = 2 then dec_var fromage 1",
+    "bonnet = 2 then dec_var bonnet 1",
+    "huile = 2 then dec_var huile 1",
+    "orge = 2 then dec_var orge 1",
+    "burette = 2 then dec_var burette 1",
+    "allumette = 2 then dec_var allumette 1",
+    "chouetteor = 2 then dec_var chouetteor 1",
+    "chouette = 2 then dec_var chouette 1",
+    "sirop = 2 then dec_var sirop 1",
+    "fiolegrece = 2 then dec_var  fiolegrece 1",
+    "fiolegrece2 = 2 then dec_var  fiolegrece2 1",
+    "fioleecosse = 2 then dec_var  fioleecosse 1",
+    "fioleirlande = 2 then dec_var  fioleirlande 1",
+    "fioleespagne = 2 then dec_var  fioleespagne 1",
+    "fiolesuede = 2 then dec_var  fiolesuede 1",
+    "fiolefinlande = 2 then dec_var  fiolefinlande 1",
+    "fioleautriche = 2 then dec_var  fioleautriche 1",
+    "fiolepaysbas = 2 then dec_var  fiolepaysbas 1",
+    "fioleespagne2 = 2 then dec_var  fioleespagne2 1",
+    "fioleitalie = 2 then dec_var  fioleitalie 1",
+    "fioleangleterre = 2 then dec_var  fioleangleterre 1d",
+    "trans = 1 then addbmp etoile ..\\..\\barre\\images\\trans2.bmp 6 162 400",
+    "trans = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetr.bmp 6 0 450",
+    "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+    "trans = 1 then closewav",
+    "trans = 1 then closedll",
+    "trans = 1 then playavi ..\\..\\couleurs1\\movie\\retour.avi 1",
+    "trans = 1 then dec_var score 50",
+    "telephone = 1 then addbmp etoile ..\\..\\barre\\images\\telep2.bmp 6 317 400",
+    "telephone = 1 then addbmp etoile1 ..\\..\\barre\\images\\textet.bmp 6 0 450",
+    "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+    "telephone = 1 then closedll",
+    "telephone = 1 then runprj ..\\couleurs1\\couleurs1.vnp 4",
+    "telephone = 1 then dec_var score 1",
+    "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+    "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+    "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+    "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400d",
+    "vinci = 0 then scene 35",
+    "vinci = 0 then playtext 300 283 125 365 0 Une question",
+    "vinci = 0 then playtext 300 303 125 365 0 Si tu r",
+    "vinci = 0 then playtext 300 323 125 365 0 est pour toi, sinon tu perds",
+    "vinci = 0 then playtext 300 343 125 365 0  25 euros.",
+    "vinci = 0 then playtext 300 363 125 365 0 Veux tu tenter ta chance ?",
+    "vinci = 1 then playtext 300 323 125 365 0 La r",
+    "vinci = 1 then playtext 300 343 125 365 0 la biblioth",
+    "vinci = 2 then playtext 300 323 125 365 0 Bien jou",
+    "vinci = 2 then playtext 300 343 125 365 0"
+  ],
+  "commands": [
+    "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 3d",
+    "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 3d"
+  ],
+  "found_variables": {
+    "JUSTEPRIX": [
+      [
+        "000003DE",
+        "JUSTEPRIXOBJ"
+      ],
+      [
+        "000003F2",
+        "JUSTEPRIXEURO"
+      ],
+      [
+        "00000407",
+        "JUSTEPRIXCLIC"
+      ],
+      [
+        "0000041C",
+        "JUSTEPRIX1"
+      ],
+      [
+        "0000042E",
+        "JUSTEPRIX10"
+      ],
+      [
+        "00000441",
+        "JUSTEPRIX15"
+      ],
+      [
+        "00000454",
+        "JUSTEPRIX20"
+      ],
+      [
+        "00000467",
+        "JUSTEPRIX25"
+      ],
+      [
+        "0000047A",
+        "JUSTEPRIX30"
+      ],
+      [
+        "0000048D",
+        "JUSTEPRIX50"
+      ],
+      [
+        "000004A0",
+        "JUSTEPRIX100"
+      ],
+      [
+        "000004B4",
+        "JUSTEPRIXSCORE"
+      ],
+      [
+        "00000C68",
+        "JUSTEPRIX"
+      ],
+      [
+        "00001044",
+        "JUSTEPRIXQUESTION"
+      ],
+      [
+        "0000105D",
+        "JUSTEPRIXREPONSE"
+      ],
+      [
+        "00001075",
+        "JUSTEPRIXOK"
+      ]
+    ],
+    "PAIN": [
+      [
+        "000004CA",
+        "PAIN"
+      ],
+      [
+        "000010C7",
+        "EAUPAIN"
+      ],
+      [
+        "000010D6",
+        "PAINOK"
+      ],
+      [
+        "00001950",
+        "pain = 2 then inc_var non 1"
+      ],
+      [
+        "00002A01",
+        "pain = 2 then inc_var non 1"
+      ],
+      [
+        "00004361",
+        "pain = 2 then inc_var non 1"
+      ],
+      [
+        "00005779",
+        "pain = 2 then inc_var non 1"
+      ],
+      [
+        "00006B70",
+        "pain = 2 then inc_var non 1"
+      ],
+      [
+        "0001012F",
+        "pain = 2 then dec_var pain 1"
+      ]
+    ],
+    "HELICE": [
+      [
+        "000004D6",
+        "HELICE"
+      ],
+      [
+        "000018AE",
+        "helice = 2 then inc_var non 1"
+      ],
+      [
+        "0000295F",
+        "helice = 2 then inc_var non 1"
+      ],
+      [
+        "000042BF",
+        "helice = 2 then inc_var non 1"
+      ],
+      [
+        "000056D7",
+        "helice = 2 then inc_var non 1"
+      ],
+      [
+        "00006ACE",
+        "helice = 2 then inc_var non 1"
+      ],
+      [
+        "00010083",
+        "helice = 2 then dec_var helice 1"
+      ]
+    ],
+    "HARPON": [
+      [
+        "00000320",
+        "HARPON"
+      ],
+      [
+        "00001885",
+        "harpon = 2 then inc_var non 1"
+      ],
+      [
+        "00002936",
+        "harpon = 2 then inc_var non 1"
+      ],
+      [
+        "00004296",
+        "harpon = 2 then inc_var non 1"
+      ],
+      [
+        "000056AE",
+        "harpon = 2 then inc_var non 1"
+      ],
+      [
+        "00006AA5",
+        "harpon = 2 then inc_var non 1"
+      ],
+      [
+        "00010057",
+        "harpon = 2 then dec_var harpon 1"
+      ]
+    ],
+    "MASQUE": [
+      [
+        "0000032E",
+        "MASQUE"
+      ],
+      [
+        "000018FF",
+        "masque = 2 then inc_var non 1"
+      ],
+      [
+        "000029B0",
+        "masque = 2 then inc_var non 1"
+      ],
+      [
+        "00004310",
+        "masque = 2 then inc_var non 1"
+      ],
+      [
+        "00005728",
+        "masque = 2 then inc_var non 1"
+      ],
+      [
+        "00006B1F",
+        "masque = 2 then inc_var non 1"
+      ],
+      [
+        "000100D9",
+        "masque = 2 then dec_var masque 1"
+      ]
+    ],
+    "BOUT_PLO": [
+      [
+        "0000033C",
+        "BOUT_PLO"
+      ],
+      [
+        "00001788",
+        "bout_plo = 2 then inc_var non 1"
+      ],
+      [
+        "00002839",
+        "bout_plo = 2 then inc_var non 1"
+      ],
+      [
+        "00004199",
+        "bout_plo = 2 then inc_var non 1"
+      ],
+      [
+        "000055B1",
+        "bout_plo = 2 then inc_var non 1"
+      ],
+      [
+        "000069A8",
+        "bout_plo = 2 then inc_var non 1"
+      ],
+      [
+        "0000FF3F",
+        "bout_plo = 2 then dec_var bout_plo 1"
+      ]
+    ],
+    "BALLON": [
+      [
+        "0000034C",
+        "BALLON1"
+      ],
+      [
+        "00001736",
+        "ballon1 = 2 then inc_var non 1"
+      ],
+      [
+        "000027E7",
+        "ballon1 = 2 then inc_var non 1"
+      ],
+      [
+        "00004147",
+        "ballon1 = 2 then inc_var non 1"
+      ],
+      [
+        "0000555F",
+        "ballon1 = 2 then inc_var non 1"
+      ],
+      [
+        "00006956",
+        "ballon1 = 2 then inc_var non 1"
+      ],
+      [
+        "0000FEE7",
+        "ballon1 = 2 then dec_var ballon1 1"
+      ]
+    ],
+    "PLONGE": [
+      [
+        "0000035B",
+        "PLONGE"
+      ]
+    ],
+    "GRECQUESTION": [
+      [
+        "00000369",
+        "GRECQUESTION"
+      ]
+    ],
+    "GRECREPONSE": [
+      [
+        "0000037D",
+        "GRECREPONSE"
+      ]
+    ],
+    "FIOLEGRECE": [
+      [
+        "00000390",
+        "FIOLEGRECE"
+      ],
+      [
+        "00000625",
+        "FIOLEGRECE2"
+      ],
+      [
+        "000023FD",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "0000242A",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "00003484",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "000034B1",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "00004E0E",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "00004E3B",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "00006226",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "00006253",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "0000761D",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "0000764A",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "00010CDA",
+        "fiolegrece = 2 then dec_var  fiolegrece 1"
+      ],
+      [
+        "00010D0F",
+        "fiolegrece2 = 2 then dec_var  fiolegrece2 1"
+      ]
+    ],
+    "SCORE": [
+      [
+        "000004B4",
+        "JUSTEPRIXSCORE"
+      ],
+      [
+        "000004E4",
+        "SCORE"
+      ],
+      [
+        "000005EA",
+        "SCOREPEINTRE"
+      ],
+      [
+        "00000BA0",
+        "NUMPAYSSCORE"
+      ],
+      [
+        "000012E4",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "00003BFC",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54j"
+      ],
+      [
+        "00003FFF",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54h"
+      ],
+      [
+        "00005466",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54h"
+      ],
+      [
+        "000067A2",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54g"
+      ],
+      [
+        "00007A94",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "00007BE3",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54f"
+      ],
+      [
+        "00008259",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54g"
+      ],
+      [
+        "00008632",
+        "question = 3 then dec_var score 5"
+      ],
+      [
+        "00008684",
+        "question = 3 then dec_var score 5i"
+      ],
+      [
+        "00008AA6",
+        "reponse = 3 then dec_var score 0 else if question = 3 then dec_var score 5"
+      ],
+      [
+        "00008EAD",
+        "question = 3 then dec_var score 5"
+      ],
+      [
+        "00008FD3",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "000091CB",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "000094E1",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "00009520",
+        "score >= 0 then if vf = 1 then runprj ..\\france\\france.vnp 18"
+      ],
+      [
+        "00009569",
+        "score >= 0 then if va = 1 then runprj ..\\autr\\autr.vnp 12"
+      ],
+      [
+        "000095AE",
+        "score >= 0 then if ve = 1 then runprj ..\\espa\\espa.vnp 13"
+      ],
+      [
+        "000096EC",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "0000984F",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "0000997E",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "00009B1A",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "00009CF6",
+        "capitale != 0 then dec_var score 10"
+      ],
+      [
+        "00009EEE",
+        "score 6 15 415 160 470 0 <score>"
+      ],
+      [
+        "0000A0A4",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54d"
+      ],
+      [
+        "0000A213",
+        "capitale != 1 then dec_var score 10"
+      ],
+      [
+        "0000A411",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000A531",
+        "capitale != 2 then dec_var score 10"
+      ],
+      [
+        "0000A727",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000A837",
+        "capitale != 3 then dec_var score 10"
+      ],
+      [
+        "0000AA31",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000AB69",
+        "capitale != 4 then dec_var score 10"
+      ],
+      [
+        "0000AD65",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000AE95",
+        "capitale != 5 then dec_var score 10"
+      ],
+      [
+        "0000B08D",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000B18E",
+        "capitale != 6 then dec_var score 10"
+      ],
+      [
+        "0000B388",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000B49B",
+        "capitale != 7 then dec_var score 10"
+      ],
+      [
+        "0000B696",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000B7B1",
+        "capitale != 8 then dec_var score 10"
+      ],
+      [
+        "0000B9AB",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000BA85",
+        "capitale != 9 then dec_var score 10"
+      ],
+      [
+        "0000BC7D",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000BD7F",
+        "capitale != 10 then dec_var score 10"
+      ],
+      [
+        "0000BF7E",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000C087",
+        "capitale != 11 then dec_var score 10"
+      ],
+      [
+        "0000C286",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000C391",
+        "capitale != 12 then dec_var score 10"
+      ],
+      [
+        "0000C593",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000C6BC",
+        "capitale != 13 then dec_var score 10"
+      ],
+      [
+        "0000C89E",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0000CB9C",
+        "score 10"
+      ],
+      [
+        "0000CC25",
+        "score 6 25 410 160 470 0 <score>d"
+      ],
+      [
+        "0000CD57",
+        "score 10"
+      ],
+      [
+        "0000CDE0",
+        "score 6 25 410 160 470 0 <score>d"
+      ],
+      [
+        "0000CED1",
+        "score 10"
+      ],
+      [
+        "0000CF5A",
+        "score 6 25 410 160 470 0 <score>d"
+      ],
+      [
+        "0000D1A9",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "0000D492",
+        "score 5"
+      ],
+      [
+        "0000D4CB",
+        "score 6 15 415 160 470 0 <score>"
+      ],
+      [
+        "0000D546",
+        "pizza != 2 then dec_var score 5"
+      ],
+      [
+        "0000D64C",
+        "score 6 15 415 160 470 0 <score>"
+      ],
+      [
+        "0000D72E",
+        "pizza != 0 then dec_var score 5"
+      ],
+      [
+        "0000D7ED",
+        "score 6 15 415 160 470 0 <score>"
+      ],
+      [
+        "0000DACD",
+        "pizza != 1 then dec_var score 5"
+      ],
+      [
+        "0000DB8C",
+        "score 6 15 415 160 470 0 <score>"
+      ],
+      [
+        "0000DE25",
+        "score 5"
+      ],
+      [
+        "0000DE5E",
+        "score 6 15 415 160 470 0 <score>"
+      ],
+      [
+        "0000DF71",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "0000E07B",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "0000E1D6",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "0000E376",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "0000E4AC",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "0000E5F1",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 3d"
+      ],
+      [
+        "0000E71C",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 3d"
+      ],
+      [
+        "0000ED03",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "0000F88E",
+        "score 6 15 415 160 470 0 <score>"
+      ],
+      [
+        "000111F7",
+        "trans = 1 then dec_var score 50"
+      ],
+      [
+        "00011222",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "0001147A",
+        "telephone = 1 then dec_var score 1"
+      ],
+      [
+        "000114A8",
+        "score 6 15 415 160 470 0 <score>d"
+      ],
+      [
+        "00011940",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "00011D75",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+      ],
+      [
+        "00011E40",
+        "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+      ],
+      [
+        "00011F0B",
+        "score 25"
+      ],
+      [
+        "00011F1F",
+        "score 6 25 410 160 470 0 <score>"
+      ],
+      [
+        "00011FB7",
+        "score 25"
+      ],
+      [
+        "00011FCB",
+        "score 6 25 410 160 470 0 <score>"
+      ],
+      [
+        "00012063",
+        "score 50"
+      ],
+      [
+        "00012077",
+        "score 6 25 410 160 470 0 <score>"
+      ],
+      [
+        "0001210D",
+        "score 25"
+      ],
+      [
+        "00012121",
+        "score 6 25 410 160 470 0 <score>"
+      ]
+    ],
+    "CARTETOUR": [
+      [
+        "000004F1",
+        "CARTETOUR"
+      ]
+    ],
+    "BUS": [
+      [
+        "00000502",
+        "BUS"
+      ],
+      [
+        "000017B3",
+        "bus = 2 then inc_var non 1"
+      ],
+      [
+        "00002864",
+        "bus = 2 then inc_var non 1"
+      ],
+      [
+        "000041C4",
+        "bus = 2 then inc_var non 1"
+      ],
+      [
+        "000055DC",
+        "bus = 2 then inc_var non 1"
+      ],
+      [
+        "000069D3",
+        "bus = 2 then inc_var non 1"
+      ],
+      [
+        "000080E5",
+        "reponse2  rollover\\rebus.bmp 0 454 350"
+      ],
+      [
+        "000081A5",
+        "reponse2  rollover\\rebus.bmp 0 454 350"
+      ],
+      [
+        "0000FF6F",
+        "bus = 2 then dec_var bus 1"
+      ]
+    ],
+    "LEVRIERNU": [
+      [
+        "0000050D",
+        "LEVRIERNUMERO"
+      ]
+    ],
+    "LEVRIERPARI": [
+      [
+        "00000522",
+        "LEVRIERPARI"
+      ]
+    ],
+    "LEVRIERRESULTAT": [
+      [
+        "00000535",
+        "LEVRIERRESULTAT"
+      ]
+    ],
+    "RUBAN": [
+      [
+        "000005A4",
+        "RUBAN"
+      ],
+      [
+        "00001AC3",
+        "ruban = 2 then inc_var non 1"
+      ],
+      [
+        "00002B74",
+        "ruban = 2 then inc_var non 1"
+      ],
+      [
+        "000044D4",
+        "ruban = 2 then inc_var non 1"
+      ],
+      [
+        "000058EC",
+        "ruban = 2 then inc_var non 1"
+      ],
+      [
+        "00006CE3",
+        "ruban = 2 then inc_var non 1"
+      ],
+      [
+        "000102BB",
+        "ruban = 2 then dec_var ruban 1"
+      ]
+    ],
+    "PARFUM": [
+      [
+        "0000054C",
+        "PARFUM"
+      ],
+      [
+        "00001E3B",
+        "parfum = 2 then inc_var non 1"
+      ],
+      [
+        "00002EC2",
+        "parfum = 2 then inc_var non 1"
+      ],
+      [
+        "0000484C",
+        "parfum = 2 then inc_var non 1"
+      ],
+      [
+        "00005C64",
+        "parfum = 2 then inc_var non 1"
+      ],
+      [
+        "0000705B",
+        "parfum = 2 then inc_var non 1"
+      ],
+      [
+        "0001068F",
+        "parfum = 2 then dec_var parfum 1"
+      ]
+    ],
+    "PEPE": [
+      [
+        "0000055A",
+        "PEPE"
+      ]
+    ],
+    "CASTAGNETTE": [
+      [
+        "00000566",
+        "CASTAGNETTE"
+      ],
+      [
+        "000017D9",
+        "castagnette = 2 then inc_var non 1"
+      ],
+      [
+        "0000288A",
+        "castagnette = 2 then inc_var non 1"
+      ],
+      [
+        "000041EA",
+        "castagnette = 2 then inc_var non 1"
+      ],
+      [
+        "00005602",
+        "castagnette = 2 then inc_var non 1"
+      ],
+      [
+        "000069F9",
+        "castagnette = 2 then inc_var non 1"
+      ],
+      [
+        "0000FF95",
+        "castagnette = 2 then dec_var castagnette 1"
+      ]
+    ],
+    "DANSE": [
+      [
+        "00000579",
+        "DANSE"
+      ]
+    ],
+    "TICKET": [
+      [
+        "00000586",
+        "TICKET"
+      ],
+      [
+        "00000594",
+        "TICKET_A"
+      ]
+    ],
+    "MATH": [
+      [
+        "000005C0",
+        "MATH"
+      ]
+    ],
+    "ORGUE": [
+      [
+        "000003A2",
+        "ORGUE"
+      ]
+    ],
+    "PALETTE": [
+      [
+        "000005CC",
+        "PALETTE"
+      ]
+    ],
+    "PEINTRE": [
+      [
+        "000005DB",
+        "PEINTRE"
+      ],
+      [
+        "000005EA",
+        "SCOREPEINTRE"
+      ],
+      [
+        "00000CDA",
+        "PEINTRE1"
+      ]
+    ],
+    "HOTTE": [
+      [
+        "000005FE",
+        "HOTTE"
+      ],
+      [
+        "00001DBE",
+        "hotte = 2 then inc_var non 1"
+      ],
+      [
+        "00002E45",
+        "hotte = 2 then inc_var non 1"
+      ],
+      [
+        "000047CF",
+        "hotte = 2 then inc_var non 1"
+      ],
+      [
+        "00005BE7",
+        "hotte = 2 then inc_var non 1"
+      ],
+      [
+        "00006FDE",
+        "hotte = 2 then inc_var non 1"
+      ],
+      [
+        "00010605",
+        "hotte = 2 then dec_var  hotte 1"
+      ]
+    ],
+    "FROG": [
+      [
+        "0000060B",
+        "FROG"
+      ]
+    ],
+    "CPHOTO": [
+      [
+        "00000617",
+        "CPHOTO"
+      ]
+    ],
+    "FIOLEVASE": [
+      [
+        "00000638",
+        "FIOLEVASE"
+      ]
+    ],
+    "ROUEDENT": [
+      [
+        "00000649",
+        "ROUEDENT"
+      ],
+      [
+        "00001D3B",
+        "rouedent = 2 then inc_var non 1"
+      ],
+      [
+        "00002DC2",
+        "rouedent = 2 then inc_var non 1"
+      ],
+      [
+        "0000474C",
+        "rouedent = 2 then inc_var non 1"
+      ],
+      [
+        "00005B64",
+        "rouedent = 2 then inc_var non 1"
+      ],
+      [
+        "00006F5B",
+        "rouedent = 2 then inc_var non 1"
+      ],
+      [
+        "00010571",
+        "rouedent = 2 then dec_var rouedent 1"
+      ]
+    ],
+    "VIOLON": [
+      [
+        "00000659",
+        "VIOLON"
+      ],
+      [
+        "00002208",
+        "violon = 2 then inc_var non 1"
+      ],
+      [
+        "0000328F",
+        "violon = 2 then inc_var non 1"
+      ],
+      [
+        "00004C19",
+        "violon = 2 then inc_var non 1"
+      ],
+      [
+        "00006031",
+        "violon = 2 then inc_var non 1"
+      ],
+      [
+        "00007428",
+        "violon = 2 then inc_var non 1"
+      ],
+      [
+        "00010AB8",
+        "violon = 2 then dec_var violon 1"
+      ]
+    ],
+    "MARMOTTE": [
+      [
+        "00000667",
+        "MARMOTTE"
+      ]
+    ],
+    "MUSIC": [
+      [
+        "00000677",
+        "MUSIC"
+      ]
+    ],
+    "FIOLEAUTR": [
+      [
+        "00000684",
+        "FIOLEAUTR"
+      ],
+      [
+        "00000938",
+        "FIOLEAUTRICHE"
+      ],
+      [
+        "00002541",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "000035C8",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "00004F52",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "0000636A",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "00007761",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "00010E5F",
+        "fioleautriche = 2 then dec_var  fioleautriche 1"
+      ]
+    ],
+    "PARTITION": [
+      [
+        "00000695",
+        "PARTITION"
+      ],
+      [
+        "00001C3F",
+        "partition = 2 then inc_var non 1"
+      ],
+      [
+        "00002CF0",
+        "partition = 2 then inc_var non 1"
+      ],
+      [
+        "00004650",
+        "partition = 2 then inc_var non 1"
+      ],
+      [
+        "00005A68",
+        "partition = 2 then inc_var non 1"
+      ],
+      [
+        "00006E5F",
+        "partition = 2 then inc_var non 1"
+      ],
+      [
+        "0001045D",
+        "partition = 2 then dec_var partition 1"
+      ]
+    ],
+    "ORGE": [
+      [
+        "000006A6",
+        "ORGE"
+      ],
+      [
+        "00002300",
+        "orge = 2 then inc_var non 1"
+      ],
+      [
+        "00003387",
+        "orge = 2 then inc_var non 1"
+      ],
+      [
+        "00004D11",
+        "orge = 2 then inc_var non 1"
+      ],
+      [
+        "00006129",
+        "orge = 2 then inc_var non 1"
+      ],
+      [
+        "00007520",
+        "orge = 2 then inc_var non 1"
+      ],
+      [
+        "00010BC4",
+        "orge = 2 then dec_var orge 1"
+      ]
+    ],
+    "TONDEUSE": [
+      [
+        "000006B2",
+        "TONDEUSE"
+      ],
+      [
+        "00001C93",
+        "tondeuse = 2 then inc_var non 1"
+      ],
+      [
+        "00002D44",
+        "tondeuse = 2 then inc_var non 1"
+      ],
+      [
+        "000046A4",
+        "tondeuse = 2 then inc_var non 1"
+      ],
+      [
+        "00005ABC",
+        "tondeuse = 2 then inc_var non 1"
+      ],
+      [
+        "00006EB3",
+        "tondeuse = 2 then inc_var non 1"
+      ],
+      [
+        "000104B9",
+        "tondeuse = 2 then dec_var tondeuse 1"
+      ]
+    ],
+    "SIROP": [
+      [
+        "000006C2",
+        "SIROP"
+      ],
+      [
+        "000023D5",
+        "sirop = 2 then inc_var non 1"
+      ],
+      [
+        "0000345C",
+        "sirop = 2 then inc_var non 1"
+      ],
+      [
+        "00004DE6",
+        "sirop = 2 then inc_var non 1"
+      ],
+      [
+        "000061FE",
+        "sirop = 2 then inc_var non 1"
+      ],
+      [
+        "000075F5",
+        "sirop = 2 then inc_var non 1"
+      ],
+      [
+        "00010CB0",
+        "sirop = 2 then dec_var sirop 1"
+      ]
+    ],
+    "LEVURE": [
+      [
+        "000006CF",
+        "LEVURE"
+      ],
+      [
+        "00001DE6",
+        "levure = 2 then inc_var non 1"
+      ],
+      [
+        "00002E6D",
+        "levure = 2 then inc_var non 1"
+      ],
+      [
+        "000047F7",
+        "levure = 2 then inc_var non 1"
+      ],
+      [
+        "00005C0F",
+        "levure = 2 then inc_var non 1"
+      ],
+      [
+        "00007006",
+        "levure = 2 then inc_var non 1"
+      ],
+      [
+        "00010630",
+        "levure = 2 then dec_var  levure 1"
+      ]
+    ],
+    "TRANS": [
+      [
+        "0000072B",
+        "TRANS"
+      ],
+      [
+        "0000EF80",
+        "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
+      ],
+      [
+        "0000F92C",
+        "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
+      ],
+      [
+        "0000FB8F",
+        "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
+      ],
+      [
+        "0000FD4F",
+        "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
+      ],
+      [
+        "00010FB6",
+        "trans = 1 then addbmp etoile ..\\..\\barre\\images\\trans2.bmp 6 162 400"
+      ],
+      [
+        "00011006",
+        "trans = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetr.bmp 6 0 450"
+      ],
+      [
+        "00011144",
+        "trans = 1 then closewav"
+      ],
+      [
+        "00011167",
+        "trans = 1 then closedll"
+      ],
+      [
+        "0001118A",
+        "trans = 1 then playavi ..\\..\\couleurs1\\movie\\retour.avi 1"
+      ],
+      [
+        "000111F7",
+        "trans = 1 then dec_var score 50"
+      ],
+      [
+        "00011326",
+        "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
+      ],
+      [
+        "000115B3",
+        "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
+      ]
+    ],
+    "ALLEMAGNE": [
+      [
+        "000007D5",
+        "ALLEMAGNE"
+      ],
+      [
+        "0000C318",
+        "90 100 125 365 0 de l'Allemagne ?"
+      ],
+      [
+        "0000E9FC",
+        "allemagne = 1  then dec_var allemagne 1"
+      ],
+      [
+        "0000F3FC",
+        "allemagne = 1 then  addbmp info ..\\..\\barre\\images\\p_all.bmp 6 452 400"
+      ]
+    ],
+    "FIOLE": [
+      [
+        "00000390",
+        "FIOLEGRECE"
+      ],
+      [
+        "00000625",
+        "FIOLEGRECE2"
+      ],
+      [
+        "00000638",
+        "FIOLEVASE"
+      ],
+      [
+        "00000684",
+        "FIOLEAUTR"
+      ],
+      [
+        "0000070D",
+        "FIOLEITALIE"
+      ],
+      [
+        "000007E6",
+        "FIOLE"
+      ],
+      [
+        "000008D6",
+        "FIOLEECOSSE"
+      ],
+      [
+        "000008E9",
+        "FIOLEIRLANDE"
+      ],
+      [
+        "000008FD",
+        "FIOLEESPAGNE"
+      ],
+      [
+        "00000911",
+        "FIOLESUEDE"
+      ],
+      [
+        "00000923",
+        "FIOLEFINLANDE"
+      ],
+      [
+        "00000938",
+        "FIOLEAUTRICHE"
+      ],
+      [
+        "0000094D",
+        "FIOLEPAYSBAS"
+      ],
+      [
+        "00000961",
+        "FIOLEESPAGNE2"
+      ],
+      [
+        "00000976",
+        "FIOLEANGLETERRE"
+      ],
+      [
+        "00000A52",
+        "FIOLEOK"
+      ],
+      [
+        "000023FD",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "0000242A",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "00002458",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "00002486",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "000024B5",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "000024E4",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "00002511",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "00002541",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "00002571",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "000025A0",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "000025D0",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "000025FE",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "00003484",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "000034B1",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "000034DF",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "0000350D",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "0000353C",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "0000356B",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "00003598",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "000035C8",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "000035F8",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "00003627",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "00003657",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "00003685",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "00004E0E",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "00004E3B",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "00004E69",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "00004E97",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "00004EC6",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "00004EF5",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "00004F22",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "00004F52",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "00004F82",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "00004FB1",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "00004FE1",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "0000500F",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "00006226",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "00006253",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "00006281",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "000062AF",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "000062DE",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "0000630D",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "0000633A",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "0000636A",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "0000639A",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "000063C9",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "000063F9",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "00006427",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "0000761D",
+        "fiolegrece = 2 then inc_var non 1"
+      ],
+      [
+        "0000764A",
+        "fiolegrece2 = 2 then inc_var non 1"
+      ],
+      [
+        "00007678",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "000076A6",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "000076D5",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "00007704",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "00007731",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "00007761",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "00007791",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "000077C0",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "000077F0",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "0000781E",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "00007C99",
+        "fioleitalie = 0 then scene 13i"
+      ],
+      [
+        "0000CFDA",
+        "papierfiole2.bmp"
+      ],
+      [
+        "0000D053",
+        "fioleitalie = 0 then playavi fiole.avi 2 340 94 580 400 else scene 7"
+      ],
+      [
+        "0000D0A3",
+        "fioleitalie = 0 then set_var fioleitalie 1"
+      ],
+      [
+        "0000EFD0",
+        "fiole = 1 then addbmp fiole ..\\..\\barre\\images\\f1.bmp 6 197 461"
+      ],
+      [
+        "0000F01B",
+        "fiole = 2 then addbmp fiole ..\\..\\barre\\images\\f2.bmp 6 196 461"
+      ],
+      [
+        "0000F066",
+        "fiole = 3 then addbmp fiole ..\\..\\barre\\images\\f3.bmp 6 196 461"
+      ],
+      [
+        "0000F0B1",
+        "fiole = 4 then addbmp fiole ..\\..\\barre\\images\\f4.bmp 6 197 461"
+      ],
+      [
+        "0000F0FC",
+        "fiole = 5 then addbmp fiole ..\\..\\barre\\images\\f5.bmp 6 197 461"
+      ],
+      [
+        "0000F147",
+        "fiole = 6 then addbmp fiole ..\\..\\barre\\images\\f6.bmp 6 196 461"
+      ],
+      [
+        "0000F192",
+        "fiole = 7 then addbmp fiole ..\\..\\barre\\images\\f7.bmp 6 197 461"
+      ],
+      [
+        "0000F1DD",
+        "fiole = 8 then addbmp fiole ..\\..\\barre\\images\\f8.bmp 6 197 461"
+      ],
+      [
+        "0000F228",
+        "fiole = 9 then addbmp fiole ..\\..\\barre\\images\\f9.bmp 6 196 461"
+      ],
+      [
+        "0000F273",
+        "fiole = 10 then addbmp fiole ..\\..\\barre\\images\\f10.bmp 6 197 461"
+      ],
+      [
+        "0000F2C0",
+        "fiole = 11 then addbmp fiole ..\\..\\barre\\images\\f11.bmp 6 196 461"
+      ],
+      [
+        "0000F30D",
+        "fiole = 12 then addbmp fiole ..\\..\\barre\\images\\f12.bmp 6 196 461"
+      ],
+      [
+        "00010CDA",
+        "fiolegrece = 2 then dec_var  fiolegrece 1"
+      ],
+      [
+        "00010D0F",
+        "fiolegrece2 = 2 then dec_var  fiolegrece2 1"
+      ],
+      [
+        "00010D46",
+        "fioleecosse = 2 then dec_var  fioleecosse 1"
+      ],
+      [
+        "00010D7D",
+        "fioleirlande = 2 then dec_var  fioleirlande 1"
+      ],
+      [
+        "00010DB6",
+        "fioleespagne = 2 then dec_var  fioleespagne 1"
+      ],
+      [
+        "00010DEF",
+        "fiolesuede = 2 then dec_var  fiolesuede 1"
+      ],
+      [
+        "00010E24",
+        "fiolefinlande = 2 then dec_var  fiolefinlande 1"
+      ],
+      [
+        "00010E5F",
+        "fioleautriche = 2 then dec_var  fioleautriche 1"
+      ],
+      [
+        "00010E9A",
+        "fiolepaysbas = 2 then dec_var  fiolepaysbas 1"
+      ],
+      [
+        "00010ED3",
+        "fioleespagne2 = 2 then dec_var  fioleespagne2 1"
+      ],
+      [
+        "00010F0E",
+        "fioleitalie = 2 then dec_var  fioleitalie 1"
+      ],
+      [
+        "00010F45",
+        "fioleangleterre = 2 then dec_var  fioleangleterre 1d"
+      ]
+    ],
+    "FRANCE": [
+      [
+        "000007F3",
+        "FRANCE"
+      ],
+      [
+        "000091A8",
+        "..\\france\\france.vnp 18"
+      ],
+      [
+        "00009438",
+        "vf = 1 then runprj ..\\france\\france.vnp 18"
+      ],
+      [
+        "00009520",
+        "score >= 0 then if vf = 1 then runprj ..\\france\\france.vnp 18"
+      ],
+      [
+        "00009C7F",
+        "90 100 125 365 0 de la France ?"
+      ],
+      [
+        "0000EA8B",
+        "france = 1  then dec_var france 1"
+      ],
+      [
+        "0000F44E",
+        "france = 1 then  addbmp info ..\\..\\barre\\images\\p_france.bmp 6 452 400"
+      ]
+    ],
+    "ITALIE": [
+      [
+        "0000070D",
+        "FIOLEITALIE"
+      ],
+      [
+        "000008AB",
+        "ITALIE"
+      ],
+      [
+        "000025D0",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "00003657",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "00003B24",
+        "italie.wav"
+      ],
+      [
+        "00003FE7",
+        "italie.wav 6"
+      ],
+      [
+        "00004FE1",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "000063F9",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "00006722",
+        "italie.wav"
+      ],
+      [
+        "000077F0",
+        "fioleitalie = 2 then inc_var non 1"
+      ],
+      [
+        "000079AD",
+        "italie.wav 2j"
+      ],
+      [
+        "00007A09",
+        "italie.wav"
+      ],
+      [
+        "00007B07",
+        "italie.wav"
+      ],
+      [
+        "00007C99",
+        "fioleitalie = 0 then scene 13i"
+      ],
+      [
+        "000096C6",
+        "essais Italie.bmp 0 53 148"
+      ],
+      [
+        "0000A7C1",
+        "90 100 125 365 0 de l'Italie ?"
+      ],
+      [
+        "0000D053",
+        "fioleitalie = 0 then playavi fiole.avi 2 340 94 580 400 else scene 7"
+      ],
+      [
+        "0000D0A3",
+        "fioleitalie = 0 then set_var fioleitalie 1"
+      ],
+      [
+        "0000D24A",
+        "italie.wav"
+      ],
+      [
+        "0000DEED",
+        "italie.wav"
+      ],
+      [
+        "0000E925",
+        "italie.wav"
+      ],
+      [
+        "0000E93B",
+        "italie.avi 1"
+      ],
+      [
+        "0000E953",
+        "italie 1"
+      ],
+      [
+        "0000EC61",
+        "italie.wav"
+      ],
+      [
+        "0000F795",
+        "italie = 1 then  addbmp info ..\\..\\barre\\images\\p_italie.bmp 6 452 400"
+      ],
+      [
+        "00010F0E",
+        "fioleitalie = 2 then dec_var  fioleitalie 1"
+      ]
+    ],
+    "ANGLETERRE": [
+      [
+        "00000801",
+        "ANGLETERRE"
+      ],
+      [
+        "00000976",
+        "FIOLEANGLETERRE"
+      ],
+      [
+        "000025FE",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "00003685",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "0000500F",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "00006427",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "0000781E",
+        "fioleangleterre = 2 then inc_var non 1"
+      ],
+      [
+        "0000A199",
+        "90 100 125 365 0 de l'Angleterre ?"
+      ],
+      [
+        "0000E997",
+        "angleterre = 1 then dec_var angleterre 1"
+      ],
+      [
+        "0000F4A0",
+        "angleterre = 1 then  addbmp info ..\\..\\barre\\images\\p_angl.bmp 6 452 400"
+      ],
+      [
+        "00010F45",
+        "fioleangleterre = 2 then dec_var  fioleangleterre 1d"
+      ]
+    ],
+    "ECOSSE": [
+      [
+        "00000853",
+        "ECOSSE"
+      ],
+      [
+        "000008D6",
+        "FIOLEECOSSE"
+      ],
+      [
+        "00002458",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "000034DF",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "00004E69",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "00006281",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "00007678",
+        "fioleecosse = 2 then inc_var non 1"
+      ],
+      [
+        "00007D4E",
+        "cleverte = 2 then playbmp ..\\..\\ecosse\\img24\\cle.bmp 0 370 350"
+      ],
+      [
+        "00007D98",
+        "clerouge = 2 then playbmp ..\\..\\ecosse\\img24\\cle.bmp 0 370 350"
+      ],
+      [
+        "00009A92",
+        "..\\..\\ecosse\\img24\\papier.bmp"
+      ],
+      [
+        "0000EA2F",
+        "ecosse = 1  then dec_var ecosse 1"
+      ],
+      [
+        "0000EC7B",
+        "..\\..\\ecosse\\img24\\papier.bmp"
+      ],
+      [
+        "0000F5A0",
+        "ecosse = 1 then  addbmp info ..\\..\\barre\\images\\p_ecosse.bmp 6 452 400"
+      ],
+      [
+        "00010D46",
+        "fioleecosse = 2 then dec_var  fioleecosse 1"
+      ],
+      [
+        "00011875",
+        "..\\..\\ecosse\\img24\\interc.bmp"
+      ]
+    ],
+    "IRLANDE": [
+      [
+        "0000089C",
+        "IRLANDE"
+      ],
+      [
+        "000008E9",
+        "FIOLEIRLANDE"
+      ],
+      [
+        "00002486",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "0000350D",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "00004E97",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "000062AF",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "000076A6",
+        "fioleirlande = 2 then inc_var non 1"
+      ],
+      [
+        "0000C010",
+        "90 100 125 365 0 de l'Irlande ?"
+      ],
+      [
+        "0000EAE9",
+        "irlande = 1  then dec_var irlande 1"
+      ],
+      [
+        "0000F741",
+        "irlande = 1 then  addbmp info ..\\..\\barre\\images\\p_irlande.bmp 6 452 400"
+      ],
+      [
+        "00010D7D",
+        "fioleirlande = 2 then dec_var  fioleirlande 1"
+      ]
+    ],
+    "ESPAGNE": [
+      [
+        "00000861",
+        "ESPAGNE"
+      ],
+      [
+        "000008FD",
+        "FIOLEESPAGNE"
+      ],
+      [
+        "00000961",
+        "FIOLEESPAGNE2"
+      ],
+      [
+        "000024B5",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "000025A0",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "0000353C",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "00003627",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "00004EC6",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "00004FB1",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "000062DE",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "000063C9",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "000076D5",
+        "fioleespagne = 2 then inc_var non 1"
+      ],
+      [
+        "000077C0",
+        "fioleespagne2 = 2 then inc_var non 1"
+      ],
+      [
+        "0000B117",
+        "90 100 125 365 0 de l'Espagne ?"
+      ],
+      [
+        "0000EA5C",
+        "espagne = 1  then dec_var espagne 1"
+      ],
+      [
+        "0000F648",
+        "espagne = 1 then  addbmp info ..\\..\\barre\\images\\p_espagne.bmp 6 452 400"
+      ],
+      [
+        "00010DB6",
+        "fioleespagne = 2 then dec_var  fioleespagne 1"
+      ],
+      [
+        "00010ED3",
+        "fioleespagne2 = 2 then dec_var  fioleespagne2 1"
+      ]
+    ],
+    "SUEDE": [
+      [
+        "000008C9",
+        "SUEDE"
+      ],
+      [
+        "00000911",
+        "FIOLESUEDE"
+      ],
+      [
+        "000024E4",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "0000356B",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "00004EF5",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "0000630D",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "00007704",
+        "fiolesuede = 2 then inc_var non 1"
+      ],
+      [
+        "0000EC05",
+        "suede = 1  then dec_var suede 1"
+      ],
+      [
+        "0000F35A",
+        "suede = 1 then  addbmp info ..\\..\\barre\\images\\p_suede.bmp 6 452 400"
+      ],
+      [
+        "00010DEF",
+        "fiolesuede = 2 then dec_var  fiolesuede 1"
+      ]
+    ],
+    "FINLANDE": [
+      [
+        "00000870",
+        "FINLANDE"
+      ],
+      [
+        "00000923",
+        "FIOLEFINLANDE"
+      ],
+      [
+        "00002511",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "00003598",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "00004F22",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "0000633A",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "00007731",
+        "fiolefinlande = 2 then inc_var non 1"
+      ],
+      [
+        "0000B422",
+        "90 100 125 365 0 de la Finlande ?"
+      ],
+      [
+        "0000EAB8",
+        "finlande = 1  then dec_var finlande 1"
+      ],
+      [
+        "0000F69C",
+        "finlande = 1 then  addbmp info ..\\..\\barre\\images\\p_finland.bmp 6 452 400"
+      ],
+      [
+        "00010E24",
+        "fiolefinlande = 2 then dec_var  fiolefinlande 1"
+      ]
+    ],
+    "AUTRICHE": [
+      [
+        "00000813",
+        "AUTRICHE"
+      ],
+      [
+        "00000938",
+        "FIOLEAUTRICHE"
+      ],
+      [
+        "00002541",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "000035C8",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "00004F52",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "0000636A",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "00007761",
+        "fioleautriche = 2 then inc_var non 1"
+      ],
+      [
+        "0000BD07",
+        "90 100 125 365 0 de l'Autriche ?"
+      ],
+      [
+        "0000E9CB",
+        "autriche = 1  then dec_var autriche 1"
+      ],
+      [
+        "0000F4F4",
+        "autriche = 1 then  addbmp info ..\\..\\barre\\images\\p_autriche.bmp 6 452 400"
+      ],
+      [
+        "00010E5F",
+        "fioleautriche = 2 then dec_var  fioleautriche 1"
+      ]
+    ],
+    "PAYSBAS": [
+      [
+        "0000088D",
+        "PAYSBAS"
+      ],
+      [
+        "0000094D",
+        "FIOLEPAYSBAS"
+      ],
+      [
+        "00002571",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "000035F8",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "00004F82",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "0000639A",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "00007791",
+        "fiolepaysbas = 2 then inc_var non 1"
+      ],
+      [
+        "0000EB49",
+        "paysbas = 1  then dec_var paysbas 1"
+      ],
+      [
+        "0000F83D",
+        "paysbas = 1 then  addbmp info ..\\..\\barre\\images\\p_pays.bmp 6 452 400"
+      ],
+      [
+        "00010E9A",
+        "fiolepaysbas = 2 then dec_var  fiolepaysbas 1"
+      ]
+    ],
+    "BELGIQUE": [
+      [
+        "00000823",
+        "BELGIQUE"
+      ],
+      [
+        "0000B738",
+        "90 100 125 365 0 de la Belgique ?"
+      ],
+      [
+        "0000EB18",
+        "belgique = 1  then dec_var belgique 1"
+      ],
+      [
+        "0000F7E7",
+        "belgique = 1 then  addbmp info ..\\..\\barre\\images\\p_belgique.bmp 6 452 400"
+      ]
+    ],
+    "BONUS": [
+      [
+        "00000B29",
+        "BONUS4"
+      ],
+      [
+        "00000B37",
+        "BONUS1"
+      ],
+      [
+        "00000B56",
+        "BONUS2"
+      ],
+      [
+        "00000B73",
+        "BONUS3"
+      ],
+      [
+        "00000BB4",
+        "BONUS6"
+      ],
+      [
+        "00000BC2",
+        "BONUS9"
+      ],
+      [
+        "00000BE1",
+        "BONUS5"
+      ],
+      [
+        "00000C02",
+        "BONUS8"
+      ],
+      [
+        "00000C10",
+        "BONUS7"
+      ],
+      [
+        "00000D9C",
+        "BONUS26"
+      ],
+      [
+        "00000DAB",
+        "BONUS25"
+      ],
+      [
+        "00000DBA",
+        "BONUS24"
+      ],
+      [
+        "00000DC9",
+        "BONUS23"
+      ],
+      [
+        "00000F85",
+        "BONUS14"
+      ],
+      [
+        "00000F94",
+        "BONUS30"
+      ],
+      [
+        "00000FF9",
+        "BONUS15"
+      ],
+      [
+        "00001008",
+        "BONUS16"
+      ],
+      [
+        "00001017",
+        "BONUS18"
+      ],
+      [
+        "00001026",
+        "BONUS19"
+      ],
+      [
+        "00001035",
+        "BONUS20"
+      ],
+      [
+        "000010E4",
+        "BONUS29"
+      ],
+      [
+        "000010F3",
+        "BONUS22"
+      ]
+    ],
+    "VINCI": [
+      [
+        "00000D84",
+        "VINCI"
+      ],
+      [
+        "0001199F",
+        "vinci = 0 then scene 35"
+      ],
+      [
+        "000119E8",
+        "vinci = 0 then playtext 300 283 125 365 0 Une question"
+      ],
+      [
+        "00011A36",
+        "vinci = 0 then playtext 300 303 125 365 0 Si tu r"
+      ],
+      [
+        "00011A89",
+        "vinci = 0 then playtext 300 323 125 365 0 est pour toi, sinon tu perds"
+      ],
+      [
+        "00011ADB",
+        "vinci = 0 then playtext 300 343 125 365 0  25 euros."
+      ],
+      [
+        "00011B1B",
+        "vinci = 0 then playtext 300 363 125 365 0 Veux tu tenter ta chance ?"
+      ],
+      [
+        "00011B6B",
+        "vinci = 1 then playtext 300 323 125 365 0 La r"
+      ],
+      [
+        "00011BBA",
+        "vinci = 1 then playtext 300 343 125 365 0 la biblioth"
+      ],
+      [
+        "00011C00",
+        "vinci = 2 then playtext 300 323 125 365 0 Bien jou"
+      ],
+      [
+        "00011C4B",
+        "vinci = 2 then playtext 300 343 125 365 0"
+      ],
+      [
+        "00011EF8",
+        "vinci 1"
+      ],
+      [
+        "00011FA4",
+        "vinci 1"
+      ],
+      [
+        "00012050",
+        "vinci 2"
+      ],
+      [
+        "000120FA",
+        "vinci 1"
+      ]
+    ],
+    "BEETHOVEN": [
+      [
+        "0000024B",
+        "BEETHOVEN"
+      ]
+    ],
+    "CHAMPAGNE": [
+      [
+        "00000BD0",
+        "CHAMPAGNE"
+      ],
+      [
+        "00000C2B",
+        "CHAMPAGNE2"
+      ],
+      [
+        "00002259",
+        "champagne = 2 then inc_var non 1"
+      ],
+      [
+        "000032E0",
+        "champagne = 2 then inc_var non 1"
+      ],
+      [
+        "00004C6A",
+        "champagne = 2 then inc_var non 1"
+      ],
+      [
+        "00006082",
+        "champagne = 2 then inc_var non 1"
+      ],
+      [
+        "00007479",
+        "champagne = 2 then inc_var non 1"
+      ],
+      [
+        "00010B0E",
+        "champagne = 2 then dec_var champagne 1"
+      ]
+    ],
+    "BIERE": [
+      [
+        "00000D4A",
+        "EAUBIERE"
+      ],
+      [
+        "00000D69",
+        "BIEREOK"
+      ],
+      [
+        "00000EAB",
+        "BIERESO"
+      ]
+    ]
+  }
+}

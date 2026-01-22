@@ -1,0 +1,2216 @@
+{
+  "game": {
+    "title": "Euroland - Les Couleurs",
+    "version": "2.136",
+    "screen": {
+      "width": 640,
+      "height": 480
+    },
+    "assets": {
+      "mainBackground": "face.bmp",
+      "music": "music.wav"
+    },
+    "variables": {
+      "score": 0,
+      "money": 0
+    },
+    "inventory": [],
+    "mainScene": "face",
+    "scenes": {
+      "face": {
+        "id": "face",
+        "sceneNum": 1,
+        "background": "face.bmp",
+        "hotspots": [
+          {
+            "id": "la_bibliotheque",
+            "onHover": {
+              "text": "La bibliothèque"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54"
+                }
+              ]
+            }
+          },
+          {
+            "id": "la_banque",
+            "shape": "polygon",
+            "points": [
+              [
+                140,
+                267
+              ],
+              [
+                181,
+                260
+              ],
+              [
+                189,
+                166
+              ],
+              [
+                166,
+                121
+              ],
+              [
+                56,
+                120
+              ],
+              [
+                35,
+                161
+              ],
+              [
+                43,
+                189
+              ]
+            ],
+            "bounds": {
+              "x": 35,
+              "y": 120,
+              "width": 154,
+              "height": 147
+            },
+            "onHover": {
+              "text": "La banque"
+            },
+            "onClick": {
+              "playVideo": "bankbis.avi",
+              "loadScene": "banque"
+            }
+          },
+          {
+            "id": "ma_maison",
+            "shape": "polygon",
+            "points": [
+              [
+                433,
+                339
+              ],
+              [
+                389,
+                303
+              ],
+              [
+                416,
+                262
+              ],
+              [
+                426,
+                242
+              ],
+              [
+                460,
+                217
+              ],
+              [
+                465,
+                169
+              ],
+              [
+                483,
+                164
+              ],
+              [
+                501,
+                191
+              ],
+              [
+                530,
+                166
+              ],
+              [
+                615,
+                168
+              ],
+              [
+                637,
+                150
+              ],
+              [
+                639,
+                374
+              ],
+              [
+                552,
+                374
+              ]
+            ],
+            "bounds": {
+              "x": 389,
+              "y": 150,
+              "width": 250,
+              "height": 224
+            },
+            "onHover": {
+              "text": "Ma maison"
+            },
+            "onClick": {
+              "playVideo": "home2.avi",
+              "loadScene": "maison"
+            }
+          },
+          {
+            "id": "la_maison_de_prof",
+            "shape": "polygon",
+            "points": [
+              [
+                9,
+                385
+              ],
+              [
+                50,
+                395
+              ],
+              [
+                149,
+                355
+              ],
+              [
+                145,
+                277
+              ],
+              [
+                38,
+                192
+              ],
+              [
+                1,
+                248
+              ]
+            ],
+            "bounds": {
+              "x": 1,
+              "y": 192,
+              "width": 148,
+              "height": 203
+            },
+            "onHover": {
+              "text": "La maison de prof"
+            },
+            "onClick": {
+              "playVideo": "profbis.avi",
+              "loadScene": "transverteur2"
+            }
+          },
+          {
+            "id": "le_musee_du_village",
+            "shape": "polygon",
+            "points": [
+              [
+                466,
+                149
+              ],
+              [
+                444,
+                101
+              ],
+              [
+                462,
+                68
+              ],
+              [
+                464,
+                24
+              ],
+              [
+                465,
+                1
+              ],
+              [
+                495,
+                7
+              ],
+              [
+                504,
+                40
+              ],
+              [
+                543,
+                60
+              ],
+              [
+                572,
+                92
+              ],
+              [
+                578,
+                126
+              ],
+              [
+                568,
+                166
+              ],
+              [
+                496,
+                156
+              ]
+            ],
+            "bounds": {
+              "x": 444,
+              "y": 1,
+              "width": 134,
+              "height": 165
+            },
+            "onHover": {
+              "text": "Le musée du village"
+            },
+            "onClick": {
+              "playVideo": "musee.avi",
+              "loadScene": "bdmusee"
+            }
+          },
+          {
+            "id": "la_fontaine_a_couleurs",
+            "shape": "polygon",
+            "points": [
+              [
+                287,
+                267
+              ],
+              [
+                270,
+                238
+              ],
+              [
+                273,
+                198
+              ],
+              [
+                270,
+                181
+              ],
+              [
+                315,
+                149
+              ],
+              [
+                347,
+                136
+              ],
+              [
+                388,
+                162
+              ],
+              [
+                417,
+                190
+              ],
+              [
+                405,
+                203
+              ],
+              [
+                411,
+                245
+              ],
+              [
+                383,
+                280
+              ]
+            ],
+            "bounds": {
+              "x": 270,
+              "y": 136,
+              "width": 147,
+              "height": 144
+            },
+            "onHover": {
+              "text": "La fontaine à couleurs"
+            },
+            "onClick": {
+              "playVideo": "fontaine.avi",
+              "loadScene": "fiole2"
+            }
+          }
+        ]
+      },
+      "bureaubanquier": {
+        "id": "bureaubanquier",
+        "sceneNum": 2,
+        "background": "bureaubanquier.bmp",
+        "music": "music.wav",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54h"
+                }
+              ]
+            }
+          },
+          {
+            "id": "l_agenda_du_banquierj",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "L'agenda du banquierj",
+              "additionalTexts": [
+                "Une tasse de café noird"
+              ]
+            }
+          },
+          {
+            "id": "une_bouteille_d_encre_noire",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Une bouteille d'encre noire"
+            }
+          },
+          {
+            "id": "du_courrierj",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Du courrierj",
+              "additionalTexts": [
+                "Dossier euroj"
+              ]
+            }
+          }
+        ]
+      },
+      "banque": {
+        "id": "banque",
+        "sceneNum": 3,
+        "background": "banque.bmp",
+        "music": "music.wav",
+        "hotspots": [
+          {
+            "id": "le_banquier_d_eurolandl",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Le banquier d'Eurolandl"
+            },
+            "onClick": {
+              "playVideo": "banq2.avi"
+            }
+          },
+          {
+            "id": "question_bonus",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Question Bonus",
+              "additionalTexts": [
+                "tu as déjà réponduk"
+              ]
+            },
+            "onClick": {
+              "conditions": [
+                {
+                  "if": "bonus3 = 0",
+                  "then": "playwav",
+                  "params": "bruit\\boing.wav 1"
+                },
+                {
+                  "if": "bonus3 = 0",
+                  "then": "set_var",
+                  "params": "bonus3 1"
+                },
+                {
+                  "if": "bonus3 = 1",
+                  "then": "scene",
+                  "params": "35"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "biblio": {
+        "id": "biblio",
+        "sceneNum": 4,
+        "background": "biblio.bmp",
+        "music": "music.wav",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE",
+              "additionalTexts": [
+                "Le livre des",
+                "recettes d'Europej"
+              ]
+            },
+            "onClick": {
+              "loadProject": "biblio",
+              "targetSceneNum": 4,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54f"
+                }
+              ]
+            }
+          },
+          {
+            "id": "une_lampe_de_bureaud",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Une lampe de bureaud",
+              "additionalTexts": [
+                "Le petit atlas",
+                "d'Europe.j",
+                "Les Hymnes",
+                "nationauxj",
+                "Léonard",
+                "de Vincij"
+              ]
+            },
+            "onClick": {
+              "playVideo": "biblio1.avi",
+              "loadScene": "cochon",
+              "loadProject": "italie",
+              "targetSceneNum": 27
+            }
+          },
+          {
+            "id": "l_euro_et_nousj",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "L'euro et nousj"
+            },
+            "onClick": {
+              "loadProject": "biblio",
+              "targetSceneNum": 11
+            }
+          },
+          {
+            "id": "les_corsaires",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "les corsaires",
+              "additionalTexts": [
+                "Les jeux",
+                "Olympiquesj",
+                "La cornemusej",
+                "Les joyaux de",
+                "la couronne",
+                "d'Angleterrej"
+              ]
+            },
+            "onClick": {
+              "loadProject": "angleterre",
+              "targetSceneNum": 1
+            }
+          },
+          {
+            "id": "l_exposition",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "L'exposition",
+              "additionalTexts": [
+                "universellej",
+                "Un livre sur",
+                "la fabrication",
+                "de la bièrej",
+                "Le fadoj"
+              ]
+            },
+            "onClick": {
+              "loadProject": "portu",
+              "targetSceneNum": 14
+            }
+          },
+          {
+            "id": "les_grands_couturiersj",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Les grands couturiersj",
+              "additionalTexts": [
+                "Les tulipesj",
+                "Les grands",
+                "navigateursj",
+                "Louis",
+                "Pasteur"
+              ]
+            },
+            "onClick": {
+              "loadProject": "france",
+              "targetSceneNum": 15
+            }
+          },
+          {
+            "id": "balade_a",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Balade à",
+              "additionalTexts": [
+                "Venisej"
+              ]
+            },
+            "onClick": {
+              "loadProject": "italie",
+              "targetSceneNum": 29
+            }
+          },
+          {
+            "id": "ludwig_van_beethoven",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Ludwig Van Beethoven"
+            },
+            "onClick": {
+              "loadProject": "allem",
+              "targetSceneNum": 5
+            }
+          },
+          {
+            "id": "zone_8",
+            "shape": "rectangle",
+            "onClick": {
+              "loadProject": "angleterre",
+              "targetSceneNum": 57
+            }
+          }
+        ]
+      },
+      "maison": {
+        "id": "maison",
+        "sceneNum": 5,
+        "background": "maison.bmp",
+        "music": "music.wav",
+        "hotspots": [
+          {
+            "id": "une_armoire_bien_remplie",
+            "onHover": {
+              "text": "Une armoire bien remplie",
+              "additionalTexts": [
+                "SORTIEf",
+                "Madame euro",
+                "Une table avec plein de choses dessus",
+                "Il y a quelque chose",
+                "dans le chaudron",
+                "Il n'y a plus rien",
+                "dans le chaudroni",
+                "Un message est caché",
+                "dans cette pièce, mais pas ici.d",
+                "Une étagèrej"
+              ]
+            },
+            "onClick": {
+              "playVideo": "femme.avi",
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54i"
+                },
+                {
+                  "if": "bonus1 = 0",
+                  "then": "playwav",
+                  "params": "bruit\\boing.wav 1"
+                },
+                {
+                  "if": "bonus1 = 0",
+                  "then": "set_var",
+                  "params": "bonus1 1"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "transverteur2": {
+        "id": "transverteur2",
+        "sceneNum": 6,
+        "background": "transverteur2.bmp",
+        "music": "music.wav",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE",
+              "additionalTexts": [
+                "Ordinateur du transvecteur",
+                "Une table à produitsi"
+              ]
+            },
+            "onClick": {
+              "playVideo": "prof2.avi",
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54f"
+                }
+              ]
+            }
+          },
+          {
+            "id": "un_diplomed",
+            "shape": "polygon",
+            "points": [
+              [
+                311,
+                291
+              ],
+              [
+                312,
+                237
+              ],
+              [
+                349,
+                188
+              ],
+              [
+                406,
+                179
+              ],
+              [
+                532,
+                173
+              ],
+              [
+                559,
+                239
+              ],
+              [
+                600,
+                274
+              ],
+              [
+                605,
+                298
+              ]
+            ],
+            "bounds": {
+              "x": 311,
+              "y": 173,
+              "width": 294,
+              "height": 125
+            },
+            "onHover": {
+              "text": "Un diplômed"
+            },
+            "onClick": {
+              "playVideo": "pro1a.avi"
+            }
+          },
+          {
+            "id": "le_transvecteur",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Le transvecteur",
+              "additionalTexts": [
+                "Un coffre fermé à cléi"
+              ]
+            },
+            "onClick": {
+              "playVideo": "trans.avi"
+            }
+          },
+          {
+            "id": "zone_3",
+            "shape": "polygon",
+            "points": [
+              [
+                174,
+                337
+              ],
+              [
+                174,
+                283
+              ],
+              [
+                191,
+                258
+              ],
+              [
+                286,
+                269
+              ],
+              [
+                307,
+                277
+              ],
+              [
+                310,
+                338
+              ],
+              [
+                269,
+                354
+              ]
+            ],
+            "bounds": {
+              "x": 174,
+              "y": 258,
+              "width": 136,
+              "height": 96
+            },
+            "onClick": {
+              "playVideo": "pro2.avi"
+            }
+          }
+        ]
+      },
+      "bdmusee": {
+        "id": "bdmusee",
+        "sceneNum": 7,
+        "background": "bdmusee.bmp",
+        "music": "music.wav",
+        "hotspots": [
+          {
+            "id": "sens_de_la_visite",
+            "onHover": {
+              "text": "Sens de la visite",
+              "additionalTexts": [
+                "SORTIEf",
+                "Le conservateur du muséel",
+                "Question Bonus",
+                "Tu as déjà répondu"
+              ]
+            },
+            "onClick": {
+              "playVideo": "conser5.avi",
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54f"
+                },
+                {
+                  "if": "bonus2 = 0",
+                  "then": "playtext",
+                  "params": "1050 40 125 365 0 Question Bonus"
+                },
+                {
+                  "if": "bonus2 = 2",
+                  "then": "playtext",
+                  "params": "1050 40 125 365 0 Tu as déjà répondu"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "armoire3": {
+        "id": "armoire3",
+        "sceneNum": 8,
+        "background": "armoire3.bmp",
+        "hotspots": [
+          {
+            "id": "un_sac_a_dos",
+            "onHover": {
+              "text": "Un sac à dos",
+              "additionalTexts": [
+                "SORTIEh"
+              ]
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54"
+                }
+              ]
+            }
+          },
+          {
+            "id": "il_y_a_une_autre",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Il y a une autre",
+              "additionalTexts": [
+                "bouteille en Europe",
+                "elle te sera utile si tu",
+                "la remplis d'eau.",
+                "Tu ne peux pas",
+                "prendre celles-ci.d"
+              ]
+            }
+          },
+          {
+            "id": "une_boite_d_allumettes",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Une boîte d'allumettes",
+              "additionalTexts": [
+                "Il te faut un sac à dos pour le mettre dedansd",
+                "Ces livres ne te",
+                "seront d'aucune",
+                "utilitéd"
+              ]
+            }
+          }
+        ]
+      },
+      "infosac": {
+        "id": "infosac",
+        "sceneNum": 9,
+        "background": "infosac.bmp",
+        "music": "music.wav",
+        "hotspots": [
+          {
+            "id": "quitter",
+            "onHover": {
+              "text": "Quitter"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "calc": {
+        "id": "calc",
+        "sceneNum": 10,
+        "background": "calc.bmp",
+        "music": "siren.wav",
+        "hotspots": [
+          {
+            "id": "la_calculette",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "La calculette"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sortie",
+            "shape": "polygon",
+            "points": [
+              [
+                252,
+                61
+              ],
+              [
+                300,
+                41
+              ],
+              [
+                347,
+                67
+              ],
+              [
+                352,
+                150
+              ],
+              [
+                316,
+                184
+              ],
+              [
+                282,
+                184
+              ],
+              [
+                239,
+                146
+              ]
+            ],
+            "bounds": {
+              "x": 239,
+              "y": 41,
+              "width": 113,
+              "height": 143
+            },
+            "onHover": {
+              "text": "SORTIE"
+            }
+          }
+        ]
+      },
+      "schema": {
+        "id": "schema",
+        "sceneNum": 11,
+        "background": "schema.bmp",
+        "hotspots": [
+          {
+            "id": "quitter",
+            "onHover": {
+              "text": "Quitter"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54i"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "europe": {
+        "id": "europe",
+        "sceneNum": 12,
+        "background": "europe.bmp",
+        "music": "boing.wav",
+        "hotspots": [
+          {
+            "id": "zone_0",
+            "shape": "rectangle",
+            "onClick": {
+              "playVideo": "depart.avi"
+            }
+          }
+        ]
+      },
+      "ecran2": {
+        "id": "ecran2",
+        "sceneNum": 13,
+        "background": "ecran2.bmp",
+        "music": "cartoon.wav",
+        "hotspots": [
+          {
+            "id": "clique_ici_pour_arreter_la_mac",
+            "onHover": {
+              "text": "Clique ici pour arrêter la machine."
+            },
+            "onClick": {
+              "loadScene": "europe"
+            }
+          }
+        ]
+      },
+      "calc2": {
+        "id": "calc2",
+        "sceneNum": 14,
+        "background": "calc2.bmp",
+        "hotspots": [
+          {
+            "id": "quitter",
+            "onHover": {
+              "text": "Quitter"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "tele": {
+        "id": "tele",
+        "sceneNum": 15,
+        "background": "tele.bmp",
+        "hotspots": [
+          {
+            "id": "quitter",
+            "onHover": {
+              "text": "Quitter"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "cochon": {
+        "id": "cochon",
+        "sceneNum": 16,
+        "background": "cochon.bmp",
+        "hotspots": [
+          {
+            "id": "quitter",
+            "onHover": {
+              "text": "Quitter"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54i"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "burzom": {
+        "id": "burzom",
+        "sceneNum": 17,
+        "background": "burzom.bmp",
+        "hotspots": []
+      },
+      "dossier": {
+        "id": "dossier",
+        "sceneNum": 18,
+        "background": "dossier.bmp",
+        "hotspots": []
+      },
+      "encre2": {
+        "id": "encre2",
+        "sceneNum": 19,
+        "background": "encre2.bmp",
+        "hotspots": []
+      },
+      "courrier": {
+        "id": "courrier",
+        "sceneNum": 20,
+        "background": "courrier.bmp",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54i"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "bonus": {
+        "id": "bonus",
+        "sceneNum": 21,
+        "background": "bonus.bmp",
+        "music": "cartoon.wav",
+        "hotspots": [
+          {
+            "id": "reponse_n_1",
+            "onHover": {
+              "text": "Réponse N°1"
+            },
+            "onClick": {
+              "loadProject": "france",
+              "targetSceneNum": 5,
+              "loadScene": "banque",
+              "conditions": [
+                {
+                  "if": "bonus1 = 1",
+                  "then": "playhtml",
+                  "params": "bonus1.htm 0 50 100 600 400"
+                },
+                {
+                  "if": "bonus5 = 1",
+                  "then": "playhtml",
+                  "params": "bonus5.htm 0 50 100 600 400"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "playhtml",
+                  "params": "bonus4.htm 0 50 100 600 400"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_2",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Réponse N°2"
+            },
+            "onClick": {
+              "loadProject": "france",
+              "targetSceneNum": 5,
+              "loadScene": "banque",
+              "conditions": [
+                {
+                  "if": "bonus4 = 1",
+                  "then": "playwav",
+                  "params": "cling.wav 1"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "inc_var",
+                  "params": "score 10"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "runprj",
+                  "params": "..\\ecosse\\ecosse.vnp 6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_3",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Réponse N°3"
+            },
+            "onClick": {
+              "loadProject": "france",
+              "targetSceneNum": 5,
+              "loadScene": "banque",
+              "conditions": [
+                {
+                  "if": "bonus4 = 1",
+                  "then": "playwav",
+                  "params": "cartoon.wav 1"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "dec_var",
+                  "params": "score 10"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "runprj",
+                  "params": "..\\ecosse\\ecosse.vnp 6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_1",
+            "onHover": {
+              "text": "Réponse N°1"
+            },
+            "onClick": {
+              "loadProject": "belge",
+              "targetSceneNum": 4,
+              "conditions": [
+                {
+                  "if": "bonus8 = 1",
+                  "then": "playhtml",
+                  "params": "bonus8.htm 0 50 100 600 400"
+                },
+                {
+                  "if": "bonus9 = 1",
+                  "then": "playhtml",
+                  "params": "bonus9.htm 0 50 100 600 400"
+                },
+                {
+                  "if": "bonus7 = 1",
+                  "then": "playhtml",
+                  "params": "bonus7.htm 0 50 100 600 400"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_2",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Réponse N°2"
+            },
+            "onClick": {
+              "loadProject": "belge",
+              "targetSceneNum": 4,
+              "conditions": [
+                {
+                  "if": "bonus4 = 1",
+                  "then": "playwav",
+                  "params": "cling.wav 1"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "inc_var",
+                  "params": "score 10"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "runprj",
+                  "params": "..\\ecosse\\ecosse.vnp 6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_3",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Réponse N°3"
+            },
+            "onClick": {
+              "loadProject": "belge",
+              "targetSceneNum": 4,
+              "conditions": [
+                {
+                  "if": "bonus4 = 1",
+                  "then": "playwav",
+                  "params": "cartoon.wav 1"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "dec_var",
+                  "params": "score 10"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "runprj",
+                  "params": "..\\ecosse\\ecosse.vnp 6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_1",
+            "onHover": {
+              "text": "Réponse N°1"
+            },
+            "onClick": {
+              "loadProject": "belge",
+              "targetSceneNum": 6,
+              "conditions": [
+                {
+                  "if": "bonus4 = 1",
+                  "then": "playhtml",
+                  "params": "bonus4.htm 0 50 100 600 400"
+                },
+                {
+                  "if": "bonus5 = 1",
+                  "then": "playhtml",
+                  "params": "bonus5.htm 0 50 100 600 400"
+                },
+                {
+                  "if": "bonus6 = 1",
+                  "then": "playhtml",
+                  "params": "bonus6.htm 0 50 100 600 400"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_2",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Réponse N°2"
+            },
+            "onClick": {
+              "loadProject": "belge",
+              "targetSceneNum": 6,
+              "conditions": [
+                {
+                  "if": "bonus4 = 1",
+                  "then": "playwav",
+                  "params": "cling.wav 1"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "inc_var",
+                  "params": "score 10"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "runprj",
+                  "params": "..\\ecosse\\ecosse.vnp 6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_3",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Réponse N°3"
+            },
+            "onClick": {
+              "loadProject": "belge",
+              "targetSceneNum": 6,
+              "conditions": [
+                {
+                  "if": "bonus4 = 1",
+                  "then": "playwav",
+                  "params": "cartoon.wav 1"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "dec_var",
+                  "params": "score 10"
+                },
+                {
+                  "if": "bonus4 = 1",
+                  "then": "runprj",
+                  "params": "..\\ecosse\\ecosse.vnp 6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "quitter",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Quitter"
+            }
+          },
+          {
+            "id": "reponse_n_1",
+            "onHover": {
+              "text": "Réponse N°1"
+            },
+            "onClick": {
+              "loadScene": "banque",
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "bonus1 = 1",
+                  "then": "playavi",
+                  "params": "bonus2.avi 1 421 70 630 290"
+                },
+                {
+                  "if": "bonus1 = 1",
+                  "then": "playwav",
+                  "params": "cartoon.wav 1"
+                },
+                {
+                  "if": "bonus1 = 1",
+                  "then": "dec_var",
+                  "params": "score 10"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_2",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Réponse N°2"
+            },
+            "onClick": {
+              "loadScene": "banque",
+              "conditions": [
+                {
+                  "if": "bonus1 = 1",
+                  "then": "playavi",
+                  "params": "bonus1.avi 1 421 70 630 290"
+                },
+                {
+                  "if": "bonus1 = 1",
+                  "then": "playwav",
+                  "params": "cling.wav 1"
+                },
+                {
+                  "if": "bonus1 = 1",
+                  "then": "inc_var",
+                  "params": "score 10"
+                }
+              ]
+            }
+          },
+          {
+            "id": "reponse_n_3",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Réponse N°3"
+            },
+            "onClick": {
+              "loadScene": "banque",
+              "conditions": [
+                {
+                  "if": "bonus1 = 1",
+                  "then": "playavi",
+                  "params": "bonus2.avi 1 421 70 630 290"
+                },
+                {
+                  "if": "bonus1 = 1",
+                  "then": "playwav",
+                  "params": "cartoon.wav 1"
+                },
+                {
+                  "if": "bonus1 = 1",
+                  "then": "dec_var",
+                  "params": "score 10"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "mes_100": {
+        "id": "mes_100",
+        "sceneNum": 22,
+        "background": "mes_100.bmp",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54h"
+                }
+              ]
+            }
+          },
+          {
+            "id": "zone_4",
+            "shape": "rectangle",
+            "onClick": {
+              "loadScene": "europe"
+            }
+          },
+          {
+            "id": "zone_5",
+            "shape": "rectangle",
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 4
+            }
+          }
+        ]
+      },
+      "experience": {
+        "id": "experience",
+        "sceneNum": 23,
+        "background": "experience.bmp",
+        "music": "foret.wav",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54"
+                }
+              ]
+            }
+          },
+          {
+            "id": "du_sirop_pour_la_toux",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Du sirop pour la toux",
+              "additionalTexts": [
+                "Des sachets de levure",
+                "Il te faut un sac à dos pour ranger tes objetsd",
+                "Une burette d'huile",
+                "Il te faut un sac à dos pour ranger tes objetsd",
+                "Des produits chimiquesd",
+                "Plan du transvecteur"
+              ]
+            }
+          }
+        ]
+      },
+      "fontain2": {
+        "id": "fontain2",
+        "sceneNum": 24,
+        "background": "fontain2.bmp",
+        "hotspots": []
+      },
+      "maire3": {
+        "id": "maire3",
+        "sceneNum": 25,
+        "background": "maire3.bmp",
+        "music": "foret.wav",
+        "hotspots": [
+          {
+            "id": "sortieh",
+            "onHover": {
+              "text": "SORTIEh"
+            }
+          }
+        ]
+      },
+      "fiole2": {
+        "id": "fiole2",
+        "sceneNum": 26,
+        "background": "fiole2.bmp",
+        "music": "cling.wav",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "Sortie",
+              "additionalTexts": [
+                "Vide else playtext 280 260 125 365 0 Activéi"
+              ]
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54h"
+                }
+              ]
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                106,
+                306
+              ],
+              [
+                120,
+                270
+              ],
+              [
+                156,
+                255
+              ],
+              [
+                188,
+                284
+              ],
+              [
+                177,
+                323
+              ],
+              [
+                136,
+                336
+              ]
+            ],
+            "bounds": {
+              "x": 106,
+              "y": 255,
+              "width": 82,
+              "height": 81
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activé"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                67,
+                255
+              ],
+              [
+                60,
+                230
+              ],
+              [
+                77,
+                207
+              ],
+              [
+                103,
+                201
+              ],
+              [
+                128,
+                216
+              ],
+              [
+                112,
+                250
+              ],
+              [
+                95,
+                265
+              ]
+            ],
+            "bounds": {
+              "x": 60,
+              "y": 201,
+              "width": 68,
+              "height": 64
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                71,
+                182
+              ],
+              [
+                75,
+                154
+              ],
+              [
+                95,
+                134
+              ],
+              [
+                120,
+                134
+              ],
+              [
+                135,
+                157
+              ],
+              [
+                98,
+                185
+              ]
+            ],
+            "bounds": {
+              "x": 71,
+              "y": 134,
+              "width": 64,
+              "height": 51
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                115,
+                106
+              ],
+              [
+                140,
+                76
+              ],
+              [
+                190,
+                94
+              ],
+              [
+                155,
+                128
+              ]
+            ],
+            "bounds": {
+              "x": 115,
+              "y": 76,
+              "width": 75,
+              "height": 52
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                210,
+                90
+              ],
+              [
+                220,
+                50
+              ],
+              [
+                245,
+                45
+              ],
+              [
+                265,
+                80
+              ]
+            ],
+            "bounds": {
+              "x": 210,
+              "y": 45,
+              "width": 55,
+              "height": 45
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                307,
+                70
+              ],
+              [
+                323,
+                41
+              ],
+              [
+                350,
+                45
+              ],
+              [
+                360,
+                80
+              ]
+            ],
+            "bounds": {
+              "x": 307,
+              "y": 41,
+              "width": 53,
+              "height": 39
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                390,
+                90
+              ],
+              [
+                428,
+                105
+              ],
+              [
+                447,
+                93
+              ],
+              [
+                438,
+                67
+              ],
+              [
+                406,
+                58
+              ]
+            ],
+            "bounds": {
+              "x": 390,
+              "y": 58,
+              "width": 57,
+              "height": 47
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activé"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                492,
+                158
+              ],
+              [
+                461,
+                135
+              ],
+              [
+                458,
+                113
+              ],
+              [
+                475,
+                106
+              ],
+              [
+                504,
+                115
+              ],
+              [
+                516,
+                140
+              ],
+              [
+                514,
+                158
+              ]
+            ],
+            "bounds": {
+              "x": 458,
+              "y": 106,
+              "width": 58,
+              "height": 52
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                537,
+                227
+              ],
+              [
+                503,
+                221
+              ],
+              [
+                484,
+                192
+              ],
+              [
+                492,
+                173
+              ],
+              [
+                524,
+                169
+              ],
+              [
+                546,
+                199
+              ]
+            ],
+            "bounds": {
+              "x": 484,
+              "y": 169,
+              "width": 62,
+              "height": 58
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                493,
+                311
+              ],
+              [
+                451,
+                289
+              ],
+              [
+                456,
+                245
+              ],
+              [
+                492,
+                241
+              ],
+              [
+                520,
+                279
+              ]
+            ],
+            "bounds": {
+              "x": 451,
+              "y": 241,
+              "width": 69,
+              "height": 70
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "vide_else_playtext_280_260_125",
+            "shape": "polygon",
+            "points": [
+              [
+                362,
+                366
+              ],
+              [
+                336,
+                326
+              ],
+              [
+                349,
+                294
+              ],
+              [
+                386,
+                279
+              ],
+              [
+                422,
+                309
+              ],
+              [
+                422,
+                349
+              ]
+            ],
+            "bounds": {
+              "x": 336,
+              "y": 279,
+              "width": 86,
+              "height": 87
+            },
+            "onHover": {
+              "text": "Vide else playtext 280 260 125 365 0 Activéi"
+            }
+          },
+          {
+            "id": "un_parchemin",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Un Parchemin"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score <= 0",
+                  "then": "addbmp",
+                  "params": "d3 d3.bmp 0 0 40"
+                },
+                {
+                  "if": "score <= 0",
+                  "then": "addtext",
+                  "params": "score 0 280 305 160 470 0 <score>"
+                },
+                {
+                  "if": "score >= 0",
+                  "then": "addbmp",
+                  "params": "d2 d2.bmp 0 0 40"
+                }
+              ]
+            }
+          },
+          {
+            "id": "une_question_a_50_euros",
+            "shape": "rectangle",
+            "onHover": {
+              "text": "Une question à 50 euros.",
+              "additionalTexts": [
+                "Si tu réponds juste, la somme",
+                "est pour toi, sinon tu perds",
+                "25 euros.",
+                "Veux tu tenter ta chance ?",
+                "La réponse se trouve dans",
+                "la bibliothéque.",
+                "Bien joué la question .",
+                "était difficile"
+              ]
+            }
+          },
+          {
+            "id": "zone_20",
+            "shape": "polygon",
+            "points": [
+              [
+                29,
+                384
+              ],
+              [
+                75,
+                393
+              ],
+              [
+                110,
+                375
+              ],
+              [
+                76,
+                297
+              ],
+              [
+                41,
+                281
+              ],
+              [
+                23,
+                353
+              ]
+            ],
+            "bounds": {
+              "x": 23,
+              "y": 281,
+              "width": 87,
+              "height": 112
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54i"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "papier": {
+        "id": "papier",
+        "sceneNum": 27,
+        "background": "papier.bmp",
+        "music": "cartoon.wav",
+        "hotspots": []
+      },
+      "euro1": {
+        "id": "euro1",
+        "sceneNum": 28,
+        "background": "euro1.bmp",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54h"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "euro2": {
+        "id": "euro2",
+        "sceneNum": 29,
+        "background": "euro2.bmp",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54h"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "mess2": {
+        "id": "mess2",
+        "sceneNum": 30,
+        "background": "mess2.bmp",
+        "hotspots": []
+      },
+      "table_m": {
+        "id": "table_m",
+        "sceneNum": 31,
+        "background": "table_m.bmp",
+        "hotspots": [
+          {
+            "id": "dossier_euro",
+            "onHover": {
+              "text": "dossier euro",
+              "additionalTexts": [
+                "SORTIE",
+                "Une bouteille vided"
+              ]
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54d"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "mes_porta": {
+        "id": "mes_porta",
+        "sceneNum": 32,
+        "background": "mes_porta.bmp",
+        "music": "perdu.wav",
+        "hotspots": [
+          {
+            "id": "sortie",
+            "onHover": {
+              "text": "SORTIE"
+            },
+            "onClick": {
+              "loadProject": "couleurs1",
+              "targetSceneNum": 54,
+              "conditions": [
+                {
+                  "if": "score < 0",
+                  "then": "runprj",
+                  "params": "..\\couleurs1\\couleurs1.vnp 54h"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

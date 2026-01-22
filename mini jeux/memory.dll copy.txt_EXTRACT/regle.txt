@@ -1,0 +1,20 @@
+ La Mécanique de Jeu
+Démarrage : Le TimeTmr se lance (compte à rebours ou chronomètre affiché dans TimeLbl).
+Clic 1 : Le joueur clique sur une carte (ex: Image29). Elle devient invisible, révélant l'image dessous.
+Clic 2 : Le joueur clique sur une autre carte. Elle se révèle.
+Vérification :
+Si les deux images sont identiques : Elles restent affichées (Gagné pour cette paire).
+Si elles sont différentes : Le CacheTmr (Interval 700ms) se déclenche. Au bout de 0.7 seconde, les deux cartes se retournent (redeviennent cachées).
+Fin : Quand les 8 paires sont trouvées.
+4. Résumé pour la reconstruction
+Le Fond : Afficher Image_1.bmp.
+Les Cartes (Logique) :
+Récupérez les 8 images de symboles (Image_18.bmp à Image_25.bmp).
+Dupliquez-les pour avoir 16 images (8 paires).
+Mélangez-les aléatoirement.
+Placez-les sur une grille 4x4 aux coordonnées indiquées (ex: 128, 104 pour la 1ère case).
+Les Cartes (Visuel) :
+Utilisez l'image du dos de carte (probablement Image_2.bmp qui est utilisée par Image29, la première carte cliquable) pour recouvrir la grille.
+Interaction :
+Programmer la logique classique du Memory (retourner, comparer, valider ou cacher).
+Ajouter un compteur de temps.

@@ -1,0 +1,20 @@
+TITRE : Dictionnaire des Variables
+ID : variables
+------------------------------------------------------------
+
+[ Variables Principales ]
+>>> CODE START
+Flags Géographiques : ALLEMAGNE, FRANCE... (1=Visité)
+
+Inventaire :
+- SACADOS, CLEJAUNE, CLEROUGE
+- TICKET, TICKET_A, PIECE
+- PARFUM, RUBAN, FLEUR
+- OUTIL, TOURNEVIS, PINCE
+
+Système :
+- SCORE (Argent)
+- FIOLEOK (État quête)
+- NON (Variable tampon échec)
+<<< CODE END
+

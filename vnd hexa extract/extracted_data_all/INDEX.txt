@@ -1,0 +1,167 @@
+================================================================================
+INDEX DES FICHIERS EXTRAITS
+================================================================================
+
+Total de fichiers traités: 19
+
+FICHIERS GÉNÉRÉS:
+--------------------------------------------------------------------------------
+
+📄 biblio.vnd
+   Taille:    140,765 bytes
+   Chaînes:   3420
+   Variables: 300
+   Fichiers générés:
+     - extracted_data_biblio.txt
+     - extracted_data_biblio.json
+
+📄 france.vnd
+   Taille:    100,012 bytes
+   Chaînes:   2280
+   Variables: 295
+   Fichiers générés:
+     - extracted_data_france.txt
+     - extracted_data_france.json
+
+📄 angleterre.vnd
+   Taille:    87,026 bytes
+   Chaînes:   1820
+   Variables: 289
+   Fichiers générés:
+     - extracted_data_angleterre.txt
+     - extracted_data_angleterre.json
+
+📄 couleurs1.vnd
+   Taille:    76,174 bytes
+   Chaînes:   1510
+   Variables: 289
+   Fichiers générés:
+     - extracted_data_couleurs1.txt
+     - extracted_data_couleurs1.json
+
+📄 belge.vnd
+   Taille:    75,760 bytes
+   Chaînes:   1688
+   Variables: 287
+   Fichiers générés:
+     - extracted_data_belge.txt
+     - extracted_data_belge.json
+
+📄 autr.vnd
+   Taille:    75,050 bytes
+   Chaînes:   1647
+   Variables: 286
+   Fichiers générés:
+     - extracted_data_autr.txt
+     - extracted_data_autr.json
+
+📄 espa.vnd
+   Taille:    74,978 bytes
+   Chaînes:   1719
+   Variables: 291
+   Fichiers générés:
+     - extracted_data_espa.txt
+     - extracted_data_espa.json
+
+📄 italie.vnd
+   Taille:    74,280 bytes
+   Chaînes:   1623
+   Variables: 283
+   Fichiers générés:
+     - extracted_data_italie.txt
+     - extracted_data_italie.json
+
+📄 portu.vnd
+   Taille:    74,256 bytes
+   Chaînes:   1671
+   Variables: 283
+   Fichiers générés:
+     - extracted_data_portu.txt
+     - extracted_data_portu.json
+
+📄 ecosse.vnd
+   Taille:    71,862 bytes
+   Chaînes:   1602
+   Variables: 288
+   Fichiers générés:
+     - extracted_data_ecosse.txt
+     - extracted_data_ecosse.json
+
+📄 allem.vnd
+   Taille:    64,450 bytes
+   Chaînes:   1513
+   Variables: 285
+   Fichiers générés:
+     - extracted_data_allem.txt
+     - extracted_data_allem.json
+
+📄 irland.vnd
+   Taille:    62,260 bytes
+   Chaînes:   1370
+   Variables: 278
+   Fichiers générés:
+     - extracted_data_irland.txt
+     - extracted_data_irland.json
+
+📄 grece.vnd
+   Taille:    56,085 bytes
+   Chaînes:   1243
+   Variables: 285
+   Fichiers générés:
+     - extracted_data_grece.txt
+     - extracted_data_grece.json
+
+📄 holl.vnd
+   Taille:    55,887 bytes
+   Chaînes:   1208
+   Variables: 290
+   Fichiers générés:
+     - extracted_data_holl.txt
+     - extracted_data_holl.json
+
+📄 suede.vnd
+   Taille:    51,744 bytes
+   Chaînes:   1229
+   Variables: 278
+   Fichiers générés:
+     - extracted_data_suede.txt
+     - extracted_data_suede.json
+
+📄 finlan.vnd
+   Taille:    45,103 bytes
+   Chaînes:   992
+   Variables: 280
+   Fichiers générés:
+     - extracted_data_finlan.txt
+     - extracted_data_finlan.json
+
+📄 danem.vnd
+   Taille:    41,862 bytes
+   Chaînes:   1017
+   Variables: 281
+   Fichiers générés:
+     - extracted_data_danem.txt
+     - extracted_data_danem.json
+
+📄 barre.vnd
+   Taille:    28,252 bytes
+   Chaînes:   492
+   Variables: 21
+   Fichiers générés:
+     - extracted_data_barre.txt
+     - extracted_data_barre.json
+
+📄 start.vnd
+   Taille:    6,323 bytes
+   Chaînes:   315
+   Variables: 278
+   Fichiers générés:
+     - extracted_data_start.txt
+     - extracted_data_start.json
+
+================================================================================
+STATISTIQUES GLOBALES
+================================================================================
+Taille totale:     1,262,129 bytes
+Chaînes totales:   28,359
+Fichiers générés:  38 (19 .txt + 19 .json)

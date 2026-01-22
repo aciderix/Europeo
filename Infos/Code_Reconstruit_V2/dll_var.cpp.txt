@@ -1,0 +1,39 @@
+
+//-------------------------------------------------------------------------
+// Function 123
+// Fichier identifié: dll_var.cpp
+//-------------------------------------------------------------------------
+
+
+char *__cdecl sub_4075B8(char *dest, int a2)
+{
+  char *result; // eax
+  _DWORD v3[4]; // [esp+8h] [ebp-2Ch] BYREF
+  __int16 v4; // [esp+18h] [ebp-1Ch]
+  int v5; // [esp+24h] [ebp-10h]
+  _BYTE v6[4]; // [esp+2Ch] [ebp-8h] BYREF
+  _BYTE v7[4]; // [esp+30h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !dest )
+  {
+    v4 = 8;
+    xerror::MakeString((xerror *)v7, aPrecondition_10, aDestNull, aDllVarCpp, 9u);
+    ++v5;
+    xmsg::xmsg((xmsg *)v6, (const string *)v7);
+    ++v5;
+    v4 = 20;
+    --v5;
+    string::~string((string *)v7);
+    v4 = 8;
+    v5 += 2;
+    v5 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v6, 0, sub_403BE0, 1u, 0, 0, 0, v3);
+  }
+  result = strncpy(dest, *(const char **)(*(_DWORD *)(a2 + 4) + 2), 0x100u);
+  dest[255] = 0;
+  *((_DWORD *)dest + 64) = *(_DWORD *)(a2 + 12);
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+

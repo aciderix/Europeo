@@ -1,0 +1,169 @@
+
+//-------------------------------------------------------------------------
+// Function 826
+// Fichier identifié: static.h
+//-------------------------------------------------------------------------
+
+
+void __cdecl sub_4374C3(TDialog *a1)
+{
+  TStatic *v1; // edx
+  TStatic *v2; // esi
+  TStatic *v3; // edx
+  const CHAR *v4; // ebx
+  const CHAR *v5; // ebx
+  CHAR String[128]; // [esp+Ch] [ebp-1F0h] BYREF
+  char buffer[256]; // [esp+8Ch] [ebp-170h] BYREF
+  TStatic *v8; // [esp+18Ch] [ebp-70h]
+  TStatic *v9; // [esp+190h] [ebp-6Ch]
+  LPCSTR v10; // [esp+194h] [ebp-68h] BYREF
+  LPVOID lpBuffer; // [esp+198h] [ebp-64h] BYREF
+  LPCSTR lpString; // [esp+19Ch] [ebp-60h] BYREF
+  _BYTE v13[16]; // [esp+1A0h] [ebp-5Ch] BYREF
+  __int16 v14; // [esp+1B0h] [ebp-4Ch]
+  int v15; // [esp+1BCh] [ebp-40h]
+  _BYTE v16[4]; // [esp+1C4h] [ebp-38h] BYREF
+  _BYTE v17[4]; // [esp+1C8h] [ebp-34h] BYREF
+  _BYTE v18[4]; // [esp+1CCh] [ebp-30h] BYREF
+  _BYTE v19[4]; // [esp+1D0h] [ebp-2Ch] BYREF
+  _BYTE v20[4]; // [esp+1D4h] [ebp-28h] BYREF
+  _BYTE v21[4]; // [esp+1D8h] [ebp-24h] BYREF
+  _BYTE v22[4]; // [esp+1DCh] [ebp-20h] BYREF
+  _BYTE v23[4]; // [esp+1E0h] [ebp-1Ch] BYREF
+  TStatic *v24; // [esp+1E4h] [ebp-18h]
+  TStatic *v25; // [esp+1E8h] [ebp-14h]
+  TStatic *v26; // [esp+1ECh] [ebp-10h]
+  int v27[3]; // [esp+1F0h] [ebp-Ch] BYREF
+
+  __InitExceptBlockLDTC();
+  lpString = 0;
+  lpBuffer = 0;
+  v10 = 0;
+  v26 = (TStatic *)operator new(0xAEu);
+  if ( v26 )
+  {
+    v14 = 20;
+    TStatic::TStatic(v26, 0, *(_DWORD *)a1, 0x55F3u, (TModule *)0xFF);
+    v14 = 8;
+    v1 = v26;
+  }
+  else
+  {
+    v1 = 0;
+  }
+  v9 = v1;
+  v25 = (TStatic *)operator new(0xAEu);
+  if ( v25 )
+  {
+    v14 = 44;
+    TStatic::TStatic(v25, 0, *(_DWORD *)a1, 0x55F1u, (TModule *)0xFF);
+    v14 = 32;
+    v2 = v25;
+  }
+  else
+  {
+    v2 = 0;
+  }
+  v24 = (TStatic *)operator new(0xAEu);
+  if ( v24 )
+  {
+    v14 = 68;
+    TStatic::TStatic(v24, 0, *(_DWORD *)a1, 0x55F2u, (TModule *)0xFF);
+    v14 = 56;
+    v3 = v24;
+  }
+  else
+  {
+    v3 = 0;
+  }
+  v8 = v3;
+  sub_4266F0(a1);
+  v14 = 80;
+  sub_4370B8((int)v27, dword_446AB8);
+  ++v15;
+  v14 = 92;
+  if ( sub_4372B9((int)v27, (LPVOID *)&lpString) )
+  {
+    v4 = lpString;
+    if ( !*(_DWORD *)(*(_DWORD *)v9 + 12) )
+    {
+      v14 = 104;
+      xerror::MakeString((xerror *)v23, aPrecondition_130, aGethandle_55, aCBc5IncludeOwl_60, 0xBFu);
+      ++v15;
+      xmsg::xmsg((xmsg *)v22, (const string *)v23);
+      ++v15;
+      v14 = 116;
+      --v15;
+      string::~string((string *)v23);
+      v14 = 104;
+      v15 += 2;
+      v15 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v22, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+    }
+    SetWindowTextA(*(HWND *)(*(_DWORD *)v9 + 12), v4);
+  }
+  if ( sub_437367((int)v27, &lpBuffer) )
+  {
+    buffer[0] = 0;
+    String[0] = 0;
+    if ( !*(_DWORD *)(*(_DWORD *)v2 + 12) )
+    {
+      v14 = 128;
+      xerror::MakeString((xerror *)v21, aPrecondition_131, aGethandle_56, aCBc5IncludeOwl_61, 0xB7u);
+      ++v15;
+      xmsg::xmsg((xmsg *)v20, (const string *)v21);
+      ++v15;
+      v14 = 140;
+      --v15;
+      string::~string((string *)v21);
+      v14 = 128;
+      v15 += 2;
+      v15 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v20, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+    }
+    GetWindowTextA(*(HWND *)(*(_DWORD *)v2 + 12), String, 128);
+    sprintf(buffer, "%s %s", String, (const char *)lpBuffer);
+    if ( !*(_DWORD *)(*(_DWORD *)v2 + 12) )
+    {
+      v14 = 152;
+      xerror::MakeString((xerror *)v19, aPrecondition_132, aGethandle_57, aCBc5IncludeOwl_62, 0xBFu);
+      ++v15;
+      xmsg::xmsg((xmsg *)v18, (const string *)v19);
+      ++v15;
+      v14 = 164;
+      --v15;
+      string::~string((string *)v19);
+      v14 = 152;
+      v15 += 2;
+      v15 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v18, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+    }
+    SetWindowTextA(*(HWND *)(*(_DWORD *)v2 + 12), buffer);
+  }
+  if ( sub_437415((int)v27, (LPVOID *)&v10) )
+  {
+    v5 = v10;
+    if ( !*(_DWORD *)(*(_DWORD *)v8 + 12) )
+    {
+      v14 = 176;
+      xerror::MakeString((xerror *)v17, aPrecondition_133, aGethandle_58, aCBc5IncludeOwl_63, 0xBFu);
+      ++v15;
+      xmsg::xmsg((xmsg *)v16, (const string *)v17);
+      ++v15;
+      v14 = 188;
+      --v15;
+      string::~string((string *)v17);
+      v14 = 176;
+      v15 += 2;
+      v15 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v16, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+    }
+    SetWindowTextA(*(HWND *)(*(_DWORD *)v8 + 12), v5);
+  }
+  --v15;
+  sub_437289((void **)v27, 2);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 43965A: using guessed type TStatic *TStatic::TStatic(TStatic *__hidden this, TWindow *, int, unsigned int, TModule *);
+// 446AB8: using guessed type int dword_446AB8;
+

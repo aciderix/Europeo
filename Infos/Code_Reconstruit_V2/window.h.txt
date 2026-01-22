@@ -1,0 +1,3012 @@
+
+//-------------------------------------------------------------------------
+// Function 397
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_4194E7(_DWORD *a1)
+{
+  int result; // eax
+  int v2; // ebx
+  _DWORD v3[4]; // [esp+4h] [ebp-2Ch] BYREF
+  __int16 v4; // [esp+14h] [ebp-1Ch]
+  int v5; // [esp+20h] [ebp-10h]
+  _BYTE v6[4]; // [esp+28h] [ebp-8h] BYREF
+  _BYTE v7[4]; // [esp+2Ch] [ebp-4h] BYREF
+
+  result = __InitExceptBlockLDTC();
+  if ( !*(_DWORD *)((char *)a1 + 81) )
+    return (*(int (__cdecl **)(_DWORD *))(*a1 + 20))(a1);
+  if ( *(_DWORD *)((char *)a1 + 81) != *(_DWORD *)((char *)a1 + 77) )
+  {
+    *(_DWORD *)((char *)a1 + 77) = *(_DWORD *)((char *)a1 + 81);
+    sub_41DEBB(a1[3], (char *)a1 + 61);
+    v2 = a1[2];
+    if ( !*(_DWORD *)(v2 + 12) )
+    {
+      xerror::MakeString((xerror *)v7, aPrecondition_37, aGethandle_5, aCBc5IncludeOwl_5, 0x769u);
+      ++v5;
+      xmsg::xmsg((xmsg *)v6, (const string *)v7);
+      ++v5;
+      v4 = 12;
+      --v5;
+      string::~string((string *)v7);
+      v5 += 2;
+      v5 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v6, 0, sub_403BE0, 1u, 0, 0, 0, v3);
+    }
+    return InvalidateRect(*(HWND *)(v2 + 12), 0, 0);
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 401
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __usercall sub_419C23@<eax>(int a1@<ebx>, int a2, unsigned int a3, int *a4)
+{
+  int v4; // eax
+  int v5; // eax
+  int v6; // eax
+  int v7; // esi
+  _DWORD v9[4]; // [esp+Ch] [ebp-34h] BYREF
+  __int16 v10; // [esp+1Ch] [ebp-24h]
+  int v11; // [esp+28h] [ebp-18h]
+  _BYTE v12[4]; // [esp+30h] [ebp-10h] BYREF
+  _BYTE v13[4]; // [esp+34h] [ebp-Ch] BYREF
+  _BYTE v14[4]; // [esp+38h] [ebp-8h] BYREF
+  _BYTE v15[4]; // [esp+3Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !a3 )
+    return a1;
+  if ( *(_BYTE *)(a2 + 28) )
+  {
+    LOBYTE(v4) = sub_4195CC((_DWORD *)a2, *(_DWORD *)(a2 + 77) + a3);
+    a1 = v4;
+  }
+  else
+  {
+    v5 = a3 <= *(_DWORD *)(a2 + 77) ? a3 : *(_DWORD *)(a2 + 77);
+    LOBYTE(v6) = sub_4195CC((_DWORD *)a2, *(_DWORD *)(a2 + 77) - v5);
+    a1 = v6;
+  }
+  if ( !(_BYTE)a1 )
+    return a1;
+  if ( *(_DWORD *)(a2 + 77) <= 1u )
+  {
+    v7 = *(_DWORD *)(a2 + 8);
+    if ( !*(_DWORD *)(v7 + 12) )
+    {
+      v10 = 24;
+      xerror::MakeString((xerror *)v13, aPrecondition_40, aGethandle_7, aCBc5IncludeOwl_7, 0x769u);
+      ++v11;
+      xmsg::xmsg((xmsg *)v12, (const string *)v13);
+      ++v11;
+      v10 = 36;
+      --v11;
+      string::~string((string *)v13);
+      v10 = 24;
+      v11 += 2;
+      v11 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v12, 0, sub_403BE0, 1u, 0, 0, 0, v9);
+    }
+LABEL_18:
+    InvalidateRect(*(HWND *)(v7 + 12), 0, 0);
+    goto LABEL_19;
+  }
+  if ( a4 )
+  {
+    if ( !sub_419A6C((_DWORD *)a2, a4) )
+      return 0;
+    v7 = *(_DWORD *)(a2 + 8);
+    if ( !*(_DWORD *)(v7 + 12) )
+    {
+      xerror::MakeString((xerror *)v15, aPrecondition_39, aGethandle_6, aCBc5IncludeOwl_6, 0x769u);
+      ++v11;
+      xmsg::xmsg((xmsg *)v14, (const string *)v15);
+      ++v11;
+      v10 = 12;
+      --v11;
+      string::~string((string *)v15);
+      v11 += 2;
+      v11 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v14, 0, sub_403BE0, 1u, 0, 0, 0, v9);
+    }
+    goto LABEL_18;
+  }
+LABEL_19:
+  if ( *(_DWORD *)(a2 + 77)
+    && *(_DWORD *)(a2 + 4)
+    && !(*(unsigned __int8 (__cdecl **)(_DWORD))(*(_DWORD *)(*(_DWORD *)(a2 + 4) + 20) + 4))(*(_DWORD *)(a2 + 4)) )
+  {
+    (*(void (__cdecl **)(_DWORD))(*(_DWORD *)(*(_DWORD *)(a2 + 4) + 20) + 12))(*(_DWORD *)(a2 + 4));
+  }
+  return a1;
+}
+// 419C57: variable 'v4' is possibly undefined
+// 419C76: variable 'v6' is possibly undefined
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 404
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+char __cdecl sub_419E5D(_DWORD *a1)
+{
+  int v3; // ebx
+  _DWORD v4[4]; // [esp+4h] [ebp-2Ch] BYREF
+  __int16 v5; // [esp+14h] [ebp-1Ch]
+  int v6; // [esp+20h] [ebp-10h]
+  _BYTE v7[4]; // [esp+28h] [ebp-8h] BYREF
+  _BYTE v8[4]; // [esp+2Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  *(_DWORD *)((char *)a1 + 81) = 0;
+  *(_DWORD *)((char *)a1 + 61) = 0;
+  *(_DWORD *)((char *)a1 + 65) = 0;
+  *(_DWORD *)((char *)a1 + 69) = 0;
+  *(_DWORD *)((char *)a1 + 73) = 0;
+  *(_DWORD *)((char *)a1 + 77) = 1;
+  sub_41DEBB(a1[3], (char *)a1 + 45);
+  if ( *(_DWORD *)(a1[3] + 21) - *(_DWORD *)(a1[3] + 13) > 0 && *(_DWORD *)(a1[3] + 25) - *(_DWORD *)(a1[3] + 17) > 0 )
+  {
+    v3 = a1[2];
+    if ( !*(_DWORD *)(v3 + 12) )
+    {
+      xerror::MakeString((xerror *)v8, aPrecondition_41, aGethandle_8, aCBc5IncludeOwl_8, 0x769u);
+      ++v6;
+      xmsg::xmsg((xmsg *)v7, (const string *)v8);
+      ++v6;
+      v5 = 12;
+      --v6;
+      string::~string((string *)v8);
+      v6 += 2;
+      v6 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v7, 0, sub_403BE0, 1u, 0, 0, 0, v4);
+    }
+    InvalidateRect(*(HWND *)(v3 + 12), 0, 0);
+    return 1;
+  }
+  else
+  {
+    (*(void (__cdecl **)(_DWORD *))(*a1 + 20))(a1);
+    return 0;
+  }
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 405
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_419F78(_DWORD *a1)
+{
+  int result; // eax
+  int v2; // ebx
+  _DWORD v3[4]; // [esp+4h] [ebp-2Ch] BYREF
+  __int16 v4; // [esp+14h] [ebp-1Ch]
+  int v5; // [esp+20h] [ebp-10h]
+  _BYTE v6[4]; // [esp+28h] [ebp-8h] BYREF
+  _BYTE v7[4]; // [esp+2Ch] [ebp-4h] BYREF
+
+  result = __InitExceptBlockLDTC();
+  if ( *(_DWORD *)((char *)a1 + 77) )
+  {
+    (*(void (__cdecl **)(_DWORD *))(*a1 + 16))(a1);
+    sub_41DEBB(a1[3], (char *)a1 + 29);
+    sub_419361((int)a1);
+    v2 = a1[2];
+    if ( !*(_DWORD *)(v2 + 12) )
+    {
+      xerror::MakeString((xerror *)v7, aPrecondition_42, aGethandle_9, aCBc5IncludeOwl_9, 0x769u);
+      ++v5;
+      xmsg::xmsg((xmsg *)v6, (const string *)v7);
+      ++v5;
+      v4 = 12;
+      --v5;
+      string::~string((string *)v7);
+      v5 += 2;
+      v5 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v6, 0, sub_403BE0, 1u, 0, 0, 0, v3);
+    }
+    return InvalidateRect(*(HWND *)(v2 + 12), 0, 0);
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 603
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_4266F0(TDialog *a1)
+{
+  int v1; // esi
+  int v2; // esi
+  struct tagPOINT Point; // [esp+8h] [ebp-3Ch] BYREF
+  _DWORD v5[4]; // [esp+10h] [ebp-34h] BYREF
+  __int16 v6; // [esp+20h] [ebp-24h]
+  int v7; // [esp+2Ch] [ebp-18h]
+  _BYTE v8[4]; // [esp+34h] [ebp-10h] BYREF
+  _BYTE v9[4]; // [esp+38h] [ebp-Ch] BYREF
+  _BYTE v10[4]; // [esp+3Ch] [ebp-8h] BYREF
+  _BYTE v11[4]; // [esp+40h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  TDialog::SetupWindow(a1);
+  if ( !*(_DWORD *)(*(_DWORD *)a1 + 20) )
+    goto LABEL_8;
+  v1 = *(_DWORD *)(*(_DWORD *)a1 + 20);
+  if ( !*(_DWORD *)(v1 + 12) )
+  {
+    xerror::MakeString((xerror *)v11, aPrecondition_67, aGethandle_20, aCBc5IncludeOwl_21, 0x6B4u);
+    ++v7;
+    xmsg::xmsg((xmsg *)v10, (const string *)v11);
+    ++v7;
+    v6 = 12;
+    --v7;
+    string::~string((string *)v11);
+    v7 += 2;
+    v7 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v10, 0, sub_403BE0, 1u, 0, 0, 0, v5);
+  }
+  if ( IsZoomed(*(HWND *)(v1 + 12)) )
+  {
+LABEL_8:
+    Point.x = (GetSystemMetrics(TUIMetric::CxScreen) - *(_DWORD *)(*(_DWORD *)a1 + 40)) / 2;
+    Point.y = (GetSystemMetrics(TUIMetric::CyScreen) - *(_DWORD *)(*(_DWORD *)a1 + 44)) / 2;
+  }
+  else
+  {
+    Point.x = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)a1 + 20) + 32)
+            + (*(_DWORD *)(*(_DWORD *)(*(_DWORD *)a1 + 20) + 40) - *(_DWORD *)(*(_DWORD *)a1 + 40)) / 2;
+    Point.y = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)a1 + 20) + 36)
+            + (*(_DWORD *)(*(_DWORD *)(*(_DWORD *)a1 + 20) + 44) - *(_DWORD *)(*(_DWORD *)a1 + 44)) / 2;
+    v2 = *(_DWORD *)(*(_DWORD *)a1 + 20);
+    if ( !*(_DWORD *)(v2 + 12) )
+    {
+      v6 = 24;
+      xerror::MakeString((xerror *)v9, aPrecondition_68, aGethandle_21, aCBc5IncludeOwl_22, 0x5C5u);
+      ++v7;
+      xmsg::xmsg((xmsg *)v8, (const string *)v9);
+      ++v7;
+      v6 = 36;
+      --v7;
+      string::~string((string *)v9);
+      v6 = 24;
+      v7 += 2;
+      v7 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v8, 0, sub_403BE0, 1u, 0, 0, 0, v5);
+    }
+    ClientToScreen(*(HWND *)(v2 + 12), &Point);
+  }
+  return TWindow::SetWindowPos(*(TWindow **)a1, 0, Point.x, Point.y, 0, 0, 5u);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 606
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+char __cdecl sub_426D33(int a1, int a2)
+{
+  TFont *v3; // eax
+  int v4; // esi
+  HDC v5; // eax
+  const TBrush *v6; // eax
+  const void *v7; // eax
+  struct tagPOINT v8; // [esp+Ch] [ebp-58h] BYREF
+  int v9; // [esp+14h] [ebp-50h]
+  int v10; // [esp+18h] [ebp-4Ch]
+  _BYTE v11[4]; // [esp+1Ch] [ebp-48h] BYREF
+  struct tagPOINT Point; // [esp+20h] [ebp-44h] BYREF
+  _DWORD v13[4]; // [esp+28h] [ebp-3Ch] BYREF
+  __int16 v14; // [esp+38h] [ebp-2Ch]
+  int v15; // [esp+44h] [ebp-20h]
+  _BYTE v16[8]; // [esp+4Ch] [ebp-18h] BYREF
+  _BYTE v17[8]; // [esp+54h] [ebp-10h] BYREF
+  _BYTE v18[4]; // [esp+5Ch] [ebp-8h] BYREF
+  _BYTE v19[4]; // [esp+60h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !(*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 8) + 124))(a1) || !*(_DWORD *)(a1 + 134) )
+    return 0;
+  if ( !**(_BYTE **)(*(_DWORD *)a2 + 2) )
+    return 0;
+  GetCursorPos(&Point);
+  if ( !*(_DWORD *)(a1 + 12) )
+  {
+    xerror::MakeString((xerror *)v19, aPrecondition_71, aGethandle_22, aCBc5IncludeOwl_23, 0x593u);
+    ++v15;
+    xmsg::xmsg((xmsg *)v18, (const string *)v19);
+    ++v15;
+    v14 = 12;
+    --v15;
+    string::~string((string *)v19);
+    v15 += 2;
+    v15 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v18, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+  }
+  ScreenToClient(*(HWND *)(a1 + 12), &Point);
+  v8 = Point;
+  v9 = 0;
+  v10 = 0;
+  v14 = 24;
+  v3 = TFont::TFont((TFont *)v17, aMsSansSerif, -9, 0, 0, 0, 400, 0, 0, 0, 0, 1u, 0, 0, 0);
+  v15 += 2;
+  (*(void (__cdecl **)(_DWORD, TFont *))(*(_DWORD *)(*(_DWORD *)(a1 + 134) + 5) + 20))(*(_DWORD *)(a1 + 134), v3);
+  v15 -= 2;
+  v15 += 2;
+  --v15;
+  TGdiObject::~TGdiObject((TGdiObject *)v17);
+  (*(void (__cdecl **)(_BYTE *, _DWORD, TColor *))(*(_DWORD *)(*(_DWORD *)(a1 + 134) + 5) + 36))(
+    v11,
+    *(_DWORD *)(a1 + 134),
+    TColor::Black);
+  v4 = *(_DWORD *)(a1 + 134);
+  if ( (*(int (__cdecl **)(int))(*(_DWORD *)(v4 + 5) + 88))(v4) != *(_DWORD *)v4 )
+    SetBkMode(*(HDC *)v4, 1);
+  v5 = (HDC)(*(int (__cdecl **)(int))(*(_DWORD *)(v4 + 5) + 88))(v4);
+  SetBkMode(v5, 1);
+  (*(void (__cdecl **)(_DWORD, _DWORD, int, struct tagPOINT *, int))(*(_DWORD *)(*(_DWORD *)(a1 + 134) + 5) + 80))(
+    *(_DWORD *)(a1 + 134),
+    *(_DWORD *)(*(_DWORD *)a2 + 2),
+    -1,
+    &v8,
+    3328);
+  TRect::Inflate((TRect *)&v8, 4, 2);
+  if ( Point.y + v10 - v8.y > *(_DWORD *)(a1 + 276) )
+    Point.y = *(_DWORD *)(a1 + 276) - (v10 - v8.y) - 1;
+  if ( Point.x + v9 - v8.x > *(_DWORD *)(a1 + 272) )
+    Point.x = *(_DWORD *)(a1 + 272) - (v9 - v8.x) - 1;
+  TRect::Offset((TRect *)&v8, Point.x - v8.x, Point.y - v8.y);
+  v14 = 36;
+  v6 = TBrush::TBrush((TBrush *)v16, TColor::LtGray);
+  v15 += 2;
+  TDC::SelectObject(*(TDC **)(a1 + 134), v6);
+  v15 -= 2;
+  TBrush::~TBrush((TBrush *)v16);
+  PatBlt(**(HDC **)(a1 + 134), v8.x, v8.y, v9 - v8.x, v10 - v8.y, 0xF00021u);
+  TRect::Inflate((TRect *)&v8, -4, -2);
+  (*(void (__cdecl **)(_DWORD, _DWORD, int, struct tagPOINT *, int))(*(_DWORD *)(*(_DWORD *)(a1 + 134) + 5) + 80))(
+    *(_DWORD *)(a1 + 134),
+    *(_DWORD *)(*(_DWORD *)a2 + 2),
+    -1,
+    &v8,
+    2304);
+  (*(void (__cdecl **)(_DWORD))(*(_DWORD *)(*(_DWORD *)(a1 + 134) + 5) + 28))(*(_DWORD *)(a1 + 134));
+  v7 = (const void *)TRect::Inflate((TRect *)&v8, 4, 2);
+  sub_4332A5((_DWORD *)a1, v7);
+  return 1;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 612
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+BOOL __cdecl sub_427D34(int a1, int a2, int a3, const void *a4)
+{
+  BOOL v5; // eax
+  BOOL v6; // [esp-4h] [ebp-54h]
+  RECT Rect; // [esp+Ch] [ebp-44h] BYREF
+  int v8[4]; // [esp+20h] [ebp-30h] BYREF
+  __int16 v9; // [esp+30h] [ebp-20h]
+  int v10; // [esp+3Ch] [ebp-14h]
+  char v11[4]; // [esp+44h] [ebp-Ch] BYREF
+  char v12[4]; // [esp+48h] [ebp-8h] BYREF
+  int v13; // [esp+4Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !(*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 8) + 124))(a1) )
+    return 0;
+  v9 = 20;
+  sub_40411C((string *)&v13, a2, *(LPCSTR *)(dword_44EC30 + 2));
+  ++v10;
+  v9 = 8;
+  if ( (unsigned __int8)sub_41F6AE(a1 + 182, (int)&v13, a3) )
+  {
+    qmemcpy((void *)((*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 8) + 124))(a1) + 64), a4, 0x10u);
+    qmemcpy(&Rect, (const void *)(a1 + 328), sizeof(Rect));
+    sub_4335A4(a1, (_DWORD *)(a1 + 328));
+    TRect::operator|=(&Rect, a1 + 328);
+    TRect::operator&=(&Rect, a1 + 264);
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      v9 = 32;
+      xerror::MakeString((xerror *)v12, aPrecondition_73, aGethandle_23, aCBc5IncludeOwl_24, 0x773u);
+      ++v10;
+      xmsg::xmsg((xmsg *)v11, (const string *)v12);
+      ++v10;
+      v9 = 44;
+      --v10;
+      string::~string((string *)v12);
+      v9 = 32;
+      v10 += 2;
+      v10 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v11, 0, sub_403BE0, 1u, 0, 0, 0, v8);
+    }
+    v5 = InvalidateRect(*(HWND *)(a1 + 12), &Rect, 0);
+    LOBYTE(v5) = 1;
+    v6 = v5;
+    --v10;
+    string::~string((string *)&v13);
+    return v6;
+  }
+  else
+  {
+    sub_404F9C(0x67u, *(_DWORD *)(v13 + 2));
+    string::~string((string *)&v13);
+    return 0;
+  }
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 4390B4: using guessed type int __cdecl TRect::operator&=(_DWORD, _DWORD);
+// 43911A: using guessed type int __cdecl TRect::operator|=(_DWORD, _DWORD);
+// 44EC30: using guessed type int dword_44EC30;
+
+
+
+//-------------------------------------------------------------------------
+// Function 617
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_428373(int a1, string *a2, int a3, int a4, const void *a5, int a6)
+{
+  void *v7; // edx
+  TBitmap *v8; // ecx
+  TBitmap *v9; // eax
+  void *v10; // eax
+  TBitmap *v11; // ecx
+  TBitmap *v12; // eax
+  int v13; // eax
+  const RECT *v14; // ebx
+  _DWORD *v15; // ebx
+  _DWORD *v16; // esi
+  _DWORD *v17; // ecx
+  _DWORD *v18; // ebx
+  int v19; // eax
+  int v20; // eax
+  TBitmap *v21; // esi
+  TBitmap *v22; // edi
+  _DWORD *v23; // eax
+  BOOL v24; // eax
+  unsigned int v25; // [esp+0h] [ebp-ACh] BYREF
+  unsigned int v26; // [esp+4h] [ebp-A8h]
+  __int64 v27; // [esp+8h] [ebp-A4h]
+  RECT Rect; // [esp+1Ch] [ebp-90h] BYREF
+  string *v29; // [esp+2Ch] [ebp-80h]
+  TBitmap *v30; // [esp+30h] [ebp-7Ch]
+  TBitmap *v31; // [esp+34h] [ebp-78h]
+  _DWORD v32[4]; // [esp+38h] [ebp-74h] BYREF
+  __int16 v33; // [esp+48h] [ebp-64h]
+  int v34; // [esp+54h] [ebp-58h]
+  void (__cdecl ***v35)(_DWORD, int); // [esp+5Ch] [ebp-50h]
+  char v36[4]; // [esp+60h] [ebp-4Ch] BYREF
+  char v37[4]; // [esp+64h] [ebp-48h] BYREF
+  _DWORD *v38; // [esp+68h] [ebp-44h]
+  char v39[4]; // [esp+6Ch] [ebp-40h] BYREF
+  char v40[4]; // [esp+70h] [ebp-3Ch] BYREF
+  _DWORD *v41; // [esp+74h] [ebp-38h]
+  char v42[4]; // [esp+78h] [ebp-34h] BYREF
+  char v43[4]; // [esp+7Ch] [ebp-30h] BYREF
+  TBitmap *v44; // [esp+84h] [ebp-28h]
+  TBitmap *v45; // [esp+88h] [ebp-24h]
+  char v46[4]; // [esp+8Ch] [ebp-20h] BYREF
+  TBitmap *v47; // [esp+94h] [ebp-18h]
+  TBitmap *v48; // [esp+98h] [ebp-14h]
+  char v49[4]; // [esp+9Ch] [ebp-10h] BYREF
+  int v50[3]; // [esp+A0h] [ebp-Ch] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !(*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 8) + 124))(a1) )
+    return 0;
+  if ( !**(_BYTE **)(*(_DWORD *)a2 + 2) )
+    return 0;
+  string::string((string *)v50);
+  ++v34;
+  v33 = 32;
+  if ( (byte_44EC4C & 0x10) != 0 )
+    v7 = &unk_44EC28;
+  else
+    v7 = &unk_44EC24;
+  sub_40411C((string *)v49, a3, *(LPCSTR *)(*(_DWORD *)v7 + 2));
+  string::assign((string *)v50, (const string *)v49, 0, 0xFFFFFFFF);
+  string::~string((string *)v49);
+  v31 = 0;
+  v33 = 20;
+  if ( sub_40453C((int)v50) )
+  {
+    v33 = 44;
+    if ( dword_44EC54 )
+    {
+      v48 = (TBitmap *)operator new(0xDu);
+      if ( v48 )
+      {
+        sub_41D5D3(v48, (int)v50, dword_44EC54);
+        v33 = 56;
+        v8 = v48;
+      }
+      else
+      {
+        v8 = 0;
+      }
+      v31 = v8;
+    }
+    else
+    {
+      v47 = (TBitmap *)operator new(0xDu);
+      if ( v47 )
+      {
+        sub_41D5D3(v47, (int)v50, dword_44EC50);
+        v33 = 80;
+        v9 = v47;
+      }
+      else
+      {
+        v9 = 0;
+      }
+      v31 = v9;
+    }
+    v33 = 20;
+  }
+  if ( v31 )
+  {
+    v33 = 128;
+    if ( (byte_44EC4C & 0x10) != 0 )
+      v10 = &unk_44EC28;
+    else
+      v10 = &unk_44EC24;
+    sub_40411C((string *)v46, a6, *(LPCSTR *)(*(_DWORD *)v10 + 2));
+    string::assign((string *)v50, (const string *)v46, 0, 0xFFFFFFFF);
+    string::~string((string *)v46);
+    v30 = 0;
+    v33 = 20;
+    if ( sub_40453C((int)v50) )
+    {
+      v33 = 140;
+      if ( dword_44EC54 )
+      {
+        v45 = (TBitmap *)operator new(0xDu);
+        if ( v45 )
+        {
+          sub_41D5D3(v45, (int)v50, dword_44EC54);
+          v33 = 152;
+          v11 = v45;
+        }
+        else
+        {
+          v11 = 0;
+        }
+        v30 = v11;
+      }
+      else
+      {
+        v44 = (TBitmap *)operator new(0xDu);
+        if ( v44 )
+        {
+          sub_41D5D3(v44, (int)v50, dword_44EC50);
+          v33 = 176;
+          v12 = v44;
+        }
+        else
+        {
+          v12 = 0;
+        }
+        v30 = v12;
+      }
+      v33 = 20;
+    }
+    v13 = sub_41E206((int *)(a1 + 380), a2, 0);
+    v33 = 20;
+    if ( v13 )
+    {
+      v14 = (const RECT *)(v13 + 4);
+      if ( !*(_DWORD *)(a1 + 12) )
+      {
+        v33 = 224;
+        xerror::MakeString((xerror *)v43, aPrecondition_75, aGethandle_24, aCBc5IncludeOwl_26, 0x773u);
+        ++v34;
+        xmsg::xmsg((xmsg *)v42, (const string *)v43);
+        ++v34;
+        v33 = 236;
+        --v34;
+        string::~string((string *)v43);
+        v33 = 224;
+        v34 += 2;
+        v34 += 3;
+        _ThrowExceptionLDTC(stru_403B88, v42, 0, sub_403BE0, 1u, 0, 0, 0, v32);
+      }
+      InvalidateRect(*(HWND *)(a1 + 12), v14, 0);
+    }
+    v41 = (_DWORD *)operator new(0x30u);
+    if ( v41 )
+    {
+      v33 = 260;
+      v29 = a2;
+      *v41 = &off_444A04;
+      v15 = v41 + 1;
+      v41[1] = 0;
+      v15[1] = 0;
+      v15[2] = 0;
+      v15[3] = 0;
+      string::string((string *)(v41 + 5), v29);
+      ++v34;
+      v16 = v41 + 6;
+      v41[6] = 0;
+      v16[1] = 0;
+      v16[2] = 0;
+      v16[3] = 0;
+      v41[10] = a4;
+      v34 += 2;
+      *v41 = &off_449510;
+      v41[11] = 0;
+      v33 = 248;
+      v17 = v41;
+    }
+    else
+    {
+      v17 = 0;
+    }
+    v18 = v17;
+    v33 = 20;
+    qmemcpy(&Rect, a5, sizeof(Rect));
+    if ( !Rect.right )
+    {
+      v19 = (*(int (__cdecl **)(TBitmap *))(*(_DWORD *)((char *)v31 + 5) + 4))(v31);
+      Rect.right = Rect.left + v19;
+    }
+    if ( !Rect.bottom )
+    {
+      v20 = (*(int (__cdecl **)(TBitmap *))(*(_DWORD *)((char *)v31 + 5) + 8))(v31);
+      Rect.bottom = Rect.top + v20;
+    }
+    qmemcpy(v18 + 6, &Rect, 0x10u);
+    *(double *)&v27 = sub_43353D(a1);
+    sub_433569(&v25, a1);
+    qmemcpy(&Rect, (const void *)(*(int (__cdecl **)(_DWORD *))(*v18 + 16))(v18), sizeof(Rect));
+    v38 = (_DWORD *)operator new(0x10u);
+    if ( v38 )
+    {
+      v33 = 284;
+      v21 = v30;
+      v22 = v31;
+      *v38 = &off_4449DC;
+      v38[1] = v22;
+      v38[2] = v21;
+      v38[3] = 3;
+      if ( !v38[1] )
+      {
+        HIDWORD(v27) = v32;
+        LODWORD(v27) = 0;
+        v26 = 0;
+        v25 = 0;
+        xerror::MakeString((xerror *)v40, aPrecondition_76, aImg_0, aGdiobjecH_0, 0x72u);
+        ++v34;
+        xmsg::xmsg((xmsg *)v39, (const string *)v40);
+        ++v34;
+        v33 = 296;
+        --v34;
+        string::~string((string *)v40);
+        v33 = 284;
+        v34 += 2;
+        v34 += 3;
+        _ThrowExceptionLDTC(stru_403B88, v39, 0, sub_403BE0, 1u, v25, v26, (unsigned __int8 *)v27, (void *)HIDWORD(v27));
+      }
+      v33 = 272;
+      v23 = v38;
+    }
+    else
+    {
+      v23 = 0;
+    }
+    v18[11] = v23;
+    if ( sub_41E3BD((int *)(a1 + 380), (int)v18) )
+    {
+      sub_433236((_DWORD *)a1, &Rect);
+      if ( !*(_DWORD *)(a1 + 12) )
+      {
+        HIDWORD(v27) = v32;
+        LODWORD(v27) = 0;
+        v26 = 0;
+        v25 = 0;
+        v33 = 308;
+        xerror::MakeString((xerror *)v37, aPrecondition_77, aGethandle_25, aCBc5IncludeOwl_27, 0x773u);
+        ++v34;
+        xmsg::xmsg((xmsg *)v36, (const string *)v37);
+        ++v34;
+        v33 = 320;
+        --v34;
+        string::~string((string *)v37);
+        v33 = 308;
+        v34 += 2;
+        v34 += 3;
+        _ThrowExceptionLDTC(stru_403B88, v36, 0, sub_403BE0, 1u, v25, v26, (unsigned __int8 *)v27, (void *)HIDWORD(v27));
+      }
+      v24 = InvalidateRect(*(HWND *)(a1 + 12), &Rect, 0);
+      LOBYTE(v24) = 1;
+      HIDWORD(v27) = v24;
+      --v34;
+      LODWORD(v27) = 2;
+      string::~string((string *)v50);
+      return HIDWORD(v27);
+    }
+    else
+    {
+      v35 = (void (__cdecl ***)(_DWORD, int))v18;
+      if ( v18 )
+      {
+        v33 = 344;
+        (**v35)(v35, 3);
+        v33 = 332;
+      }
+      --v34;
+      v27 = 2;
+      string::~string((string *)v50);
+      return HIDWORD(v27);
+    }
+  }
+  else
+  {
+    --v34;
+    string::~string((string *)v50);
+    return 0;
+  }
+}
+// 428690: conditional instruction was optimized away because %var_78.4!=0
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 4449DC: using guessed type int (__cdecl *off_4449DC)(void *, char);
+// 444A04: using guessed type int (__cdecl *off_444A04)(void *, char);
+// 449510: using guessed type int (__cdecl *off_449510)(void *, char);
+// 44EC4C: using guessed type char byte_44EC4C;
+
+
+
+//-------------------------------------------------------------------------
+// Function 618
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+char __cdecl sub_428AAD(int a1, string *a2, string *a3, __int16 a4, int a5, const void *a6)
+{
+  int v7; // eax
+  const RECT *v8; // esi
+  _DWORD *v9; // esi
+  _DWORD *v10; // edi
+  _WORD *v11; // edx
+  _WORD *v12; // esi
+  unsigned int v13; // [esp+0h] [ebp-78h] BYREF
+  unsigned int v14; // [esp+4h] [ebp-74h]
+  double v15; // [esp+8h] [ebp-70h]
+  RECT Rect; // [esp+1Ch] [ebp-5Ch] BYREF
+  int v17; // [esp+2Ch] [ebp-4Ch]
+  TColor *v18; // [esp+30h] [ebp-48h]
+  string *v19; // [esp+34h] [ebp-44h]
+  int v20; // [esp+38h] [ebp-40h]
+  _DWORD v21[4]; // [esp+3Ch] [ebp-3Ch] BYREF
+  __int16 v22; // [esp+4Ch] [ebp-2Ch]
+  int v23; // [esp+58h] [ebp-20h]
+  void (__cdecl ***v24)(_DWORD, int); // [esp+60h] [ebp-18h]
+  _BYTE v25[4]; // [esp+64h] [ebp-14h] BYREF
+  _BYTE v26[4]; // [esp+68h] [ebp-10h] BYREF
+  int v27; // [esp+6Ch] [ebp-Ch]
+  _BYTE v28[4]; // [esp+70h] [ebp-8h] BYREF
+  _BYTE v29[4]; // [esp+74h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !(*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 8) + 124))(a1) )
+    return 0;
+  if ( !**(_BYTE **)(*(_DWORD *)a2 + 2) )
+    return 0;
+  v7 = sub_41E206((int *)(a1 + 380), a2, 0);
+  if ( v7 )
+  {
+    v8 = (const RECT *)(v7 + 4);
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      xerror::MakeString((xerror *)v29, aPrecondition_78, aGethandle_26, aCBc5IncludeOwl_28, 0x773u);
+      ++v23;
+      xmsg::xmsg((xmsg *)v28, (const string *)v29);
+      ++v23;
+      v22 = 12;
+      --v23;
+      string::~string((string *)v29);
+      v23 += 2;
+      v23 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v28, 0, sub_403BE0, 1u, 0, 0, 0, v21);
+    }
+    InvalidateRect(*(HWND *)(a1 + 12), v8, 0);
+  }
+  v27 = operator new(0x3Au);
+  if ( v27 )
+  {
+    v22 = 36;
+    v20 = a5;
+    v19 = a2;
+    *(_DWORD *)v27 = &off_444A04;
+    v9 = (_DWORD *)(v27 + 4);
+    *(_DWORD *)(v27 + 4) = 0;
+    v9[1] = 0;
+    v9[2] = 0;
+    v9[3] = 0;
+    string::string((string *)(v27 + 20), v19);
+    ++v23;
+    v10 = (_DWORD *)(v27 + 24);
+    *(_DWORD *)(v27 + 24) = 0;
+    v10[1] = 0;
+    v10[2] = 0;
+    v10[3] = 0;
+    *(_DWORD *)(v27 + 40) = v20;
+    v23 += 2;
+    *(_DWORD *)v27 = &off_4494F0;
+    *(_DWORD *)(v27 + 44) = 0;
+    v18 = TColor::Black;
+    v17 = v27 + 48;
+    *(_DWORD *)(v27 + 48) = TColor::Black;
+    string::string((string *)(v27 + 52), &byte_449169);
+    ++v23;
+    *(_WORD *)(v27 + 56) = 0;
+    v22 = 24;
+    v11 = (_WORD *)v27;
+  }
+  else
+  {
+    v11 = 0;
+  }
+  v12 = v11;
+  string::assign((string *)(v11 + 26), a3, 0, 0xFFFFFFFF);
+  v12[28] = a4;
+  qmemcpy(v12 + 12, a6, 0x10u);
+  sub_41DFA5((int)v12, (const TFont *)dword_44EC64, dword_44EC68);
+  v15 = sub_43353D(a1);
+  sub_433569(&v13, a1);
+  qmemcpy(&Rect, (const void *)(*(int (__cdecl **)(_WORD *))(*(_DWORD *)v12 + 16))(v12), sizeof(Rect));
+  if ( sub_41E3BD((int *)(a1 + 380), (int)v12) )
+  {
+    sub_433236((_DWORD *)a1, &Rect);
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      HIDWORD(v15) = v21;
+      LODWORD(v15) = 0;
+      v14 = 0;
+      v13 = 0;
+      v22 = 48;
+      xerror::MakeString((xerror *)v26, aPrecondition_79, aGethandle_27, aCBc5IncludeOwl_29, 0x773u);
+      ++v23;
+      xmsg::xmsg((xmsg *)v25, (const string *)v26);
+      ++v23;
+      v22 = 60;
+      --v23;
+      string::~string((string *)v26);
+      v22 = 48;
+      v23 += 2;
+      v23 += 3;
+      _ThrowExceptionLDTC(
+        stru_403B88,
+        v25,
+        0,
+        sub_403BE0,
+        1u,
+        v13,
+        v14,
+        (unsigned __int8 *)LODWORD(v15),
+        (void *)HIDWORD(v15));
+    }
+    InvalidateRect(*(HWND *)(a1 + 12), &Rect, 0);
+    return 1;
+  }
+  else
+  {
+    v24 = (void (__cdecl ***)(_DWORD, int))v12;
+    if ( v12 )
+    {
+      v22 = 84;
+      (**v24)(v24, 3);
+      v22 = 72;
+    }
+    return 0;
+  }
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 444A04: using guessed type int (__cdecl *off_444A04)(void *, char);
+// 4494F0: using guessed type int (__cdecl *off_4494F0)(void *, char);
+// 44EC64: using guessed type int dword_44EC64;
+// 44EC68: using guessed type int dword_44EC68;
+
+
+
+//-------------------------------------------------------------------------
+// Function 619
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+char __cdecl sub_428E06(int a1, string *a2, char a3)
+{
+  _DWORD *v4; // esi
+  const void *v5; // eax
+  unsigned int v6; // [esp+0h] [ebp-58h] BYREF
+  unsigned int v7; // [esp+4h] [ebp-54h]
+  double v8; // [esp+8h] [ebp-50h]
+  RECT Rect; // [esp+1Ch] [ebp-3Ch] BYREF
+  int v10; // [esp+2Ch] [ebp-2Ch] BYREF
+  __int16 v11; // [esp+3Ch] [ebp-1Ch]
+  int v12; // [esp+48h] [ebp-10h]
+  _BYTE v13[4]; // [esp+50h] [ebp-8h] BYREF
+  _BYTE v14[4]; // [esp+54h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !(*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 8) + 124))(a1) )
+    return 0;
+  v4 = (_DWORD *)sub_41E206((int *)(a1 + 380), a2, 0);
+  if ( !v4 )
+    return 0;
+  v8 = sub_43353D(a1);
+  sub_433569(&v6, a1);
+  v5 = (const void *)(*(int (__cdecl **)(_DWORD *))(*v4 + 16))(v4);
+  HIDWORD(v8) = v4;
+  qmemcpy(&Rect, v5, sizeof(Rect));
+  if ( a3 )
+  {
+    sub_433236((_DWORD *)a1, &Rect);
+    v4[10] &= ~1u;
+  }
+  else
+  {
+    *(_DWORD *)(HIDWORD(v8) + 40) |= 1u;
+  }
+  if ( !*(_DWORD *)(a1 + 12) )
+  {
+    HIDWORD(v8) = &v10;
+    LODWORD(v8) = 0;
+    v7 = 0;
+    v6 = 0;
+    xerror::MakeString((xerror *)v14, aPrecondition_80, aGethandle_28, aCBc5IncludeOwl_30, 0x773u);
+    ++v12;
+    xmsg::xmsg((xmsg *)v13, (const string *)v14);
+    ++v12;
+    v11 = 12;
+    --v12;
+    string::~string((string *)v14);
+    v12 += 2;
+    v12 += 3;
+    _ThrowExceptionLDTC(
+      stru_403B88,
+      v13,
+      0,
+      sub_403BE0,
+      1u,
+      v6,
+      v7,
+      (unsigned __int8 *)LODWORD(v8),
+      (void *)HIDWORD(v8));
+  }
+  InvalidateRect(*(HWND *)(a1 + 12), &Rect, 0);
+  return 1;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 620
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+char __cdecl sub_428F57(int a1, string *a2)
+{
+  int v3; // eax
+  RECT Rect; // [esp+Ch] [ebp-40h] BYREF
+  int v5; // [esp+1Ch] [ebp-30h] BYREF
+  _DWORD v6[4]; // [esp+20h] [ebp-2Ch] BYREF
+  __int16 v7; // [esp+30h] [ebp-1Ch]
+  int v8; // [esp+3Ch] [ebp-10h]
+  _BYTE v9[4]; // [esp+44h] [ebp-8h] BYREF
+  _BYTE v10[4]; // [esp+48h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !(*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 8) + 124))(a1) )
+    return 0;
+  v3 = sub_41E206((int *)(a1 + 380), a2, &v5);
+  if ( !v3 )
+    return 0;
+  qmemcpy(&Rect, (const void *)(v3 + 4), sizeof(Rect));
+  sub_4359A0(a1 + 384, v5 - *(_DWORD *)(a1 + 380), 1);
+  if ( !*(_DWORD *)(a1 + 12) )
+  {
+    xerror::MakeString((xerror *)v10, aPrecondition_81, aGethandle_29, aCBc5IncludeOwl_31, 0x773u);
+    ++v8;
+    xmsg::xmsg((xmsg *)v9, (const string *)v10);
+    ++v8;
+    v7 = 12;
+    --v8;
+    string::~string((string *)v10);
+    v8 += 2;
+    v8 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v9, 0, sub_403BE0, 1u, 0, 0, 0, v6);
+  }
+  InvalidateRect(*(HWND *)(a1 + 12), &Rect, 0);
+  return 1;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 621
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_42908F(TWindow *a1, int a2, int arglist)
+{
+  int v4; // eax
+  void *v5; // eax
+  int *v6; // edx
+  int v7; // ebx
+  _BOOL1 v9; // cl
+  int v10; // eax
+  int v11; // [esp+0h] [ebp-70h]
+  int v12; // [esp+0h] [ebp-70h]
+  _BYTE v13[16]; // [esp+14h] [ebp-5Ch] BYREF
+  __int16 v14; // [esp+24h] [ebp-4Ch]
+  int v15; // [esp+30h] [ebp-40h]
+  _BYTE v16[4]; // [esp+38h] [ebp-38h] BYREF
+  _BYTE v17[4]; // [esp+3Ch] [ebp-34h] BYREF
+  _BYTE v18[4]; // [esp+40h] [ebp-30h] BYREF
+  _BYTE v19[4]; // [esp+44h] [ebp-2Ch] BYREF
+  char v20[5]; // [esp+48h] [ebp-28h] BYREF
+  int (__cdecl **v21)(int); // [esp+4Dh] [ebp-23h]
+  int v22; // [esp+51h] [ebp-1Fh]
+  int v23; // [esp+55h] [ebp-1Bh]
+  int v24; // [esp+59h] [ebp-17h]
+  int v25; // [esp+5Dh] [ebp-13h]
+  int v26; // [esp+61h] [ebp-Fh]
+  int (__cdecl **v27)(int, int); // [esp+65h] [ebp-Bh]
+  int v28; // [esp+6Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  v14 = 20;
+  sub_40411C((string *)&v28, a2, *(LPCSTR *)(dword_44EC14 + 2));
+  ++v15;
+  v14 = 8;
+  if ( sub_40453C((int)&v28) )
+  {
+    if ( string::compare((string *)&v28, (const string *)&unk_44EC34) )
+    {
+      TWindow::SetCursor(a1, dword_446AB8, 98);
+      (*(void (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 132))(a1);
+      (*(void (__cdecl **)(TWindow *, _DWORD))(*((_DWORD *)a1 + 2) + 128))(a1, 0);
+      if ( !*((_DWORD *)a1 + 3) )
+      {
+        v14 = 32;
+        xerror::MakeString((xerror *)v19, aPrecondition_82, aGethandle_30, aCBc5IncludeOwl_32, 0x769u);
+        ++v15;
+        xmsg::xmsg((xmsg *)v18, (const string *)v19);
+        ++v15;
+        v14 = 44;
+        --v15;
+        string::~string((string *)v19);
+        v14 = 32;
+        v15 += 2;
+        v15 += 3;
+        _ThrowExceptionLDTC(stru_403B88, v18, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+      }
+      InvalidateRect(*((HWND *)a1 + 3), 0, 1);
+      TMsgThread::PumpWaitingMessages((TMsgThread *)(*((_DWORD *)a1 + 26) + 25));
+      v14 = 56;
+      *(_DWORD *)v20 = 0;
+      v21 = off_43B500;
+      v5 = (void *)operator new[](4u);
+      v22 = _vector_new_ldtc_(v5, 4u, 1u, 1u, sub_42A32D, 0, 0);
+      v23 = 1;
+      ++v15;
+      v15 += 2;
+      v21 = off_43B538;
+      v24 = 0;
+      v25 = 1;
+      v15 += 3;
+      v15 += 4;
+      v26 = 2;
+      v15 += 5;
+      v15 += 6;
+      v15 += 7;
+      v27 = &off_43B4EC;
+      off_43B4EC((int)v20, (int)dword_44ECCE);
+      v15 += 8;
+      v14 = 8;
+      sub_4253C1((int)byte_44EC10, *(char **)(v28 + 2), 0);
+      TWindow::SetCursor(a1, dword_44ECF1, 99);
+      if ( (*(unsigned __int8 (__cdecl **)(int *))(dword_44EC9D + 4))(&dword_44EC70) )
+      {
+        sub_406113(dword_44ECCE, (int)v20);
+        if ( arglist >= 1 && arglist <= (*(int (__cdecl **)(void *))(dword_44EC75 + 4))(&unk_44EC74) )
+          *(_DWORD *)::arglist = arglist;
+        TWindow::SetCaption(a1, *(const char **)(dword_44ECA1 + 2));
+        v9 = (*(unsigned __int8 (__cdecl **)(int *))(dword_44ECB9 + 4))(&dword_44ECB9) && byte_44ECCD;
+        TWindow::HandleMessage(a1, dword_446A9C, v9, 0);
+        v10 = sub_4357CF(a1);
+        LOBYTE(v10) = 1;
+        v12 = v10;
+        v15 -= 8;
+        sub_405A63(v20, 2);
+        --v15;
+        string::~string((string *)&v28);
+        return v12;
+      }
+      else
+      {
+        sub_404ED9(0x6Au);
+        v6 = *(int **)(*((_DWORD *)a1 + 26) + 102);
+        v7 = *v6;
+        if ( !*(_DWORD *)(*v6 + 12) )
+        {
+          v14 = 68;
+          xerror::MakeString((xerror *)v17, aPrecondition_83, aGethandle_31, aCBc5IncludeOwl_33, 0x53Cu);
+          ++v15;
+          xmsg::xmsg((xmsg *)v16, (const string *)v17);
+          ++v15;
+          v14 = 80;
+          --v15;
+          string::~string((string *)v17);
+          v14 = 68;
+          v15 += 2;
+          v15 += 3;
+          _ThrowExceptionLDTC(stru_403B88, v16, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+        }
+        PostMessageA(*(HWND *)(v7 + 12), 0x12u, 0, 0);
+        v15 -= 8;
+        sub_405A63(v20, 2);
+        --v15;
+        string::~string((string *)&v28);
+        return 0;
+      }
+    }
+    else
+    {
+      sub_4268F8(a1, arglist, 0, 0);
+      LOBYTE(v4) = 1;
+      v11 = v4;
+      --v15;
+      string::~string((string *)&v28);
+      return v11;
+    }
+  }
+  else
+  {
+    sub_404F9C(0x73u, *(_DWORD *)(v28 + 2));
+    --v15;
+    string::~string((string *)&v28);
+    return 0;
+  }
+}
+// 429137: variable 'v4' is possibly undefined
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 439468: using guessed type int __cdecl TWindow::SetCursor(_DWORD, _DWORD, _DWORD);
+// 43B4EC: using guessed type int (__cdecl *off_43B4EC)(int, int);
+// 43B500: using guessed type int (__cdecl *off_43B500[2])(int);
+// 43B538: using guessed type int (__cdecl *off_43B538[3])(int);
+// 446AB8: using guessed type int dword_446AB8;
+// 44EC70: using guessed type int dword_44EC70;
+// 44EC75: using guessed type int dword_44EC75;
+// 44EC9D: using guessed type int dword_44EC9D;
+// 44ECA1: using guessed type int dword_44ECA1;
+// 44ECB9: using guessed type int dword_44ECB9;
+// 44ECCD: using guessed type char byte_44ECCD;
+// 44ECCE: using guessed type int dword_44ECCE[8];
+// 44ECF1: using guessed type int dword_44ECF1;
+
+
+
+//-------------------------------------------------------------------------
+// Function 691
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_42D662(int a1)
+{
+  int result; // eax
+  const RECT *v2; // esi
+  int v3; // ebx
+  _DWORD v4[4]; // [esp+8h] [ebp-2Ch] BYREF
+  __int16 v5; // [esp+18h] [ebp-1Ch]
+  int v6; // [esp+24h] [ebp-10h]
+  _BYTE v7[4]; // [esp+2Ch] [ebp-8h] BYREF
+  _BYTE v8[4]; // [esp+30h] [ebp-4h] BYREF
+
+  result = __InitExceptBlockLDTC();
+  if ( *(_DWORD *)(a1 + 4) && *(_DWORD *)(a1 + 12) )
+  {
+    v2 = (const RECT *)(*(_DWORD *)(a1 + 12) + 13);
+    v3 = *(_DWORD *)(a1 + 4);
+    if ( !*(_DWORD *)(v3 + 12) )
+    {
+      xerror::MakeString((xerror *)v8, aPrecondition_86, aGethandle_32, aCBc5IncludeOwl_35, 0x773u);
+      ++v6;
+      xmsg::xmsg((xmsg *)v7, (const string *)v8);
+      ++v6;
+      v5 = 12;
+      --v6;
+      string::~string((string *)v8);
+      v6 += 2;
+      v6 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v7, 0, sub_403BE0, 1u, 0, 0, 0, v4);
+    }
+    return InvalidateRect(*(HWND *)(v3 + 12), v2, 0);
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 702
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_42E49E(int a1)
+{
+  int result; // eax
+  _DWORD v2[4]; // [esp+4h] [ebp-34h] BYREF
+  __int16 v3; // [esp+14h] [ebp-24h]
+  int v4; // [esp+20h] [ebp-18h]
+  _BYTE v5[4]; // [esp+28h] [ebp-10h] BYREF
+  _BYTE v6[4]; // [esp+2Ch] [ebp-Ch] BYREF
+  _BYTE v7[4]; // [esp+30h] [ebp-8h] BYREF
+  _BYTE v8[4]; // [esp+34h] [ebp-4h] BYREF
+
+  result = __InitExceptBlockLDTC();
+  if ( !*(_BYTE *)(a1 + 424) )
+  {
+    *(_BYTE *)(a1 + 424) = 1;
+    if ( IsWindow(*(HWND *)(a1 + 12)) )
+    {
+      sub_42E2E6((_DWORD *)a1);
+      sub_42E379(a1);
+      if ( !*(_DWORD *)(a1 + 12) )
+      {
+        xerror::MakeString((xerror *)v8, aPrecondition_89, aGethandle_33, aCBc5IncludeOwl_36, 0x6BEu);
+        ++v4;
+        xmsg::xmsg((xmsg *)v7, (const string *)v8);
+        ++v4;
+        v3 = 12;
+        --v4;
+        string::~string((string *)v8);
+        v4 += 2;
+        v4 += 3;
+        _ThrowExceptionLDTC(stru_403B88, v7, 0, sub_403BE0, 1u, 0, 0, 0, v2);
+      }
+      if ( !IsIconic(*(HWND *)(a1 + 12)) )
+      {
+        sub_433107(a1);
+        if ( !*(_DWORD *)(a1 + 12) )
+        {
+          v3 = 24;
+          xerror::MakeString((xerror *)v6, aPrecondition_90, aGethandle_34, aCBc5IncludeOwl_37, 0x769u);
+          ++v4;
+          xmsg::xmsg((xmsg *)v5, (const string *)v6);
+          ++v4;
+          v3 = 36;
+          --v4;
+          string::~string((string *)v6);
+          v3 = 24;
+          v4 += 2;
+          v4 += 3;
+          _ThrowExceptionLDTC(stru_403B88, v5, 0, sub_403BE0, 1u, 0, 0, 0, v2);
+        }
+        InvalidateRect(*(HWND *)(a1 + 12), 0, 0);
+      }
+    }
+    return TMsgThread::PumpWaitingMessages((TMsgThread *)(*(_DWORD *)(a1 + 104) + 25));
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 703
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+HWND __cdecl sub_42E641(TWindow *a1)
+{
+  HWND result; // eax
+  _DWORD v2[4]; // [esp+4h] [ebp-2Ch] BYREF
+  __int16 v3; // [esp+14h] [ebp-1Ch]
+  int v4; // [esp+20h] [ebp-10h]
+  _BYTE v5[4]; // [esp+28h] [ebp-8h] BYREF
+  _BYTE v6[4]; // [esp+2Ch] [ebp-4h] BYREF
+
+  result = (HWND)__InitExceptBlockLDTC();
+  if ( *((_BYTE *)a1 + 424) )
+  {
+    *((_BYTE *)a1 + 424) = 0;
+    sub_42EC92(a1, 1);
+    TMsgThread::PumpWaitingMessages((TMsgThread *)(*((_DWORD *)a1 + 26) + 25));
+    if ( !*((_DWORD *)a1 + 3) )
+    {
+      xerror::MakeString((xerror *)v6, aPrecondition_91, aGethandle_35, aCBc5IncludeOwl_38, 0x56Bu);
+      ++v4;
+      xmsg::xmsg((xmsg *)v5, (const string *)v6);
+      ++v4;
+      v3 = 12;
+      --v4;
+      string::~string((string *)v6);
+      v4 += 2;
+      v4 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v5, 0, sub_403BE0, 1u, 0, 0, 0, v2);
+    }
+    return SetFocus(*((HWND *)a1 + 3));
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 705
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+BOOL __cdecl sub_42E73A(TWindow *a1, int a2)
+{
+  BOOL result; // eax
+  int *v3; // eax
+  int v4; // ebx
+  _DWORD v5[4]; // [esp+4h] [ebp-4Ch] BYREF
+  __int16 v6; // [esp+14h] [ebp-3Ch]
+  int v7; // [esp+20h] [ebp-30h]
+  _BYTE v8[4]; // [esp+28h] [ebp-28h] BYREF
+  _BYTE v9[4]; // [esp+2Ch] [ebp-24h] BYREF
+  void (__cdecl ***v10)(_DWORD, int); // [esp+30h] [ebp-20h]
+  void (__cdecl ***v11)(_DWORD, int); // [esp+34h] [ebp-1Ch]
+  void (__cdecl ***v12)(_DWORD, int); // [esp+38h] [ebp-18h]
+  void (__cdecl ***v13)(_DWORD, int); // [esp+3Ch] [ebp-14h]
+  int v14; // [esp+40h] [ebp-10h]
+  void (__cdecl ***v15)(_DWORD, int); // [esp+44h] [ebp-Ch]
+  void (__cdecl ***v16)(_DWORD, int); // [esp+48h] [ebp-8h]
+  int v17; // [esp+4Ch] [ebp-4h]
+
+  __InitExceptBlockLDTC();
+  TWindow::Destroy(a1, a2);
+  sub_41ACA9();
+  if ( *((_DWORD *)a1 + 62) )
+  {
+    DestroyCursor(*((HCURSOR *)a1 + 62));
+    *((_DWORD *)a1 + 62) = 0;
+  }
+  v17 = *(_DWORD *)((char *)a1 + 134);
+  if ( v17 )
+  {
+    v6 = 20;
+    (**(void (__cdecl ***)(int, int))(v17 + 5))(v17, 3);
+    v6 = 8;
+  }
+  *(_DWORD *)((char *)a1 + 134) = 0;
+  v16 = (void (__cdecl ***)(_DWORD, int))dword_446AA4;
+  if ( dword_446AA4 )
+  {
+    v6 = 44;
+    (**v16)(v16, 3);
+    v6 = 32;
+  }
+  dword_446AA4 = 0;
+  v15 = (void (__cdecl ***)(_DWORD, int))dword_446AA8;
+  if ( dword_446AA8 )
+  {
+    v6 = 68;
+    (**v15)(v15, 3);
+    v6 = 56;
+  }
+  dword_446AA8 = 0;
+  v14 = dword_446AA0;
+  if ( dword_446AA0 )
+  {
+    v6 = 92;
+    (**(void (__cdecl ***)(int, int))(v14 + 5))(v14, 3);
+    v6 = 80;
+  }
+  dword_446AA0 = 0;
+  v13 = *(void (__cdecl ****)(_DWORD, int))((char *)a1 + 158);
+  if ( v13 )
+  {
+    v6 = 116;
+    (**v13)(v13, 3);
+    v6 = 104;
+  }
+  *(_DWORD *)((char *)a1 + 158) = 0;
+  v12 = *(void (__cdecl ****)(_DWORD, int))((char *)a1 + 162);
+  if ( v12 )
+  {
+    v6 = 140;
+    (**v12)(v12, 3);
+    v6 = 128;
+  }
+  *(_DWORD *)((char *)a1 + 162) = 0;
+  v11 = *(void (__cdecl ****)(_DWORD, int))((char *)a1 + 166);
+  if ( v11 )
+  {
+    v6 = 164;
+    (**v11)(v11, 3);
+    v6 = 152;
+  }
+  *(_DWORD *)((char *)a1 + 166) = 0;
+  v10 = *(void (__cdecl ****)(_DWORD, int))((char *)a1 + 170);
+  if ( v10 )
+  {
+    v6 = 188;
+    (**v10)(v10, 3);
+    v6 = 176;
+  }
+  result = 0;
+  *(_DWORD *)((char *)a1 + 170) = 0;
+  if ( *((_DWORD *)a1 + 26) && *(_DWORD *)(*((_DWORD *)a1 + 26) + 102) )
+  {
+    v3 = *(int **)(*((_DWORD *)a1 + 26) + 102);
+    v4 = *v3;
+    if ( !*(_DWORD *)(*v3 + 12) )
+    {
+      v6 = 200;
+      xerror::MakeString((xerror *)v9, aPrecondition_92, aGethandle_36, aCBc5IncludeOwl_39, 0x53Cu);
+      ++v7;
+      xmsg::xmsg((xmsg *)v8, (const string *)v9);
+      ++v7;
+      v6 = 212;
+      --v7;
+      string::~string((string *)v9);
+      v6 = 200;
+      v7 += 2;
+      v7 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v8, 0, sub_403BE0, 1u, 0, 0, 0, v5);
+    }
+    return PostMessageA(*(HWND *)(v4 + 12), 0x12u, 0, 0);
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 446AA0: using guessed type int dword_446AA0;
+
+
+
+//-------------------------------------------------------------------------
+// Function 708
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+TWindow *__stdcall sub_42E9EB(TWindow *a1, int a2, int a3, int a4, int a5)
+{
+  TWindow *result; // eax
+  int v6; // eax
+  TWindow *v7; // eax
+  int v8; // eax
+  LPARAM v10; // esi
+  UINT v11; // edi
+  int v12; // eax
+  LPARAM v14; // ebx
+  UINT v15; // esi
+  _DWORD v16[4]; // [esp+Ch] [ebp-34h] BYREF
+  __int16 v17; // [esp+1Ch] [ebp-24h]
+  int v18; // [esp+28h] [ebp-18h]
+  char v19[4]; // [esp+30h] [ebp-10h] BYREF
+  char v20[4]; // [esp+34h] [ebp-Ch] BYREF
+  char v21[4]; // [esp+38h] [ebp-8h] BYREF
+  char v22[4]; // [esp+3Ch] [ebp-4h] BYREF
+
+  result = (TWindow *)__InitExceptBlockLDTC();
+  if ( dword_44A9F0 )
+  {
+    result = (TWindow *)(*(int (__cdecl **)(TWindow *))(*((_DWORD *)dword_44A9F0 + 2) + 124))(dword_44A9F0);
+    if ( result )
+    {
+      if ( a1 )
+      {
+        if ( *((_DWORD *)dword_44A9F0 + 64) )
+        {
+          v6 = *((_DWORD *)dword_44A9F0 + 64);
+          v7 = *(_DWORD *)(v6 + 4) ? *(TWindow **)(*(_DWORD *)(v6 + 4) + 24) : 0;
+          if ( a1 == v7 )
+          {
+            ++*(_DWORD *)(*((_DWORD *)dword_44A9F0 + 64) + 24);
+            v8 = *((_DWORD *)dword_44A9F0 + 64);
+            if ( !*(_DWORD *)(v8 + 4) || !*(_BYTE *)(*(_DWORD *)(v8 + 4) + 28) )
+            {
+              v10 = *(_DWORD *)(*((_DWORD *)dword_44A9F0 + 64) + 24);
+              v11 = Msg;
+              if ( !*((_DWORD *)dword_44A9F0 + 3) )
+              {
+                xerror::MakeString((xerror *)v22, aPrecondition_93, aGethandle_37, aCBc5IncludeOwl_40, 0x53Cu);
+                ++v18;
+                xmsg::xmsg((xmsg *)v21, (const string *)v22);
+                ++v18;
+                v17 = 12;
+                --v18;
+                string::~string((string *)v22);
+                v18 += 2;
+                v18 += 3;
+                _ThrowExceptionLDTC(stru_403B88, v21, 0, sub_403BE0, 1u, 0, 0, 0, v16);
+              }
+              PostMessageA(*((HWND *)dword_44A9F0 + 3), v11, 0, v10);
+            }
+          }
+        }
+        result = dword_44A9F0;
+        if ( *((_DWORD *)dword_44A9F0 + 65) )
+        {
+          v12 = *((_DWORD *)dword_44A9F0 + 65);
+          result = *(_DWORD *)(v12 + 4) ? *(TWindow **)(*(_DWORD *)(v12 + 4) + 24) : 0;
+          if ( a1 == result )
+          {
+            ++*(_DWORD *)(*((_DWORD *)dword_44A9F0 + 65) + 24);
+            result = (TWindow *)*((_DWORD *)dword_44A9F0 + 65);
+            if ( !*((_DWORD *)result + 1) || !*(_BYTE *)(*((_DWORD *)result + 1) + 28) )
+            {
+              v14 = *(_DWORD *)(*((_DWORD *)dword_44A9F0 + 65) + 24);
+              v15 = dword_446A98;
+              if ( !*((_DWORD *)dword_44A9F0 + 3) )
+              {
+                v17 = 24;
+                xerror::MakeString((xerror *)v20, aPrecondition_94, aGethandle_38, aCBc5IncludeOwl_41, 0x53Cu);
+                ++v18;
+                xmsg::xmsg((xmsg *)v19, (const string *)v20);
+                ++v18;
+                v17 = 36;
+                --v18;
+                string::~string((string *)v20);
+                v17 = 24;
+                v18 += 2;
+                v18 += 3;
+                _ThrowExceptionLDTC(stru_403B88, v19, 0, sub_403BE0, 1u, 0, 0, 0, v16);
+              }
+              return (TWindow *)PostMessageA(*((HWND *)dword_44A9F0 + 3), v15, 0, v14);
+            }
+          }
+        }
+      }
+    }
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 710
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+HWND __cdecl sub_42ECB9(TWindow *a1, char a2)
+{
+  _BOOL1 v2; // bl
+  _BOOL1 v4; // al
+  TWindow *v5; // esi
+  HWND v6; // edx
+  int v7; // eax
+  int v8; // eax
+  HWND result; // eax
+  _BOOL1 v10; // [esp+1Bh] [ebp-79h]
+  unsigned int v11; // [esp+1Ch] [ebp-78h]
+  int v12; // [esp+20h] [ebp-74h]
+  int SystemMetrics; // [esp+24h] [ebp-70h]
+  int v14; // [esp+28h] [ebp-6Ch]
+  int v15; // [esp+2Ch] [ebp-68h]
+  _DWORD v16[4]; // [esp+30h] [ebp-64h] BYREF
+  __int16 v17; // [esp+40h] [ebp-54h]
+  int v18; // [esp+4Ch] [ebp-48h]
+  _BYTE v19[4]; // [esp+54h] [ebp-40h] BYREF
+  _BYTE v20[4]; // [esp+58h] [ebp-3Ch] BYREF
+  _BYTE v21[4]; // [esp+5Ch] [ebp-38h] BYREF
+  _BYTE v22[4]; // [esp+60h] [ebp-34h] BYREF
+  _DWORD v23[5]; // [esp+64h] [ebp-30h] BYREF
+  char v24; // [esp+78h] [ebp-1Ch]
+  int v25[2]; // [esp+7Ch] [ebp-18h] BYREF
+  int v26; // [esp+84h] [ebp-10h]
+  int v27; // [esp+88h] [ebp-Ch]
+  int v28; // [esp+8Ch] [ebp-8h]
+  char v29; // [esp+90h] [ebp-4h]
+
+  __InitExceptBlockLDTC();
+  v25[0] = (int)&off_4479F0;
+  v25[1] = (int)off_447A04;
+  sub_4056BB((int)v25, (int)&dword_44ECB9);
+  v18 += 5;
+  v17 = 8;
+  if ( a2 )
+  {
+    if ( !(*(unsigned __int8 (__cdecl **)(int *))(dword_44ECB9 + 4))(&dword_44ECB9) )
+    {
+      v17 = 32;
+      v23[0] = &off_4479F0;
+      v23[1] = off_447A04;
+      v23[2] = 640;
+      v23[3] = 480;
+      v23[4] = 16;
+      v24 = 1;
+      sub_4056BB((int)v25, (int)v23);
+      v18 += 3;
+    }
+    v29 = 1;
+    v2 = !dword_4437A0 || *((_DWORD *)a1 + 10) != v26 || *((_DWORD *)a1 + 11) != v27;
+  }
+  else
+  {
+    v29 = 0;
+    v2 = dword_4437A0 != 0;
+  }
+  if ( v2 )
+  {
+    (*(void (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 132))(a1);
+    if ( !*((_DWORD *)a1 + 3) )
+    {
+      v17 = 44;
+      xerror::MakeString((xerror *)v22, aPrecondition_95, aGethandle_39, aCBc5IncludeOwl_42, 0x769u);
+      ++v18;
+      xmsg::xmsg((xmsg *)v21, (const string *)v22);
+      ++v18;
+      v17 = 56;
+      --v18;
+      string::~string((string *)v22);
+      v17 = 44;
+      v18 += 2;
+      v18 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v21, 0, sub_403BE0, 1u, 0, 0, 0, v16);
+    }
+    InvalidateRect(*((HWND *)a1 + 3), 0, 1);
+    if ( !*((_DWORD *)a1 + 3) )
+    {
+      v17 = 68;
+      xerror::MakeString((xerror *)v20, aPrecondition_96, aGethandle_40, aCBc5IncludeOwl_43, 0x7A5u);
+      ++v18;
+      xmsg::xmsg((xmsg *)v19, (const string *)v20);
+      ++v18;
+      v17 = 80;
+      --v18;
+      string::~string((string *)v20);
+      v17 = 68;
+      v18 += 2;
+      v18 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v19, 0, sub_403BE0, 1u, 0, 0, 0, v16);
+    }
+    UpdateWindow(*((HWND *)a1 + 3));
+    TMsgThread::PumpWaitingMessages((TMsgThread *)(*((_DWORD *)a1 + 26) + 25));
+    sub_42E49E((int)a1);
+    TWindow::SetCursor(a1, 0, 32512);
+    sub_425227((int)byte_44EC10, 0);
+    sub_41ACA9();
+    TMsgThread::PumpWaitingMessages((TMsgThread *)(*((_DWORD *)a1 + 26) + 25));
+  }
+  if ( a2 )
+  {
+    v14 = 0;
+    v15 = 0;
+    SystemMetrics = v26;
+    v12 = v27;
+    v11 = *((_DWORD *)a1 + 7) | 8;
+  }
+  else
+  {
+    if ( v26 && v27 && v28 )
+    {
+      SystemMetrics = v26;
+      v12 = v27;
+      v15 = (GetSystemMetrics(TUIMetric::CxScreen) - SystemMetrics) / 2;
+      v14 = (GetSystemMetrics(TUIMetric::CyScreen) - v12) / 2;
+    }
+    else
+    {
+      v14 = 0;
+      v15 = 0;
+      SystemMetrics = GetSystemMetrics(TUIMetric::CxScreen);
+      v12 = GetSystemMetrics(TUIMetric::CyScreen);
+    }
+    v11 = *((_DWORD *)a1 + 7) & 0xFFFFFFF7;
+  }
+  v4 = *((_DWORD *)a1 + 7) != v11
+    || *((_DWORD *)a1 + 8) != v15
+    || *((_DWORD *)a1 + 9) != v14
+    || *((_DWORD *)a1 + 10) != SystemMetrics
+    || *((_DWORD *)a1 + 11) != v12;
+  v10 = v4;
+  v17 = 8;
+  if ( (*((_BYTE *)a1 + 27) & 0x40) != 0 && *((_DWORD *)a1 + 5) )
+    v5 = (TWindow *)*((_DWORD *)a1 + 5);
+  else
+    v5 = 0;
+  if ( v2 && a2 )
+  {
+    if ( v5 )
+      v6 = (HWND)*((_DWORD *)v5 + 3);
+    else
+      v6 = (HWND)*((_DWORD *)a1 + 3);
+    sub_41AADC(v6, (int)v25);
+  }
+  if ( v5 && (v10 || v2) )
+  {
+    sub_42E49E((int)a1);
+    if ( a2 )
+    {
+      *((_DWORD *)v5 + 8) = v15;
+      *((_DWORD *)v5 + 9) = v14;
+      *((_DWORD *)v5 + 10) = SystemMetrics;
+      *((_DWORD *)v5 + 11) = v12;
+    }
+    else
+    {
+      *((_DWORD *)v5 + 9) = 0;
+      *((_DWORD *)v5 + 8) = 0;
+      *((_DWORD *)v5 + 10) = GetSystemMetrics(TUIMetric::CxScreen);
+      *((_DWORD *)v5 + 11) = GetSystemMetrics(TUIMetric::CyScreen);
+    }
+    *((_DWORD *)v5 + 7) = v11;
+    v7 = -1;
+    if ( (*((_BYTE *)v5 + 28) & 8) == 0 )
+      v7 = -2;
+    TWindow::SetWindowPos(
+      v5,
+      (HWND)v7,
+      *((_DWORD *)v5 + 8),
+      *((_DWORD *)v5 + 9),
+      *((_DWORD *)v5 + 10),
+      *((_DWORD *)v5 + 11),
+      0);
+  }
+  if ( v10 )
+  {
+    sub_42E49E((int)a1);
+    *((_DWORD *)a1 + 8) = v15;
+    *((_DWORD *)a1 + 9) = v14;
+    *((_DWORD *)a1 + 10) = SystemMetrics;
+    *((_DWORD *)a1 + 11) = v12;
+    if ( v5 )
+    {
+      *((_DWORD *)a1 + 7) &= ~8u;
+      TWindow::SetWindowPos(
+        a1,
+        0,
+        *((_DWORD *)a1 + 8),
+        *((_DWORD *)a1 + 9),
+        *((_DWORD *)a1 + 10),
+        *((_DWORD *)a1 + 11),
+        4u);
+    }
+    else
+    {
+      *((_DWORD *)a1 + 7) = v11;
+      v8 = -1;
+      if ( (*((_BYTE *)a1 + 28) & 8) == 0 )
+        v8 = -2;
+      TWindow::SetWindowPos(
+        a1,
+        (HWND)v8,
+        *((_DWORD *)a1 + 8),
+        *((_DWORD *)a1 + 9),
+        *((_DWORD *)a1 + 10),
+        *((_DWORD *)a1 + 11),
+        0);
+    }
+  }
+  result = (HWND)TMsgThread::PumpWaitingMessages((TMsgThread *)(*((_DWORD *)a1 + 26) + 25));
+  if ( v2 )
+  {
+    sub_4252BA((int)byte_44EC10, (int)&unk_44ECA9);
+    TWindow::SetCursor(a1, dword_44ECF1, 99);
+  }
+  else if ( !v10 )
+  {
+    return result;
+  }
+  sub_424EE4((int)byte_44EC10);
+  return sub_42E641(a1);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 439468: using guessed type int __cdecl TWindow::SetCursor(_DWORD, _DWORD, _DWORD);
+// 4437A0: using guessed type int dword_4437A0;
+// 4479F0: using guessed type int (__cdecl *off_4479F0)(void *, char);
+// 447A04: using guessed type int (__cdecl *off_447A04[2])(int);
+// 44ECB9: using guessed type int dword_44ECB9;
+// 44ECF1: using guessed type int dword_44ECF1;
+
+
+
+//-------------------------------------------------------------------------
+// Function 712
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_43055C(TWindow *a1, int a2)
+{
+  int v3; // esi
+  char v4; // cl
+  _BYTE *v5; // esi
+  int v6; // eax
+  double v7; // [esp-Ch] [ebp-5Ch]
+  _DWORD v8[2]; // [esp+Ch] [ebp-44h] BYREF
+  double v9; // [esp+14h] [ebp-3Ch]
+  struct tagPOINT Point; // [esp+1Ch] [ebp-34h] BYREF
+  _DWORD v11[4]; // [esp+24h] [ebp-2Ch] BYREF
+  __int16 v12; // [esp+34h] [ebp-1Ch]
+  int v13; // [esp+40h] [ebp-10h]
+  _BYTE v14[4]; // [esp+48h] [ebp-8h] BYREF
+  _BYTE v15[4]; // [esp+4Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !(*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1)
+    || *((_BYTE *)a1 + 421)
+    || *((_BYTE *)a1 + 423)
+    || *((_BYTE *)a1 + 424) )
+  {
+    return TWindow::IdleAction(a1, a2);
+  }
+  *((_BYTE *)a1 + 423) = 1;
+  if ( !a2 )
+  {
+    if ( !*((_DWORD *)a1 + 65)
+      || ((v3 = *((_DWORD *)a1 + 65), *(_DWORD *)(v3 + 4))
+       && (*(unsigned __int8 (__cdecl **)(_DWORD))(*(_DWORD *)(*(_DWORD *)(v3 + 4) + 20) + 4))(*(_DWORD *)(v3 + 4))
+        ? (v4 = 1)
+        : (v4 = 0),
+          !v4) )
+    {
+      GetCursorPos(&Point);
+      if ( WindowFromPoint(Point) == *((HWND *)a1 + 3) )
+      {
+        if ( !*((_DWORD *)a1 + 3) )
+        {
+          xerror::MakeString((xerror *)v15, aPrecondition_99, aGethandle_41, aCBc5IncludeOwl_44, 0x593u);
+          ++v13;
+          xmsg::xmsg((xmsg *)v14, (const string *)v15);
+          ++v13;
+          v12 = 12;
+          --v13;
+          string::~string((string *)v15);
+          v13 += 2;
+          v13 += 3;
+          _ThrowExceptionLDTC(stru_403B88, v14, 0, sub_403BE0, 1u, 0, 0, 0, v11);
+        }
+        ScreenToClient(*((HWND *)a1 + 3), &Point);
+        v9 = sub_43353D((int)a1);
+        sub_433569(v8, (int)a1);
+        v5 = 0;
+        if ( *((_DWORD *)a1 + 63) && *(_DWORD *)(*((_DWORD *)a1 + 63) + 8) )
+          v5 = (_BYTE *)sub_413B20(
+                          (int *)(*(_DWORD *)(*((_DWORD *)a1 + 63) + 8) + 104),
+                          (int)&Point,
+                          v8,
+                          SLODWORD(v9),
+                          SHIDWORD(v9),
+                          0);
+        if ( !v5 )
+        {
+          v7 = v9;
+          v6 = (*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1);
+          v5 = (_BYTE *)sub_413B20((int *)(v6 + 104), (int)&Point, v8, SLODWORD(v7), SHIDWORD(v7), 0);
+        }
+        if ( v5 != *(_BYTE **)((char *)a1 + 138) )
+        {
+          *(_DWORD *)((char *)a1 + 138) = v5;
+          sub_433314((int)a1, 0);
+          if ( v5 )
+          {
+            if ( (v5[49] & 4) == 0 )
+              (*(void (__cdecl **)(_BYTE *, TWindow *, _DWORD))(*(_DWORD *)v5 + 8))(v5, a1, 0);
+          }
+        }
+      }
+      else if ( *(_DWORD *)((char *)a1 + 138) )
+      {
+        *(_DWORD *)((char *)a1 + 138) = 0;
+        sub_433314((int)a1, 0);
+      }
+    }
+  }
+  *((_BYTE *)a1 + 423) = 0;
+  return TWindow::IdleAction(a1, a2);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 715
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+void __cdecl sub_430DB0(TWindow *a1, int a2, int *a3)
+{
+  int v3; // eax
+  int v4; // edi
+  int v5; // eax
+  _BOOL1 v6; // dl
+  _BOOL1 v7; // dl
+  _BYTE *v8; // eax
+  int v9; // eax
+  _BYTE *v10; // eax
+  char v11; // dl
+  double v12; // [esp-Ch] [ebp-78h]
+  RECT Rect; // [esp+Ch] [ebp-60h] BYREF
+  char v14; // [esp+1Fh] [ebp-4Dh]
+  int v15; // [esp+20h] [ebp-4Ch] BYREF
+  double v16; // [esp+24h] [ebp-48h]
+  _DWORD v17[2]; // [esp+2Ch] [ebp-40h] BYREF
+  _BOOL1 v18; // [esp+35h] [ebp-37h]
+  _BOOL1 v19; // [esp+36h] [ebp-36h]
+  char v20; // [esp+37h] [ebp-35h]
+  _DWORD v21[4]; // [esp+38h] [ebp-34h] BYREF
+  __int16 v22; // [esp+48h] [ebp-24h]
+  int v23; // [esp+54h] [ebp-18h]
+  _BYTE v24[4]; // [esp+5Ch] [ebp-10h] BYREF
+  _BYTE v25[4]; // [esp+60h] [ebp-Ch] BYREF
+  _BYTE v26[4]; // [esp+64h] [ebp-8h] BYREF
+  _BYTE v27[4]; // [esp+68h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !*((_BYTE *)a1 + 424)
+    && !*((_BYTE *)a1 + 421)
+    && !*((_BYTE *)a1 + 423)
+    && (*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1) )
+  {
+    *((_BYTE *)a1 + 423) = 1;
+    *((_BYTE *)a1 + 423) = 1;
+    if ( !(**(unsigned __int8 (__cdecl ***)(char *))((char *)a1 + 182))((char *)a1 + 182) )
+      goto LABEL_31;
+    v3 = sub_421E48((int)a1 + 182, a3);
+    v4 = v3;
+    if ( v3 > 0 )
+    {
+      v5 = (*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1);
+      sub_4268F8(a1, *(_DWORD *)(v5 + 80) + v4, 0, 0);
+      *((_BYTE *)a1 + 423) = 0;
+      return;
+    }
+    if ( v3 )
+    {
+LABEL_31:
+      if ( !(**(unsigned __int8 (__cdecl ***)(char *))((char *)a1 + 182))((char *)a1 + 182)
+        || (unsigned int)(*(int (__cdecl **)(char *))(*(_DWORD *)((char *)a1 + 191) + 4))((char *)a1 + 190) <= 1 )
+      {
+        goto LABEL_37;
+      }
+      v20 = 0;
+      if ( *((_DWORD *)a1 + 61) )
+      {
+        v6 = *a3 >= *((_DWORD *)a1 + 86)
+          && *a3 < *((_DWORD *)a1 + 88)
+          && a3[1] >= *((_DWORD *)a1 + 87)
+          && a3[1] < *((_DWORD *)a1 + 89);
+        v19 = v6;
+        if ( v6 )
+        {
+          --*((_DWORD *)a1 + 61);
+          qmemcpy(&Rect, (char *)a1 + 312, sizeof(Rect));
+          Rect.bottom += *((_DWORD *)a1 + 89) - *((_DWORD *)a1 + 87);
+          v20 = 1;
+        }
+      }
+      if ( (unsigned int)((*(int (__cdecl **)(char *))(*(_DWORD *)((char *)a1 + 191) + 4))((char *)a1 + 190) - 1) > *((_DWORD *)a1 + 61) )
+      {
+        v7 = *a3 >= *((_DWORD *)a1 + 90)
+          && *a3 < *((_DWORD *)a1 + 92)
+          && a3[1] >= *((_DWORD *)a1 + 91)
+          && a3[1] < *((_DWORD *)a1 + 93);
+        v18 = v7;
+        if ( v7 )
+        {
+          ++*((_DWORD *)a1 + 61);
+          qmemcpy(&Rect, (char *)a1 + 312, sizeof(Rect));
+          Rect.bottom += *((_DWORD *)a1 + 93) - *((_DWORD *)a1 + 91);
+          v20 = 1;
+        }
+      }
+      if ( v20 )
+      {
+        if ( !*((_DWORD *)a1 + 3) )
+        {
+          xerror::MakeString((xerror *)v27, aPrecondition_100, aGethandle_42, aCBc5IncludeOwl_45, 0x773u);
+          ++v23;
+          xmsg::xmsg((xmsg *)v26, (const string *)v27);
+          ++v23;
+          v22 = 12;
+          --v23;
+          string::~string((string *)v27);
+          v23 += 2;
+          v23 += 3;
+          _ThrowExceptionLDTC(stru_403B88, v26, 0, sub_403BE0, 1u, 0, 0, 0, v21);
+        }
+        InvalidateRect(*((HWND *)a1 + 3), &Rect, 0);
+        if ( !*((_DWORD *)a1 + 3) )
+        {
+          v22 = 24;
+          xerror::MakeString((xerror *)v25, aPrecondition_101, aGethandle_43, aCBc5IncludeOwl_46, 0x7A5u);
+          ++v23;
+          xmsg::xmsg((xmsg *)v24, (const string *)v25);
+          ++v23;
+          v22 = 36;
+          --v23;
+          string::~string((string *)v25);
+          v22 = 24;
+          v23 += 2;
+          v23 += 3;
+          _ThrowExceptionLDTC(stru_403B88, v24, 0, sub_403BE0, 1u, 0, 0, 0, v21);
+        }
+        UpdateWindow(*((HWND *)a1 + 3));
+        sub_4330F1((int)a1, a3);
+        *((_BYTE *)a1 + 423) = 0;
+      }
+      else
+      {
+LABEL_37:
+        sub_433569(v17, (int)a1);
+        v16 = sub_43353D((int)a1);
+        if ( *((_DWORD *)a1 + 63)
+          && *(_DWORD *)(*((_DWORD *)a1 + 63) + 8)
+          && (v8 = (_BYTE *)sub_413B20(
+                              (int *)(*(_DWORD *)(*((_DWORD *)a1 + 63) + 8) + 104),
+                              (int)a3,
+                              v17,
+                              SLODWORD(v16),
+                              SHIDWORD(v16),
+                              0)) != 0 )
+        {
+          if ( (v8[49] & 4) == 0 )
+            (*(void (__cdecl **)(_BYTE *, TWindow *, int))(*(_DWORD *)v8 + 8))(v8, a1, 1);
+          *((_BYTE *)a1 + 423) = 0;
+        }
+        else
+        {
+          v12 = v16;
+          v9 = (*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1);
+          v10 = (_BYTE *)sub_413B20((int *)(v9 + 104), (int)a3, v17, SLODWORD(v12), SHIDWORD(v12), &v15);
+          if ( v10 )
+          {
+            if ( (v10[49] & 4) == 0 )
+              (*(void (__cdecl **)(_BYTE *, TWindow *, int))(*(_DWORD *)v10 + 8))(v10, a1, 1);
+            *((_BYTE *)a1 + 423) = 0;
+          }
+          else if ( *((_DWORD *)a1 + 65)
+                 && !*(_DWORD *)(*((_DWORD *)a1 + 65) + 4)
+                 && (*(unsigned __int8 (__cdecl **)(_DWORD, int *, _DWORD))(**((_DWORD **)a1 + 65) + 24))(
+                      *((_DWORD *)a1 + 65),
+                      a3,
+                      0) )
+          {
+            sub_4330F1((int)a1, a3);
+            *((_BYTE *)a1 + 423) = 0;
+          }
+          else if ( *((_DWORD *)a1 + 64)
+                 && (*a3 >= *(_DWORD *)(*(_DWORD *)((char *)a1 + 178) + 13)
+                  && *a3 < *(_DWORD *)(*(_DWORD *)((char *)a1 + 178) + 21)
+                  && a3[1] >= *(_DWORD *)(*(_DWORD *)((char *)a1 + 178) + 17)
+                  && a3[1] < *(_DWORD *)(*(_DWORD *)((char *)a1 + 178) + 25)
+                   ? (v11 = 1)
+                   : (v11 = 0),
+                     (v14 = v11) != 0) )
+          {
+            if ( *((_DWORD *)a1 + 63) && *(_DWORD *)(*((_DWORD *)a1 + 64) + 4) )
+              sub_42D858(*((_DWORD *)a1 + 63), 0);
+            sub_419E29(*((_BYTE **)a1 + 64), (int)a3);
+            qmemcpy((char *)a1 + 328, (char *)a1 + 264, 0x10u);
+            *((_BYTE *)a1 + 423) = 0;
+          }
+          else
+          {
+            *((_BYTE *)a1 + 423) = 0;
+          }
+        }
+      }
+    }
+    else
+    {
+      sub_432DAA(a1);
+      *((_BYTE *)a1 + 423) = 0;
+    }
+  }
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 723
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+char __cdecl sub_4315BD(int a1, char a2)
+{
+  char v2; // cl
+  _BOOL1 v3; // al
+  _DWORD v5[4]; // [esp+4h] [ebp-2Ch] BYREF
+  __int16 v6; // [esp+14h] [ebp-1Ch]
+  int v7; // [esp+20h] [ebp-10h]
+  _BYTE v8[4]; // [esp+28h] [ebp-8h] BYREF
+  _BYTE v9[4]; // [esp+2Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( dword_44EC50 )
+    v2 = *((_BYTE *)dword_44EC50 + 5);
+  else
+    v2 = 0;
+  if ( !v2 )
+    return 0;
+  if ( dword_44EC54 )
+    TDC::SelectObject(*(TDC **)(a1 + 134), dword_44EC54, 1);
+  else
+    TDC::SelectObject(*(TDC **)(a1 + 134), dword_44EC50, 1);
+  v3 = (int)RealizePalette(**(HDC **)(a1 + 134)) > 0;
+  if ( a2 || v3 )
+  {
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      xerror::MakeString((xerror *)v9, aPrecondition_102, aGethandle_44, aCBc5IncludeOwl_47, 0x769u);
+      ++v7;
+      xmsg::xmsg((xmsg *)v8, (const string *)v9);
+      ++v7;
+      v6 = 12;
+      --v7;
+      string::~string((string *)v9);
+      v7 += 2;
+      v7 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v8, 0, sub_403BE0, 1u, 0, 0, 0, v5);
+    }
+    InvalidateRect(*(HWND *)(a1 + 12), 0, 0);
+  }
+  return 1;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 727
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_43177D(TWindow *a1, int a2, char *a3)
+{
+  int v4; // eax
+  int v5; // eax
+  int v6; // eax
+  const char *v8; // edi
+  const char *v9; // esi
+  _BOOL1 v10; // bl
+  int v11; // edx
+  TFont *v12; // edx
+  int v13; // [esp-8h] [ebp-B8h]
+  int v14; // [esp-4h] [ebp-B4h]
+  int v15; // [esp-4h] [ebp-B4h]
+  RECT Rect; // [esp+Ch] [ebp-A4h] BYREF
+  _DWORD v17[4]; // [esp+1Ch] [ebp-94h] BYREF
+  unsigned __int8 v18; // [esp+2Dh] [ebp-83h]
+  unsigned __int8 v19; // [esp+2Eh] [ebp-82h]
+  unsigned __int8 v20; // [esp+2Fh] [ebp-81h]
+  int v21[2]; // [esp+30h] [ebp-80h] BYREF
+  double v22; // [esp+38h] [ebp-78h]
+  _BYTE v23[4]; // [esp+40h] [ebp-70h] BYREF
+  _BYTE v24[4]; // [esp+44h] [ebp-6Ch] BYREF
+  _BYTE v25[4]; // [esp+48h] [ebp-68h] BYREF
+  _DWORD v26[4]; // [esp+4Ch] [ebp-64h] BYREF
+  __int16 v27; // [esp+5Ch] [ebp-54h]
+  int v28; // [esp+68h] [ebp-48h]
+  void *v29; // [esp+74h] [ebp-3Ch]
+  TFont *v30; // [esp+78h] [ebp-38h]
+  TGdiObject *v31; // [esp+7Ch] [ebp-34h]
+  int v32[3]; // [esp+80h] [ebp-30h] BYREF
+  _BYTE v33[4]; // [esp+8Ch] [ebp-24h] BYREF
+  _BYTE v34[4]; // [esp+90h] [ebp-20h] BYREF
+  _BYTE v35[4]; // [esp+94h] [ebp-1Ch] BYREF
+  _BYTE v36[4]; // [esp+98h] [ebp-18h] BYREF
+  _BYTE v37[4]; // [esp+9Ch] [ebp-14h] BYREF
+  _BYTE v38[4]; // [esp+A0h] [ebp-10h] BYREF
+  _BYTE v39[4]; // [esp+A8h] [ebp-8h] BYREF
+  _BYTE v40[4]; // [esp+ACh] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( *((_BYTE *)a1 + 424) || !(*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1) )
+    return 0;
+  switch ( a2 )
+  {
+    case 6:
+      if ( a3 )
+      {
+        sub_4268F8(a1, *((_DWORD *)a3 + 1), a3[8], 0);
+        operator delete(a3);
+      }
+      break;
+    case 7:
+      if ( a3 )
+        sub_426B62((int)a1, *((_DWORD *)a3 + 1));
+      break;
+    case 8:
+      if ( a3 )
+        sub_426D33((int)a1, (int)(a3 + 4));
+      break;
+    case 9:
+      if ( a3 )
+      {
+        sub_42703A((int *)a1, (int)(a3 + 4), *((_DWORD *)a3 + 2), (_DWORD *)a3 + 3);
+      }
+      else
+      {
+        memset(v17, 0, sizeof(v17));
+        v13 = *(_DWORD *)((*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1) + 84);
+        v4 = (*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1);
+        sub_42703A((int *)a1, v4 + 32, v13, v17);
+      }
+      break;
+    case 10:
+      if ( a3 )
+        sub_4275F6((int)a1, (int)(a3 + 4), *((_DWORD *)a3 + 2), a3 + 12, (int)(a3 + 28));
+      break;
+    case 11:
+      if ( a3 )
+      {
+        sub_427B56((int)a1, (int)(a3 + 4), *((_DWORD *)a3 + 2));
+      }
+      else
+      {
+        v14 = *(_DWORD *)((*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1) + 88);
+        v5 = (*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1);
+        sub_427B56((int)a1, v5 + 40, v14);
+      }
+      break;
+    case 12:
+      if ( a3 )
+      {
+        sub_427C42((int)a1, (int)(a3 + 4), *((_DWORD *)a3 + 2));
+      }
+      else
+      {
+        v15 = *(_DWORD *)((*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1) + 92);
+        v6 = (*(int (__cdecl **)(TWindow *))(*((_DWORD *)a1 + 2) + 124))(a1);
+        sub_427C42((int)a1, v6 + 44, v15);
+      }
+      break;
+    case 13:
+      if ( a3 )
+        sub_427D34((int)a1, (int)(a3 + 4), *((_DWORD *)a3 + 2), a3 + 12);
+      break;
+    case 16:
+      if ( a3 )
+      {
+        TMsgThread::PumpWaitingMessages((TMsgThread *)(*((_DWORD *)a1 + 26) + 25));
+        sub_405010(*((_DWORD *)a3 + 1));
+      }
+      break;
+    case 17:
+      if ( a3 )
+        sub_427FAE((int)a1, (int)(a3 + 4), (int)(a3 + 8));
+      break;
+    case 18:
+      if ( a3 )
+        sub_4280EA((int)a1, (int)(a3 + 4));
+      break;
+    case 19:
+      if ( a3 )
+        sub_427EFF((int)a1, *((_DWORD *)a3 + 1), *((_DWORD *)a3 + 2), *((_DWORD *)a3 + 3));
+      else
+        sub_427EFF((int)a1, 0, 0, 0);
+      break;
+    case 21:
+      if ( a3 )
+        (*(void (__cdecl **)(char *, TWindow *))(*(_DWORD *)a3 + 8))(a3, a1);
+      break;
+    case 22:
+      if ( a3 )
+        (*(void (__cdecl **)(char *, int *, _BYTE *))(*(_DWORD *)a3 + 8))(a3, dword_44ECCE, v25);
+      break;
+    case 23:
+      if ( a3 )
+        (*(void (__cdecl **)(char *, int *, _BYTE *))(*(_DWORD *)a3 + 8))(a3, dword_44ECCE, v24);
+      break;
+    case 24:
+      if ( a3 )
+        (*(void (__cdecl **)(char *, int *, _BYTE *))(*(_DWORD *)a3 + 8))(a3, dword_44ECCE, v23);
+      break;
+    case 25:
+      if ( a3 )
+      {
+        qmemcpy(&Rect, a3 + 4, sizeof(Rect));
+        if ( Rect.left >= Rect.right || Rect.top >= Rect.bottom )
+        {
+          qmemcpy(&Rect, (char *)a1 + 264, sizeof(Rect));
+        }
+        else
+        {
+          v22 = sub_43353D((int)a1);
+          sub_433569(v21, (int)a1);
+          sub_405119((TRect *)&Rect, v22, v21);
+        }
+        if ( !*((_DWORD *)a1 + 3) )
+        {
+          xerror::MakeString((xerror *)v40, aPrecondition_103, aGethandle_45, aCBc5IncludeOwl_48, 0x773u);
+          ++v28;
+          xmsg::xmsg((xmsg *)v39, (const string *)v40);
+          ++v28;
+          v27 = 12;
+          --v28;
+          string::~string((string *)v40);
+          v28 += 2;
+          v28 += 3;
+          _ThrowExceptionLDTC(stru_403B88, v39, 0, sub_403BE0, 1u, 0, 0, 0, v26);
+        }
+        InvalidateRect(*((HWND *)a1 + 3), &Rect, 0);
+        TMsgThread::PumpWaitingMessages((TMsgThread *)(*((_DWORD *)a1 + 26) + 25));
+      }
+      break;
+    case 26:
+      if ( a3 )
+        sub_428154((int)a1, (unsigned int)(a3 + 4));
+      break;
+    case 27:
+      if ( a3 )
+        sub_428373((int)a1, (string *)(a3 + 32), (int)(a3 + 4), *((_DWORD *)a3 + 2), a3 + 12, (int)(a3 + 28));
+      break;
+    case 28:
+    case 42:
+      if ( a3 )
+        sub_428F57((int)a1, (string *)(a3 + 4));
+      break;
+    case 29:
+    case 43:
+      if ( a3 )
+        sub_428E06((int)a1, (string *)(a3 + 4), 1);
+      break;
+    case 30:
+    case 44:
+      if ( a3 )
+        sub_428E06((int)a1, (string *)(a3 + 4), 0);
+      break;
+    case 31:
+      if ( a3 )
+      {
+        sub_42908F(a1, (int)(a3 + 4), *((_DWORD *)a3 + 2));
+        v28 += 2;
+        string::~string((string *)(a3 + 4));
+        operator delete(a3);
+        v27 = 24;
+      }
+      break;
+    case 32:
+      TMsgThread::PumpWaitingMessages((TMsgThread *)(*((_DWORD *)a1 + 26) + 25));
+      break;
+    case 33:
+      if ( a3 )
+        sub_4294C9((int)a1, (int)(a3 + 4), (int)(a3 + 8));
+      break;
+    case 34:
+      if ( a3 )
+      {
+        MessageBeep(1u);
+        v8 = *(const char **)(dword_44ECA1 + 2);
+        v9 = *(const char **)(*((_DWORD *)a3 + 1) + 2);
+        if ( !*((_DWORD *)a1 + 26) )
+        {
+          v27 = 48;
+          xerror::MakeString((xerror *)v38, aPrecondition_104, aGetapplication, aCBc5IncludeOwl_49, 0x959u);
+          ++v28;
+          xmsg::xmsg((xmsg *)v37, (const string *)v38);
+          ++v28;
+          v27 = 60;
+          --v28;
+          string::~string((string *)v38);
+          v27 = 48;
+          v28 += 2;
+          v28 += 3;
+          _ThrowExceptionLDTC(stru_403B88, v37, 0, sub_403BE0, 1u, 0, 0, 0, v26);
+        }
+        if ( !*((_DWORD *)a1 + 3) )
+        {
+          xerror::MakeString((xerror *)v36, aPrecondition_105, aGethandle_46, aCBc5IncludeOwl_50, 0x95Au);
+          ++v28;
+          xmsg::xmsg((xmsg *)v35, (const string *)v36);
+          ++v28;
+          v27 = 72;
+          --v28;
+          string::~string((string *)v36);
+          v27 = 48;
+          v28 += 2;
+          v28 += 3;
+          _ThrowExceptionLDTC(stru_403B88, v35, 0, sub_403BE0, 1u, 0, 0, 0, v26);
+        }
+        TApplication::MessageBox(*((TApplication **)a1 + 26), *((HWND *)a1 + 3), v9, v8, 0);
+      }
+      break;
+    case 35:
+      if ( a3 )
+      {
+        string::string((string *)v34, a3);
+        sub_40B594(v32, (string *)v34);
+        v27 = 84;
+        sub_40B990((int)a1, (int)v32, (HWND *)a1);
+        string::~string((string *)v33);
+        v28 -= 6;
+        string::~string((string *)v34);
+      }
+      break;
+    case 36:
+      if ( *(_DWORD *)((char *)a1 + 158) )
+        (*(void (__cdecl **)(_DWORD))(**(_DWORD **)((char *)a1 + 158) + 48))(*(_DWORD *)((char *)a1 + 158));
+      break;
+    case 37:
+      sub_429865((int)a1);
+      break;
+    case 38:
+      if ( a3 )
+        sub_4274B0(a1, (int)(a3 + 4), *((_WORD *)a3 + 12), a3 + 8);
+      break;
+    case 39:
+      if ( a3 )
+      {
+        v10 = (a3[8] & 1) != 0;
+        v20 = (a3[8] & 2) != 0;
+        v19 = (a3[8] & 4) != 0;
+        v18 = (a3[8] & 8) != 0;
+        v31 = (TGdiObject *)dword_44EC64;
+        if ( dword_44EC64 )
+        {
+          ++v28;
+          TGdiObject::~TGdiObject(v31);
+          operator delete(v31);
+          v27 = 120;
+        }
+        v30 = (TFont *)operator new(5u);
+        if ( v30 )
+        {
+          v27 = 156;
+          v11 = 700;
+          if ( !v10 )
+            v11 = 400;
+          TFont::TFont(
+            v30,
+            *(const char **)(*((_DWORD *)a3 + 4) + 2),
+            -*((_DWORD *)a3 + 1),
+            0,
+            0,
+            0,
+            v11,
+            0,
+            v20,
+            v19,
+            v18,
+            1u,
+            0,
+            0,
+            0);
+          v27 = 144;
+          v12 = v30;
+        }
+        else
+        {
+          v12 = 0;
+        }
+        dword_44EC64 = (int)v12;
+        dword_44EC68 = *((_DWORD *)a3 + 3);
+      }
+      break;
+    case 41:
+      if ( a3 )
+        sub_428AAD((int)a1, (string *)(a3 + 26), (string *)(a3 + 4), *((_WORD *)a3 + 12), *(_DWORD *)(a3 + 30), a3 + 8);
+      break;
+    case 45:
+      if ( a3 )
+      {
+        *((_BYTE *)a1 + 424) = 1;
+        sub_42999A(a1, (int)(a3 + 4));
+        v29 = a3;
+        ++v28;
+        string::~string((string *)((char *)v29 + 4));
+        operator delete(v29);
+        v27 = 168;
+        *((_BYTE *)a1 + 424) = 0;
+        sub_42EC92(a1, 1);
+      }
+      break;
+    case 46:
+      if ( a3 )
+      {
+        sub_429F02((int)a1, (int)(a3 + 4));
+        ++v28;
+        string::~string((string *)(a3 + 4));
+        operator delete(a3);
+        v27 = 192;
+      }
+      break;
+    case 47:
+      if ( *(_DWORD *)((char *)a1 + 170) )
+        (*(void (__cdecl **)(_DWORD))(**(_DWORD **)((char *)a1 + 170) + 48))(*(_DWORD *)((char *)a1 + 170));
+      break;
+    case 48:
+      if ( *(_DWORD *)((char *)a1 + 162) )
+        (*(void (__cdecl **)(_DWORD))(**(_DWORD **)((char *)a1 + 162) + 48))(*(_DWORD *)((char *)a1 + 162));
+      break;
+    default:
+      return 0;
+  }
+  return 0;
+}
+// 43212A: conditional instruction was optimized away because esi.4!=0
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 44EC64: using guessed type int dword_44EC64;
+// 44EC68: using guessed type int dword_44EC68;
+// 44ECA1: using guessed type int dword_44ECA1;
+// 44ECCE: using guessed type int dword_44ECCE[8];
+
+
+
+//-------------------------------------------------------------------------
+// Function 728
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_4321C9(int a1, int a2, int a3)
+{
+  int v3; // eax
+  int v4; // eax
+  struct tagPOINT Point; // [esp+4h] [ebp-34h] BYREF
+  _DWORD v7[4]; // [esp+Ch] [ebp-2Ch] BYREF
+  __int16 v8; // [esp+1Ch] [ebp-1Ch]
+  int v9; // [esp+28h] [ebp-10h]
+  _BYTE v10[4]; // [esp+30h] [ebp-8h] BYREF
+  _BYTE v11[4]; // [esp+34h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( *(_DWORD *)(a1 + 260) )
+  {
+    v3 = *(_DWORD *)(a1 + 260);
+    if ( *(_DWORD *)(v3 + 4) )
+      *(_BYTE *)(*(_DWORD *)(v3 + 4) + 28) = 1;
+    *(_DWORD *)(*(_DWORD *)(a1 + 260) + 24) = 0;
+    GetCursorPos(&Point);
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      xerror::MakeString((xerror *)v11, aPrecondition_106, aGethandle_47, aCBc5IncludeOwl_51, 0x593u);
+      ++v9;
+      xmsg::xmsg((xmsg *)v10, (const string *)v11);
+      ++v9;
+      v8 = 12;
+      --v9;
+      string::~string((string *)v11);
+      v9 += 2;
+      v9 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v10, 0, sub_403BE0, 1u, 0, 0, 0, v7);
+    }
+    ScreenToClient(*(HWND *)(a1 + 12), &Point);
+    if ( !(*(unsigned __int8 (__cdecl **)(_DWORD, int, struct tagPOINT *))(**(_DWORD **)(a1 + 260) + 12))(
+            *(_DWORD *)(a1 + 260),
+            a3,
+            &Point) )
+      sub_4330F1(a1, &Point.x);
+    v4 = *(_DWORD *)(a1 + 260);
+    if ( *(_DWORD *)(v4 + 4) )
+      *(_BYTE *)(*(_DWORD *)(v4 + 4) + 28) = 0;
+  }
+  return 0;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 729
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_4322E7(int a1, int a2, int a3)
+{
+  int v3; // eax
+  int v4; // eax
+  struct tagPOINT Point; // [esp+4h] [ebp-34h] BYREF
+  _DWORD v7[4]; // [esp+Ch] [ebp-2Ch] BYREF
+  __int16 v8; // [esp+1Ch] [ebp-1Ch]
+  int v9; // [esp+28h] [ebp-10h]
+  _BYTE v10[4]; // [esp+30h] [ebp-8h] BYREF
+  _BYTE v11[4]; // [esp+34h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( *(_DWORD *)(a1 + 256) )
+  {
+    v3 = *(_DWORD *)(a1 + 256);
+    if ( *(_DWORD *)(v3 + 4) )
+      *(_BYTE *)(*(_DWORD *)(v3 + 4) + 28) = 1;
+    *(_DWORD *)(*(_DWORD *)(a1 + 256) + 24) = 0;
+    GetCursorPos(&Point);
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      xerror::MakeString((xerror *)v11, aPrecondition_107, aGethandle_48, aCBc5IncludeOwl_52, 0x593u);
+      ++v9;
+      xmsg::xmsg((xmsg *)v10, (const string *)v11);
+      ++v9;
+      v8 = 12;
+      --v9;
+      string::~string((string *)v11);
+      v9 += 2;
+      v9 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v10, 0, sub_403BE0, 1u, 0, 0, 0, v7);
+    }
+    ScreenToClient(*(HWND *)(a1 + 12), &Point);
+    if ( !(*(unsigned __int8 (__cdecl **)(_DWORD, int, struct tagPOINT *))(**(_DWORD **)(a1 + 256) + 12))(
+            *(_DWORD *)(a1 + 256),
+            a3,
+            &Point) )
+    {
+      if ( *(_DWORD *)(a1 + 252) )
+        sub_42D858(*(_DWORD *)(a1 + 252), 1);
+      sub_4330F1(a1, &Point.x);
+    }
+    v4 = *(_DWORD *)(a1 + 256);
+    if ( *(_DWORD *)(v4 + 4) )
+      *(_BYTE *)(*(_DWORD *)(v4 + 4) + 28) = 0;
+  }
+  return 0;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 754
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+BOOL __cdecl sub_432FD3(int a1)
+{
+  BOOL result; // eax
+  _DWORD v2[4]; // [esp+4h] [ebp-2Ch] BYREF
+  __int16 v3; // [esp+14h] [ebp-1Ch]
+  int v4; // [esp+20h] [ebp-10h]
+  _BYTE v5[4]; // [esp+28h] [ebp-8h] BYREF
+  _BYTE v6[4]; // [esp+2Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  result = *(_DWORD *)(a1 + 256) && *(_DWORD *)(*(_DWORD *)(a1 + 256) + 77);
+  if ( result )
+  {
+    (*(void (__cdecl **)(_DWORD))(**(_DWORD **)(a1 + 256) + 20))(*(_DWORD *)(a1 + 256));
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      xerror::MakeString((xerror *)v6, aPrecondition_112, aGethandle_50, aCBc5IncludeOwl_54, 0x7A5u);
+      ++v4;
+      xmsg::xmsg((xmsg *)v5, (const string *)v6);
+      ++v4;
+      v3 = 12;
+      --v4;
+      string::~string((string *)v6);
+      v4 += 2;
+      v4 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v5, 0, sub_403BE0, 1u, 0, 0, 0, v2);
+    }
+    return UpdateWindow(*(HWND *)(a1 + 12));
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 757
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+void __cdecl sub_433107(int a1)
+{
+  struct tagPOINT Point; // [esp+4h] [ebp-34h] BYREF
+  _DWORD v2[4]; // [esp+Ch] [ebp-2Ch] BYREF
+  __int16 v3; // [esp+1Ch] [ebp-1Ch]
+  int v4; // [esp+28h] [ebp-10h]
+  _BYTE v5[4]; // [esp+30h] [ebp-8h] BYREF
+  _BYTE v6[4]; // [esp+34h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  GetCursorPos(&Point);
+  if ( !*(_DWORD *)(a1 + 12) )
+  {
+    xerror::MakeString((xerror *)v6, aPrecondition_113, aGethandle_51, aCBc5IncludeOwl_55, 0x593u);
+    ++v4;
+    xmsg::xmsg((xmsg *)v5, (const string *)v6);
+    ++v4;
+    v3 = 12;
+    --v4;
+    string::~string((string *)v6);
+    v4 += 2;
+    v4 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v5, 0, sub_403BE0, 1u, 0, 0, 0, v2);
+  }
+  ScreenToClient(*(HWND *)(a1 + 12), &Point);
+  sub_4330F1(a1, &Point.x);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 761
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_433314(int a1, _BOOL1 a2)
+{
+  int result; // eax
+  _DWORD v4[4]; // [esp+Ch] [ebp-34h] BYREF
+  __int16 v5; // [esp+1Ch] [ebp-24h]
+  int v6; // [esp+28h] [ebp-18h]
+  _BYTE v7[4]; // [esp+30h] [ebp-10h] BYREF
+  _BYTE v8[4]; // [esp+34h] [ebp-Ch] BYREF
+  _BYTE v9[4]; // [esp+38h] [ebp-8h] BYREF
+  _BYTE v10[4]; // [esp+3Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  result = a1 + 280;
+  if ( *(_DWORD *)(a1 + 280) < *(_DWORD *)(a1 + 288) && *(_DWORD *)(a1 + 284) < *(_DWORD *)(a1 + 292) )
+  {
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      xerror::MakeString((xerror *)v10, aPrecondition_114, aGethandle_52, aCBc5IncludeOwl_56, 0x773u);
+      ++v6;
+      xmsg::xmsg((xmsg *)v9, (const string *)v10);
+      ++v6;
+      v5 = 12;
+      --v6;
+      string::~string((string *)v10);
+      v6 += 2;
+      v6 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v9, 0, sub_403BE0, 1u, 0, 0, 0, v4);
+    }
+    InvalidateRect(*(HWND *)(a1 + 12), (const RECT *)(a1 + 280), a2);
+    *(_DWORD *)(a1 + 280) = 0;
+    *(_DWORD *)(a1 + 284) = 0;
+    *(_DWORD *)(a1 + 288) = 0;
+    *(_DWORD *)(a1 + 292) = 0;
+    if ( !*(_DWORD *)(a1 + 12) )
+    {
+      v5 = 24;
+      xerror::MakeString((xerror *)v8, aPrecondition_115, aGethandle_53, aCBc5IncludeOwl_57, 0x7A5u);
+      ++v6;
+      xmsg::xmsg((xmsg *)v7, (const string *)v8);
+      ++v6;
+      v5 = 36;
+      --v6;
+      string::~string((string *)v8);
+      v5 = 24;
+      v6 += 2;
+      v6 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v7, 0, sub_403BE0, 1u, 0, 0, 0, v4);
+    }
+    return UpdateWindow(*(HWND *)(a1 + 12));
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 838
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+void __cdecl sub_43803E(TApplication *a1)
+{
+  int v1; // ecx
+  int *v2; // eax
+  int v3; // ebx
+  _BOOL1 v4; // cl
+  int *v5; // edx
+  const char *v6; // eax
+  _BOOL1 v7; // bl
+  UINT v8; // esi
+  _BYTE v9[16]; // [esp+14h] [ebp-F4h] BYREF
+  __int16 v10; // [esp+24h] [ebp-E4h]
+  int v11; // [esp+30h] [ebp-D8h]
+  _BYTE v12[4]; // [esp+38h] [ebp-D0h] BYREF
+  _BYTE v13[4]; // [esp+3Ch] [ebp-CCh] BYREF
+  int v14; // [esp+40h] [ebp-C8h]
+  _BYTE v15[4]; // [esp+44h] [ebp-C4h] BYREF
+  _BYTE v16[4]; // [esp+48h] [ebp-C0h] BYREF
+  _BYTE v17[4]; // [esp+4Ch] [ebp-BCh] BYREF
+  _BYTE v18[4]; // [esp+50h] [ebp-B8h] BYREF
+  int v19[3]; // [esp+54h] [ebp-B4h] BYREF
+  int v20; // [esp+60h] [ebp-A8h]
+  TGauge *v21; // [esp+6Dh] [ebp-9Bh]
+
+  __InitExceptBlockLDTC();
+  TApplication::InitInstance(a1);
+  v10 = 8;
+  if ( *(_DWORD *)((char *)a1 + 102) )
+    v1 = **(_DWORD **)((char *)a1 + 102);
+  else
+    v1 = *(_DWORD *)((char *)a1 + 102);
+  sub_42C4B4(v19, 0, v1, 1100, 0);
+  v11 += 5;
+  v10 = 20;
+  (*(void (__cdecl **)(int *))(v20 + 12))(v19);
+  sub_426184((int)byte_44EC10, (int)a1, v21);
+  (*(void (__cdecl **)(int *, int))(v20 + 36))(v19, 2);
+  if ( !(*(unsigned __int8 (__cdecl **)(int *))(dword_44EC9D + 4))(&dword_44EC70) )
+  {
+    sub_404ED9(0x6Au);
+    v2 = *(int **)((char *)a1 + 102);
+    v3 = *v2;
+    if ( !*(_DWORD *)(*v2 + 12) )
+    {
+      v10 = 32;
+      xerror::MakeString((xerror *)v18, aPrecondition_134, aGethandle_59, aCBc5IncludeOwl_64, 0x53Cu);
+      ++v11;
+      xmsg::xmsg((xmsg *)v17, (const string *)v18);
+      ++v11;
+      v10 = 44;
+      --v11;
+      string::~string((string *)v18);
+      v10 = 32;
+      v11 += 2;
+      v11 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v17, 0, sub_403BE0, 1u, 0, 0, 0, v9);
+    }
+LABEL_7:
+    PostMessageA(*(HWND *)(v3 + 12), 0x12u, 0, 0);
+    v11 -= 5;
+    sub_42C654((TDialog *)v19, 2);
+    return;
+  }
+  v4 = *(_DWORD *)(dword_44EC95 + 6) && *(_DWORD *)(dword_44EC99 + 6);
+  if ( v4 && !sub_438675() )
+  {
+    sub_404F9C(0x75u, *(_DWORD *)(dword_44EC95 + 2));
+    v5 = *(int **)((char *)a1 + 102);
+    v3 = *v5;
+    if ( !*(_DWORD *)(*v5 + 12) )
+    {
+      v10 = 56;
+      xerror::MakeString((xerror *)v16, aPrecondition_135, aGethandle_60, aCBc5IncludeOwl_65, 0x53Cu);
+      ++v11;
+      xmsg::xmsg((xmsg *)v15, (const string *)v16);
+      ++v11;
+      v10 = 68;
+      --v11;
+      string::~string((string *)v16);
+      v10 = 56;
+      v11 += 2;
+      v11 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v15, 0, sub_403BE0, 1u, 0, 0, 0, v9);
+    }
+    goto LABEL_7;
+  }
+  TWindow::SetCaption(**(TWindow ***)((char *)a1 + 102), *(const char **)(dword_44ECA1 + 2));
+  v14 = operator new(0x1B5u);
+  if ( v14 )
+  {
+    v10 = 92;
+    if ( *(_DWORD *)((char *)a1 + 102) )
+      v6 = **(const char ***)((char *)a1 + 102);
+    else
+      v6 = *(const char **)((char *)a1 + 102);
+    sub_42D8B6(v14, 0, v6, *(TModule **)(dword_44ECA1 + 2));
+    v10 = 80;
+  }
+  (*(void (__cdecl **)(TWindow *))(*((_DWORD *)dword_44A9F0 + 2) + 8))(dword_44A9F0);
+  v7 = (*(unsigned __int8 (__cdecl **)(int *))(dword_44ECB9 + 4))(&dword_44ECB9) && byte_44ECCD;
+  v8 = dword_446A9C;
+  if ( !*((_DWORD *)dword_44A9F0 + 3) )
+  {
+    v10 = 104;
+    xerror::MakeString((xerror *)v13, aPrecondition_136, aGethandle_61, aCBc5IncludeOwl_66, 0x53Cu);
+    ++v11;
+    xmsg::xmsg((xmsg *)v12, (const string *)v13);
+    ++v11;
+    v10 = 116;
+    --v11;
+    string::~string((string *)v13);
+    v10 = 104;
+    v11 += 2;
+    v11 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v12, 0, sub_403BE0, 1u, 0, 0, 0, v9);
+  }
+  PostMessageA(*((HWND *)dword_44A9F0 + 3), v8, v7, 0);
+  sub_4357CF(dword_44A9F0);
+  v11 -= 5;
+  sub_42C654((TDialog *)v19, 2);
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 44EC70: using guessed type int dword_44EC70;
+// 44EC95: using guessed type int dword_44EC95;
+// 44EC99: using guessed type int dword_44EC99;
+// 44EC9D: using guessed type int dword_44EC9D;
+// 44ECA1: using guessed type int dword_44ECA1;
+// 44ECB9: using guessed type int dword_44ECB9;
+// 44ECCD: using guessed type char byte_44ECCD;
+
+
+
+//-------------------------------------------------------------------------
+// Function 842
+// Fichier identifié: window.h
+//-------------------------------------------------------------------------
+
+
+int sub_43883B()
+{
+  int result; // eax
+  WPARAM v1; // ebx
+  UINT v2; // esi
+  _DWORD v3[4]; // [esp+8h] [ebp-2Ch] BYREF
+  __int16 v4; // [esp+18h] [ebp-1Ch]
+  int v5; // [esp+24h] [ebp-10h]
+  _BYTE v6[4]; // [esp+2Ch] [ebp-8h] BYREF
+  _BYTE v7[4]; // [esp+30h] [ebp-4h] BYREF
+
+  result = __InitExceptBlockLDTC();
+  if ( dword_44A9F0 )
+  {
+    v1 = dword_4437A0 == 0;
+    v2 = dword_446A9C;
+    if ( !*((_DWORD *)dword_44A9F0 + 3) )
+    {
+      xerror::MakeString((xerror *)v7, aPrecondition_137, aGethandle_62, aCBc5IncludeOwl_67, 0x53Cu);
+      ++v5;
+      xmsg::xmsg((xmsg *)v6, (const string *)v7);
+      ++v5;
+      v4 = 12;
+      --v5;
+      string::~string((string *)v7);
+      v5 += 2;
+      v5 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v6, 0, sub_403BE0, 1u, 0, 0, 0, v3);
+    }
+    return PostMessageA(*((HWND *)dword_44A9F0 + 3), v2, v1, 0);
+  }
+  return result;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 4437A0: using guessed type int dword_4437A0;
+

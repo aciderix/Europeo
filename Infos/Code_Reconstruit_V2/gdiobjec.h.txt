@@ -1,0 +1,460 @@
+
+//-------------------------------------------------------------------------
+// Function 609
+// Fichier identifié: gdiobjec.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_4275F6(int a1, int a2, int a3, const void *a4, int a5)
+{
+  void *v6; // ecx
+  TBitmap *v7; // ecx
+  TBitmap *v8; // eax
+  void *v9; // edx
+  TBitmap *v10; // ecx
+  TBitmap *v11; // eax
+  int v12; // eax
+  int v13; // eax
+  long double v14; // fst7
+  int v15; // eax
+  int v16; // [esp+8h] [ebp-BCh]
+  int v17[4]; // [esp+18h] [ebp-ACh] BYREF
+  int v18[2]; // [esp+28h] [ebp-9Ch] BYREF
+  int v19; // [esp+30h] [ebp-94h]
+  int v20; // [esp+34h] [ebp-90h]
+  _DWORD v21[4]; // [esp+38h] [ebp-8Ch] BYREF
+  __int16 v22; // [esp+48h] [ebp-7Ch]
+  int v23; // [esp+54h] [ebp-70h]
+  _BYTE v24[4]; // [esp+5Ch] [ebp-68h] BYREF
+  _BYTE v25[4]; // [esp+60h] [ebp-64h] BYREF
+  int v26[4]; // [esp+64h] [ebp-60h] BYREF
+  HDC v27[9]; // [esp+74h] [ebp-50h] BYREF
+  TBitmap *v28; // [esp+9Ch] [ebp-28h]
+  TBitmap *v29; // [esp+A0h] [ebp-24h]
+  _BYTE v30[4]; // [esp+A4h] [ebp-20h] BYREF
+  TBitmap *v31; // [esp+ACh] [ebp-18h]
+  TBitmap *v32; // [esp+B0h] [ebp-14h]
+  _BYTE v33[4]; // [esp+B4h] [ebp-10h] BYREF
+  int v34[3]; // [esp+B8h] [ebp-Ch] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !(*(int (__cdecl **)(int))(*(_DWORD *)(a1 + 8) + 124))(a1) || !*(_DWORD *)(a1 + 134) )
+    return 0;
+  string::string((string *)v34);
+  ++v23;
+  v20 = 0;
+  v22 = 32;
+  if ( (byte_44EC4C & 0x10) != 0 )
+    v6 = &unk_44EC28;
+  else
+    v6 = &unk_44EC24;
+  sub_40411C((string *)v33, a2, *(LPCSTR *)(*(_DWORD *)v6 + 2));
+  string::assign((string *)v34, (const string *)v33, 0, 0xFFFFFFFF);
+  string::~string((string *)v33);
+  if ( sub_40453C((int)v34) )
+  {
+    v22 = 44;
+    if ( dword_44EC54 )
+    {
+      v32 = (TBitmap *)operator new(0xDu);
+      if ( v32 )
+      {
+        sub_41D5D3(v32, (int)v34, dword_44EC54);
+        v22 = 56;
+        v7 = v32;
+      }
+      else
+      {
+        v7 = 0;
+      }
+      v20 = (int)v7;
+    }
+    else
+    {
+      v31 = (TBitmap *)operator new(0xDu);
+      if ( v31 )
+      {
+        sub_41D5D3(v31, (int)v34, dword_44EC50);
+        v22 = 80;
+        v8 = v31;
+      }
+      else
+      {
+        v8 = 0;
+      }
+      v20 = (int)v8;
+    }
+    v22 = 20;
+  }
+  v19 = 0;
+  v22 = 128;
+  if ( (byte_44EC4C & 0x10) != 0 )
+    v9 = &unk_44EC28;
+  else
+    v9 = &unk_44EC24;
+  sub_40411C((string *)v30, a5, *(LPCSTR *)(*(_DWORD *)v9 + 2));
+  string::assign((string *)v34, (const string *)v30, 0, 0xFFFFFFFF);
+  string::~string((string *)v30);
+  if ( sub_40453C((int)v34) )
+  {
+    v22 = 140;
+    if ( dword_44EC54 )
+    {
+      v29 = (TBitmap *)operator new(0xDu);
+      if ( v29 )
+      {
+        sub_41D5D3(v29, (int)v34, dword_44EC54);
+        v22 = 152;
+        v10 = v29;
+      }
+      else
+      {
+        v10 = 0;
+      }
+      v19 = (int)v10;
+    }
+    else
+    {
+      v28 = (TBitmap *)operator new(0xDu);
+      if ( v28 )
+      {
+        sub_41D5D3(v28, (int)v34, dword_44EC50);
+        v22 = 176;
+        v11 = v28;
+      }
+      else
+      {
+        v11 = 0;
+      }
+      v19 = (int)v11;
+    }
+    v22 = 20;
+  }
+  if ( v20 )
+  {
+    v22 = 224;
+    TMemoryDC::TMemoryDC((TMemoryDC *)v27, *(const TDC **)(a1 + 134));
+    v23 += 3;
+    v22 = 236;
+    if ( dword_44EC54 )
+    {
+      TDC::SelectObject((TDC *)v27, dword_44EC54, 0);
+      RealizePalette(v27[0]);
+    }
+    qmemcpy(v17, a4, sizeof(v17));
+    if ( !v17[2] )
+    {
+      v12 = (*(int (__cdecl **)(int))(*(_DWORD *)(v20 + 5) + 4))(v20);
+      v17[2] = v17[0] + v12;
+    }
+    if ( !v17[3] )
+    {
+      v13 = (*(int (__cdecl **)(int))(*(_DWORD *)(v20 + 5) + 8))(v20);
+      v17[3] = v17[1] + v13;
+    }
+    sub_433569(v18, a1);
+    v14 = sub_43353D(a1);
+    sub_405119((TRect *)v17, v14, v18);
+    sub_4332A5((_DWORD *)a1, v17);
+    if ( dword_44EC54 )
+    {
+      TDC::SelectObject(*(TDC **)(a1 + 134), dword_44EC54, 0);
+      RealizePalette(**(HDC **)(a1 + 134));
+    }
+    v22 = 248;
+    v26[0] = (int)&off_4449DC;
+    v26[1] = v20;
+    v26[2] = v19;
+    v26[3] = 3;
+    if ( !v20 )
+    {
+      xerror::MakeString((xerror *)v25, aPrecondition_72, aImg, aGdiobjecH, 0x72u);
+      ++v23;
+      xmsg::xmsg((xmsg *)v24, (const string *)v25);
+      ++v23;
+      v22 = 260;
+      --v23;
+      string::~string((string *)v25);
+      v22 = 248;
+      v23 += 2;
+      v23 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v24, 0, sub_403BE0, 1u, 0, 0, 0, v21);
+    }
+    ++v23;
+    v22 = 236;
+    LOBYTE(v15) = sub_41DB0D((int)v26, *(TDC **)(a1 + 134), v17);
+    v16 = v15;
+    --v23;
+    sub_41DA7B(v26, 2);
+    v23 -= 3;
+    TMemoryDC::~TMemoryDC((TMemoryDC *)v27);
+    --v23;
+    string::~string((string *)v34);
+    return v16;
+  }
+  else
+  {
+    string::~string((string *)v34);
+    return 0;
+  }
+}
+// 427AE8: variable 'v15' is possibly undefined
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 4449DC: using guessed type int (__cdecl *off_4449DC)(void *, char);
+// 44EC4C: using guessed type char byte_44EC4C;
+
+
+
+//-------------------------------------------------------------------------
+// Function 695
+// Fichier identifié: gdiobjec.h
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_42D8B6(int a1, int a2, const char *a3, TModule *a4)
+{
+  void *v4; // eax
+  TBitmap *v5; // ecx
+  TBitmap *v6; // ebx
+  TBitmap *v7; // esi
+  int v8; // ecx
+  TBitmap *v9; // ebx
+  TBitmap *v10; // esi
+  int v11; // ecx
+  _DWORD v13[4]; // [esp+18h] [ebp-50h] BYREF
+  __int16 v14; // [esp+28h] [ebp-40h]
+  int v15; // [esp+34h] [ebp-34h]
+  TBitmap *v16; // [esp+3Ch] [ebp-2Ch]
+  TBitmap *v17; // [esp+40h] [ebp-28h]
+  _DWORD *v18; // [esp+44h] [ebp-24h]
+  _BYTE v19[4]; // [esp+48h] [ebp-20h] BYREF
+  _BYTE v20[4]; // [esp+4Ch] [ebp-1Ch] BYREF
+  TBitmap *v21; // [esp+50h] [ebp-18h]
+  TBitmap *v22; // [esp+54h] [ebp-14h]
+  _DWORD *v23; // [esp+58h] [ebp-10h]
+  _BYTE v24[4]; // [esp+5Ch] [ebp-Ch] BYREF
+  _BYTE v25[4]; // [esp+60h] [ebp-8h] BYREF
+  TBitmap *v26; // [esp+64h] [ebp-4h]
+
+  __InitExceptBlockLDTC();
+  v14 = 8;
+  if ( !a2 )
+  {
+    *(_DWORD *)a1 = a1 + 429;
+    *(_DWORD *)(a1 + 4) = a1 + 433;
+    *(_DWORD *)(a1 + 425) = 0;
+    *(_DWORD *)(a1 + 429) = &off_444030;
+    *(_DWORD *)(a1 + 433) = &off_444020;
+    v15 += 2;
+  }
+  *(_DWORD *)(*(_DWORD *)a1 - 4) -= 291;
+  TWindow::TWindow((TWindow *)a1, (TWindow *)1, a3, a4);
+  ++v15;
+  *(_DWORD *)(*(_DWORD *)a1 - 4) += 291;
+  *(_DWORD *)(a1 + 8) = &off_44D16C;
+  **(_DWORD **)a1 = &off_44D1FC;
+  **(_DWORD **)(a1 + 4) = &off_44D208;
+  *(_DWORD *)(a1 + 134) = 0;
+  *(_DWORD *)(a1 + 138) = 0;
+  sub_435C88((_DWORD *)(a1 + 142), 128);
+  sub_41F302((_DWORD *)(a1 + 182), 0);
+  v15 += 19;
+  *(_DWORD *)(a1 + 264) = 0;
+  *(_DWORD *)(a1 + 268) = 0;
+  *(_DWORD *)(a1 + 272) = 0;
+  *(_DWORD *)(a1 + 276) = 0;
+  *(_DWORD *)(a1 + 280) = 0;
+  *(_DWORD *)(a1 + 284) = 0;
+  *(_DWORD *)(a1 + 288) = 0;
+  *(_DWORD *)(a1 + 292) = 0;
+  *(_DWORD *)(a1 + 380) = 0;
+  *(_DWORD *)(a1 + 385) = off_43B500;
+  v4 = (void *)operator new[](4u);
+  *(_DWORD *)(a1 + 389) = _vector_new_ldtc_(v4, 4u, 1u, 1u, sub_4358A4, 0, 0);
+  *(_DWORD *)(a1 + 393) = 1;
+  ++v15;
+  *(_DWORD *)(a1 + 385) = off_44D134;
+  v15 += 2;
+  *(_DWORD *)(a1 + 385) = off_44D150;
+  *(_DWORD *)(a1 + 397) = 0;
+  *(_DWORD *)(a1 + 401) = 5;
+  v15 += 7;
+  *(_DWORD *)(a1 + 405) = 2;
+  v15 += 18;
+  *(_DWORD *)(a1 + 409) = &off_4449CC;
+  v15 += 8;
+  *(_DWORD *)(a1 + 413) = 0;
+  *(_DWORD *)(a1 + 417) = 0;
+  ++v15;
+  *(_BYTE *)(a1 + 421) = 0;
+  *(_BYTE *)(a1 + 422) = 0;
+  *(_BYTE *)(a1 + 423) = 0;
+  *(_BYTE *)(a1 + 424) = 0;
+  *(_DWORD *)(a1 + 92) = TColor::Black;
+  *(_DWORD *)(a1 + 24) = 1375731712;
+  *(_DWORD *)(a1 + 28) = 0;
+  *(_DWORD *)(a1 + 36) = 0;
+  *(_DWORD *)(a1 + 32) = 0;
+  *(_DWORD *)(a1 + 40) = GetSystemMetrics(TUIMetric::CxScreen);
+  *(_DWORD *)(a1 + 44) = GetSystemMetrics(TUIMetric::CyScreen);
+  *(_DWORD *)(a1 + 60) = 2;
+  *(_DWORD *)(a1 + 158) = 0;
+  *(_DWORD *)(a1 + 162) = 0;
+  *(_DWORD *)(a1 + 166) = 0;
+  *(_DWORD *)(a1 + 170) = 0;
+  *(_DWORD *)(a1 + 256) = 0;
+  *(_DWORD *)(a1 + 260) = 0;
+  *(_DWORD *)(a1 + 376) = 0;
+  *(_DWORD *)(a1 + 174) = 0;
+  *(_DWORD *)(a1 + 178) = 0;
+  *(_DWORD *)(a1 + 248) = 0;
+  *(_DWORD *)(a1 + 252) = 0;
+  sub_4331CB((_DWORD *)a1);
+  if ( !dword_446AA0 )
+  {
+    v26 = (TBitmap *)operator new(0xDu);
+    if ( v26 )
+    {
+      v14 = 32;
+      sub_41D4F4(v26, *(_DWORD *)(dword_44ECF1 + 8), 201, dword_44EC50);
+      v14 = 20;
+      v5 = v26;
+    }
+    else
+    {
+      v5 = 0;
+    }
+    dword_446AA0 = (int)v5;
+  }
+  if ( !dword_446AA4 )
+  {
+    v23 = (_DWORD *)operator new(0x10u);
+    if ( v23 )
+    {
+      v14 = 56;
+      v22 = (TBitmap *)operator new(0xDu);
+      if ( v22 )
+      {
+        v14 = 68;
+        sub_41D4F4(v22, *(_DWORD *)(dword_44ECF1 + 8), 204, dword_44EC50);
+        v14 = 56;
+        v6 = v22;
+      }
+      else
+      {
+        v6 = 0;
+      }
+      v21 = (TBitmap *)operator new(0xDu);
+      if ( v21 )
+      {
+        v14 = 80;
+        sub_41D4F4(v21, *(_DWORD *)(dword_44ECF1 + 8), 202, dword_44EC50);
+        v14 = 56;
+        v7 = v21;
+      }
+      else
+      {
+        v7 = 0;
+      }
+      *v23 = &off_4449DC;
+      v23[1] = v7;
+      v23[2] = v6;
+      v23[3] = 3;
+      if ( !v23[1] )
+      {
+        xerror::MakeString((xerror *)v25, aPrecondition_87, aImg_2, aGdiobjecH_1, 0x72u);
+        ++v15;
+        xmsg::xmsg((xmsg *)v24, (const string *)v25);
+        ++v15;
+        v14 = 92;
+        --v15;
+        string::~string((string *)v25);
+        v14 = 56;
+        v15 += 2;
+        v15 += 3;
+        _ThrowExceptionLDTC(stru_403B88, v24, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+      }
+      v14 = 44;
+      v8 = (int)v23;
+    }
+    else
+    {
+      v8 = 0;
+    }
+    dword_446AA4 = v8;
+  }
+  if ( !dword_446AA8 )
+  {
+    v18 = (_DWORD *)operator new(0x10u);
+    if ( v18 )
+    {
+      v14 = 116;
+      v17 = (TBitmap *)operator new(0xDu);
+      if ( v17 )
+      {
+        v14 = 128;
+        sub_41D4F4(v17, *(_DWORD *)(dword_44ECF1 + 8), 205, dword_44EC50);
+        v14 = 116;
+        v9 = v17;
+      }
+      else
+      {
+        v9 = 0;
+      }
+      v16 = (TBitmap *)operator new(0xDu);
+      if ( v16 )
+      {
+        v14 = 140;
+        sub_41D4F4(v16, *(_DWORD *)(dword_44ECF1 + 8), 203, dword_44EC50);
+        v14 = 116;
+        v10 = v16;
+      }
+      else
+      {
+        v10 = 0;
+      }
+      *v18 = &off_4449DC;
+      v18[1] = v10;
+      v18[2] = v9;
+      v18[3] = 3;
+      if ( !v18[1] )
+      {
+        xerror::MakeString((xerror *)v20, aPrecondition_88, aImg_1, aGdiobjecH_2, 0x72u);
+        ++v15;
+        xmsg::xmsg((xmsg *)v19, (const string *)v20);
+        ++v15;
+        v14 = 152;
+        --v15;
+        string::~string((string *)v20);
+        v14 = 116;
+        v15 += 2;
+        v15 += 3;
+        _ThrowExceptionLDTC(stru_403B88, v19, 0, sub_403BE0, 1u, 0, 0, 0, v13);
+      }
+      v14 = 104;
+      v11 = (int)v18;
+    }
+    else
+    {
+      v11 = 0;
+    }
+    dword_446AA8 = v11;
+  }
+  dword_44A9F0 = (TWindow *)a1;
+  return a1;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 439624: using guessed type TWindow *TWindow::TWindow(TWindow *__hidden this, TWindow *, const char *, TModule *);
+// 43B500: using guessed type int (__cdecl *off_43B500[2])(int);
+// 444020: using guessed type void (*off_444020)(TStreamableBase *__hidden this);
+// 444030: using guessed type _UNKNOWN *off_444030;
+// 4449CC: using guessed type int (__cdecl *off_4449CC)(void *, char);
+// 4449DC: using guessed type int (__cdecl *off_4449DC)(void *, char);
+// 446AA0: using guessed type int dword_446AA0;
+// 44D134: using guessed type int (__cdecl *off_44D134[2])(int);
+// 44D150: using guessed type int (__cdecl *off_44D150[3])(int);
+// 44D16C: using guessed type int (__cdecl *off_44D16C)(TWindow *, int);
+// 44D1FC: using guessed type _UNKNOWN *off_44D1FC;
+// 44D208: using guessed type int (__cdecl *off_44D208)(int);
+// 44ECF1: using guessed type int dword_44ECF1;
+

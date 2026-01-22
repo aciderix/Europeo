@@ -1,0 +1,469 @@
+
+//-------------------------------------------------------------------------
+// Function 384
+// Fichier identifié: timernfx.cpp
+//-------------------------------------------------------------------------
+
+
+_DWORD *__cdecl sub_418E04(_DWORD *a1, UINT a2)
+{
+  struct timecaps_tag *p_ptc; // eax
+  struct timecaps_tag ptc; // [esp+0h] [ebp-34h] BYREF
+  _DWORD v5[4]; // [esp+8h] [ebp-2Ch] BYREF
+  __int16 v6; // [esp+18h] [ebp-1Ch]
+  int v7; // [esp+24h] [ebp-10h]
+  _BYTE v8[4]; // [esp+2Ch] [ebp-8h] BYREF
+  _BYTE v9[4]; // [esp+30h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  v6 = 8;
+  *a1 = &off_4436C8;
+  a1[1] = 0;
+  if ( !a2 )
+  {
+    v6 = 20;
+    xerror::MakeString((xerror *)v9, aPrecondition_35, aResolution0, aTimernfxCpp, 0x26u);
+    ++v7;
+    xmsg::xmsg((xmsg *)v8, (const string *)v9);
+    ++v7;
+    v6 = 32;
+    --v7;
+    string::~string((string *)v9);
+    v6 = 20;
+    v7 += 2;
+    v7 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v8, 0, sub_403BE0, 1u, 0, 0, 0, v5);
+  }
+  if ( !timeGetDevCaps(&ptc, 8u) )
+  {
+    if ( ptc.wPeriodMin <= a2 )
+      p_ptc = (struct timecaps_tag *)&a2;
+    else
+      p_ptc = &ptc;
+    if ( p_ptc->wPeriodMin >= ptc.wPeriodMax )
+      p_ptc = (struct timecaps_tag *)&ptc.wPeriodMax;
+    a1[1] = p_ptc->wPeriodMin;
+    if ( timeBeginPeriod(a1[1]) )
+      a1[1] = 0;
+  }
+  return a1;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 4436C8: using guessed type int (__cdecl *off_4436C8)(void *, char);
+
+
+
+//-------------------------------------------------------------------------
+// Function 388
+// Fichier identifié: timernfx.cpp
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_418FDE(_DWORD *a1, _DWORD *a2)
+{
+  int result; // eax
+  _DWORD v3[4]; // [esp+8h] [ebp-2Ch] BYREF
+  __int16 v4; // [esp+18h] [ebp-1Ch]
+  int v5; // [esp+24h] [ebp-10h]
+  _BYTE v6[4]; // [esp+2Ch] [ebp-8h] BYREF
+  _BYTE v7[4]; // [esp+30h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( a1[6] )
+    (*(void (__cdecl **)(_DWORD *))(a1[5] + 16))(a1);
+  if ( !*a2 || !a2[1] )
+  {
+    v4 = 8;
+    xerror::MakeString((xerror *)v7, aCheck_8, aDataDelay0Data, aTimernfxCpp_0, 0x5Eu);
+    ++v5;
+    xmsg::xmsg((xmsg *)v6, (const string *)v7);
+    ++v5;
+    v4 = 20;
+    --v5;
+    string::~string((string *)v7);
+    v4 = 8;
+    v5 += 2;
+    v5 += 3;
+    _ThrowExceptionLDTC(stru_4068BF, v6, 0, sub_40690F, 1u, 0, 0, 0, v3);
+  }
+  *a1 = *a2;
+  a1[1] = a2[1];
+  a1[2] = a2[2];
+  a1[3] = a2[3];
+  result = a2[4];
+  a1[4] = result;
+  return result;
+}
+// 4068BF: using guessed type _tpidc stru_4068BF[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 391
+// Fichier identifié: timernfx.cpp
+//-------------------------------------------------------------------------
+
+
+_DWORD *__cdecl sub_41912A(_DWORD *a1, int a2, int a3)
+{
+  _DWORD v4[4]; // [esp+8h] [ebp-2Ch] BYREF
+  __int16 v5; // [esp+18h] [ebp-1Ch]
+  int v6; // [esp+24h] [ebp-10h]
+  _BYTE v7[4]; // [esp+2Ch] [ebp-8h] BYREF
+  _BYTE v8[4]; // [esp+30h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  v5 = 8;
+  *a1 = &off_443684;
+  if ( !a3 || !a2 )
+  {
+    v5 = 20;
+    xerror::MakeString((xerror *)v8, aPrecondition_36, aImgWnd, aTimernfxCpp_1, 0x94u);
+    ++v6;
+    xmsg::xmsg((xmsg *)v7, (const string *)v8);
+    ++v6;
+    v5 = 32;
+    --v6;
+    string::~string((string *)v8);
+    v5 = 20;
+    v6 += 2;
+    v6 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v7, 0, sub_403BE0, 1u, 0, 0, 0, v4);
+  }
+  a1[2] = a2;
+  a1[3] = a3;
+  a1[1] = 0;
+  a1[6] = 0;
+  (*(void (__cdecl **)(_DWORD *))(*a1 + 4))(a1);
+  return a1;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+// 443684: using guessed type int (__cdecl *off_443684)(void *, char);
+
+
+
+//-------------------------------------------------------------------------
+// Function 399
+// Fichier identifié: timernfx.cpp
+//-------------------------------------------------------------------------
+
+
+void __cdecl sub_419750(_DWORD *a1, TDC *a2, int *a3)
+{
+  _BOOL1 v3; // dl
+  int *v4; // edx
+  _BOOL1 v5; // cl
+  int v6; // ecx
+  int v7; // ecx
+  int v8; // ecx
+  int v9; // edx
+  int v10[4]; // [esp+Ch] [ebp-A8h] BYREF
+  _DWORD v11[4]; // [esp+1Ch] [ebp-98h] BYREF
+  int v12[5]; // [esp+2Ch] [ebp-88h] BYREF
+  int v13; // [esp+40h] [ebp-74h]
+  int *v14; // [esp+44h] [ebp-70h]
+  int *v15; // [esp+48h] [ebp-6Ch]
+  int v16; // [esp+4Ch] [ebp-68h]
+  int *v17; // [esp+50h] [ebp-64h]
+  int *v18; // [esp+54h] [ebp-60h]
+  int v19; // [esp+58h] [ebp-5Ch]
+  int *v20; // [esp+5Ch] [ebp-58h]
+  _BOOL1 v21; // [esp+62h] [ebp-52h]
+  _BOOL1 v22; // [esp+63h] [ebp-51h]
+  int v23[4]; // [esp+64h] [ebp-50h] BYREF
+  __int16 v24; // [esp+74h] [ebp-40h]
+  int v25; // [esp+80h] [ebp-34h]
+  HDC v26[9]; // [esp+88h] [ebp-2Ch] BYREF
+  char v27[4]; // [esp+ACh] [ebp-8h] BYREF
+  char v28[4]; // [esp+B0h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !a1[3] || !a1[2] )
+  {
+    v24 = 8;
+    xerror::MakeString((xerror *)v28, aPrecondition_38, aImageWindow, aTimernfxCpp_2, 0x11Cu);
+    ++v25;
+    xmsg::xmsg((xmsg *)v27, (const string *)v28);
+    ++v25;
+    v24 = 20;
+    --v25;
+    string::~string((string *)v28);
+    v24 = 8;
+    v25 += 2;
+    v25 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v27, 0, sub_403BE0, 1u, 0, 0, 0, v23);
+  }
+  if ( *(_DWORD *)((char *)a1 + 77) )
+  {
+    v3 = a3[2] > *(_DWORD *)(a1[3] + 13)
+      && *a3 < *(_DWORD *)(a1[3] + 21)
+      && a3[3] > *(_DWORD *)(a1[3] + 17)
+      && a3[1] < *(_DWORD *)(a1[3] + 25);
+    v22 = v3;
+    if ( v3 )
+    {
+      v4 = (int *)(a1[3] + 13);
+      v5 = *v4 < a3[2]
+        && *(_DWORD *)(a1[3] + 21) > *a3
+        && *(_DWORD *)(a1[3] + 17) < a3[3]
+        && *(_DWORD *)(a1[3] + 25) > a3[1];
+      v21 = v5;
+      if ( v5 )
+      {
+        v20 = v4 + 3;
+        if ( v4[3] >= a3[3] )
+          v6 = a3[3];
+        else
+          v6 = *v20;
+        v19 = v6;
+        v18 = a3 + 2;
+        v17 = v4 + 2;
+        if ( v4[2] >= a3[2] )
+          v7 = *v18;
+        else
+          v7 = *v17;
+        v16 = v7;
+        v15 = a3 + 1;
+        v14 = v4 + 1;
+        if ( v4[1] <= a3[1] )
+          v8 = *v15;
+        else
+          v8 = *v14;
+        v13 = v8;
+        if ( *v4 <= *a3 )
+          v9 = *a3;
+        else
+          v9 = *v4;
+        v12[4] = v9;
+        v11[0] = v9;
+        v11[1] = v13;
+        v11[2] = v16;
+        v11[3] = v19;
+      }
+      else
+      {
+        memset(v11, 0, sizeof(v11));
+      }
+      qmemcpy(v12, v11, 0x10u);
+      qmemcpy(v10, v12, sizeof(v10));
+      sub_405065((TRect *)v10, *(double *)(a1[3] + 29), (_DWORD *)(a1[3] + 13));
+      v24 = 32;
+      TMemoryDC::TMemoryDC((TMemoryDC *)v26, a2);
+      v25 += 3;
+      v24 = 44;
+      TMemoryDC::SelectObject((TMemoryDC *)v26, (const TBitmap *)a1[3]);
+      if ( StretchBlt(
+             *(HDC *)a2,
+             v12[0],
+             v12[1],
+             v12[2] - v12[0],
+             v12[3] - v12[1],
+             v26[0],
+             v10[0],
+             v10[1],
+             v10[2] - v10[0],
+             v10[3] - v10[1],
+             0xCC0020u) )
+      {
+        *(_DWORD *)((char *)a1 + 81) = *(_DWORD *)((char *)a1 + 77);
+        qmemcpy((char *)a1 + 61, (const void *)(a1[3] + 13), 0x10u);
+      }
+      else
+      {
+        (*(void (__cdecl **)(_DWORD *))(*a1 + 16))(a1);
+        sub_4194E7(a1);
+      }
+      v25 -= 3;
+      TMemoryDC::~TMemoryDC((TMemoryDC *)v26);
+    }
+  }
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+
+
+
+//-------------------------------------------------------------------------
+// Function 406
+// Fichier identifié: timernfx.cpp
+//-------------------------------------------------------------------------
+
+
+_DWORD *__cdecl sub_41A04F(_DWORD *a1, int a2, int a3)
+{
+  _DWORD v4[4]; // [esp+0h] [ebp-2Ch] BYREF
+  __int16 v5; // [esp+10h] [ebp-1Ch]
+  int v6; // [esp+1Ch] [ebp-10h]
+  _BYTE v7[4]; // [esp+24h] [ebp-8h] BYREF
+  _BYTE v8[4]; // [esp+28h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  v5 = 8;
+  sub_41912A(a1, a2, a3);
+  ++v6;
+  *a1 = &off_443638;
+  if ( !(*(int (__cdecl **)(_DWORD))(*(_DWORD *)(a1[3] + 5) + 4))(a1[3])
+    || !(*(int (__cdecl **)(_DWORD))(*(_DWORD *)(a1[3] + 5) + 8))(a1[3]) )
+  {
+    v5 = 20;
+    xerror::MakeString((xerror *)v8, aCheck_9, aImageWidthImag, aTimernfxCpp_3, 0x1BFu);
+    ++v6;
+    xmsg::xmsg((xmsg *)v7, (const string *)v8);
+    ++v6;
+    v5 = 32;
+    --v6;
+    string::~string((string *)v8);
+    v5 = 20;
+    v6 += 2;
+    v6 += 3;
+    _ThrowExceptionLDTC(stru_4068BF, v7, 0, sub_40690F, 1u, 0, 0, 0, v4);
+  }
+  a1[7] = 0;
+  a1[9] = 0;
+  a1[8] = 0;
+  return a1;
+}
+// 4068BF: using guessed type _tpidc stru_4068BF[1];
+// 443638: using guessed type int (__cdecl *off_443638)(void *, char);
+
+
+
+//-------------------------------------------------------------------------
+// Function 410
+// Fichier identifié: timernfx.cpp
+//-------------------------------------------------------------------------
+
+
+char __cdecl sub_41A28E(_DWORD *a1, int a2, int *a3)
+{
+  int v3; // eax
+  int v4; // ecx
+  int v5; // eax
+  int v6; // edx
+  int v7; // eax
+  int v8; // ecx
+  int v9; // eax
+  int v10; // edx
+  int v11; // edx
+  int v12; // esi
+  _DWORD *v13; // eax
+  int v14; // edi
+  const RECT *v15; // edi
+  int v16; // esi
+  _DWORD v18[4]; // [esp+Ch] [ebp-50h] BYREF
+  int v19; // [esp+1Ch] [ebp-40h]
+  int v20; // [esp+20h] [ebp-3Ch]
+  int v21; // [esp+24h] [ebp-38h]
+  _DWORD v22[4]; // [esp+28h] [ebp-34h] BYREF
+  __int16 v23; // [esp+38h] [ebp-24h]
+  int v24; // [esp+44h] [ebp-18h]
+  _BYTE v25[4]; // [esp+4Ch] [ebp-10h] BYREF
+  _BYTE v26[4]; // [esp+50h] [ebp-Ch] BYREF
+  _BYTE v27[4]; // [esp+54h] [ebp-8h] BYREF
+  _BYTE v28[4]; // [esp+58h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !a2 )
+  {
+    v23 = 8;
+    xerror::MakeString((xerror *)v28, aPrecondition_43, aTics, aTimernfxCpp_4, 0x1F2u);
+    ++v24;
+    xmsg::xmsg((xmsg *)v27, (const string *)v28);
+    ++v24;
+    v23 = 20;
+    --v24;
+    string::~string((string *)v28);
+    v23 = 8;
+    v24 += 2;
+    v24 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v27, 0, sub_403BE0, 1u, 0, 0, 0, v22);
+  }
+  if ( a3 )
+    a1[7] = sub_41A221(a1, a3);
+  a1[9] = 0;
+  a1[8] = 0;
+  if ( (a1[7] & 1) != 0 )
+  {
+    v3 = a1[4];
+    if ( !a1[1] && v3 )
+      v4 = v3 / 2;
+    else
+      v4 = 5;
+    a1[8] = -v4;
+  }
+  if ( (a1[7] & 4) != 0 )
+  {
+    v5 = a1[4];
+    if ( !a1[1] && v5 )
+      v6 = v5 / 2;
+    else
+      v6 = 5;
+    a1[8] = v6;
+  }
+  if ( (a1[7] & 2) != 0 )
+  {
+    v7 = a1[5];
+    if ( !a1[1] && v7 )
+      v8 = v7 / 2;
+    else
+      v8 = 5;
+    a1[9] = -v8;
+  }
+  if ( (a1[7] & 8) != 0 )
+  {
+    v9 = a1[5];
+    if ( !a1[1] && v9 )
+      v10 = v9 / 2;
+    else
+      v10 = 5;
+    a1[9] = v10;
+  }
+  a1[8] *= a2;
+  a1[9] *= a2;
+  sub_41A156(a1, a1 + 8);
+  if ( a1[8] || a1[9] )
+  {
+    v11 = a1[9];
+    v12 = a1[8];
+    v13 = (_DWORD *)(a1[3] + 13);
+    v14 = v11 + *(_DWORD *)(a1[3] + 25);
+    v21 = v12 + *(_DWORD *)(a1[3] + 21);
+    v20 = v13[1] + v11;
+    v19 = *v13 + v12;
+    v18[0] = v19;
+    v18[1] = v20;
+    v18[2] = v21;
+    v18[3] = v14;
+    sub_41DEBB(a1[3], v18);
+    v15 = (const RECT *)(a1[3] + 13);
+    v16 = a1[2];
+    if ( !*(_DWORD *)(v16 + 12) )
+    {
+      v23 = 32;
+      xerror::MakeString((xerror *)v26, aPrecondition_44, aGethandle_10, aCBc5IncludeOwl_10, 0x773u);
+      ++v24;
+      xmsg::xmsg((xmsg *)v25, (const string *)v26);
+      ++v24;
+      v23 = 44;
+      --v24;
+      string::~string((string *)v26);
+      v23 = 32;
+      v24 += 2;
+      v24 += 3;
+      _ThrowExceptionLDTC(stru_403B88, v25, 0, sub_403BE0, 1u, 0, 0, 0, v22);
+    }
+    InvalidateRect(*(HWND *)(v16 + 12), v15, 1);
+    if ( a1[1] )
+    {
+      if ( !(*(unsigned __int8 (__cdecl **)(_DWORD))(*(_DWORD *)(a1[1] + 20) + 4))(a1[1]) )
+        (*(void (__cdecl **)(_DWORD))(*(_DWORD *)(a1[1] + 20) + 12))(a1[1]);
+    }
+    return 1;
+  }
+  else
+  {
+    (*(void (__cdecl **)(_DWORD *))(*a1 + 16))(a1);
+    return 0;
+  }
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+

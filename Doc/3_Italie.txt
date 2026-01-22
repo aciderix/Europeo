@@ -1,0 +1,9 @@
+TITRE : Italie
+ID : italy
+------------------------------------------------------------
+
+[ Lieux & Énigmes ]
+  - Venise : Le gondolier a besoin d'aide (Chianti ?).
+  - Pise : Quiz historique à la tour (Variables CAPITALE, QUESTION).
+  - Cuisine : Mini-jeu de préparation de Pizza (Tomate, Fromage...).
+

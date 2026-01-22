@@ -1,0 +1,8 @@
+TITRE : Portugal
+ID : portugal
+------------------------------------------------------------
+
+[ Lisbonne ]
+  - Explorateurs : Thème Vasco de Gama.
+  - Azulejos : Puzzle ou référence à la faïence.
+

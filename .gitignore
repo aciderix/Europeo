@@ -1,0 +1,8 @@
+__pycache__/
+# Parser test outputs
+*_parsed.json
+*_logs.txt
+
+# Extracted archives
+parser-0-extracted/
+*_v2.json

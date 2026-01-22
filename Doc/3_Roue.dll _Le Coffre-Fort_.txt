@@ -1,0 +1,12 @@
+TITRE : Roue.dll (Le Coffre-Fort)
+ID : roue-game
+------------------------------------------------------------
+
+Un mécanisme de type cadenas à 4 chiffres situé à la Banque. Le joueur clique sur des flèches Haut/Bas invisibles pour changer les chiffres.
+
+[ La Solution ]
+>>> CODE START
+CODE : 2002
+(Référence à l'année de passage officiel à la monnaie unique Euro)
+<<< CODE END
+

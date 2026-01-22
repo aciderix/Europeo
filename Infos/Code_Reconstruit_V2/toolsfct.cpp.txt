@@ -1,0 +1,35 @@
+
+//-------------------------------------------------------------------------
+// Function 52
+// Fichier identifié: toolsfct.cpp
+//-------------------------------------------------------------------------
+
+
+bool __cdecl sub_403EEE(HWND hwnd, LPCSTR lpFile)
+{
+  _DWORD v3[4]; // [esp+4h] [ebp-2Ch] BYREF
+  __int16 v4; // [esp+14h] [ebp-1Ch]
+  int v5; // [esp+20h] [ebp-10h]
+  _BYTE v6[4]; // [esp+28h] [ebp-8h] BYREF
+  _BYTE v7[4]; // [esp+2Ch] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !lpFile )
+  {
+    v4 = 8;
+    xerror::MakeString((xerror *)v7, aPrecondition_0, aPath, aToolsfctCpp, 0x2Eu);
+    ++v5;
+    xmsg::xmsg((xmsg *)v6, (const string *)v7);
+    ++v5;
+    v4 = 20;
+    --v5;
+    string::~string((string *)v7);
+    v4 = 8;
+    v5 += 2;
+    v5 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v6, 0, sub_403BE0, 1u, 0, 0, 0, v3);
+  }
+  return *lpFile && (unsigned int)ShellExecuteA(hwnd, Operation, lpFile, 0, 0, 1) > 0x20;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+

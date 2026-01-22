@@ -1,0 +1,9 @@
+TITRE : Allemagne
+ID : germany
+------------------------------------------------------------
+
+[ Berlin ]
+  - Mur de Berlin : Récupérer un morceau (PIER_BERLIN).
+  - Punk : Personnage interactif près du mur.
+  - Musique : Beethoven et Orgue de barbarie.
+

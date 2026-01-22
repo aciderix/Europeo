@@ -1,0 +1,11 @@
+TITRE : Costume.dll (La Garde-Robe)
+ID : costume-game
+------------------------------------------------------------
+
+Un jeu d'association où il faut habiller 3 personnages en recomposant leurs tenues (Chapeau, Veste, Pantalon) dans 3 colonnes distinctes.
+
+[ Combinaisons Gagnantes (Gauche / Milieu / Droite) ]
+  - Gauche : Chapeau 7 + Veste 9 + Pantalon 4
+  - Milieu : Chapeau 5 + Veste 8 + Pantalon 3
+  - Droite : Chapeau 6 + Veste 10 + Pantalon 2
+

@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VND Renderer - couleurs1.vnd</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            padding: 15px;
+        }
+        h1 { color: #4ECDC4; margin-bottom: 5px; font-size: 1.5em; }
+        .stats { color: #888; margin-bottom: 10px; font-size: 0.9em; }
+        .container { display: flex; gap: 15px; }
+        .scene-view {
+            background: #16213e;
+            border-radius: 8px;
+            padding: 10px;
+            overflow: auto;
+            max-height: 90vh;
+        }
+        .info-panel {
+            background: #16213e;
+            border-radius: 8px;
+            padding: 12px;
+            width: 320px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .hotspot-list { list-style: none; }
+        .hotspot-item {
+            padding: 6px 10px;
+            margin: 3px 0;
+            background: #0f3460;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+        .hotspot-item:hover { background: #1a4a7a; }
+        .hotspot-item.active { background: #4ECDC4; color: #1a1a2e; }
+        .hotspot-item.no-poly { opacity: 0.5; font-style: italic; }
+        .polygon {
+            fill-opacity: 0.35;
+            stroke-width: 2;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .polygon:hover { fill-opacity: 0.6; stroke-width: 3; }
+        .polygon.selected { fill-opacity: 0.7; stroke-width: 4; }
+        .label {
+            font-size: 10px;
+            fill: white;
+            text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+            pointer-events: none;
+        }
+        #details {
+            margin-top: 10px;
+            padding: 10px;
+            background: #0f3460;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .detail-row { margin: 4px 0; }
+        .detail-label { color: #4ECDC4; }
+        code { background: #1a1a2e; padding: 2px 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>🎮 VND Scene Renderer</h1>
+    <div class="stats">
+        couleurs1.vnd |
+        76,174 bytes |
+        34 polygons |
+        164 hotspots |
+        84 linked
+    </div>
+
+    <div class="container">
+        <div class="scene-view">
+            <svg id="scene" width="1920" height="524"
+                 style="background: #2d2d44; border: 1px solid #4ECDC4;">
+
+                <!-- Grid -->
+                <defs>
+                    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#3a3a5a" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)"/>
+
+                <!-- All Polygons (without hotspot association) -->
+                <g id="orphan-polygons">
+
+                    <polygon class="polygon orphan"
+                             points="1762,344 1790,296 1761,251 1793,238 1824,233 1818,205 1794,194 1806,152 1880,185 1893,232 1921,263 1908,285 1885,317 1904,342 1865,364"
+                             fill="#666666" stroke="#666666"
+                             data-offset="22862"
+                             onclick="selectOrphan(0)"/>
+
+                    <polygon class="polygon orphan"
+                             points="12,349 18,282 96,303 113,390 12,396"
+                             fill="#666666" stroke="#666666"
+                             data-offset="72433"
+                             onclick="selectOrphan(1)"/>
+
+                    <polygon class="polygon orphan"
+                             points="518,457 520,416 534,376 558,356 604,361 621,402 624,457 592,474"
+                             fill="#666666" stroke="#666666"
+                             data-offset="73608"
+                             onclick="selectOrphan(2)"/>
+
+                </g>
+
+                <!-- Hotspot Polygons -->
+                <g id="hotspot-polygons">
+
+                    <g class="hotspot-group" data-index="0">
+                        <polygon class="polygon"
+                                 id="poly-0"
+                                 points="140,267 181,260 189,166 166,121 56,120 35,161 43,189"
+                                 fill="#FF6B6B" stroke="#FF6B6B"
+                                 onclick="selectHotspot(0)"/>
+                        <text class="label" x="112" y="193"
+                              text-anchor="middle">La bibliothè</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="1">
+                        <polygon class="polygon"
+                                 id="poly-1"
+                                 points="433,339 389,303 416,262 426,242 460,217 465,169 483,164 501,191 530,166 615,168 637,150 639,374 552,374"
+                                 fill="#4ECDC4" stroke="#4ECDC4"
+                                 onclick="selectHotspot(1)"/>
+                        <text class="label" x="514" y="262"
+                              text-anchor="middle">La banque</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="2">
+                        <polygon class="polygon"
+                                 id="poly-2"
+                                 points="9,385 50,395 149,355 145,277 38,192 1,248"
+                                 fill="#45B7D1" stroke="#45B7D1"
+                                 onclick="selectHotspot(2)"/>
+                        <text class="label" x="75" y="293"
+                              text-anchor="middle">Ma maison</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="3">
+                        <polygon class="polygon"
+                                 id="poly-3"
+                                 points="466,149 444,101 462,68 464,24 465,1 495,7 504,40 543,60 572,92 578,126 568,166 496,156"
+                                 fill="#96CEB4" stroke="#96CEB4"
+                                 onclick="selectHotspot(3)"/>
+                        <text class="label" x="511" y="83"
+                              text-anchor="middle">La maison de</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="4">
+                        <polygon class="polygon"
+                                 id="poly-4"
+                                 points="287,267 270,238 273,198 270,181 315,149 347,136 388,162 417,190 405,203 411,245 383,280"
+                                 fill="#FFEAA7" stroke="#FFEAA7"
+                                 onclick="selectHotspot(4)"/>
+                        <text class="label" x="343" y="208"
+                              text-anchor="middle">Le musée du </text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="5">
+                        <polygon class="polygon"
+                                 id="poly-5"
+                                 points="277,316 232,316 213,304 228,289 229,0 264,0 264,289 280,303"
+                                 fill="#DDA0DD" stroke="#DDA0DD"
+                                 onclick="selectHotspot(5)"/>
+                        <text class="label" x="246" y="158"
+                              text-anchor="middle">La fontaine </text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="57">
+                        <polygon class="polygon"
+                                 id="poly-57"
+                                 points="1810,221 1803,196 1828,164 1850,173 1850,191 1862,203 1863,222"
+                                 fill="#FF69B4" stroke="#FF69B4"
+                                 onclick="selectHotspot(57)"/>
+                        <text class="label" x="1833" y="193"
+                              text-anchor="middle">Une armoire </text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="58">
+                        <polygon class="polygon"
+                                 id="poly-58"
+                                 points="1810,221 1803,196 1828,164 1850,173 1850,191 1862,203 1863,222"
+                                 fill="#32CD32" stroke="#32CD32"
+                                 onclick="selectHotspot(58)"/>
+                        <text class="label" x="1833" y="193"
+                              text-anchor="middle">SORTIEf</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="59">
+                        <polygon class="polygon"
+                                 id="poly-59"
+                                 points="1810,221 1803,196 1828,164 1850,173 1850,191 1862,203 1863,222"
+                                 fill="#FFD700" stroke="#FFD700"
+                                 onclick="selectHotspot(59)"/>
+                        <text class="label" x="1833" y="193"
+                              text-anchor="middle">Madame euro</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="60">
+                        <polygon class="polygon"
+                                 id="poly-60"
+                                 points="1810,221 1803,196 1828,164 1850,173 1850,191 1862,203 1863,222"
+                                 fill="#FF6B6B" stroke="#FF6B6B"
+                                 onclick="selectHotspot(60)"/>
+                        <text class="label" x="1833" y="193"
+                              text-anchor="middle">Une table av</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="61">
+                        <polygon class="polygon"
+                                 id="poly-61"
+                                 points="1810,221 1803,196 1828,164 1850,173 1850,191 1862,203 1863,222"
+                                 fill="#4ECDC4" stroke="#4ECDC4"
+                                 onclick="selectHotspot(61)"/>
+                        <text class="label" x="1833" y="193"
+                              text-anchor="middle">Il y a quelq</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="62">
+                        <polygon class="polygon"
+                                 id="poly-62"
+                                 points="1810,221 1803,196 1828,164 1850,173 1850,191 1862,203 1863,222"
+                                 fill="#45B7D1" stroke="#45B7D1"
+                                 onclick="selectHotspot(62)"/>
+                        <text class="label" x="1833" y="193"
+                              text-anchor="middle">dans le chau</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="63">
+                        <polygon class="polygon"
+                                 id="poly-63"
+                                 points="1810,221 1803,196 1828,164 1850,173 1850,191 1862,203 1863,222"
+                                 fill="#96CEB4" stroke="#96CEB4"
+                                 onclick="selectHotspot(63)"/>
+                        <text class="label" x="1833" y="193"
+                              text-anchor="middle">Il n'y a plu</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="64">
+                        <polygon class="polygon"
+                                 id="poly-64"
+                                 points="1810,221 1803,196 1828,164 1850,173 1850,191 1862,203 1863,222"
+                                 fill="#FFEAA7" stroke="#FFEAA7"
+                                 onclick="selectHotspot(64)"/>
+                        <text class="label" x="1833" y="193"
+                              text-anchor="middle">dans le chau</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="67">
+                        <polygon class="polygon"
+                                 id="poly-67"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#F7DC6F" stroke="#F7DC6F"
+                                 onclick="selectHotspot(67)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">Tu n'as pas </text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="68">
+                        <polygon class="polygon"
+                                 id="poly-68"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#BB8FCE" stroke="#BB8FCE"
+                                 onclick="selectHotspot(68)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">de te repose</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="69">
+                        <polygon class="polygon"
+                                 id="poly-69"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#85C1E9" stroke="#85C1E9"
+                                 onclick="selectHotspot(69)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">Un litd</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="70">
+                        <polygon class="polygon"
+                                 id="poly-70"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#F8B500" stroke="#F8B500"
+                                 onclick="selectHotspot(70)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">Un message e</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="71">
+                        <polygon class="polygon"
+                                 id="poly-71"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#00CED1" stroke="#00CED1"
+                                 onclick="selectHotspot(71)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">dans cette p</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="72">
+                        <polygon class="polygon"
+                                 id="poly-72"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#FF69B4" stroke="#FF69B4"
+                                 onclick="selectHotspot(72)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">Une étagèrej</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="73">
+                        <polygon class="polygon"
+                                 id="poly-73"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#32CD32" stroke="#32CD32"
+                                 onclick="selectHotspot(73)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">SORTIE</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="74">
+                        <polygon class="polygon"
+                                 id="poly-74"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#FFD700" stroke="#FFD700"
+                                 onclick="selectHotspot(74)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">Ordinateur d</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="75">
+                        <polygon class="polygon"
+                                 id="poly-75"
+                                 points="311,291 312,237 349,188 406,179 532,173 559,239 600,274 605,298"
+                                 fill="#FF6B6B" stroke="#FF6B6B"
+                                 onclick="selectHotspot(75)"/>
+                        <text class="label" x="458" y="235"
+                              text-anchor="middle">Une table à </text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="76">
+                        <polygon class="polygon"
+                                 id="poly-76"
+                                 points="174,337 174,283 191,258 286,269 307,277 310,338 269,354"
+                                 fill="#4ECDC4" stroke="#4ECDC4"
+                                 onclick="selectHotspot(76)"/>
+                        <text class="label" x="242" y="306"
+                              text-anchor="middle">Prof</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="77">
+                        <polygon class="polygon"
+                                 id="poly-77"
+                                 points="174,337 174,283 191,258 286,269 307,277 310,338 269,354"
+                                 fill="#45B7D1" stroke="#45B7D1"
+                                 onclick="selectHotspot(77)"/>
+                        <text class="label" x="242" y="306"
+                              text-anchor="middle">Un diplômed</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="78">
+                        <polygon class="polygon"
+                                 id="poly-78"
+                                 points="174,337 174,283 191,258 286,269 307,277 310,338 269,354"
+                                 fill="#96CEB4" stroke="#96CEB4"
+                                 onclick="selectHotspot(78)"/>
+                        <text class="label" x="242" y="306"
+                              text-anchor="middle">Le transvect</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="79">
+                        <polygon class="polygon"
+                                 id="poly-79"
+                                 points="174,337 174,283 191,258 286,269 307,277 310,338 269,354"
+                                 fill="#FFEAA7" stroke="#FFEAA7"
+                                 onclick="selectHotspot(79)"/>
+                        <text class="label" x="242" y="306"
+                              text-anchor="middle">Un coffre fe</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="80">
+                        <polygon class="polygon"
+                                 id="poly-80"
+                                 points="798,272 816,180 904,177 923,277"
+                                 fill="#DDA0DD" stroke="#DDA0DD"
+                                 onclick="selectHotspot(80)"/>
+                        <text class="label" x="860" y="227"
+                              text-anchor="middle">Ordinateur d</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="81">
+                        <polygon class="polygon"
+                                 id="poly-81"
+                                 points="1310,341 1313,293 1288,262 1322,233 1335,182 1392,148 1411,188 1396,216 1409,235 1446,248 1425,292 1450,344 1352,356"
+                                 fill="#98D8C8" stroke="#98D8C8"
+                                 onclick="selectHotspot(81)"/>
+                        <text class="label" x="1369" y="252"
+                              text-anchor="middle">Sens de la v</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="82">
+                        <polygon class="polygon"
+                                 id="poly-82"
+                                 points="1310,341 1313,293 1288,262 1322,233 1335,182 1392,148 1411,188 1396,216 1409,235 1446,248 1425,292 1450,344 1352,356"
+                                 fill="#F7DC6F" stroke="#F7DC6F"
+                                 onclick="selectHotspot(82)"/>
+                        <text class="label" x="1369" y="252"
+                              text-anchor="middle">SORTIEf</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="83">
+                        <polygon class="polygon"
+                                 id="poly-83"
+                                 points="1310,341 1313,293 1288,262 1322,233 1335,182 1392,148 1411,188 1396,216 1409,235 1446,248 1425,292 1450,344 1352,356"
+                                 fill="#BB8FCE" stroke="#BB8FCE"
+                                 onclick="selectHotspot(83)"/>
+                        <text class="label" x="1369" y="252"
+                              text-anchor="middle">Le conservat</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="84">
+                        <polygon class="polygon"
+                                 id="poly-84"
+                                 points="1310,341 1313,293 1288,262 1322,233 1335,182 1392,148 1411,188 1396,216 1409,235 1446,248 1425,292 1450,344 1352,356"
+                                 fill="#85C1E9" stroke="#85C1E9"
+                                 onclick="selectHotspot(84)"/>
+                        <text class="label" x="1369" y="252"
+                              text-anchor="middle">Le tableau d</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="85">
+                        <polygon class="polygon"
+                                 id="poly-85"
+                                 points="1310,341 1313,293 1288,262 1322,233 1335,182 1392,148 1411,188 1396,216 1409,235 1446,248 1425,292 1450,344 1352,356"
+                                 fill="#F8B500" stroke="#F8B500"
+                                 onclick="selectHotspot(85)"/>
+                        <text class="label" x="1369" y="252"
+                              text-anchor="middle">Clique dessu</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="86">
+                        <polygon class="polygon"
+                                 id="poly-86"
+                                 points="1310,341 1313,293 1288,262 1322,233 1335,182 1392,148 1411,188 1396,216 1409,235 1446,248 1425,292 1450,344 1352,356"
+                                 fill="#00CED1" stroke="#00CED1"
+                                 onclick="selectHotspot(86)"/>
+                        <text class="label" x="1369" y="252"
+                              text-anchor="middle">revoir l'int</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="87">
+                        <polygon class="polygon"
+                                 id="poly-87"
+                                 points="1310,341 1313,293 1288,262 1322,233 1335,182 1392,148 1411,188 1396,216 1409,235 1446,248 1425,292 1450,344 1352,356"
+                                 fill="#FF69B4" stroke="#FF69B4"
+                                 onclick="selectHotspot(87)"/>
+                        <text class="label" x="1369" y="252"
+                              text-anchor="middle">Question Bon</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="88">
+                        <polygon class="polygon"
+                                 id="poly-88"
+                                 points="1310,341 1313,293 1288,262 1322,233 1335,182 1392,148 1411,188 1396,216 1409,235 1446,248 1425,292 1450,344 1352,356"
+                                 fill="#32CD32" stroke="#32CD32"
+                                 onclick="selectHotspot(88)"/>
+                        <text class="label" x="1369" y="252"
+                              text-anchor="middle">Tu as déjà r</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="90">
+                        <polygon class="polygon"
+                                 id="poly-90"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#FF6B6B" stroke="#FF6B6B"
+                                 onclick="selectHotspot(90)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">Un sac à dos</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="91">
+                        <polygon class="polygon"
+                                 id="poly-91"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#4ECDC4" stroke="#4ECDC4"
+                                 onclick="selectHotspot(91)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">SORTIEh</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="92">
+                        <polygon class="polygon"
+                                 id="poly-92"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#45B7D1" stroke="#45B7D1"
+                                 onclick="selectHotspot(92)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">Il y a une a</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="93">
+                        <polygon class="polygon"
+                                 id="poly-93"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#96CEB4" stroke="#96CEB4"
+                                 onclick="selectHotspot(93)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">bouteille en</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="94">
+                        <polygon class="polygon"
+                                 id="poly-94"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#FFEAA7" stroke="#FFEAA7"
+                                 onclick="selectHotspot(94)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">elle te sera</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="95">
+                        <polygon class="polygon"
+                                 id="poly-95"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#DDA0DD" stroke="#DDA0DD"
+                                 onclick="selectHotspot(95)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">la remplis d</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="96">
+                        <polygon class="polygon"
+                                 id="poly-96"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#98D8C8" stroke="#98D8C8"
+                                 onclick="selectHotspot(96)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">Tu ne peux p</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="97">
+                        <polygon class="polygon"
+                                 id="poly-97"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#F7DC6F" stroke="#F7DC6F"
+                                 onclick="selectHotspot(97)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">prendre cell</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="98">
+                        <polygon class="polygon"
+                                 id="poly-98"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#BB8FCE" stroke="#BB8FCE"
+                                 onclick="selectHotspot(98)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">Une boîte d'</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="99">
+                        <polygon class="polygon"
+                                 id="poly-99"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#85C1E9" stroke="#85C1E9"
+                                 onclick="selectHotspot(99)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">Il te faut u</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="100">
+                        <polygon class="polygon"
+                                 id="poly-100"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#F8B500" stroke="#F8B500"
+                                 onclick="selectHotspot(100)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">Ces livres n</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="101">
+                        <polygon class="polygon"
+                                 id="poly-101"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#00CED1" stroke="#00CED1"
+                                 onclick="selectHotspot(101)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">seront d'auc</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="102">
+                        <polygon class="polygon"
+                                 id="poly-102"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#FF69B4" stroke="#FF69B4"
+                                 onclick="selectHotspot(102)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">utilitéd</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="103">
+                        <polygon class="polygon"
+                                 id="poly-103"
+                                 points="536,382 533,334 572,285 613,283 622,324 632,367 621,393"
+                                 fill="#32CD32" stroke="#32CD32"
+                                 onclick="selectHotspot(103)"/>
+                        <text class="label" x="582" y="338"
+                              text-anchor="middle">Quitter</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="104">
+                        <polygon class="polygon"
+                                 id="poly-104"
+                                 points="252,61 300,41 347,67 352,150 316,184 282,184 239,146"
+                                 fill="#FFD700" stroke="#FFD700"
+                                 onclick="selectHotspot(104)"/>
+                        <text class="label" x="295" y="112"
+                              text-anchor="middle">La calculett</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="105">
+                        <polygon class="polygon"
+                                 id="poly-105"
+                                 points="554,377 551,333 576,289 611,305 630,346 629,388 595,394"
+                                 fill="#FF6B6B" stroke="#FF6B6B"
+                                 onclick="selectHotspot(105)"/>
+                        <text class="label" x="590" y="341"
+                              text-anchor="middle">SORTIE</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="106">
+                        <polygon class="polygon"
+                                 id="poly-106"
+                                 points="554,377 551,333 576,289 611,305 630,346 629,388 595,394"
+                                 fill="#4ECDC4" stroke="#4ECDC4"
+                                 onclick="selectHotspot(106)"/>
+                        <text class="label" x="590" y="341"
+                              text-anchor="middle">Quitter</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="108">
+                        <polygon class="polygon"
+                                 id="poly-108"
+                                 points="540,387 527,353 549,315 587,282 616,291 620,335 630,379 605,398"
+                                 fill="#96CEB4" stroke="#96CEB4"
+                                 onclick="selectHotspot(108)"/>
+                        <text class="label" x="578" y="340"
+                              text-anchor="middle">Quitter</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="109">
+                        <polygon class="polygon"
+                                 id="poly-109"
+                                 points="533,386 528,354 569,295 605,278 627,306 623,352 625,390"
+                                 fill="#FFEAA7" stroke="#FFEAA7"
+                                 onclick="selectHotspot(109)"/>
+                        <text class="label" x="577" y="334"
+                              text-anchor="middle">Quitter</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="110">
+                        <polygon class="polygon"
+                                 id="poly-110"
+                                 points="530,380 524,334 548,294 590,278 626,296 630,357 629,395"
+                                 fill="#DDA0DD" stroke="#DDA0DD"
+                                 onclick="selectHotspot(110)"/>
+                        <text class="label" x="577" y="336"
+                              text-anchor="middle">Quitter</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="119">
+                        <polygon class="polygon"
+                                 id="poly-119"
+                                 points="548,459 531,431 546,385 579,364 621,394 623,444 599,470"
+                                 fill="#FFD700" stroke="#FFD700"
+                                 onclick="selectHotspot(119)"/>
+                        <text class="label" x="577" y="417"
+                              text-anchor="middle">Réponse N°2</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="120">
+                        <polygon class="polygon"
+                                 id="poly-120"
+                                 points="548,459 531,431 546,385 579,364 621,394 623,444 599,470"
+                                 fill="#FF6B6B" stroke="#FF6B6B"
+                                 onclick="selectHotspot(120)"/>
+                        <text class="label" x="577" y="417"
+                              text-anchor="middle">Réponse N°3</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="121">
+                        <polygon class="polygon"
+                                 id="poly-121"
+                                 points="548,459 531,431 546,385 579,364 621,394 623,444 599,470"
+                                 fill="#4ECDC4" stroke="#4ECDC4"
+                                 onclick="selectHotspot(121)"/>
+                        <text class="label" x="577" y="417"
+                              text-anchor="middle">Quitter</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="133">
+                        <polygon class="polygon"
+                                 id="poly-133"
+                                 points="106,306 120,270 156,255 188,284 177,323 136,336"
+                                 fill="#32CD32" stroke="#32CD32"
+                                 onclick="selectHotspot(133)"/>
+                        <text class="label" x="147" y="295"
+                              text-anchor="middle">Plan du tran</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="134">
+                        <polygon class="polygon"
+                                 id="poly-134"
+                                 points="106,306 120,270 156,255 188,284 177,323 136,336"
+                                 fill="#FFD700" stroke="#FFD700"
+                                 onclick="selectHotspot(134)"/>
+                        <text class="label" x="147" y="295"
+                              text-anchor="middle">SORTIEh</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="135">
+                        <polygon class="polygon"
+                                 id="poly-135"
+                                 points="106,306 120,270 156,255 188,284 177,323 136,336"
+                                 fill="#FF6B6B" stroke="#FF6B6B"
+                                 onclick="selectHotspot(135)"/>
+                        <text class="label" x="147" y="295"
+                              text-anchor="middle">Sortie</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="136">
+                        <polygon class="polygon"
+                                 id="poly-136"
+                                 points="106,306 120,270 156,255 188,284 177,323 136,336"
+                                 fill="#4ECDC4" stroke="#4ECDC4"
+                                 onclick="selectHotspot(136)"/>
+                        <text class="label" x="147" y="295"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="137">
+                        <polygon class="polygon"
+                                 id="poly-137"
+                                 points="67,255 60,230 77,207 103,201 128,216 112,250 95,265"
+                                 fill="#45B7D1" stroke="#45B7D1"
+                                 onclick="selectHotspot(137)"/>
+                        <text class="label" x="94" y="233"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="138">
+                        <polygon class="polygon"
+                                 id="poly-138"
+                                 points="71,182 75,154 95,134 120,134 135,157 98,185"
+                                 fill="#96CEB4" stroke="#96CEB4"
+                                 onclick="selectHotspot(138)"/>
+                        <text class="label" x="103" y="159"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="139">
+                        <polygon class="polygon"
+                                 id="poly-139"
+                                 points="115,106 140,76 190,94 155,128"
+                                 fill="#FFEAA7" stroke="#FFEAA7"
+                                 onclick="selectHotspot(139)"/>
+                        <text class="label" x="152" y="102"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="140">
+                        <polygon class="polygon"
+                                 id="poly-140"
+                                 points="210,90 220,50 245,45 265,80"
+                                 fill="#DDA0DD" stroke="#DDA0DD"
+                                 onclick="selectHotspot(140)"/>
+                        <text class="label" x="237" y="67"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="141">
+                        <polygon class="polygon"
+                                 id="poly-141"
+                                 points="307,70 323,41 350,45 360,80"
+                                 fill="#98D8C8" stroke="#98D8C8"
+                                 onclick="selectHotspot(141)"/>
+                        <text class="label" x="333" y="60"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="142">
+                        <polygon class="polygon"
+                                 id="poly-142"
+                                 points="390,90 428,105 447,93 438,67 406,58"
+                                 fill="#F7DC6F" stroke="#F7DC6F"
+                                 onclick="selectHotspot(142)"/>
+                        <text class="label" x="418" y="81"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="143">
+                        <polygon class="polygon"
+                                 id="poly-143"
+                                 points="492,158 461,135 458,113 475,106 504,115 516,140 514,158"
+                                 fill="#BB8FCE" stroke="#BB8FCE"
+                                 onclick="selectHotspot(143)"/>
+                        <text class="label" x="487" y="132"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="144">
+                        <polygon class="polygon"
+                                 id="poly-144"
+                                 points="537,227 503,221 484,192 492,173 524,169 546,199"
+                                 fill="#85C1E9" stroke="#85C1E9"
+                                 onclick="selectHotspot(144)"/>
+                        <text class="label" x="515" y="198"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="145">
+                        <polygon class="polygon"
+                                 id="poly-145"
+                                 points="493,311 451,289 456,245 492,241 520,279"
+                                 fill="#F8B500" stroke="#F8B500"
+                                 onclick="selectHotspot(145)"/>
+                        <text class="label" x="485" y="276"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="146">
+                        <polygon class="polygon"
+                                 id="poly-146"
+                                 points="362,366 336,326 349,294 386,279 422,309 422,349"
+                                 fill="#00CED1" stroke="#00CED1"
+                                 onclick="selectHotspot(146)"/>
+                        <text class="label" x="379" y="322"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="147">
+                        <polygon class="polygon"
+                                 id="poly-147"
+                                 points="220,365 210,332 227,302 257,297 284,308 293,342 265,378"
+                                 fill="#FF69B4" stroke="#FF69B4"
+                                 onclick="selectHotspot(147)"/>
+                        <text class="label" x="251" y="337"
+                              text-anchor="middle">Vide else pl</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="148">
+                        <polygon class="polygon"
+                                 id="poly-148"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#32CD32" stroke="#32CD32"
+                                 onclick="selectHotspot(148)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">Un Parchemin</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="149">
+                        <polygon class="polygon"
+                                 id="poly-149"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#FFD700" stroke="#FFD700"
+                                 onclick="selectHotspot(149)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">Une question</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="150">
+                        <polygon class="polygon"
+                                 id="poly-150"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#FF6B6B" stroke="#FF6B6B"
+                                 onclick="selectHotspot(150)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">Si tu répond</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="151">
+                        <polygon class="polygon"
+                                 id="poly-151"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#4ECDC4" stroke="#4ECDC4"
+                                 onclick="selectHotspot(151)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">est pour toi</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="152">
+                        <polygon class="polygon"
+                                 id="poly-152"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#45B7D1" stroke="#45B7D1"
+                                 onclick="selectHotspot(152)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">25 euros.</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="153">
+                        <polygon class="polygon"
+                                 id="poly-153"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#96CEB4" stroke="#96CEB4"
+                                 onclick="selectHotspot(153)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">Veux tu tent</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="154">
+                        <polygon class="polygon"
+                                 id="poly-154"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#FFEAA7" stroke="#FFEAA7"
+                                 onclick="selectHotspot(154)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">La réponse s</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="155">
+                        <polygon class="polygon"
+                                 id="poly-155"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#DDA0DD" stroke="#DDA0DD"
+                                 onclick="selectHotspot(155)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">la bibliothé</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="156">
+                        <polygon class="polygon"
+                                 id="poly-156"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#98D8C8" stroke="#98D8C8"
+                                 onclick="selectHotspot(156)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">Bien joué la</text>
+                    </g>
+
+                    <g class="hotspot-group" data-index="157">
+                        <polygon class="polygon"
+                                 id="poly-157"
+                                 points="29,384 75,393 110,375 76,297 41,281 23,353"
+                                 fill="#F7DC6F" stroke="#F7DC6F"
+                                 onclick="selectHotspot(157)"/>
+                        <text class="label" x="66" y="337"
+                              text-anchor="middle">était diffic</text>
+                    </g>
+
+                </g>
+            </svg>
+        </div>
+
+        <div class="info-panel">
+            <strong>🎯 Hotspots (84 with polygons)</strong>
+            <ul class="hotspot-list">
+
+                <li class="hotspot-item " data-index="0" onclick="selectHotspot(0)">
+                    ✓ La bibliothèque
+                </li>
+
+                <li class="hotspot-item " data-index="1" onclick="selectHotspot(1)">
+                    ✓ La banque
+                </li>
+
+                <li class="hotspot-item " data-index="2" onclick="selectHotspot(2)">
+                    ✓ Ma maison
+                </li>
+
+                <li class="hotspot-item " data-index="3" onclick="selectHotspot(3)">
+                    ✓ La maison de prof
+                </li>
+
+                <li class="hotspot-item " data-index="4" onclick="selectHotspot(4)">
+                    ✓ Le musée du village
+                </li>
+
+                <li class="hotspot-item " data-index="5" onclick="selectHotspot(5)">
+                    ✓ La fontaine à couleurs
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="6" onclick="selectHotspot(6)">
+                    ✗ SORTIE
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="7" onclick="selectHotspot(7)">
+                    ✗ L'agenda du banquierj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="8" onclick="selectHotspot(8)">
+                    ✗ Une tasse de café noird
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="9" onclick="selectHotspot(9)">
+                    ✗ Une bouteille d'encre noire
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="10" onclick="selectHotspot(10)">
+                    ✗ Du courrierj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="11" onclick="selectHotspot(11)">
+                    ✗ Dossier euroj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="12" onclick="selectHotspot(12)">
+                    ✗ Le banquier d'Eurolandl
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="13" onclick="selectHotspot(13)">
+                    ✗ Question Bonus
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="14" onclick="selectHotspot(14)">
+                    ✗ tu as déjà réponduk
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="15" onclick="selectHotspot(15)">
+                    ✗ SORTIE
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="16" onclick="selectHotspot(16)">
+                    ✗ Le livre des
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="17" onclick="selectHotspot(17)">
+                    ✗ recettes d'Europej
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="18" onclick="selectHotspot(18)">
+                    ✗ La bibliothécaire d'Euroland
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="19" onclick="selectHotspot(19)">
+                    ✗ Une lampe de bureaud
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="20" onclick="selectHotspot(20)">
+                    ✗ Le petit atlas
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="21" onclick="selectHotspot(21)">
+                    ✗ d'Europe.j
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="22" onclick="selectHotspot(22)">
+                    ✗ Les Hymnes
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="23" onclick="selectHotspot(23)">
+                    ✗ nationauxj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="24" onclick="selectHotspot(24)">
+                    ✗ Léonard
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="25" onclick="selectHotspot(25)">
+                    ✗ de Vincij
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="26" onclick="selectHotspot(26)">
+                    ✗ L'euro et nousj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="27" onclick="selectHotspot(27)">
+                    ✗ Big
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="28" onclick="selectHotspot(28)">
+                    ✗ Ben
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="29" onclick="selectHotspot(29)">
+                    ✗ Le mur de
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="30" onclick="selectHotspot(30)">
+                    ✗ Berlinj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="31" onclick="selectHotspot(31)">
+                    ✗ les corsaires
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="32" onclick="selectHotspot(32)">
+                    ✗ Les jeux
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="33" onclick="selectHotspot(33)">
+                    ✗ Olympiquesj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="34" onclick="selectHotspot(34)">
+                    ✗ La cornemusej
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="35" onclick="selectHotspot(35)">
+                    ✗ Les joyaux de
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="36" onclick="selectHotspot(36)">
+                    ✗ la couronne
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="37" onclick="selectHotspot(37)">
+                    ✗ d'Angleterrej
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="38" onclick="selectHotspot(38)">
+                    ✗ La tour Eiffelj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="39" onclick="selectHotspot(39)">
+                    ✗ L'exposition
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="40" onclick="selectHotspot(40)">
+                    ✗ universellej
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="41" onclick="selectHotspot(41)">
+                    ✗ Un livre sur
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="42" onclick="selectHotspot(42)">
+                    ✗ la fabrication
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="43" onclick="selectHotspot(43)">
+                    ✗ de la bièrej
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="44" onclick="selectHotspot(44)">
+                    ✗ L'histoire
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="45" onclick="selectHotspot(45)">
+                    ✗ du chocolatj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="46" onclick="selectHotspot(46)">
+                    ✗ Le fadoj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="47" onclick="selectHotspot(47)">
+                    ✗ Les grands couturiersj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="48" onclick="selectHotspot(48)">
+                    ✗ Les tulipesj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="49" onclick="selectHotspot(49)">
+                    ✗ Les grands
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="50" onclick="selectHotspot(50)">
+                    ✗ navigateursj
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="51" onclick="selectHotspot(51)">
+                    ✗ Louis
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="52" onclick="selectHotspot(52)">
+                    ✗ Pasteur
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="53" onclick="selectHotspot(53)">
+                    ✗ Balade à
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="54" onclick="selectHotspot(54)">
+                    ✗ Venisej
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="55" onclick="selectHotspot(55)">
+                    ✗ Ludwig Van Beethoven
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="56" onclick="selectHotspot(56)">
+                    ✗ Stonehenge
+                </li>
+
+                <li class="hotspot-item " data-index="57" onclick="selectHotspot(57)">
+                    ✓ Une armoire bien remplie
+                </li>
+
+                <li class="hotspot-item " data-index="58" onclick="selectHotspot(58)">
+                    ✓ SORTIEf
+                </li>
+
+                <li class="hotspot-item " data-index="59" onclick="selectHotspot(59)">
+                    ✓ Madame euro
+                </li>
+
+                <li class="hotspot-item " data-index="60" onclick="selectHotspot(60)">
+                    ✓ Une table avec plein de choses
+                </li>
+
+                <li class="hotspot-item " data-index="61" onclick="selectHotspot(61)">
+                    ✓ Il y a quelque chose
+                </li>
+
+                <li class="hotspot-item " data-index="62" onclick="selectHotspot(62)">
+                    ✓ dans le chaudron
+                </li>
+
+                <li class="hotspot-item " data-index="63" onclick="selectHotspot(63)">
+                    ✓ Il n'y a plus rien
+                </li>
+
+                <li class="hotspot-item " data-index="64" onclick="selectHotspot(64)">
+                    ✓ dans le chaudroni
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="65" onclick="selectHotspot(65)">
+                    ✗ Question Bonus
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="66" onclick="selectHotspot(66)">
+                    ✗ tu as déjà réponduk
+                </li>
+
+                <li class="hotspot-item " data-index="67" onclick="selectHotspot(67)">
+                    ✓ Tu n'as pas le temps
+                </li>
+
+                <li class="hotspot-item " data-index="68" onclick="selectHotspot(68)">
+                    ✓ de te reposer.
+                </li>
+
+                <li class="hotspot-item " data-index="69" onclick="selectHotspot(69)">
+                    ✓ Un litd
+                </li>
+
+                <li class="hotspot-item " data-index="70" onclick="selectHotspot(70)">
+                    ✓ Un message est caché
+                </li>
+
+                <li class="hotspot-item " data-index="71" onclick="selectHotspot(71)">
+                    ✓ dans cette pièce, mais pas ici
+                </li>
+
+                <li class="hotspot-item " data-index="72" onclick="selectHotspot(72)">
+                    ✓ Une étagèrej
+                </li>
+
+                <li class="hotspot-item " data-index="73" onclick="selectHotspot(73)">
+                    ✓ SORTIE
+                </li>
+
+                <li class="hotspot-item " data-index="74" onclick="selectHotspot(74)">
+                    ✓ Ordinateur du transvecteur
+                </li>
+
+                <li class="hotspot-item " data-index="75" onclick="selectHotspot(75)">
+                    ✓ Une table à produitsi
+                </li>
+
+                <li class="hotspot-item " data-index="76" onclick="selectHotspot(76)">
+                    ✓ Prof
+                </li>
+
+                <li class="hotspot-item " data-index="77" onclick="selectHotspot(77)">
+                    ✓ Un diplômed
+                </li>
+
+                <li class="hotspot-item " data-index="78" onclick="selectHotspot(78)">
+                    ✓ Le transvecteur
+                </li>
+
+                <li class="hotspot-item " data-index="79" onclick="selectHotspot(79)">
+                    ✓ Un coffre fermé à cléi
+                </li>
+
+                <li class="hotspot-item " data-index="80" onclick="selectHotspot(80)">
+                    ✓ Ordinateur du transvecteur
+                </li>
+
+                <li class="hotspot-item " data-index="81" onclick="selectHotspot(81)">
+                    ✓ Sens de la visite
+                </li>
+
+                <li class="hotspot-item " data-index="82" onclick="selectHotspot(82)">
+                    ✓ SORTIEf
+                </li>
+
+                <li class="hotspot-item " data-index="83" onclick="selectHotspot(83)">
+                    ✓ Le conservateur du muséel
+                </li>
+
+                <li class="hotspot-item " data-index="84" onclick="selectHotspot(84)">
+                    ✓ Le tableau de la légende.
+                </li>
+
+                <li class="hotspot-item " data-index="85" onclick="selectHotspot(85)">
+                    ✓ Clique dessus si tu veux
+                </li>
+
+                <li class="hotspot-item " data-index="86" onclick="selectHotspot(86)">
+                    ✓ revoir l'introduction.j
+                </li>
+
+                <li class="hotspot-item " data-index="87" onclick="selectHotspot(87)">
+                    ✓ Question Bonus
+                </li>
+
+                <li class="hotspot-item " data-index="88" onclick="selectHotspot(88)">
+                    ✓ Tu as déjà répondu
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="89" onclick="selectHotspot(89)">
+                    ✗ La momie du pharaon TOUTHENEUR
+                </li>
+
+                <li class="hotspot-item " data-index="90" onclick="selectHotspot(90)">
+                    ✓ Un sac à dos
+                </li>
+
+                <li class="hotspot-item " data-index="91" onclick="selectHotspot(91)">
+                    ✓ SORTIEh
+                </li>
+
+                <li class="hotspot-item " data-index="92" onclick="selectHotspot(92)">
+                    ✓ Il y a une autre
+                </li>
+
+                <li class="hotspot-item " data-index="93" onclick="selectHotspot(93)">
+                    ✓ bouteille en Europe
+                </li>
+
+                <li class="hotspot-item " data-index="94" onclick="selectHotspot(94)">
+                    ✓ elle te sera utile si tu
+                </li>
+
+                <li class="hotspot-item " data-index="95" onclick="selectHotspot(95)">
+                    ✓ la remplis d'eau.
+                </li>
+
+                <li class="hotspot-item " data-index="96" onclick="selectHotspot(96)">
+                    ✓ Tu ne peux pas
+                </li>
+
+                <li class="hotspot-item " data-index="97" onclick="selectHotspot(97)">
+                    ✓ prendre celles-ci.d
+                </li>
+
+                <li class="hotspot-item " data-index="98" onclick="selectHotspot(98)">
+                    ✓ Une boîte d'allumettes
+                </li>
+
+                <li class="hotspot-item " data-index="99" onclick="selectHotspot(99)">
+                    ✓ Il te faut un sac à dos pour l
+                </li>
+
+                <li class="hotspot-item " data-index="100" onclick="selectHotspot(100)">
+                    ✓ Ces livres ne te
+                </li>
+
+                <li class="hotspot-item " data-index="101" onclick="selectHotspot(101)">
+                    ✓ seront d'aucune
+                </li>
+
+                <li class="hotspot-item " data-index="102" onclick="selectHotspot(102)">
+                    ✓ utilitéd
+                </li>
+
+                <li class="hotspot-item " data-index="103" onclick="selectHotspot(103)">
+                    ✓ Quitter
+                </li>
+
+                <li class="hotspot-item " data-index="104" onclick="selectHotspot(104)">
+                    ✓ La calculette
+                </li>
+
+                <li class="hotspot-item " data-index="105" onclick="selectHotspot(105)">
+                    ✓ SORTIE
+                </li>
+
+                <li class="hotspot-item " data-index="106" onclick="selectHotspot(106)">
+                    ✓ Quitter
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="107" onclick="selectHotspot(107)">
+                    ✗ Clique ici pour arrêter la mac
+                </li>
+
+                <li class="hotspot-item " data-index="108" onclick="selectHotspot(108)">
+                    ✓ Quitter
+                </li>
+
+                <li class="hotspot-item " data-index="109" onclick="selectHotspot(109)">
+                    ✓ Quitter
+                </li>
+
+                <li class="hotspot-item " data-index="110" onclick="selectHotspot(110)">
+                    ✓ Quitter
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="111" onclick="selectHotspot(111)">
+                    ✗ SORTIE
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="112" onclick="selectHotspot(112)">
+                    ✗ Réponse N°1
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="113" onclick="selectHotspot(113)">
+                    ✗ Réponse N°2
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="114" onclick="selectHotspot(114)">
+                    ✗ Réponse N°3
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="115" onclick="selectHotspot(115)">
+                    ✗ Réponse N°1
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="116" onclick="selectHotspot(116)">
+                    ✗ Réponse N°2
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="117" onclick="selectHotspot(117)">
+                    ✗ Réponse N°3
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="118" onclick="selectHotspot(118)">
+                    ✗ Réponse N°1
+                </li>
+
+                <li class="hotspot-item " data-index="119" onclick="selectHotspot(119)">
+                    ✓ Réponse N°2
+                </li>
+
+                <li class="hotspot-item " data-index="120" onclick="selectHotspot(120)">
+                    ✓ Réponse N°3
+                </li>
+
+                <li class="hotspot-item " data-index="121" onclick="selectHotspot(121)">
+                    ✓ Quitter
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="122" onclick="selectHotspot(122)">
+                    ✗ Réponse N°1
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="123" onclick="selectHotspot(123)">
+                    ✗ Réponse N°2
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="124" onclick="selectHotspot(124)">
+                    ✗ Réponse N°3
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="125" onclick="selectHotspot(125)">
+                    ✗ SORTIE
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="126" onclick="selectHotspot(126)">
+                    ✗ SORTIE
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="127" onclick="selectHotspot(127)">
+                    ✗ Du sirop pour la toux
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="128" onclick="selectHotspot(128)">
+                    ✗ Des sachets de levure
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="129" onclick="selectHotspot(129)">
+                    ✗ Il te faut un sac à dos pour r
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="130" onclick="selectHotspot(130)">
+                    ✗ Une burette d'huile
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="131" onclick="selectHotspot(131)">
+                    ✗ Il te faut un sac à dos pour r
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="132" onclick="selectHotspot(132)">
+                    ✗ Des produits chimiquesd
+                </li>
+
+                <li class="hotspot-item " data-index="133" onclick="selectHotspot(133)">
+                    ✓ Plan du transvecteur
+                </li>
+
+                <li class="hotspot-item " data-index="134" onclick="selectHotspot(134)">
+                    ✓ SORTIEh
+                </li>
+
+                <li class="hotspot-item " data-index="135" onclick="selectHotspot(135)">
+                    ✓ Sortie
+                </li>
+
+                <li class="hotspot-item " data-index="136" onclick="selectHotspot(136)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="137" onclick="selectHotspot(137)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="138" onclick="selectHotspot(138)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="139" onclick="selectHotspot(139)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="140" onclick="selectHotspot(140)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="141" onclick="selectHotspot(141)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="142" onclick="selectHotspot(142)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="143" onclick="selectHotspot(143)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="144" onclick="selectHotspot(144)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="145" onclick="selectHotspot(145)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="146" onclick="selectHotspot(146)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="147" onclick="selectHotspot(147)">
+                    ✓ Vide else playtext 280 260 125
+                </li>
+
+                <li class="hotspot-item " data-index="148" onclick="selectHotspot(148)">
+                    ✓ Un Parchemin
+                </li>
+
+                <li class="hotspot-item " data-index="149" onclick="selectHotspot(149)">
+                    ✓ Une question à 50 euros.
+                </li>
+
+                <li class="hotspot-item " data-index="150" onclick="selectHotspot(150)">
+                    ✓ Si tu réponds juste, la somme
+                </li>
+
+                <li class="hotspot-item " data-index="151" onclick="selectHotspot(151)">
+                    ✓ est pour toi, sinon tu perds
+                </li>
+
+                <li class="hotspot-item " data-index="152" onclick="selectHotspot(152)">
+                    ✓ 25 euros.
+                </li>
+
+                <li class="hotspot-item " data-index="153" onclick="selectHotspot(153)">
+                    ✓ Veux tu tenter ta chance ?
+                </li>
+
+                <li class="hotspot-item " data-index="154" onclick="selectHotspot(154)">
+                    ✓ La réponse se trouve dans
+                </li>
+
+                <li class="hotspot-item " data-index="155" onclick="selectHotspot(155)">
+                    ✓ la bibliothéque.
+                </li>
+
+                <li class="hotspot-item " data-index="156" onclick="selectHotspot(156)">
+                    ✓ Bien joué la question .
+                </li>
+
+                <li class="hotspot-item " data-index="157" onclick="selectHotspot(157)">
+                    ✓ était difficile
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="158" onclick="selectHotspot(158)">
+                    ✗ SORTIE
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="159" onclick="selectHotspot(159)">
+                    ✗ SORTIE
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="160" onclick="selectHotspot(160)">
+                    ✗ dossier euro
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="161" onclick="selectHotspot(161)">
+                    ✗ SORTIE
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="162" onclick="selectHotspot(162)">
+                    ✗ Une bouteille vided
+                </li>
+
+                <li class="hotspot-item no-poly" data-index="163" onclick="selectHotspot(163)">
+                    ✗ SORTIE
+                </li>
+
+            </ul>
+
+            <div id="details">
+                <em>Click a hotspot or polygon to see details</em>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hotspots = [{"text": "La biblioth\u00e8que\u0003", "text_x": 57, "text_y": 60, "layer": 0, "offset": 4673, "polygon": [[140, 267], [181, 260], [189, 166], [166, 121], [56, 120], [35, 161], [43, 189]], "bbox": [35, 120, 189, 267]}, {"text": "La banque\u0001", "text_x": 387, "text_y": 351, "layer": 0, "offset": 5620, "polygon": [[433, 339], [389, 303], [416, 262], [426, 242], [460, 217], [465, 169], [483, 164], [501, 191], [530, 166], [615, 168], [637, 150], [639, 374], [552, 374]], "bbox": [389, 150, 639, 374]}, {"text": "Ma maison\u0001", "text_x": 89, "text_y": 375, "layer": 0, "offset": 5864, "polygon": [[9, 385], [50, 395], [149, 355], [145, 277], [38, 192], [1, 248]], "bbox": [1, 192, 149, 395]}, {"text": "La maison de prof\u0001", "text_x": 387, "text_y": 18, "layer": 0, "offset": 6049, "polygon": [[466, 149], [444, 101], [462, 68], [464, 24], [465, 1], [495, 7], [504, 40], [543, 60], [572, 92], [578, 126], [568, 166], [496, 156]], "bbox": [444, 1, 578, 166]}, {"text": "Le mus\u00e9e du village\u0001", "text_x": 249, "text_y": 297, "layer": 0, "offset": 6292, "polygon": [[287, 267], [270, 238], [273, 198], [270, 181], [315, 149], [347, 136], [388, 162], [417, 190], [405, 203], [411, 245], [383, 280]], "bbox": [270, 136, 417, 280]}, {"text": "La fontaine \u00e0 couleurs\u0001", "text_x": 348, "text_y": 357, "layer": 0, "offset": 6528, "polygon": [[277, 316], [232, 316], [213, 304], [228, 289], [229, 0], [264, 0], [264, 289], [280, 303]], "bbox": [213, 0, 280, 316]}, {"text": "SORTIE\u0003", "text_x": 40, "text_y": 360, "layer": 0, "offset": 6936, "polygon": null, "bbox": null}, {"text": "L'agenda du banquierj", "text_x": 40, "text_y": 350, "layer": 0, "offset": 7118, "polygon": null, "bbox": null}, {"text": "Une tasse de caf\u00e9 noird", "text_x": 40, "text_y": 350, "layer": 0, "offset": 7253, "polygon": null, "bbox": null}, {"text": "Une bouteille d'encre noire\u0001", "text_x": 40, "text_y": 350, "layer": 0, "offset": 7374, "polygon": null, "bbox": null}, {"text": "Du courrierj", "text_x": 40, "text_y": 350, "layer": 0, "offset": 7528, "polygon": null, "bbox": null}, {"text": "Dossier euroj", "text_x": 40, "text_y": 350, "layer": 0, "offset": 7677, "polygon": null, "bbox": null}, {"text": "Le banquier d'Eurolandl", "text_x": 160, "text_y": 350, "layer": 0, "offset": 8287, "polygon": null, "bbox": null}, {"text": "Question Bonus", "text_x": 310, "text_y": 75, "layer": 0, "offset": 8977, "polygon": null, "bbox": null}, {"text": "tu as d\u00e9j\u00e0 r\u00e9ponduk", "text_x": 310, "text_y": 75, "layer": 0, "offset": 9045, "polygon": null, "bbox": null}, {"text": "SORTIE\u0003", "text_x": 220, "text_y": 350, "layer": 0, "offset": 9468, "polygon": null, "bbox": null}, {"text": "Le livre des", "text_x": 380, "text_y": 210, "layer": 0, "offset": 9749, "polygon": null, "bbox": null}, {"text": "recettes d'Europej", "text_x": 380, "text_y": 225, "layer": 0, "offset": 9791, "polygon": null, "bbox": null}, {"text": "La biblioth\u00e9caire d'Euroland\u0002", "text_x": 850, "text_y": 360, "layer": 0, "offset": 9909, "polygon": null, "bbox": null}, {"text": "Une lampe de bureaud", "text_x": 1030, "text_y": 290, "layer": 0, "offset": 10272, "polygon": null, "bbox": null}, {"text": "Le petit atlas", "text_x": 1385, "text_y": 212, "layer": 0, "offset": 10495, "polygon": null, "bbox": null}, {"text": "d'Europe.j", "text_x": 1385, "text_y": 232, "layer": 0, "offset": 10540, "polygon": null, "bbox": null}, {"text": "Les Hymnes", "text_x": 1120, "text_y": 142, "layer": 0, "offset": 10722, "polygon": null, "bbox": null}, {"text": "nationauxj", "text_x": 1120, "text_y": 162, "layer": 0, "offset": 10763, "polygon": null, "bbox": null}, {"text": "L\u00e9onard", "text_x": 355, "text_y": 22, "layer": 0, "offset": 10963, "polygon": null, "bbox": null}, {"text": "de Vincij", "text_x": 355, "text_y": 42, "layer": 0, "offset": 10999, "polygon": null, "bbox": null}, {"text": "L'euro et nousj", "text_x": 375, "text_y": 362, "layer": 0, "offset": 11179, "polygon": null, "bbox": null}, {"text": "Big", "text_x": 700, "text_y": 12, "layer": 0, "offset": 11293, "polygon": null, "bbox": null}, {"text": "Ben\u0001", "text_x": 700, "text_y": 32, "layer": 0, "offset": 11325, "polygon": null, "bbox": null}, {"text": "Le mur de", "text_x": 1740, "text_y": 2, "layer": 0, "offset": 11571, "polygon": null, "bbox": null}, {"text": "Berlinj", "text_x": 1740, "text_y": 22, "layer": 0, "offset": 11609, "polygon": null, "bbox": null}, {"text": "les corsaires\u0001", "text_x": 1350, "text_y": 332, "layer": 0, "offset": 11740, "polygon": null, "bbox": null}, {"text": "Les jeux", "text_x": 1440, "text_y": 22, "layer": 0, "offset": 11996, "polygon": null, "bbox": null}, {"text": "Olympiquesj", "text_x": 1440, "text_y": 42, "layer": 0, "offset": 12034, "polygon": null, "bbox": null}, {"text": "La cornemusej", "text_x": 1100, "text_y": 100, "layer": 0, "offset": 12233, "polygon": null, "bbox": null}, {"text": "Les joyaux de", "text_x": 410, "text_y": 330, "layer": 0, "offset": 12435, "polygon": null, "bbox": null}, {"text": "la couronne", "text_x": 410, "text_y": 345, "layer": 0, "offset": 12478, "polygon": null, "bbox": null}, {"text": "d'Angleterrej", "text_x": 410, "text_y": 360, "layer": 0, "offset": 12519, "polygon": null, "bbox": null}, {"text": "La tour Eiffelj", "text_x": 900, "text_y": 182, "layer": 0, "offset": 12703, "polygon": null, "bbox": null}, {"text": "L'exposition", "text_x": 1600, "text_y": 62, "layer": 0, "offset": 12887, "polygon": null, "bbox": null}, {"text": "universellej", "text_x": 1600, "text_y": 82, "layer": 0, "offset": 12929, "polygon": null, "bbox": null}, {"text": "Un livre sur", "text_x": 120, "text_y": 322, "layer": 0, "offset": 13125, "polygon": null, "bbox": null}, {"text": "la fabrication", "text_x": 120, "text_y": 342, "layer": 0, "offset": 13167, "polygon": null, "bbox": null}, {"text": "de la bi\u00e8rej", "text_x": 120, "text_y": 362, "layer": 0, "offset": 13211, "polygon": null, "bbox": null}, {"text": "L'histoire", "text_x": 950, "text_y": 162, "layer": 0, "offset": 13416, "polygon": null, "bbox": null}, {"text": "du chocolatj", "text_x": 950, "text_y": 182, "layer": 0, "offset": 13456, "polygon": null, "bbox": null}, {"text": "Le fadoj", "text_x": 515, "text_y": 44, "layer": 0, "offset": 13637, "polygon": null, "bbox": null}, {"text": "Les grands couturiersj", "text_x": 1300, "text_y": 280, "layer": 0, "offset": 13815, "polygon": null, "bbox": null}, {"text": "Les tulipesj", "text_x": 1110, "text_y": 260, "layer": 0, "offset": 14005, "polygon": null, "bbox": null}, {"text": "Les grands", "text_x": 1450, "text_y": 262, "layer": 0, "offset": 14204, "polygon": null, "bbox": null}, {"text": "navigateursj", "text_x": 1450, "text_y": 282, "layer": 0, "offset": 14245, "polygon": null, "bbox": null}, {"text": "Louis", "text_x": 380, "text_y": 150, "layer": 0, "offset": 14357, "polygon": null, "bbox": null}, {"text": "Pasteur\u0001", "text_x": 380, "text_y": 165, "layer": 0, "offset": 14392, "polygon": null, "bbox": null}, {"text": "Balade \u00e0", "text_x": 395, "text_y": 222, "layer": 0, "offset": 14644, "polygon": null, "bbox": null}, {"text": "Venisej", "text_x": 395, "text_y": 242, "layer": 0, "offset": 14682, "polygon": null, "bbox": null}, {"text": "Ludwig Van Beethoven\u0001", "text_x": 395, "text_y": 362, "layer": 0, "offset": 14788, "polygon": null, "bbox": null}, {"text": "Stonehenge\u0001", "text_x": 950, "text_y": 162, "layer": 0, "offset": 14977, "polygon": null, "bbox": null}, {"text": "Une armoire bien remplie\u0003", "text_x": 1400, "text_y": 350, "layer": 0, "offset": 15318, "polygon": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]], "bbox": [1803, 164, 1863, 222]}, {"text": "SORTIEf", "text_x": 95, "text_y": 350, "layer": 0, "offset": 15519, "polygon": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]], "bbox": [1803, 164, 1863, 222]}, {"text": "Madame euro\u0001", "text_x": 120, "text_y": 360, "layer": 0, "offset": 15709, "polygon": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]], "bbox": [1803, 164, 1863, 222]}, {"text": "Une table avec plein de choses dessus\u0001", "text_x": 370, "text_y": 340, "layer": 0, "offset": 15991, "polygon": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]], "bbox": [1803, 164, 1863, 222]}, {"text": "Il y a quelque chose", "text_x": 1440, "text_y": 350, "layer": 0, "offset": 16814, "polygon": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]], "bbox": [1803, 164, 1863, 222]}, {"text": "dans le chaudron", "text_x": 1440, "text_y": 370, "layer": 0, "offset": 16892, "polygon": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]], "bbox": [1803, 164, 1863, 222]}, {"text": "Il n'y a plus rien", "text_x": 1440, "text_y": 350, "layer": 0, "offset": 16968, "polygon": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]], "bbox": [1803, 164, 1863, 222]}, {"text": "dans le chaudroni", "text_x": 1440, "text_y": 370, "layer": 0, "offset": 17046, "polygon": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]], "bbox": [1803, 164, 1863, 222]}, {"text": "Question Bonus", "text_x": 680, "text_y": 350, "layer": 0, "offset": 17430, "polygon": null, "bbox": null}, {"text": "tu as d\u00e9j\u00e0 r\u00e9ponduk", "text_x": 680, "text_y": 350, "layer": 0, "offset": 17499, "polygon": null, "bbox": null}, {"text": "Tu n'as pas le temps\u0001", "text_x": 800, "text_y": 350, "layer": 0, "offset": 17617, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "de te reposer.", "text_x": 800, "text_y": 370, "layer": 0, "offset": 17667, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "Un litd", "text_x": 990, "text_y": 350, "layer": 0, "offset": 17749, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "Un message est cach\u00e9", "text_x": 380, "text_y": 320, "layer": 0, "offset": 17911, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "dans cette pi\u00e8ce, mais pas ici.d", "text_x": 380, "text_y": 340, "layer": 0, "offset": 17961, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "Une \u00e9tag\u00e8rej", "text_x": 1090, "text_y": 350, "layer": 0, "offset": 18122, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "SORTIE\u0001", "text_x": 60, "text_y": 340, "layer": 0, "offset": 18385, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "Ordinateur du transvecteur\u0001", "text_x": 1430, "text_y": 150, "layer": 0, "offset": 19333, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "Une table \u00e0 produitsi", "text_x": 340, "text_y": 300, "layer": 0, "offset": 19550, "polygon": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]], "bbox": [311, 173, 605, 298]}, {"text": "Prof\u0001", "text_x": 690, "text_y": 350, "layer": 0, "offset": 19718, "polygon": [[174, 337], [174, 283], [191, 258], [286, 269], [307, 277], [310, 338], [269, 354]], "bbox": [174, 258, 310, 354]}, {"text": "Un dipl\u00f4med", "text_x": 200, "text_y": 40, "layer": 0, "offset": 19945, "polygon": [[174, 337], [174, 283], [191, 258], [286, 269], [307, 277], [310, 338], [269, 354]], "bbox": [174, 258, 310, 354]}, {"text": "Le transvecteur\u0001", "text_x": 1590, "text_y": 150, "layer": 0, "offset": 20054, "polygon": [[174, 337], [174, 283], [191, 258], [286, 269], [307, 277], [310, 338], [269, 354]], "bbox": [174, 258, 310, 354]}, {"text": "Un coffre ferm\u00e9 \u00e0 cl\u00e9i", "text_x": 65, "text_y": 350, "layer": 0, "offset": 20625, "polygon": [[174, 337], [174, 283], [191, 258], [286, 269], [307, 277], [310, 338], [269, 354]], "bbox": [174, 258, 310, 354]}, {"text": "Ordinateur du transvecteur\u0001", "text_x": 830, "text_y": 350, "layer": 0, "offset": 20785, "polygon": [[798, 272], [816, 180], [904, 177], [923, 277]], "bbox": [798, 177, 923, 277]}, {"text": "Sens de la visite\u0003", "text_x": 1540, "text_y": 370, "layer": 0, "offset": 21214, "polygon": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]], "bbox": [1288, 148, 1450, 356]}, {"text": "SORTIEf", "text_x": 150, "text_y": 320, "layer": 0, "offset": 21432, "polygon": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]], "bbox": [1288, 148, 1450, 356]}, {"text": "Le conservateur du mus\u00e9el", "text_x": 360, "text_y": 350, "layer": 0, "offset": 21770, "polygon": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]], "bbox": [1288, 148, 1450, 356]}, {"text": "Le tableau de la l\u00e9gende.", "text_x": 760, "text_y": 220, "layer": 0, "offset": 21988, "polygon": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]], "bbox": [1288, 148, 1450, 356]}, {"text": "Clique dessus si tu veux", "text_x": 760, "text_y": 240, "layer": 0, "offset": 22043, "polygon": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]], "bbox": [1288, 148, 1450, 356]}, {"text": "revoir l'introduction.j", "text_x": 760, "text_y": 260, "layer": 0, "offset": 22097, "polygon": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]], "bbox": [1288, 148, 1450, 356]}, {"text": "Question Bonus", "text_x": 1050, "text_y": 40, "layer": 0, "offset": 22356, "polygon": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]], "bbox": [1288, 148, 1450, 356]}, {"text": "Tu as d\u00e9j\u00e0 r\u00e9pondu\u0001", "text_x": 1050, "text_y": 40, "layer": 0, "offset": 22425, "polygon": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]], "bbox": [1288, 148, 1450, 356]}, {"text": "La momie du pharaon TOUTHENEUROd", "text_x": 1980, "text_y": 340, "layer": 0, "offset": 23048, "polygon": null, "bbox": null}, {"text": "Un sac \u00e0 dos\u0003", "text_x": 100, "text_y": 360, "layer": 0, "offset": 23475, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "SORTIEh", "text_x": 280, "text_y": 370, "layer": 0, "offset": 23890, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "Il y a une autre", "text_x": 230, "text_y": 50, "layer": 0, "offset": 23996, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "bouteille en Europe", "text_x": 230, "text_y": 70, "layer": 0, "offset": 24041, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "elle te sera utile si tu", "text_x": 230, "text_y": 90, "layer": 0, "offset": 24089, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "la remplis d'eau.", "text_x": 230, "text_y": 110, "layer": 0, "offset": 24142, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "Tu ne peux pas", "text_x": 230, "text_y": 130, "layer": 0, "offset": 24189, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "prendre celles-ci.d", "text_x": 230, "text_y": 150, "layer": 0, "offset": 24233, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "Une bo\u00eete d'allumettes\u0001", "text_x": 400, "text_y": 60, "layer": 0, "offset": 24379, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "Il te faut un sac \u00e0 dos pour le mettre dedansd", "text_x": 20, "text_y": 370, "layer": 0, "offset": 24649, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "Ces livres ne te", "text_x": 400, "text_y": 340, "layer": 0, "offset": 24825, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "seront d'aucune", "text_x": 400, "text_y": 360, "layer": 0, "offset": 24871, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "utilit\u00e9d", "text_x": 400, "text_y": 380, "layer": 0, "offset": 24916, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "Quitter\u0003", "text_x": 455, "text_y": 360, "layer": 0, "offset": 25179, "polygon": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]], "bbox": [533, 283, 632, 393]}, {"text": "La calculette\u0002", "text_x": 320, "text_y": 180, "layer": 0, "offset": 25588, "polygon": [[252, 61], [300, 41], [347, 67], [352, 150], [316, 184], [282, 184], [239, 146]], "bbox": [239, 41, 352, 184]}, {"text": "SORTIE\u0001", "text_x": 250, "text_y": 370, "layer": 0, "offset": 25991, "polygon": [[554, 377], [551, 333], [576, 289], [611, 305], [630, 346], [629, 388], [595, 394]], "bbox": [551, 289, 630, 394]}, {"text": "Quitter\u0003", "text_x": 455, "text_y": 360, "layer": 0, "offset": 26292, "polygon": [[554, 377], [551, 333], [576, 289], [611, 305], [630, 346], [629, 388], [595, 394]], "bbox": [551, 289, 630, 394]}, {"text": "Clique ici pour arr\u00eater la machine.\u0001", "text_x": 130, "text_y": 200, "layer": 0, "offset": 29932, "polygon": null, "bbox": null}, {"text": "Quitter\u0003", "text_x": 455, "text_y": 360, "layer": 0, "offset": 32172, "polygon": [[540, 387], [527, 353], [549, 315], [587, 282], [616, 291], [620, 335], [630, 379], [605, 398]], "bbox": [527, 282, 630, 398]}, {"text": "Quitter\u0003", "text_x": 455, "text_y": 360, "layer": 0, "offset": 32554, "polygon": [[533, 386], [528, 354], [569, 295], [605, 278], [627, 306], [623, 352], [625, 390]], "bbox": [528, 278, 627, 390]}, {"text": "Quitter\u0003", "text_x": 455, "text_y": 360, "layer": 0, "offset": 33172, "polygon": [[530, 380], [524, 334], [548, 294], [590, 278], [626, 296], [630, 357], [629, 395]], "bbox": [524, 278, 630, 395]}, {"text": "SORTIE\u0003", "text_x": 440, "text_y": 360, "layer": 0, "offset": 34283, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b01\u0002", "text_x": 60, "text_y": 360, "layer": 0, "offset": 34899, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b02\u0001", "text_x": 260, "text_y": 360, "layer": 0, "offset": 35822, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b03\u0001", "text_x": 410, "text_y": 360, "layer": 0, "offset": 36491, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b01\u0002", "text_x": 60, "text_y": 360, "layer": 0, "offset": 37753, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b02\u0001", "text_x": 260, "text_y": 360, "layer": 0, "offset": 38694, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b03\u0001", "text_x": 410, "text_y": 360, "layer": 0, "offset": 39381, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b01\u0002", "text_x": 60, "text_y": 360, "layer": 0, "offset": 40212, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b02\u0001", "text_x": 260, "text_y": 360, "layer": 0, "offset": 41155, "polygon": [[548, 459], [531, 431], [546, 385], [579, 364], [621, 394], [623, 444], [599, 470]], "bbox": [531, 364, 623, 470]}, {"text": "R\u00e9ponse N\u00b03\u0001", "text_x": 410, "text_y": 360, "layer": 0, "offset": 41844, "polygon": [[548, 459], [531, 431], [546, 385], [579, 364], [621, 394], [623, 444], [599, 470]], "bbox": [531, 364, 623, 470]}, {"text": "Quitter\u0003", "text_x": 485, "text_y": 420, "layer": 0, "offset": 42657, "polygon": [[548, 459], [531, 431], [546, 385], [579, 364], [621, 394], [623, 444], [599, 470]], "bbox": [531, 364, 623, 470]}, {"text": "R\u00e9ponse N\u00b01\u0001", "text_x": 60, "text_y": 360, "layer": 0, "offset": 43014, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b02\u0001", "text_x": 260, "text_y": 360, "layer": 0, "offset": 44082, "polygon": null, "bbox": null}, {"text": "R\u00e9ponse N\u00b03\u0001", "text_x": 410, "text_y": 360, "layer": 0, "offset": 44896, "polygon": null, "bbox": null}, {"text": "SORTIE\u0003", "text_x": 55, "text_y": 350, "layer": 0, "offset": 45859, "polygon": null, "bbox": null}, {"text": "SORTIE\u0001", "text_x": 300, "text_y": 350, "layer": 0, "offset": 56545, "polygon": null, "bbox": null}, {"text": "Du sirop pour la toux\u0001", "text_x": 440, "text_y": 60, "layer": 0, "offset": 56967, "polygon": null, "bbox": null}, {"text": "Des sachets de levure\u0001", "text_x": 150, "text_y": 290, "layer": 0, "offset": 57467, "polygon": null, "bbox": null}, {"text": "Il te faut un sac \u00e0 dos pour ranger tes objetsd", "text_x": 20, "text_y": 350, "layer": 0, "offset": 57741, "polygon": null, "bbox": null}, {"text": "Une burette d'huile\u0001", "text_x": 50, "text_y": 290, "layer": 0, "offset": 57928, "polygon": null, "bbox": null}, {"text": "Il te faut un sac \u00e0 dos pour ranger tes objetsd", "text_x": 20, "text_y": 350, "layer": 0, "offset": 58220, "polygon": null, "bbox": null}, {"text": "Des produits chimiquesd", "text_x": 400, "text_y": 140, "layer": 0, "offset": 58389, "polygon": null, "bbox": null}, {"text": "Plan du transvecteur\u0001", "text_x": 300, "text_y": 300, "layer": 0, "offset": 58623, "polygon": [[106, 306], [120, 270], [156, 255], [188, 284], [177, 323], [136, 336]], "bbox": [106, 255, 188, 336]}, {"text": "SORTIEh", "text_x": 280, "text_y": 360, "layer": 0, "offset": 59405, "polygon": [[106, 306], [120, 270], [156, 255], [188, 284], [177, 323], [136, 336]], "bbox": [106, 255, 188, 336]}, {"text": "Sortie\u0001", "text_x": 55, "text_y": 360, "layer": 0, "offset": 59852, "polygon": [[106, 306], [120, 270], [156, 255], [188, 284], [177, 323], [136, 336]], "bbox": [106, 255, 188, 336]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 60476, "polygon": [[106, 306], [120, 270], [156, 255], [188, 284], [177, 323], [136, 336]], "bbox": [106, 255, 188, 336]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9\u0002", "text_x": 280, "text_y": 260, "layer": 0, "offset": 60938, "polygon": [[67, 255], [60, 230], [77, 207], [103, 201], [128, 216], [112, 250], [95, 265]], "bbox": [60, 201, 128, 265]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 61534, "polygon": [[71, 182], [75, 154], [95, 134], [120, 134], [135, 157], [98, 185]], "bbox": [71, 134, 135, 185]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 62061, "polygon": [[115, 106], [140, 76], [190, 94], [155, 128]], "bbox": [115, 76, 190, 128]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 62571, "polygon": [[210, 90], [220, 50], [245, 45], [265, 80]], "bbox": [210, 45, 265, 90]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 63081, "polygon": [[307, 70], [323, 41], [350, 45], [360, 80]], "bbox": [307, 41, 360, 80]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 63591, "polygon": [[390, 90], [428, 105], [447, 93], [438, 67], [406, 58]], "bbox": [390, 58, 447, 105]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9", "text_x": 280, "text_y": 260, "layer": 0, "offset": 64113, "polygon": [[492, 158], [461, 135], [458, 113], [475, 106], [504, 115], [516, 140], [514, 158]], "bbox": [458, 106, 516, 158]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 64663, "polygon": [[537, 227], [503, 221], [484, 192], [492, 173], [524, 169], [546, 199]], "bbox": [484, 169, 546, 227]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 65208, "polygon": [[493, 311], [451, 289], [456, 245], [492, 241], [520, 279]], "bbox": [451, 241, 520, 311]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 65744, "polygon": [[362, 366], [336, 326], [349, 294], [386, 279], [422, 309], [422, 349]], "bbox": [336, 279, 422, 366]}, {"text": "Vide else playtext 280 260 125 365 0 Activ\u00e9i", "text_x": 280, "text_y": 260, "layer": 0, "offset": 66289, "polygon": [[220, 365], [210, 332], [227, 302], [257, 297], [284, 308], [293, 342], [265, 378]], "bbox": [210, 297, 293, 378]}, {"text": "Un Parchemin\u0001", "text_x": 100, "text_y": 303, "layer": 0, "offset": 71186, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "Une question \u00e0 50 euros.", "text_x": 300, "text_y": 283, "layer": 0, "offset": 71400, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "Si tu r\u00e9ponds juste, la somme", "text_x": 300, "text_y": 303, "layer": 0, "offset": 71479, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "est pour toi, sinon tu perds", "text_x": 300, "text_y": 323, "layer": 0, "offset": 71563, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "25 euros.", "text_x": 300, "text_y": 343, "layer": 0, "offset": 71646, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "Veux tu tenter ta chance ?", "text_x": 300, "text_y": 363, "layer": 0, "offset": 71711, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "La r\u00e9ponse se trouve dans", "text_x": 300, "text_y": 323, "layer": 0, "offset": 71792, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "la biblioth\u00e9que.", "text_x": 300, "text_y": 343, "layer": 0, "offset": 71872, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "Bien jou\u00e9 la question .", "text_x": 300, "text_y": 323, "layer": 0, "offset": 71943, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "\u00e9tait difficile\u0001", "text_x": 300, "text_y": 343, "layer": 0, "offset": 72021, "polygon": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]], "bbox": [23, 281, 110, 393]}, {"text": "SORTIE\u0001", "text_x": 50, "text_y": 350, "layer": 0, "offset": 73872, "polygon": null, "bbox": null}, {"text": "SORTIE\u0001", "text_x": 50, "text_y": 350, "layer": 0, "offset": 74187, "polygon": null, "bbox": null}, {"text": "dossier euro\u0003", "text_x": 380, "text_y": 290, "layer": 0, "offset": 74748, "polygon": null, "bbox": null}, {"text": "SORTIE\u0001", "text_x": 50, "text_y": 350, "layer": 0, "offset": 74939, "polygon": null, "bbox": null}, {"text": "Une bouteille vided", "text_x": 400, "text_y": 180, "layer": 0, "offset": 75105, "polygon": null, "bbox": null}, {"text": "SORTIE\u0003", "text_x": 255, "text_y": 350, "layer": 0, "offset": 75721, "polygon": null, "bbox": null}];
+        const polygons = [{"offset": 5498, "points": [[140, 267], [181, 260], [189, 166], [166, 121], [56, 120], [35, 161], [43, 189]]}, {"offset": 5694, "points": [[433, 339], [389, 303], [416, 262], [426, 242], [460, 217], [465, 169], [483, 164], [501, 191], [530, 166], [615, 168], [637, 150], [639, 374], [552, 374]]}, {"offset": 5935, "points": [[9, 385], [50, 395], [149, 355], [145, 277], [38, 192], [1, 248]]}, {"offset": 6130, "points": [[466, 149], [444, 101], [462, 68], [464, 24], [465, 1], [495, 7], [504, 40], [543, 60], [572, 92], [578, 126], [568, 166], [496, 156]]}, {"offset": 6374, "points": [[287, 267], [270, 238], [273, 198], [270, 181], [315, 149], [347, 136], [388, 162], [417, 190], [405, 203], [411, 245], [383, 280]]}, {"offset": 6629, "points": [[277, 316], [232, 316], [213, 304], [228, 289], [229, 0], [264, 0], [264, 289], [280, 303]]}, {"offset": 17082, "points": [[1810, 221], [1803, 196], [1828, 164], [1850, 173], [1850, 191], [1862, 203], [1863, 222]]}, {"offset": 19588, "points": [[311, 291], [312, 237], [349, 188], [406, 179], [532, 173], [559, 239], [600, 274], [605, 298]]}, {"offset": 20663, "points": [[174, 337], [174, 283], [191, 258], [286, 269], [307, 277], [310, 338], [269, 354]]}, {"offset": 20922, "points": [[798, 272], [816, 180], [904, 177], [923, 277]]}, {"offset": 22728, "points": [[1310, 341], [1313, 293], [1288, 262], [1322, 233], [1335, 182], [1392, 148], [1411, 188], [1396, 216], [1409, 235], [1446, 248], [1425, 292], [1450, 344], [1352, 356]]}, {"offset": 22862, "points": [[1762, 344], [1790, 296], [1761, 251], [1793, 238], [1824, 233], [1818, 205], [1794, 194], [1806, 152], [1880, 185], [1893, 232], [1921, 263], [1908, 285], [1885, 317], [1904, 342], [1865, 364]]}, {"offset": 25301, "points": [[536, 382], [533, 334], [572, 285], [613, 283], [622, 324], [632, 367], [621, 393]]}, {"offset": 25869, "points": [[252, 61], [300, 41], [347, 67], [352, 150], [316, 184], [282, 184], [239, 146]]}, {"offset": 26380, "points": [[554, 377], [551, 333], [576, 289], [611, 305], [630, 346], [629, 388], [595, 394]]}, {"offset": 32274, "points": [[540, 387], [527, 353], [549, 315], [587, 282], [616, 291], [620, 335], [630, 379], [605, 398]]}, {"offset": 32677, "points": [[533, 386], [528, 354], [569, 295], [605, 278], [627, 306], [623, 352], [625, 390]]}, {"offset": 33260, "points": [[530, 380], [524, 334], [548, 294], [590, 278], [626, 296], [630, 357], [629, 395]]}, {"offset": 42748, "points": [[548, 459], [531, 431], [546, 385], [579, 364], [621, 394], [623, 444], [599, 470]]}, {"offset": 60537, "points": [[106, 306], [120, 270], [156, 255], [188, 284], [177, 323], [136, 336]]}, {"offset": 61062, "points": [[67, 255], [60, 230], [77, 207], [103, 201], [128, 216], [112, 250], [95, 265]]}, {"offset": 61595, "points": [[71, 182], [75, 154], [95, 134], [120, 134], [135, 157], [98, 185]]}, {"offset": 62122, "points": [[115, 106], [140, 76], [190, 94], [155, 128]]}, {"offset": 62632, "points": [[210, 90], [220, 50], [245, 45], [265, 80]]}, {"offset": 63142, "points": [[307, 70], [323, 41], [350, 45], [360, 80]]}, {"offset": 63652, "points": [[390, 90], [428, 105], [447, 93], [438, 67], [406, 58]]}, {"offset": 64186, "points": [[492, 158], [461, 135], [458, 113], [475, 106], [504, 115], [516, 140], [514, 158]]}, {"offset": 64724, "points": [[537, 227], [503, 221], [484, 192], [492, 173], [524, 169], [546, 199]]}, {"offset": 65269, "points": [[493, 311], [451, 289], [456, 245], [492, 241], [520, 279]]}, {"offset": 65805, "points": [[362, 366], [336, 326], [349, 294], [386, 279], [422, 309], [422, 349]]}, {"offset": 66350, "points": [[220, 365], [210, 332], [227, 302], [257, 297], [284, 308], [293, 342], [265, 378]]}, {"offset": 72135, "points": [[29, 384], [75, 393], [110, 375], [76, 297], [41, 281], [23, 353]]}, {"offset": 72433, "points": [[12, 349], [18, 282], [96, 303], [113, 390], [12, 396]]}, {"offset": 73608, "points": [[518, 457], [520, 416], [534, 376], [558, 356], [604, 361], [621, 402], [624, 457], [592, 474]]}];
+
+        function selectHotspot(index) {
+            // Clear previous selection
+            document.querySelectorAll('.hotspot-item').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.polygon').forEach(el => el.classList.remove('selected'));
+
+            // Select new
+            const items = document.querySelectorAll('.hotspot-item');
+            if (items[index]) items[index].classList.add('active');
+
+            const poly = document.getElementById('poly-' + index);
+            if (poly) poly.classList.add('selected');
+
+            // Show details
+            const hs = hotspots[index];
+            let html = '<div class="detail-row"><span class="detail-label">Text:</span> ' + hs.text + '</div>';
+            html += '<div class="detail-row"><span class="detail-label">Position:</span> (' + hs.text_x + ', ' + hs.text_y + ')</div>';
+            html += '<div class="detail-row"><span class="detail-label">Layer:</span> ' + hs.layer + '</div>';
+            html += '<div class="detail-row"><span class="detail-label">Offset:</span> <code>0x' + hs.offset.toString(16) + '</code></div>';
+
+            if (hs.polygon) {
+                html += '<div class="detail-row"><span class="detail-label">Polygon:</span> ' + hs.polygon.length + ' points</div>';
+                html += '<div class="detail-row"><span class="detail-label">BBox:</span> (' +
+                        hs.bbox.join(', ') + ')</div>';
+            }
+
+            document.getElementById('details').innerHTML = html;
+
+            // Scroll into view
+            if (poly) poly.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function selectOrphan(index) {
+            document.getElementById('details').innerHTML =
+                '<div class="detail-row"><span class="detail-label">Orphan Polygon</span></div>' +
+                '<div class="detail-row">Points: ' + polygons[index].points.length + '</div>';
+        }
+    </script>
+</body>
+</html>

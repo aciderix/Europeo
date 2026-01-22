@@ -1,0 +1,2350 @@
+================================================================================
+EXTRACTION COMPLÈTE DU FICHIER: suede.vnd
+================================================================================
+
+INFORMATIONS DU FICHIER:
+--------------------------------------------------------------------------------
+Nom:              suede.vnd
+Taille:           51,744 bytes
+Chaînes extraites: 1229
+Variables:        278
+Conditions:       806
+Commandes:        0
+
+TOUTES LES CHAÎNES EXTRAITES:
+--------------------------------------------------------------------------------
+@00000009: VNFILE
+@00000013: 2.13
+@0000001F: Europeo
+@0000002A: Sopra Multimedia
+@0000003E: 5D51F233
+@0000006E: ..\VnStudio\vnresmod.dll
+@0000008E: COMPTEUR1
+@0000009F: COMPTEUR2
+@000000B0: COMPTEUR3
+@000000C1: PHOTO
+@000000CE: SACADOS
+@000000DD: JEU
+@000000E8: BIDON
+@000000F5: SCOTCH
+@00000103: CPAYS
+@00000110: CMENU1
+@0000011E: CMENU2
+@0000012C: CMENU3
+@0000013A: MILLEEURO
+@0000014B: CALC
+@00000157: TELEPHONE
+@00000168: ACTIVE
+@00000176: FRANCS
+@00000184: DELPHITEST1
+@00000197: DELPHITEST2
+@000001AA: RAQUETTE
+@000001BA: REPONSEM
+@000001CA: AFFICHEM
+@000001DA: PIECE
+@000001E7: DICO
+@000001F3: BEETHOVEN
+@00000204: QUESTION
+@00000214: REPONSE
+@00000223: NOTE
+@0000022F: MAUVAISENOTE
+@00000243: TAILLEPIERRE
+@00000257: EXPO
+@00000263: CHEVAL
+@00000271: SABOT2
+@0000027F: RIZ
+@0000028A: CLE
+@00000295: MASSE
+@000002A2: ORGUE
+@000002AF: GUITARE
+@000002BE: PIER_BERLIN
+@000002D1: NUMERO
+@000002DF: CAPITALE
+@000002EF: CISEAUX
+@000002FE: MENU
+@0000030A: PIZZA
+@00000317: COSTUME
+@00000326: LOUPE
+@00000333: PALME
+@00000340: BOUEE
+@0000034D: RESSORT
+@0000035C: BUS
+@00000367: SCORE
+@00000374: LEVRIERNUMERO
+@00000389: LEVRIERPARI
+@0000039C: LEVRIERRESULTAT
+@000003B3: JUSTEPRIXOBJ
+@000003C7: JUSTEPRIXEURO
+@000003DC: JUSTEPRIXCLIC
+@000003F1: JUSTEPRIX1
+@00000403: JUSTEPRIX10
+@00000416: JUSTEPRIX15
+@00000429: JUSTEPRIX20
+@0000043C: JUSTEPRIX25
+@0000044F: JUSTEPRIX30
+@00000462: JUSTEPRIX50
+@00000475: JUSTEPRIX100
+@00000489: JUSTEPRIXSCORE
+@0000049F: PAIN
+@000004AB: HELICE
+@000004B9: HARPON
+@000004C7: MASQUE
+@000004D5: BOUT_PLO
+@000004E5: BALLON1
+@000004F4: PLONGE
+@00000502: GRECQUESTION
+@00000516: GRECREPONSE
+@00000529: FIOLEGRECE
+@0000053B: CARTETOUR
+@0000054C: RUBAN
+@00000559: PARFUM
+@00000567: PEPE
+@00000573: CASTAGNETTE
+@00000586: DANSE
+@00000593: TICKET
+@000005A1: TICKET_A
+@000005B1: MATH
+@000005BD: ORGE
+@000005C9: SIROP
+@000005D6: MACHINE
+@000005E5: ROUEDENT
+@000005F5: BURETTE
+@00000604: CIRE
+@00000610: BOUBOU
+@0000061E: ALLUMETTE
+@0000062F: FIOLESUEDE
+@00000641: SUEDE
+@0000064E: HUILE
+@0000065B: SOUSMARINOK
+@0000066E: CPHOTO
+@0000067C: FIOLEGRECE2
+@0000068F: FIOLEVASE
+@000006A0: VIOLON
+@000006AE: MARMOTTE
+@000006BE: MUSIC
+@000006CB: FIOLEAUTR
+@000006DC: PARTITION
+@000006ED: TONDEUSE
+@000006FD: PALETTE
+@0000070C: PEINTRE
+@0000071B: SCOREPEINTRE
+@0000072F: HOTTE
+@0000073C: LEVURE
+@0000074A: FROG
+@00000756: TRANS
+@00000763: COLOMB
+@00000771: PASTEUR
+@00000780: PORTESECRETE
+@00000794: BOITE
+@000007A1: CLEVERTE
+@000007B1: CLEROUGE
+@000007C1: PONPON
+@000007CF: PONPONOR
+@000007DF: FINIPONPON
+@000007F1: CORNEMUSE
+@00000802: NESSIE
+@00000810: AP_PHOTO
+@00000820: ALLEMAGNE
+@00000831: FIOLE
+@0000083E: FRANCE
+@0000084C: ANGLETERRE
+@0000085E: AUTRICHE
+@0000086E: BELGIQUE
+@0000087E: EUROLAND
+@0000088E: DANEMARK
+@0000089E: ECOSSE
+@000008AC: ESPAGNE
+@000008BB: FINLANDE
+@000008CB: GRECE
+@000008D8: PAYSBAS
+@000008E7: IRLANDE
+@000008F6: ITALIE
+@00000904: PORTUGAL
+@00000914: FIOLEECOSSE
+@00000927: FIOLEIRLANDE
+@0000093B: FIOLEESPAGNE
+@0000094F: FIOLEFINLANDE
+@00000964: FIOLEAUTRICHE
+@00000979: FIOLEPAYSBAS
+@0000098D: FIOLEESPAGNE2
+@000009A2: FIOLEITALIE
+@000009B5: FIOLEANGLETERRE
+@000009CC: OCCUPE1
+@000009DB: OCCUPE2
+@000009EA: OCCUPE3
+@000009F9: OCCUPE4
+@00000A08: OCCUPE5
+@00000A17: OCCUPE6
+@00000A26: OCCUPE7
+@00000A35: OCCUPE8
+@00000A44: OCCUPE9
+@00000A53: OCCUPE10
+@00000A63: OCCUPE11
+@00000A73: OCCUPE12
+@00000A83: OCCUPE
+@00000A91: FIOLEOK
+@00000AA0: CLEJAUNE
+@00000AB0: POIVROUGE
+@00000AC1: AIL
+@00000ACC: BONNET
+@00000ADA: SKATE
+@00000AE7: FARINE
+@00000AF5: API
+@00000B00: DORADE
+@00000B0E: TEMPSLAPIN
+@00000B20: CHIANTI
+@00000B2F: BOUTEILLE
+@00000B40: SAC
+@00000B4B: CHEWING
+@00000B5A: PAPIERCADO
+@00000B6C: SABOT1
+@00000B7A: TONO
+@00000B86: OEUF
+@00000B92: BONUS4
+@00000BA0: BONUS1
+@00000BAE: BONUS2
+@00000BBC: BONUS3
+@00000BCA: NUMPAYS
+@00000BD9: NUMPAYS2
+@00000BE9: NUMPAYSSCORE
+@00000BFD: BONUS6
+@00000C0B: BONUS9
+@00000C19: CHAMPAGNE
+@00000C2A: BONUS5
+@00000C38: TULIPEJAUNE
+@00000C4B: BONUS8
+@00000C59: BONUS7
+@00000C67: ROUGE
+@00000C74: CHAMPAGNE2
+@00000C86: PATE
+@00000C92: SALIERE
+@00000CA1: BOUT_EAU
+@00000CB1: JUSTEPRIX
+@00000CC2: PUCE
+@00000CCE: LAINE
+@00000CDB: FROMAGE
+@00000CEA: POIVJAUNE
+@00000CFB: OIGNON
+@00000D09: MOULE
+@00000D16: PEINTRE1
+@00000D26: SECHE
+@00000D33: BLEU
+@00000D3F: GLO
+@00000D4A: EAUBIERE
+@00000D5A: HOUBLON
+@00000D69: BIEREOK
+@00000D78: TOURNEVIS
+@00000D89: SOUSMARINOK2
+@00000D9D: HARPEOK
+@00000DAC: PUBOK
+@00000DB9: ERREUR7OK
+@00000DCA: ERREUR7D1
+@00000DDB: ERREUR7D2
+@00000DEC: ERREUR7D3
+@00000DFD: ERREUR7D4
+@00000E0E: ERREUR7D5
+@00000E1F: ERREUR7D6
+@00000E30: ERREUR7D7
+@00000E41: BONUS14
+@00000E50: VASE
+@00000E5C: NBINGR
+@00000E6A: INGROK
+@00000E78: OLIVE
+@00000E85: BOUILLON
+@00000E95: PINCE
+@00000EA2: BOTTE
+@00000EAF: BONUS26
+@00000EBE: BONUS25
+@00000ECD: BONUS24
+@00000EDC: BONUS23
+@00000EEB: OUTIL
+@00000EF8: OUTIL2
+@00000F06: OUTIL3
+@00000F14: LAPINSORTIE
+@00000F27: NAINOK
+@00000F35: PIERREOR
+@00000F45: CHOUETTE
+@00000F55: CHOUETTEOR
+@00000F67: ERREUR7OK2
+@00000F79: PISE
+@00000F85: BIERESO
+@00000F94: BETAIL
+@00000FA2: CASTA
+@00000FAF: EAUPAIN
+@00000FBE: PAINOK
+@00000FCC: NON
+@00000FD7: VINCI
+@00001002: BONUS29
+@00001011: BONUS22
+@00001020: BONUS30
+@0000102F: MESP
+@0000103B: MGRE
+@00001047: MGRA
+@00001053: MITA
+@0000105F: MALL
+@0000106B: MFRA
+@00001077: MARMOT
+@00001085: BONUS15
+@00001094: BONUS16
+@000010A3: BONUS18
+@000010B2: BONUS19
+@000010C1: BONUS20
+@000010D0: JUSTEPRIXQUESTION
+@000010E9: JUSTEPRIXREPONSE
+@00001101: JUSTEPRIXOK
+@00001114: PUNK
+@00001120: BOUCHE
+@0000112E: LAPIN
+@0000113B: LOC
+@00001176: villa1.bmp
+@000011DD: ..\..\italie\digit\clapotis.wav. 2
+@0000120B: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54g
+@00001277: 18 0 #000000 Comic sans MS
+@0000129D: 460 80 125 365 0 Le librairef
+@000012F2: 18 0 #000000 Comic sans MS
+@00001318: 350 70 125 365 0 La fabrique de bougiesf
+@00001378: 18 0 #000000 Comic sans MS
+@0000139E: 197 60 125 365 0 La maison de l'inventeurf
+@00001438: 14i
+@000014C6: ..\frontal\start.vnp 3d
+@0000151C: bougie.bmp
+@00001576: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54
+@000015C2: 18 1 #ffffff Comic sans MS
+@000015E8: 290 360 300 400 0 SORTIEh
+@0000162C: sirop = -1 then if cire != -1 then playavi bougie3.avi 1 364 43 448 124
+@0000167F: 18 0 #000000 Comic sans MS
+@000016A5: 270 200 125 365 0 Des bougiesj
+@00001736: 18 0 #000000 Comic sans MS
+@0000175C: sirop != -1 then playtext 280 0 125 365 0 Elle ne peut pas parler
+@000017A9: sirop != -1 then playtext 280 20 125 365 0
+@000017D5: cause d'une petite toux
+@000017F9: boubou = 3 then playtext 275 10 125 365 0 Tu n'as plus rien
+@00001836: faire ici !!
+@0000184F: boubou = 4 then playtext 275 10 125 365 0 Tu n'as plus rien
+@0000188C: faire ici !!
+@000018B1: boubou 0
+@000018C5: sirop != -1 then playavi bougie1.avi 1 364 43 448 124
+@00001906: sirop = 2 then defcursor 0
+@0000192C: sirop = 2 then set_var sirop -1
+@00001957: sirop = -1 then if cire = 0 then playavi bougie3.avi 1 364 43 448 124
+@000019A8: sirop = -1 then if cire = 1 then playavi bougie3.avi 1 364 43 448 124
+@000019F9: sirop = -1 then if cire = 2 then defcursor 0
+@00001A31: sirop = -1 then if cire = 2 then set_var cire -1
+@00001A6D: sirop = -1 then if cire = -1 then addbmp bougie2 bougie2.bmp 0 0 0
+@00001ABB: cire  = -1 then if allumette = 2 then defcursor 0
+@00001AF8: cire  = -1 then if allumette = 2 then set_var allumette -1
+@00001B3E: cire  = -1 then if allumette = -1 then delbmp bougie2
+@00001B7F: cire = -1 then inc_var boubou 1
+@00001BAA: sirop = -1 then inc_var boubou 1
+@00001BD6: allumette = -1 then inc_var boubou 1
+@00001C06: fiolesuede = 1 then set_var boubou 4
+@00001C42: boubou = 4 then playtext 275 10 125 365 0 Tu n'as plus rien
+@00001C7F: faire ici !!
+@00001C98: boubou = 3 then scene 14l
+@00001D8C: boubou 0
+@00001DA0: pain 1
+@00001DB2: sacados 1
+@00001DC7: sirop 1
+@00001DDA: cire 1
+@00001DEC: allumette 1
+@00001E03: fiolesuede 0
+@00001E5C: a_sue.wav
+@00001E75: librair.bmp
+@00001EDD: 18 0 #ffffff Comic sans MS
+@00001F03: 30 365 125 365 0 SORTIE
+@00001F26: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54h
+@00001F85: 18 0 #ffffff Comic sans MS
+@00001FAB: 30 365 125 365 0 Un libraire.
+@00001FE0: non 0
+@00001FF1: clerouge = 2 then inc_var non 1
+@0000201C: ballon1 = 2 then inc_var non 1
+@00002046: bouee = 2 then inc_var non 1
+@0000206E: bout_plo = 2 then inc_var non 1
+@00002099: bus = 2 then inc_var non 1
+@000020BF: castagnette = 2 then inc_var non 1
+@000020ED: ciseau = 2 then inc_var non 1
+@00002116: clejaune = 2 then inc_var non 1
+@00002141: guitare = 2 then inc_var non 1
+@0000216B: harpon = 2 then inc_var non 1
+@00002194: helice = 2 then inc_var non 1
+@000021BD: loupe = 2 then inc_var non 1
+@000021E5: masque = 2 then inc_var non 1
+@0000220E: masse = 2 then inc_var non 1
+@00002236: pain = 2 then inc_var non 1
+@0000225D: palme = 2 then inc_var non 1
+@00002285: photo = 2 then inc_var non 1
+@000022AD: piece = 2 then inc_var non 1
+@000022D5: pier_berlin = 2 then inc_var non 1
+@00002303: raquette = 2 then inc_var non 1
+@0000232E: ressort  = 2 then inc_var non 1
+@00002359: cheval  = 2 then inc_var non 1
+@00002383: riz = 2 then inc_var non 1
+@000023A9: ruban = 2 then inc_var non 1
+@000023D1: sabot1 = 2 then inc_var non 1
+@000023FA: sabot2 = 2 then inc_var non 1
+@00002423: scotch = 2 then inc_var non 1
+@0000244C: taillepierre = 2 then inc_var non 1
+@0000247B: ap_photo = 2 then inc_var non 1
+@000024A6: houblon = 2 then inc_var non 1
+@000024D0: chewing = 2 then inc_var non 1
+@000024FA: cleverte = 2 then inc_var non 1
+@00002525: partition = 2 then inc_var non 1
+@00002551: laine = 2 then inc_var non 1
+@00002579: tondeuse = 2 then inc_var non 1
+@000025A4: tournevis = 2 then inc_var non 1
+@000025D0: cire = 2 then inc_var non 1
+@000025F7: chianti = 2 then inc_var non 1
+@00002621: rouedent = 2 then inc_var non 1
+@0000264C: pierreor = 2 then inc_var non 1
+@00002677: papiercado = 2 then inc_var non 1
+@000026A4: hotte = 2 then inc_var non 1
+@000026CC: levure = 2 then inc_var non 1
+@000026F5: bouteille = 2 then inc_var non 1
+@00002721: parfum = 2 then inc_var non 1
+@0000274A: rouge = 2 then inc_var non 1
+@00002772: bisous = 2 then inc_var non 1
+@0000279B: api  = 2 then inc_var non 1
+@000027C2: pince = 2 then inc_var non 1
+@000027EA: tulipejaune = 2 then inc_var non 1
+@00002818: tulipeorange = 2 then inc_var non 1
+@00002847: tuliperouge = 2 then inc_var non 1
+@00002875: tulipeverte  = 2 then inc_var non 1
+@000028A4: tulipeviolet = 2 then inc_var non 1
+@000028D3: farine = 2 then inc_var non 1
+@000028FC: saliere = 2 then inc_var non 1
+@00002926: bougie = 2 then inc_var non 1
+@0000294F: seche = 2 then inc_var non 1
+@00002977: bout_eau = 2 then inc_var non 1
+@000029A2: dorade = 2 then inc_var non 1
+@000029CB: moule = 2 then inc_var non 1
+@000029F3: ail = 2 then inc_var non 1
+@00002A19: poivrouge = 2 then inc_var non 1
+@00002A45: poivjaune = 2 then inc_var non 1
+@00002A71: oignon  = 2 then inc_var non 1
+@00002A9B: olive = 2 then inc_var non 1
+@00002AC3: bouillon = 2 then inc_var non 1
+@00002AEE: violon = 2 then inc_var non 1
+@00002B17: skate = 2 then inc_var non 1
+@00002B3F: champagne = 2 then inc_var non 1
+@00002B6B: fromage = 2 then inc_var non 1
+@00002B95: bonnet = 2 then inc_var non 1
+@00002BBE: huile = 2 then inc_var non 1
+@00002BE6: orge = 2 then inc_var non 1
+@00002C0D: burette = 2 then inc_var non 1
+@00002C37: allumette = 2 then inc_var non 1
+@00002C63: chouetteor = 2 then inc_var non 1
+@00002C90: chouette = 2 then inc_var non 1
+@00002CBB: sirop = 2 then inc_var non 1
+@00002CE3: fiolegrece = 2 then inc_var non 1
+@00002D10: fiolegrece2 = 2 then inc_var non 1
+@00002D3E: fioleecosse = 2 then inc_var non 1
+@00002D6C: fioleirlande = 2 then inc_var non 1
+@00002D9B: fioleespagne = 2 then inc_var non 1
+@00002DCA: fiolesuede = 2 then inc_var non 1
+@00002DF7: fiolefinlande = 2 then inc_var non 1
+@00002E27: fioleautriche = 2 then inc_var non 1
+@00002E57: fiolepaysbas = 2 then inc_var non 1
+@00002E86: fioleespagne2 = 2 then inc_var non 1
+@00002EB6: fioleitalie = 2 then inc_var non 1
+@00002EE4: fioleangleterre = 2 then inc_var non 1
+@00002F16: non = 0 then playavi librair1.avi 1 76 153 161 197
+@00002F54: non = 1 then playavi librair99.avi 1 77 151 162 196l
+@00003023: 18 0 #ffffff Comic sans MS
+@00003049: scotch = 0 then playtext 410 375 125 365 0 Du scotch.
+@0000308A: scotch != 0 then addbmp cache rol\scotch.bmp 0 503 343
+@000030CC: scotch = 0 then set_var scotch  1
+@000030F9: cache rol\scotch.bmp 0 503 343d
+@00003151: 18 0 #ffffff Comic sans MS
+@00003177: 310 100 125 365 0 L'histoire du ski..j
+@000031EC: inven.bmp
+@00003252: 18 0 #000000 Comic sans MS
+@00003278: 500 356 125 365 0 SORTIE
+@0000329C: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54h
+@000032FB: machine = 0 then playavi invent1.avi 1 91 76 133 130
+@0000333B: machine = 1 then playavi invent2.avi 1 91 76 133 130
+@0000337B: machine = 2 then playavi meca2.avi 1
+@000033AB: 18 0 #000000 Comic sans MS
+@000033D1: rol\levier.bmp 0 434 263
+@000033F5: 350 320 125 365 0 Manette
+@0000341A: 350 340 125 365 0 de d
+@00003431: marrage.i
+@00003465: rouedent = -1 then addbmp roue rol\roue.bmp 0 218 165
+@000034A6: 18 0 #000000 Comic sans MS
+@000034CC: 150 20 125 365 0 Un inventeur fou.
+@00003506: non 0
+@00003517: clerouge = 2 then inc_var non 1
+@00003542: ballon1 = 2 then inc_var non 1
+@0000356C: bouee = 2 then inc_var non 1
+@00003594: bout_plo = 2 then inc_var non 1
+@000035BF: bus = 2 then inc_var non 1
+@000035E5: castagnette = 2 then inc_var non 1
+@00003613: ciseau = 2 then inc_var non 1
+@0000363C: clejaune = 2 then inc_var non 1
+@00003667: guitare = 2 then inc_var non 1
+@00003691: harpon = 2 then inc_var non 1
+@000036BA: helice = 2 then inc_var non 1
+@000036E3: loupe = 2 then inc_var non 1
+@0000370B: masque = 2 then inc_var non 1
+@00003734: masse = 2 then inc_var non 1
+@0000375C: pain = 2 then inc_var non 1
+@00003783: palme = 2 then inc_var non 1
+@000037AB: photo = 2 then inc_var non 1
+@000037D3: piece = 2 then inc_var non 1
+@000037FB: pier_berlin = 2 then inc_var non 1
+@00003829: raquette = 2 then inc_var non 1
+@00003854: ressort  = 2 then inc_var non 1
+@0000387F: cheval  = 2 then inc_var non 1
+@000038A9: riz = 2 then inc_var non 1
+@000038CF: ruban = 2 then inc_var non 1
+@000038F7: sabot1 = 2 then inc_var non 1
+@00003920: sabot2 = 2 then inc_var non 1
+@00003949: scotch = 2 then inc_var non 1
+@00003972: taillepierre = 2 then inc_var non 1
+@000039A1: ap_photo = 2 then inc_var non 1
+@000039CC: houblon = 2 then inc_var non 1
+@000039F6: chewing = 2 then inc_var non 1
+@00003A20: cleverte = 2 then inc_var non 1
+@00003A4B: partition = 2 then inc_var non 1
+@00003A77: laine = 2 then inc_var non 1
+@00003A9F: tondeuse = 2 then inc_var non 1
+@00003ACA: tournevis = 2 then inc_var non 1
+@00003AF6: cire = 2 then inc_var non 1
+@00003B1D: chianti = 2 then inc_var non 1
+@00003B47: pierreor = 2 then inc_var non 1
+@00003B72: papiercado = 2 then inc_var non 1
+@00003B9F: hotte = 2 then inc_var non 1
+@00003BC7: levure = 2 then inc_var non 1
+@00003BF0: bouteille = 2 then inc_var non 1
+@00003C1C: parfum = 2 then inc_var non 1
+@00003C45: rouge = 2 then inc_var non 1
+@00003C6D: bisous = 2 then inc_var non 1
+@00003C96: api  = 2 then inc_var non 1
+@00003CBD: pince = 2 then inc_var non 1
+@00003CE5: tulipejaune = 2 then inc_var non 1
+@00003D13: tulipeorange = 2 then inc_var non 1
+@00003D42: tuliperouge = 2 then inc_var non 1
+@00003D70: tulipeverte  = 2 then inc_var non 1
+@00003D9F: tulipeviolet = 2 then inc_var non 1
+@00003DCE: farine = 2 then inc_var non 1
+@00003DF7: saliere = 2 then inc_var non 1
+@00003E21: bougie = 2 then inc_var non 1
+@00003E4A: seche = 2 then inc_var non 1
+@00003E72: bout_eau = 2 then inc_var non 1
+@00003E9D: dorade = 2 then inc_var non 1
+@00003EC6: moule = 2 then inc_var non 1
+@00003EEE: ail = 2 then inc_var non 1
+@00003F14: poivrouge = 2 then inc_var non 1
+@00003F40: poivjaune = 2 then inc_var non 1
+@00003F6C: oignon  = 2 then inc_var non 1
+@00003F96: olive = 2 then inc_var non 1
+@00003FBE: bouillon = 2 then inc_var non 1
+@00003FE9: violon = 2 then inc_var non 1
+@00004012: skate = 2 then inc_var non 1
+@0000403A: champagne = 2 then inc_var non 1
+@00004066: fromage = 2 then inc_var non 1
+@00004090: bonnet = 2 then inc_var non 1
+@000040B9: huile = 2 then inc_var non 1
+@000040E1: orge = 2 then inc_var non 1
+@00004108: allumette = 2 then inc_var non 1
+@00004134: chouetteor = 2 then inc_var non 1
+@00004161: chouette = 2 then inc_var non 1
+@0000418C: sirop = 2 then inc_var non 1
+@000041B4: fiolegrece = 2 then inc_var non 1
+@000041E1: fiolegrece2 = 2 then inc_var non 1
+@0000420F: fioleecosse = 2 then inc_var non 1
+@0000423D: fioleirlande = 2 then inc_var non 1
+@0000426C: fioleespagne = 2 then inc_var non 1
+@0000429B: fiolesuede = 2 then inc_var non 1
+@000042C8: fiolefinlande = 2 then inc_var non 1
+@000042F8: fioleautriche = 2 then inc_var non 1
+@00004328: fiolepaysbas = 2 then inc_var non 1
+@00004357: fioleespagne2 = 2 then inc_var non 1
+@00004387: fioleitalie = 2 then inc_var non 1
+@000043B5: fioleangleterre = 2 then inc_var non 1
+@000043E7: machine = 2 then inc_var non 2
+@00004411: rouedent = 2 then inc_var non 4
+@0000443C: rouedent = -1 then inc_var non 4
+@00004468: non = 0 then playavi invent1.avi 1 91 76 133 130
+@000044A4: non = 1 then playavi invent99.avi 1 91 76 133 130
+@000044E1: non = 2 then playavi invent3.avi 1 91 76 133 130
+@0000451D: non = 3 then playavi invent99.avi 1 91 76 133 130
+@0000455A: rouedent = 2 then inc_var machine 1
+@00004589: rouedent = 2 then defcursor fleche.cur
+@000045BB: rouedent = 2 then set_var rouedent -1
+@000045EC: rouedent = -1 then addbmp roue rol\roue.bmp 0 218 165
+@0000462D: machine = 1 then hotspot 5l
+@00004719: playbmp rol\manette.bmp 0 204 320
+@00004746: 18 0 #ffffff Comic sans MS
+@0000476C: 280 376 125 365 0 Des informations sur Alfred Nobel.j
+@000047CC: burette = 2 then defcursor fleche.cur
+@000047FD: burette = 2 then inc_var machine 1
+@0000482B: burette = 2 then set_var burette -1
+@0000485A: machine = 1 then playavi invent2.avi 1 91 76 133 130
+@0000489A: machine = 2 then playavi invent4.avi 1 91 76 133 130d
+@000048FA: tournevis = 0 then set_var tournevis 1
+@0000492C: tournevis != 0 then addbmp tourne rol\tournevis.bmp 0 1 356
+@00004973: tournevis != 0 then addbmp tourne rol\tournevis.bmp 0 1 356
+@000049BA: 18 0 #ffffff Comic sans MS
+@000049E0: tournevis = 0 then playtext 80 376 125 365 0 Un tournevisd
+@00004A91: gare.bmp
+@00004AF6: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54e
+@00004B55: 18 0 #000000 Comic sans MS
+@00004B7B: 130 360 125 365 0 Le chef de gare
+@00004BB4: non 0
+@00004BC5: clerouge = 2 then inc_var non 1
+@00004BF0: ballon1 = 2 then inc_var non 1
+@00004C1A: bouee = 2 then inc_var non 1
+@00004C42: bout_plo = 2 then inc_var non 1
+@00004C6D: bus = 2 then inc_var non 1
+@00004C93: castagnette = 2 then inc_var non 1
+@00004CC1: ciseau = 2 then inc_var non 1
+@00004CEA: clejaune = 2 then inc_var non 1
+@00004D15: guitare = 2 then inc_var non 1
+@00004D3F: harpon = 2 then inc_var non 1
+@00004D68: helice = 2 then inc_var non 1
+@00004D91: loupe = 2 then inc_var non 1
+@00004DB9: masque = 2 then inc_var non 1
+@00004DE2: masse = 2 then inc_var non 1
+@00004E0A: pain = 2 then inc_var non 1
+@00004E31: palme = 2 then inc_var non 1
+@00004E59: photo = 2 then inc_var non 1
+@00004E81: piece = 2 then inc_var non 1
+@00004EA9: pier_berlin = 2 then inc_var non 1
+@00004ED7: raquette = 2 then inc_var non 1
+@00004F02: ressort  = 2 then inc_var non 1
+@00004F2D: riz = 2 then inc_var non 1
+@00004F53: ruban = 2 then inc_var non 1
+@00004F7B: sabot1 = 2 then inc_var non 1
+@00004FA4: sabot2 = 2 then inc_var non 1
+@00004FCD: scotch = 2 then inc_var non 1
+@00004FF6: taillepierre = 2 then inc_var non 1
+@00005025: ap_photo = 2 then inc_var non 1
+@00005050: houblon = 2 then inc_var non 1
+@0000507A: chewing = 2 then inc_var non 1
+@000050A4: cleverte = 2 then inc_var non 1
+@000050CF: partition = 2 then inc_var non 1
+@000050FB: laine = 2 then inc_var non 1
+@00005123: tondeuse = 2 then inc_var non 1
+@0000514E: tournevis = 2 then inc_var non 1
+@0000517A: cire = 2 then inc_var non 1
+@000051A1: chianti = 2 then inc_var non 1
+@000051CB: rouedent = 2 then inc_var non 1
+@000051F6: pierreor = 2 then inc_var non 1
+@00005221: papiercado = 2 then inc_var non 1
+@0000524E: hotte = 2 then inc_var non 1
+@00005276: levure = 2 then inc_var non 1
+@0000529F: bouteille = 2 then inc_var non 1
+@000052CB: parfum = 2 then inc_var non 1
+@000052F4: rouge = 2 then inc_var non 1
+@0000531C: bisous = 2 then inc_var non 1
+@00005345: api  = 2 then inc_var non 1
+@0000536C: pince = 2 then inc_var non 1
+@00005394: tulipejaune = 2 then inc_var non 1
+@000053C2: tulipeorange = 2 then inc_var non 1
+@000053F1: tuliperouge = 2 then inc_var non 1
+@0000541F: tulipeverte  = 2 then inc_var non 1
+@0000544E: tulipeviolet = 2 then inc_var non 1
+@0000547D: farine = 2 then inc_var non 1
+@000054A6: saliere = 2 then inc_var non 1
+@000054D0: bougie = 2 then inc_var non 1
+@000054F9: seche = 2 then inc_var non 1
+@00005521: bout_eau = 2 then inc_var non 1
+@0000554C: dorade = 2 then inc_var non 1
+@00005575: moule = 2 then inc_var non 1
+@0000559D: ail = 2 then inc_var non 1
+@000055C3: poivrouge = 2 then inc_var non 1
+@000055EF: poivjaune = 2 then inc_var non 1
+@0000561B: oignon  = 2 then inc_var non 1
+@00005645: olive = 2 then inc_var non 1
+@0000566D: bouillon = 2 then inc_var non 1
+@00005698: violon = 2 then inc_var non 1
+@000056C1: skate = 2 then inc_var non 1
+@000056E9: champagne = 2 then inc_var non 1
+@00005715: fromage = 2 then inc_var non 1
+@0000573F: bonnet = 2 then inc_var non 1
+@00005768: huile = 2 then inc_var non 1
+@00005790: orge = 2 then inc_var non 1
+@000057B7: burette = 2 then inc_var non 1
+@000057E1: allumette = 2 then inc_var non 1
+@0000580D: chouetteor = 2 then inc_var non 1
+@0000583A: chouette = 2 then inc_var non 1
+@00005865: sirop = 2 then inc_var non 1
+@0000588D: fiolegrece = 2 then inc_var non 1
+@000058BA: fiolegrece2 = 2 then inc_var non 1
+@000058E8: fioleecosse = 2 then inc_var non 1
+@00005916: fioleirlande = 2 then inc_var non 1
+@00005945: fioleespagne = 2 then inc_var non 1
+@00005974: fiolesuede = 2 then inc_var non 1
+@000059A1: fiolefinlande = 2 then inc_var non 1
+@000059D1: fioleautriche = 2 then inc_var non 1
+@00005A01: fiolepaysbas = 2 then inc_var non 1
+@00005A30: fioleespagne2 = 2 then inc_var non 1
+@00005A60: fioleitalie = 2 then inc_var non 1
+@00005A8E: fioleangleterre = 2 then inc_var non 1
+@00005AC0: cheval = 2 then set_var orge 0
+@00005AEA: cheval = 2 then set_var cheval -1
+@00005B17: cheval = -1 then inc_var non 2
+@00005B41: cheval = -1 then defcursor fleche.cur
+@00005B72: non = 0 then playavi gare1.avi 1 340 94 416 163
+@00005BAD: non = 1 then playavi gare99.avi 1 340 94 416 163
+@00005BE9: non = 2 then playavi gare2.avi 1 340 94 416 163
+@00005C24: non = 3 then playavi gare99.avi 1 340 94 416 163l
+@00005C80: orge = 1 then addbmp orge rol\orge.bmp 0 93 201
+@00005CBB: orge = 0 then playtext 130 310 125 365 0 Un wagon plein d'orge
+@00005D05: orge != 0 then playtext 10 330 125 365 0 M
+@00005D30: me si le chef de gare
+@00005D51: orge != 0 then playtext 10 345 125 365 0 t'as dit que tu pouvais
+@00005D9D: orge != 0 then playtext 10 360 125 365 0 prendre de l'orge tu vois
+@00005DEB: orge != 0 then playtext 10 375 125 365 0  bien que le  wagon est vide.
+@00005E3D: orge = 0 then playbmp wagon.bmp 0 93 201 else addbmp orge rol\orge.bmp 0 93 201
+@00005E98: cheval = -1 then if orge = 0 then inc_var orge 1
+@00005ED4: orge != 0 then addbmp orge rol\orge.bmp 0 93 201
+@00005F10: orge = 0 then playtext 90 330 125 365 0 Tu ne peux pas en prendre
+@00005F5D: orge = 0 then playtext 90 350 125 365 0 sans l'accord du chef de gare.d
+@00005FF3: soumari.bmp
+@0000604E: 300
+@00006069: sousmarinok2 != -1 then playavi soumar1.avi 1 462 71 524 145
+@000060B1: clapotis.wav 2
+@000060CB: sousmarinok2 != -1 then scene 8 else scene 9
+@00006103: 18 0 #000000 Comic sans MS
+@00006129: 370 15 125 365 0 Un g
+@0000613F: nie de la m
+@0000614B: canique.
+@0000615F: 370 35 125 365 0 Sa passion la construction de
+@00006199: 370 55 125 365 0 sous-marin de poche.
+@000061CA: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54l
+@00006236: 18 0 #000000 Comic sans MS
+@0000625C: 10 170 125 365 0 Vers le village
+@00006288: ..\..\italie\digit\clapotis.wav 2g
+@000062D5: radar.avi 2 140 1 342 139
+@000062FA: radar.avi 2 140 1 342 139d
+@00006363: soumar3.bmp
+@000063BE: score 40
+@000063DF: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54i
+@0000644A: non 0
+@0000645B: clerouge = 2 then inc_var non 1
+@00006486: ballon1 = 2 then inc_var non 1
+@000064B0: bouee = 2 then inc_var non 1
+@000064D8: bout_plo = 2 then inc_var non 1
+@00006503: bus = 2 then inc_var non 1
+@00006529: castagnette = 2 then inc_var non 1
+@00006557: ciseau = 2 then inc_var non 1
+@00006580: clejaune = 2 then inc_var non 1
+@000065AB: guitare = 2 then inc_var non 1
+@000065D5: harpon = 2 then inc_var non 1
+@000065FE: loupe = 2 then inc_var non 1
+@00006626: masque = 2 then inc_var non 1
+@0000664F: masse = 2 then inc_var non 1
+@00006677: pain = 2 then inc_var non 1
+@0000669E: palme = 2 then inc_var non 1
+@000066C6: photo = 2 then inc_var non 1
+@000066EE: piece = 2 then inc_var non 1
+@00006716: pier_berlin = 2 then inc_var non 1
+@00006744: raquette = 2 then inc_var non 1
+@0000676F: cheval  = 2 then inc_var non 1
+@00006799: riz = 2 then inc_var non 1
+@000067BF: ruban = 2 then inc_var non 1
+@000067E7: sabot1 = 2 then inc_var non 1
+@00006810: sabot2 = 2 then inc_var non 1
+@00006839: scotch = 2 then inc_var non 1
+@00006862: taillepierre = 2 then inc_var non 1
+@00006891: ap_photo = 2 then inc_var non 1
+@000068BC: houblon = 2 then inc_var non 1
+@000068E6: chewing = 2 then inc_var non 1
+@00006910: cleverte = 2 then inc_var non 1
+@0000693B: partition = 2 then inc_var non 1
+@00006967: laine = 2 then inc_var non 1
+@0000698F: tondeuse = 2 then inc_var non 1
+@000069BA: tournevis = 2 then inc_var non 1
+@000069E6: cire = 2 then inc_var non 1
+@00006A0D: chianti = 2 then inc_var non 1
+@00006A37: rouedent = 2 then inc_var non 1
+@00006A62: pierreor = 2 then inc_var non 1
+@00006A8D: papiercado = 2 then inc_var non 1
+@00006ABA: hotte = 2 then inc_var non 1
+@00006AE2: levure = 2 then inc_var non 1
+@00006B0B: bouteille = 2 then inc_var non 1
+@00006B37: parfum = 2 then inc_var non 1
+@00006B60: rouge = 2 then inc_var non 1
+@00006B88: bisous = 2 then inc_var non 1
+@00006BB1: api  = 2 then inc_var non 1
+@00006BD8: pince = 2 then inc_var non 1
+@00006C00: tulipejaune = 2 then inc_var non 1
+@00006C2E: tulipeorange = 2 then inc_var non 1
+@00006C5D: tuliperouge = 2 then inc_var non 1
+@00006C8B: tulipeverte  = 2 then inc_var non 1
+@00006CBA: tulipeviolet = 2 then inc_var non 1
+@00006CE9: farine = 2 then inc_var non 1
+@00006D12: saliere = 2 then inc_var non 1
+@00006D3C: bougie = 2 then inc_var non 1
+@00006D65: seche = 2 then inc_var non 1
+@00006D8D: bout_eau = 2 then inc_var non 1
+@00006DB8: dorade = 2 then inc_var non 1
+@00006DE1: moule = 2 then inc_var non 1
+@00006E09: ail = 2 then inc_var non 1
+@00006E2F: poivrouge = 2 then inc_var non 1
+@00006E5B: poivjaune = 2 then inc_var non 1
+@00006E87: oignon  = 2 then inc_var non 1
+@00006EB1: olive = 2 then inc_var non 1
+@00006ED9: bouillon = 2 then inc_var non 1
+@00006F04: violon = 2 then inc_var non 1
+@00006F2D: skate = 2 then inc_var non 1
+@00006F55: champagne = 2 then inc_var non 1
+@00006F81: fromage = 2 then inc_var non 1
+@00006FAB: bonnet = 2 then inc_var non 1
+@00006FD4: orge = 2 then inc_var non 1
+@00006FFB: burette = 2 then inc_var non 1
+@00007025: allumette = 2 then inc_var non 1
+@00007051: chouetteor = 2 then inc_var non 1
+@0000707E: chouette = 2 then inc_var non 1
+@000070A9: sirop = 2 then inc_var non 1
+@000070D1: fiolegrece = 2 then inc_var non 1
+@000070FE: fiolegrece2 = 2 then inc_var non 1
+@0000712C: fioleecosse = 2 then inc_var non 1
+@0000715A: fioleirlande = 2 then inc_var non 1
+@00007189: fioleespagne = 2 then inc_var non 1
+@000071B8: fiolesuede = 2 then inc_var non 1
+@000071E5: fiolefinlande = 2 then inc_var non 1
+@00007215: fioleautriche = 2 then inc_var non 1
+@00007245: fiolepaysbas = 2 then inc_var non 1
+@00007274: fioleespagne2 = 2 then inc_var non 1
+@000072A4: fioleitalie = 2 then inc_var non 1
+@000072D2: fioleangleterre = 2 then inc_var non 1
+@00007304: non = 1 then playavi soumar99.avi 1 462 71 524 145
+@00007342: helice = 2 then defcursor fleche.cur
+@00007372: helice = 2 then set_var helice -1
+@0000739F: helice = -1 then addbmp i1 rol\helice.bmp 0 228 82
+@00007416: non 0
+@00007427: clerouge = 2 then inc_var non 1
+@00007452: ballon1 = 2 then inc_var non 1
+@0000747C: bouee = 2 then inc_var non 1
+@000074A4: bout_plo = 2 then inc_var non 1
+@000074CF: bus = 2 then inc_var non 1
+@000074F5: castagnette = 2 then inc_var non 1
+@00007523: ciseau = 2 then inc_var non 1
+@0000754C: clejaune = 2 then inc_var non 1
+@00007577: guitare = 2 then inc_var non 1
+@000075A1: harpon = 2 then inc_var non 1
+@000075CA: loupe = 2 then inc_var non 1
+@000075F2: masque = 2 then inc_var non 1
+@0000761B: masse = 2 then inc_var non 1
+@00007643: pain = 2 then inc_var non 1
+@0000766A: palme = 2 then inc_var non 1
+@00007692: photo = 2 then inc_var non 1
+@000076BA: piece = 2 then inc_var non 1
+@000076E2: pier_berlin = 2 then inc_var non 1
+@00007710: raquette = 2 then inc_var non 1
+@0000773B: cheval  = 2 then inc_var non 1
+@00007765: riz = 2 then inc_var non 1
+@0000778B: ruban = 2 then inc_var non 1
+@000077B3: sabot1 = 2 then inc_var non 1
+@000077DC: sabot2 = 2 then inc_var non 1
+@00007805: scotch = 2 then inc_var non 1
+@0000782E: taillepierre = 2 then inc_var non 1
+@0000785D: ap_photo = 2 then inc_var non 1
+@00007888: houblon = 2 then inc_var non 1
+@000078B2: chewing = 2 then inc_var non 1
+@000078DC: cleverte = 2 then inc_var non 1
+@00007907: partition = 2 then inc_var non 1
+@00007933: laine = 2 then inc_var non 1
+@0000795B: tondeuse = 2 then inc_var non 1
+@00007986: tournevis = 2 then inc_var non 1
+@000079B2: cire = 2 then inc_var non 1
+@000079D9: chianti = 2 then inc_var non 1
+@00007A03: rouedent = 2 then inc_var non 1
+@00007A2E: pierreor = 2 then inc_var non 1
+@00007A59: papiercado = 2 then inc_var non 1
+@00007A86: hotte = 2 then inc_var non 1
+@00007AAE: levure = 2 then inc_var non 1
+@00007AD7: bouteille = 2 then inc_var non 1
+@00007B03: parfum = 2 then inc_var non 1
+@00007B2C: rouge = 2 then inc_var non 1
+@00007B54: bisous = 2 then inc_var non 1
+@00007B7D: api  = 2 then inc_var non 1
+@00007BA4: pince = 2 then inc_var non 1
+@00007BCC: tulipejaune = 2 then inc_var non 1
+@00007BFA: tulipeorange = 2 then inc_var non 1
+@00007C29: tuliperouge = 2 then inc_var non 1
+@00007C57: tulipeverte  = 2 then inc_var non 1
+@00007C86: tulipeviolet = 2 then inc_var non 1
+@00007CB5: farine = 2 then inc_var non 1
+@00007CDE: saliere = 2 then inc_var non 1
+@00007D08: bougie = 2 then inc_var non 1
+@00007D31: seche = 2 then inc_var non 1
+@00007D59: bout_eau = 2 then inc_var non 1
+@00007D84: dorade = 2 then inc_var non 1
+@00007DAD: moule = 2 then inc_var non 1
+@00007DD5: ail = 2 then inc_var non 1
+@00007DFB: poivrouge = 2 then inc_var non 1
+@00007E27: poivjaune = 2 then inc_var non 1
+@00007E53: oignon  = 2 then inc_var non 1
+@00007E7D: olive = 2 then inc_var non 1
+@00007EA5: bouillon = 2 then inc_var non 1
+@00007ED0: violon = 2 then inc_var non 1
+@00007EF9: skate = 2 then inc_var non 1
+@00007F21: champagne = 2 then inc_var non 1
+@00007F4D: fromage = 2 then inc_var non 1
+@00007F77: bonnet = 2 then inc_var non 1
+@00007FA0: orge = 2 then inc_var non 1
+@00007FC7: burette = 2 then inc_var non 1
+@00007FF1: allumette = 2 then inc_var non 1
+@0000801D: chouetteor = 2 then inc_var non 1
+@0000804A: chouette = 2 then inc_var non 1
+@00008075: sirop = 2 then inc_var non 1
+@0000809D: fiolegrece = 2 then inc_var non 1
+@000080CA: fiolegrece2 = 2 then inc_var non 1
+@000080F8: fioleecosse = 2 then inc_var non 1
+@00008126: fioleirlande = 2 then inc_var non 1
+@00008155: fioleespagne = 2 then inc_var non 1
+@00008184: fiolesuede = 2 then inc_var non 1
+@000081B1: fiolefinlande = 2 then inc_var non 1
+@000081E1: fioleautriche = 2 then inc_var non 1
+@00008211: fiolepaysbas = 2 then inc_var non 1
+@00008240: fioleespagne2 = 2 then inc_var non 1
+@00008270: fioleitalie = 2 then inc_var non 1
+@0000829E: fioleangleterre = 2 then inc_var non 1
+@000082D0: non = 1 then playavi soumar99.avi 1 462 71 524 145
+@0000830E: ressort = 2 then defcursor fleche.cur
+@0000833F: ressort = 2 then set_var ressort -1
+@0000836E: ressort = -1 then addbmp i2 rol\ressort.bmp 0 228 124
+@000083E8: non 0
+@000083F9: clerouge = 2 then inc_var non 1
+@00008424: ballon1 = 2 then inc_var non 1
+@0000844E: bouee = 2 then inc_var non 1
+@00008476: bout_plo = 2 then inc_var non 1
+@000084A1: bus = 2 then inc_var non 1
+@000084C7: castagnette = 2 then inc_var non 1
+@000084F5: ciseau = 2 then inc_var non 1
+@0000851E: clejaune = 2 then inc_var non 1
+@00008549: guitare = 2 then inc_var non 1
+@00008573: harpon = 2 then inc_var non 1
+@0000859C: loupe = 2 then inc_var non 1
+@000085C4: masque = 2 then inc_var non 1
+@000085ED: masse = 2 then inc_var non 1
+@00008615: pain = 2 then inc_var non 1
+@0000863C: palme = 2 then inc_var non 1
+@00008664: photo = 2 then inc_var non 1
+@0000868C: piece = 2 then inc_var non 1
+@000086B4: pier_berlin = 2 then inc_var non 1
+@000086E2: raquette = 2 then inc_var non 1
+@0000870D: cheval  = 2 then inc_var non 1
+@00008737: riz = 2 then inc_var non 1
+@0000875D: ruban = 2 then inc_var non 1
+@00008785: sabot1 = 2 then inc_var non 1
+@000087AE: sabot2 = 2 then inc_var non 1
+@000087D7: scotch = 2 then inc_var non 1
+@00008800: taillepierre = 2 then inc_var non 1
+@0000882F: ap_photo = 2 then inc_var non 1
+@0000885A: houblon = 2 then inc_var non 1
+@00008884: chewing = 2 then inc_var non 1
+@000088AE: cleverte = 2 then inc_var non 1
+@000088D9: partition = 2 then inc_var non 1
+@00008905: laine = 2 then inc_var non 1
+@0000892D: tondeuse = 2 then inc_var non 1
+@00008958: tournevis = 2 then inc_var non 1
+@00008984: cire = 2 then inc_var non 1
+@000089AB: chianti = 2 then inc_var non 1
+@000089D5: rouedent = 2 then inc_var non 1
+@00008A00: pierreor = 2 then inc_var non 1
+@00008A2B: papiercado = 2 then inc_var non 1
+@00008A58: hotte = 2 then inc_var non 1
+@00008A80: levure = 2 then inc_var non 1
+@00008AA9: bouteille = 2 then inc_var non 1
+@00008AD5: parfum = 2 then inc_var non 1
+@00008AFE: rouge = 2 then inc_var non 1
+@00008B26: bisous = 2 then inc_var non 1
+@00008B4F: api  = 2 then inc_var non 1
+@00008B76: pince = 2 then inc_var non 1
+@00008B9E: tulipejaune = 2 then inc_var non 1
+@00008BCC: tulipeorange = 2 then inc_var non 1
+@00008BFB: tuliperouge = 2 then inc_var non 1
+@00008C29: tulipeverte  = 2 then inc_var non 1
+@00008C58: tulipeviolet = 2 then inc_var non 1
+@00008C87: farine = 2 then inc_var non 1
+@00008CB0: saliere = 2 then inc_var non 1
+@00008CDA: bougie = 2 then inc_var non 1
+@00008D03: seche = 2 then inc_var non 1
+@00008D2B: bout_eau = 2 then inc_var non 1
+@00008D56: dorade = 2 then inc_var non 1
+@00008D7F: moule = 2 then inc_var non 1
+@00008DA7: ail = 2 then inc_var non 1
+@00008DCD: poivrouge = 2 then inc_var non 1
+@00008DF9: poivjaune = 2 then inc_var non 1
+@00008E25: oignon  = 2 then inc_var non 1
+@00008E4F: olive = 2 then inc_var non 1
+@00008E77: bouillon = 2 then inc_var non 1
+@00008EA2: violon = 2 then inc_var non 1
+@00008ECB: skate = 2 then inc_var non 1
+@00008EF3: champagne = 2 then inc_var non 1
+@00008F1F: fromage = 2 then inc_var non 1
+@00008F49: bonnet = 2 then inc_var non 1
+@00008F72: orge = 2 then inc_var non 1
+@00008F99: burette = 2 then inc_var non 1
+@00008FC3: allumette = 2 then inc_var non 1
+@00008FEF: chouetteor = 2 then inc_var non 1
+@0000901C: chouette = 2 then inc_var non 1
+@00009047: sirop = 2 then inc_var non 1
+@0000906F: fiolegrece = 2 then inc_var non 1
+@0000909C: fiolegrece2 = 2 then inc_var non 1
+@000090CA: fioleecosse = 2 then inc_var non 1
+@000090F8: fioleirlande = 2 then inc_var non 1
+@00009127: fioleespagne = 2 then inc_var non 1
+@00009156: fiolesuede = 2 then inc_var non 1
+@00009183: fiolefinlande = 2 then inc_var non 1
+@000091B3: fioleautriche = 2 then inc_var non 1
+@000091E3: fiolepaysbas = 2 then inc_var non 1
+@00009212: fioleespagne2 = 2 then inc_var non 1
+@00009242: fioleitalie = 2 then inc_var non 1
+@00009270: fioleangleterre = 2 then inc_var non 1
+@000092A2: non = 1 then playavi soumar99.avi 1 462 71 524 145
+@000092E0: huile = 2 then defcursor fleche.cur
+@0000930F: huile = 2 then set_var huile -1
+@0000933A: huile = -1 then addbmp i3 rol\huile.bmp 0 228 164
+@000093A4: helice = -1 then addbmp i1 rol\helice.bmp 0 228 82
+@000093E2: ressort = -1 then addbmp i2 rol\ressort.bmp 0 228 124
+@00009423: huile = -1 then addbmp i3 rol\huile.bmp 0 228 164
+@00009460: sousmarinok 0
+@00009479: helice = -1 then inc_var sousmarinok 1
+@000094AB: ressort = -1 then inc_var sousmarinok 1
+@000094DE: huile = -1 then inc_var sousmarinok 1
+@0000950F: 1000
+@0000951F: sousmarinok = 3 then set_var sousmarinok2 -1
+@00009557: sousmarinok = 3 then scene 9d
+@0000959F: helice = 2 then hotspot 2
+@000095C4: ressort = 2 then hotspot 3
+@000095EA: huile = 2 then hotspot 4d
+@000096A7: soumar2.bmp
+@00009702: soumarin.wav
+@0000971A: soumarin.avi 1
+@00009734: ..\ecosse\ecosse.vnp 33
+@00009757: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54i
+@000097B6: soumarin.wav
+@000097CE: soumarin.avi 1
+@000097E8: ..\angl\angleterre.vnp 69i
+@0000982D: soumarin.wav
+@00009845: soumarin.avi 1
+@0000985F: ..\finlan\finlan.vnp 11i
+@000098A2: soumarin.wav
+@000098BA: soumarin.avi 1
+@000098D4: ..\danem\danem.vnp 10i
+@00009939: ..\..\ecosse\img24\papier.bmp
+@0000995E: nobel.htm
+@0000999B: nobel nobel.bmp 0 0 40
+@000099C9: nobel.wav
+@000099DE: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54i
+@00009A61: ..\..\ecosse\img24\papier.bmp
+@00009A86: ski.htm
+@00009AC1: ski ski.bmp 0 335 100
+@00009AE2: dico = 1 then runprj ..\biblio\biblio.vnp 17 else scene 4
+@00009B27: 20 1 #000000 Comic sans MS
+@00009B4D: 445 420 125 365 0 Quitter
+@00009B72: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54i
+@00009BED: Intro
+@00009C5E: a_sue.wav
+@00009C73: suede.avi 1
+@00009C97: suede 1
+@00009CAA: euroland = 1 then dec_var euroland 1
+@00009CDA: angleterre = 1 then dec_var angleterre 1
+@00009D0E: autriche = 1  then dec_var autriche 1
+@00009D3F: allemagne = 1  then dec_var allemagne 1
+@00009D72: ecosse = 1  then dec_var ecosse 1
+@00009D9F: espagne = 1  then dec_var espagne 1
+@00009DCE: france = 1  then dec_var france 1
+@00009DFB: finlande = 1  then dec_var finlande 1
+@00009E2C: irlande = 1  then dec_var irlande 1
+@00009E5B: italie = 1  then dec_var italie 1
+@00009E88: paysbas = 1  then dec_var paysbas 1
+@00009EB7: grece = 1  then dec_var grece 1
+@00009EE2: danemark = 1  then dec_var danemark 1
+@00009F13: portugal = 1  then dec_var portugal 1
+@00009F44: belgique = 1  then dec_var belgique 1d
+@00009F79: Toolbar
+@00009FEC: ..\frontal\vnoption.dll
+@0000A00F: etoile ..\..\barre\images\ordi.bmp 6 564 400
+@0000A047: etoile1 ..\..\barre\images\textetm.bmp 6 0 449
+@0000A081: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+@0000A0D1: calc = 1 then addbmp calc1  ..\..\barre\images\calc1.bmp 6 246 400
+@0000A11F: telephone = 1 then addbmp telep  ..\..\barre\images\telep.bmp 6 316 400
+@0000A172: sacados = 1 then addbmp sac  ..\..\barre\images\sac.bmp 6 384 400
+@0000A1BF: toolbar ..\..\barre\images\barre.bmp 6 0 400 640 480
+@0000A1FF: telephone = 1 then addbmp telep  ..\..\barre\images\telep.bmp 6 316 400
+@0000A252: calc = 1 then addbmp calc1  ..\..\barre\images\calc1.bmp 6 246 400
+@0000A2A0: sacados = 1 then addbmp sac  ..\..\barre\images\sac.bmp 6 384 400
+@0000A2ED: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+@0000A33D: fiole = 1 then addbmp fiole ..\..\barre\images\f1.bmp 6 197 461
+@0000A388: fiole = 2 then addbmp fiole ..\..\barre\images\f2.bmp 6 196 461
+@0000A3D3: fiole = 3 then addbmp fiole ..\..\barre\images\f3.bmp 6 196 461
+@0000A41E: fiole = 4 then addbmp fiole ..\..\barre\images\f4.bmp 6 197 461
+@0000A469: fiole = 5 then addbmp fiole ..\..\barre\images\f5.bmp 6 197 461
+@0000A4B4: fiole = 6 then addbmp fiole ..\..\barre\images\f6.bmp 6 196 461
+@0000A4FF: fiole = 7 then addbmp fiole ..\..\barre\images\f7.bmp 6 197 461
+@0000A54A: fiole = 8 then addbmp fiole ..\..\barre\images\f8.bmp 6 197 461
+@0000A595: fiole = 9 then addbmp fiole ..\..\barre\images\f9.bmp 6 196 461
+@0000A5E0: fiole = 10 then addbmp fiole ..\..\barre\images\f10.bmp 6 197 461
+@0000A62D: fiole = 11 then addbmp fiole ..\..\barre\images\f11.bmp 6 196 461
+@0000A67A: fiole = 12 then addbmp fiole ..\..\barre\images\f12.bmp 6 196 461
+@0000A6C7: suede = 1 then  addbmp info ..\..\barre\images\p_suede.bmp 6 452 400
+@0000A717: portugal = 1 then  addbmp info ..\..\barre\images\p_port.bmp 6 452 400
+@0000A769: allemagne = 1 then  addbmp info ..\..\barre\images\p_all.bmp 6 452 400
+@0000A7BB: france = 1 then  addbmp info ..\..\barre\images\p_france.bmp 6 452 400
+@0000A80D: angleterre = 1 then  addbmp info ..\..\barre\images\p_angl.bmp 6 452 400
+@0000A861: autriche = 1 then  addbmp info ..\..\barre\images\p_autriche.bmp 6 452 400
+@0000A8B7: danemark = 1 then  addbmp info ..\..\barre\images\p_danemark.bmp 6 452 400
+@0000A90D: ecosse = 1 then  addbmp info ..\..\barre\images\p_ecosse.bmp 6 452 400
+@0000A95F: euroland = 1 then  addbmp info ..\..\barre\images\p_euroland.bmp 6 452 400
+@0000A9B5: espagne = 1 then  addbmp info ..\..\barre\images\p_espagne.bmp 6 452 400
+@0000AA09: finlande = 1 then  addbmp info ..\..\barre\images\p_finland.bmp 6 452 400
+@0000AA5E: grece = 1 then  addbmp info ..\..\barre\images\p_grece.bmp 6 452 400
+@0000AAAE: irlande = 1 then  addbmp info ..\..\barre\images\p_irlande.bmp 6 452 400
+@0000AB02: italie = 1 then  addbmp info ..\..\barre\images\p_italie.bmp 6 452 400
+@0000AB54: belgique = 1 then  addbmp info ..\..\barre\images\p_belgique.bmp 6 452 400
+@0000ABAA: paysbas = 1 then  addbmp info ..\..\barre\images\p_pays.bmp 6 452 400
+@0000ABFB: 18 0 #ffffff Comic sans MS
+@0000AC21: score 6 15 415 160 470 0 <score>d
+@0000AC6D: calc = 1 then rundll ..\barre\euro32.dll
+@0000ACA1: calc1
+@0000ACB2: calc = 1 then addbmp etoile ..\..\barre\images\calc2.bmp 6 249 400
+@0000AD00: calc = 1 then addbmp etoile1 ..\..\barre\images\textetc.bmp 6 0 450
+@0000AD4F: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+@0000AD9F: telephone = 1 then addbmp telep  ..\..\barre\images\telep.bmp 6 316 400
+@0000ADF2: sacados = 1 then addbmp sac  ..\..\barre\images\sac.bmp 6 384 400d
+@0000AE5F: sac
+@0000AE6E: sacados = 1 then addbmp etoile ..\..\barre\images\sac2.bmp 6 385 400
+@0000AEBE: sacados = 1 then addbmp etoile1 ..\..\barre\images\textes.bmp 6 0 454
+@0000AF0F: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+@0000AF5F: calc = 1 then addbmp calc1  ..\..\barre\images\calc1.bmp 6 246 400
+@0000AFAD: telephone = 1 then addbmp telep  ..\..\barre\images\telep.bmp 6 316 400
+@0000B000: sacados = 1 then rundll ..\barre\inv.dlld
+@0000B061: fleche.cur
+@0000B077: clerouge = 2 then dec_var clerouge 1
+@0000B0A7: ballon1 = 2 then dec_var ballon1 1
+@0000B0D5: bouee = 2 then dec_var bouee 1
+@0000B0FF: bout_plo = 2 then dec_var bout_plo 1
+@0000B12F: bus = 2 then dec_var bus 1
+@0000B155: castagnette = 2 then dec_var castagnette 1
+@0000B18B: ciseaux = 2 then dec_var ciseaux 1
+@0000B1B9: clejaune = 2 then dec_var clejaune 1
+@0000B1E9: guitare = 2 then dec_var guitare 1
+@0000B217: harpon = 2 then dec_var harpon 1
+@0000B243: helice = 2 then dec_var helice 1
+@0000B26F: loupe = 2 then dec_var loupe 1
+@0000B299: masque = 2 then dec_var masque 1
+@0000B2C5: masse = 2 then dec_var masse 1
+@0000B2EF: pain = 2 then dec_var pain 1
+@0000B317: palme = 2 then dec_var palme 1
+@0000B341: photo = 2 then dec_var photo 1
+@0000B36B: piece = 2 then dec_var piece 1
+@0000B395: pier_berlin = 2 then dec_var pier_berlin 1
+@0000B3CB: raquette = 2 then dec_var raquette 1
+@0000B3FB: ressort = 2 then dec_var ressort 1
+@0000B429: cheval = 2 then dec_var cheval 1
+@0000B455: riz = 2 then dec_var riz 1
+@0000B47B: ruban = 2 then dec_var ruban 1
+@0000B4A5: sabot1 = 2 then dec_var sabot1 1
+@0000B4D1: sabot2 = 2 then dec_var sabot2 1
+@0000B4FD: scotch = 2 then dec_var scotch 1
+@0000B529: taillepierre = 2 then dec_var taillepierre 1
+@0000B561: ap_photo = 2 then dec_var ap_photo 1
+@0000B591: houblon = 2 then dec_var houblon 1
+@0000B5BF: chewing = 2 then dec_var chewing 1
+@0000B5ED: cleverte = 2 then dec_var cleverte 1
+@0000B61D: partition = 2 then dec_var partition 1
+@0000B64F: laine = 2 then dec_var laine 1
+@0000B679: tondeuse = 2 then dec_var tondeuse 1
+@0000B6A9: tournevis = 2 then dec_var tournevis 1
+@0000B6DB: cire = 2 then dec_var cire 1
+@0000B703: chianti = 2 then dec_var chianti 1
+@0000B731: rouedent = 2 then dec_var rouedent 1
+@0000B761: pierreor = 2 then dec_var pierreor 1
+@0000B791: papiercado = 2 then dec_var papiercado 1
+@0000B7C5: hotte = 2 then dec_var  hotte 1
+@0000B7F0: levure = 2 then dec_var  levure 1
+@0000B81D: bouteille = 2 then dec_var bouteille 1
+@0000B84F: parfum = 2 then dec_var parfum 1
+@0000B87B: rouge = 2 then dec_var rouge 1
+@0000B8A5: bisous = 2 then dec_var bisous 1
+@0000B8D1: ap = 2 then dec_var api 1
+@0000B8F6: pince = 2 then dec_var pince 1
+@0000B920: tulipejaune = 2 then dec_var tulipejaune 1
+@0000B956: tulipeorange = 2 then dec_var tulipeorange 1
+@0000B98E: tuliperouge = 2 then dec_var tuliperouge 1
+@0000B9C4: tulipeverte = 2 then dec_var tulipeverte 1
+@0000B9FA: tulipeviolet = 2 then dec_var tulipeviolet 1
+@0000BA32: farine = 2 then dec_var farine 1
+@0000BA5E: saliere = 2 then dec_var saliere 1
+@0000BA8C: bougie = 2 then dec_var bougie 1
+@0000BAB8: seche = 2 then dec_var seche 1
+@0000BAE2: bout_eau = 2 then dec_var bout_eau 1
+@0000BB12: dorade = 2 then dec_var dorade 1
+@0000BB3E: moule = 2 then dec_var moule 1
+@0000BB68: ail = 2 then dec_var ail 1
+@0000BB8E: poivrouge = 2 then dec_var poivrouge 1
+@0000BBC0: poivjaune = 2 then dec_var poivjaune 1
+@0000BBF2: oignon = 2 then dec_var oignon 1
+@0000BC1E: olive = 2 then dec_var olive 1
+@0000BC48: bouillon = 2 then dec_var bouillon 1
+@0000BC78: violon = 2 then dec_var violon 1
+@0000BCA4: skate = 2 then dec_var skate 1
+@0000BCCE: champagne = 2 then dec_var champagne 1
+@0000BD00: fromage = 2 then dec_var fromage 1
+@0000BD2E: bonnet = 2 then dec_var bonnet 1
+@0000BD5A: huile = 2 then dec_var huile 1
+@0000BD84: orge = 2 then dec_var orge 1
+@0000BDAC: burette = 2 then dec_var burette 1
+@0000BDDA: allumette = 2 then dec_var allumette 1
+@0000BE0C: chouetteor = 2 then dec_var chouetteor 1
+@0000BE40: chouette = 2 then dec_var chouette 1
+@0000BE70: sirop = 2 then dec_var sirop 1
+@0000BE9A: fiolegrece = 2 then dec_var  fiolegrece 1
+@0000BECF: fiolegrece2 = 2 then dec_var  fiolegrece2 1
+@0000BF06: fioleecosse = 2 then dec_var  fioleecosse 1
+@0000BF3D: fioleirlande = 2 then dec_var  fioleirlande 1
+@0000BF76: fioleespagne = 2 then dec_var  fioleespagne 1
+@0000BFAF: fiolesuede = 2 then dec_var  fiolesuede 1
+@0000BFE4: fiolefinlande = 2 then dec_var  fiolefinlande 1
+@0000C01F: fioleautriche = 2 then dec_var  fioleautriche 1
+@0000C05A: fiolepaysbas = 2 then dec_var  fiolepaysbas 1
+@0000C093: fioleespagne2 = 2 then dec_var  fioleespagne2 1
+@0000C0CE: fioleitalie = 2 then dec_var  fioleitalie 1
+@0000C105: fioleangleterre = 2 then dec_var  fioleangleterre 1d
+@0000C164: active
+@0000C176: trans = 1 then addbmp etoile ..\..\barre\images\trans2.bmp 6 162 400
+@0000C1C6: trans = 1 then addbmp etoile1 ..\..\barre\images\textetr.bmp 6 0 450
+@0000C216: calc = 1 then addbmp calc1  ..\..\barre\images\calc1.bmp 6 246 400
+@0000C264: telephone = 1 then addbmp telep  ..\..\barre\images\telep.bmp 6 316 400
+@0000C2B7: sacados = 1 then addbmp sac  ..\..\barre\images\sac.bmp 6 384 400
+@0000C304: trans = 1 then closewav
+@0000C327: trans = 1 then closedll
+@0000C34A: trans = 1 then playavi ..\..\couleurs1\movie\retour.avi 1
+@0000C38F: ..\couleurs1\couleurs1.vnp 6
+@0000C3B7: trans = 1 then dec_var score 50
+@0000C3E2: score 6 15 415 160 470 0 <score>d
+@0000C42E: telep
+@0000C43F: telephone = 1 then addbmp etoile ..\..\barre\images\telep2.bmp 6 317 400
+@0000C493: telephone = 1 then addbmp etoile1 ..\..\barre\images\textet.bmp 6 0 450
+@0000C4E6: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+@0000C536: calc = 1 then addbmp calc1  ..\..\barre\images\calc1.bmp 6 246 400
+@0000C584: sacados = 1 then addbmp sac  ..\..\barre\images\sac.bmp 6 384 400
+@0000C5D1: telephone = 1 then closedll
+@0000C5F8: telephone = 1 then runprj ..\couleurs1\couleurs1.vnp 4
+@0000C63A: telephone = 1 then dec_var score 1
+@0000C668: score 6 15 415 160 470 0 <score>d
+@0000C6F4: etoile1 ..\..\barre\images\texteam.bmp 6 0 452d
+@0000C74E: etoile
+@0000C760: etoile1
+@0000C773: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+@0000C7C3: calc = 1 then addbmp calc1  ..\..\barre\images\calc1.bmp 6 246 400
+@0000C811: telephone = 1 then addbmp telep  ..\..\barre\images\telep.bmp 6 316 400
+@0000C864: sacados = 1 then addbmp sac  ..\..\barre\images\sac.bmp 6 384 400d
+@0000C8F5: ..\..\italie\img24\papierfiole2.bmp
+@0000C968: fiolesuede 1
+@0000C980: boubou 3
+@0000C9A1: 1000
+@0000C9B1: ..\..\holl\digit\a_hol.wav
+@0000C9D7: ..\..\italie\movie\fiole.avi 2 340 94 580 400i
+
+
+================================================================================
+VARIABLES TROUVÉES:
+================================================================================
+  - 1000
+  - 5D51F233
+  - ACTIVE
+  - AFFICHEM
+  - ALLEMAGNE
+  - ALLUMETTE
+  - ANGLETERRE
+  - AP_PHOTO
+  - AUTRICHE
+  - BALLON1
+  - BEETHOVEN
+  - BELGIQUE
+  - BETAIL
+  - BIDON
+  - BIEREOK
+  - BIERESO
+  - BLEU
+  - BOITE
+  - BONNET
+  - BONUS1
+  - BONUS14
+  - BONUS15
+  - BONUS16
+  - BONUS18
+  - BONUS19
+  - BONUS2
+  - BONUS20
+  - BONUS22
+  - BONUS23
+  - BONUS24
+  - BONUS25
+  - BONUS26
+  - BONUS29
+  - BONUS3
+  - BONUS30
+  - BONUS4
+  - BONUS5
+  - BONUS6
+  - BONUS7
+  - BONUS8
+  - BONUS9
+  - BOTTE
+  - BOUBOU
+  - BOUCHE
+  - BOUEE
+  - BOUILLON
+  - BOUTEILLE
+  - BOUT_EAU
+  - BOUT_PLO
+  - BURETTE
+  - CALC
+  - CAPITALE
+  - CARTETOUR
+  - CASTA
+  - CASTAGNETTE
+  - CHAMPAGNE
+  - CHAMPAGNE2
+  - CHEVAL
+  - CHEWING
+  - CHIANTI
+  - CHOUETTE
+  - CHOUETTEOR
+  - CIRE
+  - CISEAUX
+  - CLEJAUNE
+  - CLEROUGE
+  - CLEVERTE
+  - CMENU1
+  - CMENU2
+  - CMENU3
+  - COLOMB
+  - COMPTEUR1
+  - COMPTEUR2
+  - COMPTEUR3
+  - CORNEMUSE
+  - COSTUME
+  - CPAYS
+  - CPHOTO
+  - DANEMARK
+  - DANSE
+  - DELPHITEST1
+  - DELPHITEST2
+  - DICO
+  - DORADE
+  - EAUBIERE
+  - EAUPAIN
+  - ECOSSE
+  - ERREUR7D1
+  - ERREUR7D2
+  - ERREUR7D3
+  - ERREUR7D4
+  - ERREUR7D5
+  - ERREUR7D6
+  - ERREUR7D7
+  - ERREUR7OK
+  - ERREUR7OK2
+  - ESPAGNE
+  - EUROLAND
+  - EXPO
+  - Europeo
+  - FARINE
+  - FINIPONPON
+  - FINLANDE
+  - FIOLE
+  - FIOLEANGLETERRE
+  - FIOLEAUTR
+  - FIOLEAUTRICHE
+  - FIOLEECOSSE
+  - FIOLEESPAGNE
+  - FIOLEESPAGNE2
+  - FIOLEFINLANDE
+  - FIOLEGRECE
+  - FIOLEGRECE2
+  - FIOLEIRLANDE
+  - FIOLEITALIE
+  - FIOLEOK
+  - FIOLEPAYSBAS
+  - FIOLESUEDE
+  - FIOLEVASE
+  - FRANCE
+  - FRANCS
+  - FROG
+  - FROMAGE
+  - GRECE
+  - GRECQUESTION
+  - GRECREPONSE
+  - GUITARE
+  - HARPEOK
+  - HARPON
+  - HELICE
+  - HOTTE
+  - HOUBLON
+  - HUILE
+  - INGROK
+  - IRLANDE
+  - ITALIE
+  - Intro
+  - JUSTEPRIX
+  - JUSTEPRIX1
+  - JUSTEPRIX10
+  - JUSTEPRIX100
+  - JUSTEPRIX15
+  - JUSTEPRIX20
+  - JUSTEPRIX25
+  - JUSTEPRIX30
+  - JUSTEPRIX50
+  - JUSTEPRIXCLIC
+  - JUSTEPRIXEURO
+  - JUSTEPRIXOBJ
+  - JUSTEPRIXOK
+  - JUSTEPRIXQUESTION
+  - JUSTEPRIXREPONSE
+  - JUSTEPRIXSCORE
+  - LAINE
+  - LAPIN
+  - LAPINSORTIE
+  - LEVRIERNUMERO
+  - LEVRIERPARI
+  - LEVRIERRESULTAT
+  - LEVURE
+  - LOUPE
+  - MACHINE
+  - MALL
+  - MARMOT
+  - MARMOTTE
+  - MASQUE
+  - MASSE
+  - MATH
+  - MAUVAISENOTE
+  - MENU
+  - MESP
+  - MFRA
+  - MGRA
+  - MGRE
+  - MILLEEURO
+  - MITA
+  - MOULE
+  - MUSIC
+  - NAINOK
+  - NBINGR
+  - NESSIE
+  - NOTE
+  - NUMERO
+  - NUMPAYS
+  - NUMPAYS2
+  - NUMPAYSSCORE
+  - OCCUPE
+  - OCCUPE1
+  - OCCUPE10
+  - OCCUPE11
+  - OCCUPE12
+  - OCCUPE2
+  - OCCUPE3
+  - OCCUPE4
+  - OCCUPE5
+  - OCCUPE6
+  - OCCUPE7
+  - OCCUPE8
+  - OCCUPE9
+  - OEUF
+  - OIGNON
+  - OLIVE
+  - ORGE
+  - ORGUE
+  - OUTIL
+  - OUTIL2
+  - OUTIL3
+  - PAIN
+  - PAINOK
+  - PALETTE
+  - PALME
+  - PAPIERCADO
+  - PARFUM
+  - PARTITION
+  - PASTEUR
+  - PATE
+  - PAYSBAS
+  - PEINTRE
+  - PEINTRE1
+  - PEPE
+  - PHOTO
+  - PIECE
+  - PIERREOR
+  - PIER_BERLIN
+  - PINCE
+  - PISE
+  - PIZZA
+  - PLONGE
+  - POIVJAUNE
+  - POIVROUGE
+  - PONPON
+  - PONPONOR
+  - PORTESECRETE
+  - PORTUGAL
+  - PUBOK
+  - PUCE
+  - PUNK
+  - QUESTION
+  - RAQUETTE
+  - REPONSE
+  - REPONSEM
+  - RESSORT
+  - ROUEDENT
+  - ROUGE
+  - RUBAN
+  - SABOT1
+  - SABOT2
+  - SACADOS
+  - SALIERE
+  - SCORE
+  - SCOREPEINTRE
+  - SCOTCH
+  - SECHE
+  - SIROP
+  - SKATE
+  - SOUSMARINOK
+  - SOUSMARINOK2
+  - SUEDE
+  - TAILLEPIERRE
+  - TELEPHONE
+  - TEMPSLAPIN
+  - TICKET
+  - TICKET_A
+  - TONDEUSE
+  - TONO
+  - TOURNEVIS
+  - TRANS
+  - TULIPEJAUNE
+  - Toolbar
+  - VASE
+  - VINCI
+  - VIOLON
+  - VNFILE
+  - active
+  - calc1
+  - etoile
+  - etoile1
+  - telep
+
+
+================================================================================
+CONDITIONS ET LOGIQUE:
+================================================================================
+  ail = 2 then dec_var ail 1
+  ail = 2 then inc_var non 1
+  allemagne = 1  then dec_var allemagne 1
+  allemagne = 1 then  addbmp info ..\..\barre\images\p_all.bmp 6 452 400
+  allumette = -1 then inc_var boubou 1
+  allumette = 2 then dec_var allumette 1
+  allumette = 2 then inc_var non 1
+  angleterre = 1 then  addbmp info ..\..\barre\images\p_angl.bmp 6 452 400
+  angleterre = 1 then dec_var angleterre 1
+  ap = 2 then dec_var api 1
+  ap_photo = 2 then dec_var ap_photo 1
+  ap_photo = 2 then inc_var non 1
+  api  = 2 then inc_var non 1
+  autriche = 1  then dec_var autriche 1
+  autriche = 1 then  addbmp info ..\..\barre\images\p_autriche.bmp 6 452 400
+  ballon1 = 2 then dec_var ballon1 1
+  ballon1 = 2 then inc_var non 1
+  belgique = 1  then dec_var belgique 1d
+  belgique = 1 then  addbmp info ..\..\barre\images\p_belgique.bmp 6 452 400
+  bisous = 2 then dec_var bisous 1
+  bisous = 2 then inc_var non 1
+  bonnet = 2 then dec_var bonnet 1
+  bonnet = 2 then inc_var non 1
+  boubou = 3 then playtext 275 10 125 365 0 Tu n'as plus rien
+  boubou = 3 then scene 14l
+  boubou = 4 then playtext 275 10 125 365 0 Tu n'as plus rien
+  bouee = 2 then dec_var bouee 1
+  bouee = 2 then inc_var non 1
+  bougie = 2 then dec_var bougie 1
+  bougie = 2 then inc_var non 1
+  bouillon = 2 then dec_var bouillon 1
+  bouillon = 2 then inc_var non 1
+  bout_eau = 2 then dec_var bout_eau 1
+  bout_eau = 2 then inc_var non 1
+  bout_plo = 2 then dec_var bout_plo 1
+  bout_plo = 2 then inc_var non 1
+  bouteille = 2 then dec_var bouteille 1
+  bouteille = 2 then inc_var non 1
+  burette = 2 then dec_var burette 1
+  burette = 2 then defcursor fleche.cur
+  burette = 2 then inc_var machine 1
+  burette = 2 then inc_var non 1
+  burette = 2 then set_var burette -1
+  bus = 2 then dec_var bus 1
+  bus = 2 then inc_var non 1
+  calc = 1 then addbmp calc1  ..\..\barre\images\calc1.bmp 6 246 400
+  calc = 1 then addbmp etoile ..\..\barre\images\calc2.bmp 6 249 400
+  calc = 1 then addbmp etoile1 ..\..\barre\images\textetc.bmp 6 0 450
+  calc = 1 then rundll ..\barre\euro32.dll
+  castagnette = 2 then dec_var castagnette 1
+  castagnette = 2 then inc_var non 1
+  champagne = 2 then dec_var champagne 1
+  champagne = 2 then inc_var non 1
+  cheval  = 2 then inc_var non 1
+  cheval = -1 then defcursor fleche.cur
+  cheval = -1 then if orge = 0 then inc_var orge 1
+  cheval = -1 then inc_var non 2
+  cheval = 2 then dec_var cheval 1
+  cheval = 2 then set_var cheval -1
+  cheval = 2 then set_var orge 0
+  chewing = 2 then dec_var chewing 1
+  chewing = 2 then inc_var non 1
+  chianti = 2 then dec_var chianti 1
+  chianti = 2 then inc_var non 1
+  chouette = 2 then dec_var chouette 1
+  chouette = 2 then inc_var non 1
+  chouetteor = 2 then dec_var chouetteor 1
+  chouetteor = 2 then inc_var non 1
+  cire  = -1 then if allumette = -1 then delbmp bougie2
+  cire  = -1 then if allumette = 2 then defcursor 0
+  cire  = -1 then if allumette = 2 then set_var allumette -1
+  cire = -1 then inc_var boubou 1
+  cire = 2 then dec_var cire 1
+  cire = 2 then inc_var non 1
+  ciseau = 2 then inc_var non 1
+  ciseaux = 2 then dec_var ciseaux 1
+  clejaune = 2 then dec_var clejaune 1
+  clejaune = 2 then inc_var non 1
+  clerouge = 2 then dec_var clerouge 1
+  clerouge = 2 then inc_var non 1
+  cleverte = 2 then dec_var cleverte 1
+  cleverte = 2 then inc_var non 1
+  danemark = 1  then dec_var danemark 1
+  danemark = 1 then  addbmp info ..\..\barre\images\p_danemark.bmp 6 452 400
+  dico = 1 then runprj ..\biblio\biblio.vnp 17 else scene 4
+  dorade = 2 then dec_var dorade 1
+  dorade = 2 then inc_var non 1
+  ecosse = 1  then dec_var ecosse 1
+  ecosse = 1 then  addbmp info ..\..\barre\images\p_ecosse.bmp 6 452 400
+  espagne = 1  then dec_var espagne 1
+  espagne = 1 then  addbmp info ..\..\barre\images\p_espagne.bmp 6 452 400
+  euroland = 1 then  addbmp info ..\..\barre\images\p_euroland.bmp 6 452 400
+  euroland = 1 then dec_var euroland 1
+  farine = 2 then dec_var farine 1
+  farine = 2 then inc_var non 1
+  finlande = 1  then dec_var finlande 1
+  finlande = 1 then  addbmp info ..\..\barre\images\p_finland.bmp 6 452 400
+  fiole = 1 then addbmp fiole ..\..\barre\images\f1.bmp 6 197 461
+  fiole = 10 then addbmp fiole ..\..\barre\images\f10.bmp 6 197 461
+  fiole = 11 then addbmp fiole ..\..\barre\images\f11.bmp 6 196 461
+  fiole = 12 then addbmp fiole ..\..\barre\images\f12.bmp 6 196 461
+  fiole = 2 then addbmp fiole ..\..\barre\images\f2.bmp 6 196 461
+  fiole = 3 then addbmp fiole ..\..\barre\images\f3.bmp 6 196 461
+  fiole = 4 then addbmp fiole ..\..\barre\images\f4.bmp 6 197 461
+  fiole = 5 then addbmp fiole ..\..\barre\images\f5.bmp 6 197 461
+  fiole = 6 then addbmp fiole ..\..\barre\images\f6.bmp 6 196 461
+  fiole = 7 then addbmp fiole ..\..\barre\images\f7.bmp 6 197 461
+  fiole = 8 then addbmp fiole ..\..\barre\images\f8.bmp 6 197 461
+  fiole = 9 then addbmp fiole ..\..\barre\images\f9.bmp 6 196 461
+  fioleangleterre = 2 then dec_var  fioleangleterre 1d
+  fioleangleterre = 2 then inc_var non 1
+  fioleautriche = 2 then dec_var  fioleautriche 1
+  fioleautriche = 2 then inc_var non 1
+  fioleecosse = 2 then dec_var  fioleecosse 1
+  fioleecosse = 2 then inc_var non 1
+  fioleespagne = 2 then dec_var  fioleespagne 1
+  fioleespagne = 2 then inc_var non 1
+  fioleespagne2 = 2 then dec_var  fioleespagne2 1
+  fioleespagne2 = 2 then inc_var non 1
+  fiolefinlande = 2 then dec_var  fiolefinlande 1
+  fiolefinlande = 2 then inc_var non 1
+  fiolegrece = 2 then dec_var  fiolegrece 1
+  fiolegrece = 2 then inc_var non 1
+  fiolegrece2 = 2 then dec_var  fiolegrece2 1
+  fiolegrece2 = 2 then inc_var non 1
+  fioleirlande = 2 then dec_var  fioleirlande 1
+  fioleirlande = 2 then inc_var non 1
+  fioleitalie = 2 then dec_var  fioleitalie 1
+  fioleitalie = 2 then inc_var non 1
+  fiolepaysbas = 2 then dec_var  fiolepaysbas 1
+  fiolepaysbas = 2 then inc_var non 1
+  fiolesuede = 1 then set_var boubou 4
+  fiolesuede = 2 then dec_var  fiolesuede 1
+  fiolesuede = 2 then inc_var non 1
+  france = 1  then dec_var france 1
+  france = 1 then  addbmp info ..\..\barre\images\p_france.bmp 6 452 400
+  fromage = 2 then dec_var fromage 1
+  fromage = 2 then inc_var non 1
+  grece = 1  then dec_var grece 1
+  grece = 1 then  addbmp info ..\..\barre\images\p_grece.bmp 6 452 400
+  guitare = 2 then dec_var guitare 1
+  guitare = 2 then inc_var non 1
+  harpon = 2 then dec_var harpon 1
+  harpon = 2 then inc_var non 1
+  helice = -1 then addbmp i1 rol\helice.bmp 0 228 82
+  helice = -1 then inc_var sousmarinok 1
+  helice = 2 then dec_var helice 1
+  helice = 2 then defcursor fleche.cur
+  helice = 2 then hotspot 2
+  helice = 2 then inc_var non 1
+  helice = 2 then set_var helice -1
+  hotte = 2 then dec_var  hotte 1
+  hotte = 2 then inc_var non 1
+  houblon = 2 then dec_var houblon 1
+  houblon = 2 then inc_var non 1
+  huile = -1 then addbmp i3 rol\huile.bmp 0 228 164
+  huile = -1 then inc_var sousmarinok 1
+  huile = 2 then dec_var huile 1
+  huile = 2 then defcursor fleche.cur
+  huile = 2 then hotspot 4d
+  huile = 2 then inc_var non 1
+  huile = 2 then set_var huile -1
+  irlande = 1  then dec_var irlande 1
+  irlande = 1 then  addbmp info ..\..\barre\images\p_irlande.bmp 6 452 400
+  italie = 1  then dec_var italie 1
+  italie = 1 then  addbmp info ..\..\barre\images\p_italie.bmp 6 452 400
+  laine = 2 then dec_var laine 1
+  laine = 2 then inc_var non 1
+  levure = 2 then dec_var  levure 1
+  levure = 2 then inc_var non 1
+  loupe = 2 then dec_var loupe 1
+  loupe = 2 then inc_var non 1
+  machine = 0 then playavi invent1.avi 1 91 76 133 130
+  machine = 1 then hotspot 5l
+  machine = 1 then playavi invent2.avi 1 91 76 133 130
+  machine = 2 then inc_var non 2
+  machine = 2 then playavi invent4.avi 1 91 76 133 130d
+  machine = 2 then playavi meca2.avi 1
+  masque = 2 then dec_var masque 1
+  masque = 2 then inc_var non 1
+  masse = 2 then dec_var masse 1
+  masse = 2 then inc_var non 1
+  moule = 2 then dec_var moule 1
+  moule = 2 then inc_var non 1
+  non = 0 then playavi gare1.avi 1 340 94 416 163
+  non = 0 then playavi invent1.avi 1 91 76 133 130
+  non = 0 then playavi librair1.avi 1 76 153 161 197
+  non = 1 then playavi gare99.avi 1 340 94 416 163
+  non = 1 then playavi invent99.avi 1 91 76 133 130
+  non = 1 then playavi librair99.avi 1 77 151 162 196l
+  non = 1 then playavi soumar99.avi 1 462 71 524 145
+  non = 2 then playavi gare2.avi 1 340 94 416 163
+  non = 2 then playavi invent3.avi 1 91 76 133 130
+  non = 3 then playavi gare99.avi 1 340 94 416 163l
+  non = 3 then playavi invent99.avi 1 91 76 133 130
+  oignon  = 2 then inc_var non 1
+  oignon = 2 then dec_var oignon 1
+  olive = 2 then dec_var olive 1
+  olive = 2 then inc_var non 1
+  orge != 0 then addbmp orge rol\orge.bmp 0 93 201
+  orge != 0 then playtext 10 330 125 365 0 M
+  orge != 0 then playtext 10 345 125 365 0 t'as dit que tu pouvais
+  orge != 0 then playtext 10 360 125 365 0 prendre de l'orge tu vois
+  orge != 0 then playtext 10 375 125 365 0  bien que le  wagon est vide.
+  orge = 0 then playbmp wagon.bmp 0 93 201 else addbmp orge rol\orge.bmp 0 93 201
+  orge = 0 then playtext 130 310 125 365 0 Un wagon plein d'orge
+  orge = 0 then playtext 90 330 125 365 0 Tu ne peux pas en prendre
+  orge = 0 then playtext 90 350 125 365 0 sans l'accord du chef de gare.d
+  orge = 1 then addbmp orge rol\orge.bmp 0 93 201
+  orge = 2 then dec_var orge 1
+  orge = 2 then inc_var non 1
+  pain = 2 then dec_var pain 1
+  pain = 2 then inc_var non 1
+  palme = 2 then dec_var palme 1
+  palme = 2 then inc_var non 1
+  papiercado = 2 then dec_var papiercado 1
+  papiercado = 2 then inc_var non 1
+  parfum = 2 then dec_var parfum 1
+  parfum = 2 then inc_var non 1
+  partition = 2 then dec_var partition 1
+  partition = 2 then inc_var non 1
+  paysbas = 1  then dec_var paysbas 1
+  paysbas = 1 then  addbmp info ..\..\barre\images\p_pays.bmp 6 452 400
+  photo = 2 then dec_var photo 1
+  photo = 2 then inc_var non 1
+  piece = 2 then dec_var piece 1
+  piece = 2 then inc_var non 1
+  pier_berlin = 2 then dec_var pier_berlin 1
+  pier_berlin = 2 then inc_var non 1
+  pierreor = 2 then dec_var pierreor 1
+  pierreor = 2 then inc_var non 1
+  pince = 2 then dec_var pince 1
+  pince = 2 then inc_var non 1
+  poivjaune = 2 then dec_var poivjaune 1
+  poivjaune = 2 then inc_var non 1
+  poivrouge = 2 then dec_var poivrouge 1
+  poivrouge = 2 then inc_var non 1
+  portugal = 1  then dec_var portugal 1
+  portugal = 1 then  addbmp info ..\..\barre\images\p_port.bmp 6 452 400
+  raquette = 2 then dec_var raquette 1
+  raquette = 2 then inc_var non 1
+  ressort  = 2 then inc_var non 1
+  ressort = -1 then addbmp i2 rol\ressort.bmp 0 228 124
+  ressort = -1 then inc_var sousmarinok 1
+  ressort = 2 then dec_var ressort 1
+  ressort = 2 then defcursor fleche.cur
+  ressort = 2 then hotspot 3
+  ressort = 2 then set_var ressort -1
+  riz = 2 then dec_var riz 1
+  riz = 2 then inc_var non 1
+  rouedent = -1 then addbmp roue rol\roue.bmp 0 218 165
+  rouedent = -1 then inc_var non 4
+  rouedent = 2 then dec_var rouedent 1
+  rouedent = 2 then defcursor fleche.cur
+  rouedent = 2 then inc_var machine 1
+  rouedent = 2 then inc_var non 1
+  rouedent = 2 then inc_var non 4
+  rouedent = 2 then set_var rouedent -1
+  rouge = 2 then dec_var rouge 1
+  rouge = 2 then inc_var non 1
+  ruban = 2 then dec_var ruban 1
+  ruban = 2 then inc_var non 1
+  sabot1 = 2 then dec_var sabot1 1
+  sabot1 = 2 then inc_var non 1
+  sabot2 = 2 then dec_var sabot2 1
+  sabot2 = 2 then inc_var non 1
+  sacados = 1 then addbmp etoile ..\..\barre\images\sac2.bmp 6 385 400
+  sacados = 1 then addbmp etoile1 ..\..\barre\images\textes.bmp 6 0 454
+  sacados = 1 then addbmp sac  ..\..\barre\images\sac.bmp 6 384 400
+  sacados = 1 then addbmp sac  ..\..\barre\images\sac.bmp 6 384 400d
+  sacados = 1 then rundll ..\barre\inv.dlld
+  saliere = 2 then dec_var saliere 1
+  saliere = 2 then inc_var non 1
+  scotch != 0 then addbmp cache rol\scotch.bmp 0 503 343
+  scotch = 0 then playtext 410 375 125 365 0 Du scotch.
+  scotch = 0 then set_var scotch  1
+  scotch = 2 then dec_var scotch 1
+  scotch = 2 then inc_var non 1
+  seche = 2 then dec_var seche 1
+  seche = 2 then inc_var non 1
+  sirop != -1 then playavi bougie1.avi 1 364 43 448 124
+  sirop != -1 then playtext 280 0 125 365 0 Elle ne peut pas parler
+  sirop != -1 then playtext 280 20 125 365 0
+  sirop = -1 then if cire != -1 then playavi bougie3.avi 1 364 43 448 124
+  sirop = -1 then if cire = -1 then addbmp bougie2 bougie2.bmp 0 0 0
+  sirop = -1 then if cire = 0 then playavi bougie3.avi 1 364 43 448 124
+  sirop = -1 then if cire = 1 then playavi bougie3.avi 1 364 43 448 124
+  sirop = -1 then if cire = 2 then defcursor 0
+  sirop = -1 then if cire = 2 then set_var cire -1
+  sirop = -1 then inc_var boubou 1
+  sirop = 2 then dec_var sirop 1
+  sirop = 2 then defcursor 0
+  sirop = 2 then inc_var non 1
+  sirop = 2 then set_var sirop -1
+  skate = 2 then dec_var skate 1
+  skate = 2 then inc_var non 1
+  sousmarinok = 3 then scene 9d
+  sousmarinok = 3 then set_var sousmarinok2 -1
+  sousmarinok2 != -1 then playavi soumar1.avi 1 462 71 524 145
+  sousmarinok2 != -1 then scene 8 else scene 9
+  suede = 1 then  addbmp info ..\..\barre\images\p_suede.bmp 6 452 400
+  taillepierre = 2 then dec_var taillepierre 1
+  taillepierre = 2 then inc_var non 1
+  telephone = 1 then addbmp etoile ..\..\barre\images\telep2.bmp 6 317 400
+  telephone = 1 then addbmp etoile1 ..\..\barre\images\textet.bmp 6 0 450
+  telephone = 1 then addbmp telep  ..\..\barre\images\telep.bmp 6 316 400
+  telephone = 1 then closedll
+  telephone = 1 then dec_var score 1
+  telephone = 1 then runprj ..\couleurs1\couleurs1.vnp 4
+  tondeuse = 2 then dec_var tondeuse 1
+  tondeuse = 2 then inc_var non 1
+  tournevis != 0 then addbmp tourne rol\tournevis.bmp 0 1 356
+  tournevis = 0 then playtext 80 376 125 365 0 Un tournevisd
+  tournevis = 0 then set_var tournevis 1
+  tournevis = 2 then dec_var tournevis 1
+  tournevis = 2 then inc_var non 1
+  trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+  trans = 1 then addbmp etoile ..\..\barre\images\trans2.bmp 6 162 400
+  trans = 1 then addbmp etoile1 ..\..\barre\images\textetr.bmp 6 0 450
+  trans = 1 then closedll
+  trans = 1 then closewav
+  trans = 1 then dec_var score 50
+  trans = 1 then playavi ..\..\couleurs1\movie\retour.avi 1
+  tulipejaune = 2 then dec_var tulipejaune 1
+  tulipejaune = 2 then inc_var non 1
+  tulipeorange = 2 then dec_var tulipeorange 1
+  tulipeorange = 2 then inc_var non 1
+  tuliperouge = 2 then dec_var tuliperouge 1
+  tuliperouge = 2 then inc_var non 1
+  tulipeverte  = 2 then inc_var non 1
+  tulipeverte = 2 then dec_var tulipeverte 1
+  tulipeviolet = 2 then dec_var tulipeviolet 1
+  tulipeviolet = 2 then inc_var non 1
+  violon = 2 then dec_var violon 1
+  violon = 2 then inc_var non 1
+
+
+================================================================================
+VARIABLES SPÉCIFIQUES TROUVÉES:
+================================================================================
+
+🎯 ALLEMAGNE:
+  @00000820: ALLEMAGNE
+  @00009D3F: allemagne = 1  then dec_var allemagne 1
+  @0000A769: allemagne = 1 then  addbmp info ..\..\barre\images\p_all.bmp 6 452 400
+
+🎯 ANGLETERRE:
+  @0000084C: ANGLETERRE
+  @000009B5: FIOLEANGLETERRE
+  @00002EE4: fioleangleterre = 2 then inc_var non 1
+  @000043B5: fioleangleterre = 2 then inc_var non 1
+  @00005A8E: fioleangleterre = 2 then inc_var non 1
+  @000072D2: fioleangleterre = 2 then inc_var non 1
+  @0000829E: fioleangleterre = 2 then inc_var non 1
+  @00009270: fioleangleterre = 2 then inc_var non 1
+  @000097E8: ..\angl\angleterre.vnp 69i
+  @00009CDA: angleterre = 1 then dec_var angleterre 1
+
+🎯 AUTRICHE:
+  @0000085E: AUTRICHE
+  @00000964: FIOLEAUTRICHE
+  @00002E27: fioleautriche = 2 then inc_var non 1
+  @000042F8: fioleautriche = 2 then inc_var non 1
+  @000059D1: fioleautriche = 2 then inc_var non 1
+  @00007215: fioleautriche = 2 then inc_var non 1
+  @000081E1: fioleautriche = 2 then inc_var non 1
+  @000091B3: fioleautriche = 2 then inc_var non 1
+  @00009D0E: autriche = 1  then dec_var autriche 1
+  @0000A861: autriche = 1 then  addbmp info ..\..\barre\images\p_autriche.bmp 6 452 400
+
+🎯 BALLON:
+  @000004E5: BALLON1
+  @0000201C: ballon1 = 2 then inc_var non 1
+  @00003542: ballon1 = 2 then inc_var non 1
+  @00004BF0: ballon1 = 2 then inc_var non 1
+  @00006486: ballon1 = 2 then inc_var non 1
+  @00007452: ballon1 = 2 then inc_var non 1
+  @00008424: ballon1 = 2 then inc_var non 1
+  @0000B0A7: ballon1 = 2 then dec_var ballon1 1
+
+🎯 BEETHOVEN:
+  @000001F3: BEETHOVEN
+
+🎯 BELGIQUE:
+  @0000086E: BELGIQUE
+  @00009F44: belgique = 1  then dec_var belgique 1d
+  @0000AB54: belgique = 1 then  addbmp info ..\..\barre\images\p_belgique.bmp 6 452 400
+
+🎯 BIERE:
+  @00000D4A: EAUBIERE
+  @00000D69: BIEREOK
+  @00000F85: BIERESO
+
+🎯 BONUS:
+  @00000B92: BONUS4
+  @00000BA0: BONUS1
+  @00000BAE: BONUS2
+  @00000BBC: BONUS3
+  @00000BFD: BONUS6
+  @00000C0B: BONUS9
+  @00000C2A: BONUS5
+  @00000C4B: BONUS8
+  @00000C59: BONUS7
+  @00000E41: BONUS14
+
+🎯 BOUT_PLO:
+  @000004D5: BOUT_PLO
+  @0000206E: bout_plo = 2 then inc_var non 1
+  @00003594: bout_plo = 2 then inc_var non 1
+  @00004C42: bout_plo = 2 then inc_var non 1
+  @000064D8: bout_plo = 2 then inc_var non 1
+  @000074A4: bout_plo = 2 then inc_var non 1
+  @00008476: bout_plo = 2 then inc_var non 1
+  @0000B0FF: bout_plo = 2 then dec_var bout_plo 1
+
+🎯 BUS:
+  @0000035C: BUS
+  @00002099: bus = 2 then inc_var non 1
+  @000035BF: bus = 2 then inc_var non 1
+  @00004C6D: bus = 2 then inc_var non 1
+  @00006503: bus = 2 then inc_var non 1
+  @000074CF: bus = 2 then inc_var non 1
+  @000084A1: bus = 2 then inc_var non 1
+  @0000B12F: bus = 2 then dec_var bus 1
+
+🎯 CARTETOUR:
+  @0000053B: CARTETOUR
+
+🎯 CASTAGNETTE:
+  @00000573: CASTAGNETTE
+  @000020BF: castagnette = 2 then inc_var non 1
+  @000035E5: castagnette = 2 then inc_var non 1
+  @00004C93: castagnette = 2 then inc_var non 1
+  @00006529: castagnette = 2 then inc_var non 1
+  @000074F5: castagnette = 2 then inc_var non 1
+  @000084C7: castagnette = 2 then inc_var non 1
+  @0000B155: castagnette = 2 then dec_var castagnette 1
+
+🎯 CHAMPAGNE:
+  @00000C19: CHAMPAGNE
+  @00000C74: CHAMPAGNE2
+  @00002B3F: champagne = 2 then inc_var non 1
+  @0000403A: champagne = 2 then inc_var non 1
+  @000056E9: champagne = 2 then inc_var non 1
+  @00006F55: champagne = 2 then inc_var non 1
+  @00007F21: champagne = 2 then inc_var non 1
+  @00008EF3: champagne = 2 then inc_var non 1
+  @0000BCCE: champagne = 2 then dec_var champagne 1
+
+🎯 CPHOTO:
+  @0000066E: CPHOTO
+
+🎯 DANSE:
+  @00000586: DANSE
+
+🎯 ECOSSE:
+  @0000089E: ECOSSE
+  @00000914: FIOLEECOSSE
+  @00002D3E: fioleecosse = 2 then inc_var non 1
+  @0000420F: fioleecosse = 2 then inc_var non 1
+  @000058E8: fioleecosse = 2 then inc_var non 1
+  @0000712C: fioleecosse = 2 then inc_var non 1
+  @000080F8: fioleecosse = 2 then inc_var non 1
+  @000090CA: fioleecosse = 2 then inc_var non 1
+  @00009734: ..\ecosse\ecosse.vnp 33
+  @00009939: ..\..\ecosse\img24\papier.bmp
+
+🎯 ESPAGNE:
+  @000008AC: ESPAGNE
+  @0000093B: FIOLEESPAGNE
+  @0000098D: FIOLEESPAGNE2
+  @00002D9B: fioleespagne = 2 then inc_var non 1
+  @00002E86: fioleespagne2 = 2 then inc_var non 1
+  @0000426C: fioleespagne = 2 then inc_var non 1
+  @00004357: fioleespagne2 = 2 then inc_var non 1
+  @00005945: fioleespagne = 2 then inc_var non 1
+  @00005A30: fioleespagne2 = 2 then inc_var non 1
+  @00007189: fioleespagne = 2 then inc_var non 1
+
+🎯 FINLANDE:
+  @000008BB: FINLANDE
+  @0000094F: FIOLEFINLANDE
+  @00002DF7: fiolefinlande = 2 then inc_var non 1
+  @000042C8: fiolefinlande = 2 then inc_var non 1
+  @000059A1: fiolefinlande = 2 then inc_var non 1
+  @000071E5: fiolefinlande = 2 then inc_var non 1
+  @000081B1: fiolefinlande = 2 then inc_var non 1
+  @00009183: fiolefinlande = 2 then inc_var non 1
+  @00009DFB: finlande = 1  then dec_var finlande 1
+  @0000AA09: finlande = 1 then  addbmp info ..\..\barre\images\p_finland.bmp 6 452 400
+
+🎯 FIOLE:
+  @00000529: FIOLEGRECE
+  @0000062F: FIOLESUEDE
+  @0000067C: FIOLEGRECE2
+  @0000068F: FIOLEVASE
+  @000006CB: FIOLEAUTR
+  @00000831: FIOLE
+  @00000914: FIOLEECOSSE
+  @00000927: FIOLEIRLANDE
+  @0000093B: FIOLEESPAGNE
+  @0000094F: FIOLEFINLANDE
+
+🎯 FIOLEAUTR:
+  @000006CB: FIOLEAUTR
+  @00000964: FIOLEAUTRICHE
+  @00002E27: fioleautriche = 2 then inc_var non 1
+  @000042F8: fioleautriche = 2 then inc_var non 1
+  @000059D1: fioleautriche = 2 then inc_var non 1
+  @00007215: fioleautriche = 2 then inc_var non 1
+  @000081E1: fioleautriche = 2 then inc_var non 1
+  @000091B3: fioleautriche = 2 then inc_var non 1
+  @0000C01F: fioleautriche = 2 then dec_var  fioleautriche 1
+
+🎯 FIOLEGRECE:
+  @00000529: FIOLEGRECE
+  @0000067C: FIOLEGRECE2
+  @00002CE3: fiolegrece = 2 then inc_var non 1
+  @00002D10: fiolegrece2 = 2 then inc_var non 1
+  @000041B4: fiolegrece = 2 then inc_var non 1
+  @000041E1: fiolegrece2 = 2 then inc_var non 1
+  @0000588D: fiolegrece = 2 then inc_var non 1
+  @000058BA: fiolegrece2 = 2 then inc_var non 1
+  @000070D1: fiolegrece = 2 then inc_var non 1
+  @000070FE: fiolegrece2 = 2 then inc_var non 1
+
+🎯 FIOLEVASE:
+  @0000068F: FIOLEVASE
+
+🎯 FRANCE:
+  @0000083E: FRANCE
+  @00009DCE: france = 1  then dec_var france 1
+  @0000A7BB: france = 1 then  addbmp info ..\..\barre\images\p_france.bmp 6 452 400
+
+🎯 FROG:
+  @0000074A: FROG
+
+🎯 GRECQUESTION:
+  @00000502: GRECQUESTION
+
+🎯 GRECREPONSE:
+  @00000516: GRECREPONSE
+
+🎯 HARPON:
+  @000004B9: HARPON
+  @0000216B: harpon = 2 then inc_var non 1
+  @00003691: harpon = 2 then inc_var non 1
+  @00004D3F: harpon = 2 then inc_var non 1
+  @000065D5: harpon = 2 then inc_var non 1
+  @000075A1: harpon = 2 then inc_var non 1
+  @00008573: harpon = 2 then inc_var non 1
+  @0000B217: harpon = 2 then dec_var harpon 1
+
+🎯 HELICE:
+  @000004AB: HELICE
+  @00002194: helice = 2 then inc_var non 1
+  @000036BA: helice = 2 then inc_var non 1
+  @00004D68: helice = 2 then inc_var non 1
+  @00007342: helice = 2 then defcursor fleche.cur
+  @00007372: helice = 2 then set_var helice -1
+  @0000739F: helice = -1 then addbmp i1 rol\helice.bmp 0 228 82
+  @000093A4: helice = -1 then addbmp i1 rol\helice.bmp 0 228 82
+  @00009479: helice = -1 then inc_var sousmarinok 1
+  @0000959F: helice = 2 then hotspot 2
+
+🎯 HOTTE:
+  @0000072F: HOTTE
+  @000026A4: hotte = 2 then inc_var non 1
+  @00003B9F: hotte = 2 then inc_var non 1
+  @0000524E: hotte = 2 then inc_var non 1
+  @00006ABA: hotte = 2 then inc_var non 1
+  @00007A86: hotte = 2 then inc_var non 1
+  @00008A58: hotte = 2 then inc_var non 1
+  @0000B7C5: hotte = 2 then dec_var  hotte 1
+
+🎯 IRLANDE:
+  @000008E7: IRLANDE
+  @00000927: FIOLEIRLANDE
+  @00002D6C: fioleirlande = 2 then inc_var non 1
+  @0000423D: fioleirlande = 2 then inc_var non 1
+  @00005916: fioleirlande = 2 then inc_var non 1
+  @0000715A: fioleirlande = 2 then inc_var non 1
+  @00008126: fioleirlande = 2 then inc_var non 1
+  @000090F8: fioleirlande = 2 then inc_var non 1
+  @00009E2C: irlande = 1  then dec_var irlande 1
+  @0000AAAE: irlande = 1 then  addbmp info ..\..\barre\images\p_irlande.bmp 6 452 400
+
+🎯 ITALIE:
+  @000008F6: ITALIE
+  @000009A2: FIOLEITALIE
+  @000011DD: ..\..\italie\digit\clapotis.wav. 2
+  @00002EB6: fioleitalie = 2 then inc_var non 1
+  @00004387: fioleitalie = 2 then inc_var non 1
+  @00005A60: fioleitalie = 2 then inc_var non 1
+  @00006288: ..\..\italie\digit\clapotis.wav 2g
+  @000072A4: fioleitalie = 2 then inc_var non 1
+  @00008270: fioleitalie = 2 then inc_var non 1
+  @00009242: fioleitalie = 2 then inc_var non 1
+
+🎯 JUSTEPRIX:
+  @000003B3: JUSTEPRIXOBJ
+  @000003C7: JUSTEPRIXEURO
+  @000003DC: JUSTEPRIXCLIC
+  @000003F1: JUSTEPRIX1
+  @00000403: JUSTEPRIX10
+  @00000416: JUSTEPRIX15
+  @00000429: JUSTEPRIX20
+  @0000043C: JUSTEPRIX25
+  @0000044F: JUSTEPRIX30
+  @00000462: JUSTEPRIX50
+
+🎯 LEVRIERNU:
+  @00000374: LEVRIERNUMERO
+
+🎯 LEVRIERPARI:
+  @00000389: LEVRIERPARI
+
+🎯 LEVRIERRESULTAT:
+  @0000039C: LEVRIERRESULTAT
+
+🎯 LEVURE:
+  @0000073C: LEVURE
+  @000026CC: levure = 2 then inc_var non 1
+  @00003BC7: levure = 2 then inc_var non 1
+  @00005276: levure = 2 then inc_var non 1
+  @00006AE2: levure = 2 then inc_var non 1
+  @00007AAE: levure = 2 then inc_var non 1
+  @00008A80: levure = 2 then inc_var non 1
+  @0000B7F0: levure = 2 then dec_var  levure 1
+
+🎯 MARMOTTE:
+  @000006AE: MARMOTTE
+
+🎯 MASQUE:
+  @000004C7: MASQUE
+  @000021E5: masque = 2 then inc_var non 1
+  @0000370B: masque = 2 then inc_var non 1
+  @00004DB9: masque = 2 then inc_var non 1
+  @00006626: masque = 2 then inc_var non 1
+  @000075F2: masque = 2 then inc_var non 1
+  @000085C4: masque = 2 then inc_var non 1
+  @0000B299: masque = 2 then dec_var masque 1
+
+🎯 MATH:
+  @000005B1: MATH
+
+🎯 MUSIC:
+  @000006BE: MUSIC
+
+🎯 ORGE:
+  @000005BD: ORGE
+  @00002BE6: orge = 2 then inc_var non 1
+  @000040E1: orge = 2 then inc_var non 1
+  @00005790: orge = 2 then inc_var non 1
+  @00005AC0: cheval = 2 then set_var orge 0
+  @00005C80: orge = 1 then addbmp orge rol\orge.bmp 0 93 201
+  @00005CBB: orge = 0 then playtext 130 310 125 365 0 Un wagon plein d'orge
+  @00005D05: orge != 0 then playtext 10 330 125 365 0 M
+  @00005D51: orge != 0 then playtext 10 345 125 365 0 t'as dit que tu pouvais
+  @00005D9D: orge != 0 then playtext 10 360 125 365 0 prendre de l'orge tu vois
+
+🎯 ORGUE:
+  @000002A2: ORGUE
+
+🎯 PAIN:
+  @0000049F: PAIN
+  @00000FAF: EAUPAIN
+  @00000FBE: PAINOK
+  @00001DA0: pain 1
+  @00002236: pain = 2 then inc_var non 1
+  @0000375C: pain = 2 then inc_var non 1
+  @00004E0A: pain = 2 then inc_var non 1
+  @00006677: pain = 2 then inc_var non 1
+  @00007643: pain = 2 then inc_var non 1
+  @00008615: pain = 2 then inc_var non 1
+
+🎯 PALETTE:
+  @000006FD: PALETTE
+
+🎯 PARFUM:
+  @00000559: PARFUM
+  @00002721: parfum = 2 then inc_var non 1
+  @00003C1C: parfum = 2 then inc_var non 1
+  @000052CB: parfum = 2 then inc_var non 1
+  @00006B37: parfum = 2 then inc_var non 1
+  @00007B03: parfum = 2 then inc_var non 1
+  @00008AD5: parfum = 2 then inc_var non 1
+  @0000B84F: parfum = 2 then dec_var parfum 1
+
+🎯 PARTITION:
+  @000006DC: PARTITION
+  @00002525: partition = 2 then inc_var non 1
+  @00003A4B: partition = 2 then inc_var non 1
+  @000050CF: partition = 2 then inc_var non 1
+  @0000693B: partition = 2 then inc_var non 1
+  @00007907: partition = 2 then inc_var non 1
+  @000088D9: partition = 2 then inc_var non 1
+  @0000B61D: partition = 2 then dec_var partition 1
+
+🎯 PAYSBAS:
+  @000008D8: PAYSBAS
+  @00000979: FIOLEPAYSBAS
+  @00002E57: fiolepaysbas = 2 then inc_var non 1
+  @00004328: fiolepaysbas = 2 then inc_var non 1
+  @00005A01: fiolepaysbas = 2 then inc_var non 1
+  @00007245: fiolepaysbas = 2 then inc_var non 1
+  @00008211: fiolepaysbas = 2 then inc_var non 1
+  @000091E3: fiolepaysbas = 2 then inc_var non 1
+  @00009E88: paysbas = 1  then dec_var paysbas 1
+  @0000ABAA: paysbas = 1 then  addbmp info ..\..\barre\images\p_pays.bmp 6 452 400
+
+🎯 PEINTRE:
+  @0000070C: PEINTRE
+  @0000071B: SCOREPEINTRE
+  @00000D16: PEINTRE1
+
+🎯 PEPE:
+  @00000567: PEPE
+
+🎯 PLONGE:
+  @000004F4: PLONGE
+
+🎯 ROUEDENT:
+  @000005E5: ROUEDENT
+  @00002621: rouedent = 2 then inc_var non 1
+  @00003465: rouedent = -1 then addbmp roue rol\roue.bmp 0 218 165
+  @00004411: rouedent = 2 then inc_var non 4
+  @0000443C: rouedent = -1 then inc_var non 4
+  @0000455A: rouedent = 2 then inc_var machine 1
+  @00004589: rouedent = 2 then defcursor fleche.cur
+  @000045BB: rouedent = 2 then set_var rouedent -1
+  @000045EC: rouedent = -1 then addbmp roue rol\roue.bmp 0 218 165
+  @000051CB: rouedent = 2 then inc_var non 1
+
+🎯 RUBAN:
+  @0000054C: RUBAN
+  @000023A9: ruban = 2 then inc_var non 1
+  @000038CF: ruban = 2 then inc_var non 1
+  @00004F53: ruban = 2 then inc_var non 1
+  @000067BF: ruban = 2 then inc_var non 1
+  @0000778B: ruban = 2 then inc_var non 1
+  @0000875D: ruban = 2 then inc_var non 1
+  @0000B47B: ruban = 2 then dec_var ruban 1
+
+🎯 SCORE:
+  @00000367: SCORE
+  @00000489: JUSTEPRIXSCORE
+  @0000071B: SCOREPEINTRE
+  @00000BE9: NUMPAYSSCORE
+  @0000120B: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54g
+  @00001576: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54
+  @00001F26: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54h
+  @0000329C: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54h
+  @00004AF6: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54e
+  @000061CA: score < 0 then runprj ..\couleurs1\couleurs1.vnp 54l
+
+🎯 SIROP:
+  @000005C9: SIROP
+  @0000162C: sirop = -1 then if cire != -1 then playavi bougie3.avi 1 364 43 448 124
+  @0000175C: sirop != -1 then playtext 280 0 125 365 0 Elle ne peut pas parler
+  @000017A9: sirop != -1 then playtext 280 20 125 365 0
+  @000018C5: sirop != -1 then playavi bougie1.avi 1 364 43 448 124
+  @00001906: sirop = 2 then defcursor 0
+  @0000192C: sirop = 2 then set_var sirop -1
+  @00001957: sirop = -1 then if cire = 0 then playavi bougie3.avi 1 364 43 448 124
+  @000019A8: sirop = -1 then if cire = 1 then playavi bougie3.avi 1 364 43 448 124
+  @000019F9: sirop = -1 then if cire = 2 then defcursor 0
+
+🎯 SUEDE:
+  @0000062F: FIOLESUEDE
+  @00000641: SUEDE
+  @00001C06: fiolesuede = 1 then set_var boubou 4
+  @00001E03: fiolesuede 0
+  @00002DCA: fiolesuede = 2 then inc_var non 1
+  @0000429B: fiolesuede = 2 then inc_var non 1
+  @00005974: fiolesuede = 2 then inc_var non 1
+  @000071B8: fiolesuede = 2 then inc_var non 1
+  @00008184: fiolesuede = 2 then inc_var non 1
+  @00009156: fiolesuede = 2 then inc_var non 1
+
+🎯 TICKET:
+  @00000593: TICKET
+  @000005A1: TICKET_A
+
+🎯 TONDEUSE:
+  @000006ED: TONDEUSE
+  @00002579: tondeuse = 2 then inc_var non 1
+  @00003A9F: tondeuse = 2 then inc_var non 1
+  @00005123: tondeuse = 2 then inc_var non 1
+  @0000698F: tondeuse = 2 then inc_var non 1
+  @0000795B: tondeuse = 2 then inc_var non 1
+  @0000892D: tondeuse = 2 then inc_var non 1
+  @0000B679: tondeuse = 2 then dec_var tondeuse 1
+
+🎯 TRANS:
+  @00000756: TRANS
+  @0000A081: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+  @0000A2ED: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+  @0000AD4F: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+  @0000AF0F: trans = 1 then addbmp active  ..\..\barre\images\trans.bmp 6 163 400
+  @0000C176: trans = 1 then addbmp etoile ..\..\barre\images\trans2.bmp 6 162 400
+  @0000C1C6: trans = 1 then addbmp etoile1 ..\..\barre\images\textetr.bmp 6 0 450
+  @0000C304: trans = 1 then closewav
+  @0000C327: trans = 1 then closedll
+  @0000C34A: trans = 1 then playavi ..\..\couleurs1\movie\retour.avi 1
+
+🎯 VINCI:
+  @00000FD7: VINCI
+
+🎯 VIOLON:
+  @000006A0: VIOLON
+  @00002AEE: violon = 2 then inc_var non 1
+  @00003FE9: violon = 2 then inc_var non 1
+  @00005698: violon = 2 then inc_var non 1
+  @00006F04: violon = 2 then inc_var non 1
+  @00007ED0: violon = 2 then inc_var non 1
+  @00008EA2: violon = 2 then inc_var non 1
+  @0000BC78: violon = 2 then dec_var violon 1

@@ -1,0 +1,46 @@
+
+//-------------------------------------------------------------------------
+// Function 48
+// Fichier identifié: strarray.cpp
+//-------------------------------------------------------------------------
+
+
+int __cdecl sub_403A55(int a1, LPCSTR lpString2, char a3)
+{
+  const CHAR *v3; // ebx
+  int v5; // [esp+14h] [ebp-30h]
+  _DWORD v6[4]; // [esp+18h] [ebp-2Ch] BYREF
+  __int16 v7; // [esp+28h] [ebp-1Ch]
+  int v8; // [esp+34h] [ebp-10h]
+  _BYTE v9[4]; // [esp+3Ch] [ebp-8h] BYREF
+  _BYTE v10[4]; // [esp+40h] [ebp-4h] BYREF
+
+  __InitExceptBlockLDTC();
+  if ( !lpString2 || !*lpString2 )
+  {
+    v7 = 8;
+    xerror::MakeString((xerror *)v10, aPrecondition, aStrStr, aLibStrarrayCpp, 0x30u);
+    ++v8;
+    xmsg::xmsg((xmsg *)v9, (const string *)v10);
+    ++v8;
+    v7 = 20;
+    --v8;
+    string::~string((string *)v10);
+    v7 = 8;
+    v8 += 2;
+    v8 += 3;
+    _ThrowExceptionLDTC(stru_403B88, v9, 0, sub_403BE0, 1u, 0, 0, 0, v6);
+  }
+  v3 = *(const CHAR **)(a1 + 4);
+  v5 = 0;
+  while ( *v3 )
+  {
+    if ( a3 && !lstrcmpA(v3, lpString2) || !lstrcmpiA(v3, lpString2) )
+      return v5;
+    v3 += strlen(v3) + 1;
+    ++v5;
+  }
+  return -1;
+}
+// 403B88: using guessed type _tpidc stru_403B88[1];
+

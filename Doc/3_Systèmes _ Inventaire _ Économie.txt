@@ -1,0 +1,14 @@
+TITRE : Systèmes : Inventaire & Économie
+ID : systems
+------------------------------------------------------------
+
+L'inventaire n'est pas une fenêtre classique mais une 'Toolbar' gérée par 'vnoption.dll' et 'inv.dll'.
+
+[ Barre d'Outils (barre.vnd) ]
+  - SAC : Affiche l'inventaire si sacados = 1.
+  - TELEPHONE : Donne des indices.
+  - CALC : Calculatrice / Convertisseur Euro.
+  - TRANS : Bouton de retour d'urgence.
+
+NOTE: Game Over 'Économique' : Si la variable SCORE < 0 (faillite), le joueur est envoyé dans la 'Prison des Couleurs' (couleurs1.vnp). Il doit y répondre à des quiz pour gagner le droit de revenir.
+
