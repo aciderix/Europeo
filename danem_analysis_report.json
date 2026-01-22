@@ -1,0 +1,658 @@
+{
+  "file": "danem/danem.vnd",
+  "total_scenes": 36,
+  "issues_summary": {
+    "scenes_without_bmp": 20,
+    "hotspots_without_geometry": 45,
+    "hotspots_with_insufficient_data": 16,
+    "scenes_with_logic": 0,
+    "scenes_without_config_signature": 36
+  },
+  "issues_detail": {
+    "scenes_without_bmp": [
+      {
+        "id": 4,
+        "name": "unnamed",
+        "offset": "0x3e37"
+      },
+      {
+        "id": 9,
+        "name": "unnamed",
+        "offset": "0x4e36"
+      },
+      {
+        "id": 10,
+        "name": "unnamed",
+        "offset": "0x4fad"
+      },
+      {
+        "id": 11,
+        "name": "unnamed",
+        "offset": "0x53cd"
+      },
+      {
+        "id": 12,
+        "name": "unnamed",
+        "offset": "0x556a"
+      },
+      {
+        "id": 13,
+        "name": "unnamed",
+        "offset": "0x56d7"
+      },
+      {
+        "id": 14,
+        "name": "unnamed",
+        "offset": "0x5824"
+      },
+      {
+        "id": 15,
+        "name": "unnamed",
+        "offset": "0x5971"
+      },
+      {
+        "id": 16,
+        "name": "unnamed",
+        "offset": "0x5aee"
+      },
+      {
+        "id": 17,
+        "name": "unnamed",
+        "offset": "0x5ef2"
+      },
+      {
+        "id": 18,
+        "name": "unnamed",
+        "offset": "0x6332"
+      },
+      {
+        "id": 19,
+        "name": "unnamed",
+        "offset": "0x6525"
+      },
+      {
+        "id": 21,
+        "name": "unnamed",
+        "offset": "0x672b"
+      },
+      {
+        "id": 22,
+        "name": "unnamed",
+        "offset": "0x67ba"
+      },
+      {
+        "id": 23,
+        "name": "unnamed",
+        "offset": "0x684a"
+      },
+      {
+        "id": 25,
+        "name": "unnamed",
+        "offset": "0x6d21"
+      },
+      {
+        "id": 31,
+        "name": "unnamed",
+        "offset": "0x9ba2"
+      },
+      {
+        "id": 32,
+        "name": "unnamed",
+        "offset": "0x9cd0"
+      },
+      {
+        "id": 33,
+        "name": "unnamed",
+        "offset": "0x9dfd"
+      },
+      {
+        "id": 34,
+        "name": "unnamed",
+        "offset": "0x9f2a"
+      }
+    ],
+    "hotspots_without_geometry": [
+      {
+        "scene": 3,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x2bce"
+      },
+      {
+        "scene": 3,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x3bd8"
+      },
+      {
+        "scene": 4,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x3ec1"
+      },
+      {
+        "scene": 4,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x3f2a"
+      },
+      {
+        "scene": 8,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x47d9"
+      },
+      {
+        "scene": 8,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x47fd"
+      },
+      {
+        "scene": 8,
+        "hotspot": 2,
+        "scene_type": "game",
+        "offset": "0x491b"
+      },
+      {
+        "scene": 8,
+        "hotspot": 3,
+        "scene_type": "game",
+        "offset": "0x4a4a"
+      },
+      {
+        "scene": 8,
+        "hotspot": 4,
+        "scene_type": "game",
+        "offset": "0x4b00"
+      },
+      {
+        "scene": 8,
+        "hotspot": 5,
+        "scene_type": "game",
+        "offset": "0x4c1e"
+      },
+      {
+        "scene": 8,
+        "hotspot": 6,
+        "scene_type": "game",
+        "offset": "0x4d5a"
+      },
+      {
+        "scene": 8,
+        "hotspot": 7,
+        "scene_type": "game",
+        "offset": "0x4dd6"
+      },
+      {
+        "scene": 9,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x4f2b"
+      },
+      {
+        "scene": 9,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x4f4d"
+      },
+      {
+        "scene": 10,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x5082"
+      },
+      {
+        "scene": 10,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x50a2"
+      },
+      {
+        "scene": 10,
+        "hotspot": 2,
+        "scene_type": "game",
+        "offset": "0x51c0"
+      },
+      {
+        "scene": 10,
+        "hotspot": 3,
+        "scene_type": "game",
+        "offset": "0x52fb"
+      },
+      {
+        "scene": 10,
+        "hotspot": 4,
+        "scene_type": "game",
+        "offset": "0x536d"
+      },
+      {
+        "scene": 11,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x54ea"
+      },
+      {
+        "scene": 11,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x550a"
+      },
+      {
+        "scene": 12,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x5657"
+      },
+      {
+        "scene": 12,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x5677"
+      },
+      {
+        "scene": 13,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x57a4"
+      },
+      {
+        "scene": 13,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x57c4"
+      },
+      {
+        "scene": 14,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x58f1"
+      },
+      {
+        "scene": 14,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x5911"
+      },
+      {
+        "scene": 15,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x5a6e"
+      },
+      {
+        "scene": 15,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x5a8e"
+      },
+      {
+        "scene": 16,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x5bdb"
+      },
+      {
+        "scene": 16,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x5bfb"
+      },
+      {
+        "scene": 16,
+        "hotspot": 2,
+        "scene_type": "game",
+        "offset": "0x5d19"
+      },
+      {
+        "scene": 16,
+        "hotspot": 3,
+        "scene_type": "game",
+        "offset": "0x5de1"
+      },
+      {
+        "scene": 16,
+        "hotspot": 4,
+        "scene_type": "game",
+        "offset": "0x5e92"
+      },
+      {
+        "scene": 17,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x5fe7"
+      },
+      {
+        "scene": 17,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x6006"
+      },
+      {
+        "scene": 17,
+        "hotspot": 2,
+        "scene_type": "game",
+        "offset": "0x6124"
+      },
+      {
+        "scene": 17,
+        "hotspot": 3,
+        "scene_type": "game",
+        "offset": "0x6260"
+      },
+      {
+        "scene": 17,
+        "hotspot": 4,
+        "scene_type": "game",
+        "offset": "0x62d2"
+      },
+      {
+        "scene": 18,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x6407"
+      },
+      {
+        "scene": 18,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0x64c5"
+      },
+      {
+        "scene": 24,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x699a"
+      },
+      {
+        "scene": 30,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0x9b4e"
+      },
+      {
+        "scene": 34,
+        "hotspot": 0,
+        "scene_type": "game",
+        "offset": "0xa01c"
+      },
+      {
+        "scene": 35,
+        "hotspot": 1,
+        "scene_type": "game",
+        "offset": "0xa364"
+      }
+    ],
+    "hotspots_with_insufficient_data": [
+      {
+        "scene": 1,
+        "hotspot": 2,
+        "commands_count": 1
+      },
+      {
+        "scene": 2,
+        "hotspot": 7,
+        "commands_count": 1
+      },
+      {
+        "scene": 5,
+        "hotspot": 1,
+        "commands_count": 1
+      },
+      {
+        "scene": 6,
+        "hotspot": 2,
+        "commands_count": 1
+      },
+      {
+        "scene": 7,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 8,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 9,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 10,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 11,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 12,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 13,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 14,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 15,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 16,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 17,
+        "hotspot": 0,
+        "commands_count": 1
+      },
+      {
+        "scene": 35,
+        "hotspot": 1,
+        "commands_count": 1
+      }
+    ],
+    "scenes_with_logic": [],
+    "scenes_without_config_signature": [
+      {
+        "id": 0,
+        "name": "unnamed",
+        "type": "global_vars"
+      },
+      {
+        "id": 1,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 2,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 3,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 4,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 5,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 6,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 7,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 8,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 9,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 10,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 11,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 12,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 13,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 14,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 15,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 16,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 17,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 18,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 19,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 20,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 21,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 22,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 23,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 24,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 25,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 26,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 27,
+        "name": "unnamed",
+        "type": "options"
+      },
+      {
+        "id": 28,
+        "name": "unnamed",
+        "type": "unknown"
+      },
+      {
+        "id": 29,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 30,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 31,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 32,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 33,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 34,
+        "name": "unnamed",
+        "type": "game"
+      },
+      {
+        "id": 35,
+        "name": "unnamed",
+        "type": "game"
+      }
+    ]
+  },
+  "root_cause": {
+    "problem": "Signature différente détectée",
+    "expected_signature": "0xFFFFFFDB",
+    "actual_signature": "0xFFFFFFF4",
+    "impact": "Parser ne trouve pas les structures de configuration et hotspots, résultant en parsing incomplet"
+  }
+}
