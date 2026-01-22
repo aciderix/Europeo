@@ -139,15 +139,16 @@ Le parser supporte maintenant toutes ces signatures via:
 | Fichier | Statut | Scènes | Signatures | Hotspots | Notes |
 |---------|--------|--------|------------|----------|-------|
 | couleurs1.vnd | ✓ Validé | 55 | 37 × 0xFFFFFFDB | ~100% geom | Référence de base |
-| danem.vnd | ✅ **100% Validé** | 15 | 10 × 0xFFFFFFF4 | **66/66 (100%)** | Toutes fausses scènes éliminées |
+| danem.vnd | ✅ **100% Validé** | 16 | 10 × 0xFFFFFFF4 | **65/65 (100%)** | Paths relatifs BMP/HTM restaurés |
+| belge.vnd | ✅ **100% Validé** | 27 | 11 × 0xFFFFFFF4 | **87/87 (100%)** | Surimpression papierbleu.bmp OK |
 
 **Note importante**: Chaque scène déclare un `objCount` (nombre de hotspots attendu) dans sa table hotspots. Le parser doit lire exactement ce nombre pour être 100% correct.
 
-**Fausses scènes éliminées** (danem.vnd):
-- 3× "Voiture.wav" - paramètres de commandes hotspot
-- 1× "a_dan.wav" isolé - paramètre de commande
-- 4× "cling.wav" + score - paramètres de commandes
-- **Total: 8 fausses scènes supprimées → 15 scènes légitimes**
+**Stratégie de filtrage paths relatifs** (vnd_parser.py:409-416):
+- ✅ **Garder** paths relatifs `.bmp/.htm/.dll` (fichiers légitimes: surimpression, contenu, modules)
+- ❌ **Rejeter** paths relatifs `.wav/.avi/.mp3` (paramètres de commandes hotspot)
+- Exemple gardé: `..\..\ecosse\img24\papierbleu.bmp` + `atomium.htm` = surimpression légitime
+- Exemple rejeté: `..\..\couleurs1\digit\cartoon.wav` = paramètre de commande
 
 ### Améliorations du Parser
 
@@ -162,7 +163,7 @@ Le parser supporte maintenant toutes ces signatures via:
 | 2026-01-22 | **Support signatures multiples** | **Déblocage parsing tous VND** |
 | - | Weak candidate system | Acceptation signatures validation partielle |
 | - | isValidSignature() | Vérification flexible 6 signatures |
-| - | **Reject relative paths** | **Fix frontière scènes - jeuloc.bmp 18 hotspots** |
+| - | **Filtrage sélectif paths relatifs** | **Rejette .wav/.avi relatifs, garde .bmp/.htm surimpression** |
 | - | **Reject isolated audio/video** | **100% géométrie - élimination .wav/.avi isolés** |
 
 ### Problèmes Résolus
@@ -170,10 +171,13 @@ Le parser supporte maintenant toutes ces signatures via:
 - [x] ~~Vérifier offset 52902 - différence potentielle dans initScript.commands~~
 - [x] **Signatures différentes entre VND** - Résolu avec support multi-signatures
 - [x] **danem.vnd échouait parsing** - Résolu, 100% des signatures détectées
-- [x] **Fausses scènes créées à partir de hotspots** - Paths relatifs rejetés (ex: jeuloc.bmp 18 hotspots)
+- [x] **Fausses scènes créées à partir de hotspots** - Filtrage sélectif paths relatifs
+  - Rejet: `.wav/.avi/.mp3` avec paths relatifs (paramètres de commandes)
+  - Garde: `.bmp/.htm/.dll` avec paths relatifs (fichiers légitimes)
+  - Exemple: `papierbleu.bmp` + `atomium.htm` = surimpression OK
 - [x] ✅ **Fausses scènes à partir de paramètres commandes** - **100% RÉSOLU!**
-  - Fix: Filtrage dans `isValidFileTable()` - rejet des .wav/.avi/.mp3 isolés
-  - Résultat: danem.vnd passe de 91% à **100% de géométrie** (66/66 hotspots)
-  - 8 fausses scènes éliminées (Voiture.wav × 3, a_dan.wav, cling.wav × 4)
-  - Scènes validées: 15 scènes légitimes au lieu de 23 fausses
+  - Fix 1: Filtrage dans `isValidFileTable()` - rejet des .wav/.avi/.mp3 isolés OU relatifs
+  - Fix 2: Garde paths relatifs .bmp/.htm pour surimpression (papierbleu.bmp, etc.)
+  - Résultat: danem.vnd **100%** (65/65), belge.vnd **100%** (87/87)
+  - 8 fausses scènes éliminées, 5 scènes .htm restaurées avec leurs BMPs
 

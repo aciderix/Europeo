@@ -2,9 +2,1702 @@
   "scenes": [
     {
       "id": 0,
-      "offset": 138,
-      "length": 4320,
-      "files": [],
+      "offset": 106,
+      "length": 4352,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\VnStudio\\vnresmod.dll",
+          "param": 281,
+          "offset": 106
+        },
+        {
+          "slot": 2,
+          "filename": "COMPTEUR1",
+          "param": 0,
+          "offset": 138
+        },
+        {
+          "slot": 3,
+          "filename": "COMPTEUR2",
+          "param": 0,
+          "offset": 155
+        },
+        {
+          "slot": 4,
+          "filename": "COMPTEUR3",
+          "param": 0,
+          "offset": 172
+        },
+        {
+          "slot": 5,
+          "filename": "NUMERO",
+          "param": 0,
+          "offset": 189
+        },
+        {
+          "slot": 6,
+          "filename": "PHOTO",
+          "param": 0,
+          "offset": 203
+        },
+        {
+          "slot": 7,
+          "filename": "SACADOS",
+          "param": 0,
+          "offset": 216
+        },
+        {
+          "slot": 8,
+          "filename": "JEU",
+          "param": 0,
+          "offset": 231
+        },
+        {
+          "slot": 9,
+          "filename": "BIDON",
+          "param": 0,
+          "offset": 242
+        },
+        {
+          "slot": 10,
+          "filename": "SCOTCH",
+          "param": 0,
+          "offset": 255
+        },
+        {
+          "slot": 11,
+          "filename": "MILLEEURO",
+          "param": 0,
+          "offset": 269
+        },
+        {
+          "slot": 12,
+          "filename": "CALC",
+          "param": 0,
+          "offset": 286
+        },
+        {
+          "slot": 13,
+          "filename": "TELEPHONE",
+          "param": 0,
+          "offset": 298
+        },
+        {
+          "slot": 14,
+          "filename": "ACTIVE",
+          "param": 0,
+          "offset": 315
+        },
+        {
+          "slot": 15,
+          "filename": "FRANCS",
+          "param": 0,
+          "offset": 329
+        },
+        {
+          "slot": 16,
+          "filename": "DELPHITEST1",
+          "param": 0,
+          "offset": 343
+        },
+        {
+          "slot": 17,
+          "filename": "DELPHITEST2",
+          "param": 0,
+          "offset": 362
+        },
+        {
+          "slot": 18,
+          "filename": "CPAYS",
+          "param": 0,
+          "offset": 381
+        },
+        {
+          "slot": 19,
+          "filename": "CMENU1",
+          "param": 0,
+          "offset": 394
+        },
+        {
+          "slot": 20,
+          "filename": "CMENU2",
+          "param": 0,
+          "offset": 408
+        },
+        {
+          "slot": 21,
+          "filename": "CMENU3",
+          "param": 0,
+          "offset": 422
+        },
+        {
+          "slot": 22,
+          "filename": "RAQUETTE",
+          "param": 0,
+          "offset": 436
+        },
+        {
+          "slot": 23,
+          "filename": "REPONSEM",
+          "param": 0,
+          "offset": 452
+        },
+        {
+          "slot": 24,
+          "filename": "AFFICHEM",
+          "param": 0,
+          "offset": 468
+        },
+        {
+          "slot": 25,
+          "filename": "PIECE",
+          "param": 0,
+          "offset": 484
+        },
+        {
+          "slot": 26,
+          "filename": "DICO",
+          "param": 0,
+          "offset": 497
+        },
+        {
+          "slot": 27,
+          "filename": "BEETHOVEN",
+          "param": 0,
+          "offset": 509
+        },
+        {
+          "slot": 28,
+          "filename": "QUESTION",
+          "param": 0,
+          "offset": 526
+        },
+        {
+          "slot": 29,
+          "filename": "REPONSE",
+          "param": 0,
+          "offset": 542
+        },
+        {
+          "slot": 30,
+          "filename": "NOTE",
+          "param": 0,
+          "offset": 557
+        },
+        {
+          "slot": 31,
+          "filename": "MAUVAISENOTE",
+          "param": 0,
+          "offset": 569
+        },
+        {
+          "slot": 32,
+          "filename": "TAILLEPIERRE",
+          "param": 0,
+          "offset": 589
+        },
+        {
+          "slot": 33,
+          "filename": "EXPO",
+          "param": 0,
+          "offset": 609
+        },
+        {
+          "slot": 34,
+          "filename": "CHEVAL",
+          "param": 0,
+          "offset": 621
+        },
+        {
+          "slot": 35,
+          "filename": "SABOT2",
+          "param": 0,
+          "offset": 635
+        },
+        {
+          "slot": 36,
+          "filename": "RIZ",
+          "param": 0,
+          "offset": 649
+        },
+        {
+          "slot": 37,
+          "filename": "CLE",
+          "param": 0,
+          "offset": 660
+        },
+        {
+          "slot": 38,
+          "filename": "CAPITALE",
+          "param": 0,
+          "offset": 671
+        },
+        {
+          "slot": 39,
+          "filename": "CISEAUX",
+          "param": 0,
+          "offset": 687
+        },
+        {
+          "slot": 40,
+          "filename": "MENU",
+          "param": 0,
+          "offset": 702
+        },
+        {
+          "slot": 41,
+          "filename": "PIZZA",
+          "param": 0,
+          "offset": 714
+        },
+        {
+          "slot": 42,
+          "filename": "COSTUME",
+          "param": 0,
+          "offset": 727
+        },
+        {
+          "slot": 43,
+          "filename": "LOUPE",
+          "param": 0,
+          "offset": 742
+        },
+        {
+          "slot": 44,
+          "filename": "PALME",
+          "param": 0,
+          "offset": 755
+        },
+        {
+          "slot": 45,
+          "filename": "BOUEE",
+          "param": 0,
+          "offset": 768
+        },
+        {
+          "slot": 46,
+          "filename": "RESSORT",
+          "param": 0,
+          "offset": 781
+        },
+        {
+          "slot": 47,
+          "filename": "MASSE",
+          "param": 0,
+          "offset": 796
+        },
+        {
+          "slot": 48,
+          "filename": "ORGUE",
+          "param": 0,
+          "offset": 809
+        },
+        {
+          "slot": 49,
+          "filename": "GUITARE",
+          "param": 0,
+          "offset": 822
+        },
+        {
+          "slot": 50,
+          "filename": "PIER_BERLIN",
+          "param": 0,
+          "offset": 837
+        },
+        {
+          "slot": 51,
+          "filename": "BUS",
+          "param": 0,
+          "offset": 856
+        },
+        {
+          "slot": 52,
+          "filename": "SCORE",
+          "param": 0,
+          "offset": 867
+        },
+        {
+          "slot": 53,
+          "filename": "LEVRIERNUMERO",
+          "param": 0,
+          "offset": 880
+        },
+        {
+          "slot": 54,
+          "filename": "LEVRIERPARI",
+          "param": 0,
+          "offset": 901
+        },
+        {
+          "slot": 55,
+          "filename": "LEVRIERRESULTAT",
+          "param": 0,
+          "offset": 920
+        },
+        {
+          "slot": 56,
+          "filename": "JUSTEPRIXOBJ",
+          "param": 0,
+          "offset": 943
+        },
+        {
+          "slot": 57,
+          "filename": "JUSTEPRIXEURO",
+          "param": 0,
+          "offset": 963
+        },
+        {
+          "slot": 58,
+          "filename": "JUSTEPRIXCLIC",
+          "param": 0,
+          "offset": 984
+        },
+        {
+          "slot": 59,
+          "filename": "JUSTEPRIX1",
+          "param": 0,
+          "offset": 1005
+        },
+        {
+          "slot": 60,
+          "filename": "JUSTEPRIX10",
+          "param": 0,
+          "offset": 1023
+        },
+        {
+          "slot": 61,
+          "filename": "JUSTEPRIX15",
+          "param": 0,
+          "offset": 1042
+        },
+        {
+          "slot": 62,
+          "filename": "JUSTEPRIX20",
+          "param": 0,
+          "offset": 1061
+        },
+        {
+          "slot": 63,
+          "filename": "JUSTEPRIX25",
+          "param": 0,
+          "offset": 1080
+        },
+        {
+          "slot": 64,
+          "filename": "JUSTEPRIX30",
+          "param": 0,
+          "offset": 1099
+        },
+        {
+          "slot": 65,
+          "filename": "JUSTEPRIX50",
+          "param": 0,
+          "offset": 1118
+        },
+        {
+          "slot": 66,
+          "filename": "JUSTEPRIX100",
+          "param": 0,
+          "offset": 1137
+        },
+        {
+          "slot": 67,
+          "filename": "JUSTEPRIXSCORE",
+          "param": 0,
+          "offset": 1157
+        },
+        {
+          "slot": 68,
+          "filename": "PAIN",
+          "param": 0,
+          "offset": 1179
+        },
+        {
+          "slot": 69,
+          "filename": "HELICE",
+          "param": 0,
+          "offset": 1191
+        },
+        {
+          "slot": 70,
+          "filename": "HARPON",
+          "param": 0,
+          "offset": 1205
+        },
+        {
+          "slot": 71,
+          "filename": "MASQUE",
+          "param": 0,
+          "offset": 1219
+        },
+        {
+          "slot": 72,
+          "filename": "BOUT_PLO",
+          "param": 0,
+          "offset": 1233
+        },
+        {
+          "slot": 73,
+          "filename": "BALLON1",
+          "param": 0,
+          "offset": 1249
+        },
+        {
+          "slot": 74,
+          "filename": "PLONGE",
+          "param": 0,
+          "offset": 1264
+        },
+        {
+          "slot": 75,
+          "filename": "GRECQUESTION",
+          "param": 0,
+          "offset": 1278
+        },
+        {
+          "slot": 76,
+          "filename": "GRECREPONSE",
+          "param": 0,
+          "offset": 1298
+        },
+        {
+          "slot": 77,
+          "filename": "FIOLEGRECE",
+          "param": 0,
+          "offset": 1317
+        },
+        {
+          "slot": 78,
+          "filename": "CARTETOUR",
+          "param": 0,
+          "offset": 1335
+        },
+        {
+          "slot": 79,
+          "filename": "RUBAN",
+          "param": 0,
+          "offset": 1352
+        },
+        {
+          "slot": 80,
+          "filename": "PARFUM",
+          "param": 0,
+          "offset": 1365
+        },
+        {
+          "slot": 81,
+          "filename": "PEPE",
+          "param": 0,
+          "offset": 1379
+        },
+        {
+          "slot": 82,
+          "filename": "CASTAGNETTE",
+          "param": 0,
+          "offset": 1391
+        },
+        {
+          "slot": 83,
+          "filename": "DANSE",
+          "param": 0,
+          "offset": 1410
+        },
+        {
+          "slot": 84,
+          "filename": "TICKET",
+          "param": 0,
+          "offset": 1423
+        },
+        {
+          "slot": 85,
+          "filename": "TICKET_A",
+          "param": 0,
+          "offset": 1437
+        },
+        {
+          "slot": 86,
+          "filename": "MATH",
+          "param": 0,
+          "offset": 1453
+        },
+        {
+          "slot": 87,
+          "filename": "TULIPEJAUNE",
+          "param": 0,
+          "offset": 1465
+        },
+        {
+          "slot": 88,
+          "filename": "ORGE",
+          "param": 0,
+          "offset": 1484
+        },
+        {
+          "slot": 89,
+          "filename": "SIROP",
+          "param": 0,
+          "offset": 1496
+        },
+        {
+          "slot": 90,
+          "filename": "MACHINE",
+          "param": 0,
+          "offset": 1509
+        },
+        {
+          "slot": 91,
+          "filename": "ROUEDENT",
+          "param": 0,
+          "offset": 1524
+        },
+        {
+          "slot": 92,
+          "filename": "BURETTE",
+          "param": 0,
+          "offset": 1540
+        },
+        {
+          "slot": 93,
+          "filename": "CIRE",
+          "param": 0,
+          "offset": 1555
+        },
+        {
+          "slot": 94,
+          "filename": "BOUBOU",
+          "param": 0,
+          "offset": 1567
+        },
+        {
+          "slot": 95,
+          "filename": "ALLUMETTE",
+          "param": 0,
+          "offset": 1581
+        },
+        {
+          "slot": 96,
+          "filename": "FIOLESUEDE",
+          "param": 0,
+          "offset": 1598
+        },
+        {
+          "slot": 97,
+          "filename": "SUEDE",
+          "param": 0,
+          "offset": 1616
+        },
+        {
+          "slot": 98,
+          "filename": "HUILE",
+          "param": 0,
+          "offset": 1629
+        },
+        {
+          "slot": 99,
+          "filename": "SOUSMARINOK",
+          "param": 0,
+          "offset": 1642
+        },
+        {
+          "slot": 100,
+          "filename": "CPHOTO",
+          "param": 0,
+          "offset": 1661
+        },
+        {
+          "slot": 101,
+          "filename": "FIOLEGRECE2",
+          "param": 0,
+          "offset": 1675
+        },
+        {
+          "slot": 102,
+          "filename": "FIOLEVASE",
+          "param": 0,
+          "offset": 1694
+        },
+        {
+          "slot": 103,
+          "filename": "VIOLON",
+          "param": 0,
+          "offset": 1711
+        },
+        {
+          "slot": 104,
+          "filename": "MARMOTTE",
+          "param": 0,
+          "offset": 1725
+        },
+        {
+          "slot": 105,
+          "filename": "MUSIC",
+          "param": 0,
+          "offset": 1741
+        },
+        {
+          "slot": 106,
+          "filename": "FIOLEAUTR",
+          "param": 0,
+          "offset": 1754
+        },
+        {
+          "slot": 107,
+          "filename": "PARTITION",
+          "param": 0,
+          "offset": 1771
+        },
+        {
+          "slot": 108,
+          "filename": "TONDEUSE",
+          "param": 0,
+          "offset": 1788
+        },
+        {
+          "slot": 109,
+          "filename": "PALETTE",
+          "param": 0,
+          "offset": 1804
+        },
+        {
+          "slot": 110,
+          "filename": "PEINTRE",
+          "param": 0,
+          "offset": 1819
+        },
+        {
+          "slot": 111,
+          "filename": "SCOREPEINTRE",
+          "param": 0,
+          "offset": 1834
+        },
+        {
+          "slot": 112,
+          "filename": "HOTTE",
+          "param": 0,
+          "offset": 1854
+        },
+        {
+          "slot": 113,
+          "filename": "CLEJAUNE",
+          "param": 0,
+          "offset": 1867
+        },
+        {
+          "slot": 114,
+          "filename": "AP_PHOTO",
+          "param": 0,
+          "offset": 1883
+        },
+        {
+          "slot": 115,
+          "filename": "POIVROUGE",
+          "param": 0,
+          "offset": 1899
+        },
+        {
+          "slot": 116,
+          "filename": "AIL",
+          "param": 0,
+          "offset": 1916
+        },
+        {
+          "slot": 117,
+          "filename": "BONNET",
+          "param": 0,
+          "offset": 1927
+        },
+        {
+          "slot": 118,
+          "filename": "SKATE",
+          "param": 0,
+          "offset": 1941
+        },
+        {
+          "slot": 119,
+          "filename": "FARINE",
+          "param": 0,
+          "offset": 1954
+        },
+        {
+          "slot": 120,
+          "filename": "LEVURE",
+          "param": 0,
+          "offset": 1968
+        },
+        {
+          "slot": 121,
+          "filename": "API",
+          "param": 0,
+          "offset": 1982
+        },
+        {
+          "slot": 122,
+          "filename": "DORADE",
+          "param": 0,
+          "offset": 1993
+        },
+        {
+          "slot": 123,
+          "filename": "TEMPSLAPIN",
+          "param": 0,
+          "offset": 2007
+        },
+        {
+          "slot": 124,
+          "filename": "CHIANTI",
+          "param": 0,
+          "offset": 2025
+        },
+        {
+          "slot": 125,
+          "filename": "FROG",
+          "param": 0,
+          "offset": 2040
+        },
+        {
+          "slot": 126,
+          "filename": "TRANS",
+          "param": 0,
+          "offset": 2052
+        },
+        {
+          "slot": 127,
+          "filename": "ALLEMAGNE",
+          "param": 0,
+          "offset": 2065
+        },
+        {
+          "slot": 128,
+          "filename": "FIOLE",
+          "param": 0,
+          "offset": 2082
+        },
+        {
+          "slot": 129,
+          "filename": "FRANCE",
+          "param": 0,
+          "offset": 2095
+        },
+        {
+          "slot": 130,
+          "filename": "ANGLETERRE",
+          "param": 0,
+          "offset": 2109
+        },
+        {
+          "slot": 131,
+          "filename": "AUTRICHE",
+          "param": 0,
+          "offset": 2127
+        },
+        {
+          "slot": 132,
+          "filename": "BELGIQUE",
+          "param": 0,
+          "offset": 2143
+        },
+        {
+          "slot": 133,
+          "filename": "EUROLAND",
+          "param": 0,
+          "offset": 2159
+        },
+        {
+          "slot": 134,
+          "filename": "DANEMARK",
+          "param": 0,
+          "offset": 2175
+        },
+        {
+          "slot": 135,
+          "filename": "ECOSSE",
+          "param": 0,
+          "offset": 2191
+        },
+        {
+          "slot": 136,
+          "filename": "ESPAGNE",
+          "param": 0,
+          "offset": 2205
+        },
+        {
+          "slot": 137,
+          "filename": "FINLANDE",
+          "param": 0,
+          "offset": 2220
+        },
+        {
+          "slot": 138,
+          "filename": "GRECE",
+          "param": 0,
+          "offset": 2236
+        },
+        {
+          "slot": 139,
+          "filename": "PAYSBAS",
+          "param": 0,
+          "offset": 2249
+        },
+        {
+          "slot": 140,
+          "filename": "IRLANDE",
+          "param": 0,
+          "offset": 2264
+        },
+        {
+          "slot": 141,
+          "filename": "ITALIE",
+          "param": 0,
+          "offset": 2279
+        },
+        {
+          "slot": 142,
+          "filename": "PORTUGAL",
+          "param": 0,
+          "offset": 2293
+        },
+        {
+          "slot": 143,
+          "filename": "LAPINSORTIE",
+          "param": 0,
+          "offset": 2309
+        },
+        {
+          "slot": 144,
+          "filename": "PAPIERCADO",
+          "param": 0,
+          "offset": 2328
+        },
+        {
+          "slot": 145,
+          "filename": "TOURNEVIS",
+          "param": 0,
+          "offset": 2346
+        },
+        {
+          "slot": 146,
+          "filename": "NAINOK",
+          "param": 0,
+          "offset": 2363
+        },
+        {
+          "slot": 147,
+          "filename": "PINCE",
+          "param": 0,
+          "offset": 2377
+        },
+        {
+          "slot": 148,
+          "filename": "FIOLEFINLANDE",
+          "param": 0,
+          "offset": 2390
+        },
+        {
+          "slot": 149,
+          "filename": "PIERREOR",
+          "param": 0,
+          "offset": 2411
+        },
+        {
+          "slot": 150,
+          "filename": "FIOLEAUTRICHE",
+          "param": 0,
+          "offset": 2427
+        },
+        {
+          "slot": 151,
+          "filename": "CLEROUGE",
+          "param": 0,
+          "offset": 2448
+        },
+        {
+          "slot": 152,
+          "filename": "CLEVERTE",
+          "param": 0,
+          "offset": 2464
+        },
+        {
+          "slot": 153,
+          "filename": "FIOLEITALIE",
+          "param": 0,
+          "offset": 2480
+        },
+        {
+          "slot": 154,
+          "filename": "MOULE",
+          "param": 0,
+          "offset": 2499
+        },
+        {
+          "slot": 155,
+          "filename": "NBINGR",
+          "param": 0,
+          "offset": 2512
+        },
+        {
+          "slot": 156,
+          "filename": "INGROK",
+          "param": 0,
+          "offset": 2526
+        },
+        {
+          "slot": 157,
+          "filename": "OLIVE",
+          "param": 0,
+          "offset": 2540
+        },
+        {
+          "slot": 158,
+          "filename": "OIGNON",
+          "param": 0,
+          "offset": 2553
+        },
+        {
+          "slot": 159,
+          "filename": "POIVJAUNE",
+          "param": 0,
+          "offset": 2567
+        },
+        {
+          "slot": 160,
+          "filename": "FIOLEESPAGNE",
+          "param": 0,
+          "offset": 2584
+        },
+        {
+          "slot": 161,
+          "filename": "FIOLEESPAGNE2",
+          "param": 0,
+          "offset": 2604
+        },
+        {
+          "slot": 162,
+          "filename": "BOUILLON",
+          "param": 0,
+          "offset": 2625
+        },
+        {
+          "slot": 163,
+          "filename": "FIOLEECOSSE",
+          "param": 0,
+          "offset": 2641
+        },
+        {
+          "slot": 164,
+          "filename": "FIOLEIRLANDE",
+          "param": 0,
+          "offset": 2660
+        },
+        {
+          "slot": 165,
+          "filename": "FIOLEPAYSBAS",
+          "param": 0,
+          "offset": 2680
+        },
+        {
+          "slot": 166,
+          "filename": "FIOLEANGLETERRE",
+          "param": 0,
+          "offset": 2700
+        },
+        {
+          "slot": 167,
+          "filename": "OCCUPE1",
+          "param": 0,
+          "offset": 2723
+        },
+        {
+          "slot": 168,
+          "filename": "OCCUPE2",
+          "param": 0,
+          "offset": 2738
+        },
+        {
+          "slot": 169,
+          "filename": "OCCUPE3",
+          "param": 0,
+          "offset": 2753
+        },
+        {
+          "slot": 170,
+          "filename": "OCCUPE4",
+          "param": 0,
+          "offset": 2768
+        },
+        {
+          "slot": 171,
+          "filename": "OCCUPE5",
+          "param": 0,
+          "offset": 2783
+        },
+        {
+          "slot": 172,
+          "filename": "OCCUPE6",
+          "param": 0,
+          "offset": 2798
+        },
+        {
+          "slot": 173,
+          "filename": "OCCUPE7",
+          "param": 0,
+          "offset": 2813
+        },
+        {
+          "slot": 174,
+          "filename": "OCCUPE8",
+          "param": 0,
+          "offset": 2828
+        },
+        {
+          "slot": 175,
+          "filename": "OCCUPE9",
+          "param": 0,
+          "offset": 2843
+        },
+        {
+          "slot": 176,
+          "filename": "OCCUPE10",
+          "param": 0,
+          "offset": 2858
+        },
+        {
+          "slot": 177,
+          "filename": "OCCUPE11",
+          "param": 0,
+          "offset": 2874
+        },
+        {
+          "slot": 178,
+          "filename": "OCCUPE12",
+          "param": 0,
+          "offset": 2890
+        },
+        {
+          "slot": 179,
+          "filename": "OCCUPE",
+          "param": 0,
+          "offset": 2906
+        },
+        {
+          "slot": 180,
+          "filename": "FIOLEOK",
+          "param": 0,
+          "offset": 2920
+        },
+        {
+          "slot": 181,
+          "filename": "BOUTEILLE",
+          "param": 0,
+          "offset": 2935
+        },
+        {
+          "slot": 182,
+          "filename": "SAC",
+          "param": 0,
+          "offset": 2952
+        },
+        {
+          "slot": 183,
+          "filename": "CHEWING",
+          "param": 0,
+          "offset": 2963
+        },
+        {
+          "slot": 184,
+          "filename": "SABOT1",
+          "param": 0,
+          "offset": 2978
+        },
+        {
+          "slot": 185,
+          "filename": "TONO",
+          "param": 0,
+          "offset": 2992
+        },
+        {
+          "slot": 186,
+          "filename": "OEUF",
+          "param": 0,
+          "offset": 3004
+        },
+        {
+          "slot": 187,
+          "filename": "COLOMB",
+          "param": 0,
+          "offset": 3016
+        },
+        {
+          "slot": 188,
+          "filename": "PASTEUR",
+          "param": 0,
+          "offset": 3030
+        },
+        {
+          "slot": 189,
+          "filename": "PORTESECRETE",
+          "param": 0,
+          "offset": 3045
+        },
+        {
+          "slot": 190,
+          "filename": "BOITE",
+          "param": 0,
+          "offset": 3065
+        },
+        {
+          "slot": 191,
+          "filename": "PONPON",
+          "param": 0,
+          "offset": 3078
+        },
+        {
+          "slot": 192,
+          "filename": "PONPONOR",
+          "param": 0,
+          "offset": 3092
+        },
+        {
+          "slot": 193,
+          "filename": "FINIPONPON",
+          "param": 0,
+          "offset": 3108
+        },
+        {
+          "slot": 194,
+          "filename": "CORNEMUSE",
+          "param": 0,
+          "offset": 3126
+        },
+        {
+          "slot": 195,
+          "filename": "NESSIE",
+          "param": 0,
+          "offset": 3143
+        },
+        {
+          "slot": 196,
+          "filename": "LAINE",
+          "param": 0,
+          "offset": 3157
+        },
+        {
+          "slot": 197,
+          "filename": "BOUT_EAU",
+          "param": 0,
+          "offset": 3170
+        },
+        {
+          "slot": 198,
+          "filename": "FROMAGE",
+          "param": 0,
+          "offset": 3186
+        },
+        {
+          "slot": 199,
+          "filename": "CHAMPAGNE",
+          "param": 0,
+          "offset": 3201
+        },
+        {
+          "slot": 200,
+          "filename": "BONUS5",
+          "param": 0,
+          "offset": 3218
+        },
+        {
+          "slot": 201,
+          "filename": "BONUS1",
+          "param": 0,
+          "offset": 3232
+        },
+        {
+          "slot": 202,
+          "filename": "BONUS2",
+          "param": 0,
+          "offset": 3246
+        },
+        {
+          "slot": 203,
+          "filename": "BONUS3",
+          "param": 0,
+          "offset": 3260
+        },
+        {
+          "slot": 204,
+          "filename": "BONUS4",
+          "param": 0,
+          "offset": 3274
+        },
+        {
+          "slot": 205,
+          "filename": "ROUGE",
+          "param": 0,
+          "offset": 3288
+        },
+        {
+          "slot": 206,
+          "filename": "CHAMPAGNE2",
+          "param": 0,
+          "offset": 3301
+        },
+        {
+          "slot": 207,
+          "filename": "PATE",
+          "param": 0,
+          "offset": 3319
+        },
+        {
+          "slot": 208,
+          "filename": "SALIERE",
+          "param": 0,
+          "offset": 3331
+        },
+        {
+          "slot": 209,
+          "filename": "NUMPAYS",
+          "param": 0,
+          "offset": 3346
+        },
+        {
+          "slot": 210,
+          "filename": "NUMPAYS2",
+          "param": 0,
+          "offset": 3361
+        },
+        {
+          "slot": 211,
+          "filename": "NUMPAYSSCORE",
+          "param": 0,
+          "offset": 3377
+        },
+        {
+          "slot": 212,
+          "filename": "BONUS6",
+          "param": 0,
+          "offset": 3397
+        },
+        {
+          "slot": 213,
+          "filename": "BONUS9",
+          "param": 0,
+          "offset": 3411
+        },
+        {
+          "slot": 214,
+          "filename": "BONUS8",
+          "param": 0,
+          "offset": 3425
+        },
+        {
+          "slot": 215,
+          "filename": "BONUS7",
+          "param": 0,
+          "offset": 3439
+        },
+        {
+          "slot": 216,
+          "filename": "PUCE",
+          "param": 0,
+          "offset": 3453
+        },
+        {
+          "slot": 217,
+          "filename": "BONUS26",
+          "param": 0,
+          "offset": 3465
+        },
+        {
+          "slot": 218,
+          "filename": "BONUS25",
+          "param": 0,
+          "offset": 3480
+        },
+        {
+          "slot": 219,
+          "filename": "BONUS24",
+          "param": 0,
+          "offset": 3495
+        },
+        {
+          "slot": 220,
+          "filename": "BONUS23",
+          "param": 0,
+          "offset": 3510
+        },
+        {
+          "slot": 221,
+          "filename": "OUTIL",
+          "param": 0,
+          "offset": 3525
+        },
+        {
+          "slot": 222,
+          "filename": "OUTIL2",
+          "param": 0,
+          "offset": 3538
+        },
+        {
+          "slot": 223,
+          "filename": "OUTIL3",
+          "param": 0,
+          "offset": 3552
+        },
+        {
+          "slot": 224,
+          "filename": "JUSTEPRIX",
+          "param": 0,
+          "offset": 3566
+        },
+        {
+          "slot": 225,
+          "filename": "PEINTRE1",
+          "param": 0,
+          "offset": 3583
+        },
+        {
+          "slot": 226,
+          "filename": "SECHE",
+          "param": 0,
+          "offset": 3599
+        },
+        {
+          "slot": 227,
+          "filename": "BLEU",
+          "param": 0,
+          "offset": 3612
+        },
+        {
+          "slot": 228,
+          "filename": "EAUBIERE",
+          "param": 0,
+          "offset": 3624
+        },
+        {
+          "slot": 229,
+          "filename": "HOUBLON",
+          "param": 0,
+          "offset": 3640
+        },
+        {
+          "slot": 230,
+          "filename": "BIEREOK",
+          "param": 0,
+          "offset": 3655
+        },
+        {
+          "slot": 231,
+          "filename": "CHOUETTE",
+          "param": 0,
+          "offset": 3670
+        },
+        {
+          "slot": 232,
+          "filename": "CHOUETTEOR",
+          "param": 0,
+          "offset": 3686
+        },
+        {
+          "slot": 233,
+          "filename": "BOUCHE",
+          "param": 0,
+          "offset": 3704
+        },
+        {
+          "slot": 234,
+          "filename": "NON",
+          "param": 0,
+          "offset": 3718
+        },
+        {
+          "slot": 235,
+          "filename": "GLO",
+          "param": 0,
+          "offset": 3729
+        },
+        {
+          "slot": 236,
+          "filename": "SOUSMARINOK2",
+          "param": 0,
+          "offset": 3740
+        },
+        {
+          "slot": 237,
+          "filename": "HARPEOK",
+          "param": 0,
+          "offset": 3760
+        },
+        {
+          "slot": 238,
+          "filename": "PUBOK",
+          "param": 0,
+          "offset": 3775
+        },
+        {
+          "slot": 239,
+          "filename": "ERREUR7OK",
+          "param": 0,
+          "offset": 3788
+        },
+        {
+          "slot": 240,
+          "filename": "ERREUR7D1",
+          "param": 0,
+          "offset": 3805
+        },
+        {
+          "slot": 241,
+          "filename": "ERREUR7D2",
+          "param": 0,
+          "offset": 3822
+        },
+        {
+          "slot": 242,
+          "filename": "ERREUR7D3",
+          "param": 0,
+          "offset": 3839
+        },
+        {
+          "slot": 243,
+          "filename": "ERREUR7D4",
+          "param": 0,
+          "offset": 3856
+        },
+        {
+          "slot": 244,
+          "filename": "ERREUR7D5",
+          "param": 0,
+          "offset": 3873
+        },
+        {
+          "slot": 245,
+          "filename": "ERREUR7D6",
+          "param": 0,
+          "offset": 3890
+        },
+        {
+          "slot": 246,
+          "filename": "ERREUR7D7",
+          "param": 0,
+          "offset": 3907
+        },
+        {
+          "slot": 247,
+          "filename": "BONUS14",
+          "param": 0,
+          "offset": 3924
+        },
+        {
+          "slot": 248,
+          "filename": "VASE",
+          "param": 0,
+          "offset": 3939
+        },
+        {
+          "slot": 249,
+          "filename": "BOTTE",
+          "param": 0,
+          "offset": 3951
+        },
+        {
+          "slot": 250,
+          "filename": "ERREUR7OK2",
+          "param": 0,
+          "offset": 3964
+        },
+        {
+          "slot": 251,
+          "filename": "PISE",
+          "param": 0,
+          "offset": 3982
+        },
+        {
+          "slot": 252,
+          "filename": "BIERESO",
+          "param": 0,
+          "offset": 3994
+        },
+        {
+          "slot": 253,
+          "filename": "BETAIL",
+          "param": 0,
+          "offset": 4009
+        },
+        {
+          "slot": 254,
+          "filename": "CASTA",
+          "param": 0,
+          "offset": 4023
+        },
+        {
+          "slot": 255,
+          "filename": "EAUPAIN",
+          "param": 0,
+          "offset": 4036
+        },
+        {
+          "slot": 256,
+          "filename": "PAINOK",
+          "param": 0,
+          "offset": 4051
+        },
+        {
+          "slot": 257,
+          "filename": "VINCI",
+          "param": 0,
+          "offset": 4065
+        },
+        {
+          "slot": 258,
+          "filename": "VA",
+          "param": 0,
+          "offset": 4078
+        },
+        {
+          "slot": 259,
+          "filename": "VF",
+          "param": 0,
+          "offset": 4088
+        },
+        {
+          "slot": 260,
+          "filename": "VE",
+          "param": 0,
+          "offset": 4098
+        },
+        {
+          "slot": 261,
+          "filename": "BONUS29",
+          "param": 0,
+          "offset": 4108
+        },
+        {
+          "slot": 262,
+          "filename": "BONUS22",
+          "param": 0,
+          "offset": 4123
+        },
+        {
+          "slot": 263,
+          "filename": "LOC",
+          "param": 0,
+          "offset": 4138
+        },
+        {
+          "slot": 264,
+          "filename": "BONUS30",
+          "param": 0,
+          "offset": 4149
+        },
+        {
+          "slot": 265,
+          "filename": "MESP",
+          "param": 0,
+          "offset": 4164
+        },
+        {
+          "slot": 266,
+          "filename": "MGRE",
+          "param": 0,
+          "offset": 4176
+        },
+        {
+          "slot": 267,
+          "filename": "MGRA",
+          "param": 0,
+          "offset": 4188
+        },
+        {
+          "slot": 268,
+          "filename": "MITA",
+          "param": 0,
+          "offset": 4200
+        },
+        {
+          "slot": 269,
+          "filename": "MALL",
+          "param": 0,
+          "offset": 4212
+        },
+        {
+          "slot": 270,
+          "filename": "MFRA",
+          "param": 0,
+          "offset": 4224
+        },
+        {
+          "slot": 271,
+          "filename": "MARMOT",
+          "param": 0,
+          "offset": 4236
+        },
+        {
+          "slot": 272,
+          "filename": "BONUS15",
+          "param": 0,
+          "offset": 4250
+        },
+        {
+          "slot": 273,
+          "filename": "BONUS16",
+          "param": 0,
+          "offset": 4265
+        },
+        {
+          "slot": 274,
+          "filename": "BONUS18",
+          "param": 0,
+          "offset": 4280
+        },
+        {
+          "slot": 275,
+          "filename": "BONUS19",
+          "param": 0,
+          "offset": 4295
+        },
+        {
+          "slot": 276,
+          "filename": "BONUS20",
+          "param": 0,
+          "offset": 4310
+        },
+        {
+          "slot": 277,
+          "filename": "JUSTEPRIXQUESTION",
+          "param": 0,
+          "offset": 4325
+        },
+        {
+          "slot": 278,
+          "filename": "JUSTEPRIXREPONSE",
+          "param": 0,
+          "offset": 4350
+        },
+        {
+          "slot": 279,
+          "filename": "JUSTEPRIXOK",
+          "param": 0,
+          "offset": 4374
+        },
+        {
+          "slot": 280,
+          "filename": "PUNK",
+          "param": 0,
+          "offset": 4393
+        },
+        {
+          "slot": 281,
+          "filename": "LAPIN",
+          "param": 0,
+          "offset": 4405
+        },
+        {
+          "slot": 282,
+          "filename": "JEUGAGNE",
+          "param": 0,
+          "offset": 4418
+        }
+      ],
       "initScript": {
         "offset": 4434,
         "length": 0,
@@ -21,8 +1714,7 @@
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1152"
       ],
       "parseMethod": "heuristic_recovered",
-      "sceneType": "game",
-      "sceneName": "JEUGAGNE"
+      "sceneType": "global_vars"
     },
     {
       "id": 1,
@@ -4133,7 +5825,7 @@
     {
       "id": 9,
       "offset": 26949,
-      "length": 1138,
+      "length": 1032,
       "files": [
         {
           "slot": 1,
@@ -4266,29 +5958,6 @@
               "id": 3,
               "subtype": 9,
               "param": "danem.avi 1"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "1d"
-            }
-          ],
-          "geometry": {
-            "cursorId": 0,
-            "pointCount": 0,
-            "points": [],
-            "extraFlag": 0
-          },
-          "isRecovered": true
-        },
-        {
-          "index": -1,
-          "offset": 28038,
-          "commands": [
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "..\\..\\ecosse\\img24\\papierbleu.bmp"
             }
           ],
           "geometry": {
@@ -4308,11 +5977,17 @@
     },
     {
       "id": 10,
-      "offset": 28087,
-      "length": 304,
+      "offset": 27981,
+      "length": 410,
       "files": [
         {
           "slot": 1,
+          "filename": "..\\..\\ecosse\\img24\\papierbleu.bmp",
+          "param": 0,
+          "offset": 28046
+        },
+        {
+          "slot": 2,
           "filename": "vikings.htm",
           "param": 1,
           "offset": 28087
@@ -4401,10 +6076,360 @@
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x6DE6"
       ],
       "parseMethod": "heuristic_recovered",
-      "sceneType": "game"
+      "sceneType": "game",
+      "sceneName": "1"
     },
     {
       "id": 11,
+      "offset": 28938,
+      "length": 3781,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\frontal\\vnoption.dll",
+          "param": 2,
+          "offset": 28938
+        }
+      ],
+      "initScript": {
+        "offset": 28969,
+        "length": 3750,
+        "commands": [
+          {
+            "id": 39,
+            "subtype": 0,
+            "param": "18 0 #ffffff Comic sans MS",
+            "offset": 28969
+          },
+          {
+            "id": 27,
+            "subtype": 0,
+            "param": "toolbar ..\\..\\barre\\images\\barre.bmp 6 0 400 640 480",
+            "offset": 29007
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 29071
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+            "offset": 29154
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+            "offset": 29232
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 29309
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 1 then addbmp fiole ..\\..\\barre\\images\\f1.bmp 6 197 461",
+            "offset": 29389
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 2 then addbmp fiole ..\\..\\barre\\images\\f2.bmp 6 196 461",
+            "offset": 29464
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 3 then addbmp fiole ..\\..\\barre\\images\\f3.bmp 6 196 461",
+            "offset": 29539
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 4 then addbmp fiole ..\\..\\barre\\images\\f4.bmp 6 197 461",
+            "offset": 29614
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 5 then addbmp fiole ..\\..\\barre\\images\\f5.bmp 6 197 461",
+            "offset": 29689
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 6 then addbmp fiole ..\\..\\barre\\images\\f6.bmp 6 196 461",
+            "offset": 29764
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 7 then addbmp fiole ..\\..\\barre\\images\\f7.bmp 6 197 461",
+            "offset": 29839
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 8 then addbmp fiole ..\\..\\barre\\images\\f8.bmp 6 197 461",
+            "offset": 29914
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 9 then addbmp fiole ..\\..\\barre\\images\\f9.bmp 6 196 461",
+            "offset": 29989
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 10 then addbmp fiole ..\\..\\barre\\images\\f10.bmp 6 197 461",
+            "offset": 30064
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 11 then addbmp fiole ..\\..\\barre\\images\\f11.bmp 6 196 461",
+            "offset": 30141
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 12 then addbmp fiole ..\\..\\barre\\images\\f12.bmp 6 196 461",
+            "offset": 30218
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "suede = 1 then  addbmp info ..\\..\\barre\\images\\p_suede.bmp 6 452 400",
+            "offset": 30295
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "portugal = 1 then  addbmp info ..\\..\\barre\\images\\p_port.bmp 6 452 400",
+            "offset": 30375
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "allemagne = 1 then  addbmp info ..\\..\\barre\\images\\p_all.bmp 6 452 400",
+            "offset": 30457
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "france = 1 then  addbmp info ..\\..\\barre\\images\\p_france.bmp 6 452 400",
+            "offset": 30539
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "angleterre = 1 then  addbmp info ..\\..\\barre\\images\\p_angl.bmp 6 452 400",
+            "offset": 30621
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "autriche = 1 then  addbmp info ..\\..\\barre\\images\\p_autriche.bmp 6 452 400",
+            "offset": 30705
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "danemark = 1 then  addbmp info ..\\..\\barre\\images\\p_danemark.bmp 6 452 400",
+            "offset": 30791
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ecosse = 1 then  addbmp info ..\\..\\barre\\images\\p_ecosse.bmp 6 452 400",
+            "offset": 30877
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "euroland = 1 then  addbmp info ..\\..\\barre\\images\\p_euroland.bmp 6 452 400",
+            "offset": 30959
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "espagne = 1 then  addbmp info ..\\..\\barre\\images\\p_espagne.bmp 6 452 400",
+            "offset": 31045
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "finlande = 1 then  addbmp info ..\\..\\barre\\images\\p_finland.bmp 6 452 400",
+            "offset": 31129
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "grece = 1 then  addbmp info ..\\..\\barre\\images\\p_grece.bmp 6 452 400",
+            "offset": 31214
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "irlande = 1 then  addbmp info ..\\..\\barre\\images\\p_irlande.bmp 6 452 400",
+            "offset": 31294
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "italie = 1 then  addbmp info ..\\..\\barre\\images\\p_italie.bmp 6 452 400",
+            "offset": 31378
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "belgique = 1 then  addbmp info ..\\..\\barre\\images\\p_belgique.bmp 6 452 400",
+            "offset": 31460
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "paysbas = 1 then  addbmp info ..\\..\\barre\\images\\p_pays.bmp 6 452 400",
+            "offset": 31546
+          },
+          {
+            "id": 41,
+            "subtype": 0,
+            "param": "score 6 15 415 160 470 0 <score>",
+            "offset": 31627
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [571,419,636,475,3,7,1]",
+            "offset": 31671
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then rundll ..\\barre\\euro32.dll",
+            "offset": 31703
+          },
+          {
+            "id": 28,
+            "subtype": 0,
+            "param": "calc1",
+            "offset": 31755
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp etoile ..\\..\\barre\\images\\calc2.bmp 6 249 400",
+            "offset": 31772
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetc.bmp 6 0 450",
+            "offset": 31850
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 31929
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 32009
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+            "offset": 32092
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [243,414,290,451,3,7,0]",
+            "offset": 32169
+          },
+          {
+            "id": 28,
+            "subtype": 0,
+            "param": "sac",
+            "offset": 32201
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp etoile ..\\..\\barre\\images\\sac2.bmp 6 385 400",
+            "offset": 32216
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp etoile1 ..\\..\\barre\\images\\textes.bmp 6 0 454",
+            "offset": 32296
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 32377
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+            "offset": 32457
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 32535
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then rundll ..\\barre\\inv.dll",
+            "offset": 32618
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [393,413,447,449,3,93,1]",
+            "offset": 32670
+          },
+          {
+            "id": 26,
+            "subtype": 0,
+            "param": "0",
+            "offset": 32702
+          }
+        ]
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [],
+      "warnings": [
+        "Aucune structure de Hotspot détectée. Mode fallback."
+      ],
+      "parseMethod": "heuristic",
+      "sceneType": "options"
+    },
+    {
+      "id": 12,
       "offset": 32719,
       "length": 6268,
       "files": [
@@ -5207,7 +7232,7 @@
       "sceneType": "unknown"
     },
     {
-      "id": 12,
+      "id": 13,
       "offset": 38987,
       "length": 447,
       "files": [
@@ -5298,9 +7323,9 @@
       "sceneType": "game"
     },
     {
-      "id": 13,
+      "id": 14,
       "offset": 39434,
-      "length": 1978,
+      "length": 1893,
       "files": [
         {
           "slot": 1,
@@ -5317,7 +7342,7 @@
       ],
       "initScript": {
         "offset": 39561,
-        "length": 1851,
+        "length": 1743,
         "commands": [
           {
             "id": 39,
@@ -5623,11 +7648,6 @@
               "id": 0,
               "subtype": 0,
               "param": "20 140 125 365 0  découvrir ton cadeau...d"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "..\\..\\ecosse\\img24\\papier.bmp"
             }
           ],
           "geometry": {
@@ -5640,18 +7660,24 @@
         }
       ],
       "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xA158"
       ],
-      "parseMethod": "heuristic",
+      "parseMethod": "heuristic_recovered",
       "sceneType": "game"
     },
     {
-      "id": 14,
-      "offset": 41412,
-      "length": 450,
+      "id": 15,
+      "offset": 41327,
+      "length": 535,
       "files": [
         {
           "slot": 1,
+          "filename": "..\\..\\ecosse\\img24\\papier.bmp",
+          "param": 0,
+          "offset": 41375
+        },
+        {
+          "slot": 2,
           "filename": "andersen.htm",
           "param": 1,
           "offset": 41412
@@ -5772,7 +7798,7 @@
   ],
   "logs": [
     "PHASE 1: Scanning pour les tables de fichiers...",
-    "  [+] Scène détectée @ 0x8A (Table -> 0x1162)",
+    "  [+] Scène détectée @ 0x6A (Table -> 0x1162)",
     "  [+] Scène détectée @ 0x116A (Table -> 0x11BC)",
     "  [+] Scène détectée @ 0x13B4 (Table -> 0x1406)",
     "  [+] Scène détectée @ 0x2AE1 (Table -> 0x2B1A)",
@@ -5782,15 +7808,16 @@
     "  [+] Scène détectée @ 0x4766 (Table -> 0x47B9)",
     "  [+] Scène détectée @ 0x6626 (Table -> 0x6677)",
     "  [+] Scène détectée @ 0x6945 (Table -> 0x698E)",
-    "  [+] Scène détectée @ 0x6DB7 (Table -> 0x6DCA)",
+    "  [+] Scène détectée @ 0x6D4D (Table -> 0x6DCA)",
     "  [+] Scène détectée @ 0x6EE7 (Table -> 0x6F46)",
+    "  [+] Scène détectée @ 0x710A (Table -> 0x7129)",
     "  [+] Scène détectée @ 0x7FCF (Table -> 0x7FE1)",
     "  [+] Scène détectée @ 0x984B (Table -> 0x9893)",
     "  [+] Scène détectée @ 0x9A0A (Table -> 0x9A6C)",
-    "  [+] Scène détectée @ 0xA1C4 (Table -> 0xA1D8)",
-    "PHASE 2: Analyse de 16 segments détectés.",
+    "  [+] Scène détectée @ 0xA16F (Table -> 0xA1D8)",
+    "PHASE 2: Analyse de 17 segments détectés.",
     "  [INFO] Fin de table fichiers par structure Hotspot à 0x1152",
-    "\n--- Analyse Scène #0 (0x8A -> 0x116A) ---",
+    "\n--- Analyse Scène #0 (0x6A -> 0x116A) ---",
     "\n--- Analyse Scène #1 (0x116A -> 0x13B4) ---",
     "\n--- Analyse Scène #2 (0x13B4 -> 0x2AE1) ---",
     "\n--- Analyse Scène #3 (0x2AE1 -> 0x4004) ---",
@@ -5799,17 +7826,18 @@
     "\n--- Analyse Scène #6 (0x46B4 -> 0x4766) ---",
     "\n--- Analyse Scène #7 (0x4766 -> 0x6626) ---",
     "\n--- Analyse Scène #8 (0x6626 -> 0x6945) ---",
-    "\n--- Analyse Scène #9 (0x6945 -> 0x6DB7) ---",
-    "\n--- Analyse Scène #10 (0x6DB7 -> 0x6EE7) ---",
+    "\n--- Analyse Scène #9 (0x6945 -> 0x6D4D) ---",
+    "\n--- Analyse Scène #10 (0x6D4D -> 0x6EE7) ---",
     "  [INFO] Scène 'Toolbar' à 0x6EE7 - Ignorée du mapping Slot.",
+    "\n--- Analyse Scène #11 (0x710A -> 0x7FCF) ---",
     "  [PEEK] Commande reconstruite: \"400d\" @ 0x9817",
     "  [DEEP SCAN] 1 structures géométriques orphelines.",
     "  [MERGE] Commande @0x9666 associée à Géométrie @0x9817",
-    "\n--- Analyse Scène #11 (0x7FCF -> 0x984B) ---",
-    "\n--- Analyse Scène #12 (0x984B -> 0x9A0A) ---",
+    "\n--- Analyse Scène #12 (0x7FCF -> 0x984B) ---",
+    "\n--- Analyse Scène #13 (0x984B -> 0x9A0A) ---",
     "  [RECOVERY] Saut de 20 octets de padding à 0x9a6c -> 0x9a80",
-    "\n--- Analyse Scène #13 (0x9A0A -> 0xA1C4) ---",
-    "\n--- Analyse Scène #14 (0xA1C4 -> 0xA386) ---"
+    "\n--- Analyse Scène #14 (0x9A0A -> 0xA16F) ---",
+    "\n--- Analyse Scène #15 (0xA16F -> 0xA386) ---"
   ],
   "totalBytes": 41862
 }

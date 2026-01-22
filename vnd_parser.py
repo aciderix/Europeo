@@ -406,9 +406,13 @@ class VNDSequentialParser:
             if ' if ' in name or ' = ' in name or ' then ' in name or name.startswith('run'):
                 break
 
-            # REJECT paths relatifs (paramètres de commandes, pas des fichiers de scène)
+            # REJECT paths relatifs SEULEMENT pour audio/vidéo (paramètres de commandes)
+            # GARDER paths relatifs pour .bmp/.htm (fichiers légitimes comme surimpression)
             if '..\\' in name or '../' in name:
-                break
+                # Si c'est un .wav/.avi/.mp3 avec path relatif, c'est un paramètre de commande
+                if re.search(r'\.(wav|avi|mp3)$', name):
+                    break
+                # Sinon (.bmp, .htm, etc.), c'est légitime, continuer
 
             if name and name != "empty":
                 collectedFiles.append(name)  # Collecter pour validation finale
