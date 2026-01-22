@@ -112,13 +112,34 @@ print('✓ VALIDATION OK')
 
 ---
 
+## Signatures Multiples VND
+
+**DÉCOUVERTE MAJEURE** : Chaque fichier VND utilise une signature magique différente!
+
+| Fichier | Signature | Statut Parser |
+|---------|-----------|---------------|
+| couleurs1.vnd | `0xFFFFFFDB` | ✅ Validé |
+| danem.vnd | `0xFFFFFFF4` | ✅ Validé |
+| allem.vnd | `0xFFFFFFF5` | 🔄 Prêt |
+| angleterre.vnd | `0xFFFFFFB7` | 🔄 Prêt |
+| france.vnd | `0xFFFFFFE4` | 🔄 Prêt |
+| italie.vnd | `0xFFFFFFE2` | 🔄 Prêt |
+
+Le parser supporte maintenant toutes ces signatures via:
+- Constante `VND_SIGNATURES` dans `vnd_parser.py`
+- Méthode `isValidSignature()` pour vérification flexible
+- Système de "weak candidates" pour signatures sans validation stricte
+
+---
+
 ## Progression & Historique
 
 ### VND Traités
 
-| Fichier | Statut | Scènes | Notes |
-|---------|--------|--------|-------|
-| couleurs1.vnd | ✓ Validé | 55 | Référence de base |
+| Fichier | Statut | Scènes | Signatures | Notes |
+|---------|--------|--------|------------|-------|
+| couleurs1.vnd | ✓ Validé | 55 | 37 × 0xFFFFFFDB | Référence de base |
+| danem.vnd | ✓ Validé | 36 | 10 × 0xFFFFFFF4 | 10/10 sigs détectées, 100% BMP+geom |
 
 ### Améliorations du Parser
 
@@ -130,7 +151,12 @@ print('✓ VALIDATION OK')
 | - | Gap recovery | Récupération commandes orphelines |
 | - | Geometry scan | Détection structures désalignées |
 | - | Coalescing | Fusion commandes + géométries |
+| 2026-01-22 | **Support signatures multiples** | **Déblocage parsing tous VND** |
+| - | Weak candidate system | Acceptation signatures validation partielle |
+| - | isValidSignature() | Vérification flexible 6 signatures |
 
-### Problèmes Connus / À Investiguer
+### Problèmes Résolus
 
-- [ ] Vérifier offset 52902 - différence potentielle dans initScript.commands
+- [x] ~~Vérifier offset 52902 - différence potentielle dans initScript.commands~~
+- [x] **Signatures différentes entre VND** - Résolu avec support multi-signatures
+- [x] **danem.vnd échouait parsing** - Résolu, 100% des signatures détectées
