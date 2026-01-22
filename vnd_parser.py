@@ -403,6 +403,10 @@ class VNDSequentialParser:
             if ' if ' in name or ' = ' in name or ' then ' in name or name.startswith('run'):
                 break
 
+            # REJECT paths relatifs (paramètres de commandes, pas des fichiers de scène)
+            if '..\\' in name or '../' in name:
+                break
+
             if name and name != "empty":
                 if name == "toolbar":
                     foundSpecificSignature = True
