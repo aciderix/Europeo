@@ -166,12 +166,67 @@ export class VNDSequentialParser {
 
   // --- PASSE 1 : CARTOGRAPHIE ---
 
+  // HYBRID: Détecter global_vars scene à l'offset de départ
+  private detectGlobalVars(): number | null {
+      // Chercher file table avec 50+ fichiers dans les 0x60-0x120 premiers octets
+      for (let offset = 0x60; offset < 0x120; offset++) {
+          const tableEnd = this.isValidFileTable(offset);
+          if (tableEnd !== -1) {
+              // Compter les fichiers
+              let fileCount = 0;
+              let ptr = offset;
+
+              while (ptr < tableEnd && ptr < offset + 8192) {
+                  if (ptr + 4 > this.data.byteLength) break;
+                  const len = this.readU32(ptr);
+
+                  // Padding
+                  if (len === 0) {
+                      ptr += 8;
+                      continue;
+                  }
+
+                  if (len > 500) break;
+
+                  const res = this.tryReadString(ptr);
+                  if (!res) break;
+
+                  const param = this.readU32(res.nextOffset);
+                  ptr = res.nextOffset + 4;
+                  fileCount++;
+
+                  if (fileCount > 500) break; // Safety
+              }
+
+              if (fileCount > 50) {
+                  this.log(`  [HYBRID] global_vars détecté @ 0x${offset.toString(16).toUpperCase()} avec ${fileCount} fichiers`);
+                  return offset;
+              }
+          }
+      }
+      return null;
+  }
+
   private findSceneOffsets(): number[] {
     const offsets: number[] = [];
     let ptr = 0;
     const len = this.data.byteLength;
 
     this.log("PHASE 1: Scanning pour les tables de fichiers...");
+
+    // HYBRID: Détecter global_vars (Scene 0) AVANT les autres scènes
+    const globalVarsOffset = this.detectGlobalVars();
+    if (globalVarsOffset !== null) {
+        offsets.push(globalVarsOffset);
+        // Continue APRÈS la fin de global_vars, pas après le début!
+        const globalVarsEnd = this.isValidFileTable(globalVarsOffset);
+        if (globalVarsEnd !== -1) {
+            ptr = globalVarsEnd; // Continue après la table complète
+        } else {
+            ptr = globalVarsOffset + 8192; // Fallback: skip large area
+        }
+        this.log(`  [+] Scene 0 (global_vars) détectée @ 0x${globalVarsOffset.toString(16).toUpperCase()} -> 0x${ptr.toString(16).toUpperCase()}`);
+    }
 
     while (ptr < len - 20) {
         // 0. HACK COULEURS1 : Détection forcée des blocs logiques d2/d3/avi comme scènes
@@ -734,11 +789,14 @@ export class VNDSequentialParser {
           return {
               id,
               offset: start,
-              length: 9, 
+              length: 9,
               files: [],
               initScript: { offset: start, length: 0, commands: [] },
               config: { offset: -1, flag: 0, ints: [], foundSignature: false },
               hotspots: [],
+              objCount: 0,
+              objCountValid: true,
+              confidence: 'HIGH',
               warnings: [],
               parseMethod: 'empty_slot',
               sceneType: 'empty',
@@ -1006,9 +1064,11 @@ export class VNDSequentialParser {
       // 5. HOTSPOTS (STANDARD)
       const hotspots: Hotspot[] = [];
       let hsPtr = hotspotStart;
-      
+      let declaredObjCount: number | undefined = undefined; // HYBRID: Nombre de hotspots déclaré
+
       if (hsPtr !== -1 && hsPtr < limit) {
           const objCount = this.readU32(hsPtr);
+          declaredObjCount = objCount; // HYBRID: Stocker pour validation
           hsPtr += 4;
 
           if (objCount < 5000) { 
@@ -1079,10 +1139,18 @@ export class VNDSequentialParser {
                       const x = this.readI32(hsPtr);
                       const y = this.readI32(hsPtr+4);
 
-                      if (Math.abs(x) > 2000 || Math.abs(y) > 2000) {
+                      // HYBRID: Limites assouplies pour scènes scrollables
+                      const MAX_COORD_STRICT = 2000;
+                      const MAX_COORD_SCROLLABLE = 5000;
+
+                      if (Math.abs(x) > MAX_COORD_SCROLLABLE || Math.abs(y) > MAX_COORD_SCROLLABLE) {
                           hasInvalidCoords = true;
                           this.log(`  [WARN] Hotspot ${i}: coordonnées invalides (${x}, ${y}) - rejeté`);
                           break;
+                      } else if (Math.abs(x) > MAX_COORD_STRICT || Math.abs(y) > MAX_COORD_STRICT) {
+                          // Scène scrollable (warning mais continue)
+                          this.log(`  [INFO] Hotspot ${i}: scène scrollable détectée (${x}, ${y})`);
+                          warnings.push(`Scène scrollable: coordonnées (${x}, ${y})`);
                       }
 
                       points.push({ x, y });
@@ -1310,6 +1378,23 @@ export class VNDSequentialParser {
 
       const sceneType = this.inferSceneType(id, files, mergedHotspots, isToolbarScene);
 
+      // HYBRID: Calculer objCountValid
+      const objCountValid = declaredObjCount !== undefined ? mergedHotspots.length === declaredObjCount : undefined;
+
+      // HYBRID: Assigner confidence selon parseMethod
+      let confidence: 'HIGH' | 'MEDIUM' | 'LOW' = 'MEDIUM';
+      if (parseMethod === 'signature') {
+          confidence = 'HIGH'; // Scène avec signature 0xFFFFFFDB
+      } else if (parseMethod === 'heuristic_recovered' || parseMethod === 'heuristic') {
+          if (sceneType === 'global_vars') {
+              confidence = 'HIGH'; // global_vars très fiable (50+ fichiers)
+          } else {
+              confidence = 'MEDIUM'; // Récupération heuristique
+          }
+      } else if (parseMethod === 'empty_slot') {
+          confidence = 'HIGH'; // Empty slot clairement identifié
+      }
+
       return {
           id,
           offset: start,
@@ -1318,6 +1403,9 @@ export class VNDSequentialParser {
           initScript,
           config,
           hotspots: mergedHotspots,
+          objCount: declaredObjCount,
+          objCountValid,
+          confidence,
           warnings,
           parseMethod,
           sceneType,

@@ -79,9 +79,12 @@ export interface ParsedScene {
   initScript: InitScript;
   config: SceneConfig;
   hotspots: Hotspot[];
+  objCount?: number;        // HYBRID: Nombre de hotspots déclaré dans la table
+  objCountValid?: boolean;  // HYBRID: true si len(hotspots) == objCount
+  confidence: 'HIGH' | 'MEDIUM' | 'LOW';  // HYBRID: Niveau de confiance du parsing
   warnings: string[];
   parseMethod: 'signature' | 'heuristic' | 'heuristic_recovered' | 'fallback' | 'empty_slot';
-  sceneType: SceneType;  // Nouveau: type de scène détecté
+  sceneType: SceneType;  // Type de scène détecté
   sceneName?: string;    // Titre de la scène (ex: "Le bureau du banquier")
 }
 
