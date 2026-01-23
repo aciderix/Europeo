@@ -181,3 +181,113 @@ Le parser supporte maintenant toutes ces signatures via:
   - Résultat: danem.vnd **100%** (65/65), belge.vnd **100%** (87/87)
   - 8 fausses scènes éliminées, 5 scènes .htm restaurées avec leurs BMPs
 
+---
+
+## Documentation VnStudio Engine
+
+### ANALYSIS_PSEUDOCODE.md
+
+**Fichier**: `ANALYSIS_PSEUDOCODE.md` (créé 2026-01-23)
+
+Document d'analyse complète du pseudo-code décompilé du moteur VnStudio (europeo.exe).
+
+**Contenu principal**:
+
+#### 1. Parser Binaire VND (sub_41721D)
+- **Fonction principale**: Parser de fichiers .vnd binaires
+- **Magic String**: "VnFile" (validation obligatoire)
+- **Structure complète** de lecture avec offsets mémoire documentés
+- **EXIT_ID découvert**: Stocké à offset +61 de la structure Scene
+- **INDEX_ID**: Stocké à offset +65
+- **Hotspot Count**: Nombre de hotspots lu en premier (Word)
+- **File Table**: Peut être cryptée (clé "Password") si version >= 0x2000D
+- **Versions supportées**: 0x20000, 0x2000A, 0x2000B, 0x2000D
+
+**Format binaire VND documenté**:
+```
+VnFile (magic) → Config → Hotspot Count → Scene Strings →
+File Table (cryptée) → EXIT_ID → INDEX_ID → Hotspots (153 bytes chacun)
+```
+
+**Offsets Scene critiques**:
+- +29: File table pointer
+- +49, +53, +57: Scene strings (selon version)
+- +61: **EXIT_ID** ← Réponse au "Quitter" button
+- +65: INDEX_ID
+- +69: Unknown word (v >= 0x2000B)
+
+#### 2. Structure Hotspot (153 bytes)
+- **Constructeur**: sub_41526B (allocation 0x99 = 153 bytes)
+- **Lecteur binaire**: sub_4161FA (version >= 0x2000A)
+- **Base lecteur**: sub_414CA1
+  - String (offset +2)
+  - 4 bytes binary (offset +4)
+  - 3 Words (offsets +5, +3, +1)
+- **Données étendues**:
+  - 6 strings (offsets +8 à +13)
+  - 6 words associés (offsets +21 à +25)
+  - Word à offset +20
+  - Commandes (offset +26)
+  - Structures conditionnelles (+145, +149)
+
+#### 3. Parser INI Hotspots (hotspot.cpp.txt)
+- **7 clés INI**: HSCUR, HSRGN, HSCMD, HOTSPOT, HSVIDEO, HSVIDEOFLAGS, HSVIDEORECT
+- **CursorId offset**: +100 système (cursorId binaire = cursorId logique + 100)
+- **Format HSRGN**: `pointCount, x1,y1, x2,y2, ..., xN,yN`
+- **Format HOTSPOT**: `id, cursorId, pointCount, x1,y1, ..., xN,yN`
+- **Auto-génération**: Si HOTSPOT token1 > 0 → génère Command(subtype=6, param=token1)
+
+#### 4. Dispatcher Commandes (49 types)
+**Commandes clés**:
+- **Type 0 (0x00)**: quit/exit
+- **Type 6 (0x06)**: GOTO SCENE / INC_VAR / DEC_VAR
+  - Préfixe `+` ou `-` → mode relatif
+  - Pas de préfixe → mode absolu (goto scene X)
+- **Type 21 (0x15)**: IF-THEN logic conditionnelle
+- **Type 27 (0x1B)**: ADDBMP (afficher image)
+- **Type 38 (0x26)**: PLAYTEXT (afficher texte)
+- **Type 39 (0x27)**: FONT (définir police)
+
+**Switch dispatcher**: Utilise offset +8 de la structure Command pour router
+
+**Structure Command**:
+```c
+struct Command {
+    void* vtable;    // +0
+    void* unknown;   // +4
+    int subtype;     // +8 ← Utilisé dans switch
+    string param;    // +12
+};
+```
+
+#### 5. File Table Parser (sub_416781)
+- Version >= 0x2000D
+- 1 string cryptée (décryptée avec clé "Password")
+- 2 strings en clair
+- Stockage offsets: +4 (décrypté), +8, +12
+
+### Découvertes EXIT_ID
+
+**Question initiale**: Où va le bouton "Quitter" quand il n'y a pas de numéro visible?
+
+**Réponse trouvée**:
+- **Format INI** (sub_417031 ligne 9825): `EXIT_ID = TProfile::GetInt("EXIT_ID", 0)`
+- **Format VND binaire** (sub_41721D ligne 9961): `EXIT_ID = ipstream::readWord()`
+- **Stockage**: Offset +61 de la structure Scene
+- **Comportement**: Si score >= 0 et scene destination vide → utilise EXIT_ID
+
+**Conclusion**: EXIT_ID est stocké dans les fichiers .vnd binaires et .ini texte, pas hardcodé dans l'exécutable.
+
+### Fichiers Pseudo-Code Analysés
+
+| Fichier | Lignes | Description |
+|---------|--------|-------------|
+| `commands.cpp.txt` | 910 | Dispatcher 49 types de commandes |
+| `hotspot.cpp.txt` | 472 | Parser hotspots format INI |
+| `scene.cpp.txt` | 52 | Router INI vs binaire |
+| `_common_functions.cpp.txt` | 616KB | Fonctions principales (parsers binaires) |
+
+**Localisation**: `Infos/Code_Reconstruit_V2/`
+
+---
+

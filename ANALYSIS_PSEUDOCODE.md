@@ -381,6 +381,365 @@ struct Hotspot {
 
 ---
 
+## 🔬 Parser Binaire VND (sub_41721D)
+
+### Fonction Principale: sub_41721D
+
+**Source**: `_common_functions.cpp.txt` lignes 9884-10023
+
+**Signature**:
+```cpp
+int __cdecl sub_41721D(_DWORD *a1, const char *arglist, int a3, TGauge *a4)
+```
+
+**Paramètres**:
+- `a1`: Pointeur vers structure Scene
+- `arglist`: Chemin du fichier .vnd
+- `a3`: Structure de configuration/version
+- `a4`: Barre de progression (optionnel)
+
+### Séquence de Parsing VND Binaire
+
+```cpp
+// 1. Ouverture fichier (lignes 9914-9936)
+fpbase::open(&v18, arglist, 129, filebuf::openprot);
+if ((v18[2] & 0x86) != 0)  // Erreur d'ouverture
+    return 0;
+
+// 2. Validation Magic String (lignes 9939-9944)
+operator>>(&v21, v17);  // Lire string
+if (string::compare(v17, "VnFile") != 0)  // Doit être "VnFile"
+    return 0;
+
+// 3. Initialisation scène (ligne 9946)
+sub_416FCD((int)a1);
+
+// 4. Lecture config (ligne 9947)
+sub_4053B3((int)&v21, (void ***)a3);
+
+// 5. Version par défaut (lignes 9948-9949)
+if (!*(_DWORD *)(a3 + 4))
+    *(_DWORD *)(a3 + 4) = 0x20000;
+
+// 6. Lecture nombre de hotspots (ligne 9950)
+Word = ipstream::readWord(&v21);  // Word = nombre de hotspots!
+
+if (Word > 0) {
+    // 7. Lecture données scène (lignes 9953-9966)
+    operator>>(&v21, (char *)a1 + 49);  // String à offset +49
+
+    if (*(_DWORD *)(a3 + 4) >= 0x2000D)
+        operator>>(&v21, (char *)a1 + 53);  // String à offset +53
+
+    sub_416781((int)a1 + 29, (int)&v21, a3);  // Lire file table
+
+    if (*(_DWORD *)(a3 + 4) >= 0x2000B)
+        // Lire structure à offset +73
+
+    if (*(_DWORD *)(a3 + 4) >= 0x2000B)
+        *(_DWORD *)((char *)a1 + 69) = ipstream::readWord(&v21);
+
+    *(_DWORD *)((char *)a1 + 61) = ipstream::readWord(&v21);  // EXIT_ID!
+    *(_DWORD *)((char *)a1 + 65) = ipstream::readWord(&v21);  // INDEX_ID
+
+    if (*(_DWORD *)(a3 + 4) >= 0x2000A)
+        operator>>(&v21, (char *)a1 + 57);  // String à offset +57
+
+    if (*(_DWORD *)(a3 + 4) >= 0x2000A)
+        sub_4066A1((_DWORD *)((char *)a1 + 94), &v21, a3);
+
+    // 8. Expansion tableau (lignes 9968-9981)
+    v13 = Word + 1;
+    sub_406954((int)(a1 + 1), ..., 0);  // Allouer Word+1 slots
+
+    // 9. Lecture hotspots (lignes 9984-9999)
+    for (i = 0; i < Word; ++i) {
+        v15 = operator new(0x99u);  // 153 bytes par hotspot
+        if (v15) {
+            sub_41526B(v15, (int)&v21, a3);  // Parser hotspot
+            v7 = (int)v15;
+        }
+        sub_426399((int)(a1 + 1), v7);  // Ajouter à collection
+
+        if (a4)
+            TGauge::StepIt(a4);  // MAJ progress bar
+    }
+}
+
+// 10. Fermeture et retour (lignes 10001-10009)
+fpbase::close(&v18);
+return 1;  // Succès
+```
+
+### Structure Scène (offsets découverts)
+
+```c
+struct Scene {
+    void* vtable;               // +0
+    void* unknown1;             // +4
+    // ...
+    void* fileTablePtr;         // +29 (file table structure)
+    string unknown_str1;        // +49
+    string unknown_str2;        // +53 (version >= 0x2000D)
+    string unknown_str3;        // +57 (version >= 0x2000A)
+    int EXIT_ID;                // +61 ← EXIT_ID stocké ici!
+    int INDEX_ID;               // +65
+    int unknown_word;           // +69 (version >= 0x2000B)
+    // ... +73, +94
+};
+```
+
+**EXIT_ID trouvé**: Stocké à l'offset **+61** de la structure Scene, lu depuis le fichier VND binaire!
+
+### Lecture File Table: sub_416781
+
+**Source**: lignes 9676-9695
+
+```cpp
+void __cdecl sub_416781(int a1, int a2, int a3)
+{
+    if (*(_DWORD *)(a3 + 4) >= 0x2000D) {
+        string::string(&v6);
+
+        // Lire 3 strings
+        v3 = operator>>(a2, &v6);      // String cryptée
+        v4 = operator>>(v3, a1 + 8);   // String offset +8
+        operator>>(v4, a1 + 12);       // String offset +12
+
+        // Décrypter avec "Password" key
+        string::string(&v5, "Password");
+        sub_405557((int)&v5, &v6, (string *)(a1 + 4));  // Décrypter → offset +4
+
+        string::~string(&v5);
+        string::~string(&v6);
+    }
+}
+```
+
+**Format File Table**:
+- Version >= 0x2000D
+- 1 string cryptée (décryptée avec clé "Password" → offset +4)
+- 2 strings en clair (offsets +8, +12)
+
+### Lecture Hotspot: sub_41526B + sub_4161FA
+
+**sub_41526B** (constructeur, lignes 8971-9012):
+```cpp
+_DWORD *__cdecl sub_41526B(_DWORD *a1, int a2, int a3)
+{
+    // Initialiser structure hotspot (153 bytes = 0x99)
+    *a1 = &off_442DA4;
+    string::string(a1 + 2);
+    sub_414A70(a1);
+
+    // Initialiser 6 strings
+    string::string(a1 + 8);
+    string::string(a1 + 9);
+    string::string(a1 + 10);
+    string::string(a1 + 11);
+    string::string(a1 + 12);
+    string::string(a1 + 13);
+
+    a1[26] = 1;
+
+    // Allouer tableau
+    v3 = operator new[](4u);
+    *(_DWORD *)(a1 + 113) = _vector_new_ldtc_(v3, 4u, 1u, 1u, ...);
+    *(_DWORD *)(a1 + 117) = 1;
+
+    // Initialiser autres offsets
+    *(_DWORD *)(a1 + 121) = 0;
+    *(_DWORD *)(a1 + 125) = 2;
+    *(_DWORD *)(a1 + 129) = 2;
+
+    sub_415560(a1);  // Init valeurs par défaut
+
+    // Appeler lecteur binaire (polymorphisme)
+    (*(void (__cdecl **)(_DWORD *, int, int))(*a1 + 4))(a1, a2, a3);
+
+    return a1;
+}
+```
+
+**sub_4161FA** (lecteur binaire hotspot, lignes 9506-9607):
+```cpp
+int __cdecl sub_4161FA(_DWORD *a1, ipstream *a2, int a3)
+{
+    sub_4159C4(a1);  // Clear
+
+    if (*(_DWORD *)(a3 + 4) == 0x20000) {
+        // Format ancien (version 0x20000)
+        (*(void (__cdecl **)(_DWORD *, ipstream *))(*a1 + 16))(a1, a2);
+    }
+    else if (*(_DWORD *)(a3 + 4) >= 0x2000A) {
+        // Format moderne (version >= 0x2000A)
+
+        // 1. Lire base hotspot
+        sub_414CA1(a1, (int)a2);
+
+        // 2. Lire 6 strings + 6 words
+        v3 = operator>>(a2, a1 + 9);
+        v9 = operator>>(v3, a1 + 8);
+        a1[21] = ipstream::readWord(v9);
+
+        v10 = operator>>(v9, a1 + 10);
+        a1[22] = ipstream::readWord(v10);
+
+        v11 = operator>>(v10, a1 + 11);
+        a1[23] = ipstream::readWord(v11);
+
+        v12 = operator>>(v11, a1 + 12);
+        a1[24] = ipstream::readWord(v12);
+
+        v13 = operator>>(v12, a1 + 13);
+        a1[25] = ipstream::readWord(v13);
+
+        v14 = operator>>(v13, a1 + 16);
+        a1[20] = ipstream::readWord(v14);
+
+        // 3. Bloc conditionnel 1 (lignes 9545-9581)
+        if (ipstream::readWord32(a2)) {
+            v17 = operator new(0x29u);  // 41 bytes
+            // ... init structure ...
+            (*(void (__cdecl **)(_DWORD *, ipstream *, int))(*v17 + 33 + 16))(v17, a2, a3);
+            *(_DWORD *)(a1 + 145) = v17;  // Stocker à offset +145
+        }
+
+        // 4. Bloc conditionnel 2 (lignes 9582-9604)
+        Word = ipstream::readWord(a2);
+        if (Word) {
+            v15 = operator new(0x20u);  // 32 bytes
+            // ... init structure ...
+            (*(void (__cdecl **)(_DWORD *, ipstream *, int))(*v15 + 8))(v15, a2, a3);
+            *(_DWORD *)(a1 + 149) = v15;  // Stocker à offset +149
+
+            if (Word < 0)
+                *(_DWORD *)(*v15 + 8) = -Word;
+        }
+    }
+
+    // 5. Lire commandes (ligne 9606)
+    return (*(int (__cdecl **)(_DWORD *, ipstream *, int))(*(_DWORD *)(a1 + 141) + 20))(a1 + 26, a2, a3);
+}
+```
+
+**sub_414CA1** (lecteur base hotspot, lignes 8710-8722):
+```cpp
+int __cdecl sub_414CA1(_DWORD *a1, int a2)
+{
+    v2 = operator>>(a2, a1 + 2);         // String à offset +2
+    ipstream::readBytes(v2, a1 + 4, 4u); // 4 bytes binaires à offset +4
+    a1[5] = ipstream::readWord(v2);      // Word à offset +5
+    a1[3] = ipstream::readWord(v2);      // Word à offset +3
+    a1[1] = ipstream::readWord(v2);      // Word à offset +1
+    return result;
+}
+```
+
+### Structure Hotspot Binaire (153 bytes = 0x99)
+
+```c
+struct Hotspot {
+    void* vtable;               // +0
+    int word1;                  // +1  (readWord)
+    string str1;                // +2  (operator>>)
+    int word2;                  // +3  (readWord)
+    byte data[4];               // +4  (readBytes 4)
+    int word3;                  // +5  (readWord)
+    // ... +6, +7
+    string str2;                // +8  (operator>>)
+    string str3;                // +9  (operator>>)
+    string str4;                // +10 (operator>>)
+    string str5;                // +11 (operator>>)
+    string str6;                // +12 (operator>>)
+    string str7;                // +13 (operator>>)
+    // ... +16
+    int word4;                  // +20 (readWord)
+    int word5;                  // +21 (readWord)
+    int word6;                  // +22 (readWord)
+    int word7;                  // +23 (readWord)
+    int word8;                  // +24 (readWord)
+    int word9;                  // +25 (readWord)
+    int flag;                   // +26
+    CommandList commands;       // offset +26 (variable)
+    // ... +113, +117, +121, +125, +129
+    void* conditional1;         // +145 (si readWord32 != 0)
+    void* conditional2;         // +149 (si readWord != 0)
+};
+```
+
+### Format Binaire VND Complet
+
+```
+┌─────────────────────────────────────┐
+│ Magic String: "VnFile"              │ operator>> (std::string)
+├─────────────────────────────────────┤
+│ Config (sub_4053B3)                 │ varies
+├─────────────────────────────────────┤
+│ Hotspot Count (Word)                │ 2 bytes (little endian)
+├─────────────────────────────────────┤
+│ Scene String 1                      │ operator>> (offset +49)
+├─────────────────────────────────────┤
+│ Scene String 2 (v >= 0x2000D)       │ operator>> (offset +53)
+├─────────────────────────────────────┤
+│ File Table (sub_416781)             │
+│   - Encrypted string                │ operator>> + decrypt
+│   - String 2                        │ operator>>
+│   - String 3                        │ operator>>
+├─────────────────────────────────────┤
+│ Unknown Word (v >= 0x2000B)         │ readWord (offset +69)
+├─────────────────────────────────────┤
+│ EXIT_ID                             │ readWord (offset +61) ← IMPORTANT!
+├─────────────────────────────────────┤
+│ INDEX_ID                            │ readWord (offset +65)
+├─────────────────────────────────────┤
+│ Scene String 3 (v >= 0x2000A)       │ operator>> (offset +57)
+├─────────────────────────────────────┤
+│ Unknown Data (v >= 0x2000A)         │ sub_4066A1 (offset +94)
+├─────────────────────────────────────┤
+│ ┌─ HOTSPOT 0 ─────────────────────┐ │
+│ │ String (offset +2)               │ │ operator>>
+│ │ 4 bytes binary (offset +4)       │ │ readBytes
+│ │ Word (offset +5)                 │ │ readWord
+│ │ Word (offset +3)                 │ │ readWord
+│ │ Word (offset +1)                 │ │ readWord
+│ │ 6 × (String + Word)              │ │ offsets +8..+13, +21..+25
+│ │ Word at offset +20               │ │ readWord
+│ │ Optional: Word32 conditional     │ │ if != 0: read struct (41 bytes)
+│ │ Optional: Word conditional       │ │ if != 0: read struct (32 bytes)
+│ │ Commands (offset +26)            │ │ variable length
+│ └─────────────────────────────────┘ │
+│ ┌─ HOTSPOT 1 ─────────────────────┐ │
+│ │ ... (même format) ...            │ │
+│ └─────────────────────────────────┘ │
+│ ...                                 │
+│ ┌─ HOTSPOT N-1 ───────────────────┐ │
+│ │ ... (même format) ...            │ │
+│ └─────────────────────────────────┘ │
+└─────────────────────────────────────┘
+```
+
+### Codes Version
+
+| Code Hex | Code Dec | Fonctionnalités |
+|----------|----------|-----------------|
+| 0x20000  | 131072   | Format ancien (hotspot reader différent) |
+| 0x2000A  | 131082   | + Scene string 3, sub_4066A1, hotspot format moderne |
+| 0x2000B  | 131083   | + Unknown word offset +69, structure offset +73 |
+| 0x2000D  | 131085   | + Scene string 2, file table cryptée |
+
+### Découvertes Importantes
+
+1. **EXIT_ID** est stocké dans le fichier VND à l'offset +61 de la structure Scene (ligne 9961)
+2. **Magic String** = `"VnFile"` (ligne 9941)
+3. **Hotspot Count** lu en premier (ligne 9950) pour allouer les structures
+4. **File Table** peut être cryptée (clé "Password") si version >= 0x2000D
+5. **Hotspot size** = 153 bytes (0x99) alloués pour chaque hotspot
+6. **Versions multiples** supportées avec lecture conditionnelle
+7. **Structures conditionnelles** dans hotspots (offsets +145 et +149) selon flags
+
+---
+
 **Généré**: 2026-01-23
-**Mis à jour**: 2026-01-23 (ajout scene.cpp + hotspot.cpp complets)
-**Source**: Infos/Code_Reconstruit_V2/{commands,hotspot,scene}.cpp.txt
+**Mis à jour**: 2026-01-23 (ajout parser binaire VND complet)
+**Source**: Infos/Code_Reconstruit_V2/{commands,hotspot,scene,_common_functions}.cpp.txt
