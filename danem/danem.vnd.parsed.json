@@ -1730,6 +1730,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1152"
       ],
@@ -1928,6 +1929,7 @@
       ],
       "objCount": 4,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -2875,6 +2877,7 @@
       ],
       "objCount": 9,
       "objCountValid": false,
+      "confidence": "HIGH",
       "warnings": [
         "⚠️ P3: objCount mismatch - Déclaré: 9, Parsé: 10"
       ],
@@ -3630,6 +3633,7 @@
       ],
       "objCount": 5,
       "objCountValid": false,
+      "confidence": "HIGH",
       "warnings": [
         "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
         "⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 4"
@@ -3868,6 +3872,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -3993,6 +3998,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -4062,6 +4068,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5598,6 +5605,7 @@
       ],
       "objCount": 18,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5857,6 +5865,7 @@
       ],
       "objCount": 4,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -6010,6 +6019,7 @@
       ],
       "objCount": 0,
       "objCountValid": false,
+      "confidence": "HIGH",
       "warnings": [
         "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
         "⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1"
@@ -6116,6 +6126,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x6DE6"
       ],
@@ -6466,6 +6477,7 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "confidence": "MEDIUM",
       "warnings": [
         "Aucune structure de Hotspot détectée. Mode fallback."
       ],
@@ -7271,6 +7283,7 @@
       ],
       "objCount": 3,
       "objCountValid": false,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x90C2",
         "⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4"
@@ -7367,6 +7380,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -7714,6 +7728,7 @@
           "isRecovered": true
         }
       ],
+      "confidence": "HIGH",
       "warnings": [
         "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
       ],
@@ -7846,6 +7861,7 @@
       ],
       "objCount": 1,
       "objCountValid": false,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0xA1F4",
         "⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 2"
