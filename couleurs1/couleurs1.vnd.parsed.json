@@ -1730,6 +1730,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1154"
       ],
@@ -2291,6 +2292,7 @@
       ],
       "objCount": 6,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -2564,6 +2566,7 @@
       ],
       "objCount": 6,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game",
@@ -2883,6 +2886,7 @@
       ],
       "objCount": 5,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -4169,6 +4173,7 @@
       ],
       "objCount": 26,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -4859,6 +4864,7 @@
       ],
       "objCount": 11,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5434,6 +5440,7 @@
       ],
       "objCount": 8,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5681,8 +5688,110 @@
           }
         },
         {
-          "index": -1,
-          "offset": 22281,
+          "index": 3,
+          "offset": 21920,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "34"
+            },
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "760 220 125 365 0 Le tableau de la légende."
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "760 240 125 365 0 Clique dessus si tu veux"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "760 260 125 365 0 revoir l'introduction."
+            }
+          ],
+          "geometry": {
+            "cursorId": 106,
+            "pointCount": 16,
+            "points": [
+              {
+                "x": 2311,
+                "y": 187
+              },
+              {
+                "x": 2321,
+                "y": 137
+              },
+              {
+                "x": 2352,
+                "y": 134
+              },
+              {
+                "x": 2352,
+                "y": 119
+              },
+              {
+                "x": 2413,
+                "y": 115
+              },
+              {
+                "x": 2421,
+                "y": 137
+              },
+              {
+                "x": 2422,
+                "y": 185
+              },
+              {
+                "x": 2398,
+                "y": 197
+              },
+              {
+                "x": 2392,
+                "y": 237
+              },
+              {
+                "x": 2408,
+                "y": 248
+              },
+              {
+                "x": 2414,
+                "y": 313
+              },
+              {
+                "x": 2323,
+                "y": 319
+              },
+              {
+                "x": 2302,
+                "y": 306
+              },
+              {
+                "x": 2338,
+                "y": 282
+              },
+              {
+                "x": 2326,
+                "y": 247
+              },
+              {
+                "x": 2333,
+                "y": 200
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 4,
+          "offset": 22277,
           "commands": [
             {
               "id": 0,
@@ -5710,19 +5819,9 @@
               "param": "bonus2 = 0 then set_var bonus2 1"
             },
             {
-              "id": 3,
-              "subtype": 6,
-              "param": "bonus2 = 1 then scene 35k"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "48i"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "49i"
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus2 = 1 then scene 35"
             }
           ],
           "geometry": {
@@ -5783,97 +5882,16 @@
               }
             ],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
         },
         {
-          "index": -1,
-          "offset": 22998,
+          "index": 5,
+          "offset": 22710,
           "commands": [
             {
-              "id": 0,
-              "subtype": 39,
-              "param": "18 0 #ffffff Comic sans MS"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "1980 340 125 365 0 La momie du pharaon TOUTHENEUROd"
-            }
-          ],
-          "geometry": {
-            "cursorId": 100,
-            "pointCount": 14,
-            "points": [
-              {
-                "x": 2004,
-                "y": 325
-              },
-              {
-                "x": 1967,
-                "y": 314
-              },
-              {
-                "x": 1980,
-                "y": 287
-              },
-              {
-                "x": 1939,
-                "y": 125
-              },
-              {
-                "x": 1969,
-                "y": 104
-              },
-              {
-                "x": 1972,
-                "y": 63
-              },
-              {
-                "x": 2002,
-                "y": 42
-              },
-              {
-                "x": 2068,
-                "y": 55
-              },
-              {
-                "x": 2073,
-                "y": 95
-              },
-              {
-                "x": 2073,
-                "y": 111
-              },
-              {
-                "x": 2106,
-                "y": 131
-              },
-              {
-                "x": 2094,
-                "y": 189
-              },
-              {
-                "x": 2069,
-                "y": 288
-              },
-              {
-                "x": 2065,
-                "y": 325
-              }
-            ],
-            "extraFlag": 0
-          },
-          "isRecovered": true
-        },
-        {
-          "index": -1,
-          "offset": 22728,
-          "commands": [
-            {
-              "id": 3,
+              "id": 1,
               "subtype": 6,
-              "param": "48i"
+              "param": "48"
             }
           ],
           "geometry": {
@@ -5934,17 +5952,16 @@
               }
             ],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
         },
         {
-          "index": -1,
-          "offset": 22862,
+          "index": 6,
+          "offset": 22844,
           "commands": [
             {
-              "id": 3,
+              "id": 1,
               "subtype": 6,
-              "param": "49i"
+              "param": "49"
             }
           ],
           "geometry": {
@@ -6013,14 +6030,117 @@
               }
             ],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
+        },
+        {
+          "index": 7,
+          "offset": 22994,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "1980 340 125 365 0 La momie du pharaon TOUTHENEURO"
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 14,
+            "points": [
+              {
+                "x": 2004,
+                "y": 325
+              },
+              {
+                "x": 1967,
+                "y": 314
+              },
+              {
+                "x": 1980,
+                "y": 287
+              },
+              {
+                "x": 1939,
+                "y": 125
+              },
+              {
+                "x": 1969,
+                "y": 104
+              },
+              {
+                "x": 1972,
+                "y": 63
+              },
+              {
+                "x": 2002,
+                "y": 42
+              },
+              {
+                "x": 2068,
+                "y": 55
+              },
+              {
+                "x": 2073,
+                "y": 95
+              },
+              {
+                "x": 2073,
+                "y": 111
+              },
+              {
+                "x": 2106,
+                "y": 131
+              },
+              {
+                "x": 2094,
+                "y": 189
+              },
+              {
+                "x": 2069,
+                "y": 288
+              },
+              {
+                "x": 2065,
+                "y": 325
+              }
+            ],
+            "extraFlag": 0
+          }
         }
       ],
       "objCount": 8,
-      "objCountValid": false,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [
-        "⚠️ P3: objCount mismatch - Déclaré: 8, Parsé: 7"
+        "Scène scrollable: coordonnées (2311, 187)",
+        "Scène scrollable: coordonnées (2321, 137)",
+        "Scène scrollable: coordonnées (2352, 134)",
+        "Scène scrollable: coordonnées (2352, 119)",
+        "Scène scrollable: coordonnées (2413, 115)",
+        "Scène scrollable: coordonnées (2421, 137)",
+        "Scène scrollable: coordonnées (2422, 185)",
+        "Scène scrollable: coordonnées (2398, 197)",
+        "Scène scrollable: coordonnées (2392, 237)",
+        "Scène scrollable: coordonnées (2408, 248)",
+        "Scène scrollable: coordonnées (2414, 313)",
+        "Scène scrollable: coordonnées (2323, 319)",
+        "Scène scrollable: coordonnées (2302, 306)",
+        "Scène scrollable: coordonnées (2338, 282)",
+        "Scène scrollable: coordonnées (2326, 247)",
+        "Scène scrollable: coordonnées (2333, 200)",
+        "Scène scrollable: coordonnées (2004, 325)",
+        "Scène scrollable: coordonnées (2002, 42)",
+        "Scène scrollable: coordonnées (2068, 55)",
+        "Scène scrollable: coordonnées (2073, 95)",
+        "Scène scrollable: coordonnées (2073, 111)",
+        "Scène scrollable: coordonnées (2106, 131)",
+        "Scène scrollable: coordonnées (2094, 189)",
+        "Scène scrollable: coordonnées (2069, 288)",
+        "Scène scrollable: coordonnées (2065, 325)"
       ],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -6398,6 +6518,7 @@
       ],
       "objCount": 5,
       "objCountValid": false,
+      "confidence": "HIGH",
       "warnings": [
         "⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 7"
       ],
@@ -6509,6 +6630,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -6703,6 +6825,7 @@
       ],
       "objCount": 2,
       "objCountValid": false,
+      "confidence": "HIGH",
       "warnings": [
         "⚠️ P3: objCount mismatch - Déclaré: 2, Parsé: 3"
       ],
@@ -6809,6 +6932,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -7860,6 +7984,7 @@
       ],
       "objCount": 17,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game",
@@ -8089,6 +8214,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8152,6 +8278,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8260,6 +8387,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8375,6 +8503,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8398,6 +8527,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8422,6 +8552,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8532,6 +8663,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8600,6 +8732,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8668,6 +8801,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8757,6 +8891,7 @@
       ],
       "objCount": 2,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8841,6 +8976,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8864,6 +9000,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8888,6 +9025,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8912,6 +9050,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9249,6 +9388,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -9272,6 +9412,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9296,6 +9437,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9320,6 +9462,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9657,6 +9800,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -9993,6 +10137,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -10090,6 +10235,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0xA667"
       ],
@@ -10473,6 +10619,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -10575,6 +10722,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -10958,6 +11106,7 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "confidence": "MEDIUM",
       "warnings": [
         "Aucune structure de Hotspot détectée. Mode fallback."
       ],
@@ -11743,6 +11892,7 @@
       ],
       "objCount": 3,
       "objCountValid": false,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0xD5A0",
         "⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4"
@@ -12177,6 +12327,7 @@
       ],
       "objCount": 6,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -12417,6 +12568,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -14006,6 +14158,7 @@
       ],
       "objCount": 17,
       "objCountValid": false,
+      "confidence": "HIGH",
       "warnings": [
         "⚠️ P3: objCount mismatch - Déclaré: 17, Parsé: 18"
       ],
@@ -14093,6 +14246,7 @@
       ],
       "objCount": 0,
       "objCountValid": false,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11406",
         "⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1"
@@ -14137,6 +14291,7 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "confidence": "MEDIUM",
       "warnings": [
         "Aucune structure de Hotspot détectée. Mode fallback."
       ],
@@ -14176,6 +14331,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11540"
       ],
@@ -14375,6 +14531,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -14461,6 +14618,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -14707,6 +14865,7 @@
       ],
       "objCount": 5,
       "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11B94"
       ],
@@ -14806,6 +14965,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11F27"
       ],
@@ -14886,6 +15046,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15018,6 +15179,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [
         "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
       ],
@@ -15056,6 +15218,7 @@
       "hotspots": [],
       "objCount": 0,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15277,6 +15440,7 @@
       ],
       "objCount": 3,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15353,6 +15517,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15431,6 +15596,7 @@
       ],
       "objCount": 1,
       "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15496,6 +15662,7 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "confidence": "MEDIUM",
       "warnings": [
         "Aucune structure de Hotspot détectée. Mode fallback."
       ],
@@ -15569,14 +15736,31 @@
     "\n--- Analyse Scène #4 (0x2442 -> 0x3B1B) ---",
     "\n--- Analyse Scène #5 (0x3B1B -> 0x471C) ---",
     "\n--- Analyse Scène #6 (0x471C -> 0x51FE) ---",
-    "  [WARN] Hotspot 3: coordonnées invalides (2311, 187)",
-    "  [PEEK] Commande reconstruite: \"35k\" @ 0x5842",
-    "  [PEEK] Commande reconstruite: \"48i\" @ 0x58c8",
-    "  [PEEK] Commande reconstruite: \"49i\" @ 0x594e",
-    "  [DEEP SCAN] 4 structures géométriques orphelines.",
-    "  [MERGE] Commande @0x5709 associée à Géométrie @0x5842",
-    "  [MERGE] Commande @0x59d6 associée à Géométrie @0x5a3a",
-    "  ⚠️ P3: objCount mismatch - Déclaré: 8, Parsé: 7",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2311, 187)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2321, 137)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2352, 134)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2352, 119)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2413, 115)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2421, 137)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2422, 185)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2398, 197)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2392, 237)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2408, 248)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2414, 313)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2323, 319)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2302, 306)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2338, 282)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2326, 247)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2333, 200)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2004, 325)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2002, 42)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2068, 55)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2073, 95)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2073, 111)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2106, 131)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2094, 189)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2069, 288)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2065, 325)",
     "\n--- Analyse Scène #7 (0x51FE -> 0x5ACE) ---",
     "  [INFO] 1 tooltip(s) trouvé(s)",
     "  ⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 7",
@@ -15661,18 +15845,18 @@
     "\n============================================================",
     "P5: STATISTIQUES COMMAND SUBTYPES",
     "============================================================",
-    "Total commandes: 1191",
+    "Total commandes: 1194",
     "Subtypes uniques: 23/49",
     "",
     "Top 15 subtypes par fréquence:",
-    "   21 (0x15) IF_THEN        :   509 (42.74%)",
-    "    0 (0x00) QUIT           :   167 (14.02%)",
-    "   39 (0x27) FONT           :   130 (10.92%)",
-    "   38 (0x26) PLAYTEXT       :   126 (10.58%)",
-    "    6 (0x06) GOTO_SCENE     :    68 ( 5.71%)",
+    "   21 (0x15) IF_THEN        :   510 (42.71%)",
+    "    0 (0x00) QUIT           :   166 (13.90%)",
+    "   39 (0x27) FONT           :   131 (10.97%)",
+    "   38 (0x26) PLAYTEXT       :   130 (10.89%)",
+    "    6 (0x06) GOTO_SCENE     :    66 ( 5.53%)",
     "    9 (0x09) VIDEO          :    34 ( 2.85%)",
-    "   22 (0x16) UNKNOWN_22     :    27 ( 2.27%)",
-    "   23 (0x17) UNKNOWN_23     :    24 ( 2.02%)",
+    "   22 (0x16) UNKNOWN_22     :    27 ( 2.26%)",
+    "   23 (0x17) UNKNOWN_23     :    24 ( 2.01%)",
     "   10 (0x0A) UNKNOWN_10     :    18 ( 1.51%)",
     "   31 (0x1F) UNKNOWN_31     :    16 ( 1.34%)",
     "   11 (0x0B) UNKNOWN_11     :    15 ( 1.26%)",

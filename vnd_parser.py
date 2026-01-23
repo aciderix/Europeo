@@ -135,6 +135,7 @@ class ParsedScene:
     sceneName: Optional[str] = None
     objCount: Optional[int] = None  # P3: Nombre de hotspots déclaré
     objCountValid: Optional[bool] = None  # P3: Validation objCount == len(hotspots)
+    confidence: str = 'MEDIUM'  # HYBRID: "HIGH" (signature), "MEDIUM" (heuristic), "LOW" (recovered)
 
 
 @dataclass
@@ -449,12 +450,66 @@ class VNDSequentialParser:
 
     # === PASSE 1 : CARTOGRAPHIE ===
 
+    def detectGlobalVars(self) -> Optional[int]:
+        """
+        HYBRID: Détecte la scène global_vars au début du fichier
+
+        global_vars est typiquement la première scène, juste après le header,
+        contenant une grosse table de fichiers (>50 fichiers, souvent 200+).
+
+        Returns: Offset de global_vars ou None
+        """
+        # Chercher juste après le header (offset ~104)
+        # Dans couleurs1.vnd: global_vars @ 0x6A (106 decimal)
+        # Mais le header peut varier, cherchons dans les 200 premiers bytes
+
+        for offset in range(0x60, 0x120):  # 96 à 288
+            if offset + 8 > len(self.data):
+                continue
+
+            # Essayer de lire une file table
+            tableEnd = self.isValidFileTable(offset)
+
+            if tableEnd != -1 and tableEnd > offset:
+                # Compter le nombre de fichiers
+                fileCount = 0
+                ptr = offset
+
+                while ptr < tableEnd and ptr < offset + 50000:  # Max 50KB
+                    length = self.readU32(ptr)
+
+                    if length == 0 or length > 500:
+                        break
+
+                    if ptr + 4 + length > len(self.data):
+                        break
+
+                    fileCount += 1
+                    ptr += 4 + length
+
+                    if fileCount > 500:  # Limite sécurité
+                        break
+
+                # global_vars typiquement >50 fichiers
+                if fileCount > 50:
+                    self.log(f"  [HYBRID] global_vars détecté @ 0x{offset:X} ({fileCount} fichiers)")
+                    return offset
+
+        return None
+
     def findSceneOffsets(self) -> List[int]:
         offsets = []
         ptr = 0
         dataLen = len(self.data)
 
         self.log("PHASE 1: Scanning pour les tables de fichiers...")
+
+        # HYBRID: Détecter global_vars AVANT de scanner
+        globalVarsOffset = self.detectGlobalVars()
+        if globalVarsOffset is not None:
+            offsets.append(globalVarsOffset)
+            ptr = globalVarsOffset + 1  # Commencer après global_vars
+            self.log(f"  [+] Scene 0 (global_vars) détectée @ 0x{globalVarsOffset:X}")
 
         # Scanner pour les scènes
         while ptr < dataLen - 20:
@@ -1169,6 +1224,7 @@ class VNDSequentialParser:
                 hotspots=[],
                 objCount=0,  # P3: Empty scene has 0 hotspots
                 objCountValid=True,  # P3: Always valid for empty scenes
+                confidence='HIGH',  # HYBRID: Empty marker clairement identifié
                 warnings=[],
                 parseMethod='empty_slot',
                 sceneType='empty',
@@ -1505,10 +1561,19 @@ class VNDSequentialParser:
                         x = self.readI32(hsPtr)
                         y = self.readI32(hsPtr + 4)
 
-                        if abs(x) > 2000 or abs(y) > 2000:
+                        # HYBRID: Limites assouplies pour scènes scrollables
+                        MAX_COORD_STRICT = 2000
+                        MAX_COORD_SCROLLABLE = 5000
+
+                        if abs(x) > MAX_COORD_SCROLLABLE or abs(y) > MAX_COORD_SCROLLABLE:
+                            # Vraiment invalide
                             hasInvalidCoords = True
-                            self.log(f"  [WARN] Hotspot {i}: coordonnées invalides ({x}, {y})")
+                            self.log(f"  [WARN] Hotspot {i}: coordonnées hors limites ({x}, {y})")
                             break
+                        elif abs(x) > MAX_COORD_STRICT or abs(y) > MAX_COORD_STRICT:
+                            # Scène scrollable (warning mais continue)
+                            self.log(f"  [INFO] Hotspot {i}: scène scrollable détectée ({x}, {y})")
+                            warnings.append(f"Scène scrollable: coordonnées ({x}, {y})")
 
                         points.append(Point(x=x, y=y))
                         hsPtr += 8
@@ -1701,6 +1766,19 @@ class VNDSequentialParser:
                 warnings.append(msg)
                 self.log(f"  {msg}")
 
+        # HYBRID: Assigner confidence selon parseMethod
+        if parseMethod == 'signature':
+            confidence = 'HIGH'  # Scène avec signature 0xFFFFFFxx
+        elif parseMethod in ('heuristic_recovered', 'heuristic'):
+            # Détecté par heuristique, moins fiable
+            # MAIS: global_vars est très fiable (>50 fichiers)
+            if sceneType == 'global_vars':
+                confidence = 'HIGH'  # global_vars très fiable
+            else:
+                confidence = 'MEDIUM'
+        else:
+            confidence = 'MEDIUM'  # Fallback
+
         return ParsedScene(
             id=id_val,
             offset=start,
@@ -1711,6 +1789,7 @@ class VNDSequentialParser:
             hotspots=mergedHotspots,
             objCount=declared_objCount,
             objCountValid=objCountValid,
+            confidence=confidence,
             warnings=warnings,
             parseMethod=parseMethod,
             sceneType=sceneType,
@@ -1758,7 +1837,7 @@ def dataclass_to_dict(obj):
             'TooltipInfo': ['type', 'rect', 'flag', 'text'],
             'TooltipRect': ['x1', 'y1', 'x2', 'y2'],
             'VndHeader': ['magic', 'version', 'project', 'author', 'serial', 'width', 'height', 'config_extra', 'scene_count', 'exit_id', 'index_id', 'header_size'],
-            'ParsedScene': ['id', 'offset', 'length', 'files', 'initScript', 'config', 'hotspots', 'objCount', 'objCountValid', 'warnings', 'parseMethod', 'sceneType', 'sceneName'],
+            'ParsedScene': ['id', 'offset', 'length', 'files', 'initScript', 'config', 'hotspots', 'objCount', 'objCountValid', 'confidence', 'warnings', 'parseMethod', 'sceneType', 'sceneName'],
             'ParseResult': ['header', 'scenes', 'logs', 'totalBytes'],
         }
 

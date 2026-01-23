@@ -165,6 +165,10 @@ Le parser supporte maintenant toutes ces signatures via:
 | - | isValidSignature() | Vérification flexible 6 signatures |
 | - | **Filtrage sélectif paths relatifs** | **Rejette .wav/.avi relatifs, garde .bmp/.htm surimpression** |
 | - | **Reject isolated audio/video** | **100% géométrie - élimination .wav/.avi isolés** |
+| 2026-01-23 | **Parser HYBRIDE avec confidence tagging** | **83.6% HIGH confidence, traçabilité maximale** |
+| - | **Limites coordonnées assouplies (2000→5000)** | **Récupère scènes scrollables (Scene 7: +5 hotspots)** |
+| - | **Détection global_vars en Scene 0** | **282 fichiers vars, HIGH confidence** |
+| - | Strict parser validation | Comparaison strict vs hybride, 90.4% objCount match |
 
 ### Problèmes Résolus
 
@@ -446,6 +450,79 @@ Plan d'améliorations du parser basé sur les validations empiriques.
   - Implémentation possible après reverse engineering hash + fichier test
 
 **Conclusion**: Parser actuel = **robuste et correct**. Améliorations = bonus métadonnées/debug.
+
+### INVESTIGATION_COULEURS1.md + Hybrid Parser
+
+**Fichiers**: `INVESTIGATION_COULEURS1.md`, `strict_vnd_parser.py` (créés 2026-01-23)
+
+Investigation complète des écarts objCount entre strict parser et current parser sur couleurs1.vnd.
+
+#### Questions Investigées (toutes résolues ✅)
+
+**1. Pourquoi l'une des 31 scènes HIGH ne matche pas objCount?**
+- **Cause**: Strict parser commence à première signature (0x11A6), current parser commence au début (0x6A)
+- **Résultat**: Tous les IDs sont décalés de -1 dans strict parser
+- Scene 6 strict (0x5243) ≠ Scene 6 actuel (0x471C) - ce sont 2 scènes DIFFÉRENTES
+- Scene 6 strict a erreur parsing: coords invalides (x=2311 > limite 2000)
+
+**2. Pourquoi certaines scènes ont objCount=N/A?**
+- **4 scènes spéciales** sans table hotspots (VALIDES):
+  - Scene 0 (global_vars): 282 fichiers, pas de signature
+  - Scene 36 (options): vnoption.dll
+  - Scene 42 (game): scène logique vide
+  - Scene 54 (game_over): fin de jeu
+- Ces scènes sont légitimes dans le moteur VnStudio
+
+**3. Pourquoi objCount ≠ parsed?**
+- **5 récupérations (+)**: Gap recovery trouve hotspots bonus ✅ BIEN
+  - Scenes 8, 10, 37, 40, 41: +1 à +2 hotspots récupérés
+- **1 manquant (-)**: Scene 7 objCount=8, parsed=7 ⚠️
+  - Hotspot 7 a coords (x=2311 > 2000) → break strict
+
+#### Strict vs Hybrid - Résultats
+
+**STRICT PARSER**:
+- 31 scènes (56% couverture), 144 hotspots
+- 96.8% précision objCount (30/31 match)
+- ❌ Manque global_vars + 23 scènes système
+- ❌ Scene 7: objCount=8, parsed=3 (coords > 2000 rejetés)
+
+**HYBRID PARSER** (implémenté):
+- 55 scènes (100% couverture), objCount match 47/52 (90.4%)
+- ✅ 46/55 HIGH confidence (83.6%) - scènes avec signatures + global_vars
+- ✅ 9/55 MEDIUM confidence (16.4%) - scènes heuristiques
+- ✅ Scene 0 global_vars détectée (282 fichiers, HIGH confidence)
+- ✅ Scene 7: objCount=8, parsed=8 (coords 2000→5000, +5 hotspots récupérés)
+
+#### Améliorations Implémentées (2026-01-23)
+
+**1. Confidence Tagging** ✅
+```python
+confidence: str = 'HIGH' | 'MEDIUM' | 'LOW'
+- HIGH: Signatures 0xFFFFFFxx + global_vars (50+ files)
+- MEDIUM: Heuristic recovery, gap scanning
+- LOW: Non utilisé (réservé futur)
+```
+
+**2. Limites Coordonnées Assouplies** ✅
+```python
+MAX_COORD_STRICT = 2000      # Warning si dépassé
+MAX_COORD_SCROLLABLE = 5000  # Break si dépassé
+# Résultat: Scene 7 récupérée (+5 hotspots)
+```
+
+**3. Détection global_vars en Scene 0** ✅
+```python
+detectGlobalVars() → scan 0x60-0x120 pour file table > 50 fichiers
+findSceneOffsets() → détecte global_vars AVANT signatures
+# Résultat: 282 fichiers vars, HIGH confidence
+```
+
+**Impact**:
+- ✅ Couverture 100% (vs 56% strict)
+- ✅ Traçabilité maximale (confidence tags)
+- ✅ Scene 7 complète (8/8 hotspots)
+- ✅ global_vars détectée comme Scene 0
 
 ---
 
