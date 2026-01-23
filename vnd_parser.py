@@ -1030,6 +1030,9 @@ class VNDSequentialParser:
         # P4: Statistiques Scene Count détaillées
         self.generateSceneCountStats(scenes, header)
 
+        # P5: Statistiques Command Subtypes
+        self.generateCommandStats(scenes)
+
         return ParseResult(
             scenes=scenes,
             logs=self.logs,
@@ -1082,6 +1085,75 @@ class VNDSequentialParser:
             self.log("  Vérifier filtrage (toolbar/empty)")
         else:
             self.log("✓ Header et Parser en parfait accord!")
+        self.log("="*60)
+
+    def generateCommandStats(self, scenes: List[ParsedScene]):
+        """
+        P5: Génère et log des statistiques sur les Command Subtypes
+
+        Collecte tous les subtypes utilisés avec leur fréquence.
+        Mapping basé sur COMMAND_SUBTYPES.md (49 types possibles).
+        """
+        # Mapping des subtypes connus (basé sur pseudo-code)
+        SUBTYPE_NAMES = {
+            0: "QUIT",
+            1: "MENU",
+            2: "OPTIONS",
+            6: "GOTO_SCENE",
+            9: "VIDEO",
+            16: "DELAY",
+            21: "IF_THEN",
+            27: "ADDBMP",
+            38: "PLAYTEXT",
+            39: "FONT",
+        }
+
+        # Collecter tous les subtypes
+        subtype_counts = {}
+        total_commands = 0
+
+        for scene in scenes:
+            # InitScript commands
+            if scene.initScript:
+                for cmd in scene.initScript.commands:
+                    if cmd.subtype is not None:
+                        subtype_counts[cmd.subtype] = subtype_counts.get(cmd.subtype, 0) + 1
+                        total_commands += 1
+
+            # Hotspot commands
+            for hotspot in scene.hotspots:
+                for cmd in hotspot.commands:
+                    if cmd.subtype is not None:
+                        subtype_counts[cmd.subtype] = subtype_counts.get(cmd.subtype, 0) + 1
+                        total_commands += 1
+
+        if total_commands == 0:
+            return
+
+        # Log statistiques
+        self.log("\n" + "="*60)
+        self.log("P5: STATISTIQUES COMMAND SUBTYPES")
+        self.log("="*60)
+        self.log(f"Total commandes: {total_commands}")
+        self.log(f"Subtypes uniques: {len(subtype_counts)}/49")
+        self.log("")
+        self.log("Top 15 subtypes par fréquence:")
+
+        # Trier par fréquence
+        sorted_subtypes = sorted(subtype_counts.items(), key=lambda x: x[1], reverse=True)
+
+        for subtype, count in sorted_subtypes[:15]:
+            pct = 100 * count / total_commands if total_commands > 0 else 0
+            name = SUBTYPE_NAMES.get(subtype, f"UNKNOWN_{subtype}")
+            self.log(f"  {subtype:3d} (0x{subtype:02X}) {name:15s}: {count:5d} ({pct:5.2f}%)")
+
+        # Subtypes identifiés vs inconnus
+        identified = sum(1 for st in subtype_counts.keys() if st in SUBTYPE_NAMES)
+        unknown = len(subtype_counts) - identified
+
+        self.log("")
+        self.log(f"✓ Subtypes identifiés: {identified}/{len(subtype_counts)}")
+        self.log(f"⚠️ Subtypes inconnus: {unknown}/{len(subtype_counts)}")
         self.log("="*60)
 
     def parseSceneBlock(self, id_val: int, start: int, limit: int) -> ParsedScene:

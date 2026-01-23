@@ -429,8 +429,21 @@ Plan d'améliorations du parser basé sur les validations empiriques.
   - Explique les différences: danem (0), belge (-1), couleurs1 (+24)
   - Logs automatiques en fin de parsing
 
-**🟡 P5**: Mapper les 49 subtypes de commandes
-**🔴 P6**: Parser file table cryptée (clé "Password")
+**✅ P5**: Mapper les 49 subtypes de commandes - **COMPLÉTÉ**
+  - COMMAND_SUBTYPES.md créé avec mapping complet 49 types (0x00-0x30)
+  - generateCommandStats() collecte et affiche top subtypes par fréquence
+  - 26 subtypes détectés sur 49 possibles (danem: 20, belge: 20, couleurs1: 23)
+  - 10 subtypes identifiés: QUIT, GOTO_SCENE, VIDEO, DELAY, IF_THEN, ADDBMP, PLAYTEXT, FONT, etc.
+  - IF_THEN = subtype dominant (42-68% de toutes les commandes)
+
+**⚠️ P6**: Parser file table cryptée (clé "Password") - **DOCUMENTÉ (non implémenté)**
+  - FILE_TABLE_ENCRYPTION.md créé avec algorithme complet de décryptage
+  - Analyse sub_405557: décryptage par soustraction hash + alternance signe
+  - Versions >= 0x2000D ont file table cryptée (premier string)
+  - Clé: "Password" (uppercase → hash → decrypt)
+  - **Bloqueur**: Fonction hash() non documentée, reverse engineering nécessaire
+  - **Bloqueur**: Pas de VND crypté dans tests (danem/belge/couleurs1 = 2.13 non cryptés)
+  - Implémentation possible après reverse engineering hash + fichier test
 
 **Conclusion**: Parser actuel = **robuste et correct**. Améliorations = bonus métadonnées/debug.
 
