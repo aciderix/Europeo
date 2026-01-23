@@ -377,5 +377,42 @@ python3 validate_vnd_structure.py
   - Probablement scène "Empty" ou "Toolbar" filtrée
   - À investiguer
 
+### PARSER_IMPROVEMENTS.md
+
+**Fichier**: `PARSER_IMPROVEMENTS.md` (créé 2026-01-23)
+
+Plan d'améliorations du parser basé sur les validations empiriques.
+
+#### Validations Confirmées
+
+**1. Hotspots (100%)**
+- ✓ Géométrie: 65/65 danem, 87/87 belge (100%)
+- ✓ CursorId +100 offset confirmé (conforme pseudo-code)
+- ✓ PointCount variable (0-14 points), polygones valides
+
+**2. Commandes (Validées)**
+- ✓ Subtype correctement lu (offset +8 confirmé)
+- ✓ Types validés: 0 (QUIT), 6 (GOTO), 9 (VIDEO), 16 (DELAY), 21 (IF-THEN), 27 (ADDBMP), 38 (PLAYTEXT), 39 (FONT)
+- ✓ Type 21 (IF-THEN) = 57% des commandes dans danem!
+- ⚠️ 20 subtypes différents détectés (49 dans dispatcher)
+
+**3. Scene Count**
+- ⚠️ Header ≠ Parser (normal!)
+- danem: 16 = 16 (100% match)
+- belge: 28 vs 27 (-1 scène)
+- couleurs1: 31 vs 55 (+24 scènes système/variations)
+- **Conclusion**: Header compte "scènes principales", Parser compte TOUT
+
+#### Améliorations Proposées (Priorités)
+
+**🟢 P1**: Lire Header VND (EXIT_ID, Config, métadonnées)
+**🟢 P2**: Détection automatique signatures (0xFFFFFFxx)
+**🟢 P3**: Validation objCount par scène
+**🟢 P4**: Statistiques Scene Count détaillées
+**🟡 P5**: Mapper les 49 subtypes de commandes
+**🔴 P6**: Parser file table cryptée (clé "Password")
+
+**Conclusion**: Parser actuel = **robuste et correct**. Améliorations = bonus métadonnées/debug.
+
 ---
 
