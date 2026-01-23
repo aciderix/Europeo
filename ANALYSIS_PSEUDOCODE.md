@@ -290,19 +290,97 @@ Le **switch dispatcher** utilise l'offset **+8** de la structure Command pour ro
 - `"+1"` → relative (+1)
 - `"-5"` → relative (-5)
 
+### 5. Auto-Génération Commande Type 6 (HOTSPOT_X)
+
+**hotspot.cpp lignes 377-459**: Si le premier token de `HOTSPOT_X` > 0, le moteur **génère automatiquement** une commande `subtype=6`!
+
+```cpp
+if (v33 > 0) {  // v33 = premier token HOTSPOT_X
+    sprintf(param, "%u", v33);
+    CreateCommand(6, param);  // GOTO SCENE auto!
+}
+```
+
+**Exemple INI**:
+```ini
+HOTSPOT_0 = 15, 5, 4, 100,100, 200,100, 200,200, 100,200
+```
+→ Génère automatiquement: `Command(subtype=6, param="15")` = **goto scene 15**!
+
+### 6. Double Format de Scènes (scene.cpp)
+
+Le moteur supporte **2 formats**:
+- **Format INI** (texte) → parser `sub_417031`
+- **Format VND binaire** → parser `sub_41721D`
+
+Router (lignes 36-48):
+```cpp
+if (extension == "Ini")
+    sub_417031(...);  // Parser INI
+else
+    sub_41721D(...);  // Parser binaire VND
+```
+
+---
+
+## 🎯 Format Complet HOTSPOT_X (INI)
+
+### Clés INI Parsées:
+
+| Clé | Format | Description |
+|-----|--------|-------------|
+| `HSCUR_X` | `cursorId` | ID curseur (+100 offset) |
+| `HSRGN_X` | `count,x1,y1,...,xN,yN` | Géométrie polygonale |
+| `HSCMD_X` | Multiple lignes | Commandes hotspot |
+| `HOTSPOT_X` | `id,cursor,count,x1,y1,...` | **Data principale + géométrie alt** |
+| `HSVIDEO_X` | `filename.avi` | Fichier vidéo |
+| `HSVIDEOFLAGS_X` | `flags` | Flags vidéo |
+| `HSVIDEORECT_X` | `x,y,w,h` | Rectangle vidéo |
+
+### HOTSPOT_X - Format Détaillé:
+
+```
+HOTSPOT_X = token1, token2, token3, [x1,y1, x2,y2, ..., xN,yN]
+```
+
+**Tokens**:
+1. **token1 (id)**: Si > 0 → **génère auto Command(6, token1)**
+2. **token2 (cursorId)**: Override cursorId (avec +100)
+3. **token3 (pointCount)**: Nombre de points géométrie
+4. **x1,y1, ... xN,yN**: Points (si pointCount > 1)
+
+**Priorités**:
+- Si `HOTSPOT_X` a géométrie (token3 > 1) → **écrase** `HSRGN_X`
+- Si `HOTSPOT_X` token2 présent → **écrase** `HSCUR_X`
+
+### Structure Mémoire Hotspot (offsets):
+
+```c
+struct Hotspot {
+    void* vtable;           // +0
+    // ...
+    int cursorId;           // +45  (avec +100 offset)
+    // ...
+    int pointCount;         // +53
+    Point* points;          // +57  (tableau dynamique)
+    // ...
+    CommandList commands;   // +2 (offset a1+2)
+};
+```
+
 ---
 
 ## 📝 Prochaines Étapes
 
 1. ✅ Mapper tous les subtypes de commandes
-2. ⬜ Analyser `sub_40A5CA` (parser logic)
-3. ⬜ Documenter format complet HOTSPOT_X
-4. ⬜ Vérifier si cursorId +100 s'applique partout
+2. ⬜ Analyser `sub_40A5CA` (parser logic if-then)
+3. ✅ Documenter format complet HOTSPOT_X
+4. ✅ Vérifier si cursorId +100 s'applique partout
 5. ⬜ Explorer pseudo code complet pour EXIT_ID
+6. ⬜ Analyser `sub_41721D` (parser binaire VND)
 
 ---
 
-**Génér
-
-é**: 2026-01-23
+**Généré**: 2026-01-23
+**Mis à jour**: 2026-01-23 (ajout scene.cpp + hotspot.cpp complets)
 **Source**: Infos/Code_Reconstruit_V2/{commands,hotspot,scene}.cpp.txt
