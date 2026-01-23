@@ -289,5 +289,93 @@ struct Command {
 
 **Localisation**: `Infos/Code_Reconstruit_V2/`
 
+### VALIDATED_VND_FORMAT.md
+
+**Fichier**: `VALIDATED_VND_FORMAT.md` (créé 2026-01-23)
+
+Validation empirique du format VND par analyse binaire vs pseudo-code.
+
+**Validation sur**:
+- ✅ danem.vnd (16 scènes, 100% match)
+- ⚠️ belge.vnd (28 scènes binaire vs 27 parsées, diff 1)
+
+#### Découvertes Validées
+
+**1. Magic String**
+- Pseudo-code: `"VnFile"`
+- **Réalité**: `"VNFILE"` (majuscules!) ✓ Validé
+- Format: Pascal string (4 bytes length + data)
+
+**2. Scene Count (Découverte majeure!)**
+- Pseudo-code: Variable "Word" = "hotspot count"
+- **Réalité**: C'est le **nombre total de SCÈNES** dans le VND!
+- Offset: config_offset + 20 (Word, 2 bytes)
+- ✓ danem.vnd: 16 scènes (binaire) = 16 scènes (parser)
+- ⚠️ belge.vnd: 28 scènes (binaire) ≠ 27 scènes (parser)
+
+**3. EXIT_ID et INDEX_ID**
+- **EXIT_ID**: Word à config_offset + 22
+- **INDEX_ID**: Word à config_offset + 24
+- ✓ Validé dans danem.vnd et belge.vnd (valeur: 0)
+- **Utilité**: Navigation "bouton Quitter" quand destination vide
+
+**4. Header Structure Validée**
+```
+Offset | Taille | Description
+-------|--------|-------------
+0-4    | 5 B    | Header bytes
+5-?    | var    | Strings Pascal (VNFILE, version, project, author, serial)
+78-97  | 20 B   | Config (5 × int32: width, height, ...)
+98-99  | 2 B    | Scene Count
+100-101| 2 B    | EXIT_ID
+102-103| 2 B    | INDEX_ID
+104+   | var    | File Table + Scenes
+```
+
+**5. Config Structure (offset 78, 20 bytes)**
+```
+[0]: Width  (640 ou 800)
+[1]: Height (480 ou 600)
+[2]: ?? (16)
+[3]: ?? (1)
+[4]: ?? (variable: 10 danem, 19 belge)
+```
+
+#### Pseudo-Code vs Réalité
+
+| Aspect | Pseudo-Code | Réalité | Match |
+|--------|-------------|---------|-------|
+| Magic | "VnFile" | "VNFILE" | ❌ Casse |
+| Scene Count | "Hotspot count" | **Scene count** | ⚠️ Nom trompeur |
+| EXIT_ID | Offset +61 (struct) | config+22 (binaire) | ✅ Logique OK |
+| INDEX_ID | Offset +65 (struct) | config+24 (binaire) | ✅ Logique OK |
+| Config | 5 int32 | 5 int32 (20 bytes) | ✅ |
+| Signatures | 0xFFFFFFxx | 0xFFFFFFF4 | ✅ |
+
+**Note**: Les offsets du pseudo-code sont des **offsets mémoire C++** dans la structure Scene, pas des offsets dans le fichier binaire. La correspondance logique est correcte.
+
+#### Script de Validation
+
+`validate_vnd_structure.py` - Validation automatique:
+```bash
+python3 validate_vnd_structure.py
+# Valide danem.vnd et belge.vnd
+# Affiche: Config, Scene Count, EXIT_ID, INDEX_ID
+# Compare avec JSON du parser
+```
+
+#### Améliorations Parser Possibles
+
+1. **Lire EXIT_ID/INDEX_ID** depuis header (navigation)
+2. **Valider Scene Count** (détection erreurs parsing)
+3. **Extraire Config** (width/height, validation dimensions)
+4. **Validation signatures** avant acceptation scène
+
+#### Problèmes Identifiés
+
+- **belge.vnd**: 28 scènes (binaire) vs 27 (parser) → 1 scène manquante
+  - Probablement scène "Empty" ou "Toolbar" filtrée
+  - À investiguer
+
 ---
 

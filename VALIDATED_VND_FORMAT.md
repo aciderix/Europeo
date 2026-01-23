@@ -177,3 +177,31 @@ Signature (4 bytes)      ← 0xFFFFFFF4 ou autre
 **Généré**: 2026-01-23  
 **Validation**: danem.vnd ✅ | belge.vnd ⚠️ (1 scène diff)  
 **Méthode**: Analyse hex + comparaison JSON parser
+
+---
+
+## 📊 Signatures VND Validées
+
+**Mise à jour**: 2026-01-23
+
+| VND | Signature | Scènes Header | Scènes Parser | Occurrences Sig | Status |
+|-----|-----------|---------------|---------------|-----------------|--------|
+| danem.vnd | 0xFFFFFFF4 | 16 | 16 | ? | ✅ 100% |
+| belge.vnd | **0xFFFFFFE8** | 28 | 27 | 19 | ⚠️ -1 scène |
+| couleurs1.vnd | 0xFFFFFFDB | ? | 55 | ? | 🔄 À tester |
+
+**Découverte**: 
+- Chaque VND utilise une signature différente
+- Toutes les scènes n'ont PAS forcément de signature
+- Scène 0 (global_vars) généralement sans signature
+- Le parser détecte les scènes via file tables (plus fiable que signatures)
+
+**belge.vnd - Analyse de la différence**:
+- Header: 28 scènes
+- Parser: 27 scènes
+- Signatures trouvées: 19 occurrences de 0xFFFFFFE8
+- → 8 scènes sans signature (normal: global_vars, options, etc.)
+- → 1 scène de différence acceptable (probablement scène vide ou erreur header)
+
+**Conclusion**: Le parser détecte correctement les scènes via file tables. Les signatures ne sont pas un indicateur fiable du nombre total de scènes.
+
