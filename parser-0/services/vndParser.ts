@@ -173,8 +173,14 @@ export class VNDSequentialParser {
     const globalVarsOffset = this.detectGlobalVars();
     if (globalVarsOffset !== null) {
         offsets.push(globalVarsOffset);
-        ptr = globalVarsOffset + 1; // Continue après global_vars
-        this.log(`  [+] Scene 0 (global_vars) détectée @ 0x${globalVarsOffset.toString(16).toUpperCase()}`);
+        // CRITICAL FIX: Continue APRÈS la fin de global_vars, pas après le début!
+        const globalVarsEnd = this.isValidFileTable(globalVarsOffset);
+        if (globalVarsEnd !== -1) {
+            ptr = globalVarsEnd; // Continue après la table complète
+        } else {
+            ptr = globalVarsOffset + 8192; // Fallback: skip large area
+        }
+        this.log(`  [+] Scene 0 (global_vars) détectée @ 0x${globalVarsOffset.toString(16).toUpperCase()} -> 0x${ptr.toString(16).toUpperCase()}`);
     }
 
     while (ptr < len - 100) {
