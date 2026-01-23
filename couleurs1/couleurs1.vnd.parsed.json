@@ -1,4 +1,22 @@
 {
+  "header": {
+    "magic": "VNFILE",
+    "version": "2.13",
+    "project": "",
+    "author": "",
+    "serial": "",
+    "width": 640,
+    "height": 480,
+    "config_extra": [
+      16,
+      1,
+      1
+    ],
+    "scene_count": 31,
+    "exit_id": 0,
+    "index_id": 0,
+    "header_size": 104
+  },
   "scenes": [
     {
       "id": 0,
@@ -1710,6 +1728,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1154"
       ],
@@ -2269,6 +2289,8 @@
           }
         }
       ],
+      "objCount": 6,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -2540,6 +2562,8 @@
           }
         }
       ],
+      "objCount": 6,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game",
@@ -2857,6 +2881,8 @@
           }
         }
       ],
+      "objCount": 5,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -4141,6 +4167,8 @@
           }
         }
       ],
+      "objCount": 26,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -4829,6 +4857,8 @@
           }
         }
       ],
+      "objCount": 11,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5402,6 +5432,8 @@
           }
         }
       ],
+      "objCount": 8,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5985,7 +6017,11 @@
           "isRecovered": true
         }
       ],
-      "warnings": [],
+      "objCount": 8,
+      "objCountValid": false,
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 8, Parsé: 7"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
@@ -6360,7 +6396,11 @@
           "isRecovered": true
         }
       ],
-      "warnings": [],
+      "objCount": 5,
+      "objCountValid": false,
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 7"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
@@ -6467,6 +6507,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -6659,7 +6701,11 @@
           }
         }
       ],
-      "warnings": [],
+      "objCount": 2,
+      "objCountValid": false,
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 2, Parsé: 3"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
@@ -6761,6 +6807,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -7810,6 +7858,8 @@
           }
         }
       ],
+      "objCount": 17,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game",
@@ -8037,6 +8087,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8098,6 +8150,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8204,6 +8258,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8317,6 +8373,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8338,6 +8396,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8360,6 +8420,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8468,6 +8530,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8534,6 +8598,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8600,6 +8666,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8687,6 +8755,8 @@
           }
         }
       ],
+      "objCount": 2,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8769,6 +8839,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8790,6 +8862,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8812,6 +8886,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8834,6 +8910,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9169,6 +9247,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -9190,6 +9270,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9212,6 +9294,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9234,6 +9318,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9569,6 +9655,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -9903,6 +9991,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -9998,6 +10088,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0xA667"
       ],
@@ -10379,6 +10471,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -10479,6 +10573,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -11645,8 +11741,11 @@
           "isRecovered": true
         }
       ],
+      "objCount": 3,
+      "objCountValid": false,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xD5A0"
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xD5A0",
+        "⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4"
       ],
       "parseMethod": "heuristic_recovered",
       "sceneType": "unknown"
@@ -12076,6 +12175,8 @@
           }
         }
       ],
+      "objCount": 6,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -12314,6 +12415,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -13901,7 +14004,11 @@
           "isRecovered": true
         }
       ],
-      "warnings": [],
+      "objCount": 17,
+      "objCountValid": false,
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 17, Parsé: 18"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
@@ -13984,8 +14091,11 @@
           "isRecovered": true
         }
       ],
+      "objCount": 0,
+      "objCountValid": false,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11406"
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11406",
+        "⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1"
       ],
       "parseMethod": "heuristic_recovered",
       "sceneType": "game",
@@ -14064,6 +14174,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11540"
       ],
@@ -14261,6 +14373,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -14345,6 +14459,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -14589,6 +14705,8 @@
           }
         }
       ],
+      "objCount": 5,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11B94"
       ],
@@ -14686,6 +14804,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11F27"
       ],
@@ -14764,6 +14884,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -14782,19 +14904,25 @@
       ],
       "initScript": {
         "offset": 74105,
-        "length": 299,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 74105,
+        "flag": 4294967259,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
-          "index": -1,
-          "offset": 74137,
+          "index": 0,
+          "offset": 74133,
           "commands": [
             {
               "id": 0,
@@ -14807,24 +14935,93 @@
               "param": "50 350 125 365 0 SORTIE"
             },
             {
+              "id": 1,
+              "subtype": 6,
+              "param": "7"
+            },
+            {
               "id": 3,
               "subtype": 21,
-              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54h"
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
             }
           ],
           "geometry": {
-            "cursorId": 0,
+            "cursorId": 104,
             "pointCount": 0,
             "points": [],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
+        },
+        {
+          "index": 1,
+          "offset": 74298,
+          "commands": [],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 74314,
+          "commands": [],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 10,
+            "points": [
+              {
+                "x": 2,
+                "y": 304
+              },
+              {
+                "x": 220,
+                "y": 308
+              },
+              {
+                "x": 189,
+                "y": 390
+              },
+              {
+                "x": 206,
+                "y": 398
+              },
+              {
+                "x": 429,
+                "y": 398
+              },
+              {
+                "x": 440,
+                "y": 390
+              },
+              {
+                "x": 406,
+                "y": 313
+              },
+              {
+                "x": 637,
+                "y": 309
+              },
+              {
+                "x": 638,
+                "y": 398
+              },
+              {
+                "x": 3,
+                "y": 399
+              }
+            ],
+            "extraFlag": 0
+          }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x122A4"
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
       ],
-      "parseMethod": "heuristic_recovered",
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -14857,6 +15054,8 @@
         "foundSignature": true
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15076,6 +15275,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15150,6 +15351,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15226,6 +15429,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -15300,6 +15505,11 @@
     }
   ],
   "logs": [
+    "✓ P2: 1 signature(s) détectée(s): 0xFFFFFFDB",
+    "✓ Header VND parsé:  v2.13",
+    "  Résolution: 640x480",
+    "  Scene Count (header): 31",
+    "  EXIT_ID: 0, INDEX_ID: 0",
     "PHASE 1: Scanning pour les tables de fichiers...",
     "  [+] Scène détectée @ 0x6A (Table -> 0x115C)",
     "  [+] Scène détectée @ 0x116C (Table -> 0x11BE)",
@@ -15366,11 +15576,14 @@
     "  [DEEP SCAN] 4 structures géométriques orphelines.",
     "  [MERGE] Commande @0x5709 associée à Géométrie @0x5842",
     "  [MERGE] Commande @0x59d6 associée à Géométrie @0x5a3a",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 8, Parsé: 7",
     "\n--- Analyse Scène #7 (0x51FE -> 0x5ACE) ---",
     "  [INFO] 1 tooltip(s) trouvé(s)",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 7",
     "\n--- Analyse Scène #8 (0x5ACE -> 0x61AA) ---",
     "\n--- Analyse Scène #9 (0x61AA -> 0x6331) ---",
     "  [INFO] 1 tooltip(s) trouvé(s)",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 2, Parsé: 3",
     "\n--- Analyse Scène #10 (0x6331 -> 0x65F8) ---",
     "\n--- Analyse Scène #11 (0x65F8 -> 0x6750) ---",
     "  [RECOVERY] Structure invalide sautée (+32 bytes) à 0x676b",
@@ -15404,10 +15617,13 @@
     "  [PEEK] Commande reconstruite: \"400d\" @ 0xdc04",
     "  [DEEP SCAN] 1 structures géométriques orphelines.",
     "  [MERGE] Commande @0xda53 associée à Géométrie @0xdc04",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
     "\n--- Analyse Scène #37 (0xC4AD -> 0xDC38) ---",
     "\n--- Analyse Scène #38 (0xDC38 -> 0xE577) ---",
     "\n--- Analyse Scène #39 (0xE577 -> 0xE918) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 17, Parsé: 18",
     "\n--- Analyse Scène #40 (0xE918 -> 0x1136A) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1",
     "\n--- Analyse Scène #41 (0x1136A -> 0x11429) ---",
     "\n--- Analyse Scène #42 (0x11429 -> 0x114C7) ---",
     "\n--- Analyse Scène #43 (0x114C7 -> 0x11563) ---",
@@ -15422,7 +15638,26 @@
     "\n--- Analyse Scène #52 (0x12611 -> 0x12714) ---",
     "\n--- Analyse Scène #53 (0x12714 -> 0x1283C) ---",
     "  [FIX] Saut corruption après 'perdu.htm' (+58 bytes)",
-    "\n--- Analyse Scène #54 (0x1283C -> 0x1298E) ---"
+    "\n--- Analyse Scène #54 (0x1283C -> 0x1298E) ---",
+    "\n============================================================",
+    "P4: STATISTIQUES SCENE COUNT",
+    "============================================================",
+    "Header Scene Count: 31",
+    "Parser Scene Count: 55",
+    "Différence: +24",
+    "",
+    "Breakdown par type:",
+    "  credits        :   1 (  1.8%)",
+    "  empty          :   8 ( 14.5%)",
+    "  game           :  42 ( 76.4%)",
+    "  game_over      :   1 (  1.8%)",
+    "  global_vars    :   1 (  1.8%)",
+    "  options        :   1 (  1.8%)",
+    "  unknown        :   1 (  1.8%)",
+    "",
+    "✓ Parser trouve +24 scènes supplémentaires",
+    "  Cause probable: Scènes système/variations non comptées dans header",
+    "============================================================"
   ],
   "totalBytes": 76174
 }

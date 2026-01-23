@@ -1,4 +1,22 @@
 {
+  "header": {
+    "magic": "VNFILE",
+    "version": "2.13",
+    "project": "",
+    "author": "",
+    "serial": "",
+    "width": 640,
+    "height": 480,
+    "config_extra": [
+      16,
+      1,
+      19
+    ],
+    "scene_count": 28,
+    "exit_id": 0,
+    "index_id": 0,
+    "header_size": 104
+  },
   "scenes": [
     {
       "id": 0,
@@ -1704,6 +1722,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1142"
       ],
@@ -1730,14 +1750,20 @@
       ],
       "initScript": {
         "offset": 4522,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 4522,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -2407,10 +2433,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11C2"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 4,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -2433,14 +2459,20 @@
       ],
       "initScript": {
         "offset": 9400,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 9400,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -3239,10 +3271,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x24D0"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 6,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -3265,14 +3297,20 @@
       ],
       "initScript": {
         "offset": 15119,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 15119,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -3461,10 +3499,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x3B27"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 5,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -3487,518 +3525,31 @@
       ],
       "initScript": {
         "offset": 15960,
-        "length": 4996,
-        "commands": [
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "cheval  = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "riz = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "ruban = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "sabot1 = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "sabot2 = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "scotch = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "taillepierre = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "ap_photo = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "houblon = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "chewing = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "cleverte = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "partition = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "laine = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "tondeuse = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "tournevis = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "cire = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "chianti = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "rouedent = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "pierreor = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "papiercado = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "hotte = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "levure = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "bouteille = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "parfum = 2 then inc_var non 1",
-            "offset": 17038,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "rouge = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "bisous = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "api  = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "pince = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "tulipejaune = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "tulipeorange = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "tuliperouge = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "tulipeverte  = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "tulipeviolet = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "farine = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "saliere = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "bougie = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "seche = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "bout_eau = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "dorade = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "moule = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "ail = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "poivrouge = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "poivjaune = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "oignon  = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "olive = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "bouillon = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "violon = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "skate = 2 then inc_var non 1",
-            "offset": 18047,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "champagne = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fromage = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "bonnet = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "huile = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "orge = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "burette = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "allumette = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "chouetteor = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "chouette = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "sirop = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fiolegrece = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fiolegrece2 = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fioleecosse = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fioleirlande = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fioleespagne = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fiolesuede = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fiolefinlande = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fioleautriche = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fiolepaysbas = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fioleespagne2 = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fioleitalie = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "fioleangleterre = 2 then inc_var non 1",
-            "offset": 19060,
-            "isRecovered": true
-          },
-          {
-            "id": 1,
-            "subtype": 21,
-            "param": "numpaysscore = 0 then inc_var non 2",
-            "offset": 19060,
-            "isRecovered": true
-          }
-        ]
+        "length": 0,
+        "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 15960,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
-          "index": -1,
-          "offset": 16005,
+          "index": 0,
+          "offset": 15988,
           "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "3"
+            },
             {
               "id": 0,
               "subtype": 10,
@@ -4007,7 +3558,38 @@
             {
               "id": 3,
               "subtype": 21,
-              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54h"
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 104,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 0,
+                "y": 347
+              },
+              {
+                "x": 637,
+                "y": 397
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 1,
+          "offset": 16133,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 36,
+              "param": ""
+            },
+            {
+              "id": 1,
+              "subtype": 22,
+              "param": "non 0"
             },
             {
               "id": 1,
@@ -4113,20 +3695,362 @@
               "id": 1,
               "subtype": 21,
               "param": "ressort  = 2 then inc_var non 1"
-            }
-          ],
-          "geometry": {
-            "cursorId": 0,
-            "pointCount": 0,
-            "points": [],
-            "extraFlag": 0
-          },
-          "isRecovered": true
-        },
-        {
-          "index": -1,
-          "offset": 20090,
-          "commands": [
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "cheval  = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "riz = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "ruban = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "sabot1 = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "sabot2 = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "scotch = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "taillepierre = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "ap_photo = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "houblon = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "chewing = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "cleverte = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "partition = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "laine = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "tondeuse = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "tournevis = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "cire = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "chianti = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "rouedent = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "pierreor = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "papiercado = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "hotte = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "levure = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bouteille = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "parfum = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "rouge = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bisous = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "api  = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "pince = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "tulipejaune = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "tulipeorange = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "tuliperouge = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "tulipeverte  = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "tulipeviolet = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "farine = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "saliere = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bougie = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "seche = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bout_eau = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "dorade = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "moule = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "ail = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "poivrouge = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "poivjaune = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "oignon  = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "olive = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bouillon = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "violon = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "skate = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "champagne = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fromage = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonnet = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "huile = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "orge = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "burette = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "allumette = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "chouetteor = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "chouette = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "sirop = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fiolegrece = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fiolegrece2 = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fioleecosse = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fioleirlande = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fioleespagne = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fiolesuede = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fiolefinlande = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fioleautriche = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fiolepaysbas = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fioleespagne2 = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fioleitalie = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "fioleangleterre = 2 then inc_var non 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "numpaysscore = 0 then inc_var non 2"
+            },
             {
               "id": 1,
               "subtype": 21,
@@ -4156,20 +4080,7 @@
               "id": 1,
               "subtype": 11,
               "param": "a_beg.wav 6"
-            }
-          ],
-          "geometry": {
-            "cursorId": 0,
-            "pointCount": 0,
-            "points": [],
-            "extraFlag": 0
-          },
-          "isRecovered": true
-        },
-        {
-          "index": -1,
-          "offset": 20369,
-          "commands": [
+            },
             {
               "id": 0,
               "subtype": 39,
@@ -4177,21 +4088,85 @@
             },
             {
               "id": 0,
-              "subtype": 0,
-              "param": "260 250 125 365 0 Ta prof de géographiel"
+              "subtype": 38,
+              "param": "260 250 125 365 0 Ta prof de géographie"
             }
           ],
           "geometry": {
-            "cursorId": 0,
-            "pointCount": 0,
-            "points": [],
+            "cursorId": 108,
+            "pointCount": 16,
+            "points": [
+              {
+                "x": 201,
+                "y": 313
+              },
+              {
+                "x": 201,
+                "y": 277
+              },
+              {
+                "x": 176,
+                "y": 274
+              },
+              {
+                "x": 185,
+                "y": 218
+              },
+              {
+                "x": 185,
+                "y": 175
+              },
+              {
+                "x": 209,
+                "y": 94
+              },
+              {
+                "x": 195,
+                "y": 49
+              },
+              {
+                "x": 212,
+                "y": 16
+              },
+              {
+                "x": 235,
+                "y": 17
+              },
+              {
+                "x": 261,
+                "y": 55
+              },
+              {
+                "x": 260,
+                "y": 90
+              },
+              {
+                "x": 252,
+                "y": 126
+              },
+              {
+                "x": 264,
+                "y": 153
+              },
+              {
+                "x": 273,
+                "y": 174
+              },
+              {
+                "x": 255,
+                "y": 271
+              },
+              {
+                "x": 253,
+                "y": 314
+              }
+            ],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
         },
         {
-          "index": -1,
-          "offset": 20602,
+          "index": 2,
+          "offset": 20598,
           "commands": [
             {
               "id": 0,
@@ -4219,24 +4194,34 @@
               "param": "bonus9 = 0 then set_var bonus9 1"
             },
             {
-              "id": 3,
-              "subtype": 6,
-              "param": "bonus9 = 1 then scene 27k"
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then scene 27"
             }
           ],
           "geometry": {
-            "cursorId": 0,
-            "pointCount": 0,
-            "points": [],
+            "cursorId": 107,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 139,
+                "y": 135
+              }
+            ],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x51DC"
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
       ],
-      "parseMethod": "heuristic_recovered",
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -4253,14 +4238,20 @@
       ],
       "initScript": {
         "offset": 21059,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 21059,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -4852,10 +4843,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x525B"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 3,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -4878,14 +4869,20 @@
       ],
       "initScript": {
         "offset": 25711,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 25711,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -5574,10 +5571,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x6487"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 4,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -5594,14 +5591,20 @@
       ],
       "initScript": {
         "offset": 30976,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 30976,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -6312,10 +6315,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x7918"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 5,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -6415,6 +6418,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x8D06"
       ],
@@ -6435,14 +6440,20 @@
       ],
       "initScript": {
         "offset": 36457,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 36457,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -6591,10 +6602,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x8E81"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 5,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -6685,6 +6696,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x909A"
       ],
@@ -6701,1069 +6714,1050 @@
           "filename": "jeu_mo.bmp",
           "param": 16,
           "offset": 37285
-        },
-        {
-          "slot": 2,
-          "filename": "affichem 0",
-          "param": 2,
-          "offset": 37388
-        },
-        {
-          "slot": 3,
-          "filename": "reponsem 0",
-          "param": 2,
-          "offset": 37410
         }
       ],
       "initScript": {
-        "offset": 37428,
-        "length": 8127,
-        "commands": [
-          {
-            "id": 27,
-            "subtype": 0,
-            "param": "cou rol\\mo_cou.bmp 0 16 157",
-            "offset": 37428
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
-            "offset": 37467
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [563,310,625,399,0,20,0]",
-            "offset": 37530
-          },
-          {
-            "id": 10,
-            "subtype": 0,
-            "param": "rol\\mo_dan.bmp 0 318 12",
-            "offset": 37562
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "affichem 1",
-            "offset": 37597
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 0 then inc_var reponsem 1",
-            "offset": 37619
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp gagne rol\\gagne.bmp 0 7 251",
-            "offset": 37667
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then playwav cling.wav 1",
-            "offset": 37731
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "500",
-            "offset": 37780
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "gagne",
-            "offset": 37795
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 1 then addbmp perdu rol\\perdu.bmp 0 7 251",
-            "offset": 37812
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 1 then playwav cartoon.wav 1",
-            "offset": 37877
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 37929
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "perdu",
-            "offset": 37945
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then delbmp cou",
-            "offset": 37962
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156",
-            "offset": 38002
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148",
-            "offset": 38066
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153",
-            "offset": 38130
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156",
-            "offset": 38194
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159",
-            "offset": 38258
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145",
-            "offset": 38323
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160",
-            "offset": 38388
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13",
-            "offset": 38452
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [326,23,480,51,0,21,0]",
-            "offset": 38525
-          },
-          {
-            "id": 10,
-            "subtype": 0,
-            "param": "rol\\mo_ita.bmp 0 317 56",
-            "offset": 38557
-          },
-          {
-            "id": 27,
-            "subtype": 0,
-            "param": "monnaie rol\\monnaie.bmp 0 0 0",
-            "offset": 38592
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "affichem 1",
-            "offset": 38633
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 5 then inc_var reponsem 1",
-            "offset": 38655
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp gagne rol\\gagne.bmp 0 7 251",
-            "offset": 38703
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then playwav cling.wav 1",
-            "offset": 38767
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 38816
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "gagne",
-            "offset": 38832
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 6 then addbmp perdu rol\\perdu.bmp 0 7 251",
-            "offset": 38849
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 6 then playwav cartoon.wav 1",
-            "offset": 38914
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 38966
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "perdu",
-            "offset": 38982
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then delbmp cou",
-            "offset": 38999
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156",
-            "offset": 39039
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148",
-            "offset": 39103
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153",
-            "offset": 39167
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156",
-            "offset": 39231
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159",
-            "offset": 39295
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145",
-            "offset": 39360
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160",
-            "offset": 39425
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13",
-            "offset": 39489
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [322,59,412,95,0,20,0]",
-            "offset": 39562
-          },
-          {
-            "id": 10,
-            "subtype": 0,
-            "param": "rol\\mo_esp.bmp 0 325 113",
-            "offset": 39594
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "affichem 1",
-            "offset": 39630
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 4 then inc_var reponsem 1",
-            "offset": 39652
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp gagne rol\\gagne.bmp 0 7 251",
-            "offset": 39700
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then playwav cling.wav 1",
-            "offset": 39764
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "500",
-            "offset": 39813
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "gagne",
-            "offset": 39828
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 5 then addbmp perdu rol\\perdu.bmp 0 7 251",
-            "offset": 39845
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 5 then playwav cartoon.wav 1",
-            "offset": 39910
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 39962
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "perdu",
-            "offset": 39978
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then delbmp cou",
-            "offset": 39995
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156",
-            "offset": 40035
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148",
-            "offset": 40099
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153",
-            "offset": 40163
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156",
-            "offset": 40227
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159",
-            "offset": 40291
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145",
-            "offset": 40356
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160",
-            "offset": 40421
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13",
-            "offset": 40485
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [326,111,447,139,0,20,0]",
-            "offset": 40558
-          },
-          {
-            "id": 10,
-            "subtype": 0,
-            "param": "rol\\mo_gb.bmp 0 327 149",
-            "offset": 40590
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "affichem 1",
-            "offset": 40625
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 7 then inc_var reponsem 1",
-            "offset": 40647
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 8 then addbmp gagne rol\\gagne.bmp 0 7 251",
-            "offset": 40695
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 8 then playwav cling.wav 1",
-            "offset": 40759
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "500",
-            "offset": 40808
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "gagne",
-            "offset": 40823
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 8 then addbmp perdu rol\\perdu.bmp 0 7 251",
-            "offset": 40840
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 8 then playwav cartoon.wav 1",
-            "offset": 40905
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 40957
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "perdu",
-            "offset": 40973
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then delbmp cou",
-            "offset": 40990
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156",
-            "offset": 41030
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148",
-            "offset": 41094
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153",
-            "offset": 41158
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156",
-            "offset": 41222
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159",
-            "offset": 41286
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145",
-            "offset": 41351
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160",
-            "offset": 41416
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13",
-            "offset": 41480
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [325,156,567,189,0,20,0]",
-            "offset": 41553
-          },
-          {
-            "id": 10,
-            "subtype": 0,
-            "param": "rol\\mo_por.bmp 0 329 196",
-            "offset": 41585
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "affichem 1",
-            "offset": 41621
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 3 then inc_var reponsem 1",
-            "offset": 41643
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp gagne rol\\gagne.bmp 0 7 251",
-            "offset": 41691
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then playwav cling.wav 1",
-            "offset": 41755
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "500",
-            "offset": 41804
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "gagne",
-            "offset": 41819
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 4 then addbmp perdu rol\\perdu.bmp 0 7 251",
-            "offset": 41836
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 4 then playwav cartoon.wav 1",
-            "offset": 41901
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 41953
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "perdu",
-            "offset": 41969
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then delbmp cou",
-            "offset": 41986
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156",
-            "offset": 42026
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148",
-            "offset": 42090
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153",
-            "offset": 42154
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156",
-            "offset": 42218
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159",
-            "offset": 42282
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145",
-            "offset": 42347
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160",
-            "offset": 42412
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13",
-            "offset": 42476
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [327,202,459,228,0,20,0]",
-            "offset": 42549
-          },
-          {
-            "id": 10,
-            "subtype": 0,
-            "param": "rol\\mo_bel.bmp 0 332 240",
-            "offset": 42581
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "affichem 1",
-            "offset": 42617
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 1 then inc_var reponsem 1",
-            "offset": 42639
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp gagne rol\\gagne.bmp 0 7 251",
-            "offset": 42687
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then playwav cling.wav 1",
-            "offset": 42751
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "500",
-            "offset": 42800
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "gagne",
-            "offset": 42815
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 2 then addbmp perdu rol\\perdu.bmp 0 7 251",
-            "offset": 42832
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 2 then playwav cartoon.wav 1",
-            "offset": 42897
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 42949
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "perdu",
-            "offset": 42965
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then delbmp cou",
-            "offset": 42982
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156",
-            "offset": 43022
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148",
-            "offset": 43086
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153",
-            "offset": 43150
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156",
-            "offset": 43214
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159",
-            "offset": 43278
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145",
-            "offset": 43343
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160",
-            "offset": 43408
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13",
-            "offset": 43472
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [325,246,453,274,0,20,0]",
-            "offset": 43545
-          },
-          {
-            "id": 10,
-            "subtype": 0,
-            "param": "rol\\mo_all.bmp 0 330 283",
-            "offset": 43577
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "affichem 1",
-            "offset": 43613
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 6 then inc_var reponsem 1",
-            "offset": 43635
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp gagne rol\\gagne.bmp 0 7 251",
-            "offset": 43683
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then playwav cling.wav 1",
-            "offset": 43747
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "500",
-            "offset": 43796
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "gagne",
-            "offset": 43811
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 7 then addbmp perdu rol\\perdu.bmp 0 7 251",
-            "offset": 43828
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 7 then playwav cartoon.wav 1",
-            "offset": 43893
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 43945
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "perdu",
-            "offset": 43961
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then delbmp cou",
-            "offset": 43978
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156",
-            "offset": 44018
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148",
-            "offset": 44082
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153",
-            "offset": 44146
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156",
-            "offset": 44210
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159",
-            "offset": 44274
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145",
-            "offset": 44339
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160",
-            "offset": 44404
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13",
-            "offset": 44468
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [328,287,487,326,0,20,0]",
-            "offset": 44541
-          },
-          {
-            "id": 10,
-            "subtype": 0,
-            "param": "rol\\mo_gre.bmp 0 322 336",
-            "offset": 44573
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "affichem 1",
-            "offset": 44609
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 2 then inc_var reponsem 1",
-            "offset": 44631
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp gagne rol\\gagne.bmp 0 7 251",
-            "offset": 44679
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then playwav cling.wav 1",
-            "offset": 44743
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "500",
-            "offset": 44792
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "gagne",
-            "offset": 44807
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 3 then addbmp perdu rol\\perdu.bmp 0 7 251",
-            "offset": 44824
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem != 3 then playwav cartoon.wav 1",
-            "offset": 44889
-          },
-          {
-            "id": 16,
-            "subtype": 0,
-            "param": "1500",
-            "offset": 44941
-          },
-          {
-            "id": 28,
-            "subtype": 0,
-            "param": "perdu",
-            "offset": 44957
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then delbmp cou",
-            "offset": 44974
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156",
-            "offset": 45014
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148",
-            "offset": 45078
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153",
-            "offset": 45142
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156",
-            "offset": 45206
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159",
-            "offset": 45270
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145",
-            "offset": 45335
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160",
-            "offset": 45400
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13",
-            "offset": 45464
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [326,337,419,364,0,0,0]",
-            "offset": 45537
-          }
-        ]
+        "offset": 37335,
+        "length": 0,
+        "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 37335,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
-      "hotspots": [],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xB1F3"
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 37363,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "9"
+            },
+            {
+              "id": 2,
+              "subtype": 22,
+              "param": "affichem 0"
+            },
+            {
+              "id": 2,
+              "subtype": 22,
+              "param": "reponsem 0"
+            },
+            {
+              "id": 2,
+              "subtype": 27,
+              "param": "cou rol\\mo_cou.bmp 0 16 157"
+            },
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 563,
+                "y": 310
+              },
+              {
+                "x": 625,
+                "y": 399
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 1,
+          "offset": 37554,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 10,
+              "param": "rol\\mo_dan.bmp 0 318 12"
+            },
+            {
+              "id": 1,
+              "subtype": 23,
+              "param": "affichem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 0 then inc_var reponsem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp gagne rol\\gagne.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "gagne"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 1 then addbmp perdu rol\\perdu.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "perdu"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then delbmp cou"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 326,
+                "y": 23
+              },
+              {
+                "x": 480,
+                "y": 51
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 38549,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 10,
+              "param": "rol\\mo_ita.bmp 0 317 56"
+            },
+            {
+              "id": 2,
+              "subtype": 27,
+              "param": "monnaie rol\\monnaie.bmp 0 0 0"
+            },
+            {
+              "id": 1,
+              "subtype": 23,
+              "param": "affichem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 5 then inc_var reponsem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp gagne rol\\gagne.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "gagne"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 6 then addbmp perdu rol\\perdu.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 6 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "perdu"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then delbmp cou"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 322,
+                "y": 59
+              },
+              {
+                "x": 412,
+                "y": 95
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 3,
+          "offset": 39586,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 10,
+              "param": "rol\\mo_esp.bmp 0 325 113"
+            },
+            {
+              "id": 1,
+              "subtype": 23,
+              "param": "affichem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 4 then inc_var reponsem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp gagne rol\\gagne.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "gagne"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 5 then addbmp perdu rol\\perdu.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 5 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "perdu"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then delbmp cou"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 326,
+                "y": 111
+              },
+              {
+                "x": 447,
+                "y": 139
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 4,
+          "offset": 40582,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 10,
+              "param": "rol\\mo_gb.bmp 0 327 149"
+            },
+            {
+              "id": 1,
+              "subtype": 23,
+              "param": "affichem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 7 then inc_var reponsem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 8 then addbmp gagne rol\\gagne.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 8 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "gagne"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 8 then addbmp perdu rol\\perdu.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 8 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "perdu"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then delbmp cou"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 325,
+                "y": 156
+              },
+              {
+                "x": 567,
+                "y": 189
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 5,
+          "offset": 41577,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 10,
+              "param": "rol\\mo_por.bmp 0 329 196"
+            },
+            {
+              "id": 1,
+              "subtype": 23,
+              "param": "affichem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 3 then inc_var reponsem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp gagne rol\\gagne.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "gagne"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 4 then addbmp perdu rol\\perdu.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 4 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "perdu"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then delbmp cou"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 327,
+                "y": 202
+              },
+              {
+                "x": 459,
+                "y": 228
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 6,
+          "offset": 42573,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 10,
+              "param": "rol\\mo_bel.bmp 0 332 240"
+            },
+            {
+              "id": 1,
+              "subtype": 23,
+              "param": "affichem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 1 then inc_var reponsem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp gagne rol\\gagne.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "gagne"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 2 then addbmp perdu rol\\perdu.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 2 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "perdu"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then delbmp cou"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 325,
+                "y": 246
+              },
+              {
+                "x": 453,
+                "y": 274
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 7,
+          "offset": 43569,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 10,
+              "param": "rol\\mo_all.bmp 0 330 283"
+            },
+            {
+              "id": 1,
+              "subtype": 23,
+              "param": "affichem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 6 then inc_var reponsem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp gagne rol\\gagne.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "gagne"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 7 then addbmp perdu rol\\perdu.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 7 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "perdu"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then delbmp cou"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 328,
+                "y": 287
+              },
+              {
+                "x": 487,
+                "y": 326
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 8,
+          "offset": 44565,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 10,
+              "param": "rol\\mo_gre.bmp 0 322 336"
+            },
+            {
+              "id": 1,
+              "subtype": 23,
+              "param": "affichem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 2 then inc_var reponsem 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp gagne rol\\gagne.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "gagne"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 3 then addbmp perdu rol\\perdu.bmp 0 7 251"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem != 3 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 16,
+              "param": "1500"
+            },
+            {
+              "id": 1,
+              "subtype": 28,
+              "param": "perdu"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then delbmp cou"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 1 then addbmp fra rol\\mo_fra.bmp 0 14 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 2 then addbmp fra rol\\mo_dra.bmp 0 18 148"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 3 then addbmp fra rol\\mo_esc.bmp 0 14 153"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 4 then addbmp fra rol\\mo_pes.bmp 0 22 156"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 5 then addbmp fra rol\\mo_lire.bmp 0 21 159"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 6 then addbmp fra rol\\mo_mark.bmp 0 22 145"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "affichem = 7 then addbmp fra rol\\mo_lir.bmp 0 32 160"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "reponsem = 8 then scene 12 else if affichem = 8 then scene 13"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 326,
+                "y": 337
+              },
+              {
+                "x": 419,
+                "y": 364
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
       ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 9,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -7780,14 +7774,20 @@
       ],
       "initScript": {
         "offset": 45657,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 45657,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -8405,10 +8405,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xB271"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 4,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -8425,14 +8425,20 @@
       ],
       "initScript": {
         "offset": 50365,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 50365,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -8534,10 +8540,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xC4D5"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 3,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -8637,6 +8643,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0xC68C"
       ],
@@ -8657,14 +8665,20 @@
       ],
       "initScript": {
         "offset": 51191,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 51191,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -8725,10 +8739,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xC80F"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 2,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -8745,14 +8759,20 @@
       ],
       "initScript": {
         "offset": 51468,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 51468,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -8982,71 +9002,55 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xC924"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 4,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
       "id": 17,
       "offset": 52327,
-      "length": 230,
+      "length": 189,
       "files": [
         {
           "slot": 1,
           "filename": "math.bmp",
           "param": 16,
           "offset": 52351
-        },
-        {
-          "slot": 2,
-          "filename": "math 1",
-          "param": 3,
-          "offset": 52439
         }
       ],
       "initScript": {
-        "offset": 52453,
-        "length": 69,
-        "commands": [
-          {
-            "id": 9,
-            "subtype": 0,
-            "param": "math2.avi 1 123 190 230 245",
-            "offset": 52453
-          },
-          {
-            "id": 23,
-            "subtype": 0,
-            "param": "score 24",
-            "offset": 52492
-          },
-          {
-            "id": 6,
-            "subtype": 0,
-            "param": "7",
-            "offset": 52512
-          }
-        ]
+        "offset": 52399,
+        "length": 0,
+        "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 52399,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [],
+      "objCount": 1,
+      "objCountValid": false,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xCD2A"
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
+        "⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 0"
       ],
-      "parseMethod": "heuristic_recovered",
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
       "id": 18,
-      "offset": 52557,
-      "length": 1163,
+      "offset": 52516,
+      "length": 1204,
       "files": [
         {
           "slot": 1,
@@ -9057,7 +9061,7 @@
       ],
       "initScript": {
         "offset": 52629,
-        "length": 24,
+        "length": 0,
         "commands": [
           {
             "id": 3,
@@ -9181,10 +9185,16 @@
         ]
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 52629,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -9210,11 +9220,12 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xCDAD"
-      ],
-      "parseMethod": "heuristic_recovered",
-      "sceneType": "game"
+      "objCount": 1,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game",
+      "sceneName": "7"
     },
     {
       "id": 19,
@@ -9230,14 +9241,20 @@
       ],
       "initScript": {
         "offset": 53791,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 53791,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -9324,10 +9341,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xD237"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 3,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -9344,14 +9361,20 @@
       ],
       "initScript": {
         "offset": 54145,
-        "length": 24,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 54145,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -9391,10 +9414,10 @@
           }
         }
       ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xD399"
-      ],
-      "parseMethod": "heuristic_recovered",
+      "objCount": 1,
+      "objCountValid": true,
+      "warnings": [],
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -9411,49 +9434,29 @@
       ],
       "initScript": {
         "offset": 54429,
-        "length": 165,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 54429,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
-      "hotspots": [
-        {
-          "index": -1,
-          "offset": 54461,
-          "commands": [
-            {
-              "id": 2,
-              "subtype": 16,
-              "param": "1000"
-            },
-            {
-              "id": 3,
-              "subtype": 9,
-              "param": "geo3.avi 1 201 20 269 114"
-            },
-            {
-              "id": 3,
-              "subtype": 21,
-              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 4d"
-            }
-          ],
-          "geometry": {
-            "cursorId": 0,
-            "pointCount": 0,
-            "points": [],
-            "extraFlag": 0
-          },
-          "isRecovered": true
-        }
-      ],
+      "hotspots": [],
+      "objCount": 1,
+      "objCountValid": false,
       "warnings": [
-        "Aucune structure de Hotspot détectée. Mode fallback."
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
+        "⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 0"
       ],
-      "parseMethod": "heuristic",
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -9558,6 +9561,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0xD5CC"
       ],
@@ -10710,8 +10715,11 @@
           "isRecovered": true
         }
       ],
+      "objCount": 3,
+      "objCountValid": false,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xF8D6"
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xF8D6",
+        "⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4"
       ],
       "parseMethod": "heuristic_recovered",
       "sceneType": "unknown"
@@ -11490,8 +11498,11 @@
           "isRecovered": true
         }
       ],
+      "objCount": 0,
+      "objCountValid": false,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11AC6"
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11AC6",
+        "⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 20"
       ],
       "parseMethod": "heuristic_recovered",
       "sceneType": "game"
@@ -11516,14 +11527,20 @@
       ],
       "initScript": {
         "offset": 72536,
-        "length": 48,
+        "length": 24,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 72560,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -11898,14 +11915,21 @@
           "isRecovered": true
         }
       ],
+      "objCount": 3,
+      "objCountValid": false,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11B88"
+        "⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4"
       ],
-      "parseMethod": "heuristic_recovered",
+      "parseMethod": "signature",
       "sceneType": "game"
     }
   ],
   "logs": [
+    "✓ P2: 1 signature(s) détectée(s): 0xFFFFFFE8",
+    "✓ Header VND parsé:  v2.13",
+    "  Résolution: 640x480",
+    "  Scene Count (header): 28",
+    "  EXIT_ID: 0, INDEX_ID: 0",
     "PHASE 1: Scanning pour les tables de fichiers...",
     "  [+] Scène détectée @ 0x6A (Table -> 0x1152)",
     "  [+] Scène détectée @ 0x115A (Table -> 0x11AA)",
@@ -11925,7 +11949,7 @@
     "  [+] Scène détectée @ 0xC7AF (Table -> 0xC7F7)",
     "  [+] Scène détectée @ 0xC8C5 (Table -> 0xC90C)",
     "  [+] Scène détectée @ 0xCC67 (Table -> 0xCCAF)",
-    "  [+] Scène détectée @ 0xCD4D (Table -> 0xCD95)",
+    "  [+] Scène détectée @ 0xCD24 (Table -> 0xCD95)",
     "  [+] Scène détectée @ 0xD1D8 (Table -> 0xD21F)",
     "  [+] Scène détectée @ 0xD339 (Table -> 0xD381)",
     "  [+] Scène détectée @ 0xD456 (Table -> 0xD49D)",
@@ -11948,19 +11972,19 @@
     "\n--- Analyse Scène #8 (0x8C7E -> 0x8E21) ---",
     "\n--- Analyse Scène #9 (0x8E21 -> 0x9011) ---",
     "\n--- Analyse Scène #10 (0x9011 -> 0x918D) ---",
-    "  [RECOVERY] Structure invalide sautée (+53 bytes) à 0x91d7",
-    "  [RECOVERY] Structure invalide sautée (+4 bytes) à 0x921e",
     "\n--- Analyse Scène #11 (0x918D -> 0xB211) ---",
     "\n--- Analyse Scène #12 (0xB211 -> 0xC475) ---",
     "\n--- Analyse Scène #13 (0xC475 -> 0xC604) ---",
     "\n--- Analyse Scène #14 (0xC604 -> 0xC7AF) ---",
     "\n--- Analyse Scène #15 (0xC7AF -> 0xC8C5) ---",
     "\n--- Analyse Scène #16 (0xC8C5 -> 0xCC67) ---",
-    "  [RECOVERY] Structure invalide sautée (+40 bytes) à 0xccaf",
-    "\n--- Analyse Scène #17 (0xCC67 -> 0xCD4D) ---",
-    "\n--- Analyse Scène #18 (0xCD4D -> 0xD1D8) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 0",
+    "\n--- Analyse Scène #17 (0xCC67 -> 0xCD24) ---",
+    "  [RECOVERY] Structure invalide sautée (+32 bytes) à 0xcd45",
+    "\n--- Analyse Scène #18 (0xCD24 -> 0xD1D8) ---",
     "\n--- Analyse Scène #19 (0xD1D8 -> 0xD339) ---",
     "\n--- Analyse Scène #20 (0xD339 -> 0xD456) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 0",
     "\n--- Analyse Scène #21 (0xD456 -> 0xD542) ---",
     "\n--- Analyse Scène #22 (0xD542 -> 0xD6FB) ---",
     "  [INFO] Scène 'Toolbar' à 0xD6FB - Ignorée du mapping Slot.",
@@ -11968,10 +11992,29 @@
     "  [PEEK] Commande reconstruite: \"400d\" @ 0x1002b",
     "  [DEEP SCAN] 1 structures géométriques orphelines.",
     "  [MERGE] Commande @0xfe7a associée à Géométrie @0x1002b",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
     "\n--- Analyse Scène #24 (0xE7E3 -> 0x1005F) ---",
     "  [RECOVERY] Saut de 20 octets de padding à 0x100ac -> 0x100c0",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 20",
     "\n--- Analyse Scène #25 (0x1005F -> 0x11AE9) ---",
-    "\n--- Analyse Scène #26 (0x11AE9 -> 0x127F0) ---"
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
+    "\n--- Analyse Scène #26 (0x11AE9 -> 0x127F0) ---",
+    "\n============================================================",
+    "P4: STATISTIQUES SCENE COUNT",
+    "============================================================",
+    "Header Scene Count: 28",
+    "Parser Scene Count: 27",
+    "Différence: -1",
+    "",
+    "Breakdown par type:",
+    "  game           :  24 ( 88.9%)",
+    "  global_vars    :   1 (  3.7%)",
+    "  options        :   1 (  3.7%)",
+    "  unknown        :   1 (  3.7%)",
+    "",
+    "⚠️ Parser trouve -1 scènes de moins que header",
+    "  Vérifier filtrage (toolbar/empty)",
+    "============================================================"
   ],
   "totalBytes": 75760
 }

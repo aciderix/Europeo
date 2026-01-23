@@ -1,4 +1,22 @@
 {
+  "header": {
+    "magic": "VNFILE",
+    "version": "2.13",
+    "project": "",
+    "author": "",
+    "serial": "",
+    "width": 640,
+    "height": 480,
+    "config_extra": [
+      16,
+      1,
+      10
+    ],
+    "scene_count": 16,
+    "exit_id": 0,
+    "index_id": 0,
+    "header_size": 104
+  },
   "scenes": [
     {
       "id": 0,
@@ -1710,6 +1728,8 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1152"
       ],
@@ -1906,6 +1926,8 @@
           }
         }
       ],
+      "objCount": 4,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -2851,7 +2873,11 @@
           "isRecovered": true
         }
       ],
-      "warnings": [],
+      "objCount": 9,
+      "objCountValid": false,
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 9, Parsé: 10"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
@@ -3602,8 +3628,11 @@
           }
         }
       ],
+      "objCount": 5,
+      "objCountValid": false,
       "warnings": [
-        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
+        "⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 4"
       ],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -3837,6 +3866,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -3960,6 +3991,8 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -4027,6 +4060,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5561,6 +5596,8 @@
           }
         }
       ],
+      "objCount": 18,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5818,6 +5855,8 @@
           }
         }
       ],
+      "objCount": 4,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5969,8 +6008,11 @@
           "isRecovered": true
         }
       ],
+      "objCount": 0,
+      "objCountValid": false,
       "warnings": [
-        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
+        "⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1"
       ],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -6072,6 +6114,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x6DE6"
       ],
@@ -7225,8 +7269,11 @@
           "isRecovered": true
         }
       ],
+      "objCount": 3,
+      "objCountValid": false,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x90C2"
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x90C2",
+        "⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4"
       ],
       "parseMethod": "heuristic_recovered",
       "sceneType": "unknown"
@@ -7318,6 +7365,8 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -7342,7 +7391,7 @@
       ],
       "initScript": {
         "offset": 39561,
-        "length": 1743,
+        "length": 1750,
         "commands": [
           {
             "id": 39,
@@ -7365,10 +7414,16 @@
         ]
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 41311,
+        "flag": 4294967257,
+        "ints": [
+          635,
+          436,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
@@ -7660,9 +7715,9 @@
         }
       ],
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xA158"
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
       ],
-      "parseMethod": "heuristic_recovered",
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
@@ -7789,14 +7844,22 @@
           "isRecovered": true
         }
       ],
+      "objCount": 1,
+      "objCountValid": false,
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xA1F4"
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xA1F4",
+        "⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 2"
       ],
       "parseMethod": "heuristic_recovered",
       "sceneType": "game"
     }
   ],
   "logs": [
+    "✓ P2: 2 signature(s) détectée(s): 0xFFFFFFD9, 0xFFFFFFF4",
+    "✓ Header VND parsé:  v2.13",
+    "  Résolution: 640x480",
+    "  Scene Count (header): 16",
+    "  EXIT_ID: 0, INDEX_ID: 0",
     "PHASE 1: Scanning pour les tables de fichiers...",
     "  [+] Scène détectée @ 0x6A (Table -> 0x1162)",
     "  [+] Scène détectée @ 0x116A (Table -> 0x11BC)",
@@ -7819,13 +7882,16 @@
     "  [INFO] Fin de table fichiers par structure Hotspot à 0x1152",
     "\n--- Analyse Scène #0 (0x6A -> 0x116A) ---",
     "\n--- Analyse Scène #1 (0x116A -> 0x13B4) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 9, Parsé: 10",
     "\n--- Analyse Scène #2 (0x13B4 -> 0x2AE1) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 4",
     "\n--- Analyse Scène #3 (0x2AE1 -> 0x4004) ---",
     "\n--- Analyse Scène #4 (0x4004 -> 0x4517) ---",
     "\n--- Analyse Scène #5 (0x4517 -> 0x46B4) ---",
     "\n--- Analyse Scène #6 (0x46B4 -> 0x4766) ---",
     "\n--- Analyse Scène #7 (0x4766 -> 0x6626) ---",
     "\n--- Analyse Scène #8 (0x6626 -> 0x6945) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1",
     "\n--- Analyse Scène #9 (0x6945 -> 0x6D4D) ---",
     "\n--- Analyse Scène #10 (0x6D4D -> 0x6EE7) ---",
     "  [INFO] Scène 'Toolbar' à 0x6EE7 - Ignorée du mapping Slot.",
@@ -7833,11 +7899,28 @@
     "  [PEEK] Commande reconstruite: \"400d\" @ 0x9817",
     "  [DEEP SCAN] 1 structures géométriques orphelines.",
     "  [MERGE] Commande @0x9666 associée à Géométrie @0x9817",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
     "\n--- Analyse Scène #12 (0x7FCF -> 0x984B) ---",
     "\n--- Analyse Scène #13 (0x984B -> 0x9A0A) ---",
     "  [RECOVERY] Saut de 20 octets de padding à 0x9a6c -> 0x9a80",
     "\n--- Analyse Scène #14 (0x9A0A -> 0xA16F) ---",
-    "\n--- Analyse Scène #15 (0xA16F -> 0xA386) ---"
+    "  ⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 2",
+    "\n--- Analyse Scène #15 (0xA16F -> 0xA386) ---",
+    "\n============================================================",
+    "P4: STATISTIQUES SCENE COUNT",
+    "============================================================",
+    "Header Scene Count: 16",
+    "Parser Scene Count: 16",
+    "Différence: +0",
+    "",
+    "Breakdown par type:",
+    "  game           :  13 ( 81.2%)",
+    "  global_vars    :   1 (  6.2%)",
+    "  options        :   1 (  6.2%)",
+    "  unknown        :   1 (  6.2%)",
+    "",
+    "✓ Header et Parser en parfait accord!",
+    "============================================================"
   ],
   "totalBytes": 41862
 }

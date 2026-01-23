@@ -405,10 +405,30 @@ Plan d'améliorations du parser basé sur les validations empiriques.
 
 #### Améliorations Proposées (Priorités)
 
-**🟢 P1**: Lire Header VND (EXIT_ID, Config, métadonnées)
-**🟢 P2**: Détection automatique signatures (0xFFFFFFxx)
-**🟢 P3**: Validation objCount par scène
-**🟢 P4**: Statistiques Scene Count détaillées
+**✅ P1**: Lire Header VND (EXIT_ID, Config, métadonnées) - **COMPLÉTÉ**
+  - VndHeader dataclass ajouté (magic, version, width, height, scene_count, exit_id, index_id)
+  - parseHeader() implémenté avec offsets fixes validés (Config@78, SceneCount@98, EXIT_ID@100, INDEX_ID@102)
+  - Testé et validé sur danem.vnd (16 scènes) et belge.vnd (28 scènes)
+  - Header inclus dans ParseResult et JSON output
+
+**✅ P2**: Détection automatique signatures (0xFFFFFFxx) - **COMPLÉTÉ**
+  - detectSignatures() scanne le fichier pour pattern 0xFFFFFF00-0xFFFFFFFF
+  - isValidSignature() utilise signatures détectées (fallback sur hardcodées)
+  - Testé: danem (2 sigs: 0xFFFFFFF4, 0xFFFFFFD9), belge (1: 0xFFFFFFE8), couleurs1 (1: 0xFFFFFFDB)
+  - Plus besoin de maintenir liste VND_SIGNATURES manuellement
+
+**✅ P3**: Validation objCount par scène - **COMPLÉTÉ**
+  - ParsedScene.objCount stocke le nombre de hotspots déclaré (lu depuis binaire)
+  - ParsedScene.objCountValid indique si len(hotspots) == objCount
+  - Warning si mismatch (normal pour gap recovery/coalescing)
+  - Taux validation: danem 64.3%, belge 80.8%, couleurs1 88.5%
+
+**✅ P4**: Statistiques Scene Count détaillées - **COMPLÉTÉ**
+  - generateSceneCountStats() compare header.scene_count vs len(scenes)
+  - Breakdown par type (game, empty, toolbar, global_vars, options, etc.)
+  - Explique les différences: danem (0), belge (-1), couleurs1 (+24)
+  - Logs automatiques en fin de parsing
+
 **🟡 P5**: Mapper les 49 subtypes de commandes
 **🔴 P6**: Parser file table cryptée (clé "Password")
 

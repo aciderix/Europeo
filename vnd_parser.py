@@ -24,6 +24,23 @@ VND_SIGNATURES = {
 
 
 @dataclass
+class VndHeader:
+    """Header VND validé empiriquement (offset 0-104)"""
+    magic: str                  # "VNFILE" (offset 5)
+    version: str                # Ex: "2.13" (offset 15+)
+    project: str                # Ex: "Europeo"
+    author: str                 # Ex: "Sopra Multimedia"
+    serial: str                 # Ex: "5D51F233"
+    width: int                  # Config[0] (offset 78)
+    height: int                 # Config[1] (offset 82)
+    config_extra: List[int]     # Config[2-4] (offset 86-97)
+    scene_count: int            # Word (offset 98) - informatif
+    exit_id: int                # Word (offset 100)
+    index_id: int               # Word (offset 102)
+    header_size: int            # Taille totale du header
+
+
+@dataclass
 class SceneFile:
     slot: int
     filename: str
@@ -116,6 +133,8 @@ class ParsedScene:
     parseMethod: str = 'signature'
     sceneType: str = 'game'
     sceneName: Optional[str] = None
+    objCount: Optional[int] = None  # P3: Nombre de hotspots déclaré
+    objCountValid: Optional[bool] = None  # P3: Validation objCount == len(hotspots)
 
 
 @dataclass
@@ -123,6 +142,7 @@ class ParseResult:
     scenes: List[ParsedScene] = field(default_factory=list)
     logs: List[str] = field(default_factory=list)
     totalBytes: int = 0
+    header: Optional[VndHeader] = None  # Header VND (P1)
 
 
 class VNDSequentialParser:
@@ -131,13 +151,141 @@ class VNDSequentialParser:
     def __init__(self, data: bytes):
         self.data = data
         self.logs: List[str] = []
+        self.detected_signatures: set = set()  # P2: Signatures auto-détectées
 
     def log(self, msg: str):
         self.logs.append(msg)
 
+    def parseHeader(self) -> Optional[VndHeader]:
+        """
+        Parse le header VND (offsets 0-104)
+        Structure validée empiriquement sur danem/belge/couleurs1
+
+        Note: Les strings ont un format variable, donc on lit simplement
+        les strings jusqu'à l'offset 78 où commence le Config.
+        """
+        try:
+            # Lire les strings simples (magic et version sont toujours simples)
+            offset = 5  # Skip initial 5 bytes
+
+            # 1. Magic "VNFILE" (simple Pascal)
+            result = self.tryReadString(offset)
+            if not result:
+                return None
+            magic, offset = result
+            if magic != "VNFILE":
+                self.log(f"⚠️ Magic incorrect: '{magic}' (attendu 'VNFILE')")
+
+            # 2. Version (simple Pascal)
+            result = self.tryReadString(offset)
+            if not result:
+                return None
+            version, offset = result
+
+            # 3-5. Project, Author, Serial
+            # Format variable - on les lit comme strings mais sans garantie de format
+            # On utilisera directement les offsets fixes connus
+
+            # Extraction depuis offsets connus (analysés empiriquement)
+            # On sait que Config est TOUJOURS à offset 78
+            config_offset = 78
+
+            # Pour Project/Author/Serial, on essaie de lire mais on ne compte pas dessus
+            # car le format varie trop. On les marque comme "parsed from binary" pour debug.
+            project = ""
+            author = ""
+            serial = ""
+
+            # Essai best-effort pour lire les 3 strings restantes
+            for i in range(3):
+                result = self.tryReadString(offset)
+                if result and offset < config_offset:
+                    text, new_offset = result
+                    if i == 0:
+                        project = text.strip()
+                    elif i == 1:
+                        author = text.strip()
+                    else:
+                        serial = text.strip()
+                    offset = new_offset
+                else:
+                    break
+
+            # 6. Config (5 × int32 = 20 bytes, offset 78 validé)
+            if config_offset + 20 > len(self.data):
+                return None
+
+            width = self.readI32(config_offset)
+            height = self.readI32(config_offset + 4)
+            config2 = self.readI32(config_offset + 8)
+            config3 = self.readI32(config_offset + 12)
+            config4 = self.readI32(config_offset + 16)
+
+            # 7-9. Meta données (offsets validés)
+            if config_offset + 26 > len(self.data):
+                return None
+
+            scene_count = struct.unpack_from('<H', self.data, config_offset + 20)[0]  # offset 98
+            exit_id = struct.unpack_from('<H', self.data, config_offset + 22)[0]      # offset 100
+            index_id = struct.unpack_from('<H', self.data, config_offset + 24)[0]     # offset 102
+
+            header_size = config_offset + 26  # Fin du header = offset 104
+
+            return VndHeader(
+                magic=magic,
+                version=version,
+                project=project,
+                author=author,
+                serial=serial,
+                width=width,
+                height=height,
+                config_extra=[config2, config3, config4],
+                scene_count=scene_count,
+                exit_id=exit_id,
+                index_id=index_id,
+                header_size=header_size
+            )
+
+        except Exception as e:
+            self.log(f"❌ Erreur parsing header: {e}")
+            return None
+
+    def detectSignatures(self) -> set:
+        """
+        P2: Détection automatique des signatures VND (pattern 0xFFFFFFxx)
+
+        Scanne le fichier binaire et détecte toutes les signatures uniques
+        matchant le pattern 0xFFFFFF00 à 0xFFFFFFFF.
+
+        Returns:
+            Set de signatures détectées (ex: {0xFFFFFFDB, 0xFFFFFFF4})
+        """
+        detected = set()
+        ptr = 0
+
+        while ptr < len(self.data) - 4:
+            value = self.readU32(ptr)
+
+            # Pattern matching: top 24 bits doivent être 0xFFFFFF
+            if (value & 0xFFFFFF00) == 0xFFFFFF00:
+                detected.add(value)
+
+            ptr += 1
+
+        return detected
+
     def isValidSignature(self, value: int) -> bool:
-        """Vérifie si une valeur est une signature VND valide"""
-        return value in VND_SIGNATURES
+        """
+        Vérifie si une valeur est une signature VND valide
+
+        P2: Utilise maintenant les signatures auto-détectées au lieu
+        de la liste hardcodée VND_SIGNATURES.
+        """
+        # Fallback sur les signatures hardcodées si aucune détectée
+        if not self.detected_signatures:
+            return value in VND_SIGNATURES
+
+        return value in self.detected_signatures
 
     # === PRIMITIVES DE LECTURE SÉCURISÉES ===
 
@@ -838,6 +986,21 @@ class VNDSequentialParser:
 
     def parse(self, maxScenes: int = 100) -> ParseResult:
         self.logs = []
+
+        # P2: Détection automatique des signatures
+        self.detected_signatures = self.detectSignatures()
+        if self.detected_signatures:
+            sigs_hex = ', '.join(f"0x{sig:08X}" for sig in sorted(self.detected_signatures))
+            self.log(f"✓ P2: {len(self.detected_signatures)} signature(s) détectée(s): {sigs_hex}")
+
+        # P1: Parser le header VND
+        header = self.parseHeader()
+        if header:
+            self.log(f"✓ Header VND parsé: {header.project} v{header.version}")
+            self.log(f"  Résolution: {header.width}x{header.height}")
+            self.log(f"  Scene Count (header): {header.scene_count}")
+            self.log(f"  EXIT_ID: {header.exit_id}, INDEX_ID: {header.index_id}")
+
         sceneOffsets = self.findSceneOffsets()
         scenes = []
 
@@ -864,11 +1027,62 @@ class VNDSequentialParser:
             except Exception as e:
                 self.log(f"CRITICAL: Erreur sur segment {i}: {e}")
 
+        # P4: Statistiques Scene Count détaillées
+        self.generateSceneCountStats(scenes, header)
+
         return ParseResult(
             scenes=scenes,
             logs=self.logs,
-            totalBytes=len(self.data)
+            totalBytes=len(self.data),
+            header=header
         )
+
+    def generateSceneCountStats(self, scenes: List[ParsedScene], header: Optional[VndHeader]):
+        """
+        P4: Génère et log des statistiques détaillées sur Scene Count
+
+        Compare header.scene_count vs len(scenes) avec breakdown par type.
+        Explique les différences entre header et parser.
+        """
+        if not header or header.scene_count is None:
+            return
+
+        header_count = header.scene_count
+        parsed_count = len(scenes)
+
+        # Breakdown par type de scène
+        breakdown = {}
+        for scene in scenes:
+            scene_type = scene.sceneType
+            breakdown[scene_type] = breakdown.get(scene_type, 0) + 1
+
+        # Log statistiques
+        self.log("\n" + "="*60)
+        self.log("P4: STATISTIQUES SCENE COUNT")
+        self.log("="*60)
+        self.log(f"Header Scene Count: {header_count}")
+        self.log(f"Parser Scene Count: {parsed_count}")
+        self.log(f"Différence: {parsed_count - header_count:+d}")
+        self.log("")
+        self.log("Breakdown par type:")
+        for scene_type in sorted(breakdown.keys()):
+            count = breakdown[scene_type]
+            pct = 100 * count / parsed_count if parsed_count > 0 else 0
+            self.log(f"  {scene_type:15s}: {count:3d} ({pct:5.1f}%)")
+
+        # Explication
+        self.log("")
+        if parsed_count > header_count:
+            diff = parsed_count - header_count
+            self.log(f"✓ Parser trouve +{diff} scènes supplémentaires")
+            self.log("  Cause probable: Scènes système/variations non comptées dans header")
+        elif parsed_count < header_count:
+            diff = header_count - parsed_count
+            self.log(f"⚠️ Parser trouve -{diff} scènes de moins que header")
+            self.log("  Vérifier filtrage (toolbar/empty)")
+        else:
+            self.log("✓ Header et Parser en parfait accord!")
+        self.log("="*60)
 
     def parseSceneBlock(self, id_val: int, start: int, limit: int) -> ParsedScene:
         # 0. DETECTION EMPTY SCENE
@@ -881,6 +1095,8 @@ class VNDSequentialParser:
                 initScript=InitScript(offset=start, length=0, commands=[]),
                 config=SceneConfig(offset=-1, flag=0, ints=[], foundSignature=False),
                 hotspots=[],
+                objCount=0,  # P3: Empty scene has 0 hotspots
+                objCountValid=True,  # P3: Always valid for empty scenes
                 warnings=[],
                 parseMethod='empty_slot',
                 sceneType='empty',
@@ -890,6 +1106,7 @@ class VNDSequentialParser:
         warnings = []
         cursor = start
         detectedSceneName = None
+        declared_objCount = None  # P3: Nombre de hotspots déclaré dans la scène
 
         # 1. FILES
         files = []
@@ -1148,6 +1365,7 @@ class VNDSequentialParser:
 
         if hsPtr != -1 and hsPtr < limit:
             objCount = self.readU32(hsPtr)
+            declared_objCount = objCount  # P3: Capture pour validation
             hsPtr += 4
 
             if objCount < 5000:
@@ -1400,6 +1618,17 @@ class VNDSequentialParser:
 
         sceneType = self.inferSceneType(id_val, files, mergedHotspots, isToolbarScene)
 
+        # P3: Validation objCount
+        objCountValid = None
+        if declared_objCount is not None:
+            actual_count = len(mergedHotspots)
+            objCountValid = (actual_count == declared_objCount)
+
+            if not objCountValid:
+                msg = f"⚠️ P3: objCount mismatch - Déclaré: {declared_objCount}, Parsé: {actual_count}"
+                warnings.append(msg)
+                self.log(f"  {msg}")
+
         return ParsedScene(
             id=id_val,
             offset=start,
@@ -1408,6 +1637,8 @@ class VNDSequentialParser:
             initScript=initScript,
             config=config,
             hotspots=mergedHotspots,
+            objCount=declared_objCount,
+            objCountValid=objCountValid,
             warnings=warnings,
             parseMethod=parseMethod,
             sceneType=sceneType,
@@ -1454,8 +1685,9 @@ def dataclass_to_dict(obj):
             'Hotspot': ['index', 'offset', 'commands', 'geometry', 'isRecovered', 'isTooltip', 'tooltip'],
             'TooltipInfo': ['type', 'rect', 'flag', 'text'],
             'TooltipRect': ['x1', 'y1', 'x2', 'y2'],
-            'ParsedScene': ['id', 'offset', 'length', 'files', 'initScript', 'config', 'hotspots', 'warnings', 'parseMethod', 'sceneType', 'sceneName'],
-            'ParseResult': ['scenes', 'logs', 'totalBytes'],
+            'VndHeader': ['magic', 'version', 'project', 'author', 'serial', 'width', 'height', 'config_extra', 'scene_count', 'exit_id', 'index_id', 'header_size'],
+            'ParsedScene': ['id', 'offset', 'length', 'files', 'initScript', 'config', 'hotspots', 'objCount', 'objCountValid', 'warnings', 'parseMethod', 'sceneType', 'sceneName'],
+            'ParseResult': ['header', 'scenes', 'logs', 'totalBytes'],
         }
 
         class_name = obj.__class__.__name__
