@@ -419,35 +419,6 @@ class VNDSequentialParser:
         except:
             return False
 
-    # === SPECIFIQUE COULEURS1.VND : DETECTION DE LOGIQUE D2/D3/AVI ===
-
-    def isCouleurs1LogicBlock(self, offset: int) -> bool:
-        if offset + 60 > len(self.data):
-            return False
-
-        id_val = self.readU32(offset)
-        if id_val not in (21, 3):
-            return False
-
-        length = self.readU32(offset + 4)
-        if length > 100:
-            return False
-
-        strBytes = self.data[offset + 8:offset + 8 + 40]
-        try:
-            s = strBytes.decode('cp1252', errors='replace')
-        except:
-            return False
-
-        if 'score <= 0 then addbmp d3' in s:
-            return True
-        if 'score >= 0 then addbmp d2' in s:
-            return True
-        if 'fin2.avi' in s:
-            return True
-
-        return False
-
     # === PASSE 1 : CARTOGRAPHIE ===
 
     def detectGlobalVars(self) -> Optional[int]:
@@ -508,18 +479,16 @@ class VNDSequentialParser:
         globalVarsOffset = self.detectGlobalVars()
         if globalVarsOffset is not None:
             offsets.append(globalVarsOffset)
-            ptr = globalVarsOffset + 1  # Commencer après global_vars
-            self.log(f"  [+] Scene 0 (global_vars) détectée @ 0x{globalVarsOffset:X}")
+            # CRITICAL FIX: Continue APRÈS la fin de global_vars, pas après le début!
+            globalVarsEnd = self.isValidFileTable(globalVarsOffset)
+            if globalVarsEnd != -1:
+                ptr = globalVarsEnd  # Continue après la table complète
+            else:
+                ptr = globalVarsOffset + 8192  # Fallback
+            self.log(f"  [+] Scene 0 (global_vars) détectée @ 0x{globalVarsOffset:X} -> 0x{ptr:X}")
 
         # Scanner pour les scènes
         while ptr < dataLen - 20:
-            # 0. HACK COULEURS1 : Détection forcée des blocs logiques d2/d3/avi
-            if self.isCouleurs1LogicBlock(ptr):
-                offsets.append(ptr)
-                self.log(f"  [HACK] Scène logique 'Couleurs1' (d2/d3/avi) détectée @ 0x{ptr:X}")
-                ptr += 8
-                continue
-
             # 1. Vérifier si c'est un "Empty Slot"
             if self.isEmptySlotMarker(ptr):
                 offsets.append(ptr)
