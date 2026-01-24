@@ -21,7 +21,7 @@
     {
       "id": 0,
       "offset": 106,
-      "length": 10871,
+      "length": 4352,
       "files": [
         {
           "slot": 1,
@@ -1714,15 +1714,42 @@
           "filename": "JEUGAGNE",
           "param": 0,
           "offset": 4418
-        },
+        }
+      ],
+      "initScript": {
+        "offset": 4434,
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1152"
+      ],
+      "parseMethod": "heuristic_recovered",
+      "sceneType": "global_vars"
+    },
+    {
+      "id": 1,
+      "offset": 4458,
+      "length": 586,
+      "files": [
         {
-          "slot": 283,
+          "slot": 1,
           "filename": "a_dan.wav",
           "param": 2,
           "offset": 4466
         },
         {
-          "slot": 284,
+          "slot": 2,
           "filename": "copen.bmp",
           "param": 16,
           "offset": 4491
@@ -1730,16 +1757,205 @@
       ],
       "initScript": {
         "offset": 4540,
-        "length": 586,
-        "commands": [
-          {
-            "id": 3,
-            "subtype": 21,
-            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54e",
-            "offset": 4597,
-            "isRecovered": true
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": 4540,
+        "flag": 4294967284,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 4568,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "2"
+            },
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 101,
+            "pointCount": 5,
+            "points": [
+              {
+                "x": 8,
+                "y": 302
+              },
+              {
+                "x": 118,
+                "y": 300
+              },
+              {
+                "x": 140,
+                "y": 319
+              },
+              {
+                "x": 117,
+                "y": 338
+              },
+              {
+                "x": 6,
+                "y": 337
+              }
+            ],
+            "extraFlag": 0
           }
-        ]
+        },
+        {
+          "index": 1,
+          "offset": 4700,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "3"
+            },
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "470 365 125 365 0 La petite sirène."
+            }
+          ],
+          "geometry": {
+            "cursorId": 102,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 565,
+                "y": 288
+              },
+              {
+                "x": 622,
+                "y": 356
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 4830,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "4"
+            }
+          ],
+          "geometry": {
+            "cursorId": 103,
+            "pointCount": 5,
+            "points": [
+              {
+                "x": 23,
+                "y": 217
+              },
+              {
+                "x": 134,
+                "y": 217
+              },
+              {
+                "x": 135,
+                "y": 255
+              },
+              {
+                "x": 22,
+                "y": 258
+              },
+              {
+                "x": 1,
+                "y": 237
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 3,
+          "offset": 4899,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 9,
+              "param": "canard1.avi 2 0 0 640 190"
+            },
+            {
+              "id": 2,
+              "subtype": 16,
+              "param": "300"
+            },
+            {
+              "id": 3,
+              "subtype": 9,
+              "param": "canard1.avi 2 0 0 640 190"
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 637,
+                "y": 199
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
+      ],
+      "objCount": 4,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 2,
+      "offset": 5044,
+      "length": 5933,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "a_dan.wav",
+          "param": 6,
+          "offset": 5052
+        },
+        {
+          "slot": 2,
+          "filename": "forge.bmp",
+          "param": 16,
+          "offset": 5077
+        }
+      ],
+      "initScript": {
+        "offset": 5126,
+        "length": 0,
+        "commands": []
       },
       "config": {
         "offset": 5126,
@@ -2642,59 +2858,6 @@
         },
         {
           "index": -1,
-          "offset": 4717,
-          "commands": [
-            {
-              "id": 0,
-              "subtype": 39,
-              "param": "18 0 #000000 Comic sans MS"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "470 365 125 365 0 La petite sirène.f"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "4g"
-            },
-            {
-              "id": 1,
-              "subtype": 9,
-              "param": "canard1.avi 2 0 0 640 190"
-            },
-            {
-              "id": 2,
-              "subtype": 16,
-              "param": "300"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "canard1.avi 2 0 0 640 190d"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "a_dan.wav"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "forge.bmp"
-            }
-          ],
-          "geometry": {
-            "cursorId": 0,
-            "pointCount": 0,
-            "points": [],
-            "extraFlag": 0
-          },
-          "isRecovered": true
-        },
-        {
-          "index": -1,
           "offset": 10935,
           "commands": [
             {
@@ -2716,13 +2879,13 @@
       "objCountValid": false,
       "confidence": "HIGH",
       "warnings": [
-        "⚠️ P3: objCount mismatch - Déclaré: 9, Parsé: 11"
+        "⚠️ P3: objCount mismatch - Déclaré: 9, Parsé: 10"
       ],
       "parseMethod": "signature",
-      "sceneType": "global_vars"
+      "sceneType": "game"
     },
     {
-      "id": 1,
+      "id": 3,
       "offset": 10977,
       "length": 5411,
       "files": [
@@ -3479,7 +3642,7 @@
       "sceneType": "game"
     },
     {
-      "id": 2,
+      "id": 4,
       "offset": 16388,
       "length": 1299,
       "files": [
@@ -3715,9 +3878,9 @@
       "sceneType": "game"
     },
     {
-      "id": 3,
+      "id": 5,
       "offset": 17687,
-      "length": 8463,
+      "length": 413,
       "files": [
         {
           "slot": 1,
@@ -3728,7 +3891,209 @@
       ],
       "initScript": {
         "offset": 17759,
-        "length": 602,
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": 17759,
+        "flag": 4294967284,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 17787,
+          "commands": [
+            {
+              "id": 3,
+              "subtype": 9,
+              "param": "nord.avi 2 180 55 420 134"
+            },
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 179,
+                "y": 48
+              },
+              {
+                "x": 427,
+                "y": 143
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 1,
+          "offset": 17919,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "numero = 5 then scene 8 else scene 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "loc = 1 then scene 8"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 13,
+                "y": 263
+              },
+              {
+                "x": 202,
+                "y": 323
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 18031,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "4"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 296,
+                "y": 263
+              },
+              {
+                "x": 489,
+                "y": 325
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
+      ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 6,
+      "offset": 18100,
+      "length": 178,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "a_dan.wav",
+          "param": 6,
+          "offset": 18108
+        },
+        {
+          "slot": 2,
+          "filename": "loc3.bmp",
+          "param": 16,
+          "offset": 18133
+        }
+      ],
+      "initScript": {
+        "offset": 18181,
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": 18181,
+        "flag": 4294967284,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 18209,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "7"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 638,
+                "y": 396
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
+      ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 7,
+      "offset": 18278,
+      "length": 7872,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "a_dan.wav",
+          "param": 6,
+          "offset": 18286
+        },
+        {
+          "slot": 2,
+          "filename": "jeuloc.bmp",
+          "param": 16,
+          "offset": 18311
+        }
+      ],
+      "initScript": {
+        "offset": 18361,
+        "length": 0,
         "commands": []
       },
       "config": {
@@ -5236,82 +5601,17 @@
             ],
             "extraFlag": 0
           }
-        },
-        {
-          "index": -1,
-          "offset": 17791,
-          "commands": [
-            {
-              "id": 3,
-              "subtype": 9,
-              "param": "nord.avi 2 180 55 420 134"
-            },
-            {
-              "id": 3,
-              "subtype": 21,
-              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54d"
-            },
-            {
-              "id": 1,
-              "subtype": 21,
-              "param": "numero = 5 then scene 8 else scene 6"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "loc = 1 then scene 8i"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "4i"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "a_dan.wav"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "loc3.bmp"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "7i"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "a_dan.wav"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "jeuloc.bmp"
-            }
-          ],
-          "geometry": {
-            "cursorId": 0,
-            "pointCount": 0,
-            "points": [],
-            "extraFlag": 0
-          },
-          "isRecovered": true
         }
       ],
       "objCount": 18,
-      "objCountValid": false,
+      "objCountValid": true,
       "confidence": "HIGH",
-      "warnings": [
-        "⚠️ P3: objCount mismatch - Déclaré: 18, Parsé: 19"
-      ],
+      "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 4,
+      "id": 8,
       "offset": 26150,
       "length": 799,
       "files": [
@@ -5571,7 +5871,7 @@
       "sceneType": "game"
     },
     {
-      "id": 5,
+      "id": 9,
       "offset": 26949,
       "length": 1032,
       "files": [
@@ -5728,7 +6028,7 @@
       "sceneType": "game"
     },
     {
-      "id": 6,
+      "id": 10,
       "offset": 27981,
       "length": 410,
       "files": [
@@ -5835,7 +6135,7 @@
       "sceneName": "1"
     },
     {
-      "id": 7,
+      "id": 11,
       "offset": 28938,
       "length": 3781,
       "files": [
@@ -6185,7 +6485,7 @@
       "sceneType": "options"
     },
     {
-      "id": 8,
+      "id": 12,
       "offset": 32719,
       "length": 6268,
       "files": [
@@ -6992,9 +7292,9 @@
       "sceneType": "unknown"
     },
     {
-      "id": 9,
+      "id": 13,
       "offset": 38987,
-      "length": 2340,
+      "length": 447,
       "files": [
         {
           "slot": 1,
@@ -7076,87 +7376,70 @@
             ],
             "extraFlag": 0
           }
+        }
+      ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 14,
+      "offset": 39434,
+      "length": 1893,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "sirene.bmp",
+          "param": 0,
+          "offset": 39482
         },
         {
-          "index": -1,
-          "offset": 39474,
-          "commands": [
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "sirene.bmp"
-            }
-          ],
-          "geometry": {
-            "cursorId": 105,
-            "pointCount": 6,
-            "points": [
-              {
-                "x": 9,
-                "y": 392
-              },
-              {
-                "x": 71,
-                "y": 400
-              },
-              {
-                "x": 92,
-                "y": 362
-              },
-              {
-                "x": 55,
-                "y": 306
-              },
-              {
-                "x": 19,
-                "y": 284
-              },
-              {
-                "x": 6,
-                "y": 358
-              }
-            ],
-            "extraFlag": 0
+          "slot": 2,
+          "filename": "3",
+          "param": 0,
+          "offset": 39552
+        }
+      ],
+      "initScript": {
+        "offset": 39561,
+        "length": 1750,
+        "commands": [
+          {
+            "id": 39,
+            "subtype": 0,
+            "param": "18 1 #ffffff Comic sans MS",
+            "offset": 39561
           },
-          "isRecovered": true
-        },
-        {
-          "index": -1,
-          "offset": 39557,
-          "commands": [
-            {
-              "id": 0,
-              "subtype": 39,
-              "param": "18 1 #ffffff Comic sans MS"
-            },
-            {
-              "id": 0,
-              "subtype": 38,
-              "param": "80 350 125 365 0 Quitter"
-            },
-            {
-              "id": 3,
-              "subtype": 21,
-              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
-            }
-          ],
-          "geometry": {
-            "cursorId": 105,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 563,
-                "y": 278
-              },
-              {
-                "x": 600,
-                "y": 320
-              }
-            ],
-            "extraFlag": 0
+          {
+            "id": 38,
+            "subtype": 0,
+            "param": "80 350 125 365 0 Quitter",
+            "offset": 39599
           },
-          "isRecovered": true
-        },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+            "offset": 39635
+          }
+        ]
+      },
+      "config": {
+        "offset": 41311,
+        "flag": 4294967257,
+        "ints": [
+          635,
+          436,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
         {
           "index": -1,
           "offset": 39758,
@@ -7188,18 +7471,9 @@
             }
           ],
           "geometry": {
-            "cursorId": 105,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 439,
-                "y": 278
-              },
-              {
-                "x": 473,
-                "y": 318
-              }
-            ],
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
             "extraFlag": 0
           },
           "isRecovered": true
@@ -7220,18 +7494,9 @@
             }
           ],
           "geometry": {
-            "cursorId": 105,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 324,
-                "y": 276
-              },
-              {
-                "x": 361,
-                "y": 315
-              }
-            ],
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
             "extraFlag": 0
           },
           "isRecovered": true
@@ -7267,18 +7532,9 @@
             }
           ],
           "geometry": {
-            "cursorId": 105,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 201,
-                "y": 274
-              },
-              {
-                "x": 237,
-                "y": 318
-              }
-            ],
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
             "extraFlag": 0
           },
           "isRecovered": true
@@ -7299,18 +7555,9 @@
             }
           ],
           "geometry": {
-            "cursorId": 8,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 25,
-                "y": 0
-              },
-              {
-                "x": 2,
-                "y": 32
-              }
-            ],
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
             "extraFlag": 0
           },
           "isRecovered": true
@@ -7346,18 +7593,9 @@
             }
           ],
           "geometry": {
-            "cursorId": 100,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 0,
-                "y": -39
-              },
-              {
-                "x": 635,
-                "y": 436
-              }
-            ],
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
             "extraFlag": 0
           },
           "isRecovered": true
@@ -7490,17 +7728,15 @@
           "isRecovered": true
         }
       ],
-      "objCount": 1,
-      "objCountValid": false,
       "confidence": "HIGH",
       "warnings": [
-        "⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 12"
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
       ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 10,
+      "id": 15,
       "offset": 41327,
       "length": 535,
       "files": [
@@ -7656,85 +7892,71 @@
     "  [+] Scène détectée @ 0x710A (Table -> 0x7129)",
     "  [+] Scène détectée @ 0x7FCF (Table -> 0x7FE1)",
     "  [+] Scène détectée @ 0x984B (Table -> 0x9893)",
+    "  [+] Scène détectée @ 0x9A0A (Table -> 0x9A6C)",
     "  [+] Scène détectée @ 0xA16F (Table -> 0xA1D8)",
-    "  [FILTER] Scène @ 0x116A est à l'intérieur de la scène @ 0x6A (fin: 0x143C) - REJETÉE",
-    "  [FILTER] Scène @ 0x13B4 est à l'intérieur de la scène @ 0x6A (fin: 0x143C) - REJETÉE",
-    "  [FILTER] Scène @ 0x46B4 est à l'intérieur de la scène @ 0x4517 (fin: 0x4746) - REJETÉE",
-    "  [FILTER] Scène @ 0x4766 est à l'intérieur de la scène @ 0x46B4 (fin: 0x47BA) - REJETÉE",
-    "  [FILTER] 4 fausses scènes éliminées",
-    "PHASE 2: Analyse de 12 segments détectés.",
-    "  [RECOVERY] Structure invalide sautée (+16 bytes) à 0x1162",
-    "  ⚠️ P3: objCount mismatch - Déclaré: 9, Parsé: 11",
-    "\n--- Analyse Scène #0 (0x6A -> 0x2AE1) ---",
+    "PHASE 2: Analyse de 17 segments détectés.",
+    "  [INFO] Fin de table fichiers par structure Hotspot à 0x1152",
+    "\n--- Analyse Scène #0 (0x6A -> 0x116A) ---",
+    "\n--- Analyse Scène #1 (0x116A -> 0x13B4) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 9, Parsé: 10",
+    "\n--- Analyse Scène #2 (0x13B4 -> 0x2AE1) ---",
     "  ⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 4",
-    "\n--- Analyse Scène #1 (0x2AE1 -> 0x4004) ---",
-    "\n--- Analyse Scène #2 (0x4004 -> 0x4517) ---",
-    "  ⚠️ P3: objCount mismatch - Déclaré: 18, Parsé: 19",
-    "\n--- Analyse Scène #3 (0x4517 -> 0x6626) ---",
-    "\n--- Analyse Scène #4 (0x6626 -> 0x6945) ---",
+    "\n--- Analyse Scène #3 (0x2AE1 -> 0x4004) ---",
+    "\n--- Analyse Scène #4 (0x4004 -> 0x4517) ---",
+    "\n--- Analyse Scène #5 (0x4517 -> 0x46B4) ---",
+    "\n--- Analyse Scène #6 (0x46B4 -> 0x4766) ---",
+    "\n--- Analyse Scène #7 (0x4766 -> 0x6626) ---",
+    "\n--- Analyse Scène #8 (0x6626 -> 0x6945) ---",
     "  ⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1",
-    "\n--- Analyse Scène #5 (0x6945 -> 0x6D4D) ---",
-    "\n--- Analyse Scène #6 (0x6D4D -> 0x6EE7) ---",
+    "\n--- Analyse Scène #9 (0x6945 -> 0x6D4D) ---",
+    "\n--- Analyse Scène #10 (0x6D4D -> 0x6EE7) ---",
     "  [INFO] Scène 'Toolbar' à 0x6EE7 - Ignorée du mapping Slot.",
-    "\n--- Analyse Scène #7 (0x710A -> 0x7FCF) ---",
+    "\n--- Analyse Scène #11 (0x710A -> 0x7FCF) ---",
     "  [PEEK] Commande reconstruite: \"400d\" @ 0x9817",
     "  [DEEP SCAN] 1 structures géométriques orphelines.",
     "  [MERGE] Commande @0x9666 associée à Géométrie @0x9817",
     "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
-    "\n--- Analyse Scène #8 (0x7FCF -> 0x984B) ---",
-    "  [PEEK] Commande reconstruite: \"54i\" @ 0x9b0e",
-    "  [PEEK] Commande reconstruite: \"4i\" @ 0x9c5c",
-    "  [PEEK] Commande reconstruite: \"3i\" @ 0x9d8a",
-    "  [PEEK] Commande reconstruite: \"2i\" @ 0x9eb6",
-    "  [PEEK] Commande reconstruite: \"1i\" @ 0x9fe4",
-    "  [DEEP SCAN] 7 structures géométriques orphelines.",
-    "  [MERGE] Commande @0x9a32 associée à Géométrie @0x9b0e",
-    "  [MERGE] Commande @0x9a85 associée à Géométrie @0x9c5c",
-    "  [MERGE] Commande @0x9b4e associée à Géométrie @0x9d8a",
-    "  [MERGE] Commande @0x9c0a associée à Géométrie @0x9eb6",
-    "  [MERGE] Commande @0x9c7c associée à Géométrie @0x9fe4",
-    "  [MERGE] Commande @0x9d38 associée à Géométrie @0xa000",
-    "  [MERGE] Commande @0x9daa associée à Géométrie @0xa153",
-    "  ⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 12",
-    "\n--- Analyse Scène #9 (0x984B -> 0xA16F) ---",
+    "\n--- Analyse Scène #12 (0x7FCF -> 0x984B) ---",
+    "\n--- Analyse Scène #13 (0x984B -> 0x9A0A) ---",
+    "  [RECOVERY] Saut de 20 octets de padding à 0x9a6c -> 0x9a80",
+    "\n--- Analyse Scène #14 (0x9A0A -> 0xA16F) ---",
     "  ⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 2",
-    "\n--- Analyse Scène #10 (0xA16F -> 0xA386) ---",
+    "\n--- Analyse Scène #15 (0xA16F -> 0xA386) ---",
     "\n============================================================",
     "P4: STATISTIQUES SCENE COUNT",
     "============================================================",
     "Header Scene Count: 16",
-    "Parser Scene Count: 11",
-    "Différence: -5",
+    "Parser Scene Count: 16",
+    "Différence: +0",
     "",
     "Breakdown par type:",
-    "  game           :   8 ( 72.7%)",
-    "  global_vars    :   1 (  9.1%)",
-    "  options        :   1 (  9.1%)",
-    "  unknown        :   1 (  9.1%)",
+    "  game           :  13 ( 81.2%)",
+    "  global_vars    :   1 (  6.2%)",
+    "  options        :   1 (  6.2%)",
+    "  unknown        :   1 (  6.2%)",
     "",
-    "⚠️ Parser trouve -5 scènes de moins que header",
-    "  Vérifier filtrage (toolbar/empty)",
+    "✓ Header et Parser en parfait accord!",
     "============================================================",
     "\n============================================================",
     "P5: STATISTIQUES COMMAND SUBTYPES",
     "============================================================",
-    "Total commandes: 714",
+    "Total commandes: 709",
     "Subtypes uniques: 20/49",
     "",
     "Top 15 subtypes par fréquence:",
-    "   21 (0x15) IF_THEN        :   316 (44.26%)",
-    "    0 (0x00) QUIT           :   165 (23.11%)",
-    "   39 (0x27) FONT           :    68 ( 9.52%)",
-    "   38 (0x26) PLAYTEXT       :    30 ( 4.20%)",
-    "   11 (0x0B) UNKNOWN_11     :    27 ( 3.78%)",
-    "   41 (0x29) UNKNOWN_41     :    19 ( 2.66%)",
-    "   10 (0x0A) UNKNOWN_10     :    16 ( 2.24%)",
-    "    9 (0x09) VIDEO          :    14 ( 1.96%)",
-    "    6 (0x06) GOTO_SCENE     :    12 ( 1.68%)",
-    "   24 (0x18) UNKNOWN_24     :    11 ( 1.54%)",
-    "   22 (0x16) UNKNOWN_22     :    10 ( 1.40%)",
-    "   27 (0x1B) ADDBMP         :     5 ( 0.70%)",
-    "   16 (0x10) DELAY          :     5 ( 0.70%)",
+    "   21 (0x15) IF_THEN        :   316 (44.57%)",
+    "    0 (0x00) QUIT           :   159 (22.43%)",
+    "   39 (0x27) FONT           :    67 ( 9.45%)",
+    "   38 (0x26) PLAYTEXT       :    30 ( 4.23%)",
+    "   11 (0x0B) UNKNOWN_11     :    27 ( 3.81%)",
+    "   41 (0x29) UNKNOWN_41     :    19 ( 2.68%)",
+    "   10 (0x0A) UNKNOWN_10     :    16 ( 2.26%)",
+    "    9 (0x09) VIDEO          :    15 ( 2.12%)",
+    "    6 (0x06) GOTO_SCENE     :    13 ( 1.83%)",
+    "   24 (0x18) UNKNOWN_24     :    11 ( 1.55%)",
+    "   22 (0x16) UNKNOWN_22     :    10 ( 1.41%)",
+    "   16 (0x10) DELAY          :     5 ( 0.71%)",
+    "   27 (0x1B) ADDBMP         :     5 ( 0.71%)",
     "   36 (0x24) UNKNOWN_36     :     4 ( 0.56%)",
     "   31 (0x1F) UNKNOWN_31     :     4 ( 0.56%)",
     "",

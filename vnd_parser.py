@@ -419,6 +419,35 @@ class VNDSequentialParser:
         except:
             return False
 
+    # === SPECIFIQUE COULEURS1.VND : DETECTION DE LOGIQUE D2/D3/AVI ===
+
+    def isCouleurs1LogicBlock(self, offset: int) -> bool:
+        if offset + 60 > len(self.data):
+            return False
+
+        id_val = self.readU32(offset)
+        if id_val not in (21, 3):
+            return False
+
+        length = self.readU32(offset + 4)
+        if length > 100:
+            return False
+
+        strBytes = self.data[offset + 8:offset + 8 + 40]
+        try:
+            s = strBytes.decode('cp1252', errors='replace')
+        except:
+            return False
+
+        if 'score <= 0 then addbmp d3' in s:
+            return True
+        if 'score >= 0 then addbmp d2' in s:
+            return True
+        if 'fin2.avi' in s:
+            return True
+
+        return False
+
     # === PASSE 1 : CARTOGRAPHIE ===
 
     def detectGlobalVars(self) -> Optional[int]:
@@ -479,16 +508,18 @@ class VNDSequentialParser:
         globalVarsOffset = self.detectGlobalVars()
         if globalVarsOffset is not None:
             offsets.append(globalVarsOffset)
-            # CRITICAL FIX: Continue APRÈS la fin de global_vars, pas après le début!
-            globalVarsEnd = self.isValidFileTable(globalVarsOffset)
-            if globalVarsEnd != -1:
-                ptr = globalVarsEnd  # Continue après la table complète
-            else:
-                ptr = globalVarsOffset + 8192  # Fallback
-            self.log(f"  [+] Scene 0 (global_vars) détectée @ 0x{globalVarsOffset:X} -> 0x{ptr:X}")
+            ptr = globalVarsOffset + 1  # Commencer après global_vars
+            self.log(f"  [+] Scene 0 (global_vars) détectée @ 0x{globalVarsOffset:X}")
 
         # Scanner pour les scènes
         while ptr < dataLen - 20:
+            # 0. HACK COULEURS1 : Détection forcée des blocs logiques d2/d3/avi
+            if self.isCouleurs1LogicBlock(ptr):
+                offsets.append(ptr)
+                self.log(f"  [HACK] Scène logique 'Couleurs1' (d2/d3/avi) détectée @ 0x{ptr:X}")
+                ptr += 8
+                continue
+
             # 1. Vérifier si c'est un "Empty Slot"
             if self.isEmptySlotMarker(ptr):
                 offsets.append(ptr)
@@ -506,78 +537,7 @@ class VNDSequentialParser:
 
             ptr += 1
 
-        # PHASE 1.5: Éliminer les fausses scènes détectées à l'intérieur d'autres scènes
-        # en utilisant objCount pour calculer la taille réelle
-        offsets = self.filterNestedScenes(offsets)
-
         return offsets
-
-    def filterNestedScenes(self, offsets: List[int]) -> List[int]:
-        """Élimine les scènes détectées à l'intérieur d'autres scènes en utilisant objCount"""
-        sceneRanges = []  # (start, end, offset)
-
-        for offset in offsets:
-            # Calculer la fin théorique de cette scène
-            sceneEnd = self.calculateSceneEnd(offset)
-            if sceneEnd != -1:
-                sceneRanges.append((offset, sceneEnd))
-
-        # Filtrer les offsets qui tombent à l'intérieur d'autres scènes
-        filtered = []
-        for offset in offsets:
-            isNested = False
-            for start, end in sceneRanges:
-                # Si offset est strictement à l'intérieur d'une autre scène
-                if start < offset < end:
-                    self.log(f"  [FILTER] Scène @ 0x{offset:X} est à l'intérieur de la scène @ 0x{start:X} (fin: 0x{end:X}) - REJETÉE")
-                    isNested = True
-                    break
-
-            if not isNested:
-                filtered.append(offset)
-
-        if len(filtered) < len(offsets):
-            self.log(f"  [FILTER] {len(offsets) - len(filtered)} fausses scènes éliminées")
-
-        return filtered
-
-    def calculateSceneEnd(self, offset: int) -> int:
-        """Calcule la fin théorique d'une scène basée sur objCount"""
-        # Trouver la fin de la file table
-        tableEnd = self.isValidFileTable(offset)
-        if tableEnd == -1:
-            return -1
-
-        # Chercher la signature après la file table
-        signatureOffset = -1
-        for probe in range(tableEnd, min(tableEnd + 200, len(self.data) - 4)):
-            sig = self.readU32(probe)
-            if self.isValidSignature(sig):
-                signatureOffset = probe
-                break
-
-        if signatureOffset == -1:
-            # Pas de signature, on ne peut pas calculer la fin
-            return -1
-
-        # Structure après signature:
-        # +0: signature (4 bytes)
-        # +4: config (20 bytes = 5 × int32)
-        # +24: objCount (4 bytes)
-        # +28: hotspots (objCount × 153 bytes)
-
-        if signatureOffset + 28 > len(self.data):
-            return -1
-
-        objCount = self.readU32(signatureOffset + 24)
-
-        # Sanity check
-        if objCount > 100:  # Limite raisonnable
-            return -1
-
-        sceneEnd = signatureOffset + 28 + (objCount * 153)
-
-        return sceneEnd
 
     def isEmptySlotMarker(self, offset: int) -> bool:
         if offset + 9 > len(self.data):
@@ -698,20 +658,6 @@ class VNDSequentialParser:
                 # SAUF si c'est un cas spécial comme toolbar
                 if not isToolbar:
                     return -1  # Rejeter cette fausse scène
-
-            # NOUVEAU: Rejeter fichier .bmp isolé SANS signature
-            # Ces fichiers sont souvent des records/commands, pas des scènes
-            if re.search(r'\.bmp$', singleFile) and not isEndSig:
-                # Vérifier s'il y a une signature dans les 100 bytes suivants
-                hasNearbySignature = False
-                for probe in range(current, min(current + 100, len(self.data) - 4)):
-                    if self.isValidSignature(self.readU32(probe)):
-                        hasNearbySignature = True
-                        break
-
-                if not hasNearbySignature:
-                    # Pas de signature trouvée -> probablement un record, pas une scène
-                    return -1
 
         if isToolbar or (isEndSig and validSlots >= 1) or isHeuristic:
             return current
