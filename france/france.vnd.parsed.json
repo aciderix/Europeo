@@ -14820,6 +14820,1005 @@
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
+    },
+    {
+      "id": 29,
+      "offset": 93285,
+      "length": 2460,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\..\\couleurs1\\img24\\euroland\\bonus.bmp",
+          "param": 16,
+          "offset": 93309
+        },
+        {
+          "slot": 2,
+          "filename": "..\\..\\couleurs1\\html\\bonus1.htm",
+          "param": 0,
+          "offset": 93357
+        }
+      ],
+      "initScript": {
+        "offset": 93396,
+        "length": 24,
+        "commands": []
+      },
+      "config": {
+        "offset": 93420,
+        "flag": 4294967272,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 93448,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "60 360 125 365 0 Réponse N°1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then scene 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then inc_var bonus4 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then scene 2"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then inc_var bonus8 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then scene 4"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then inc_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then inc_var bonus9 1"
+            },
+            {
+              "id": 1,
+              "subtype": 41,
+              "param": "score 6 25 410 160 470 0 <score>"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "bonus8 = 1 then playhtml bonus8.htm 0 50 100 600 400"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "bonus9 = 1 then playhtml bonus9.htm 0 50 100 600 400"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playhtml bonus6.htm 0 50 100 600 400"
+            },
+            {
+              "id": 3,
+              "subtype": 32,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 86,
+                "y": 290
+              },
+              {
+                "x": 160,
+                "y": 351
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 1,
+          "offset": 94383,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "260 360 125 365 0 Réponse N°2"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then scene 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then inc_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then inc_var bonus6 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then scene 2"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then inc_var bonus8 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then scene 4"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then inc_var bonus9 1"
+            },
+            {
+              "id": 1,
+              "subtype": 41,
+              "param": "score 6 25 410 160 470 0 <score>"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 270,
+                "y": 292
+              },
+              {
+                "x": 342,
+                "y": 352
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 95052,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "410 360 125 365 0 Réponse N°3"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then scene 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then inc_var bonus6 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then scene 2"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then inc_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus8 = 1 then inc_var bonus8 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then scene 4"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus9 = 1 then inc_var bonus9 1"
+            },
+            {
+              "id": 1,
+              "subtype": 41,
+              "param": "score 6 25 410 160 470 0 <score>"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 433,
+                "y": 293
+              },
+              {
+                "x": 499,
+                "y": 352
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
+      ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 30,
+      "offset": 95745,
+      "length": 416,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "cafe.wav",
+          "param": 2,
+          "offset": 95753
+        },
+        {
+          "slot": 2,
+          "filename": "marcel.bmp",
+          "param": 16,
+          "offset": 95777
+        }
+      ],
+      "initScript": {
+        "offset": 95827,
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": 95827,
+        "flag": 4294967268,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 95855,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 27,
+              "param": "bul roll\\femme.bmp 0 0 0"
+            },
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "360 130 375 365 0 La serveuse"
+            },
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 108,
+            "pointCount": 11,
+            "points": [
+              {
+                "x": 278,
+                "y": 229
+              },
+              {
+                "x": 237,
+                "y": 218
+              },
+              {
+                "x": 237,
+                "y": 197
+              },
+              {
+                "x": 255,
+                "y": 191
+              },
+              {
+                "x": 280,
+                "y": 209
+              },
+              {
+                "x": 293,
+                "y": 185
+              },
+              {
+                "x": 290,
+                "y": 153
+              },
+              {
+                "x": 307,
+                "y": 126
+              },
+              {
+                "x": 338,
+                "y": 125
+              },
+              {
+                "x": 359,
+                "y": 182
+              },
+              {
+                "x": 370,
+                "y": 226
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
+      ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 31,
+      "offset": 96161,
+      "length": 118,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "grenouille.bmp",
+          "param": 16,
+          "offset": 96185
+        }
+      ],
+      "initScript": {
+        "offset": 96239,
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": 96239,
+        "flag": 4294967268,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [],
+      "objCount": 2,
+      "objCountValid": false,
+      "confidence": "HIGH",
+      "warnings": [
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
+        "⚠️ P3: objCount mismatch - Déclaré: 2, Parsé: 0"
+      ],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 32,
+      "offset": 96279,
+      "length": 272,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "frog.dll",
+          "param": 3,
+          "offset": 96279
+        }
+      ],
+      "initScript": {
+        "offset": 96295,
+        "length": 226,
+        "commands": [
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54",
+            "offset": 96295
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [300,15,434,100,0,3,1]",
+            "offset": 96358
+          },
+          {
+            "id": 6,
+            "subtype": 0,
+            "param": "10",
+            "offset": 96390
+          },
+          {
+            "id": 39,
+            "subtype": 0,
+            "param": "18 1 #ffffff Comic sans MS",
+            "offset": 96404
+          },
+          {
+            "id": 38,
+            "subtype": 0,
+            "param": "480 370 125 365 0 Quitter",
+            "offset": 96442
+          }
+        ]
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "MEDIUM",
+      "warnings": [
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x17909"
+      ],
+      "parseMethod": "heuristic_recovered",
+      "sceneType": "game"
+    },
+    {
+      "id": 33,
+      "offset": 96551,
+      "length": 3461,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\..\\couleurs1\\img24\\euroland\\bonus.bmp",
+          "param": 16,
+          "offset": 96575
+        },
+        {
+          "slot": 2,
+          "filename": "..\\..\\couleurs1\\html\\bonus1.htm",
+          "param": 0,
+          "offset": 96623
+        }
+      ],
+      "initScript": {
+        "offset": 96662,
+        "length": 24,
+        "commands": []
+      },
+      "config": {
+        "offset": 96686,
+        "flag": 4294967268,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 96714,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "60 360 125 365 0 Réponse N°1"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "bonus4 = 1 then playhtml bonus4.htm 0 50 100 600 400"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "bonus5 = 1 then playhtml bonus5.htm 0 50 100 600 400"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playhtml bonus6.htm 0 50 100 600 400"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus2.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then runprj ..\\ecosse\\ecosse.vnp 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then inc_var bonus4 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus2.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then scene 5"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then inc_var bonus5 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus1.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then runprj ..\\belge\\belge.vnp 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then inc_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then inc_var bonus6 1"
+            },
+            {
+              "id": 1,
+              "subtype": 41,
+              "param": "score 6 25 410 160 470 0 <score>"
+            },
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 86,
+                "y": 290
+              },
+              {
+                "x": 160,
+                "y": 351
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 1,
+          "offset": 97934,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "260 360 125 365 0 Réponse N°2"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus1.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then runprj ..\\ecosse\\ecosse.vnp 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then inc_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then inc_var bonus4 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus2.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then scene 5"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then inc_var bonus5 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus2.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then runprj ..\\belge\\belge.vnp 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then inc_var bonus6 1"
+            },
+            {
+              "id": 1,
+              "subtype": 41,
+              "param": "score 6 25 410 160 470 0 <score>"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 270,
+                "y": 292
+              },
+              {
+                "x": 342,
+                "y": 352
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 98900,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "410 360 125 365 0 Réponse N°3"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus2.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then runprj ..\\ecosse\\ecosse.vnp 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus4 = 1 then inc_var bonus4 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus1.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then playwav cling.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then scene 5"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then inc_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus5 = 1 then inc_var bonus5 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playavi ..\\..\\couleurs1\\movie\\bonus2.avi 1 421 70 630 290"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then playwav cartoon.wav 1"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then runprj ..\\belge\\belge.vnp 6"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then dec_var score 10"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus6 = 1 then inc_var bonus6 1"
+            },
+            {
+              "id": 1,
+              "subtype": 41,
+              "param": "score 6 25 410 160 470 0 <score>"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 433,
+                "y": 293
+              },
+              {
+                "x": 499,
+                "y": 352
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": -1,
+          "offset": 99978,
+          "commands": [
+            {
+              "id": 9999,
+              "subtype": 0,
+              "param": "..\\frontal\\start.vnp 3d"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
+          },
+          "isRecovered": true
+        }
+      ],
+      "objCount": 3,
+      "objCountValid": false,
+      "confidence": "HIGH",
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4"
+      ],
+      "parseMethod": "signature",
+      "sceneType": "game"
     }
   ],
   "logs": [
@@ -14904,44 +15903,50 @@
     "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
     "\n--- Analyse Scène #27 (0x15288 -> 0x16B04) ---",
     "\n--- Analyse Scène #28 (0x16B04 -> 0x16C65) ---",
+    "\n--- Analyse Scène #29 (0x16C65 -> 0x17601) ---",
+    "\n--- Analyse Scène #30 (0x17601 -> 0x177A1) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 2, Parsé: 0",
+    "\n--- Analyse Scène #31 (0x177A1 -> 0x17817) ---",
+    "\n--- Analyse Scène #32 (0x17817 -> 0x17927) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
+    "\n--- Analyse Scène #33 (0x17927 -> 0x186AC) ---",
     "\n============================================================",
     "P4: STATISTIQUES SCENE COUNT",
     "============================================================",
     "Header Scene Count: 34",
-    "Parser Scene Count: 29",
-    "Différence: -5",
+    "Parser Scene Count: 34",
+    "Différence: +0",
     "",
     "Breakdown par type:",
-    "  game           :  26 ( 89.7%)",
-    "  global_vars    :   1 (  3.4%)",
-    "  options        :   1 (  3.4%)",
-    "  unknown        :   1 (  3.4%)",
+    "  game           :  31 ( 91.2%)",
+    "  global_vars    :   1 (  2.9%)",
+    "  options        :   1 (  2.9%)",
+    "  unknown        :   1 (  2.9%)",
     "",
-    "⚠️ Parser trouve -5 scènes de moins que header",
-    "  Vérifier filtrage (toolbar/empty)",
+    "✓ Header et Parser en parfait accord!",
     "============================================================",
     "\n============================================================",
     "P5: STATISTIQUES COMMAND SUBTYPES",
     "============================================================",
-    "Total commandes: 1799",
+    "Total commandes: 1917",
     "Subtypes uniques: 23/49",
     "",
     "Top 15 subtypes par fréquence:",
-    "   21 (0x15) IF_THEN        :  1296 (72.04%)",
-    "    0 (0x00) QUIT           :   150 ( 8.34%)",
-    "   38 (0x26) PLAYTEXT       :    61 ( 3.39%)",
-    "   39 (0x27) FONT           :    53 ( 2.95%)",
-    "    6 (0x06) GOTO_SCENE     :    40 ( 2.22%)",
-    "   22 (0x16) UNKNOWN_22     :    32 ( 1.78%)",
-    "   11 (0x0B) UNKNOWN_11     :    31 ( 1.72%)",
-    "    9 (0x09) VIDEO          :    27 ( 1.50%)",
-    "   36 (0x24) UNKNOWN_36     :    26 ( 1.45%)",
-    "   40 (0x28) UNKNOWN_40     :    16 ( 0.89%)",
-    "   27 (0x1B) ADDBMP         :    12 ( 0.67%)",
-    "   23 (0x17) UNKNOWN_23     :    10 ( 0.56%)",
-    "   28 (0x1C) UNKNOWN_28     :     8 ( 0.44%)",
-    "   31 (0x1F) UNKNOWN_31     :     8 ( 0.44%)",
-    "   41 (0x29) UNKNOWN_41     :     7 ( 0.39%)",
+    "   21 (0x15) IF_THEN        :  1386 (72.30%)",
+    "    0 (0x00) QUIT           :   156 ( 8.14%)",
+    "   38 (0x26) PLAYTEXT       :    68 ( 3.55%)",
+    "   39 (0x27) FONT           :    60 ( 3.13%)",
+    "    6 (0x06) GOTO_SCENE     :    40 ( 2.09%)",
+    "   22 (0x16) UNKNOWN_22     :    32 ( 1.67%)",
+    "   11 (0x0B) UNKNOWN_11     :    31 ( 1.62%)",
+    "    9 (0x09) VIDEO          :    27 ( 1.41%)",
+    "   36 (0x24) UNKNOWN_36     :    26 ( 1.36%)",
+    "   40 (0x28) UNKNOWN_40     :    16 ( 0.83%)",
+    "   27 (0x1B) ADDBMP         :    13 ( 0.68%)",
+    "   41 (0x29) UNKNOWN_41     :    13 ( 0.68%)",
+    "   23 (0x17) UNKNOWN_23     :    10 ( 0.52%)",
+    "   28 (0x1C) UNKNOWN_28     :     8 ( 0.42%)",
+    "   31 (0x1F) UNKNOWN_31     :     8 ( 0.42%)",
     "",
     "✓ Subtypes identifiés: 9/23",
     "⚠️ Subtypes inconnus: 14/23",

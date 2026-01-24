@@ -10982,6 +10982,1419 @@
       "parseMethod": "heuristic_recovered",
       "sceneType": "game",
       "sceneName": "1"
+    },
+    {
+      "id": 29,
+      "offset": 64102,
+      "length": 1079,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\frontal\\vnoption.dll",
+          "param": 100,
+          "offset": 64102
+        }
+      ],
+      "initScript": {
+        "offset": 64133,
+        "length": 1048,
+        "commands": [
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [571,419,636,475,3,7,1]",
+            "offset": 64133
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then rundll ..\\barre\\euro32.dll",
+            "offset": 64165
+          },
+          {
+            "id": 28,
+            "subtype": 0,
+            "param": "calc1",
+            "offset": 64217
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp etoile ..\\..\\barre\\images\\calc2.bmp 6 249 400",
+            "offset": 64234
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetc.bmp 6 0 450",
+            "offset": 64312
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 64391
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 64471
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+            "offset": 64554
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [243,414,290,451,3,7,0]",
+            "offset": 64631
+          },
+          {
+            "id": 28,
+            "subtype": 0,
+            "param": "sac",
+            "offset": 64663
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp etoile ..\\..\\barre\\images\\sac2.bmp 6 385 400",
+            "offset": 64678
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp etoile1 ..\\..\\barre\\images\\textes.bmp 6 0 454",
+            "offset": 64758
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 64839
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+            "offset": 64919
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 64997
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then rundll ..\\barre\\inv.dll",
+            "offset": 65080
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [393,413,447,449,3,93,1]",
+            "offset": 65132
+          },
+          {
+            "id": 26,
+            "subtype": 0,
+            "param": "0",
+            "offset": 65164
+          }
+        ]
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [],
+      "confidence": "MEDIUM",
+      "warnings": [
+        "Aucune structure de Hotspot détectée. Mode fallback."
+      ],
+      "parseMethod": "heuristic",
+      "sceneType": "options"
+    },
+    {
+      "id": 30,
+      "offset": 65181,
+      "length": 6396,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "fleche.cur",
+          "param": 1,
+          "offset": 65181
+        }
+      ],
+      "initScript": {
+        "offset": 65199,
+        "length": 6314,
+        "commands": [
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "clerouge = 2 then dec_var clerouge 1",
+            "offset": 65199
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ballon1 = 2 then dec_var ballon1 1",
+            "offset": 65247
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bouee = 2 then dec_var bouee 1",
+            "offset": 65293
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bout_plo = 2 then dec_var bout_plo 1",
+            "offset": 65335
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bus = 2 then dec_var bus 1",
+            "offset": 65383
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "castagnette = 2 then dec_var castagnette 1",
+            "offset": 65421
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ciseaux = 2 then dec_var ciseaux 1",
+            "offset": 65475
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "clejaune = 2 then dec_var clejaune 1",
+            "offset": 65521
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "guitare = 2 then dec_var guitare 1",
+            "offset": 65569
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "harpon = 2 then dec_var harpon 1",
+            "offset": 65615
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "helice = 2 then dec_var helice 1",
+            "offset": 65659
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "loupe = 2 then dec_var loupe 1",
+            "offset": 65703
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "masque = 2 then dec_var masque 1",
+            "offset": 65745
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "masse = 2 then dec_var masse 1",
+            "offset": 65789
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "pain = 2 then dec_var pain 1",
+            "offset": 65831
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "palme = 2 then dec_var palme 1",
+            "offset": 65871
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "photo = 2 then dec_var photo 1",
+            "offset": 65913
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "piece = 2 then dec_var piece 1",
+            "offset": 65955
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "pier_berlin = 2 then dec_var pier_berlin 1",
+            "offset": 65997
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "raquette = 2 then dec_var raquette 1",
+            "offset": 66051
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ressort = 2 then dec_var ressort 1",
+            "offset": 66099
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "cheval = 2 then dec_var cheval 1",
+            "offset": 66145
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "riz = 2 then dec_var riz 1",
+            "offset": 66189
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ruban = 2 then dec_var ruban 1",
+            "offset": 66227
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sabot1 = 2 then dec_var sabot1 1",
+            "offset": 66269
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sabot2 = 2 then dec_var sabot2 1",
+            "offset": 66313
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "scotch = 2 then dec_var scotch 1",
+            "offset": 66357
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "taillepierre = 2 then dec_var taillepierre 1",
+            "offset": 66401
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ap_photo = 2 then dec_var ap_photo 1",
+            "offset": 66457
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "houblon = 2 then dec_var houblon 1",
+            "offset": 66505
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "chewing = 2 then dec_var chewing 1",
+            "offset": 66551
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "cleverte = 2 then dec_var cleverte 1",
+            "offset": 66597
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "partition = 2 then dec_var partition 1",
+            "offset": 66645
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "laine = 2 then dec_var laine 1",
+            "offset": 66695
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "tondeuse = 2 then dec_var tondeuse 1",
+            "offset": 66737
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "tournevis = 2 then dec_var tournevis 1",
+            "offset": 66785
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "cire = 2 then dec_var cire 1",
+            "offset": 66835
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "chianti = 2 then dec_var chianti 1",
+            "offset": 66875
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "rouedent = 2 then dec_var rouedent 1",
+            "offset": 66921
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "pierreor = 2 then dec_var pierreor 1",
+            "offset": 66969
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "papiercado = 2 then dec_var papiercado 1",
+            "offset": 67017
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "hotte = 2 then dec_var  hotte 1",
+            "offset": 67069
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "levure = 2 then dec_var  levure 1",
+            "offset": 67112
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bouteille = 2 then dec_var bouteille 1",
+            "offset": 67157
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "parfum = 2 then dec_var parfum 1",
+            "offset": 67207
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "rouge = 2 then dec_var rouge 1",
+            "offset": 67251
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bisous = 2 then dec_var bisous 1",
+            "offset": 67293
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ap = 2 then dec_var api 1",
+            "offset": 67337
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "pince = 2 then dec_var pince 1",
+            "offset": 67374
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "tulipejaune = 2 then dec_var tulipejaune 1",
+            "offset": 67416
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "tulipeorange = 2 then dec_var tulipeorange 1",
+            "offset": 67470
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "tuliperouge = 2 then dec_var tuliperouge 1",
+            "offset": 67526
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "tulipeverte = 2 then dec_var tulipeverte 1",
+            "offset": 67580
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "tulipeviolet = 2 then dec_var tulipeviolet 1",
+            "offset": 67634
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "farine = 2 then dec_var farine 1",
+            "offset": 67690
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "saliere = 2 then dec_var saliere 1",
+            "offset": 67734
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bougie = 2 then dec_var bougie 1",
+            "offset": 67780
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "seche = 2 then dec_var seche 1",
+            "offset": 67824
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bout_eau = 2 then dec_var bout_eau 1",
+            "offset": 67866
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "dorade = 2 then dec_var dorade 1",
+            "offset": 67914
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "moule = 2 then dec_var moule 1",
+            "offset": 67958
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ail = 2 then dec_var ail 1",
+            "offset": 68000
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "poivrouge = 2 then dec_var poivrouge 1",
+            "offset": 68038
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "poivjaune = 2 then dec_var poivjaune 1",
+            "offset": 68088
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "oignon = 2 then dec_var oignon 1",
+            "offset": 68138
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "olive = 2 then dec_var olive 1",
+            "offset": 68182
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bouillon = 2 then dec_var bouillon 1",
+            "offset": 68224
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "violon = 2 then dec_var violon 1",
+            "offset": 68272
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "skate = 2 then dec_var skate 1",
+            "offset": 68316
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "champagne = 2 then dec_var champagne 1",
+            "offset": 68358
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fromage = 2 then dec_var fromage 1",
+            "offset": 68408
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "bonnet = 2 then dec_var bonnet 1",
+            "offset": 68454
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "huile = 2 then dec_var huile 1",
+            "offset": 68498
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "orge = 2 then dec_var orge 1",
+            "offset": 68540
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "burette = 2 then dec_var burette 1",
+            "offset": 68580
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "allumette = 2 then dec_var allumette 1",
+            "offset": 68626
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "chouetteor = 2 then dec_var chouetteor 1",
+            "offset": 68676
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "chouette = 2 then dec_var chouette 1",
+            "offset": 68728
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sirop = 2 then dec_var sirop 1",
+            "offset": 68776
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiolegrece = 2 then dec_var  fiolegrece 1",
+            "offset": 68818
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiolegrece2 = 2 then dec_var  fiolegrece2 1",
+            "offset": 68871
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fioleecosse = 2 then dec_var  fioleecosse 1",
+            "offset": 68926
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fioleirlande = 2 then dec_var  fioleirlande 1",
+            "offset": 68981
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fioleespagne = 2 then dec_var  fioleespagne 1",
+            "offset": 69038
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiolesuede = 2 then dec_var  fiolesuede 1",
+            "offset": 69095
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiolefinlande = 2 then dec_var  fiolefinlande 1",
+            "offset": 69148
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fioleautriche = 2 then dec_var  fioleautriche 1",
+            "offset": 69207
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiolepaysbas = 2 then dec_var  fiolepaysbas 1",
+            "offset": 69266
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fioleespagne2 = 2 then dec_var  fioleespagne2 1",
+            "offset": 69323
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fioleitalie = 2 then dec_var  fioleitalie 1",
+            "offset": 69382
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fioleangleterre = 2 then dec_var  fioleangleterre 1",
+            "offset": 69437
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [551,463,558,470,3,12,0]",
+            "offset": 69500
+          },
+          {
+            "id": 28,
+            "subtype": 0,
+            "param": "active",
+            "offset": 69532
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp etoile ..\\..\\barre\\images\\trans2.bmp 6 162 400",
+            "offset": 69550
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetr.bmp 6 0 450",
+            "offset": 69630
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+            "offset": 69710
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 69788
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+            "offset": 69871
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then closewav",
+            "offset": 69948
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then closedll",
+            "offset": 69983
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then playavi ..\\..\\couleurs1\\movie\\retour.avi 1",
+            "offset": 70018
+          },
+          {
+            "id": 31,
+            "subtype": 0,
+            "param": "..\\couleurs1\\couleurs1.vnp 6",
+            "offset": 70087
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then dec_var score 50",
+            "offset": 70127
+          },
+          {
+            "id": 41,
+            "subtype": 0,
+            "param": "score 6 15 415 160 470 0 <score>",
+            "offset": 70170
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [166,413,222,454,3,10,0]",
+            "offset": 70214
+          },
+          {
+            "id": 28,
+            "subtype": 0,
+            "param": "telep",
+            "offset": 70246
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp etoile ..\\..\\barre\\images\\telep2.bmp 6 317 400",
+            "offset": 70263
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp etoile1 ..\\..\\barre\\images\\textet.bmp 6 0 450",
+            "offset": 70347
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 70430
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+            "offset": 70510
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+            "offset": 70588
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then closedll",
+            "offset": 70665
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then runprj ..\\couleurs1\\couleurs1.vnp 4",
+            "offset": 70704
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then dec_var score 1",
+            "offset": 70770
+          },
+          {
+            "id": 41,
+            "subtype": 0,
+            "param": "score 6 15 415 160 470 0 <score>",
+            "offset": 70816
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [322,415,369,449,3,0,100]",
+            "offset": 70860
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [545,419,553,425,0,0,100]",
+            "offset": 70892
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [146,458,518,468,0,1,0]",
+            "offset": 70924
+          },
+          {
+            "id": 27,
+            "subtype": 0,
+            "param": "etoile1 ..\\..\\barre\\images\\texteam.bmp 6 0 452",
+            "offset": 70956
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [17,409,90,437,0,6,0]",
+            "offset": 71014
+          },
+          {
+            "id": 30,
+            "subtype": 0,
+            "param": "etoile",
+            "offset": 71046
+          },
+          {
+            "id": 30,
+            "subtype": 0,
+            "param": "etoile1",
+            "offset": 71064
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 71083
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+            "offset": 71163
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 71241
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+            "offset": 71324
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [0,407,639,478,0,0,0]",
+            "offset": 71401
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 71433
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 71445
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 71461
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 71477
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 71493
+          }
+        ]
+      },
+      "config": {
+        "offset": 71513,
+        "flag": 4294967266,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [],
+      "objCount": 1,
+      "objCountValid": false,
+      "confidence": "HIGH",
+      "warnings": [
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
+        "⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 0"
+      ],
+      "parseMethod": "signature",
+      "sceneType": "unknown"
+    },
+    {
+      "id": 31,
+      "offset": 71577,
+      "length": 192,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "costume.dll",
+          "param": 100,
+          "offset": 71577
+        },
+        {
+          "slot": 2,
+          "filename": "7",
+          "param": 105,
+          "offset": 71712
+        }
+      ],
+      "initScript": {
+        "offset": 71721,
+        "length": 18,
+        "commands": [
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [493,362,552,420,0,0,0]",
+            "offset": 71721
+          }
+        ]
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "MEDIUM",
+      "warnings": [
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1183B"
+      ],
+      "parseMethod": "heuristic_recovered",
+      "sceneType": "game"
+    },
+    {
+      "id": 32,
+      "offset": 71769,
+      "length": 1165,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\..\\ecosse\\img24\\interc.bmp",
+          "param": 16,
+          "offset": 71793
+        }
+      ],
+      "initScript": {
+        "offset": 71862,
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": 71862,
+        "flag": 4294967266,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 71890,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "22 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "100 303 125 365 0 Un Parchemin"
+            },
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "34"
+            },
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 69,
+                "y": 61
+              },
+              {
+                "x": 264,
+                "y": 267
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 1,
+          "offset": 72079,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "vinci = 0 then scene 35"
+            },
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "22 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 0 then playtext 300 283 125 365 0 Une question à 50 euros."
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 0 then playtext 300 303 125 365 0 Si tu réponds juste, la somme"
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 0 then playtext 300 323 125 365 0 est pour toi, sinon tu perds"
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 0 then playtext 300 343 125 365 0  25 euros."
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 0 then playtext 300 363 125 365 0 Veux tu tenter ta chance ?"
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 1 then playtext 300 323 125 365 0 La réponse se trouve dans"
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 1 then playtext 300 343 125 365 0 la bibliothèque."
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 2 then playtext 300 323 125 365 0 Bien joué la question"
+            },
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "vinci = 2 then playtext 300 343 125 365 0 était difficile."
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 443,
+                "y": 88
+              },
+              {
+                "x": 588,
+                "y": 240
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 72865,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "7"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 20,
+                "y": 297
+              },
+              {
+                "x": 112,
+                "y": 387
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
+      ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 33,
+      "offset": 72934,
+      "length": 222,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "interc3.bmp",
+          "param": 16,
+          "offset": 72958
+        },
+        {
+          "slot": 2,
+          "filename": "coffre.htm",
+          "param": 0,
+          "offset": 72977
+        }
+      ],
+      "initScript": {
+        "offset": 72995,
+        "length": 24,
+        "commands": []
+      },
+      "config": {
+        "offset": 73019,
+        "flag": 4294967266,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 73047,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "33"
+            },
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            }
+          ],
+          "geometry": {
+            "cursorId": 105,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 2,
+                "y": -36
+              },
+              {
+                "x": 636,
+                "y": 434
+              }
+            ],
+            "extraFlag": 0
+          }
+        }
+      ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 34,
+      "offset": 73156,
+      "length": 1124,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "question.bmp",
+          "param": 0,
+          "offset": 73204
+        }
+      ],
+      "initScript": {
+        "offset": 73276,
+        "length": 950,
+        "commands": []
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 74230,
+          "commands": [
+            {
+              "id": 3,
+              "subtype": 31,
+              "param": "..\\frontal\\start.vnp 3"
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": -1,
+          "offset": 73268,
+          "commands": [
+            {
+              "id": 3,
+              "subtype": 21,
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+            },
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "33"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
+          },
+          "isRecovered": true
+        },
+        {
+          "index": -1,
+          "offset": 73345,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 1 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 0,
+              "param": "490 410 125 365 0 Quitteri"
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "..\\..\\grece\\digit\\cartoon.wav 1"
+            },
+            {
+              "id": 3,
+              "subtype": 6,
+              "param": "33i"
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "..\\..\\grece\\digit\\cartoon.wav 1"
+            },
+            {
+              "id": 3,
+              "subtype": 6,
+              "param": "33i"
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "..\\..\\grece\\digit\\cling.wav 1"
+            },
+            {
+              "id": 3,
+              "subtype": 6,
+              "param": "33i"
+            },
+            {
+              "id": 1,
+              "subtype": 11,
+              "param": "..\\..\\grece\\digit\\cartoon.wav 1"
+            },
+            {
+              "id": 3,
+              "subtype": 6,
+              "param": "33i"
+            }
+          ],
+          "geometry": {
+            "cursorId": 0,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
+          },
+          "isRecovered": true
+        }
+      ],
+      "objCount": 1,
+      "objCountValid": false,
+      "confidence": "MEDIUM",
+      "warnings": [
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x121F2",
+        "⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 3"
+      ],
+      "parseMethod": "heuristic_recovered",
+      "sceneType": "game"
     }
   ],
   "logs": [
@@ -11062,42 +12475,54 @@
     "\n--- Analyse Scène #27 (0xE760 -> 0xEC2C) ---",
     "\n--- Analyse Scène #28 (0xEC2C -> 0xEDB5) ---",
     "  [INFO] Scène 'Toolbar' à 0xEDB5 - Ignorée du mapping Slot.",
+    "\n--- Analyse Scène #29 (0xFA66 -> 0xFE9D) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 0",
+    "\n--- Analyse Scène #30 (0xFE9D -> 0x11799) ---",
+    "  [RECOVERY] Saut de 20 octets de padding à 0x1180c -> 0x11820",
+    "\n--- Analyse Scène #31 (0x11799 -> 0x11859) ---",
+    "\n--- Analyse Scène #32 (0x11859 -> 0x11CE6) ---",
+    "\n--- Analyse Scène #33 (0x11CE6 -> 0x11DC4) ---",
+    "  [RECOVERY] Saut de 20 octets de padding à 0x11e28 -> 0x11e3c",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 1, Parsé: 3",
+    "\n--- Analyse Scène #34 (0x11DC4 -> 0x12228) ---",
     "\n============================================================",
     "P4: STATISTIQUES SCENE COUNT",
     "============================================================",
     "Header Scene Count: 36",
-    "Parser Scene Count: 29",
-    "Différence: -7",
+    "Parser Scene Count: 35",
+    "Différence: -1",
     "",
     "Breakdown par type:",
-    "  game           :  28 ( 96.6%)",
-    "  global_vars    :   1 (  3.4%)",
+    "  game           :  32 ( 91.4%)",
+    "  global_vars    :   1 (  2.9%)",
+    "  options        :   1 (  2.9%)",
+    "  unknown        :   1 (  2.9%)",
     "",
-    "⚠️ Parser trouve -7 scènes de moins que header",
+    "⚠️ Parser trouve -1 scènes de moins que header",
     "  Vérifier filtrage (toolbar/empty)",
     "============================================================",
     "\n============================================================",
     "P5: STATISTIQUES COMMAND SUBTYPES",
     "============================================================",
-    "Total commandes: 1105",
+    "Total commandes: 1287",
     "Subtypes uniques: 22/49",
     "",
     "Top 15 subtypes par fréquence:",
-    "   21 (0x15) IF_THEN        :   721 (65.25%)",
-    "   39 (0x27) FONT           :   112 (10.14%)",
-    "   38 (0x26) PLAYTEXT       :    61 ( 5.52%)",
-    "    6 (0x06) GOTO_SCENE     :    35 ( 3.17%)",
-    "   41 (0x29) UNKNOWN_41     :    26 ( 2.35%)",
-    "   27 (0x1B) ADDBMP         :    25 ( 2.26%)",
-    "   16 (0x10) DELAY          :    23 ( 2.08%)",
-    "   36 (0x24) UNKNOWN_36     :    20 ( 1.81%)",
-    "   22 (0x16) UNKNOWN_22     :    16 ( 1.45%)",
-    "    9 (0x09) VIDEO          :    13 ( 1.18%)",
-    "   11 (0x0B) UNKNOWN_11     :    12 ( 1.09%)",
-    "   10 (0x0A) UNKNOWN_10     :    10 ( 0.90%)",
-    "    3 (0x03) UNKNOWN_3      :     6 ( 0.54%)",
-    "   25 (0x19) UNKNOWN_25     :     5 ( 0.45%)",
-    "   32 (0x20) UNKNOWN_32     :     5 ( 0.45%)",
+    "   21 (0x15) IF_THEN        :   734 (57.03%)",
+    "    0 (0x00) QUIT           :   153 (11.89%)",
+    "   39 (0x27) FONT           :   115 ( 8.94%)",
+    "   38 (0x26) PLAYTEXT       :    62 ( 4.82%)",
+    "    6 (0x06) GOTO_SCENE     :    43 ( 3.34%)",
+    "   41 (0x29) UNKNOWN_41     :    26 ( 2.02%)",
+    "   27 (0x1B) ADDBMP         :    25 ( 1.94%)",
+    "   16 (0x10) DELAY          :    23 ( 1.79%)",
+    "   36 (0x24) UNKNOWN_36     :    20 ( 1.55%)",
+    "   22 (0x16) UNKNOWN_22     :    16 ( 1.24%)",
+    "   11 (0x0B) UNKNOWN_11     :    16 ( 1.24%)",
+    "    9 (0x09) VIDEO          :    13 ( 1.01%)",
+    "   10 (0x0A) UNKNOWN_10     :    10 ( 0.78%)",
+    "    3 (0x03) UNKNOWN_3      :     6 ( 0.47%)",
+    "   25 (0x19) UNKNOWN_25     :     5 ( 0.39%)",
     "",
     "✓ Subtypes identifiés: 10/22",
     "⚠️ Subtypes inconnus: 12/22",

@@ -526,3 +526,141 @@ findSceneOffsets() → détecte global_vars AVANT signatures
 
 ---
 
+
+---
+
+## Analyse Complète de TOUS les VND (2026-01-24)
+
+### Vue d'Ensemble
+
+**19 fichiers VND analysés** avec le parser Gemini hybrid:
+- ✅ **2 VND parfaits (100% géométrie)**: grece.vnd, suede.vnd  
+- ⚠️ **11 VND bons (>95% géométrie)**: angleterre, couleurs1, ecosse, espa, finlan, france, holl, irland, italie, portu, allem
+- 🔴 **6 VND problématiques (<95% géométrie)**: biblio, frontal/start, belge, danem, autr, barre
+
+**Total**: 2051 hotspots parsés, 1679 avec géométrie (81.9%), 372 sans géométrie (18.1%)
+
+### Tableau Récapitulatif
+
+| VND | Header | Parsé | Hotspots | % Géométrie | Statut |
+|-----|--------|-------|----------|-------------|--------|
+| grece.vnd | 18 | 18 | 73 | **100.0%** | ✅ PARFAIT |
+| suede.vnd | 2 | 14 | 44 | **100.0%** | ✅ PARFAIT |
+| portu.vnd | 17 | 17 | 90 | 97.8% | ⚠️ Bon |
+| espa.vnd | 20 | 20 | 82 | 97.6% | ⚠️ Bon |
+| ecosse.vnd | 42 | 41 | 155 | 97.4% | ⚠️ Bon |
+| couleurs1.vnd | 31 | 55 | 174 | 97.1% | ⚠️ Bon |
+| italie.vnd | 36 | 35 | 98 | 96.9% | ⚠️ Bon |
+| holl.vnd | 22 | 22 | 111 | 96.4% | ⚠️ Bon |
+| finlan.vnd | 20 | 21 | 83 | 96.4% | ⚠️ Bon |
+| france.vnd | 34 | 34 | 103 | 96.1% | ⚠️ Bon |
+| angleterre.vnd | 81 | 81 | 170 | 95.9% | ⚠️ Bon |
+| irland.vnd | 3 | 24 | 95 | 95.8% | ⚠️ Bon |
+| allem.vnd | 15 | 15 | 58 | 93.1% | ⚠️ Acceptable |
+| autr.vnd | 24 | 36 | 84 | 86.9% | 🔴 Problème |
+| danem.vnd | 16 | 16 | 65 | 81.5% | 🔴 Problème |
+| barre.vnd | 0 | 8 | 21 | 81.0% | 🔴 Problème |
+| belge.vnd | 28 | 27 | 94 | 76.6% | 🔴 Problème |
+| **biblio.vnd** | 0 | 42 | 427 | **59.5%** | 🔴 CRITIQUE |
+| **frontal/start.vnd** | 8257 | 3 | 4 | **0.0%** | 🔴 CRITIQUE |
+
+### Scènes Spéciales (NORMALES sans géométrie)
+
+Ces types de scènes sont **attendus** sans hotspots ou avec InitScript logic:
+
+#### 1. Global Variables (`global_vars`)
+- **18 scènes** détectées (Scene #0 dans chaque VND)
+- **Fonction**: Déclaration variables globales du jeu
+- **Fichiers**: >50 fichiers (.dll, ressources)
+- **Hotspots**: 0 (normal)
+- **Exemple**: vnresmod.dll, COMPTEUR1, COMPTEUR2, etc.
+
+#### 2. Empty Slots (`empty`)
+- **10 scènes** détectées
+- **Pattern binaire**: `05 00 00 00 45 6D 70 74 79`
+- **Hotspots**: 0 (normal)
+
+#### 3. Options System (`options`)
+- **Fichier**: `..\frontal\vnoption.dll`
+- **Hotspots**: 0 (UI gérée par DLL)
+- **InitScript**: 53-92 commandes (NORMAL)
+- **Exemple**: frontal/start.vnd Scene #2
+
+#### 4. Toolbar/Curseur System
+- **Fichier**: `fleche.cur`
+- **Pattern**: 92 InitScript commands (initialisation curseurs)
+- **Présent dans**: 10+ VND
+- **Type**: Devrait être `toolbar` (actuellement `unknown`)
+- **InitScript avec 92 commandes = NORMAL**
+
+### Problèmes Critiques Identifiés
+
+#### 🔴 biblio.vnd - 173 hotspots sans géométrie (40.5%)
+
+**Scènes les plus touchées**:
+- Scene #18 @ 0xd163: **78/78 hotspots TOUS sans géo** (lesaistu.bmp, dico)
+- Scene #3 @ 0x167c: 17/17 sans géo (atlas.htm)
+- Scene #11 @ 0x8f7c: 13/36 sans géo (hymnes2.bmp)
+
+**Diagnostic**: Gap recovery crée massivement de faux hotspots
+
+#### 🔴 frontal/start.vnd - Header corrompu
+
+- Header déclare: **8257 scènes** (impossible!)
+- Parsé: 3 scènes seulement
+- 4/4 hotspots sans géométrie (0%)
+- **Cause probable**: Fichier corrompu ou format spécial
+
+#### ⚠️ danem Scene #14 @ 0x9a0a
+
+- **9/9 hotspots TOUS sans géométrie**
+- Fichiers: `sirene.bmp`, `"3"` (le "3" est un record Type 1, pas un fichier)
+- objCount: N/A (pas de signature détectée)
+- Commandes: FONT, PLAYTEXT, QUIT
+- **Gap recovery a parsé des records binaires comme hotspots**
+
+#### ⚠️ belge Scene #25 @ 0x1005f
+
+- **20/20 hotspots TOUS sans géométrie**
+- objCount déclaré: **0**
+- Hotspots parsés: **20** (créés par gap recovery)
+- **Gap recovery a créé 20 faux hotspots malgré objCount=0**
+
+### Patterns Récurrents
+
+#### Pattern 1: objCount=N/A
+- Pas de signature 0xFFFFFFxx détectée
+- Gap recovery crée des hotspots à partir de records binaires
+- Ces "hotspots" n'ont souvent PAS de géométrie
+
+#### Pattern 2: objCount=0 mais hotspots créés
+- Header déclare 0 hotspots attendus
+- Parser crée quand même des hotspots via gap recovery
+- **TOUS ces hotspots sont sans géométrie** (records binaires)
+
+#### Pattern 3: fleche.cur avec 92 InitScript
+- Scènes système pour curseurs
+- **C'EST NORMAL** (pas une erreur)
+- Type devrait être `toolbar`
+
+### Conclusion & Recommandations
+
+**État actuel du parser**:
+- ✅ Détection de scènes: **98.7%** (excellente)
+- ❌ Hotspots sans géométrie: **18.1%** (problématique)
+
+**Cause principale**: Le **gap recovery** crée des faux hotspots à partir de records binaires (Type 1, Type 39, etc.) qui ne sont pas de vrais hotspots.
+
+**Solution recommandée**: 
+1. **Parser STRICT** basé sur objCount: Lire exactement `objCount × 153 bytes`
+2. **Désactiver gap recovery** pour scènes avec signature
+3. **Validation géométrie**: Tout hotspot dans scène `game` DOIT avoir `pointCount > 0`
+4. **Investigation manuelle** des offsets problématiques (padding/décalages)
+
+**Fichiers nécessitant investigation manuelle**:
+- biblio.vnd (173 hotspots suspects)
+- frontal/start.vnd (header corrompu)
+- danem Scene #14 @ 0x9A0A
+- belge Scene #25 @ 0x1005F
+
+**Voir**: `VND_COMPREHENSIVE_ANALYSIS.md` pour détails complets

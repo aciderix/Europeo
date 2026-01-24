@@ -1,0 +1,2070 @@
+[
+  {
+    "file": "allem/allem.vnd",
+    "header_scene_count": 15,
+    "parsed_scene_count": 15,
+    "total_hotspots": 58,
+    "with_geo": 54,
+    "without_geo": 4,
+    "scenes_with_init_logic": 3,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 5,
+        "offset": "0x5e8a",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "..\\..\\ecosse\\img24\\papier.bmp",
+          "beethov.htm"
+        ]
+      },
+      {
+        "id": 6,
+        "offset": "0x607c",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 0,
+        "init_cmds": 17,
+        "files": [
+          "biere.bmp",
+          "la biere.htm"
+        ]
+      },
+      {
+        "id": 9,
+        "offset": "0x8826",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "murberlin.wav",
+          "..\\..\\ecosse\\img24\\papier.bmp"
+        ]
+      },
+      {
+        "id": 11,
+        "offset": "0x9acb",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 12,
+        "offset": "0xb347",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "ferme.bmp"
+        ]
+      },
+      {
+        "id": 14,
+        "offset": "0xb68d",
+        "type": "game",
+        "objCount": 7,
+        "hotspots": 8,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "fabricbiere.bmp"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "angl/angleterre.vnd",
+    "header_scene_count": 81,
+    "parsed_scene_count": 81,
+    "total_hotspots": 170,
+    "with_geo": 163,
+    "without_geo": 7,
+    "scenes_with_init_logic": 16,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 22,
+        "offset": "0x3915",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "london0.bmp"
+        ]
+      },
+      {
+        "id": 23,
+        "offset": "0x39f7",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "london0.bmp"
+        ]
+      },
+      {
+        "id": 29,
+        "offset": "0x7d0e",
+        "type": "game",
+        "objCount": 2,
+        "hotspots": 2,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel2.bmp"
+        ]
+      },
+      {
+        "id": 37,
+        "offset": "0x88f9",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel1_1.bmp"
+        ]
+      },
+      {
+        "id": 38,
+        "offset": "0x898b",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel2_2.bmp"
+        ]
+      },
+      {
+        "id": 39,
+        "offset": "0x8a1d",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel3_3.bmp"
+        ]
+      },
+      {
+        "id": 40,
+        "offset": "0x8aaf",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel5_5.bmp"
+        ]
+      },
+      {
+        "id": 41,
+        "offset": "0x8b41",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel911.bmp"
+        ]
+      },
+      {
+        "id": 42,
+        "offset": "0x8bd3",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel4_4.bmp"
+        ]
+      },
+      {
+        "id": 43,
+        "offset": "0x8c65",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel6_6.bmp"
+        ]
+      },
+      {
+        "id": 44,
+        "offset": "0x8cf7",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel7_7.bmp"
+        ]
+      },
+      {
+        "id": 45,
+        "offset": "0x8d89",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel8_8.bmp"
+        ]
+      },
+      {
+        "id": 46,
+        "offset": "0x8e1b",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "squel9_9.bmp"
+        ]
+      },
+      {
+        "id": 48,
+        "offset": "0x92fd",
+        "type": "game",
+        "objCount": 4,
+        "hotspots": 4,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "vent.wav",
+          "stone.bmp"
+        ]
+      },
+      {
+        "id": 49,
+        "offset": "0xa510",
+        "type": "game",
+        "objCount": 4,
+        "hotspots": 5,
+        "without_geo": 2,
+        "init_cmds": 0,
+        "files": [
+          "stone2.bmp"
+        ]
+      },
+      {
+        "id": 54,
+        "offset": "0xc79d",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "puce2.bmp"
+        ]
+      },
+      {
+        "id": 58,
+        "offset": "0xdf9b",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "bigben.wav",
+          "..\\..\\ecosse\\img24\\papier.bmp"
+        ]
+      },
+      {
+        "id": 67,
+        "offset": "0xfd7c",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 3,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "joyaux .wav",
+          "fonbijou.bmp"
+        ]
+      },
+      {
+        "id": 70,
+        "offset": "0x105f9",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 0,
+        "init_cmds": 2,
+        "files": [
+          "the.wav",
+          "..\\..\\ecosse\\img24\\papier.bmp"
+        ]
+      },
+      {
+        "id": 72,
+        "offset": "0x1184e",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 79,
+        "offset": "0x141f7",
+        "type": "game",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "..\\..\\couleurs1\\img24\\euroland\\bonus.bmp",
+          "bonus26.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "autr/autr.vnd",
+    "header_scene_count": 24,
+    "parsed_scene_count": 36,
+    "total_hotspots": 84,
+    "with_geo": 73,
+    "without_geo": 11,
+    "scenes_with_init_logic": 15,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 7,
+        "offset": "0x6fd2",
+        "type": "unknown",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 37,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 8,
+        "offset": "0x7720",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 4,
+        "files": [
+          "espa.cur",
+          "mesp 1"
+        ]
+      },
+      {
+        "id": 9,
+        "offset": "0x7805",
+        "type": "unknown",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 36,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 10,
+        "offset": "0x7f3b",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 4,
+        "files": [
+          "grece.cur",
+          "mgre 1"
+        ]
+      },
+      {
+        "id": 11,
+        "offset": "0x8021",
+        "type": "unknown",
+        "objCount": "N/A",
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 36,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 12,
+        "offset": "0x8792",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 2,
+        "files": [
+          "angl.cur",
+          "mgra 1"
+        ]
+      },
+      {
+        "id": 13,
+        "offset": "0x8830",
+        "type": "unknown",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 36,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 14,
+        "offset": "0x8f57",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 4,
+        "files": [
+          "italie.cur",
+          "mita 1"
+        ]
+      },
+      {
+        "id": 15,
+        "offset": "0x903f",
+        "type": "unknown",
+        "objCount": "N/A",
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 36,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 16,
+        "offset": "0x97ca",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 2,
+        "files": [
+          "alleman.cur",
+          "mall 1"
+        ]
+      },
+      {
+        "id": 17,
+        "offset": "0x986b",
+        "type": "unknown",
+        "objCount": "N/A",
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 36,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 18,
+        "offset": "0x9fdb",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 17,
+        "files": [
+          "france.cur",
+          "mfra 1"
+        ]
+      },
+      {
+        "id": 23,
+        "offset": "0xd679",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 5,
+        "files": [
+          "..\\..\\ecosse\\img24\\papier.bmp",
+          "mozart.htm"
+        ]
+      },
+      {
+        "id": 30,
+        "offset": "0xf434",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 35,
+        "offset": "0x123b2",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "abeille.bmp"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "barre/barre.vnd",
+    "header_scene_count": 0,
+    "parsed_scene_count": 8,
+    "total_hotspots": 21,
+    "with_geo": 17,
+    "without_geo": 4,
+    "scenes_with_init_logic": 6,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 0
+    },
+    "problematic_scenes": [
+      {
+        "id": 2,
+        "offset": "0x4b4",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "euro32.dll"
+        ]
+      },
+      {
+        "id": 3,
+        "offset": "0x4ea",
+        "type": "game",
+        "objCount": 7,
+        "hotspots": 3,
+        "without_geo": 0,
+        "init_cmds": 12,
+        "files": [
+          "inv.dll"
+        ]
+      },
+      {
+        "id": 4,
+        "offset": "0x128c",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 9,
+        "without_geo": 3,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 5,
+        "offset": "0x3268",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 1,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 7,
+        "offset": "0x5665",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "belge/belge.vnd",
+    "header_scene_count": 28,
+    "parsed_scene_count": 27,
+    "total_hotspots": 94,
+    "with_geo": 72,
+    "without_geo": 22,
+    "scenes_with_init_logic": 4,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 18,
+        "offset": "0xcd24",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 17,
+        "files": [
+          "math.bmp"
+        ]
+      },
+      {
+        "id": 24,
+        "offset": "0xe7e3",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 25,
+        "offset": "0x1005f",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 20,
+        "without_geo": 20,
+        "init_cmds": 2,
+        "files": [
+          "paysliste.bmp",
+          "cpays 1"
+        ]
+      },
+      {
+        "id": 26,
+        "offset": "0x11ae9",
+        "type": "game",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "..\\..\\couleurs1\\img24\\euroland\\bonus.bmp",
+          "..\\..\\couleurs1\\html\\bonus1.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "biblio/biblio.vnd",
+    "header_scene_count": 0,
+    "parsed_scene_count": 42,
+    "total_hotspots": 427,
+    "with_geo": 254,
+    "without_geo": 173,
+    "scenes_with_init_logic": 17,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 2,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 1,
+        "offset": "0x11ce",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 8,
+        "files": [
+          "ency.bmp",
+          "2"
+        ]
+      },
+      {
+        "id": 2,
+        "offset": "0x1356",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 23,
+        "files": [
+          "vue ency01.bmp"
+        ]
+      },
+      {
+        "id": 3,
+        "offset": "0x167c",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 17,
+        "without_geo": 17,
+        "init_cmds": 4,
+        "files": [
+          "paysliste2.bmp",
+          "atlas.htm"
+        ]
+      },
+      {
+        "id": 4,
+        "offset": "0x264e",
+        "type": "game",
+        "objCount": 2,
+        "hotspots": 3,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "rec2.bmp",
+          "vide.htm"
+        ]
+      },
+      {
+        "id": 5,
+        "offset": "0x2aa8",
+        "type": "game",
+        "objCount": 10,
+        "hotspots": 11,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "cuis1.bmp"
+        ]
+      },
+      {
+        "id": 8,
+        "offset": "0x6059",
+        "type": "game",
+        "objCount": 2,
+        "hotspots": 3,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "rec2.bmp",
+          "vide.htm"
+        ]
+      },
+      {
+        "id": 11,
+        "offset": "0x8f7c",
+        "type": "game",
+        "objCount": 36,
+        "hotspots": 15,
+        "without_geo": 13,
+        "init_cmds": 7,
+        "files": [
+          "hymnes2.bmp",
+          "euro"
+        ]
+      },
+      {
+        "id": 18,
+        "offset": "0xd163",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 78,
+        "without_geo": 78,
+        "init_cmds": 2,
+        "files": [
+          "lesaistu.bmp",
+          "dico 1"
+        ]
+      },
+      {
+        "id": 22,
+        "offset": "0x1249e",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 3,
+        "without_geo": 3,
+        "init_cmds": 6,
+        "files": [
+          "photos\\index5.bmp",
+          "tic1.wav"
+        ]
+      },
+      {
+        "id": 23,
+        "offset": "0x12f48",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 3,
+        "without_geo": 3,
+        "init_cmds": 7,
+        "files": [
+          "photos\\index11.bmp",
+          "tic1.wav"
+        ]
+      },
+      {
+        "id": 24,
+        "offset": "0x13a80",
+        "type": "game",
+        "objCount": 13,
+        "hotspots": 15,
+        "without_geo": 2,
+        "init_cmds": 10,
+        "files": [
+          "photos\\index2.bmp"
+        ]
+      },
+      {
+        "id": 25,
+        "offset": "0x1476a",
+        "type": "game",
+        "objCount": 12,
+        "hotspots": 14,
+        "without_geo": 2,
+        "init_cmds": 9,
+        "files": [
+          "photos\\index14.bmp"
+        ]
+      },
+      {
+        "id": 26,
+        "offset": "0x153d9",
+        "type": "game",
+        "objCount": 13,
+        "hotspots": 15,
+        "without_geo": 2,
+        "init_cmds": 10,
+        "files": [
+          "photos\\index12.bmp"
+        ]
+      },
+      {
+        "id": 27,
+        "offset": "0x160c9",
+        "type": "game",
+        "objCount": 12,
+        "hotspots": 14,
+        "without_geo": 2,
+        "init_cmds": 8,
+        "files": [
+          "photos\\index6.bmp"
+        ]
+      },
+      {
+        "id": 28,
+        "offset": "0x16cd2",
+        "type": "game",
+        "objCount": 13,
+        "hotspots": 15,
+        "without_geo": 2,
+        "init_cmds": 10,
+        "files": [
+          "photos\\index10.bmp"
+        ]
+      },
+      {
+        "id": 29,
+        "offset": "0x179b7",
+        "type": "game",
+        "objCount": 10,
+        "hotspots": 12,
+        "without_geo": 2,
+        "init_cmds": 3,
+        "files": [
+          "photos\\index4.bmp"
+        ]
+      },
+      {
+        "id": 30,
+        "offset": "0x18396",
+        "type": "game",
+        "objCount": 7,
+        "hotspots": 9,
+        "without_geo": 2,
+        "init_cmds": 0,
+        "files": [
+          "photos\\index13.bmp"
+        ]
+      },
+      {
+        "id": 31,
+        "offset": "0x18b30",
+        "type": "game",
+        "objCount": 7,
+        "hotspots": 9,
+        "without_geo": 2,
+        "init_cmds": 0,
+        "files": [
+          "photos\\index3.bmp"
+        ]
+      },
+      {
+        "id": 32,
+        "offset": "0x192b0",
+        "type": "game",
+        "objCount": 14,
+        "hotspots": 16,
+        "without_geo": 2,
+        "init_cmds": 12,
+        "files": [
+          "photos\\index7.bmp"
+        ]
+      },
+      {
+        "id": 33,
+        "offset": "0x1a0aa",
+        "type": "game",
+        "objCount": 13,
+        "hotspots": 15,
+        "without_geo": 2,
+        "init_cmds": 12,
+        "files": [
+          "photos\\index8.bmp"
+        ]
+      },
+      {
+        "id": 34,
+        "offset": "0x1ae17",
+        "type": "game",
+        "objCount": 7,
+        "hotspots": 9,
+        "without_geo": 2,
+        "init_cmds": 0,
+        "files": [
+          "photos\\index15.bmp"
+        ]
+      },
+      {
+        "id": 35,
+        "offset": "0x1b5a6",
+        "type": "game",
+        "objCount": 7,
+        "hotspots": 9,
+        "without_geo": 2,
+        "init_cmds": 0,
+        "files": [
+          "photos\\index1.bmp"
+        ]
+      },
+      {
+        "id": 36,
+        "offset": "0x1bd18",
+        "type": "game",
+        "objCount": 10,
+        "hotspots": 12,
+        "without_geo": 2,
+        "init_cmds": 4,
+        "files": [
+          "photos\\index9.bmp"
+        ]
+      },
+      {
+        "id": 39,
+        "offset": "0x1f09c",
+        "type": "game",
+        "objCount": 2,
+        "hotspots": 3,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "fond3.bmp",
+          "vide.htm"
+        ]
+      },
+      {
+        "id": 40,
+        "offset": "0x1f7ed",
+        "type": "game",
+        "objCount": 9,
+        "hotspots": 10,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "cuis2.bmp"
+        ]
+      },
+      {
+        "id": 41,
+        "offset": "0x20e61",
+        "type": "game",
+        "objCount": 3,
+        "hotspots": 36,
+        "without_geo": 28,
+        "init_cmds": 3,
+        "files": [
+          "cuis22.bmp",
+          "5"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "couleurs1/couleurs1.vnd",
+    "header_scene_count": 31,
+    "parsed_scene_count": 55,
+    "total_hotspots": 174,
+    "with_geo": 169,
+    "without_geo": 5,
+    "scenes_with_init_logic": 6,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 8,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 8,
+        "offset": "0x5ace",
+        "type": "game",
+        "objCount": 5,
+        "hotspots": 7,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "euroland\\armoire3.bmp"
+        ]
+      },
+      {
+        "id": 37,
+        "offset": "0xc4ad",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 40,
+        "offset": "0xe918",
+        "type": "game",
+        "objCount": 17,
+        "hotspots": 18,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "bruit\\foret.wav",
+          "euroland\\fiole2.bmp"
+        ]
+      },
+      {
+        "id": 41,
+        "offset": "0x1136a",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 7,
+        "files": []
+      },
+      {
+        "id": 42,
+        "offset": "0x11429",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 3,
+        "files": []
+      },
+      {
+        "id": 43,
+        "offset": "0x114c7",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 2,
+        "files": []
+      },
+      {
+        "id": 49,
+        "offset": "0x12127",
+        "type": "game",
+        "objCount": 3,
+        "hotspots": 3,
+        "without_geo": 2,
+        "init_cmds": 0,
+        "files": [
+          "euroland\\euro2.bmp"
+        ]
+      },
+      {
+        "id": 54,
+        "offset": "0x1283c",
+        "type": "game_over",
+        "objCount": "N/A",
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 4,
+        "files": [
+          "perdu.avi",
+          "perdu.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "danem/danem.vnd",
+    "header_scene_count": 16,
+    "parsed_scene_count": 16,
+    "total_hotspots": 65,
+    "with_geo": 53,
+    "without_geo": 12,
+    "scenes_with_init_logic": 5,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 2,
+        "offset": "0x13b4",
+        "type": "game",
+        "objCount": 9,
+        "hotspots": 10,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "a_dan.wav",
+          "forge.bmp"
+        ]
+      },
+      {
+        "id": 9,
+        "offset": "0x6945",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 1,
+        "files": [
+          "a_dan.wav",
+          "loc5.bmp"
+        ]
+      },
+      {
+        "id": 12,
+        "offset": "0x7fcf",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 14,
+        "offset": "0x9a0a",
+        "type": "game",
+        "objCount": "N/A",
+        "hotspots": 9,
+        "without_geo": 9,
+        "init_cmds": 3,
+        "files": [
+          "sirene.bmp",
+          "3"
+        ]
+      },
+      {
+        "id": 15,
+        "offset": "0xa16f",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 2,
+        "files": [
+          "..\\..\\ecosse\\img24\\papier.bmp",
+          "andersen.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "ecosse/ecosse.vnd",
+    "header_scene_count": 42,
+    "parsed_scene_count": 41,
+    "total_hotspots": 155,
+    "with_geo": 151,
+    "without_geo": 4,
+    "scenes_with_init_logic": 6,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 17,
+        "offset": "0xa6e4",
+        "type": "game",
+        "objCount": 7,
+        "hotspots": 8,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "monstre.wav",
+          "photo.bmp"
+        ]
+      },
+      {
+        "id": 21,
+        "offset": "0xc8f1",
+        "type": "game",
+        "objCount": 4,
+        "hotspots": 4,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "boite.bmp"
+        ]
+      },
+      {
+        "id": 24,
+        "offset": "0xd095",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 3,
+        "files": [
+          "roltext\\rolpas1.bmp",
+          "7"
+        ]
+      },
+      {
+        "id": 25,
+        "offset": "0xd1ed",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 4,
+        "files": [
+          "roltext\\rolpas.bmp",
+          "7"
+        ]
+      },
+      {
+        "id": 26,
+        "offset": "0xd385",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 4,
+        "files": [
+          "roltext\\colo2.bmp",
+          "7"
+        ]
+      },
+      {
+        "id": 27,
+        "offset": "0xd519",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 3,
+        "files": [
+          "roltext\\colo1.bmp",
+          "7"
+        ]
+      },
+      {
+        "id": 31,
+        "offset": "0xdd85",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "papier.bmp",
+          "edimburg.htm"
+        ]
+      },
+      {
+        "id": 36,
+        "offset": "0xf77e",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 40,
+        "offset": "0x1169c",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "photo2.bmp"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "espa/espa.vnd",
+    "header_scene_count": 20,
+    "parsed_scene_count": 20,
+    "total_hotspots": 82,
+    "with_geo": 80,
+    "without_geo": 2,
+    "scenes_with_init_logic": 2,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 12,
+        "offset": "0xd382",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "sagrada.wav",
+          "..\\..\\ecosse\\img24\\papierbleu.bmp"
+        ]
+      },
+      {
+        "id": 15,
+        "offset": "0xeb4b",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 19,
+        "offset": "0x11983",
+        "type": "game",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "..\\..\\couleurs1\\img24\\euroland\\bonus.bmp",
+          "..\\..\\couleurs1\\html\\bonus1.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "finlan/finlan.vnd",
+    "header_scene_count": 20,
+    "parsed_scene_count": 21,
+    "total_hotspots": 83,
+    "with_geo": 80,
+    "without_geo": 3,
+    "scenes_with_init_logic": 4,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 2,
+        "offset": "0x1861",
+        "type": "game",
+        "objCount": 9,
+        "hotspots": 9,
+        "without_geo": 0,
+        "init_cmds": 73,
+        "files": [
+          "a_fin.wav",
+          "noel.bmp"
+        ]
+      },
+      {
+        "id": 8,
+        "offset": "0x469c",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "scotman.bmp"
+        ]
+      },
+      {
+        "id": 10,
+        "offset": "0x4a97",
+        "type": "game",
+        "objCount": 9,
+        "hotspots": 9,
+        "without_geo": 0,
+        "init_cmds": 17,
+        "files": [
+          "a_fin.wav",
+          "noel2.bmp"
+        ]
+      },
+      {
+        "id": 15,
+        "offset": "0x5db3",
+        "type": "game",
+        "objCount": 22,
+        "hotspots": 23,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": []
+      },
+      {
+        "id": 19,
+        "offset": "0x95eb",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 20,
+        "offset": "0xae67",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "..\\..\\italie\\img24\\papierfiole2.bmp"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "france/france.vnd",
+    "header_scene_count": 34,
+    "parsed_scene_count": 34,
+    "total_hotspots": 103,
+    "with_geo": 99,
+    "without_geo": 4,
+    "scenes_with_init_logic": 5,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 4,
+        "offset": "0x3f0e",
+        "type": "game",
+        "objCount": 7,
+        "hotspots": 8,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "france.wav",
+          "paris2.bmp"
+        ]
+      },
+      {
+        "id": 7,
+        "offset": "0xa685",
+        "type": "game",
+        "objCount": 2,
+        "hotspots": 3,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "gare.bmp"
+        ]
+      },
+      {
+        "id": 14,
+        "offset": "0x118f9",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 0,
+        "init_cmds": 2,
+        "files": [
+          "..\\..\\ecosse\\img24\\papier.bmp",
+          "pasteur.htm"
+        ]
+      },
+      {
+        "id": 16,
+        "offset": "0x11def",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 0,
+        "init_cmds": 17,
+        "files": [
+          "..\\..\\ecosse\\img24\\papier.bmp",
+          "tour.htm"
+        ]
+      },
+      {
+        "id": 20,
+        "offset": "0x129fc",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "pepe1.bmp"
+        ]
+      },
+      {
+        "id": 27,
+        "offset": "0x15288",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 32,
+        "offset": "0x17817",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 5,
+        "files": [
+          "frog.dll"
+        ]
+      },
+      {
+        "id": 33,
+        "offset": "0x17927",
+        "type": "game",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "..\\..\\couleurs1\\img24\\euroland\\bonus.bmp",
+          "..\\..\\couleurs1\\html\\bonus1.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "frontal/start.vnd",
+    "header_scene_count": 8257,
+    "parsed_scene_count": 3,
+    "total_hotspots": 4,
+    "with_geo": 0,
+    "without_geo": 4,
+    "scenes_with_init_logic": 1,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 0,
+        "offset": "0x92",
+        "type": "global_vars",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 2,
+        "init_cmds": 0,
+        "files": [
+          "..\\vnstudio\\vnresmod.dll",
+          "SACADOS"
+        ]
+      },
+      {
+        "id": 2,
+        "offset": "0x139b",
+        "type": "options",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 2,
+        "init_cmds": 5,
+        "files": [
+          "..\\frontal\\vnoption.dll"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "grece/grece.vnd",
+    "header_scene_count": 18,
+    "parsed_scene_count": 18,
+    "total_hotspots": 73,
+    "with_geo": 73,
+    "without_geo": 0,
+    "scenes_with_init_logic": 3,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 6,
+        "offset": "0x69c1",
+        "type": "game",
+        "objCount": 6,
+        "hotspots": 7,
+        "without_geo": 0,
+        "init_cmds": 17,
+        "files": [
+          "a_gre.wav",
+          "mete2.bmp"
+        ]
+      },
+      {
+        "id": 12,
+        "offset": "0x993c",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 0,
+        "init_cmds": 2,
+        "files": [
+          "..\\..\\ecosse\\img24\\papierbleu.bmp",
+          "jo.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "holl/holl.vnd",
+    "header_scene_count": 22,
+    "parsed_scene_count": 22,
+    "total_hotspots": 111,
+    "with_geo": 107,
+    "without_geo": 4,
+    "scenes_with_init_logic": 3,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 3,
+        "offset": "0x2973",
+        "type": "game",
+        "objCount": 10,
+        "hotspots": 12,
+        "without_geo": 3,
+        "init_cmds": 0,
+        "files": [
+          "meuni.bmp"
+        ]
+      },
+      {
+        "id": 9,
+        "offset": "0x68f9",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 0,
+        "init_cmds": 17,
+        "files": [
+          "polder.wav",
+          "..\\..\\ecosse\\img24\\papier.bmp"
+        ]
+      },
+      {
+        "id": 16,
+        "offset": "0xa118",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 21,
+        "offset": "0xcd0c",
+        "type": "game",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "..\\..\\couleurs1\\img24\\euroland\\bonus.bmp",
+          "..\\..\\couleurs1\\html\\bonus1.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "irland/irland.vnd",
+    "header_scene_count": 3,
+    "parsed_scene_count": 24,
+    "total_hotspots": 95,
+    "with_geo": 91,
+    "without_geo": 4,
+    "scenes_with_init_logic": 7,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 10,
+        "offset": "0x8b40",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "..\\irland\\bateau.dll"
+        ]
+      },
+      {
+        "id": 13,
+        "offset": "0x8ff6",
+        "type": "game",
+        "objCount": 6,
+        "hotspots": 7,
+        "without_geo": 0,
+        "init_cmds": 17,
+        "files": [
+          "intbato.bmp"
+        ]
+      },
+      {
+        "id": 15,
+        "offset": "0x972d",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 16,
+        "files": [
+          "book03.bmp",
+          "LEVRIERNUMERO 1"
+        ]
+      },
+      {
+        "id": 16,
+        "offset": "0x99a2",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 16,
+        "files": [
+          "book04.bmp",
+          "LEVRIERPARI 1"
+        ]
+      },
+      {
+        "id": 17,
+        "offset": "0x9bd9",
+        "type": "game",
+        "objCount": 4,
+        "hotspots": 4,
+        "without_geo": 3,
+        "init_cmds": 0,
+        "files": [
+          "book05.bmp"
+        ]
+      },
+      {
+        "id": 18,
+        "offset": "0xa2d7",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 1,
+        "init_cmds": 1,
+        "files": [
+          "..\\..\\ecosse\\img24\\papier.bmp",
+          "famine.htm"
+        ]
+      },
+      {
+        "id": 20,
+        "offset": "0xb4d3",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "italie/italie.vnd",
+    "header_scene_count": 36,
+    "parsed_scene_count": 35,
+    "total_hotspots": 98,
+    "with_geo": 95,
+    "without_geo": 3,
+    "scenes_with_init_logic": 4,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 27,
+        "offset": "0xe760",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 2,
+        "without_geo": 0,
+        "init_cmds": 17,
+        "files": [
+          "leo1.bmp",
+          "leo.htm"
+        ]
+      },
+      {
+        "id": 30,
+        "offset": "0xfe9d",
+        "type": "unknown",
+        "objCount": 1,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 132,
+        "files": [
+          "fleche.cur"
+        ]
+      },
+      {
+        "id": 31,
+        "offset": "0x11799",
+        "type": "game",
+        "objCount": 0,
+        "hotspots": 0,
+        "without_geo": 0,
+        "init_cmds": 1,
+        "files": [
+          "costume.dll",
+          "7"
+        ]
+      },
+      {
+        "id": 34,
+        "offset": "0x11dc4",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 3,
+        "without_geo": 3,
+        "init_cmds": 0,
+        "files": [
+          "question.bmp"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "portu/portu.vnd",
+    "header_scene_count": 17,
+    "parsed_scene_count": 17,
+    "total_hotspots": 90,
+    "with_geo": 88,
+    "without_geo": 2,
+    "scenes_with_init_logic": 4,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 8,
+        "offset": "0xa82e",
+        "type": "game",
+        "objCount": 5,
+        "hotspots": 6,
+        "without_geo": 1,
+        "init_cmds": 1,
+        "files": [
+          "port.wav",
+          "port.bmp"
+        ]
+      },
+      {
+        "id": 9,
+        "offset": "0xc13c",
+        "type": "game",
+        "objCount": 5,
+        "hotspots": 6,
+        "without_geo": 1,
+        "init_cmds": 0,
+        "files": [
+          "tram.bmp",
+          "tram.wav"
+        ]
+      },
+      {
+        "id": 11,
+        "offset": "0xe949",
+        "type": "game",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 21,
+        "files": [
+          "expouni.bmp",
+          "expo_uni.htm"
+        ]
+      },
+      {
+        "id": 16,
+        "offset": "0x1091a",
+        "type": "unknown",
+        "objCount": 3,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "suede/suede.vnd",
+    "header_scene_count": 2,
+    "parsed_scene_count": 14,
+    "total_hotspots": 44,
+    "with_geo": 44,
+    "without_geo": 0,
+    "scenes_with_init_logic": 3,
+    "scenes_special": {
+      "vnoption": 0,
+      "empty": 0,
+      "toolbar": 0,
+      "global_vars": 1
+    },
+    "problematic_scenes": [
+      {
+        "id": 10,
+        "offset": "0x9a2d",
+        "type": "game",
+        "objCount": 1,
+        "hotspots": 1,
+        "without_geo": 0,
+        "init_cmds": 17,
+        "files": [
+          "..\\..\\ecosse\\img24\\papier.bmp",
+          "ski.htm"
+        ]
+      },
+      {
+        "id": 12,
+        "offset": "0xb05d",
+        "type": "unknown",
+        "objCount": 7,
+        "hotspots": 4,
+        "without_geo": 0,
+        "init_cmds": 92,
+        "files": [
+          "fleche.cur"
+        ]
+      }
+    ]
+  }
+]
