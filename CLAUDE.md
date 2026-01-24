@@ -664,3 +664,135 @@ Ces types de scènes sont **attendus** sans hotspots ou avec InitScript logic:
 - belge Scene #25 @ 0x1005F
 
 **Voir**: `VND_COMPREHENSIVE_ANALYSIS.md` pour détails complets
+
+---
+
+## Investigation Binaire Manuelle (2026-01-24)
+
+### Scènes Investigées
+
+Suite à l'analyse complète des 19 VND, investigation binaire manuelle des scènes les plus problématiques.
+
+#### ✅ danem Scene #14 @ 0x9A0A - RÉSOLU
+
+**Problème**: 9/9 hotspots TOUS sans géométrie, fichier "sirene.bmp"
+
+**Résultat investigation**: **FAUSSE SCÈNE** - Scene #14 n'existe pas!
+
+**Preuves**:
+```
+Scene #13 (loc6.bmp):
+- Signature: 0xFFFFFFF4 @ 0x9893
+- objCount: 1
+- Fin théorique: 0x9948 (après 1 hotspot × 153 bytes)
+
+"Scene #14" @ 0x9A0A:
+- Détectée @ 0x9A0A (AVANT la fin de Scene #13: 0x9A0A < 0x9948)
+- PAS de signature 0xFFFFFFxx trouvée
+- "sirene.bmp" fait partie des données de Scene #13
+```
+
+**Conclusion**: Gap recovery a créé une fausse scène à partir de données **internes** à Scene #13.
+
+#### ✅ belge Scene #25 @ 0x1005F - RÉSOLU
+
+**Problème**: objCount=0 mais 20/20 hotspots sans géométrie créés
+
+**Résultat investigation**: objCount=0 est **CORRECT** - scène spéciale sans hotspots!
+
+**Preuves**:
+```
+Scene #25:
+- File table: paysliste.bmp (valide)
+- PAS de signature 0xFFFFFFxx
+- objCount: 0 (correct)
+- Gap: 6713 bytes jusqu'à Scene #26 @ 0x11AE9
+
+Gap contient:
+- 167 records Type B (marqueurs 01/02/03...)
+- Commandes Type A (FONT, PLAYTEXT, ADDBMP)
+```
+
+**Conclusion**: Scene #25 est une scène spéciale avec InitScript uniquement (comme fleche.cur). Les 20 "hotspots" sont des **faux** créés par gap recovery.
+
+### Découverte Majeure: Format Binaire VND - Records Type B
+
+**Question**: Peut-on utiliser `01 00 00 00` pour délimiter plus précisément les objets VND?
+
+**Réponse**: **OUI!** Découverte d'un nouveau type de record dans le format VND.
+
+#### Type A: Commandes VND (déjà documenté)
+```
++0x00: [4 bytes] Command subtype (27/26/0a... = Type 39/38/10)
++0x04: [4 bytes] String length
++0x08: [N bytes] String data (paramètre)
+```
+
+**Exemples**: FONT (Type 39), PLAYTEXT (Type 38), ADDBMP (Type 10)
+
+#### Type B: Records avec Marqueurs (NOUVEAU!)
+```
++0x00: [4 bytes] Value/Index
++0x04: [4 bytes] ★ MARQUEUR TYPE ★ (01/02/03/04/05/06/07/08...)
++0x08: [4 bytes] Value/Parameter
++0x0C: [4 bytes] String length
++0x10: [N bytes] String data
+```
+
+**Exemples** (belge Scene #25 gap):
+- @ 0x100B4: Type **1**, value=7, param=22, string="cpays 1"
+- @ 0x10223: Type **1**, value=6, param=22, string="cpays 2"
+- @ 0x11155: Type **2**, value=15, param=22, string="numpaysscore 0"
+
+**Occurrences dans gap belge Scene #25** (6713 bytes):
+- `01 00 00 00`: **75** records (Type 1)
+- `02 00 00 00`: **28** records (Type 2)
+- `06 00 00 00`: **18** records (Type 6)
+- `07 00 00 00`: **30** records (Type 7)
+- `03/04/05/08`: **16** records (autres types)
+
+**Total**: ~167 records Type B détectés
+
+#### Utilité des Marqueurs 01/02/03...
+
+**Applications possibles**:
+1. ✓ **Délimiteur de records**: Identifier début d'un nouveau record Type B
+2. ✓ **Classification**: Différencier types de données (variables, params, config)
+3. ✓ **Parser gaps**: Éviter création de faux hotspots
+4. ✓ **Validation**: Distinguer vrais hotspots (signature + objCount + 153B×N) vs données
+
+**Problème actuel**: Gap recovery **ne les utilise PAS** → création massive de faux hotspots
+
+**Amélioration proposée**:
+```python
+# Avant de créer un hotspot depuis gap:
+1. Vérifier présence signature 0xFFFFFFxx
+2. Si pas de signature → classifier comme InitScript ou Type B record
+3. Ne créer hotspot QUE si structure 153 bytes valide
+4. Utiliser marqueurs 01/02/03... pour parser Type B records
+```
+
+### Recommandations Mise à Jour
+
+**Court terme** (URGENT):
+1. ✓ Marquer danem Scene #14 comme **INVALIDE** (fausse scène)
+2. ✓ Corriger belge Scene #25: retirer 20 faux hotspots, garder objCount=0
+3. ✓ Classifier Scene #25 comme `InitScript only` (type spécial)
+
+**Moyen terme**:
+1. 🔄 **Améliorer gap recovery**:
+   - Détecter marqueurs 01/02/03... pour records Type B
+   - Ne PAS créer hotspots à partir de commandes Type A
+   - Valider signature 0xFFFFFFxx AVANT création scène
+   - Respecter objCount=0 (ne pas créer de hotspots)
+
+2. 🔄 **Parser Type B records**:
+   - Extraire scene parameters (cpays, numpaysscore, etc.)
+   - Les ajouter aux métadonnées de scène
+   - Les distinguer clairement des hotspots
+
+**Long terme**:
+1. 📋 Documenter mapping complet Type B records (Type 1 vs 2 vs 6 vs 7...)
+2. 📋 Reverse engineering format VND Type B pour comprendre sémantique
+
+**Voir**: `INVESTIGATION_RESULTS.md` pour analyse binaire complète
