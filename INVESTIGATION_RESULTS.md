@@ -204,5 +204,123 @@ for addr in range(gap_start, gap_end):
 
 ---
 
-**Statut**: Investigation complète ✓  
-**Prochaine étape**: Améliorer gap recovery avec détection marqueurs Type B
+## Validation avec Mapping NotebookLM (2026-01-24)
+
+### Mapping des Types de Records VND
+
+NotebookLM (qui a analysé toute la documentation) a fourni un mapping complet des types de records VND. Validation avec mes découvertes:
+
+**Types détectés dans belge Scene #25 gap (6713 bytes)**:
+
+| Type ID | Hex | Occurrences | Description NotebookLM |
+|---------|-----|-------------|------------------------|
+| 1 | 0x01 | **75** | Référence de scène primaire |
+| 2 | 0x02 | **28** | Zone cliquable rectangulaire / Scène secondaire |
+| 6 | 0x06 | **18** | Drapeaux / Numéros de scène |
+| 7 | 0x07 | **30** | Définitions de variables |
+| 8 | 0x08 | **8** | Audio / État |
+| 10 | 0x0a | 18 | Curseur / Audio |
+| 20 | 0x14 | 7 | Vidéos AVI |
+| 21 | 0x15 | **33** | Instructions conditionnelles (IF-THEN) |
+| 22 | 0x16 | 24 | set_var |
+| 24 | 0x18 | 19 | dec_var |
+
+✅ **VALIDATION COMPLÈTE**: Tous mes types découverts (1, 2, 6, 7, 8) matchent exactement avec le mapping NotebookLM!
+
+### Structures Parsées dans le Gap
+
+**Scan complet du gap (0x100B0 → 0x11AE9)**:
+
+1. **Commandes Type A**: 34 structures
+   - Type 10 (0x0a): 5 commandes - ADDBMP/Curseur
+   - Type 21 (0x15): 17 commandes - IF-THEN
+   - Type 38 (0x26): 5 commandes - PLAYTEXT
+   - Type 39 (0x27): 7 commandes - FONT
+
+2. **Records Type B**: 31 structures
+   - Type 0: 9 records - Métadonnées (ex: "act\p4.bmp 0 212 207")
+   - Type 1: 19 records - Références scènes (ex: "cpays 1", "cpays 2")
+   - Type 2: 2 records - Zones cliquables (ex: "cpays 0")
+
+**Total**: **65 structures** identifiées dans le gap
+
+**Problème**: Gap recovery parse certaines de ces structures comme des **HOTSPOTS** → 20 faux hotspots sans géométrie dans Scene #25
+
+### Exemples de Structures
+
+**Type A (Commandes):**
+```
+@ 0x10154: Type 21 (IF-THEN)
+  → 'score < 0 then runprj ..\couleurs1\couleurs1.vnp 54'
+
+@ 0x1027b: Type 39 (FONT)
+  → '18 0 #0000 comic sans ms'
+
+@ 0x1029f: Type 38 (PLAYTEXT)
+  → '115 110 120 120 0 Grande-Bretagne'
+```
+
+**Type B (Records):**
+```
+@ 0x100b4: Type 1 (Référence de scène)
+  value=7, param=22 → 'cpays 1'
+
+@ 0x10223: Type 1 (Référence de scène)
+  value=6, param=22 → 'cpays 2'
+
+@ 0x10448: Type 0 (Métadonnées)
+  value=0, param=10 → 'act\p4.bmp 0 212 207'
+```
+
+### Mapping Complet NotebookLM
+
+**1. Records de Structure et de Base**
+- Type 0 (0x00): Métadonnées / Scène
+- Type 1 (0x01): Référence de scène primaire
+- Type 2 (0x02): Zone cliquable rectangulaire
+- Type 15 (0x0F): Structure de bloc
+- Type 105 (0x69): Zone cliquable polygonale
+
+**2. Records de Logique et de Variables**
+- Type 3 (0x03): Score / Valeur / Script
+- Type 5 (0x05): État du jeu
+- Type 6 (0x06): Drapeaux / Numéros de scène
+- Type 7 (0x07): Définitions de variables
+- Type 21 (0x15): Instructions conditionnelles (IF-THEN)
+- Types 22-24 (0x16-0x18): set_var, inc_var, dec_var
+
+**3. Records Multimédia**
+- Type 8 (0x08): Audio / État
+- Type 10 (0x0A): Curseur / Audio
+- Type 11 (0x0B): Fichiers audio WAV
+- Type 12 (0x0C): Effets sonores
+- Type 20 (0x14): Vidéos AVI
+
+**4. Records d'Affichage et de Polices**
+- Type 26 (0x1A): Définitions de police
+- Type 38 (0x26): playtext (Texte de Hotspot)
+- Type 39 (0x27): FONT (Définitions de police / Actions)
+- Type 41 (0x29): addtext
+- Type 52 (0x34): addbmp
+
+**5. Records d'Actions Spéciales**
+- Type 27 (0x1B): addbmp / scene / closewav
+- Type 28 (0x1C): delbmp / dec_var
+- Type 31 (0x1F): runprj / rundll
+- Type 40 (0x28): Commentaire (rem)
+- Type 45 (0x2D): Sauvegarde
+- Type 46 (0x2E): Chargement
+
+### Conclusion Validation
+
+✅ **Structure Type B validée**: Format binaire découvert est correct
+✅ **Mapping NotebookLM validé**: Types 1, 2, 6, 7, 8 matchent exactement
+✅ **65 structures identifiées**: 34 commandes Type A + 31 records Type B
+❌ **Gap recovery crée faux hotspots**: Parse ces structures comme hotspots
+
+**Solution**: Utiliser les Type ID (01/02/06/07/08...) et Command subtypes (0a/15/26/27) pour **filtrer** et éviter création de faux hotspots!
+
+---
+
+**Statut**: Investigation complète ✓ + Validation NotebookLM ✓
+**Prochaine étape**: Améliorer gap recovery avec détection Type A/Type B + filtrage
