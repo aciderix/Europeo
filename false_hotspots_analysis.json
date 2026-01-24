@@ -1,0 +1,6460 @@
+[
+  {
+    "vnd": "couleurs1",
+    "json_file": "couleurs1.vnd.parsed.json",
+    "total_hotspots": 174,
+    "with_geometry": 169,
+    "without_geometry": 5,
+    "geometry_percent": 97.12643678160919,
+    "false_hotspots": 4,
+    "false_percent": 2.2988505747126435,
+    "empty_hotspots": 1,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x5ACE",
+        "hotspot_id": 6,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Sac à dos"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xE918",
+        "hotspot_id": 17,
+        "command_types": [
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "42d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1136A",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "47"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x12127",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "22 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "50 350 125 365 0 SORTIE"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "7"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "allem",
+    "json_file": "allem.vnd.parsed.json",
+    "total_hotspots": 58,
+    "with_geometry": 54,
+    "without_geometry": 4,
+    "geometry_percent": 93.10344827586206,
+    "false_hotspots": 4,
+    "false_percent": 6.896551724137931,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x5E8A",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "beetho beetho2.bmp 0 0 40"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8826",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "mur1 mur1.bmp 0 345 100"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xB347",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "perdujuste perdujste.bmp 0 355 40"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "2500"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "3"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xB68D",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "autr",
+    "json_file": "autr.vnd.parsed.json",
+    "total_hotspots": 84,
+    "with_geometry": 73,
+    "without_geometry": 11,
+    "geometry_percent": 86.90476190476191,
+    "false_hotspots": 11,
+    "false_percent": 13.095238095238097,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x7720",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "40 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "mgre.avi 1 99 307 141 345"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x7F3B",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "40 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "mgra.avi 1 184 242 224 278"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8021",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "50 10 590 310 0  Grande Bretagne"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8792",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "40 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "mita.avi 1 279 253 321 291"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F57",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "40 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "mall.avi 1 382 230 424 268"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x903F",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "150 5 590 310 0  Allemagne"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x97CA",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "40 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "mfra.avi 1 472 285 514 323"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x986B",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "260 8 590 310 0  France"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x9FDB",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "310 365 125 365 0 SORTIEh"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD679",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "mozart mozart.bmp 0 0 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "euroland = 1 then dec_var euroland 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "angleterre = 1 then dec_var angleterre 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "allemagne = 1  then dec_var allemagne 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "belgique = 1  then dec_var belgique 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "ecosse = 1  then dec_var ecosse 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "espagne = 1  then dec_var espagne 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "france = 1  then dec_var france 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "finlande = 1  then dec_var finlande 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "irlande = 1  then dec_var irlande 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "italie = 1  then dec_var italie 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "paysbas = 1  then dec_var paysbas 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "grece = 1  then dec_var grece 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x123B2",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "belge",
+    "json_file": "belge.vnd.parsed.json",
+    "total_hotspots": 94,
+    "with_geometry": 72,
+    "without_geometry": 22,
+    "geometry_percent": 76.59574468085107,
+    "false_hotspots": 6,
+    "false_percent": 6.382978723404255,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0xCD24",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "math4.avi 1 123 190 230 245"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 7"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1005F",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p1.bmp 0 226 160"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1005F",
+        "hotspot_id": 17,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 comic sans ms"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1005F",
+        "hotspot_id": 18,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 comic sans ms"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = <numpays2> then hotspot 18"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 1 then addbmp drap drapeaux\\D1.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 2 then addbmp drap drapeaux\\D2.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 3 then addbmp drap drapeaux\\D3.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 4 then addbmp drap drapeaux\\D4.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 5 then addbmp drap drapeaux\\D5.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 6 then addbmp drap drapeaux\\D6.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 7 then addbmp drap drapeaux\\D7.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 8 then addbmp drap drapeaux\\D8.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 9 then addbmp drap drapeaux\\D9.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 10 then addbmp drap drapeaux\\D10.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 11 then addbmp drap drapeaux\\D11.bmp 0 480 100"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1005F",
+        "hotspot_id": 19,
+        "command_types": [
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 12 then addbmp drap drapeaux\\D12.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 13 then addbmp drap drapeaux\\D13.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 14 then addbmp drap drapeaux\\D14.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 15 then addbmp drap drapeaux\\D15.bmp 0 480 100"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "numpays = 16 then addbmp drap drapeaux\\D16.bmp 0 480 100i"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "4i"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x11AE9",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "danem",
+    "json_file": "danem.vnd.parsed.json",
+    "total_hotspots": 65,
+    "with_geometry": 53,
+    "without_geometry": 12,
+    "geometry_percent": 81.53846153846153,
+    "false_hotspots": 7,
+    "false_percent": 10.76923076923077,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x13B4",
+        "hotspot_id": 9,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\portu\\digit\\port.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x9A0A",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "220 350 125 265 0 Bisou numéro 4i"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x9A0A",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "220 350 125 265 0 Bisou numéro 3i"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x9A0A",
+        "hotspot_id": 5,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "220 350 125 265 0 Bisou numéro 2i"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x9A0A",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "220 350 125 265 0 Bisou numéro 1i"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x9A0A",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 20 125 365 0 Un bisou de sirène"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 50 125 365 0 vaut bien une récompense !"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 80 125 365 0 Tu peux gagner jusqu'à 50 euros."
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 110 125 365 0 Clique sur une des bouches pour"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 140 125 365 0  découvrir ton cadeau...d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xA16F",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "ecosse",
+    "json_file": "ecosse.vnd.parsed.json",
+    "total_hotspots": 155,
+    "with_geometry": 151,
+    "without_geometry": 4,
+    "geometry_percent": 97.41935483870968,
+    "false_hotspots": 2,
+    "false_percent": 1.2903225806451613,
+    "empty_hotspots": 1,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0xA6E4",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\italie\\digit\\clapotis.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1169C",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "espa",
+    "json_file": "espa.vnd.parsed.json",
+    "total_hotspots": 82,
+    "with_geometry": 80,
+    "without_geometry": 2,
+    "geometry_percent": 97.5609756097561,
+    "false_hotspots": 1,
+    "false_percent": 1.2195121951219512,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x11983",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "finlan",
+    "json_file": "finlan.vnd.parsed.json",
+    "total_hotspots": 83,
+    "with_geometry": 80,
+    "without_geometry": 3,
+    "geometry_percent": 96.3855421686747,
+    "false_hotspots": 2,
+    "false_percent": 2.4096385542168677,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x5DB3",
+        "hotspot_id": 22,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "1 1 100 20 "
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "tempslapin <= 0 then scene 16îÿÿÿ"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xAE67",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "france",
+    "json_file": "france.vnd.parsed.json",
+    "total_hotspots": 103,
+    "with_geometry": 99,
+    "without_geometry": 4,
+    "geometry_percent": 96.11650485436894,
+    "false_hotspots": 4,
+    "false_percent": 3.8834951456310676,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x3F0E",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\holl\\digit\\a_hol.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xA685",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\autr\\digit\\foret2.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x129FC",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "pepe = 1 then playavi pepe2.avi 1 230 190 281 253"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "pepe = 1 then inc_var score 20"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 4"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x17927",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "grece",
+    "json_file": "grece.vnd.parsed.json",
+    "total_hotspots": 73,
+    "with_geometry": 73,
+    "without_geometry": 0,
+    "geometry_percent": 100.0,
+    "false_hotspots": 0,
+    "false_percent": 0.0,
+    "empty_hotspots": 0,
+    "false_hotspot_details": []
+  },
+  {
+    "vnd": "holl",
+    "json_file": "holl.vnd.parsed.json",
+    "total_hotspots": 111,
+    "with_geometry": 107,
+    "without_geometry": 4,
+    "geometry_percent": 96.3963963963964,
+    "false_hotspots": 4,
+    "false_percent": 3.6036036036036037,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x2973",
+        "hotspot_id": 9,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "farine  = 0 then playtext 382 40 125 365 0 10 eurosd"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x2973",
+        "hotspot_id": 10,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "520 380 125 365 0 Un arrosoird"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "bonus19 = 0 then playwav ..\\..\\couleurs1\\digit\\bruit\\boing.wav 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "bonus19 = 0 then set_var bonus19 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "bonus19 =  1 then scene 21"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x2973",
+        "hotspot_id": 11,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "bonus19 = 0 then playtext 120 360 125 365 0 Question bonus"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "bonus19 = 2 then playtext 120 360 125 365 0 tu as déjà réponduk"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xCD0C",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\frontal\\start.vnp 3d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "irland",
+    "json_file": "irland.vnd.parsed.json",
+    "total_hotspots": 95,
+    "with_geometry": 91,
+    "without_geometry": 4,
+    "geometry_percent": 95.78947368421052,
+    "false_hotspots": 3,
+    "false_percent": 3.1578947368421053,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x9BD9",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 1 then addbmp somme rol\\perdpas1.bmp 0 13 101"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 1 then inc_var score 3"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 5 then addbmp somme rol\\perdpas5.bmp 0 13 101"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 5 then inc_var score 15"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 10 then addbmp somme rol\\perdpas10.bmp 0 13 101"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 10 then inc_var score 30"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 20 then addbmp somme rol\\perdpas20.bmp 0 13 101"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 20 then inc_var score 60"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x9BD9",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 1 then addbmp somme rol\\perd1.bmp 0 13 101"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 1 then dec_var score 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 5 then addbmp somme rol\\perd5.bmp 0 13 101"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 5 then  dec_var score 5"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 10 then addbmp somme rol\\perd10.bmp 0 13 101"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 10 then  dec_var score 10"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 20 then addbmp somme rol\\perd20.bmp 0 13 101"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierpari = 20 then  dec_var score 20"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xA2D7",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "pays pays.bmp 0 320 90"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54i"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "italie",
+    "json_file": "italie.vnd.parsed.json",
+    "total_hotspots": 98,
+    "with_geometry": 95,
+    "without_geometry": 3,
+    "geometry_percent": 96.93877551020408,
+    "false_hotspots": 2,
+    "false_percent": 2.0408163265306123,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x11DC4",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 31,
+            "name": "UNKNOWN_1F",
+            "param": "..\\frontal\\start.vnp 3"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x11DC4",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "33"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "portu",
+    "json_file": "portu.vnd.parsed.json",
+    "total_hotspots": 90,
+    "with_geometry": 88,
+    "without_geometry": 2,
+    "geometry_percent": 97.77777777777777,
+    "false_hotspots": 2,
+    "false_percent": 2.2222222222222223,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0xA82E",
+        "hotspot_id": 5,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "mouette.avi 0 501 169 640 289ðÿÿÿ"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xC13C",
+        "hotspot_id": 5,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "tram.avi 0ðÿÿÿ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "suede",
+    "json_file": "suede.vnd.parsed.json",
+    "total_hotspots": 44,
+    "with_geometry": 44,
+    "without_geometry": 0,
+    "geometry_percent": 100.0,
+    "false_hotspots": 0,
+    "false_percent": 0.0,
+    "empty_hotspots": 0,
+    "false_hotspot_details": []
+  },
+  {
+    "vnd": "biblio",
+    "json_file": "biblio.vnd.parsed.json",
+    "total_hotspots": 427,
+    "with_geometry": 254,
+    "without_geometry": 173,
+    "geometry_percent": 59.4847775175644,
+    "false_hotspots": 154,
+    "false_percent": 36.0655737704918,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p2bis.bmp 0 131 156"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 ROYAUME-UNId"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p3.bmp 0 265 200"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 AUTRICHEd"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p4.bmp 0 212 207"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 BELGIQUEd"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p5.bmp 0 227 141"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 4,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 DANEMARKd"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p6.bmp 0 132 149"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 5,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 ECOSSEd"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p7.bmp 0 125 294"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 6,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 ESPAGNEd"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p8.bmp 0 239 4"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 FINLANDEd"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p9.bmp 0 147 212"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 FRANCEd"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 9,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "80 400 125 365 0 GRECE"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "act\\p10.bmp 0 374 221d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 10,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "80 400 125 365 0 IRLANDE"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "act\\p11.bmp 0 116 190d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 11,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "80 400 125 365 0 ITALIE"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "act\\p12.bmp 0 246 228d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 12,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "80 400 125 365 0 PAYS-BAS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "act\\p13.bmp 0 214 185d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 13,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "80 400 125 365 0 PORTUGAL"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "act\\p14.bmp 0 123 314d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 15,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "22 1 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "460 420 125 365 0 Quitteri"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p16.bmp 0 233 211"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x167C",
+        "hotspot_id": 16,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "80 400 125 365 0 LUXEMBOURGd"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x264E",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\couleurs1\\digit\\music.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x2AA8",
+        "hotspot_id": 10,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\couleurs1\\digit\\music.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x6059",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\couleurs1\\digit\\music.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Allemagne.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h3.bmp 0 284 120"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3daut.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 autrichien"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Autriche.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h2.bmp 0 174 81"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgb.bmp 0 40 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 anglais"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Angleterre.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 4,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h4.bmp 0 283 232"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dbelg.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 belge"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Belgique.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 5,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h5.bmp 0 350 180"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3ddan.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 danois"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Danemark.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 6,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h6.bmp 0 163 145"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3desp.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 espagnol"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Espagne.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h7.bmp 0 507 164"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfin.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 finlandais"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Finlande.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h8.bmp 0 387 37"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfra.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 français"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "France.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 9,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h9.bmp 0 166 3"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgre.bmp 0 45 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 grec"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Grece.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 11,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h11.bmp 0 495 81"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dita.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 italien"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Italie.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 12,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h12.bmp 0 227 38"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dpay.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 des Pays-Bas"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "paysbas.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 13,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h13.bmp 0 385 260"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dpor.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 portugais"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "portugal.wavd"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x8F7C",
+        "hotspot_id": 14,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\h14.bmp 0 457 225"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dsue.bmp 0 50 380"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Hymne"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 suédois"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Suede.wavd"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "musico.bmp 0 10 200"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "2 musico.bmp 0 5 123"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "euro eurodra.bmp 0 1 355"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\quitterh.bmp 0 504 324"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "euro eurodra.bmp 0 1 355d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\marine.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\histoire.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dpor.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Histoire"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 portugaise"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 La marine"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 portugaised"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\belge\\belge.vnp 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\atonium.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dbelg.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 belge"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 4,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 L'Atomiumd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\france\\france.vnp 17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\eiffel.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfra.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 5,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 français"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "22 1 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "440 400 125 365 0 Quitteri"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "18"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "18"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "245 430 125 365 0 \"Surprise !!!\"d"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\holl\\holl.vnp 15"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\velo.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dpay.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 9,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Divers"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 Pays-Bas"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 10,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Le vélo"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0  en Hollanded"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\allem\\allem.vnp 5"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\betoven.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\celebre.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dall.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 11,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Musicien"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 allemand"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 12,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Ludwig Van"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 Beethovend"
+          },
+          {
+            "subtype": 31,
+            "name": "UNKNOWN_1F",
+            "param": "..\\finlan\\finlan.vnp 13"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\ours.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfin.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 13,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Animaux"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 finlandais"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 14,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 L'oursd"
+          },
+          {
+            "subtype": 31,
+            "name": "UNKNOWN_1F",
+            "param": "..\\finlan\\finlan.vnp 12"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\chien.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfin.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 15,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Animaux"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 finlandais"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 16,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Les chiens"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 de traîneaud"
+          },
+          {
+            "subtype": 31,
+            "name": "UNKNOWN_1F",
+            "param": "..\\france\\france.vnp 26"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\mode.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfra.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 17,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Mode"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 française"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 18,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Coco Chaneld"
+          },
+          {
+            "subtype": 31,
+            "name": "UNKNOWN_1F",
+            "param": "..\\angl\\angleterre.vnp 1"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\histoire.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\couronne.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgb.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 19,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Histoire"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 anglaise"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 20,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Les joyaux"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 de la couronned"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\autr\\autr.vnp 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\celebre.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\mont.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfra.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 21,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Inventeur"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 français"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 22,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Les frères"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 Montgolfierd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then scene 58"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\sel.bmp 0 8 190"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 23,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 24,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Le seld"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\angl\\angleterre.vnp 59"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\big.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgb.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 25,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 anglais"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 26,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Big Bend"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\ecosse\\ecosse.vnp 32"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\edinbourg.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgb.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 27,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 écossais"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 28,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Le château"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 d'Edimbourgd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\allem\\allem.vnp 6"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\biere.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dall.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 29,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Spécialité"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 allemande"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 30,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 La fabrication"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 de la bièred"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\suede\\suede.vnp 10"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\celebre.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\nobel.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dsue.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 31,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Inventeur"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 suédois"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 32,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Alfred Nobeld"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\belge\\belge.vnp 8"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\mac.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dbelg.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 33,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 belge"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 34,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "15 135 125 365 0 Le manneken-pisd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\ecosse\\ecosse.vnp 31"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\celebre.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\wallace.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgb.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 35,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Héros"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 écossais"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 36,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "15 135 125 365 0 William Wallaced"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\france\\france.vnp 15"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\celebre.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\pasteur.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfra.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 37,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Inventeur"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 français"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 38,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Louis Pasteurd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\suede\\suede.vnp 11"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\ski.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dsue.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 39,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 430 125 365 0 Vie suédoise"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 40,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "15 135 125 365 0 Le ski en Suèded"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\italie\\italie.vnp 27"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\celebre.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\leo.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dita.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 41,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Inventeur"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 italien"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 42,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Léonard"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0  de Vincid"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\portu\\portu.vnp 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\fado.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dpor.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 43,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Coutume"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 portugaise"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 44,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Le Fadod"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\angl\\angleterre.vnp 57"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\stone.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgb.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 45,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 anglais"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 46,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Stonehenged"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\grece\\grece.vnp 13"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\celebre.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\cou.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfra.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 47,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Homme"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 français"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 48,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "15 135 125 365 0 Coubertin et les"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "15 155 125 365 0 jeux olympiquesd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\holl\\holl.vnp 8"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\celebre.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\rem.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dpay.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 49,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Peintre"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 hollandais"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 50,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Rembrandtd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\allem\\allem.vnp 10"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\mur.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dall.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 51,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 allemand"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 52,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Le mur de"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 Berlind"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\angl\\angleterre.vnp 70"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\tour.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgb.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 53,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 anglais"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 54,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 La tour de"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 Londresd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\holl\\holl.vnp 9"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\polder.bmp 0 8 190"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 55,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 56,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 Les polders"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dpay.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 57,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Géographie"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "35 440 125 365 0 Pays-Basd"
+          },
+          {
+            "subtype": 31,
+            "name": "UNKNOWN_1F",
+            "param": "..\\france\\france.vnp 27"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\histoire.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\corsaire.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfra.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 58,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Les corsaires"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 français"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 59,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Les corsairesd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\finlan\\finlan.vnp 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\sauna.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dfin.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 60,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Divers"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 Finlande"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 61,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Le saunad"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\espa\\espa.vnp 12"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\sagrada.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3desp.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 62,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 espagnol"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 63,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 La Sagrada"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 Familiad"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\angl\\angleterre.vnp 72"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\quotidien.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\the.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dgb.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 64,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 430 125 365 0 Vie anglaise"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 65,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "15 135 125 365 0 L'histoire du théd"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\italie\\italie.vnp 15"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\pise.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dita.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 66,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 italien"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 67,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 La tour de Pised"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\italie\\italie.vnp 12"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\colysee.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dita.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 68,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 italien"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 69,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Le Coliséed"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\italie\\italie.vnp 21"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\histoire.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\rome.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dita.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 70,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Histoire"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 d'Italie"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 71,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 La légende"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 de Romed"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\italie\\italie.vnp 29"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\Venise.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dita.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 72,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "50 420 125 365 0 Ville"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 italienne"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 73,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 Venised"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\italie\\italie.vnp 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\trajane.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dita.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 74,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 italien"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 75,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "20 135 125 365 0 La colonne"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 155 125 365 0 Trajaned"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "dico = 1 then runprj ..\\espa\\espa.vnp 11"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "10"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\monument.bmp 0 8 14"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "rollover\\alambra.bmp 0 8 190"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3desp.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 76,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Monument"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 espagnol"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0xD163",
+        "hotspot_id": 77,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 L'Alhambrad"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "que question.bmp 0 6 123"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "euro eurodra.bmp 0 1 355"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "inter intero.bmp 0 0 0d"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1249E",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\5n1.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Une maison traditionnelle"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\5n2.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Bord de mer"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\5n3.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Les  canaux de Copenhague"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\5n4.bmp 0 325"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Attention Rennes !"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\5n5.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Une rue de Copenhague"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\5n6.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Copenhague"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\5n7.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0 Copenhague vue de haut"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x12F48",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\11n1.bmp 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Un troupeau de moutons"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\11n2.bmp 0 330 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Kilarney"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\11n3.bmp 0 330 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Paysage Irlandais"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\11n4.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Côte d'Irlande"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\11n5.bmp 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Falaises irlandaises"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\11n6.bmp 0 180 120"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Encore un mouton !"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\11n7.bmp 0 340 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0  Falaise de la péninsule de Dingle"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x13A80",
+        "hotspot_id": 14,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\2n1.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 La Tour Blanche"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\2n2.bmp 0  0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Le Château de Westminster"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\2n3.bmp 0 20 10"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 La cathédrale Saint Paul"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\2n4.bmp 0 328"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Trafalgar Square"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\2n5.bmp 0 325"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Big Ben"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\2n6.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Cambridge"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\2n7.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0 Oxford"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1476A",
+        "hotspot_id": 13,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\14n1.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6  10 445 630 470 0 La tour de Belhem"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\14n2.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Place du commerce"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\14n3.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Vue des hauteurs de Lisbonne"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\14n4.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 L'Exposition Universelle de 1998."
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\14n5.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Un bateau de tradition portugaise"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\14n6.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Les fameux tramways de Lisbonne"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\14n7.bmp 0 313"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x153D9",
+        "hotspot_id": 14,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\12n1.bmp 0 20 20"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Venise et ses gondoles"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\12n2.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 La place des miracles"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\12n3.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Vérone"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\12n4.bmp 0 330"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 L'île d'Elbe"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\12n5.bmp 0 330"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Le Campanile de Giotto - Florence"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\12n6.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Paysage typique des montagnes"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\12n7.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0 Burano"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x160C9",
+        "hotspot_id": 13,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\6n1.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Un château écossais"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\6n2.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Des moutons"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\6n3.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Plaine écossaise"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\6n4.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Costumes traditionnels"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\6n5.bmp 0 308"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Un pub écossais"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\6n6.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Lac d'Ecosse"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\6n7.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0 Tir à la corde"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x16CD2",
+        "hotspot_id": 14,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\10n1.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Le Parthénon"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\10n2.bmp 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Mistra cité byzantine"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\10n3.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Un amphithéâtre"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\10n4.bmp 0 340 35"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Site de Delphes"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\10n5.bmp 0 320 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Sanctuaire d'Athéna - Pronaïa"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\10n6.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Vue d'Athènes"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\10n7.bmp 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0 Rue d'un village"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x179B7",
+        "hotspot_id": 11,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\4n1.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Une rue de Bruges"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\4n2.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Le port de Bruges"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\4n3.bmp 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Eglise d'Ypres"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\4n4.bmp 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Bruges"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\4n5.bmp 0 222"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0  Bruges"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\4n6.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Bruges"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\4n7.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0 Bruges"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 8 then addbmp image photos\\4n8.bmp 0 320"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x18396",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\13n1.bmp 0  0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Maisons traditionnelles"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\13n2.bmp 0  0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Maisons typiques"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\13n3.bmp 0  0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   1 445 640 470 0 Village hollandais"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\13n4.bmp 0 309"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Les moulins de Kinderjik"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\13n5.bmp 0  0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Bateaux hollandais"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\13n6.bmp 0  0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Un des nombreux canaux d'Amsterdami"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x18B30",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\3n1.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Château des Habsbourg"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\3n2.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Cocher"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\3n3.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Château des Habsbourg"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\3n4.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Vue de Vienne"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\3n5.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Hôtel typique - Tyrol"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\3n6.bmp 0 220 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Eglise Typiqued"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x192B0",
+        "hotspot_id": 15,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\7n1.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Barcelone Plaza España"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\7n2.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 La Costa Brava"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\7n3.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 L'Alhambra"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\7n4.bmp 0 340 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 Maison conçue par Gaudi"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\7n5.bmp 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 La Sagrada Familia"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\7n6.bmp 0 260 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 Jardin de type espagnol"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\7n7.bmp 0 340 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0  Rue typique"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1A0AA",
+        "hotspot_id": 14,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\8n1.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Elevage de rennes - Kuuamo"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\8n2.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Fleuve Aura gelé - Turku"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\8n3.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Ruissalo"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\8n4.bmp 0 317"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6 10 425 640 470 0 Le Cercle Polaire"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment2 6 10 445 640 470 0 (à 2355 km de Paris)"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\8n5.bmp 0 20 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Renne mangeant un biscuit"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\8n6.bmp 0 330 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 La Maison du Père Noël"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1AE17",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\15n1.bmp 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 La Suède en hiver"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\15n2.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 La Suède en été"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\15n3.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Baignade dans les lacs"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\15n4.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 La cueillette des airelles"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\15n5.bmp 0 447"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Costume traditionnel"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\15n6.bmp 0 316 5"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 La Suède en hiverd"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1B5A6",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\1n1.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6 10 445 640 470 0 Stuttgart"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\1n2.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6 10 445 640 470 0 Château de Louis II de Bavière"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\1n3.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6 10 445 640 470 0 Stuttgart"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\1n4.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6 10 445 640 470 0 La fabrication de la bière"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\1n5.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6 10 445 640 470 0 Stuttgart"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\1n6.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6 10 445 640 470 0 Château de Louis II de Bavièred"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1BD18",
+        "hotspot_id": 11,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addbmp image photos\\9n1.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 1 then addtext comment 6   10 445 640 470 0 Le Château de Chenonceau"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addbmp image photos\\9n2.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 2 then addtext comment 6   10 445 640 470 0 Campagne française"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addbmp image photos\\9n3.bmp 0 310 40"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 3 then addtext comment 6   10 445 640 470 0 Le Sacré Coeur"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addbmp image photos\\9n4.bmp 0 330"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 4 then addtext comment 6   10 445 640 470 0 La tour Eiffel"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addbmp image photos\\9n5.bmp 0 15 15"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 5 then addtext comment 6   10 445 640 470 0 Le Puy-du-Fou"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addbmp image photos\\9n6.bmp 0 311"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 6 then addtext comment 6   10 445 640 470 0 La Pointe du Raz"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addbmp image photos\\9n7.bmp 0 0 0"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "cphoto = 7 then addtext comment 6   10 445 640 470 0 Le lac Salagou"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1F09C",
+        "hotspot_id": 2,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\couleurs1\\digit\\music.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x1F7ED",
+        "hotspot_id": 9,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\couleurs1\\digit\\music.wav"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 5,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "25 140 125 365 0 MOUSSSAKA"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 6,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 169 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 180 125 365 0 Recette pour"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 200 125 365 0 \" 6 personnes\""
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 8,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 225 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 9,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 240 125 365 0 Préparation"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "40 260 125 365 0 40 minutes"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 10,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 285 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 12,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Recette"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 440 125 365 0 Anglaise"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "icone.bmp 0 285 210"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 13,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "25 140 125 365 0 CHIKEN PIE"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 14,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 169 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 15,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 180 125 365 0 Recette pour"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 200 125 365 0 \" 6 personnes\""
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 16,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 225 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 17,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 240 125 365 0 Préparation"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "40 260 125 365 0 40 minutes"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 18,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 285 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 19,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "45 300 125 365 0 Cuisson"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "35 320 125 365 0 40 minutesd"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3dpay.bmp 0 50 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 22,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 169 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 23,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 180 125 365 0 Recette pour"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 200 125 365 0 \" 6 personnes\""
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 24,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 225 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 25,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 240 125 365 0 Préparation"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "40 260 125 365 0 25 minutes"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 26,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 285 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 27,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "45 300 125 365 0 Cuisson"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "35 320 125 365 0 30 minutesd"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "drapo\\3ddan.bmp 0 45 380"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 28,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 420 125 365 0 Recette"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 440 125 365 0 Danoise"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "icone.bmp 0 285 180"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 29,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 130 125 365 0 BOULETTES"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 150 125 365 0  DE VIANDES"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 30,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 169 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 31,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 180 125 365 0 Recette pour"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "30 200 125 365 0 \" 4 personnes\""
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 32,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 225 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 33,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "35 240 125 365 0 Préparation"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "40 260 125 365 0 20 minutes"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 34,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "70 285 125 365 0  *"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x20E61",
+        "hotspot_id": 35,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "16 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "45 300 125 365 0 Cuisson"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 320 125 365 0 quelques minutesd"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "re recette.bmp 0 6 123"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "euro eurodra.bmp 0 1 355"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "re recette.bmp 0 6 123"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "euro eurodra.bmp 0 1 355d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "barre",
+    "json_file": "barre.vnd.parsed.json",
+    "total_hotspots": 21,
+    "with_geometry": 17,
+    "without_geometry": 4,
+    "geometry_percent": 80.95238095238095,
+    "false_hotspots": 4,
+    "false_percent": 19.047619047619047,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x128C",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "etoile ..\\..\\barre\\images\\ordi.bmp 6 553 408"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x128C",
+        "hotspot_id": 4,
+        "command_types": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "toolbar ..\\..\\barre\\images\\barre.bmp 6 0 400 640 480"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "fleche  ..\\..\\barre\\images\\fleche.bmp 6 499 407"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 179 400"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 281 403"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 338 400"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 122 400"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "fiole = 1 then addbmp fiole ..\\..\\barre\\images\\f1.bmp 0 141 454"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "fiole = 2 then addbmp fiole ..\\..\\barre\\images\\f2.bmp 0 142 454"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "fiole = 3 then addbmp fiole ..\\..\\barre\\images\\f3.bmp 0 140 453"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "fiole = 4 then addbmp fiole ..\\..\\barre\\images\\f4.bmp 0 141 451"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "fiole = 5 then addbmp fiole ..\\..\\barre\\images\\f5.bmp 0 141 451"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "fiole = 6 then addbmp fiole ..\\..\\barre\\images\\f6.bmp 0 140 451"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "fiole = 7 then addbmp fiole ..\\..\\barre\\images\\f7.bmp 0 139 451"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x128C",
+        "hotspot_id": 7,
+        "command_types": [
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "etoile ..\\..\\barre\\images\\fleche2.bmp 6 499 407"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x3268",
+        "hotspot_id": 3,
+        "command_types": [
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "etoile ..\\..\\barre\\images\\ordi.bmp 6 564 400"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "etoile1 ..\\..\\barre\\images\\textetm.bmp 6 0 449"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "frontal",
+    "json_file": "start.vnd.parsed.json",
+    "total_hotspots": 4,
+    "with_geometry": 0,
+    "without_geometry": 4,
+    "geometry_percent": 0.0,
+    "false_hotspots": 3,
+    "false_percent": 75.0,
+    "empty_hotspots": 0,
+    "false_hotspot_details": [
+      {
+        "scene_id": -1,
+        "scene_offset": "0x92",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": ""
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x92",
+        "hotspot_id": 1,
+        "command_types": [
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "Quitter"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "La légende"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "..\\..\\couleurs1\\movie\\intro12.avi 1 0 40 640 440"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "scene_offset": "0x139B",
+        "hotspot_id": 0,
+        "command_types": [
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "3"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "inter.avi 1 100 100 520 400"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "oie.avi 1 100 100 520 400"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "sopra.avi 1 100 100 520 400"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "3"
+          }
+        ]
+      }
+    ]
+  }
+]
