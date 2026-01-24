@@ -1,0 +1,6962 @@
+[
+  {
+    "vnd": "couleurs1.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 55,
+    "objcount_matches": 47,
+    "objcount_mismatches": 5,
+    "objcount_na": 3,
+    "total_objcount_declared": 168,
+    "total_hotspots_parsed": 174,
+    "total_hotspots_with_geom": 169,
+    "total_hotspots_no_geom": 5,
+    "total_false_hotspots": 4,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 1,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x116C",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1A31",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1E4E",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2442",
+        "obj_count": 26,
+        "hotspots_parsed": 26,
+        "match_status": "MATCH",
+        "with_geom": 26,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3B1B",
+        "obj_count": 11,
+        "hotspots_parsed": 11,
+        "match_status": "MATCH",
+        "with_geom": 11,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x471C",
+        "obj_count": 8,
+        "hotspots_parsed": 8,
+        "match_status": "MATCH",
+        "with_geom": 8,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x51FE",
+        "obj_count": 8,
+        "hotspots_parsed": 8,
+        "match_status": "MATCH",
+        "with_geom": 8,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5ACE",
+        "obj_count": 5,
+        "hotspots_parsed": 7,
+        "match_status": "MISMATCH (5 vs 7)",
+        "with_geom": 6,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x61AA",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6331",
+        "obj_count": 2,
+        "hotspots_parsed": 3,
+        "match_status": "MISMATCH (2 vs 3)",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x65F8",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6750",
+        "obj_count": 17,
+        "hotspots_parsed": 17,
+        "match_status": "MATCH",
+        "with_geom": 17,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7447",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7C0D",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7D00",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7E76",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7FE9",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x804E",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x80CB",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8248",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x833B",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x842F",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x852B",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x865E",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x86C3",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8728",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x87A5",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x90F2",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9157",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x91BC",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x92CB",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9C66",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA5EF",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA758",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB270",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB438",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC4AD",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDC38",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE577",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE918",
+        "obj_count": 17,
+        "hotspots_parsed": 18,
+        "match_status": "MISMATCH (17 vs 18)",
+        "with_geom": 17,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1136A",
+        "obj_count": 0,
+        "hotspots_parsed": 1,
+        "match_status": "MISMATCH (0 vs 1)",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11429",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x114C7",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11563",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11A1B",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11B25",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11EB7",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11FEC",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x12127",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 1
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x122C2",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x12348",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x12611",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x12714",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1283C",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "allem.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 15,
+    "objcount_matches": 9,
+    "objcount_mismatches": 5,
+    "objcount_na": 1,
+    "total_objcount_declared": 53,
+    "total_hotspots_parsed": 58,
+    "total_hotspots_with_geom": 54,
+    "total_hotspots_no_geom": 4,
+    "total_false_hotspots": 4,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x115A",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3A6B",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4149",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4995",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5E8A",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x607C",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6544",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7BFB",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8826",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8A56",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9ACB",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB347",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB45D",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB68D",
+        "obj_count": 7,
+        "hotspots_parsed": 8,
+        "match_status": "MISMATCH (7 vs 8)",
+        "with_geom": 7,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "autr.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 36,
+    "objcount_matches": 22,
+    "objcount_mismatches": 5,
+    "objcount_na": 9,
+    "total_objcount_declared": 86,
+    "total_hotspots_parsed": 84,
+    "total_hotspots_with_geom": 73,
+    "total_hotspots_no_geom": 11,
+    "total_false_hotspots": 11,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x118B",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1538",
+        "obj_count": 12,
+        "hotspots_parsed": 12,
+        "match_status": "MATCH",
+        "with_geom": 12,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2F0B",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5510",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x67B0",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6DEF",
+        "obj_count": 15,
+        "hotspots_parsed": 1,
+        "match_status": "MISMATCH (15 vs 1)",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6FD2",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7720",
+        "obj_count": "N/A",
+        "hotspots_parsed": 1,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7805",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7F3B",
+        "obj_count": "N/A",
+        "hotspots_parsed": 1,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8021",
+        "obj_count": "N/A",
+        "hotspots_parsed": 1,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8792",
+        "obj_count": "N/A",
+        "hotspots_parsed": 1,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8830",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8F57",
+        "obj_count": "N/A",
+        "hotspots_parsed": 1,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x903F",
+        "obj_count": "N/A",
+        "hotspots_parsed": 1,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x97CA",
+        "obj_count": "N/A",
+        "hotspots_parsed": 1,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x986B",
+        "obj_count": "N/A",
+        "hotspots_parsed": 1,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9FDB",
+        "obj_count": 0,
+        "hotspots_parsed": 1,
+        "match_status": "MISMATCH (0 vs 1)",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA286",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xBB1F",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xBC59",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD30C",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD679",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDBC5",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDD63",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDF16",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE085",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE1D0",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE3BF",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xF434",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x10CB0",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x10E42",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x10F90",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11C75",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x123B2",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "belge.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 27,
+    "objcount_matches": 21,
+    "objcount_mismatches": 5,
+    "objcount_na": 1,
+    "total_objcount_declared": 74,
+    "total_hotspots_parsed": 94,
+    "total_hotspots_with_geom": 72,
+    "total_hotspots_no_geom": 22,
+    "total_false_hotspots": 6,
+    "total_legitimate_no_geom": 16,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x115A",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2465",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3ABB",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3E08",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x51FB",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x641D",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x78B8",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8C7E",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8E21",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9011",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x918D",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB211",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC475",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC604",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC7AF",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC8C5",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCC67",
+        "obj_count": 1,
+        "hotspots_parsed": 0,
+        "match_status": "MISMATCH (1 vs 0)",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCD24",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD1D8",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD339",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD456",
+        "obj_count": 1,
+        "hotspots_parsed": 0,
+        "match_status": "MISMATCH (1 vs 0)",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD542",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD91E",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE7E3",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1005F",
+        "obj_count": 0,
+        "hotspots_parsed": 20,
+        "match_status": "MISMATCH (0 vs 20)",
+        "with_geom": 0,
+        "no_geom": 20,
+        "false": 4,
+        "legitimate_no_geom": 16,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11AE9",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 3,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "115 110 120 120 0 Allemagne"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54d"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p2bis.bmp 0 131 156"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Grande-Bretagned"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p3.bmp 0 265 200"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Autriched"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p4.bmp 0 212 207"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 4,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Belgiqued"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p5.bmp 0 227 141"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 5,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Danemarkd"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p7.bmp 0 125 294"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 6,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Espagned"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p8.bmp 0 239 4"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 7,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Finlanded"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p9.bmp 0 147 212"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 8,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Franced"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p10.bmp 0 374 221"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 9,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Grèced"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p11.bmp 0 116 190"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 10,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #0000 comic sans ms"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "115 110 120 120 0 Irlanded"
+          },
+          {
+            "subtype": 7,
+            "name": "Type_7",
+            "param": "17"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "act\\p12.bmp 0 246 228"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "danem.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 16,
+    "objcount_matches": 9,
+    "objcount_mismatches": 5,
+    "objcount_na": 2,
+    "total_objcount_declared": 53,
+    "total_hotspots_parsed": 65,
+    "total_hotspots_with_geom": 53,
+    "total_hotspots_no_geom": 12,
+    "total_false_hotspots": 7,
+    "total_legitimate_no_geom": 5,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x116A",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x13B4",
+        "obj_count": 9,
+        "hotspots_parsed": 10,
+        "match_status": "MISMATCH (9 vs 10)",
+        "with_geom": 9,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2AE1",
+        "obj_count": 5,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (5 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4004",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4517",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x46B4",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4766",
+        "obj_count": 18,
+        "hotspots_parsed": 18,
+        "match_status": "MATCH",
+        "with_geom": 18,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6626",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6945",
+        "obj_count": 0,
+        "hotspots_parsed": 1,
+        "match_status": "MISMATCH (0 vs 1)",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 0,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6D4D",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x710A",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7FCF",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x984B",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9A0A",
+        "obj_count": "N/A",
+        "hotspots_parsed": 9,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 9,
+        "false": 5,
+        "legitimate_no_geom": 4,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA16F",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": [
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "jeu1.avi 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "euroland = 1 then dec_var euroland 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "angleterre = 1 then dec_var angleterre 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "autriche = 1  then dec_var autriche 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "allemagne = 1  then dec_var allemagne 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "ecosse = 1  then dec_var ecosse 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "espagne = 1  then dec_var espagne 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "france = 1  then dec_var france 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "finlande = 1  then dec_var finlande 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "irlande = 1  then dec_var irlande 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "italie = 1  then dec_var italie 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "paysbas = 1  then dec_var paysbas 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "grece = 1  then dec_var grece 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "belgique = 1  then dec_var belgique 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "portugal = 1  then dec_var portugal 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "suede = 1  then dec_var suede 1"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "a_dan.wav"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "danem.avi 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "500 320 125 365 0 10 euros"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "cling.wav"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "2000"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "tic1.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "390 320 125 365 0 25 euros"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "cling.wav"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "2000"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "tic1.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 4,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "280 320 125 365 0 5 euros"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "cling.wav"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "2000"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "tic1.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 6,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "32 0 #ffffff Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "170 320 125 365 0 50 euros"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "cling.wav"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "2000"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "tic1.wav 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "ecosse.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 41,
+    "objcount_matches": 35,
+    "objcount_mismatches": 5,
+    "objcount_na": 1,
+    "total_objcount_declared": 152,
+    "total_hotspots_parsed": 155,
+    "total_hotspots_with_geom": 151,
+    "total_hotspots_no_geom": 4,
+    "total_false_hotspots": 2,
+    "total_legitimate_no_geom": 1,
+    "total_empty_hotspots": 1,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x115A",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1569",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2A04",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4451",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x582B",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6B8B",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7F02",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8848",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x89EB",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8B8B",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9016",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x947A",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x98DE",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9D42",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA19A",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA300",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA6E4",
+        "obj_count": 7,
+        "hotspots_parsed": 8,
+        "match_status": "MISMATCH (7 vs 8)",
+        "with_geom": 7,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xAE6E",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC000",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC2FB",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC8F1",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 1,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 1
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCB57",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCC6D",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD095",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD1ED",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD385",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD519",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD66C",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDB1D",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDBF1",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDD85",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 0,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE2A0",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE3DD",
+        "obj_count": 1,
+        "hotspots_parsed": 0,
+        "match_status": "MISMATCH (1 vs 0)",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE514",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE709",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xF77E",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1100D",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x111B3",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1155E",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1169C",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": [
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "euroland = 1 then dec_var euroland 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "angleterre = 1 then dec_var angleterre 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "autriche = 1  then dec_var autriche 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "allemagne = 1  then dec_var allemagne 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "belgique = 1  then dec_var belgique 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "espagne = 1  then dec_var espagne 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "france = 1  then dec_var france 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "finlande = 1  then dec_var finlande 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "irlande = 1  then dec_var irlande 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "italie = 1  then dec_var italie 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "paysbas = 1  then dec_var paysbas 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "grece = 1  then dec_var grece 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "danemark = 1  then dec_var danemark 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "portugal = 1  then dec_var portugal 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "suede = 1  then dec_var suede 1"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "a_eco.wav"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "ecosse.avi 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "1d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "espa.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 20,
+    "objcount_matches": 15,
+    "objcount_mismatches": 4,
+    "objcount_na": 1,
+    "total_objcount_declared": 81,
+    "total_hotspots_parsed": 82,
+    "total_hotspots_with_geom": 80,
+    "total_hotspots_no_geom": 2,
+    "total_false_hotspots": 1,
+    "total_legitimate_no_geom": 1,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11AB",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2D2E",
+        "obj_count": 13,
+        "hotspots_parsed": 13,
+        "match_status": "MATCH",
+        "with_geom": 13,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4F85",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8B68",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA067",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB37A",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC987",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCB07",
+        "obj_count": 8,
+        "hotspots_parsed": 6,
+        "match_status": "MISMATCH (8 vs 6)",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCEFF",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD081",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD1E8",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD382",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 0,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD8C4",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDAD6",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xEB4B",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x103A4",
+        "obj_count": 12,
+        "hotspots_parsed": 12,
+        "match_status": "MATCH",
+        "with_geom": 12,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11708",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11845",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11983",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 3,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": [
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "a_esp.wav"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "espa.avi 1"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "espa.avi 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "euroland = 1 then dec_var euroland 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "angleterre = 1 then dec_var angleterre 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "autriche = 1  then dec_var autriche 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "allemagne = 1  then dec_var allemagne 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "ecosse = 1  then dec_var ecosse 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "belgique = 1  then dec_var belgique 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "france = 1  then dec_var france 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "finlande = 1  then dec_var finlande 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "irlande = 1  then dec_var irlande 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "italie = 1  then dec_var italie 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "paysbas = 1  then dec_var paysbas 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "grece = 1  then dec_var grece 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "danemark = 1  then dec_var danemark 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "portugal = 1  then dec_var portugal 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "suede = 1  then dec_var suede 1d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "finlan.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 21,
+    "objcount_matches": 17,
+    "objcount_mismatches": 3,
+    "objcount_na": 1,
+    "total_objcount_declared": 80,
+    "total_hotspots_parsed": 83,
+    "total_hotspots_with_geom": 80,
+    "total_hotspots_no_geom": 3,
+    "total_false_hotspots": 2,
+    "total_legitimate_no_geom": 1,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x115A",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1861",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x31A2",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4249",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4373",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x445D",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4547",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x469C",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 0,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4828",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4A97",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x59BD",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5AE1",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5C23",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5D55",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5DB3",
+        "obj_count": 22,
+        "hotspots_parsed": 23,
+        "match_status": "MISMATCH (22 vs 23)",
+        "with_geom": 22,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x82FE",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8431",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8576",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x95EB",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xAE67",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": [
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "1"
+          },
+          {
+            "subtype": 25,
+            "name": "Type_25",
+            "param": ""
+          },
+          {
+            "subtype": 32,
+            "name": "Type_32",
+            "param": ""
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "ok peli.bmp 0 358 133"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "scot3.avi 1 103 225 195 319"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "ok peli.bmp 0 358 133"
+          },
+          {
+            "subtype": 16,
+            "name": "DELAY",
+            "param": "2000"
+          },
+          {
+            "subtype": 22,
+            "name": "Type_22",
+            "param": "photo 1"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54 else scene 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "france.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 34,
+    "objcount_matches": 27,
+    "objcount_mismatches": 6,
+    "objcount_na": 1,
+    "total_objcount_declared": 100,
+    "total_hotspots_parsed": 103,
+    "total_hotspots_with_geom": 99,
+    "total_hotspots_no_geom": 4,
+    "total_false_hotspots": 4,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x119F",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2663",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x38C2",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3F0E",
+        "obj_count": 7,
+        "hotspots_parsed": 8,
+        "match_status": "MISMATCH (7 vs 8)",
+        "with_geom": 7,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6500",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7B42",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA685",
+        "obj_count": 2,
+        "hotspots_parsed": 3,
+        "match_status": "MISMATCH (2 vs 3)",
+        "with_geom": 2,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB830",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xBB5B",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDC2A",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xEF9E",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1025A",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x10791",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x118F9",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11A8E",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11DEF",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1234F",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x125B6",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x128BD",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x129FC",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x12B3C",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x12ED4",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x13177",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x13400",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1358A",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x143C3",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x15288",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x16B04",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x16C65",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x17601",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x177A1",
+        "obj_count": 2,
+        "hotspots_parsed": 0,
+        "match_status": "MISMATCH (2 vs 0)",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x17817",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x17927",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 3,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "grece.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 18,
+    "objcount_matches": 16,
+    "objcount_mismatches": 2,
+    "objcount_na": 0,
+    "total_objcount_declared": 66,
+    "total_hotspots_parsed": 73,
+    "total_hotspots_with_geom": 73,
+    "total_hotspots_no_geom": 0,
+    "total_false_hotspots": 0,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11AB",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1903",
+        "obj_count": 11,
+        "hotspots_parsed": 11,
+        "match_status": "MATCH",
+        "with_geom": 11,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x38C0",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4E13",
+        "obj_count": 8,
+        "hotspots_parsed": 8,
+        "match_status": "MATCH",
+        "with_geom": 8,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6758",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x69C1",
+        "obj_count": 6,
+        "hotspots_parsed": 7,
+        "match_status": "MISMATCH (6 vs 7)",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x84DC",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8692",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x877B",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x96BD",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9822",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x993C",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9B3E",
+        "obj_count": 3,
+        "hotspots_parsed": 9,
+        "match_status": "MISMATCH (3 vs 9)",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC419",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC691",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCBDD",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD6FA",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "holl.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 22,
+    "objcount_matches": 17,
+    "objcount_mismatches": 4,
+    "objcount_na": 1,
+    "total_objcount_declared": 106,
+    "total_hotspots_parsed": 111,
+    "total_hotspots_with_geom": 107,
+    "total_hotspots_no_geom": 4,
+    "total_false_hotspots": 4,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x117D",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1C17",
+        "obj_count": 8,
+        "hotspots_parsed": 8,
+        "match_status": "MATCH",
+        "with_geom": 8,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2973",
+        "obj_count": 10,
+        "hotspots_parsed": 12,
+        "match_status": "MISMATCH (10 vs 12)",
+        "with_geom": 9,
+        "no_geom": 3,
+        "false": 3,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3623",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3B33",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x404E",
+        "obj_count": 16,
+        "hotspots_parsed": 16,
+        "match_status": "MATCH",
+        "with_geom": 16,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5458",
+        "obj_count": 16,
+        "hotspots_parsed": 16,
+        "match_status": "MATCH",
+        "with_geom": 16,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6769",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x68F9",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6D9E",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6F4E",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x70D3",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8C78",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8F15",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x90A3",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA118",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB994",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC098",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC1F0",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC2D9",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCD0C",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 3,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "irland.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 24,
+    "objcount_matches": 19,
+    "objcount_mismatches": 4,
+    "objcount_na": 1,
+    "total_objcount_declared": 93,
+    "total_hotspots_parsed": 95,
+    "total_hotspots_with_geom": 91,
+    "total_hotspots_no_geom": 4,
+    "total_false_hotspots": 3,
+    "total_legitimate_no_geom": 1,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x115A",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x15CE",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x28A4",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3D6A",
+        "obj_count": 21,
+        "hotspots_parsed": 21,
+        "match_status": "MATCH",
+        "with_geom": 21,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5140",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5284",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6731",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6B26",
+        "obj_count": 10,
+        "hotspots_parsed": 10,
+        "match_status": "MATCH",
+        "with_geom": 10,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8A1E",
+        "obj_count": 3,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (3 vs 2)",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8B40",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8B8C",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8E58",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8FF6",
+        "obj_count": 6,
+        "hotspots_parsed": 7,
+        "match_status": "MISMATCH (6 vs 7)",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x95F0",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x972D",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x99A2",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9BD9",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 3,
+        "false": 2,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA2D7",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 1,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB09C",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB4D3",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCD4F",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE2C0",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE406",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": [
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "15"
+          },
+          {
+            "subtype": 9,
+            "name": "VIDEO",
+            "param": "levrier1.avi 1 340 130 560 300"
+          },
+          {
+            "subtype": 22,
+            "name": "Type_22",
+            "param": "Levrierresultat <random 4 1>"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "ggg rol\\gagne0.bmp 0 379 138"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierresultat = 1 then addbmp gg rol\\gagne1.bmp 0 340 187"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierresultat = 2 then addbmp gg rol\\gagne2.bmp 0 340 187"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierresultat = 3 then addbmp gg rol\\gagne3.bmp 0 340 187"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierresultat = 4 then addbmp gg rol\\gagne4.bmp 0 340 187"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierresultat = <levriernumero> then hotspot 2"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "levrierresultat != <levriernumero> then hotspot 3"
+          },
+          {
+            "subtype": 41,
+            "name": "ADDTEXT",
+            "param": "score 6 15 415 160 470 0 <score>"
+          },
+          {
+            "subtype": 21,
+            "name": "IF_THEN",
+            "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "italie.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 35,
+    "objcount_matches": 30,
+    "objcount_mismatches": 4,
+    "objcount_na": 1,
+    "total_objcount_declared": 97,
+    "total_hotspots_parsed": 98,
+    "total_hotspots_with_geom": 95,
+    "total_hotspots_no_geom": 3,
+    "total_false_hotspots": 2,
+    "total_legitimate_no_geom": 1,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x119F",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3B18",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3F58",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x536C",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6716",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x79FD",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7AFB",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8001",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8F27",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x90D8",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x938D",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9640",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x97B6",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x98F8",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9A56",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9BE4",
+        "obj_count": 20,
+        "hotspots_parsed": 20,
+        "match_status": "MATCH",
+        "with_geom": 20,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xCFC6",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD127",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD23E",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDEE1",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xDFD5",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE145",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE2A0",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE428",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE540",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE665",
+        "obj_count": 1,
+        "hotspots_parsed": 0,
+        "match_status": "MISMATCH (1 vs 0)",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE760",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xEC2C",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xFA66",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xFE9D",
+        "obj_count": 1,
+        "hotspots_parsed": 0,
+        "match_status": "MISMATCH (1 vs 0)",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11799",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11859",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11CE6",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11DC4",
+        "obj_count": 1,
+        "hotspots_parsed": 3,
+        "match_status": "MISMATCH (1 vs 3)",
+        "with_geom": 0,
+        "no_geom": 3,
+        "false": 2,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 1 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "490 410 125 365 0 Quitteri"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "..\\..\\grece\\digit\\cartoon.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "33i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "..\\..\\grece\\digit\\cartoon.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "33i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "..\\..\\grece\\digit\\cling.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "33i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "..\\..\\grece\\digit\\cartoon.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "33i"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "portu.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 17,
+    "objcount_matches": 12,
+    "objcount_mismatches": 4,
+    "objcount_na": 1,
+    "total_objcount_declared": 86,
+    "total_hotspots_parsed": 90,
+    "total_hotspots_with_geom": 88,
+    "total_hotspots_no_geom": 2,
+    "total_false_hotspots": 2,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x115A",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x157B",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2DF5",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4335",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5893",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6F5F",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8705",
+        "obj_count": 12,
+        "hotspots_parsed": 12,
+        "match_status": "MATCH",
+        "with_geom": 12,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA82E",
+        "obj_count": 5,
+        "hotspots_parsed": 6,
+        "match_status": "MISMATCH (5 vs 6)",
+        "with_geom": 5,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC13C",
+        "obj_count": 5,
+        "hotspots_parsed": 6,
+        "match_status": "MISMATCH (5 vs 6)",
+        "with_geom": 5,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC4CD",
+        "obj_count": 16,
+        "hotspots_parsed": 16,
+        "match_status": "MATCH",
+        "with_geom": 16,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xE949",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xF223",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xF500",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xF695",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xF8A5",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1091A",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "suede.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 14,
+    "objcount_matches": 12,
+    "objcount_mismatches": 1,
+    "objcount_na": 1,
+    "total_objcount_declared": 47,
+    "total_hotspots_parsed": 44,
+    "total_hotspots_with_geom": 44,
+    "total_hotspots_no_geom": 0,
+    "total_false_hotspots": 0,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x6A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x115A",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x14C2",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1E50",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x31D0",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4A75",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5FD7",
+        "obj_count": 3,
+        "hotspots_parsed": 3,
+        "match_status": "MATCH",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6347",
+        "obj_count": 7,
+        "hotspots_parsed": 7,
+        "match_status": "MATCH",
+        "with_geom": 7,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x968B",
+        "obj_count": 4,
+        "hotspots_parsed": 4,
+        "match_status": "MATCH",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9905",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9A2D",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x9FE8",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB05D",
+        "obj_count": 7,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (7 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC8D9",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "biblio.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 42,
+    "objcount_matches": 14,
+    "objcount_mismatches": 22,
+    "objcount_na": 6,
+    "total_objcount_declared": 284,
+    "total_hotspots_parsed": 427,
+    "total_hotspots_with_geom": 254,
+    "total_hotspots_no_geom": 173,
+    "total_false_hotspots": 154,
+    "total_legitimate_no_geom": 19,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x62",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11CE",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1356",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x167C",
+        "obj_count": "N/A",
+        "hotspots_parsed": 17,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 17,
+        "false": 16,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x264E",
+        "obj_count": 2,
+        "hotspots_parsed": 3,
+        "match_status": "MISMATCH (2 vs 3)",
+        "with_geom": 2,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x2AA8",
+        "obj_count": 10,
+        "hotspots_parsed": 11,
+        "match_status": "MISMATCH (10 vs 11)",
+        "with_geom": 10,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4673",
+        "obj_count": 9,
+        "hotspots_parsed": 9,
+        "match_status": "MATCH",
+        "with_geom": 9,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5C07",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x6059",
+        "obj_count": 2,
+        "hotspots_parsed": 3,
+        "match_status": "MISMATCH (2 vs 3)",
+        "with_geom": 2,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x64F2",
+        "obj_count": 8,
+        "hotspots_parsed": 8,
+        "match_status": "MATCH",
+        "with_geom": 8,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x7BEE",
+        "obj_count": 6,
+        "hotspots_parsed": 6,
+        "match_status": "MATCH",
+        "with_geom": 6,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x8F7C",
+        "obj_count": 36,
+        "hotspots_parsed": 15,
+        "match_status": "MISMATCH (36 vs 15)",
+        "with_geom": 2,
+        "no_geom": 13,
+        "false": 13,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA0BE",
+        "obj_count": 5,
+        "hotspots_parsed": 5,
+        "match_status": "MATCH",
+        "with_geom": 5,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA33C",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xA456",
+        "obj_count": 16,
+        "hotspots_parsed": 16,
+        "match_status": "MATCH",
+        "with_geom": 16,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xB745",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xC3ED",
+        "obj_count": 2,
+        "hotspots_parsed": 2,
+        "match_status": "MATCH",
+        "with_geom": 2,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD0B7",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0xD163",
+        "obj_count": 0,
+        "hotspots_parsed": 78,
+        "match_status": "MISMATCH (0 vs 78)",
+        "with_geom": 0,
+        "no_geom": 78,
+        "false": 77,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x11F4F",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1204C",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x12059",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1249E",
+        "obj_count": "N/A",
+        "hotspots_parsed": 3,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 3,
+        "false": 1,
+        "legitimate_no_geom": 2,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x12F48",
+        "obj_count": "N/A",
+        "hotspots_parsed": 3,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 3,
+        "false": 1,
+        "legitimate_no_geom": 2,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x13A80",
+        "obj_count": 13,
+        "hotspots_parsed": 15,
+        "match_status": "MISMATCH (13 vs 15)",
+        "with_geom": 13,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1476A",
+        "obj_count": 12,
+        "hotspots_parsed": 14,
+        "match_status": "MISMATCH (12 vs 14)",
+        "with_geom": 12,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x153D9",
+        "obj_count": 13,
+        "hotspots_parsed": 15,
+        "match_status": "MISMATCH (13 vs 15)",
+        "with_geom": 13,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x160C9",
+        "obj_count": 12,
+        "hotspots_parsed": 14,
+        "match_status": "MISMATCH (12 vs 14)",
+        "with_geom": 12,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x16CD2",
+        "obj_count": 13,
+        "hotspots_parsed": 15,
+        "match_status": "MISMATCH (13 vs 15)",
+        "with_geom": 13,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x179B7",
+        "obj_count": 10,
+        "hotspots_parsed": 12,
+        "match_status": "MISMATCH (10 vs 12)",
+        "with_geom": 10,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x18396",
+        "obj_count": 7,
+        "hotspots_parsed": 9,
+        "match_status": "MISMATCH (7 vs 9)",
+        "with_geom": 7,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x18B30",
+        "obj_count": 7,
+        "hotspots_parsed": 9,
+        "match_status": "MISMATCH (7 vs 9)",
+        "with_geom": 7,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x192B0",
+        "obj_count": 14,
+        "hotspots_parsed": 16,
+        "match_status": "MISMATCH (14 vs 16)",
+        "with_geom": 14,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1A0AA",
+        "obj_count": 13,
+        "hotspots_parsed": 15,
+        "match_status": "MISMATCH (13 vs 15)",
+        "with_geom": 13,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1AE17",
+        "obj_count": 7,
+        "hotspots_parsed": 9,
+        "match_status": "MISMATCH (7 vs 9)",
+        "with_geom": 7,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1B5A6",
+        "obj_count": 7,
+        "hotspots_parsed": 9,
+        "match_status": "MISMATCH (7 vs 9)",
+        "with_geom": 7,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1BD18",
+        "obj_count": 10,
+        "hotspots_parsed": 12,
+        "match_status": "MISMATCH (10 vs 12)",
+        "with_geom": 10,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1C761",
+        "obj_count": 1,
+        "hotspots_parsed": 1,
+        "match_status": "MATCH",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1C8CB",
+        "obj_count": 28,
+        "hotspots_parsed": 27,
+        "match_status": "MISMATCH (28 vs 27)",
+        "with_geom": 27,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1F09C",
+        "obj_count": 2,
+        "hotspots_parsed": 3,
+        "match_status": "MISMATCH (2 vs 3)",
+        "with_geom": 2,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x1F7ED",
+        "obj_count": 9,
+        "hotspots_parsed": 10,
+        "match_status": "MISMATCH (9 vs 10)",
+        "with_geom": 9,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x20E61",
+        "obj_count": 3,
+        "hotspots_parsed": 36,
+        "match_status": "MISMATCH (3 vs 36)",
+        "with_geom": 8,
+        "no_geom": 28,
+        "false": 28,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 14,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 38,
+            "name": "PLAYTEXT",
+            "param": "80 400 125 365 0 SUEDE"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "act\\p15.bmp 0 217 22d"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "tic1.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 6,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "18 0 #000fff Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "20 135 125 365 0 La tour Eiffeld"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "tic1.wav 1"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "que question.bmp 0 6 123"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "euro eurodra.bmp 0 1 355"
+          },
+          {
+            "subtype": 27,
+            "name": "ADDBMP",
+            "param": "inter intero.bmp 0 0 0"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "22 1 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "430 420 125 365 0 Quitteri"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "29i"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": [
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "min.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": [
+          {
+            "subtype": 39,
+            "name": "FONT",
+            "param": "22 1 #000000 Comic sans MS"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "430 400 125 365 0 Quitteri"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "max.wav 1"
+          },
+          {
+            "subtype": 6,
+            "name": "GOTO_SCENE",
+            "param": "31i"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": [
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "min.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 13,
+        "commands": [
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "min.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 12,
+        "commands": [
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "min.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 13,
+        "commands": [
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "min.wav 1"
+          }
+        ]
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 12,
+        "commands": [
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "min.wav 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "vnd": "barre.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 8,
+    "objcount_matches": 1,
+    "objcount_mismatches": 5,
+    "objcount_na": 2,
+    "total_objcount_declared": 19,
+    "total_hotspots_parsed": 21,
+    "total_hotspots_with_geom": 17,
+    "total_hotspots_no_geom": 4,
+    "total_false_hotspots": 4,
+    "total_legitimate_no_geom": 0,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x62",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x14C",
+        "obj_count": 3,
+        "hotspots_parsed": 1,
+        "match_status": "MISMATCH (3 vs 1)",
+        "with_geom": 1,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4B4",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4EA",
+        "obj_count": 7,
+        "hotspots_parsed": 3,
+        "match_status": "MISMATCH (7 vs 3)",
+        "with_geom": 3,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x128C",
+        "obj_count": 3,
+        "hotspots_parsed": 9,
+        "match_status": "MISMATCH (3 vs 9)",
+        "with_geom": 6,
+        "no_geom": 3,
+        "false": 3,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x3268",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 3,
+        "no_geom": 1,
+        "false": 1,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x4762",
+        "obj_count": "N/A",
+        "hotspots_parsed": 0,
+        "match_status": "N/A",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x5665",
+        "obj_count": 3,
+        "hotspots_parsed": 4,
+        "match_status": "MISMATCH (3 vs 4)",
+        "with_geom": 4,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": []
+  },
+  {
+    "vnd": "start.vnd.parsed.json",
+    "header_scene_count": "N/A",
+    "scenes_parsed": 3,
+    "objcount_matches": 1,
+    "objcount_mismatches": 2,
+    "objcount_na": 0,
+    "total_objcount_declared": 2,
+    "total_hotspots_parsed": 4,
+    "total_hotspots_with_geom": 0,
+    "total_hotspots_no_geom": 4,
+    "total_false_hotspots": 3,
+    "total_legitimate_no_geom": 1,
+    "total_empty_hotspots": 0,
+    "scene_analysis": [
+      {
+        "scene_id": -1,
+        "offset": "0x92",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 0,
+        "no_geom": 2,
+        "false": 2,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x130A",
+        "obj_count": 0,
+        "hotspots_parsed": 0,
+        "match_status": "MATCH",
+        "with_geom": 0,
+        "no_geom": 0,
+        "false": 0,
+        "legitimate_no_geom": 0,
+        "empty": 0
+      },
+      {
+        "scene_id": -1,
+        "offset": "0x139B",
+        "obj_count": 1,
+        "hotspots_parsed": 2,
+        "match_status": "MISMATCH (1 vs 2)",
+        "with_geom": 0,
+        "no_geom": 2,
+        "false": 1,
+        "legitimate_no_geom": 1,
+        "empty": 0
+      }
+    ],
+    "legitimate_no_geom_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": [
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "interface\\livres.bmp 0 0 273"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "..\\..\\couleurs1\\digit\\yaou.wav"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\biblio\\biblio.vnp 1i"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "interface\\tirelire.bmp 0 483 207"
+          },
+          {
+            "subtype": 11,
+            "name": "Type_11",
+            "param": "..\\..\\couleurs1\\digit\\ouais.wav"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "interface\\oui.bmp 0 470 0"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "..\\..\\couleurs1\\digit\\ouvre.wavi"
+          },
+          {
+            "subtype": 10,
+            "name": "CURSOR",
+            "param": "interface\\video.bmp 0 0 0"
+          },
+          {
+            "subtype": 0,
+            "name": "QUIT",
+            "param": "ouvre2.wavi"
+          }
+        ]
+      }
+    ]
+  }
+]
