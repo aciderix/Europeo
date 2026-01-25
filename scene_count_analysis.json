@@ -1,0 +1,289 @@
+[
+  {
+    "vnd": "couleurs1",
+    "header_scene_count": 31,
+    "parsed_scene_count": 55,
+    "difference": 24,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 42,
+      "empty": 8,
+      "options": 1,
+      "unknown": 1,
+      "credits": 1,
+      "game_over": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "allem",
+    "header_scene_count": 15,
+    "parsed_scene_count": 15,
+    "difference": 0,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 12,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "autr",
+    "header_scene_count": 24,
+    "parsed_scene_count": 36,
+    "difference": 12,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 27,
+      "unknown": 7,
+      "options": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "belge",
+    "header_scene_count": 28,
+    "parsed_scene_count": 27,
+    "difference": -1,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 24,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "danem",
+    "header_scene_count": 16,
+    "parsed_scene_count": 16,
+    "difference": 0,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 13,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "ecosse",
+    "header_scene_count": 42,
+    "parsed_scene_count": 41,
+    "difference": -1,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 38,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "espa",
+    "header_scene_count": 20,
+    "parsed_scene_count": 20,
+    "difference": 0,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 17,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "finlan",
+    "header_scene_count": 20,
+    "parsed_scene_count": 21,
+    "difference": 1,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 18,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "france",
+    "header_scene_count": 34,
+    "parsed_scene_count": 34,
+    "difference": 0,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 31,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "grece",
+    "header_scene_count": 18,
+    "parsed_scene_count": 18,
+    "difference": 0,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 16,
+      "options": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "holl",
+    "header_scene_count": 22,
+    "parsed_scene_count": 22,
+    "difference": 0,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 19,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "irland",
+    "header_scene_count": 3,
+    "parsed_scene_count": 24,
+    "difference": 21,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 21,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "italie",
+    "header_scene_count": 36,
+    "parsed_scene_count": 35,
+    "difference": -1,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 32,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "portu",
+    "header_scene_count": 17,
+    "parsed_scene_count": 17,
+    "difference": 0,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 14,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "suede",
+    "header_scene_count": 2,
+    "parsed_scene_count": 14,
+    "difference": 12,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 11,
+      "options": 1,
+      "unknown": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "biblio",
+    "header_scene_count": 0,
+    "parsed_scene_count": 42,
+    "difference": 42,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 39,
+      "empty": 2
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "barre",
+    "header_scene_count": 0,
+    "parsed_scene_count": 8,
+    "difference": 8,
+    "scene_types": {
+      "game": 4,
+      "unknown": 3,
+      "options": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  {
+    "vnd": "frontal",
+    "header_scene_count": 1,
+    "parsed_scene_count": 3,
+    "difference": 2,
+    "scene_types": {
+      "global_vars": 1,
+      "game": 1,
+      "options": 1
+    },
+    "width": 640,
+    "height": 480,
+    "exit_id": 0,
+    "index_id": 0
+  }
+]
