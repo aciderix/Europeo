@@ -189,13 +189,52 @@
             font-size: 12px;
             pointer-events: none;
             z-index: 100;
-            max-width: 300px;
+            max-width: 400px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             display: none;
+            line-height: 1.4;
         }
 
         .hotspot:hover .hotspot-tooltip {
             display: block;
+        }
+
+        .tooltip-section {
+            margin: 6px 0;
+            padding: 4px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tooltip-section:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+
+        .tooltip-label {
+            color: #4a90e2;
+            font-weight: bold;
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .tooltip-value {
+            color: #fff;
+            font-size: 11px;
+        }
+
+        .playtext-overlay {
+            position: absolute;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Comic Sans MS', cursive;
+            z-index: 50;
+            white-space: pre-wrap;
+            max-width: 400px;
         }
 
         .hotspot-list {
@@ -667,29 +706,126 @@
             label.style.top = '4px';
             div.appendChild(label);
 
-            // Tooltip avec infos
-            const tooltip = document.createElement('div');
-            tooltip.className = 'hotspot-tooltip';
-
-            const commandCount = hotspot.commands ? hotspot.commands.length : 0;
-            const commandTypes = hotspot.commands
-                ? [...new Set(hotspot.commands.map(c => c.subtype))].join(', ')
-                : 'aucune';
-
-            tooltip.innerHTML = `
-                <strong>Hotspot #${index}</strong><br>
-                Points: ${points.length}<br>
-                Commandes: ${commandCount}<br>
-                Types: ${commandTypes}
-            `;
+            // Tooltip enrichi avec détails
+            const tooltip = createHotspotTooltip(hotspot, index, points.length);
             tooltip.style.left = `${Math.min(width + 10, 300)}px`;
             tooltip.style.top = '0';
 
             div.appendChild(tooltip);
 
+            // Afficher textes PLAYTEXT directement sur la scène
+            displayHotspotTexts(canvas, hotspot, index);
+
             div.onclick = () => executeHotspotCommands(hotspot, scene, index);
 
             canvas.appendChild(div);
+        }
+
+        // Créer tooltip enrichi pour hotspot
+        function createHotspotTooltip(hotspot, index, pointCount) {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'hotspot-tooltip';
+
+            const commands = hotspot.commands || [];
+            const commandCount = commands.length;
+
+            // Sections du tooltip
+            let html = `<div class="tooltip-section">
+                <strong>Hotspot #${index}</strong><br>
+                Points: ${pointCount}
+            </div>`;
+
+            // Commandes par type
+            const gotoCommands = commands.filter(c => c.subtype === 6);
+            const textCommands = commands.filter(c => c.subtype === 38);
+            const ifCommands = commands.filter(c => c.subtype === 21);
+            const itemCommands = commands.filter(c => c.subtype === 28);
+            const otherCommands = commands.filter(c => ![6, 21, 28, 38].includes(c.subtype));
+
+            // GOTO
+            if (gotoCommands.length > 0) {
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Navigation (${gotoCommands.length})</div>
+                    ${gotoCommands.map(c => `<div class="tooltip-value">→ Scène ${c.param}</div>`).join('')}
+                </div>`;
+            }
+
+            // PLAYTEXT
+            if (textCommands.length > 0) {
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Textes (${textCommands.length})</div>`;
+
+                textCommands.forEach(c => {
+                    const match = c.param.match(/(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(.+)/);
+                    if (match) {
+                        const text = match[6];
+                        html += `<div class="tooltip-value">💬 "${text.substring(0, 40)}${text.length > 40 ? '...' : ''}"</div>`;
+                    }
+                });
+
+                html += `</div>`;
+            }
+
+            // IF-THEN
+            if (ifCommands.length > 0) {
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Conditions (${ifCommands.length})</div>`;
+
+                ifCommands.slice(0, 3).forEach(c => {
+                    const shortParam = c.param.substring(0, 50);
+                    html += `<div class="tooltip-value">⚡ ${shortParam}${c.param.length > 50 ? '...' : ''}</div>`;
+                });
+
+                if (ifCommands.length > 3) {
+                    html += `<div class="tooltip-value">... et ${ifCommands.length - 3} autres</div>`;
+                }
+
+                html += `</div>`;
+            }
+
+            // ITEM TRIGGER
+            if (itemCommands.length > 0) {
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Items</div>
+                    ${itemCommands.map(c => `<div class="tooltip-value">🎁 ${c.param}</div>`).join('')}
+                </div>`;
+            }
+
+            // Autres commandes
+            if (otherCommands.length > 0) {
+                const types = [...new Set(otherCommands.map(c => c.subtype))].join(', ');
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Autres (${otherCommands.length})</div>
+                    <div class="tooltip-value">Types: ${types}</div>
+                </div>`;
+            }
+
+            tooltip.innerHTML = html;
+            return tooltip;
+        }
+
+        // Afficher textes PLAYTEXT du hotspot
+        function displayHotspotTexts(canvas, hotspot, index) {
+            const commands = hotspot.commands || [];
+            const textCommands = commands.filter(c => c.subtype === 38);
+
+            textCommands.forEach((cmd, textIndex) => {
+                const match = cmd.param.match(/(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(.+)/);
+
+                if (match) {
+                    const [, x, y, w, h, flags, text] = match;
+
+                    const textDiv = document.createElement('div');
+                    textDiv.className = 'playtext-overlay';
+                    textDiv.style.left = `${x}px`;
+                    textDiv.style.top = `${y}px`;
+                    textDiv.style.maxWidth = `${Math.max(parseInt(w), 200)}px`;
+                    textDiv.textContent = text;
+                    textDiv.title = `Hotspot #${index} - Text #${textIndex}`;
+
+                    canvas.appendChild(textDiv);
+                }
+            });
         }
 
         // Mettre à jour la liste des hotspots
