@@ -865,3 +865,271 @@ Gap contient:
 **Prochaine étape**: Implémentation dans vnd_parser.py
 
 **Voir**: `TYPE_AWARE_COMPLETE_RESULTS.md` pour détails complets
+
+---
+
+## Simulateur VND Interactif (2026-01-25)
+
+### Vue d'Ensemble
+
+**Fichier**: `vnd_simulator.html` - Simulateur web pour tester les VND parsés en temps réel
+
+Permet de visualiser et interagir avec les scènes VND parsées sans avoir besoin du moteur VnStudio original.
+
+### Fonctionnalités Principales
+
+#### ✅ Chargement de Fichiers
+- **Sélecteur manuel** de fichiers JSON parsés
+- Bouton "📂 Choisir JSON..." pour naviguer dans les dossiers
+- Supporte tous les fichiers `.vnd.parsed.json`
+- Affichage nom du fichier chargé
+
+#### ✅ Affichage des Scènes
+
+**Canvas 800×600** (ajustable selon scène):
+- Background avec nom du fichier principal
+- Support **scènes scrollables** (détection automatique)
+- Bordure orange + contrôles de navigation si > 800×600
+- Dimensions calculées automatiquement selon hotspots
+
+**Informations scène**:
+- ID, type (game, toolbar, options, etc.)
+- Liste des fichiers
+- Nombre de hotspots
+- Badge "⚠️ SCROLLABLE" si scène scrollable
+
+#### ✅ Hotspots Visuels
+
+**Polygones SVG réels**:
+- Affichage des vraies formes (pas juste bounding box)
+- Support polygones (3+ points) et rectangles (2 points)
+- Remplissage transparent + bordure jaune
+- Survol: bordure plus épaisse
+
+**Labels numérotés**:
+- Chaque hotspot affiché avec #0, #1, #2...
+- Positionné en haut-gauche de la zone
+- Fond noir semi-transparent
+
+**Tooltips enrichis** (au survol):
+- **Section Navigation**: Liste GOTO avec destinations
+- **Section Textes**: Aperçu PLAYTEXT (40 premiers caractères)
+- **Section Conditions**: Liste IF-THEN (max 3 affichés)
+- **Section Items**: Liste ITEM_TRIGGER (Type 28)
+- **Section Autres**: Types de commandes diverses
+
+**Textes PLAYTEXT affichés**:
+- Positionnés aux coordonnées exactes (x, y)
+- Fond noir semi-transparent
+- Police Comic Sans MS
+- Visible en permanence sur la scène
+
+#### ✅ Navigation
+
+**Contrôles scène**:
+- Input numéro de scène + bouton "Aller"
+- Bouton "Reset" pour réinitialiser (score = 0, scène 1)
+
+**Contrôles scroll** (scènes scrollables uniquement):
+- Boutons directionnels: ↑ ↓ ← →
+- Bouton centrer: ⊙ (retour 0,0)
+- Déplacement par pas de 100px
+- Indicateur position temps réel: "320, 150"
+- Scrollbars natives fonctionnelles
+
+**Exécution commandes**:
+- Clic sur hotspot → Exécute les commandes
+- Support GOTO (absolu/relatif: +1, -1, etc.)
+- Support IF-THEN (conditions avec variables)
+- Support SET/INC/DEC variables
+- Support Type 28 (ITEM_TRIGGER)
+
+#### ✅ Sidebar Informations
+
+**📍 Scène Actuelle**:
+- ID, type, fichiers, nombre hotspots
+- Badge scrollable si applicable
+
+**📊 Variables**:
+- Score affiché en haut
+- Liste variables dynamiques (api, miel, etc.)
+- Mise à jour temps réel
+
+**🎯 Hotspots**:
+- Liste complète des hotspots de la scène
+- 🎯 = avec géométrie, ⚙️ = système
+- Nombre commandes + destination GOTO
+
+**📝 Log**:
+- Historique actions en temps réel
+- Types: GOTO (bleu), VAR (vert), TEXT (jaune), ERROR (rouge)
+- Max 50 entrées conservées
+
+#### ✅ Mode Debug
+
+- Activé par défaut (checkbox cochée)
+- Affiche/masque les hotspots
+- Toggle instantané
+
+### Commandes VND Supportées
+
+| Type | Nom | Support | Description |
+|------|-----|---------|-------------|
+| 0 | QUIT | ✅ | Quitter (logged) |
+| 6 | GOTO_SCENE | ✅ | Navigation absolue/relative |
+| 9 | VIDEO | ⚠️ | Logged (pas de lecture) |
+| 11 | PLAYWAV | ⚠️ | Logged (pas de lecture) |
+| 21 | IF_THEN | ✅ | Conditions avec opérateurs (=, !=, <, >, <=, >=) |
+| 22 | SET_VAR | ✅ | Définir variable |
+| 23 | INC_VAR | ✅ | Incrémenter variable |
+| 24 | SCORE_OP | ✅ | Opération score (DEC/INC) |
+| 27 | ADDBMP | ⚠️ | Logged (pas d'affichage image) |
+| 28 | ITEM_TRIGGER | ✅ | Trigger conditionnel item (ex: miel) |
+| 31 | RUNPRJ | ⚠️ | Logged (pas de chargement VND) |
+| 38 | PLAYTEXT | ✅ | Affichage texte aux coordonnées |
+| 39 | FONT | ⚠️ | Ignoré |
+
+**Légende**:
+- ✅ = Implémenté et fonctionnel
+- ⚠️ = Placeholder (logged mais pas exécuté graphiquement)
+
+### Scènes Scrollables
+
+**Détection automatique**:
+- Analyse tous les hotspots de la scène
+- Calcule dimensions nécessaires (max X/Y + marge)
+- Active mode scrollable si > 800×600
+
+**Fonctionnalités**:
+- Canvas s'agrandit automatiquement
+- Bordure orange + effet lumineux
+- Contrôles navigation apparaissent
+- Position affichée en temps réel
+- Scroll souris/trackpad fonctionnel
+
+### Utilisation
+
+```bash
+# Ouvrir le simulateur
+firefox vnd_simulator.html
+
+# Ou via serveur HTTP
+python3 -m http.server 8000
+# http://localhost:8000/vnd_simulator.html
+```
+
+**Workflow typique**:
+1. Cliquer "📂 Choisir JSON..."
+2. Naviguer vers dossier VND (ex: `autr/`)
+3. Sélectionner fichier `.vnd.parsed.json`
+4. Les hotspots apparaissent immédiatement
+5. Survoler hotspot → Voir détails dans tooltip
+6. Cliquer hotspot → Exécuter commandes
+7. Naviguer entre scènes avec GOTO ou input manuel
+
+### Exemples d'Utilisation
+
+#### Test Navigation
+
+```
+1. Charger autr/autr.vnd.parsed.json
+2. Scène 1: 4 polygones jaunes numérotés #0 à #3
+3. Cliquer hotspot #2 → Exécute GOTO
+4. Change de scène automatiquement
+5. Log affiche: "→ Scène X: game"
+```
+
+#### Test Conditions IF-THEN
+
+```
+1. Scène avec IF-THEN (ex: autr scène 3)
+2. Tooltip montre: "⚡ api = 2 then set_var miel 1"
+3. Cliquer hotspot
+4. Variables mises à jour dans sidebar
+5. Log affiche: "miel = 1"
+```
+
+#### Test Type 28 (Item Trigger)
+
+```
+1. Aller scène 27 autr.vnd
+2. Cliquer hotspot ruche (#3)
+3. Type 28: miel vérifie variable "api"
+4. Si api != 2 → GOTO Scene #28 (abeille attaque)
+5. Score -1 (pénalité)
+6. Log détaillé de toutes les actions
+```
+
+#### Test Scènes Scrollables
+
+```
+1. Charger VND avec scène > 800×600
+2. Bordure orange apparaît
+3. Badge "⚠️ SCROLLABLE 1200×900px"
+4. Contrôles ↑↓←→⊙ en haut-droite
+5. Cliquer flèches ou scroll souris
+6. Position affichée: "320, 150"
+```
+
+### Limitations
+
+**Placeholders** (non implémentés):
+- Images BMP: nom affiché, pas de rendu réel
+- Vidéos AVI: logged mais pas de lecture
+- Sons WAV: logged mais pas de lecture
+- RUNPRJ: logged mais pas de chargement autre VND
+- ADDBMP: pas d'overlay d'images
+
+**Raison**: Le simulateur est conçu pour **valider la structure logique** des VND (navigation, conditions, variables), pas pour reproduire le rendu graphique complet.
+
+### Tests Recommandés
+
+1. **Navigation basique**: GOTO absolu/relatif
+2. **Variables**: SET/INC/DEC, affichage sidebar
+3. **Conditions**: IF-THEN avec opérateurs
+4. **Type 28**: Item trigger (miel, clejaune, etc.)
+5. **Scènes scrollables**: Grandes scènes avec contrôles
+6. **Tous les VND**: Charger 15+ VND pour validation
+
+### Fichiers Associés
+
+- `vnd_simulator.html` - Simulateur web (HTML/CSS/JS)
+- `VND_SIMULATOR_README.md` - Guide utilisation détaillé
+- `SESSION_SIMULATOR_2026-01-25.md` - Rapport session création
+
+### Découvertes via Simulateur
+
+**Type 24 (SCORE_OP)**:
+- Polymorphe: INC (quiz) vs DEC (pénalité)
+- Scene #13 autr: +32 points (récompense)
+- Scene #28 autr: -1 point (abeille attaque)
+
+**Type 28 (ITEM_TRIGGER)**:
+- 168 occurrences dans tous les VND
+- Déclencheur conditionnel (miel, clejaune, gagne, etc.)
+- Vérifie variables avant action
+- Exemple: miel vérifie "api" (tenue apiculteur)
+
+**Navigation autr.vnd**:
+- Scene #28 (abeille) accessible uniquement via Type 28
+- Aucun GOTO direct détecté
+- Logique conditionnelle basée sur variable "api"
+
+### Avantages
+
+✅ **Test structure** sans moteur VnStudio
+✅ **Validation parsing** en temps réel
+✅ **Détection bugs** (scènes inaccessibles, conditions incorrectes)
+✅ **Visualisation** polygones réels + textes
+✅ **Debugging** avec log détaillé
+✅ **Traçabilité** variables et navigation
+
+### Prochaines Améliorations Possibles
+
+1. Support images BMP réelles (placeholders → vraies images)
+2. Support vidéos AVI (HTML5 video)
+3. Support sons WAV (HTML5 audio)
+4. RUNPRJ fonctionnel (charger autre VND)
+5. Historique navigation (bouton retour)
+6. Save/Load état du jeu
+7. Éditeur de scènes intégré
