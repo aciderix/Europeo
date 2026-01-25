@@ -36,11 +36,11 @@ Le dispatcher utilise `*(_DWORD *)(cmd + 8)` = offset +8 de la structure Command
 | 21 | 0x15 | **IF_THEN** | Logique conditionnelle | ✅ **1756** |
 | 22 | 0x16 | UNKNOWN_22 | Message handler type 22 | ✅ 49 |
 | 23 | 0x17 | UNKNOWN_23 | Message handler type 23 | ✅ 33 |
-| 24 | 0x18 | UNKNOWN_24 | Message handler type 24 | ✅ 17 |
+| 24 | 0x18 | **SCORE_OP** | Opération sur score (INC/DEC selon contexte) | ✅ 67 |
 | 25 | 0x19 | UNKNOWN_25 | Message handler type 25 (special routing) | ✅ 1 |
 | 26 | 0x1A | UNKNOWN_26 | Message handler type 26 | ✅ 1 |
 | 27 | 0x1B | **ADDBMP** | Afficher image BMP | ✅ 19 |
-| 28 | 0x1C | UNKNOWN_28 | Message handler type 28 | ✅ 24 |
+| 28 | 0x1C | **ITEM_TRIGGER** | Déclencheur conditionnel d'item (miel, clejaune, gagne, etc.) | ✅ 168 |
 | 29 | 0x1D | UNKNOWN_29 | Message handler type 29 | ❌ |
 | 30 | 0x1E | UNKNOWN_30 | Message handler type 30 | ✅ 1 |
 | 31 | 0x1F | UNKNOWN_31 | Message handler type 31 | ✅ 25 |
@@ -82,7 +82,7 @@ Le dispatcher utilise `*(_DWORD *)(cmd + 8)` = offset +8 de la structure Command
 - **Subtypes non utilisés**: 23 (46.9%)
 - **Total commandes analysées**: 3271 (danem + belge + couleurs1)
 
-## Subtypes Identifiés (8/49)
+## Subtypes Identifiés (10/49)
 
 | Subtype | Nom | Fonction | Source |
 |---------|-----|----------|--------|
@@ -91,7 +91,9 @@ Le dispatcher utilise `*(_DWORD *)(cmd + 8)` = offset +8 de la structure Command
 | 9 | VIDEO | Jouer vidéo AVI | Pseudo-code + validation |
 | 16 | DELAY | Pause temporelle | Pseudo-code + validation |
 | 21 | IF_THEN | Logique conditionnelle | Pseudo-code + validation |
+| 24 | SCORE_OP | Opération sur score (INC/DEC) | Validation empirique |
 | 27 | ADDBMP | Afficher image BMP | Pseudo-code + validation |
+| 28 | ITEM_TRIGGER | Déclencheur conditionnel d'item | Validation empirique |
 | 38 | PLAYTEXT | Afficher texte | Pseudo-code + validation |
 | 39 | FONT | Définir police de caractères | Pseudo-code + validation |
 
@@ -118,6 +120,102 @@ Le dispatcher utilise `*(_DWORD *)(cmd + 8)` = offset +8 de la structure Command
 ### Type 39 (FONT)
 - Param contient nom de police (ex: "Comic Sans MS", "Arial")
 - Définit la police pour PLAYTEXT suivants
+
+### Type 24 (SCORE_OP) - NOUVEAU! 🆕
+
+**Découverte**: 2026-01-25 - Analyse de autr.vnd Scene #28 (abeille.bmp)
+
+**Fonction**: Opération sur le score du joueur (INC ou DEC)
+
+**Format param**: `"score N"` où N est la valeur
+
+**Contextes détectés**:
+1. **Quiz/Récompenses** (Scene #13 autr.vnd):
+   - `Type 24: score 32` → Probablement **+32 points** (bonne réponse)
+   - `Type 24: score 25` → +25 points
+   - `Type 24: score 40` → +40 points
+   - Contexte: Après clic sur ballon quiz
+
+2. **Pénalités** (Scene #28 autr.vnd):
+   - `Type 24: score 1` → **-1 point** (perte de 1€)
+   - Contexte: Abeille attaque (pas de tenue apiculteur)
+
+**Polymorphisme**: Type 24 semble avoir 2 modes:
+- **Mode INC**: Contexte quiz/récompense → +N points
+- **Mode DEC**: Contexte pénalité → -N points
+
+**Hypothèse**: Le signe peut être encodé dans le binaire (int32 signé) mais affiché positif dans le JSON parsé.
+
+**Investigation nécessaire**: Relire binaire pour vérifier format exact du param.
+
+**Occurrences totales**: 67 dans tous les VND (18 fichiers)
+
+**Exemples**:
+- `couleurs1 Scene #45: Type 24 → "score 25"`
+- `danem Scene #7: Type 24 → "score 5"`
+- `autr Scene #28: Type 24 → "score 1"` (pénalité)
+
+### Type 28 (ITEM_TRIGGER) - NOUVEAU! 🆕
+
+**Découverte**: 2026-01-25 - Analyse de autr.vnd Scene #3 et #27
+
+**Fonction**: Déclencheur conditionnel d'item/événement
+
+**Format param**: Nom de l'item (ex: `"miel"`, `"clejaune"`, `"gagne"`)
+
+**Logique**:
+1. Vérifie variables de jeu (ex: `api`, `tenue`, etc.)
+2. Si conditions remplies → Action (collecter item, set_var, etc.)
+3. Si conditions non remplies → Action alternative (GOTO scene pénalité, etc.)
+
+**Exemple détaillé** (autr.vnd Scene #27):
+```
+Scene #27 - Hotspot #3 (ruche):
+  IF: api = -1 then set_var api -2
+  IF: api = -2 then set_var cire 1
+  IF: api = -2 then set_var api -3
+  ★ Type 28: miel
+```
+
+**Séquence d'exécution**:
+1. Joueur clique sur hotspot ruche
+2. Exécution des IF-THEN (mise à jour variables `api`)
+3. **Type 28: miel** vérifie variable `api`:
+   - Si `api == 2` (tenue possédée) → Collecte miel normalement
+   - Si `api != 2` (pas de tenue) → **GOTO Scene #28** (abeille attaque + score -1)
+
+**Occurrences totales**: 168 dans tous les VND
+
+**Exemples d'items**:
+- `miel` (autr.vnd) - Collecte miel ruche
+- `clejaune` (couleurs1.vnd) - Clé jaune
+- `qjuste` (allem.vnd) - Question juste (quiz)
+- `gagne`/`perdu` (belge.vnd) - Victoire/défaite
+- `question` (allem.vnd) - Déclencheur question
+
+**Distribution**:
+- couleurs1: 1 occurrence
+- allem: 5 occurrences
+- belge: 28 occurrences (gagne/perdu)
+- autr: 2 occurrences (miel)
+
+**Implémentation suggérée** (simulateur):
+```javascript
+function handleItemTrigger(param, scene) {
+    // Type 28: "miel" etc.
+    if (param === 'miel') {
+        const api = gameState.variables.api || 0;
+
+        if (api !== 2) {
+            // Pas de tenue → Scene #28 (pénalité)
+            gotoScene(28);
+        } else {
+            // Tenue OK → Collecter
+            gameState.variables.miel = 1;
+        }
+    }
+}
+```
 
 ## Prochaines Étapes
 

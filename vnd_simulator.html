@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VND Simulator - Europeo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        select, button, input {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        select, input {
+            background: #3a3a3a;
+            color: #fff;
+        }
+
+        button {
+            background: #4a90e2;
+            color: #fff;
+        }
+
+        button:hover {
+            background: #357abd;
+        }
+
+        .game-area {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+        }
+
+        .scene-container {
+            background: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .scene-canvas {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background: #000;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .scene-image {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .hotspot {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 0, 0.5);
+            background: rgba(255, 255, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .hotspot:hover {
+            border-color: rgba(255, 255, 0, 0.9);
+            background: rgba(255, 255, 0, 0.3);
+        }
+
+        .text-overlay {
+            position: absolute;
+            color: #fff;
+            pointer-events: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .sidebar {
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+        .info-section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #4a90e2;
+        }
+
+        .info-item {
+            font-size: 14px;
+            margin-bottom: 5px;
+            padding: 5px;
+            background: #1a1a1a;
+            border-radius: 4px;
+        }
+
+        .variables {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .variable {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px;
+            font-size: 12px;
+        }
+
+        .log {
+            background: #1a1a1a;
+            padding: 10px;
+            border-radius: 4px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+        }
+
+        .log-goto { color: #4a90e2; }
+        .log-var { color: #50c878; }
+        .log-text { color: #ffd700; }
+        .log-error { color: #ff4444; }
+
+        .scene-info {
+            background: #1a1a1a;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .debug-mode {
+            margin-top: 10px;
+        }
+
+        .debug-mode label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 VND Simulator - Europeo</h1>
+            <div class="controls">
+                <select id="vnd-select">
+                    <option value="">Sélectionner un VND...</option>
+                    <option value="autr/autr.vnd.parsed.json">Autriche</option>
+                    <option value="couleurs1/couleurs1.vnd.parsed.json">Couleurs 1</option>
+                    <option value="allem/allem.vnd.parsed.json">Allemagne</option>
+                    <option value="belge/belge.vnd.parsed.json">Belgique</option>
+                    <option value="danem/danem.vnd.parsed.json">Danemark</option>
+                    <option value="ecosse/ecosse.vnd.parsed.json">Écosse</option>
+                    <option value="espa/espa.vnd.parsed.json">Espagne</option>
+                    <option value="finlan/finlan.vnd.parsed.json">Finlande</option>
+                    <option value="france/france.vnd.parsed.json">France</option>
+                    <option value="grece/grece.vnd.parsed.json">Grèce</option>
+                    <option value="holl/holl.vnd.parsed.json">Pays-Bas</option>
+                    <option value="irland/irland.vnd.parsed.json">Irlande</option>
+                    <option value="italie/italie.vnd.parsed.json">Italie</option>
+                    <option value="portu/portu.vnd.parsed.json">Portugal</option>
+                    <option value="suede/suede.vnd.parsed.json">Suède</option>
+                </select>
+                <button onclick="loadVND()">Charger</button>
+                <span>Scène:</span>
+                <input type="number" id="scene-input" value="1" min="0" style="width: 80px;">
+                <button onclick="gotoSceneInput()">Aller</button>
+                <button onclick="resetGame()">Reset</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="scene-container">
+                <div class="scene-canvas" id="scene-canvas">
+                    <div class="scene-image">Sélectionnez un VND pour commencer</div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-section">
+                    <h3>📍 Scène Actuelle</h3>
+                    <div class="scene-info" id="scene-info">
+                        Aucune scène chargée
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>📊 Variables</h3>
+                    <div class="info-item">
+                        Score: <span id="var-score">0</span>
+                    </div>
+                    <div class="variables" id="variables">
+                        <div class="variable">Aucune variable</div>
+                    </div>
+                </div>
+
+                <div class="info-section debug-mode">
+                    <label>
+                        <input type="checkbox" id="debug-checkbox" onchange="toggleDebug()">
+                        Mode Debug (afficher hotspots)
+                    </label>
+                </div>
+
+                <div class="info-section">
+                    <h3>📝 Log</h3>
+                    <div class="log" id="log">
+                        <div class="log-entry">Simulateur initialisé</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // État du jeu
+        let gameState = {
+            vnd: null,
+            currentScene: null,
+            sceneId: 0,
+            variables: { score: 0 },
+            log: [],
+            debugMode: false
+        };
+
+        // Charger un VND
+        async function loadVND() {
+            const select = document.getElementById('vnd-select');
+            const vndPath = select.value;
+
+            if (!vndPath) {
+                addLog('error', 'Veuillez sélectionner un VND');
+                return;
+            }
+
+            try {
+                const response = await fetch(vndPath);
+                const data = await response.json();
+
+                gameState.vnd = data;
+                gameState.sceneId = 1; // Commencer à la scène 1 (skip global_vars)
+
+                addLog('goto', `VND chargé: ${data.scenes.length} scènes`);
+
+                resetGame();
+            } catch (error) {
+                addLog('error', `Erreur chargement: ${error.message}`);
+            }
+        }
+
+        // Reset le jeu
+        function resetGame() {
+            if (!gameState.vnd) return;
+
+            gameState.variables = { score: 0 };
+            gameState.sceneId = 1;
+
+            addLog('goto', 'Jeu réinitialisé');
+            gotoScene(gameState.sceneId);
+        }
+
+        // Aller à une scène
+        function gotoScene(sceneId) {
+            if (!gameState.vnd) return;
+
+            const scene = gameState.vnd.scenes.find(s => s.id === sceneId);
+
+            if (!scene) {
+                addLog('error', `Scène ${sceneId} introuvable`);
+                return;
+            }
+
+            gameState.currentScene = scene;
+            gameState.sceneId = sceneId;
+
+            renderScene(scene);
+            addLog('goto', `→ Scène ${sceneId}: ${scene.sceneType}`);
+        }
+
+        // Aller à scène (input)
+        function gotoSceneInput() {
+            const input = document.getElementById('scene-input');
+            const sceneId = parseInt(input.value);
+            gotoScene(sceneId);
+        }
+
+        // Render une scène
+        function renderScene(scene) {
+            const canvas = document.getElementById('scene-canvas');
+            canvas.innerHTML = '';
+
+            // Background
+            const bg = document.createElement('div');
+            bg.className = 'scene-image';
+
+            const files = scene.files.map(f => f.filename || f.name || f).filter(Boolean);
+            const mainFile = files[0] || 'empty';
+
+            bg.textContent = `📁 ${mainFile}`;
+            canvas.appendChild(bg);
+
+            // Info scène
+            const info = document.getElementById('scene-info');
+            info.innerHTML = `
+                <strong>Scène #${scene.id}</strong> (${scene.sceneType})<br>
+                Fichiers: ${files.join(', ') || 'aucun'}<br>
+                Hotspots: ${scene.hotspots.length}
+            `;
+
+            // Render hotspots
+            scene.hotspots.forEach((hotspot, index) => {
+                renderHotspot(canvas, hotspot, index, scene);
+            });
+
+            // Exécuter InitScript (commandes automatiques)
+            executeInitScript(scene);
+
+            // Update variables display
+            updateVariablesDisplay();
+        }
+
+        // Render un hotspot
+        function renderHotspot(canvas, hotspot, index, scene) {
+            const geometry = hotspot.geometry;
+
+            if (!geometry || !geometry.points || geometry.points.length < 2) {
+                return; // Pas de géométrie, hotspot système
+            }
+
+            // Calculer bounding box
+            const points = geometry.points;
+            const xs = points.map(p => p.x);
+            const ys = points.map(p => p.y);
+
+            const minX = Math.min(...xs);
+            const maxX = Math.max(...xs);
+            const minY = Math.min(...ys);
+            const maxY = Math.max(...ys);
+
+            const width = maxX - minX;
+            const height = maxY - minY;
+
+            // Créer div hotspot
+            const div = document.createElement('div');
+            div.className = 'hotspot';
+            div.style.left = `${minX}px`;
+            div.style.top = `${minY}px`;
+            div.style.width = `${width}px`;
+            div.style.height = `${height}px`;
+
+            // Mode debug: afficher toujours, sinon masquer
+            if (!gameState.debugMode) {
+                div.style.border = 'none';
+                div.style.background = 'transparent';
+            }
+
+            div.onclick = () => executeHotspotCommands(hotspot, scene);
+
+            canvas.appendChild(div);
+        }
+
+        // Exécuter InitScript
+        function executeInitScript(scene) {
+            if (!scene.initScript || !scene.initScript.commands) return;
+
+            scene.initScript.commands.forEach(cmd => {
+                executeCommand(cmd, null);
+            });
+        }
+
+        // Exécuter commandes hotspot
+        function executeHotspotCommands(hotspot, scene) {
+            if (!hotspot.commands || hotspot.commands.length === 0) return;
+
+            addLog('text', `Clic sur hotspot (${hotspot.commands.length} commandes)`);
+
+            hotspot.commands.forEach(cmd => {
+                executeCommand(cmd, scene);
+            });
+        }
+
+        // Exécuter une commande
+        function executeCommand(cmd, scene) {
+            const subtype = cmd.subtype;
+            const param = cmd.param || '';
+
+            switch (subtype) {
+                case 0: // QUIT
+                    addLog('goto', `QUIT: ${param}`);
+                    break;
+
+                case 6: // GOTO_SCENE
+                    handleGotoScene(param);
+                    break;
+
+                case 21: // IF-THEN
+                    handleIfThen(param, scene);
+                    break;
+
+                case 22: // SET_VAR
+                    handleSetVar(param);
+                    break;
+
+                case 23: // INC_VAR
+                    handleIncVar(param);
+                    break;
+
+                case 24: // DEC_VAR (score operation)
+                    handleDecVar(param);
+                    break;
+
+                case 28: // ITEM TRIGGER
+                    handleItemTrigger(param, scene);
+                    break;
+
+                case 38: // PLAYTEXT
+                    handlePlayText(param);
+                    break;
+
+                case 39: // FONT
+                    // Ignore pour l'instant
+                    break;
+
+                default:
+                    // Ignore autres types
+                    break;
+            }
+        }
+
+        // GOTO_SCENE
+        function handleGotoScene(param) {
+            const trimmed = param.trim();
+
+            if (trimmed.startsWith('+')) {
+                const offset = parseInt(trimmed.substring(1));
+                gotoScene(gameState.sceneId + offset);
+            } else if (trimmed.startsWith('-')) {
+                const offset = parseInt(trimmed.substring(1));
+                gotoScene(gameState.sceneId - offset);
+            } else {
+                const targetScene = parseInt(trimmed);
+                if (!isNaN(targetScene)) {
+                    gotoScene(targetScene);
+                }
+            }
+        }
+
+        // IF-THEN
+        function handleIfThen(param, scene) {
+            // Parser simple IF-THEN
+            // Format: "variable = value then command"
+            const parts = param.split(' then ');
+            if (parts.length !== 2) return;
+
+            const condition = parts[0].trim();
+            const action = parts[1].trim();
+
+            // Évaluer condition
+            if (evaluateCondition(condition)) {
+                // Exécuter action (simplifié)
+                if (action.startsWith('runprj')) {
+                    addLog('goto', `IF-THEN: ${action}`);
+                } else if (action.startsWith('set_var')) {
+                    const match = action.match(/set_var (\w+) (-?\d+)/);
+                    if (match) {
+                        const [, varName, value] = match;
+                        gameState.variables[varName] = parseInt(value);
+                        addLog('var', `${varName} = ${value}`);
+                        updateVariablesDisplay();
+                    }
+                } else if (action.startsWith('inc_var')) {
+                    const match = action.match(/inc_var (\w+) (\d+)/);
+                    if (match) {
+                        const [, varName, amount] = match;
+                        gameState.variables[varName] = (gameState.variables[varName] || 0) + parseInt(amount);
+                        addLog('var', `${varName} +${amount}`);
+                        updateVariablesDisplay();
+                    }
+                } else if (action.startsWith('scene')) {
+                    const sceneId = parseInt(action.replace('scene', '').trim());
+                    if (!isNaN(sceneId)) {
+                        gotoScene(sceneId);
+                    }
+                }
+            }
+        }
+
+        // Évaluer condition
+        function evaluateCondition(condition) {
+            // Format: "variable = value" ou "variable < value" etc.
+            const operators = ['>=', '<=', '!=', '=', '<', '>'];
+
+            for (const op of operators) {
+                if (condition.includes(op)) {
+                    const [left, right] = condition.split(op).map(s => s.trim());
+                    const leftVal = gameState.variables[left] || 0;
+                    const rightVal = parseInt(right) || 0;
+
+                    switch (op) {
+                        case '=': return leftVal === rightVal;
+                        case '!=': return leftVal !== rightVal;
+                        case '<': return leftVal < rightVal;
+                        case '>': return leftVal > rightVal;
+                        case '<=': return leftVal <= rightVal;
+                        case '>=': return leftVal >= rightVal;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        // SET_VAR
+        function handleSetVar(param) {
+            const parts = param.split(' ');
+            if (parts.length >= 2) {
+                const varName = parts[0];
+                const value = parseInt(parts[1]);
+                gameState.variables[varName] = value;
+                addLog('var', `${varName} = ${value}`);
+                updateVariablesDisplay();
+            }
+        }
+
+        // INC_VAR
+        function handleIncVar(param) {
+            const parts = param.split(' ');
+            if (parts.length >= 1) {
+                const varName = parts[0];
+                const amount = parts.length > 1 ? parseInt(parts[1]) : 1;
+                gameState.variables[varName] = (gameState.variables[varName] || 0) + amount;
+                addLog('var', `${varName} +${amount}`);
+                updateVariablesDisplay();
+            }
+        }
+
+        // DEC_VAR (Type 24 - pour le score)
+        function handleDecVar(param) {
+            // Format: "score 1" = perte de 1 point
+            const parts = param.split(' ');
+            if (parts.length >= 2) {
+                const varName = parts[0];
+                const amount = parseInt(parts[1]);
+
+                if (varName === 'score') {
+                    gameState.variables.score = (gameState.variables.score || 0) - amount;
+                    addLog('var', `${varName} -${amount} (pénalité)`);
+                } else {
+                    // Peut être INC_VAR pour d'autres variables
+                    gameState.variables[varName] = (gameState.variables[varName] || 0) + amount;
+                    addLog('var', `${varName} +${amount}`);
+                }
+
+                updateVariablesDisplay();
+            }
+        }
+
+        // ITEM TRIGGER
+        function handleItemTrigger(param, scene) {
+            // Type 28: "miel" etc.
+            addLog('text', `🎁 Trigger: ${param}`);
+
+            // TODO: Logique conditionnelle basée sur variables
+            // Pour "miel": vérifier variable "api"
+            if (param === 'miel') {
+                const api = gameState.variables.api || 0;
+
+                if (api !== 2) {
+                    // Pas de tenue apiculteur → Scene #28 (abeille attaque)
+                    addLog('error', '⚠️ Abeille attaque! (pas de tenue)');
+                    gotoScene(28);
+                } else {
+                    // Tenue OK → Collecter miel
+                    gameState.variables.miel = 1;
+                    addLog('var', 'Miel collecté!');
+                    updateVariablesDisplay();
+                }
+            }
+        }
+
+        // PLAYTEXT
+        function handlePlayText(param) {
+            // Format: "x y w h flags text"
+            const match = param.match(/(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(.+)/);
+
+            if (match) {
+                const [, x, y, , , , text] = match;
+                addLog('text', `💬 "${text}"`);
+
+                // Afficher texte sur canvas
+                const canvas = document.getElementById('scene-canvas');
+                const textDiv = document.createElement('div');
+                textDiv.className = 'text-overlay';
+                textDiv.style.left = `${x}px`;
+                textDiv.style.top = `${y}px`;
+                textDiv.textContent = text;
+
+                canvas.appendChild(textDiv);
+
+                // Retirer après 3 secondes
+                setTimeout(() => textDiv.remove(), 3000);
+            }
+        }
+
+        // Toggle debug mode
+        function toggleDebug() {
+            gameState.debugMode = document.getElementById('debug-checkbox').checked;
+
+            if (gameState.currentScene) {
+                renderScene(gameState.currentScene);
+            }
+        }
+
+        // Update variables display
+        function updateVariablesDisplay() {
+            document.getElementById('var-score').textContent = gameState.variables.score || 0;
+
+            const varsDiv = document.getElementById('variables');
+            varsDiv.innerHTML = '';
+
+            const vars = Object.keys(gameState.variables).filter(k => k !== 'score');
+
+            if (vars.length === 0) {
+                varsDiv.innerHTML = '<div class="variable">Aucune variable</div>';
+                return;
+            }
+
+            vars.forEach(varName => {
+                const div = document.createElement('div');
+                div.className = 'variable';
+                div.innerHTML = `<span>${varName}</span><span>${gameState.variables[varName]}</span>`;
+                varsDiv.appendChild(div);
+            });
+        }
+
+        // Add log entry
+        function addLog(type, message) {
+            const logDiv = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+
+            // Garder max 50 entrées
+            while (logDiv.children.length > 50) {
+                logDiv.removeChild(logDiv.firstChild);
+            }
+        }
+
+        // Initialisation
+        console.log('VND Simulator chargé');
+    </script>
+</body>
+</html>
