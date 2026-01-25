@@ -98,15 +98,78 @@
 
         .hotspot {
             position: absolute;
-            border: 2px solid rgba(255, 255, 0, 0.5);
-            background: rgba(255, 255, 0, 0.1);
             cursor: pointer;
+            pointer-events: all;
+        }
+
+        .hotspot polygon,
+        .hotspot rect {
+            fill: rgba(255, 255, 0, 0.2);
+            stroke: rgba(255, 255, 0, 0.7);
+            stroke-width: 2;
             transition: all 0.2s;
         }
 
-        .hotspot:hover {
-            border-color: rgba(255, 255, 0, 0.9);
-            background: rgba(255, 255, 0, 0.3);
+        .hotspot:hover polygon,
+        .hotspot:hover rect {
+            fill: rgba(255, 255, 0, 0.4);
+            stroke: rgba(255, 255, 0, 1);
+            stroke-width: 3;
+        }
+
+        .hotspot-label {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .hotspot-tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 100;
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .hotspot:hover .hotspot-tooltip {
+            display: block;
+        }
+
+        .hotspot-list {
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 12px;
+        }
+
+        .hotspot-item {
+            padding: 6px;
+            margin: 4px 0;
+            background: #1a1a1a;
+            border-radius: 4px;
+            cursor: pointer;
+            border-left: 3px solid #4a90e2;
+        }
+
+        .hotspot-item:hover {
+            background: #2a2a2a;
+            border-left-color: #50c878;
+        }
+
+        .hotspot-item.no-geometry {
+            border-left-color: #ff4444;
+            opacity: 0.6;
         }
 
         .text-overlay {
@@ -235,9 +298,16 @@
                     </div>
                 </div>
 
+                <div class="info-section">
+                    <h3>🎯 Hotspots</h3>
+                    <div class="hotspot-list" id="hotspot-list">
+                        <div style="color: #888; font-size: 11px;">Aucune scène chargée</div>
+                    </div>
+                </div>
+
                 <div class="info-section debug-mode">
                     <label>
-                        <input type="checkbox" id="debug-checkbox" onchange="toggleDebug()">
+                        <input type="checkbox" id="debug-checkbox" onchange="toggleDebug()" checked>
                         Mode Debug (afficher hotspots)
                     </label>
                 </div>
@@ -260,7 +330,7 @@
             sceneId: 0,
             variables: { score: 0 },
             log: [],
-            debugMode: false
+            debugMode: true  // Activé par défaut
         };
 
         // Charger un VND depuis fichier manuel
@@ -395,6 +465,9 @@
 
             // Update variables display
             updateVariablesDisplay();
+
+            // Update hotspot list
+            updateHotspotList(scene);
         }
 
         // Render un hotspot
@@ -426,15 +499,110 @@
             div.style.width = `${width}px`;
             div.style.height = `${height}px`;
 
-            // Mode debug: afficher toujours, sinon masquer
+            // Mode debug: afficher ou masquer
             if (!gameState.debugMode) {
-                div.style.border = 'none';
-                div.style.background = 'transparent';
+                div.style.opacity = '0';
             }
 
-            div.onclick = () => executeHotspotCommands(hotspot, scene);
+            // Créer SVG pour polygone
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            svg.style.position = 'absolute';
+            svg.style.top = '0';
+            svg.style.left = '0';
+            svg.style.pointerEvents = 'none';
+
+            // Créer polygone ou rectangle
+            if (points.length === 2) {
+                // Rectangle (2 points = coin haut-gauche et bas-droite)
+                const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                rect.setAttribute('x', 0);
+                rect.setAttribute('y', 0);
+                rect.setAttribute('width', width);
+                rect.setAttribute('height', height);
+                svg.appendChild(rect);
+            } else {
+                // Polygone (3+ points)
+                const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+                const pointsStr = points.map(p => `${p.x - minX},${p.y - minY}`).join(' ');
+                polygon.setAttribute('points', pointsStr);
+                svg.appendChild(polygon);
+            }
+
+            div.appendChild(svg);
+
+            // Label avec numéro
+            const label = document.createElement('div');
+            label.className = 'hotspot-label';
+            label.textContent = `#${index}`;
+            label.style.left = '4px';
+            label.style.top = '4px';
+            div.appendChild(label);
+
+            // Tooltip avec infos
+            const tooltip = document.createElement('div');
+            tooltip.className = 'hotspot-tooltip';
+
+            const commandCount = hotspot.commands ? hotspot.commands.length : 0;
+            const commandTypes = hotspot.commands
+                ? [...new Set(hotspot.commands.map(c => c.subtype))].join(', ')
+                : 'aucune';
+
+            tooltip.innerHTML = `
+                <strong>Hotspot #${index}</strong><br>
+                Points: ${points.length}<br>
+                Commandes: ${commandCount}<br>
+                Types: ${commandTypes}
+            `;
+            tooltip.style.left = `${Math.min(width + 10, 300)}px`;
+            tooltip.style.top = '0';
+
+            div.appendChild(tooltip);
+
+            div.onclick = () => executeHotspotCommands(hotspot, scene, index);
 
             canvas.appendChild(div);
+        }
+
+        // Mettre à jour la liste des hotspots
+        function updateHotspotList(scene) {
+            const listDiv = document.getElementById('hotspot-list');
+            listDiv.innerHTML = '';
+
+            if (!scene || !scene.hotspots || scene.hotspots.length === 0) {
+                listDiv.innerHTML = '<div style="color: #888; font-size: 11px;">Aucun hotspot</div>';
+                return;
+            }
+
+            scene.hotspots.forEach((hotspot, index) => {
+                const geometry = hotspot.geometry;
+                const hasGeometry = geometry && geometry.points && geometry.points.length >= 2;
+                const commandCount = hotspot.commands ? hotspot.commands.length : 0;
+
+                const item = document.createElement('div');
+                item.className = hasGeometry ? 'hotspot-item' : 'hotspot-item no-geometry';
+
+                const gotoTypes = hotspot.commands
+                    ? hotspot.commands.filter(c => c.subtype === 6).map(c => c.param)
+                    : [];
+
+                const gotoInfo = gotoTypes.length > 0 ? ` → ${gotoTypes[0]}` : '';
+
+                item.innerHTML = `
+                    <strong>#${index}</strong>
+                    ${hasGeometry ? '🎯' : '⚙️'}
+                    ${commandCount} cmd${gotoInfo}
+                `;
+
+                item.onclick = () => {
+                    if (hasGeometry) {
+                        addLog('text', `Info Hotspot #${index}: ${commandCount} commandes`);
+                    }
+                };
+
+                listDiv.appendChild(item);
+            });
         }
 
         // Exécuter InitScript
@@ -447,10 +615,11 @@
         }
 
         // Exécuter commandes hotspot
-        function executeHotspotCommands(hotspot, scene) {
+        function executeHotspotCommands(hotspot, scene, index) {
             if (!hotspot.commands || hotspot.commands.length === 0) return;
 
-            addLog('text', `Clic sur hotspot (${hotspot.commands.length} commandes)`);
+            const commandTypes = [...new Set(hotspot.commands.map(c => c.subtype))].join(', ');
+            addLog('text', `🖱️ Clic Hotspot #${index || '?'} (${hotspot.commands.length} commandes, types: ${commandTypes})`);
 
             hotspot.commands.forEach(cmd => {
                 executeCommand(cmd, scene);
