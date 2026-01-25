@@ -1801,21 +1801,57 @@ class VNDSequentialParser:
         filenames = [f.filename.lower() for f in files]
         allFilenames = ' '.join(filenames)
 
+        # Global vars (Scene 0 avec beaucoup de fichiers)
         if id_val == 0 and len(files) > 50:
             return 'global_vars'
+
+        # Toolbar
         if isToolbar or 'toolbar' in filenames:
             return 'toolbar'
+
+        # fleche.cur = scène curseur (toolbar)
+        if len(files) == 1 and 'fleche.cur' in filenames:
+            return 'toolbar'
+
+        # Curseurs génériques
+        if len(files) == 1 and filenames[0].endswith('.cur'):
+            return 'toolbar'
+
+        # Options system
         if any('vnoption' in f or 'option.dll' in f for f in filenames):
             return 'options'
+
+        # Credits
         if 'credit' in allFilenames or 'générique' in allFilenames:
             return 'credits'
-        if 'perdu' in allFilenames or 'gagné' in allFilenames or 'fin ' in allFilenames:
-            return 'game_over'
-        if any(f.startswith('fin ') for f in filenames):
-            return 'game_over'
-        if len(files) == 1 and filenames[0].endswith('.cur'):
-            return 'unknown'
 
+        # Game over
+        if 'perdu' in allFilenames or 'gagné' in allFilenames or 'gagne' in allFilenames:
+            return 'game_over'
+        if any(f.startswith('fin ') or 'perdu.' in f or 'gagne.' in f for f in filenames):
+            return 'game_over'
+
+        # Intro
+        if 'intro' in allFilenames or 'title' in allFilenames or 'start' in allFilenames:
+            return 'intro'
+
+        # Outro
+        if 'outro' in allFilenames or 'ending' in allFilenames:
+            return 'outro'
+
+        # Menu
+        if 'menu' in allFilenames:
+            return 'menu'
+
+        # Map/Navigation
+        if 'map' in allFilenames or 'carte' in allFilenames:
+            return 'map'
+
+        # Transition (scène vide)
+        if len(files) == 0 and len(hotspots) == 0:
+            return 'transition'
+
+        # Game (défaut)
         return 'game'
 
 
