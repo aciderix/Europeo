@@ -1,0 +1,605 @@
+[
+  {
+    "vnd": "couleurs1",
+    "total_hotspots": 174,
+    "valid_hotspots": 169,
+    "valid_with_geom": 169,
+    "valid_system": 0,
+    "false_hotspots": 4,
+    "empty_hotspots": 1,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 6,
+        "commands": "QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 17,
+        "commands": "GOTO_SCENE(6)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "GOTO_SCENE(6)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "FONT(39), PLAYTEXT(38), GOTO_SCENE(6)"
+      }
+    ],
+    "system_examples": []
+  },
+  {
+    "vnd": "allem",
+    "total_hotspots": 58,
+    "valid_hotspots": 54,
+    "valid_with_geom": 54,
+    "valid_system": 0,
+    "false_hotspots": 4,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "ADDBMP(27)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "ADDBMP(27), DELAY(16), GOTO_SCENE(6)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 7,
+        "commands": "QUIT(0)"
+      }
+    ],
+    "system_examples": []
+  },
+  {
+    "vnd": "autr",
+    "total_hotspots": 84,
+    "valid_hotspots": 73,
+    "valid_with_geom": 73,
+    "valid_system": 0,
+    "false_hotspots": 11,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "FONT(39), VIDEO(9)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "FONT(39), VIDEO(9)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "FONT(39), PLAYTEXT(38)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "FONT(39), VIDEO(9)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "FONT(39), VIDEO(9)"
+      }
+    ],
+    "system_examples": []
+  },
+  {
+    "vnd": "belge",
+    "total_hotspots": 94,
+    "valid_hotspots": 88,
+    "valid_with_geom": 72,
+    "valid_system": 16,
+    "false_hotspots": 6,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "VIDEO(9), IF_THEN(21)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "CURSOR(10)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 17,
+        "commands": "FONT(39)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 18,
+        "commands": "FONT(39), IF_THEN(21), IF_THEN(21)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 19,
+        "commands": "IF_THEN(21), IF_THEN(21), IF_THEN(21)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 4,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 5,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  },
+  {
+    "vnd": "danem",
+    "total_hotspots": 65,
+    "valid_hotspots": 58,
+    "valid_with_geom": 53,
+    "valid_system": 5,
+    "false_hotspots": 7,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 9,
+        "commands": "QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "FONT(39), QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "commands": "FONT(39), QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 5,
+        "commands": "FONT(39), QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 7,
+        "commands": "FONT(39), QUIT(0)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 4,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 6,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  },
+  {
+    "vnd": "ecosse",
+    "total_hotspots": 155,
+    "valid_hotspots": 152,
+    "valid_with_geom": 151,
+    "valid_system": 1,
+    "false_hotspots": 2,
+    "empty_hotspots": 1,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 7,
+        "commands": "QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "QUIT(0)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  },
+  {
+    "vnd": "espa",
+    "total_hotspots": 82,
+    "valid_hotspots": 81,
+    "valid_with_geom": 80,
+    "valid_system": 1,
+    "false_hotspots": 1,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "commands": "QUIT(0)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  },
+  {
+    "vnd": "finlan",
+    "total_hotspots": 83,
+    "valid_hotspots": 81,
+    "valid_with_geom": 80,
+    "valid_system": 1,
+    "false_hotspots": 2,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 22,
+        "commands": "QUIT(0), GOTO_SCENE(6)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "QUIT(0)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  },
+  {
+    "vnd": "france",
+    "total_hotspots": 103,
+    "valid_hotspots": 99,
+    "valid_with_geom": 99,
+    "valid_system": 0,
+    "false_hotspots": 4,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 7,
+        "commands": "QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "commands": "QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "IF_THEN(21), IF_THEN(21), IF_THEN(21)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "commands": "QUIT(0)"
+      }
+    ],
+    "system_examples": []
+  },
+  {
+    "vnd": "grece",
+    "total_hotspots": 73,
+    "valid_hotspots": 73,
+    "valid_with_geom": 73,
+    "valid_system": 0,
+    "false_hotspots": 0,
+    "empty_hotspots": 0,
+    "false_examples": [],
+    "system_examples": []
+  },
+  {
+    "vnd": "holl",
+    "total_hotspots": 111,
+    "valid_hotspots": 107,
+    "valid_with_geom": 107,
+    "valid_system": 0,
+    "false_hotspots": 4,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 9,
+        "commands": "FONT(39), IF_THEN(21)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 10,
+        "commands": "FONT(39), QUIT(0), IF_THEN(21)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 11,
+        "commands": "FONT(39), IF_THEN(21), IF_THEN(21)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "commands": "QUIT(0)"
+      }
+    ],
+    "system_examples": []
+  },
+  {
+    "vnd": "irland",
+    "total_hotspots": 95,
+    "valid_hotspots": 92,
+    "valid_with_geom": 91,
+    "valid_system": 1,
+    "false_hotspots": 3,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "IF_THEN(21), IF_THEN(21), IF_THEN(21)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "commands": "IF_THEN(21), IF_THEN(21), IF_THEN(21)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "ADDBMP(27), IF_THEN(21)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  },
+  {
+    "vnd": "italie",
+    "total_hotspots": 98,
+    "valid_hotspots": 96,
+    "valid_with_geom": 95,
+    "valid_system": 1,
+    "false_hotspots": 2,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "UNKNOWN_1F(31)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "IF_THEN(21), GOTO_SCENE(6)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  },
+  {
+    "vnd": "portu",
+    "total_hotspots": 90,
+    "valid_hotspots": 88,
+    "valid_with_geom": 88,
+    "valid_system": 0,
+    "false_hotspots": 2,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 5,
+        "commands": "QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 5,
+        "commands": "QUIT(0)"
+      }
+    ],
+    "system_examples": []
+  },
+  {
+    "vnd": "suede",
+    "total_hotspots": 44,
+    "valid_hotspots": 44,
+    "valid_with_geom": 44,
+    "valid_system": 0,
+    "false_hotspots": 0,
+    "empty_hotspots": 0,
+    "false_examples": [],
+    "system_examples": []
+  },
+  {
+    "vnd": "biblio",
+    "total_hotspots": 427,
+    "valid_hotspots": 273,
+    "valid_with_geom": 254,
+    "valid_system": 19,
+    "false_hotspots": 154,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "CURSOR(10)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "FONT(39), QUIT(0), CURSOR(10)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 2,
+        "commands": "FONT(39), QUIT(0), CURSOR(10)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "commands": "FONT(39), QUIT(0), CURSOR(10)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 4,
+        "commands": "FONT(39), QUIT(0), CURSOR(10)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 14,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 6,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  },
+  {
+    "vnd": "barre",
+    "total_hotspots": 21,
+    "valid_hotspots": 17,
+    "valid_with_geom": 17,
+    "valid_system": 0,
+    "false_hotspots": 4,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "commands": "ADDBMP(27)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 4,
+        "commands": "FONT(39), ADDBMP(27), ADDBMP(27)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 7,
+        "commands": "ADDBMP(27)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 3,
+        "commands": "ADDBMP(27), ADDBMP(27), IF_THEN(21)"
+      }
+    ],
+    "system_examples": []
+  },
+  {
+    "vnd": "frontal",
+    "total_hotspots": 4,
+    "valid_hotspots": 1,
+    "valid_with_geom": 0,
+    "valid_system": 1,
+    "false_hotspots": 3,
+    "empty_hotspots": 0,
+    "false_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "QUIT(0)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "commands": "QUIT(0), QUIT(0), VIDEO(9)"
+      },
+      {
+        "scene_id": -1,
+        "hotspot_id": 0,
+        "commands": "GOTO_SCENE(6), VIDEO(9), VIDEO(9)"
+      }
+    ],
+    "system_examples": [
+      {
+        "scene_id": -1,
+        "hotspot_id": 1,
+        "reason": "System commands (PLAYWAV, SET_VAR, etc.)"
+      }
+    ]
+  }
+]
