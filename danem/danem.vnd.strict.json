@@ -1,0 +1,107 @@
+{
+  "header": {
+    "magic": "VNFILE",
+    "version": "2.13",
+    "scene_count": 16,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  "scenes": [
+    {
+      "id": 0,
+      "offset": "0x11A4",
+      "objCount": 4,
+      "hotspotsCount": 4,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 1,
+      "offset": "0x13EE",
+      "objCount": 9,
+      "hotspotsCount": 9,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 2,
+      "offset": "0x2B02",
+      "objCount": 5,
+      "hotspotsCount": 5,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 3,
+      "offset": "0x403C",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 4,
+      "offset": "0x4547",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 5,
+      "offset": "0x46ED",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 6,
+      "offset": "0x47A1",
+      "objCount": 18,
+      "hotspotsCount": 18,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 7,
+      "offset": "0x665F",
+      "objCount": 4,
+      "hotspotsCount": 4,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 8,
+      "offset": "0x69A1",
+      "objCount": 0,
+      "hotspotsCount": 0,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 9,
+      "offset": "0x987B",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 10,
+      "offset": "0xA147",
+      "objCount": 0,
+      "hotspotsCount": 0,
+      "match": true,
+      "errors": []
+    }
+  ],
+  "stats": {
+    "scenes_parsed": 11,
+    "scenes_expected": 16,
+    "hotspots_declared": 48,
+    "hotspots_parsed": 48,
+    "perfect_match": 11,
+    "errors": 0
+  }
+}

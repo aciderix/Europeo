@@ -139,32 +139,48 @@ export class VNDSequentialParser {
       }
   }
 
-  // --- SPECIFIQUE COULEURS1.VND : DETECTION DE LOGIQUE D2/D3/AVI ---
-  private isCouleurs1LogicBlock(offset: number): boolean {
-      // On cherche une commande ID 21 (0x15) ou ID 3 qui commence une condition spécifique
-      if (offset + 60 > this.data.byteLength) return false;
-      
-      const id = this.readU32(offset);
-      // 21 = Commande logique (if/set_var...), 3 = Autre type de commande script (ex: fin2.avi)
-      if (id !== 21 && id !== 3) return false; 
-
-      const len = this.readU32(offset + 4);
-      if (len > 100) return false;
-
-      // Lecture optimisée de la chaîne sans créer d'objets intermédiaires
-      const strBytes = this.uint8Data.slice(offset + 8, offset + 8 + 40); 
-      const str = this.textDecoder.decode(strBytes);
-
-      // Détection des signatures spécifiques demandées
-      if (str.includes('score <= 0 then addbmp d3')) return true;
-      if (str.includes('score >= 0 then addbmp d2')) return true;
-      // Ajout spécifique pour couper la scène AVI
-      if (str.includes('fin2.avi')) return true;
-      
-      return false;
-  }
-
   // --- PASSE 1 : CARTOGRAPHIE ---
+
+  // HYBRID: Détecter global_vars scene à l'offset de départ
+  private detectGlobalVars(): number | null {
+      // Chercher file table avec 50+ fichiers dans les 0x60-0x120 premiers octets
+      for (let offset = 0x60; offset < 0x120; offset++) {
+          const tableEnd = this.isValidFileTable(offset);
+          if (tableEnd !== -1) {
+              // Compter les fichiers
+              let fileCount = 0;
+              let ptr = offset;
+
+              while (ptr < tableEnd && ptr < offset + 8192) {
+                  if (ptr + 4 > this.data.byteLength) break;
+                  const len = this.readU32(ptr);
+
+                  // Padding
+                  if (len === 0) {
+                      ptr += 8;
+                      continue;
+                  }
+
+                  if (len > 500) break;
+
+                  const res = this.tryReadString(ptr);
+                  if (!res) break;
+
+                  const param = this.readU32(res.nextOffset);
+                  ptr = res.nextOffset + 4;
+                  fileCount++;
+
+                  if (fileCount > 500) break; // Safety
+              }
+
+              if (fileCount > 50) {
+                  this.log(`  [HYBRID] global_vars détecté @ 0x${offset.toString(16).toUpperCase()} avec ${fileCount} fichiers`);
+                  return offset;
+              }
+          }
+      }
+      return null;
+  }
 
   private findSceneOffsets(): number[] {
     const offsets: number[] = [];
@@ -173,23 +189,25 @@ export class VNDSequentialParser {
 
     this.log("PHASE 1: Scanning pour les tables de fichiers...");
 
-    while (ptr < len - 20) {
-        // 0. HACK COULEURS1 : Détection forcée des blocs logiques d2/d3/avi comme scènes
-        if (this.isCouleurs1LogicBlock(ptr)) {
-            offsets.push(ptr);
-            this.log(`  [HACK] Scène logique 'Couleurs1' (d2/d3/avi) détectée @ 0x${ptr.toString(16).toUpperCase()}`);
-            // On avance un peu pour éviter une boucle infinie sur le même offset,
-            // le parser de scène gérera la fin exacte.
-            ptr += 8; 
-            continue;
+    // HYBRID: Détecter global_vars (Scene 0) AVANT les autres scènes
+    const globalVarsOffset = this.detectGlobalVars();
+    if (globalVarsOffset !== null) {
+        offsets.push(globalVarsOffset);
+        // Continue APRÈS la fin de global_vars, pas après le début!
+        const globalVarsEnd = this.isValidFileTable(globalVarsOffset);
+        if (globalVarsEnd !== -1) {
+            ptr = globalVarsEnd; // Continue après la table complète
+        } else {
+            ptr = globalVarsOffset + 8192; // Fallback: skip large area
         }
+        this.log(`  [+] Scene 0 (global_vars) détectée @ 0x${globalVarsOffset.toString(16).toUpperCase()} -> 0x${ptr.toString(16).toUpperCase()}`);
+    }
 
+    while (ptr < len - 20) {
         // 1. Vérifier si c'est un "Empty Slot" (Scène vide)
         if (this.isEmptySlotMarker(ptr)) {
             offsets.push(ptr);
-            // On saute juste après la chaine "Empty" (4 bytes length + 5 bytes string = 9 bytes)
-            // Mais souvent il y a du padding, on laisse le parseSceneBlock gérer la longueur exacte
-            ptr += 9; 
+            ptr += 9;
             continue;
         }
 
@@ -235,53 +253,50 @@ export class VNDSequentialParser {
       let hasExtensions = 0;
       let foundSpecificSignature = false;
       let foundEndSignature = false;
-      
-      // AUGMENTATION CRITIQUE : Scène 0 a 201 slots.
-      const maxSlotsToScan = 500; 
+      const collectedFiles: string[] = []; // HYBRID: Collecter pour validation finale
 
-      for (let i = 0; i < maxSlotsToScan; i++) { 
+      const maxSlotsToScan = 500;
+
+      for (let i = 0; i < maxSlotsToScan; i++) {
           if (current + 4 > this.data.byteLength) break;
 
           // Check for Magic End Signature immediately (Config start)
           if (this.readU32(current) === 0xFFFFFFDB) {
               foundEndSignature = true;
-              break; 
+              break;
           }
 
           const len = this.readU32(current);
-          
+
           // 1. Gestion du Padding (Blocs de zéros)
           if (len === 0) {
               const paramCheck = this.readU32(current + 4);
               if (paramCheck === 0xFFFFFFDB) {
                  foundEndSignature = true;
-                 break; // Signature trouvée dans le paramètre
+                 break;
               }
 
               if (current + 8 <= this.data.byteLength && paramCheck === 0) {
                   current += 8;
-                  continue; // C'est du padding classique (8 bytes), on continue
+                  continue;
               }
-              // Si len=0 mais param!=0, c'est probablement la fin (début script)
-              break; 
+              break;
           }
 
           // 2. Lecture normale
-          if (len > 500) break; // Sanity check
+          if (len > 500) break;
 
           const res = this.tryReadString(current);
-          if (!res) break; 
+          if (!res) break;
 
           if (res.nextOffset + 4 > this.data.byteLength) break;
           const param = this.readU32(res.nextOffset);
-          
-          // Check basique sur le paramètre
-          if (param > 0xFFFFFF && param !== 0xFFFFFFDB) break; 
+
+          if (param > 0xFFFFFF && param !== 0xFFFFFFDB) break;
 
           const name = res.text.toLowerCase();
-          
+
           // Détection de fin de table par collision avec du script
-          // Si on trouve ce genre de chaine, c'est qu'on est DÉJÀ dans le script
           if (this.looksLikeScriptParam(name)) {
               break;
           }
@@ -290,7 +305,18 @@ export class VNDSequentialParser {
               break;
           }
 
+          // HYBRID: REJECT paths relatifs pour audio/vidéo (paramètres de commandes)
+          // GARDER paths relatifs pour .bmp/.htm (fichiers légitimes)
+          if (res.text.includes('..\\') || res.text.includes('../')) {
+              // Si c'est un .wav/.avi/.mp3 avec path relatif, c'est un paramètre de commande
+              if (/\.(wav|avi|mp3)$/i.test(res.text)) {
+                  break; // Rejeter cette "scène"
+              }
+              // Sinon (.bmp, .htm, etc.), c'est légitime, continuer
+          }
+
           if (name.length > 0 && name !== "empty") {
+              collectedFiles.push(res.text); // HYBRID: Collecter
               if (name === "toolbar") foundSpecificSignature = true;
               if (/\.(bmp|wav|avi|htm|html|dll|vnp|cur|ico)$/.test(name)) hasExtensions++;
           }
@@ -301,11 +327,11 @@ export class VNDSequentialParser {
               for (let scan = 0; scan < 200; scan++) {
                   const ptr = res.nextOffset + 4 + scan;
                   if (ptr + 14 > this.data.byteLength) break;
-                  
+
                   const checkLen = this.readU32(ptr);
                   if (checkLen === 9) {
                       if (this.uint8Data[ptr+4] === 112 && this.uint8Data[ptr+12] === 118) {
-                          current = ptr; 
+                          current = ptr;
                           foundWav = true;
                           break;
                       }
@@ -314,16 +340,29 @@ export class VNDSequentialParser {
               if (foundWav) continue;
           }
 
-          current = res.nextOffset + 4; 
+          current = res.nextOffset + 4;
           validSlots++;
       }
-      
+
       const isToolbar = foundSpecificSignature;
       const isEndSig = foundEndSignature;
       const isHeuristic = (validSlots >= 1 && hasExtensions >= 1) || (validSlots > 50);
 
+      // HYBRID: VALIDATION FINALE - Rejeter les fausses scènes (fichiers audio/vidéo isolés)
+      // Ces fichiers sont des paramètres de commandes hotspot, pas des scènes
+      if (collectedFiles.length === 1) {
+          const singleFile = collectedFiles[0].toLowerCase();
+          // Rejeter SEULEMENT les .wav/.avi/.mp3 isolés (paramètres de commandes)
+          // Garder .htm, .cur, .bmp, .dll (scènes légitimes)
+          if (/\.(wav|avi|mp3)$/.test(singleFile)) {
+              if (!isToolbar) {
+                  return -1; // Rejeter cette fausse scène
+              }
+          }
+      }
+
       if (isToolbar || (isEndSig && validSlots >= 1) || isHeuristic) {
-          return current; 
+          return current;
       }
 
       for (let probe = current; probe < current + 100 && probe < this.data.byteLength - 4; probe++) {
@@ -734,11 +773,14 @@ export class VNDSequentialParser {
           return {
               id,
               offset: start,
-              length: 9, 
+              length: 9,
               files: [],
               initScript: { offset: start, length: 0, commands: [] },
               config: { offset: -1, flag: 0, ints: [], foundSignature: false },
               hotspots: [],
+              objCount: 0,
+              objCountValid: true,
+              confidence: 'HIGH',
               warnings: [],
               parseMethod: 'empty_slot',
               sceneType: 'empty',
@@ -1006,9 +1048,11 @@ export class VNDSequentialParser {
       // 5. HOTSPOTS (STANDARD)
       const hotspots: Hotspot[] = [];
       let hsPtr = hotspotStart;
-      
+      let declaredObjCount: number | undefined = undefined; // HYBRID: Nombre de hotspots déclaré
+
       if (hsPtr !== -1 && hsPtr < limit) {
           const objCount = this.readU32(hsPtr);
+          declaredObjCount = objCount; // HYBRID: Stocker pour validation
           hsPtr += 4;
 
           if (objCount < 5000) { 
@@ -1079,10 +1123,18 @@ export class VNDSequentialParser {
                       const x = this.readI32(hsPtr);
                       const y = this.readI32(hsPtr+4);
 
-                      if (Math.abs(x) > 2000 || Math.abs(y) > 2000) {
+                      // HYBRID: Limites assouplies pour scènes scrollables
+                      const MAX_COORD_STRICT = 2000;
+                      const MAX_COORD_SCROLLABLE = 5000;
+
+                      if (Math.abs(x) > MAX_COORD_SCROLLABLE || Math.abs(y) > MAX_COORD_SCROLLABLE) {
                           hasInvalidCoords = true;
                           this.log(`  [WARN] Hotspot ${i}: coordonnées invalides (${x}, ${y}) - rejeté`);
                           break;
+                      } else if (Math.abs(x) > MAX_COORD_STRICT || Math.abs(y) > MAX_COORD_STRICT) {
+                          // Scène scrollable (warning mais continue)
+                          this.log(`  [INFO] Hotspot ${i}: scène scrollable détectée (${x}, ${y})`);
+                          warnings.push(`Scène scrollable: coordonnées (${x}, ${y})`);
                       }
 
                       points.push({ x, y });
@@ -1310,6 +1362,23 @@ export class VNDSequentialParser {
 
       const sceneType = this.inferSceneType(id, files, mergedHotspots, isToolbarScene);
 
+      // HYBRID: Calculer objCountValid
+      const objCountValid = declaredObjCount !== undefined ? mergedHotspots.length === declaredObjCount : undefined;
+
+      // HYBRID: Assigner confidence selon parseMethod
+      let confidence: 'HIGH' | 'MEDIUM' | 'LOW' = 'MEDIUM';
+      if (parseMethod === 'signature') {
+          confidence = 'HIGH'; // Scène avec signature 0xFFFFFFDB
+      } else if (parseMethod === 'heuristic_recovered' || parseMethod === 'heuristic') {
+          if (sceneType === 'global_vars') {
+              confidence = 'HIGH'; // global_vars très fiable (50+ fichiers)
+          } else {
+              confidence = 'MEDIUM'; // Récupération heuristique
+          }
+      } else if (parseMethod === 'empty_slot') {
+          confidence = 'HIGH'; // Empty slot clairement identifié
+      }
+
       return {
           id,
           offset: start,
@@ -1318,6 +1387,9 @@ export class VNDSequentialParser {
           initScript,
           config,
           hotspots: mergedHotspots,
+          objCount: declaredObjCount,
+          objCountValid,
+          confidence,
           warnings,
           parseMethod,
           sceneType,

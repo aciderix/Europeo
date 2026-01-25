@@ -1,0 +1,269 @@
+{
+  "header": {
+    "magic": "VNFILE",
+    "version": "2.13",
+    "scene_count": 31,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  "scenes": [
+    {
+      "id": 0,
+      "offset": "0x11A6",
+      "objCount": 6,
+      "hotspotsCount": 6,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 1,
+      "offset": "0x1AA1",
+      "objCount": 6,
+      "hotspotsCount": 6,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 2,
+      "offset": "0x1E92",
+      "objCount": 5,
+      "hotspotsCount": 5,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 3,
+      "offset": "0x2486",
+      "objCount": 26,
+      "hotspotsCount": 26,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 4,
+      "offset": "0x3B5F",
+      "objCount": 11,
+      "hotspotsCount": 11,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 5,
+      "offset": "0x4767",
+      "objCount": 8,
+      "hotspotsCount": 8,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 6,
+      "offset": "0x5243",
+      "objCount": 8,
+      "hotspotsCount": 3,
+      "match": false,
+      "errors": [
+        "ERREUR @ 0x5243: Coordonnées invalides (2311, 187) @ 0x5681"
+      ]
+    },
+    {
+      "id": 7,
+      "offset": "0x5B0B",
+      "objCount": 5,
+      "hotspotsCount": 5,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 8,
+      "offset": "0x61F1",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 9,
+      "offset": "0x6373",
+      "objCount": 2,
+      "hotspotsCount": 2,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 10,
+      "offset": "0x663C",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 11,
+      "offset": "0x67AE",
+      "objCount": 17,
+      "hotspotsCount": 17,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 12,
+      "offset": "0x7482",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 13,
+      "offset": "0x7C47",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 14,
+      "offset": "0x7D42",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 15,
+      "offset": "0x7EC0",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 16,
+      "offset": "0x8110",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 17,
+      "offset": "0x8283",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 18,
+      "offset": "0x8377",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 19,
+      "offset": "0x846A",
+      "objCount": 2,
+      "hotspotsCount": 2,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 20,
+      "offset": "0x8574",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 21,
+      "offset": "0x87E9",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 22,
+      "offset": "0x930F",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 23,
+      "offset": "0x9CAA",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 24,
+      "offset": "0xA79C",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 25,
+      "offset": "0xB2AC",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 26,
+      "offset": "0xDC77",
+      "objCount": 6,
+      "hotspotsCount": 6,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 27,
+      "offset": "0xE5C3",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 28,
+      "offset": "0xE962",
+      "objCount": 17,
+      "hotspotsCount": 17,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 29,
+      "offset": "0x115A8",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "errors": []
+    },
+    {
+      "id": 30,
+      "offset": "0x11A6C",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "errors": []
+    }
+  ],
+  "stats": {
+    "scenes_parsed": 31,
+    "scenes_expected": 31,
+    "hotspots_declared": 149,
+    "hotspots_parsed": 144,
+    "perfect_match": 30,
+    "errors": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "file": "danem/danem.vnd",
+  "total_scenes": 36,
+  "signatures_found": 10,
+  "weak_signatures": 4,
+  "scenes_with_bmp": 13,
+  "scenes_with_bmp_and_signature": 10,
+  "total_hotspots": 65,
+  "hotspots_with_geometry": 30,
+  "scenes_with_logic": 0
+}

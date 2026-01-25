@@ -1,0 +1,1077 @@
+{
+  "header": {
+    "magic": "VNFILE",
+    "version": "2.13",
+    "project": "",
+    "author": "",
+    "serial": "",
+    "width": 640,
+    "height": 480,
+    "config_extra": [
+      16,
+      1,
+      1
+    ],
+    "scene_count": 0,
+    "exit_id": 0,
+    "index_id": 0,
+    "header_size": 104
+  },
+  "scenes": [
+    {
+      "id": 0,
+      "offset": 98,
+      "length": 234,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\vnstudio\\vnresmod.dll",
+          "param": 12,
+          "offset": 106
+        },
+        {
+          "slot": 2,
+          "filename": "GUITARE",
+          "param": 0,
+          "offset": 138
+        },
+        {
+          "slot": 3,
+          "filename": "DORADE",
+          "param": 0,
+          "offset": 153
+        },
+        {
+          "slot": 4,
+          "filename": "RESSORT",
+          "param": 0,
+          "offset": 167
+        },
+        {
+          "slot": 5,
+          "filename": "SACADOS",
+          "param": 0,
+          "offset": 182
+        },
+        {
+          "slot": 6,
+          "filename": "CALC",
+          "param": 0,
+          "offset": 197
+        },
+        {
+          "slot": 7,
+          "filename": "TELEPHONE",
+          "param": 0,
+          "offset": 209
+        },
+        {
+          "slot": 8,
+          "filename": "ACTIVE",
+          "param": 0,
+          "offset": 226
+        },
+        {
+          "slot": 9,
+          "filename": "SCORE",
+          "param": 0,
+          "offset": 240
+        },
+        {
+          "slot": 10,
+          "filename": "FIOLE",
+          "param": 0,
+          "offset": 253
+        },
+        {
+          "slot": 11,
+          "filename": "SUEDE",
+          "param": 0,
+          "offset": 266
+        },
+        {
+          "slot": 12,
+          "filename": "PORTUGAL",
+          "param": 0,
+          "offset": 279
+        },
+        {
+          "slot": 13,
+          "filename": "TRANS",
+          "param": 0,
+          "offset": 295
+        }
+      ],
+      "initScript": {
+        "offset": 308,
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "MEDIUM",
+      "warnings": [
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x134"
+      ],
+      "parseMethod": "heuristic_recovered",
+      "sceneType": "game"
+    },
+    {
+      "id": 1,
+      "offset": 332,
+      "length": 872,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\..\\allem\\img24\\berlin.bmp",
+          "param": 16,
+          "offset": 356
+        }
+      ],
+      "initScript": {
+        "offset": 424,
+        "length": 0,
+        "commands": []
+      },
+      "config": {
+        "offset": 424,
+        "flag": 4294967291,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 452,
+          "commands": [
+            {
+              "id": 2,
+              "subtype": 39,
+              "param": "16 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 2,
+              "subtype": 27,
+              "param": "toolbar ..\\..\\barre\\images\\barrenoir.bmp 6 0 400 640 480"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "cochon = 1 then addbmp ordi  ..\\..\\barre\\images\\ordi.bmp 6 549 416"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "cochon = 1 then addbmp fleche  ..\\..\\barre\\images\\fleche.bmp 6 482 418"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "cochon = 1 then addbmp cochon  ..\\..\\barre\\images\\cochon.bmp 6 18 404"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 147 409"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 268 411"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 341 413"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "active = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 200 408"
+            },
+            {
+              "id": 2,
+              "subtype": 41,
+              "param": "toto 6 65 410 160 470 0 \"1000\""
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 545,
+                "y": 410
+              },
+              {
+                "x": 610,
+                "y": 470
+              }
+            ],
+            "extraFlag": 3
+          }
+        }
+      ],
+      "objCount": 3,
+      "objCountValid": false,
+      "confidence": "HIGH",
+      "warnings": [
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle",
+        "⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 1"
+      ],
+      "parseMethod": "signature",
+      "sceneType": "game"
+    },
+    {
+      "id": 2,
+      "offset": 1204,
+      "length": 54,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "euro32.dll",
+          "param": 105,
+          "offset": 1204
+        }
+      ],
+      "initScript": {
+        "offset": 1222,
+        "length": 36,
+        "commands": [
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [200,420,260,460,3,1,1]",
+            "offset": 1222
+          }
+        ]
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [],
+      "confidence": "MEDIUM",
+      "warnings": [
+        "Aucune structure de Hotspot détectée. Mode fallback."
+      ],
+      "parseMethod": "heuristic",
+      "sceneType": "game"
+    },
+    {
+      "id": 3,
+      "offset": 1258,
+      "length": 3490,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "inv.dll",
+          "param": 106,
+          "offset": 1258
+        }
+      ],
+      "initScript": {
+        "offset": 1273,
+        "length": 212,
+        "commands": [
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [466,416,526,466,1,0,0]",
+            "offset": 1273
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1305
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1321
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1337
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1353
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1369
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1385
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1401
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1417
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1433
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1449
+          },
+          {
+            "id": 0,
+            "subtype": 0,
+            "param": "",
+            "offset": 1465
+          }
+        ]
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [
+        {
+          "index": 0,
+          "offset": 1489,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 27,
+              "param": "etoile ..\\..\\barre\\images\\ordi.bmp 6 553 408"
+            },
+            {
+              "id": 2,
+              "subtype": 39,
+              "param": "18 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 2,
+              "subtype": 27,
+              "param": "toolbar ..\\..\\barre\\images\\barre.bmp 6 0 400 640 480"
+            },
+            {
+              "id": 2,
+              "subtype": 27,
+              "param": "fleche  ..\\..\\barre\\images\\fleche.bmp 6 499 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 179 400"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 281 403"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 338 400"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 122 400"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 1 then addbmp fiole ..\\..\\barre\\images\\f1.bmp 0 141 454"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 2 then addbmp fiole ..\\..\\barre\\images\\f2.bmp 0 142 454"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 3 then addbmp fiole ..\\..\\barre\\images\\f3.bmp 0 140 453"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 4 then addbmp fiole ..\\..\\barre\\images\\f4.bmp 0 141 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 5 then addbmp fiole ..\\..\\barre\\images\\f5.bmp 0 141 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 6 then addbmp fiole ..\\..\\barre\\images\\f6.bmp 0 140 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 7 then addbmp fiole ..\\..\\barre\\images\\f7.bmp 0 139 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 8 then addbmp fiole ..\\..\\barre\\images\\f8.bmp 0 138 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 9 then addbmp fiole ..\\..\\barre\\images\\f9.bmp 0 138 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 10 then addbmp fiole ..\\..\\barre\\images\\f10.bmp 0 135 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 11 then addbmp fiole ..\\..\\barre\\images\\f11.bmp 0 133 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "fiole = 12 then addbmp fiole ..\\..\\barre\\images\\f12.bmp 0 132 451"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "suede = 1 then  addbmp info ..\\..\\barre\\images\\p_suede.bmp 6 404 405"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "portugal = 1 then  addbmp info ..\\..\\barre\\images\\p_port.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "allemagne = 1 then  addbmp info ..\\..\\barre\\images\\p_all.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "france = 1 then  addbmp info ..\\..\\barre\\images\\p_france.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "angleterre = 1 then  addbmp info ..\\..\\barre\\images\\p_angl.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "autriche = 1 then  addbmp info ..\\..\\barre\\images\\p_autriche.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "danemark = 1 then  addbmp info ..\\..\\barre\\images\\p_danemark.bmp 0 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "ecosse = 1 then  addbmp info ..\\..\\barre\\images\\p_ecosse.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "euroland = 1 then  addbmp info ..\\..\\barre\\images\\p_euroland.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "espagne = 1 then  addbmp info ..\\..\\barre\\images\\p_espagne.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "finlande = 1 then  addbmp info ..\\..\\barre\\images\\p_finland.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "grece = 1 then  addbmp info ..\\..\\barre\\images\\p_grece.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "irlande = 1 then  addbmp info ..\\..\\barre\\images\\p_irlande.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "italie = 1 then  addbmp info ..\\..\\barre\\images\\p_italie.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "belgique = 1 then  addbmp info ..\\..\\barre\\images\\p_belgique.bmp 6 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 21,
+              "param": "paysbas = 1 then  addbmp info ..\\..\\barre\\images\\p_pays.bmp 0 400 407"
+            },
+            {
+              "id": 2,
+              "subtype": 41,
+              "param": "score 6 25 410 160 470 0 <score>"
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 553,
+                "y": 407
+              },
+              {
+                "x": 623,
+                "y": 453
+              }
+            ],
+            "extraFlag": 3
+          }
+        },
+        {
+          "index": 1,
+          "offset": 4338,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "calc = 1 then addbmp etoile ..\\..\\barre\\images\\calc2.bmp 6 281 403"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "calc = 1 then rundll ..\\barre\\euro32.dll"
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 273,
+                "y": 407
+              },
+              {
+                "x": 331,
+                "y": 451
+              }
+            ],
+            "extraFlag": 3
+          }
+        },
+        {
+          "index": 2,
+          "offset": 4500,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 21,
+              "param": "sacados = 1 then addbmp etoile ..\\..\\barre\\images\\sac2.bmp 6 338 400"
+            },
+            {
+              "id": 1,
+              "subtype": 21,
+              "param": "sacados = 1 then rundll ..\\barre\\inv.dll"
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 2,
+            "points": [
+              {
+                "x": 341,
+                "y": 409
+              },
+              {
+                "x": 397,
+                "y": 449
+              }
+            ],
+            "extraFlag": 3
+          }
+        }
+      ],
+      "objCount": 7,
+      "objCountValid": false,
+      "confidence": "MEDIUM",
+      "warnings": [
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x5CD",
+        "⚠️ P3: objCount mismatch - Déclaré: 7, Parsé: 3"
+      ],
+      "parseMethod": "heuristic_recovered",
+      "sceneType": "game"
+    },
+    {
+      "id": 4,
+      "offset": 18274,
+      "length": 3843,
+      "files": [
+        {
+          "slot": 1,
+          "filename": "..\\frontal\\vnoption.dll",
+          "param": 2,
+          "offset": 18274
+        }
+      ],
+      "initScript": {
+        "offset": 18305,
+        "length": 3812,
+        "commands": [
+          {
+            "id": 39,
+            "subtype": 0,
+            "param": "18 0 #ffffff Comic sans MS",
+            "offset": 18305
+          },
+          {
+            "id": 27,
+            "subtype": 0,
+            "param": "toolbar ..\\..\\barre\\images\\barre.bmp 6 0 400 640 480",
+            "offset": 18343
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 18407
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+            "offset": 18490
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+            "offset": 18568
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 18645
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 1 then addbmp fiole ..\\..\\barre\\images\\f1.bmp 6 197 461",
+            "offset": 18725
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 2 then addbmp fiole ..\\..\\barre\\images\\f2.bmp 6 196 461",
+            "offset": 18800
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 3 then addbmp fiole ..\\..\\barre\\images\\f3.bmp 6 196 461",
+            "offset": 18875
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 4 then addbmp fiole ..\\..\\barre\\images\\f4.bmp 6 197 461",
+            "offset": 18950
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 5 then addbmp fiole ..\\..\\barre\\images\\f5.bmp 6 197 461",
+            "offset": 19025
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 6 then addbmp fiole ..\\..\\barre\\images\\f6.bmp 6 196 461",
+            "offset": 19100
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 7 then addbmp fiole ..\\..\\barre\\images\\f7.bmp 6 197 461",
+            "offset": 19175
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 8 then addbmp fiole ..\\..\\barre\\images\\f8.bmp 6 197 461",
+            "offset": 19250
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 9 then addbmp fiole ..\\..\\barre\\images\\f9.bmp 6 196 461",
+            "offset": 19325
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 10 then addbmp fiole ..\\..\\barre\\images\\f10.bmp 6 197 461",
+            "offset": 19400
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 11 then addbmp fiole ..\\..\\barre\\images\\f11.bmp 6 196 461",
+            "offset": 19477
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "fiole = 12 then addbmp fiole ..\\..\\barre\\images\\f12.bmp 6 196 461",
+            "offset": 19554
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "suede = 1 then  addbmp info ..\\..\\barre\\images\\p_suede.bmp 6 452 400",
+            "offset": 19631
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "portugal = 1 then  addbmp info ..\\..\\barre\\images\\p_port.bmp 6 452 400",
+            "offset": 19711
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "allemagne = 1 then  addbmp info ..\\..\\barre\\images\\p_all.bmp 6 452 400",
+            "offset": 19793
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "france = 1 then  addbmp info ..\\..\\barre\\images\\p_france.bmp 6 452 400",
+            "offset": 19875
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "angleterre = 1 then  addbmp info ..\\..\\barre\\images\\p_angl.bmp 6 452 400",
+            "offset": 19957
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "autriche = 1 then  addbmp info ..\\..\\barre\\images\\p_autriche.bmp 6 452 400",
+            "offset": 20041
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "danemark = 1 then  addbmp info ..\\..\\barre\\images\\p_danemark.bmp 6 452 400",
+            "offset": 20127
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "ecosse = 1 then  addbmp info ..\\..\\barre\\images\\p_ecosse.bmp 6 452 400",
+            "offset": 20213
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "euroland = 1 then  addbmp info ..\\..\\barre\\images\\p_euroland.bmp 6 452 400",
+            "offset": 20295
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "espagne = 1 then  addbmp info ..\\..\\barre\\images\\p_espagne.bmp 6 452 400",
+            "offset": 20381
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "finlande = 1 then  addbmp info ..\\..\\barre\\images\\p_finland.bmp 6 452 400",
+            "offset": 20465
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "grece = 1 then  addbmp info ..\\..\\barre\\images\\p_grece.bmp 6 452 400",
+            "offset": 20550
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "irlande = 1 then  addbmp info ..\\..\\barre\\images\\p_irlande.bmp 6 452 400",
+            "offset": 20630
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "italie = 1 then  addbmp info ..\\..\\barre\\images\\p_italie.bmp 6 452 400",
+            "offset": 20714
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "belgique = 1 then  addbmp info ..\\..\\barre\\images\\p_belgique.bmp 6 452 400",
+            "offset": 20796
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "paysbas = 1 then  addbmp info ..\\..\\barre\\images\\p_pays.bmp 6 452 400",
+            "offset": 20882
+          },
+          {
+            "id": 41,
+            "subtype": 0,
+            "param": "score 6 15 415 160 470 0 <score>",
+            "offset": 20963
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [571,419,636,475,3,7,1]",
+            "offset": 21007
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then rundll ..\\barre\\euro32.dll",
+            "offset": 21039
+          },
+          {
+            "id": 28,
+            "subtype": 0,
+            "param": "calc1",
+            "offset": 21091
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp etoile ..\\..\\barre\\images\\calc2.bmp 6 249 400",
+            "offset": 21108
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp etoile1 ..\\..\\barre\\images\\textetc.bmp 6 0 450",
+            "offset": 21186
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 21265
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 21345
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400",
+            "offset": 21428
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [243,414,290,451,3,8,1]",
+            "offset": 21505
+          },
+          {
+            "id": 9,
+            "subtype": 0,
+            "param": "..\\..\\couleurs1\\movie\\euroland\\aide2.avi 1 0 0 1 1",
+            "offset": 21537
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then rundll ..\\barre\\inv.dll",
+            "offset": 21599
+          },
+          {
+            "id": 28,
+            "subtype": 0,
+            "param": "sac",
+            "offset": 21651
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp etoile ..\\..\\barre\\images\\sac2.bmp 6 385 400",
+            "offset": 21666
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "sacados = 1 then addbmp etoile1 ..\\..\\barre\\images\\textes.bmp 6 0 454",
+            "offset": 21746
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400",
+            "offset": 21827
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400",
+            "offset": 21907
+          },
+          {
+            "id": 21,
+            "subtype": 0,
+            "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400",
+            "offset": 21985
+          },
+          {
+            "id": 2,
+            "subtype": 0,
+            "param": "Zone: [393,413,447,449,3,93,1]",
+            "offset": 22068
+          },
+          {
+            "id": 26,
+            "subtype": 0,
+            "param": "0",
+            "offset": 22100
+          }
+        ]
+      },
+      "config": {
+        "offset": -1,
+        "flag": 0,
+        "ints": [],
+        "foundSignature": false
+      },
+      "hotspots": [],
+      "confidence": "MEDIUM",
+      "warnings": [
+        "Aucune structure de Hotspot détectée. Mode fallback."
+      ],
+      "parseMethod": "heuristic",
+      "sceneType": "options"
+    }
+  ],
+  "logs": [
+    "✓ P2: 1 signature(s) détectée(s): 0xFFFFFFFB",
+    "✓ Header VND parsé:  v2.13",
+    "  Résolution: 640x480",
+    "  Scene Count (header): 0",
+    "  EXIT_ID: 0, INDEX_ID: 0",
+    "PHASE 1: Scanning pour les tables de fichiers...",
+    "  [+] Scène détectée @ 0x62 (Table -> 0x144)",
+    "  [+] Scène détectée @ 0x14C (Table -> 0x1A8)",
+    "  [+] Scène détectée @ 0x4B4 (Table -> 0x4C6)",
+    "  [+] Scène détectée @ 0x4EA (Table -> 0x4F9)",
+    "  [+] Scène détectée @ 0x128C (Table -> 0x129E)",
+    "  [+] Scène détectée @ 0x3268 (Table -> 0x327A)",
+    "  [+] Scène détectée @ 0x4762 (Table -> 0x4781)",
+    "  [+] Scène détectée @ 0x5665 (Table -> 0x5677)",
+    "PHASE 2: Analyse de 8 segments détectés.",
+    "  [INFO] Fin de table fichiers par structure Hotspot à 0x134",
+    "\n--- Analyse Scène #0 (0x62 -> 0x14C) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 1",
+    "\n--- Analyse Scène #1 (0x14C -> 0x4B4) ---",
+    "\n--- Analyse Scène #2 (0x4B4 -> 0x4EA) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 7, Parsé: 3",
+    "\n--- Analyse Scène #3 (0x4EA -> 0x128C) ---",
+    "  [DEEP SCAN] 3 structures géométriques orphelines.",
+    "  [MERGE] Commande @0x29d5 associée à Géométrie @0x30b2",
+    "  [MERGE] Commande @0x2dea associée à Géométrie @0x3154",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 9",
+    "  [INFO] Scène 'Toolbar' à 0x128C - Ignorée du mapping Slot.",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
+    "  [INFO] Scène 'Toolbar' à 0x3268 - Ignorée du mapping Slot.",
+    "\n--- Analyse Scène #4 (0x4762 -> 0x5665) ---",
+    "  [PEEK] Commande reconstruite: \"400d\" @ 0x6e40",
+    "  [DEEP SCAN] 1 structures géométriques orphelines.",
+    "  [MERGE] Commande @0x6c8f associée à Géométrie @0x6e40",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
+    "  [INFO] Scène 'Toolbar' à 0x5665 - Ignorée du mapping Slot.",
+    "\n============================================================",
+    "P4: STATISTIQUES SCENE COUNT",
+    "============================================================",
+    "Header Scene Count: 0",
+    "Parser Scene Count: 5",
+    "Différence: +5",
+    "",
+    "Breakdown par type:",
+    "  game           :   4 ( 80.0%)",
+    "  options        :   1 ( 20.0%)",
+    "",
+    "✓ Parser trouve +5 scènes supplémentaires",
+    "  Cause probable: Scènes système/variations non comptées dans header",
+    "============================================================",
+    "\n============================================================",
+    "P5: STATISTIQUES COMMAND SUBTYPES",
+    "============================================================",
+    "Total commandes: 118",
+    "Subtypes uniques: 5/49",
+    "",
+    "Top 15 subtypes par fréquence:",
+    "    0 (0x00) QUIT           :    67 (56.78%)",
+    "   21 (0x15) IF_THEN        :    43 (36.44%)",
+    "   27 (0x1B) ADDBMP         :     4 ( 3.39%)",
+    "   39 (0x27) FONT           :     2 ( 1.69%)",
+    "   41 (0x29) UNKNOWN_41     :     2 ( 1.69%)",
+    "",
+    "✓ Subtypes identifiés: 4/5",
+    "⚠️ Subtypes inconnus: 1/5",
+    "============================================================"
+  ],
+  "totalBytes": 28252
+}

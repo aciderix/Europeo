@@ -1,4 +1,22 @@
 {
+  "header": {
+    "magic": "VNFILE",
+    "version": "2.13",
+    "project": "",
+    "author": "",
+    "serial": "",
+    "width": 640,
+    "height": 480,
+    "config_extra": [
+      16,
+      1,
+      1
+    ],
+    "scene_count": 31,
+    "exit_id": 0,
+    "index_id": 0,
+    "header_size": 104
+  },
   "scenes": [
     {
       "id": 0,
@@ -1710,6 +1728,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x1154"
       ],
@@ -2269,6 +2290,9 @@
           }
         }
       ],
+      "objCount": 6,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -2540,6 +2564,9 @@
           }
         }
       ],
+      "objCount": 6,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game",
@@ -2857,6 +2884,9 @@
           }
         }
       ],
+      "objCount": 5,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -4141,6 +4171,9 @@
           }
         }
       ],
+      "objCount": 26,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -4829,6 +4862,9 @@
           }
         }
       ],
+      "objCount": 11,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5402,6 +5438,9 @@
           }
         }
       ],
+      "objCount": 8,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -5649,8 +5688,110 @@
           }
         },
         {
-          "index": -1,
-          "offset": 22281,
+          "index": 3,
+          "offset": 21920,
+          "commands": [
+            {
+              "id": 1,
+              "subtype": 6,
+              "param": "34"
+            },
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #000000 Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "760 220 125 365 0 Le tableau de la légende."
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "760 240 125 365 0 Clique dessus si tu veux"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "760 260 125 365 0 revoir l'introduction."
+            }
+          ],
+          "geometry": {
+            "cursorId": 106,
+            "pointCount": 16,
+            "points": [
+              {
+                "x": 2311,
+                "y": 187
+              },
+              {
+                "x": 2321,
+                "y": 137
+              },
+              {
+                "x": 2352,
+                "y": 134
+              },
+              {
+                "x": 2352,
+                "y": 119
+              },
+              {
+                "x": 2413,
+                "y": 115
+              },
+              {
+                "x": 2421,
+                "y": 137
+              },
+              {
+                "x": 2422,
+                "y": 185
+              },
+              {
+                "x": 2398,
+                "y": 197
+              },
+              {
+                "x": 2392,
+                "y": 237
+              },
+              {
+                "x": 2408,
+                "y": 248
+              },
+              {
+                "x": 2414,
+                "y": 313
+              },
+              {
+                "x": 2323,
+                "y": 319
+              },
+              {
+                "x": 2302,
+                "y": 306
+              },
+              {
+                "x": 2338,
+                "y": 282
+              },
+              {
+                "x": 2326,
+                "y": 247
+              },
+              {
+                "x": 2333,
+                "y": 200
+              }
+            ],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 4,
+          "offset": 22277,
           "commands": [
             {
               "id": 0,
@@ -5678,19 +5819,9 @@
               "param": "bonus2 = 0 then set_var bonus2 1"
             },
             {
-              "id": 3,
-              "subtype": 6,
-              "param": "bonus2 = 1 then scene 35k"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "48i"
-            },
-            {
-              "id": 3,
-              "subtype": 6,
-              "param": "49i"
+              "id": 1,
+              "subtype": 21,
+              "param": "bonus2 = 1 then scene 35"
             }
           ],
           "geometry": {
@@ -5751,97 +5882,16 @@
               }
             ],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
         },
         {
-          "index": -1,
-          "offset": 22998,
+          "index": 5,
+          "offset": 22710,
           "commands": [
             {
-              "id": 0,
-              "subtype": 39,
-              "param": "18 0 #ffffff Comic sans MS"
-            },
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "1980 340 125 365 0 La momie du pharaon TOUTHENEUROd"
-            }
-          ],
-          "geometry": {
-            "cursorId": 100,
-            "pointCount": 14,
-            "points": [
-              {
-                "x": 2004,
-                "y": 325
-              },
-              {
-                "x": 1967,
-                "y": 314
-              },
-              {
-                "x": 1980,
-                "y": 287
-              },
-              {
-                "x": 1939,
-                "y": 125
-              },
-              {
-                "x": 1969,
-                "y": 104
-              },
-              {
-                "x": 1972,
-                "y": 63
-              },
-              {
-                "x": 2002,
-                "y": 42
-              },
-              {
-                "x": 2068,
-                "y": 55
-              },
-              {
-                "x": 2073,
-                "y": 95
-              },
-              {
-                "x": 2073,
-                "y": 111
-              },
-              {
-                "x": 2106,
-                "y": 131
-              },
-              {
-                "x": 2094,
-                "y": 189
-              },
-              {
-                "x": 2069,
-                "y": 288
-              },
-              {
-                "x": 2065,
-                "y": 325
-              }
-            ],
-            "extraFlag": 0
-          },
-          "isRecovered": true
-        },
-        {
-          "index": -1,
-          "offset": 22728,
-          "commands": [
-            {
-              "id": 3,
+              "id": 1,
               "subtype": 6,
-              "param": "48i"
+              "param": "48"
             }
           ],
           "geometry": {
@@ -5902,17 +5952,16 @@
               }
             ],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
         },
         {
-          "index": -1,
-          "offset": 22862,
+          "index": 6,
+          "offset": 22844,
           "commands": [
             {
-              "id": 3,
+              "id": 1,
               "subtype": 6,
-              "param": "49i"
+              "param": "49"
             }
           ],
           "geometry": {
@@ -5981,11 +6030,118 @@
               }
             ],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
+        },
+        {
+          "index": 7,
+          "offset": 22994,
+          "commands": [
+            {
+              "id": 0,
+              "subtype": 39,
+              "param": "18 0 #ffffff Comic sans MS"
+            },
+            {
+              "id": 0,
+              "subtype": 38,
+              "param": "1980 340 125 365 0 La momie du pharaon TOUTHENEURO"
+            }
+          ],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 14,
+            "points": [
+              {
+                "x": 2004,
+                "y": 325
+              },
+              {
+                "x": 1967,
+                "y": 314
+              },
+              {
+                "x": 1980,
+                "y": 287
+              },
+              {
+                "x": 1939,
+                "y": 125
+              },
+              {
+                "x": 1969,
+                "y": 104
+              },
+              {
+                "x": 1972,
+                "y": 63
+              },
+              {
+                "x": 2002,
+                "y": 42
+              },
+              {
+                "x": 2068,
+                "y": 55
+              },
+              {
+                "x": 2073,
+                "y": 95
+              },
+              {
+                "x": 2073,
+                "y": 111
+              },
+              {
+                "x": 2106,
+                "y": 131
+              },
+              {
+                "x": 2094,
+                "y": 189
+              },
+              {
+                "x": 2069,
+                "y": 288
+              },
+              {
+                "x": 2065,
+                "y": 325
+              }
+            ],
+            "extraFlag": 0
+          }
         }
       ],
-      "warnings": [],
+      "objCount": 8,
+      "objCountValid": true,
+      "confidence": "HIGH",
+      "warnings": [
+        "Scène scrollable: coordonnées (2311, 187)",
+        "Scène scrollable: coordonnées (2321, 137)",
+        "Scène scrollable: coordonnées (2352, 134)",
+        "Scène scrollable: coordonnées (2352, 119)",
+        "Scène scrollable: coordonnées (2413, 115)",
+        "Scène scrollable: coordonnées (2421, 137)",
+        "Scène scrollable: coordonnées (2422, 185)",
+        "Scène scrollable: coordonnées (2398, 197)",
+        "Scène scrollable: coordonnées (2392, 237)",
+        "Scène scrollable: coordonnées (2408, 248)",
+        "Scène scrollable: coordonnées (2414, 313)",
+        "Scène scrollable: coordonnées (2323, 319)",
+        "Scène scrollable: coordonnées (2302, 306)",
+        "Scène scrollable: coordonnées (2338, 282)",
+        "Scène scrollable: coordonnées (2326, 247)",
+        "Scène scrollable: coordonnées (2333, 200)",
+        "Scène scrollable: coordonnées (2004, 325)",
+        "Scène scrollable: coordonnées (2002, 42)",
+        "Scène scrollable: coordonnées (2068, 55)",
+        "Scène scrollable: coordonnées (2073, 95)",
+        "Scène scrollable: coordonnées (2073, 111)",
+        "Scène scrollable: coordonnées (2106, 131)",
+        "Scène scrollable: coordonnées (2094, 189)",
+        "Scène scrollable: coordonnées (2069, 288)",
+        "Scène scrollable: coordonnées (2065, 325)"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
@@ -6360,7 +6516,12 @@
           "isRecovered": true
         }
       ],
-      "warnings": [],
+      "objCount": 5,
+      "objCountValid": false,
+      "confidence": "HIGH",
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 7"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
@@ -6467,6 +6628,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -6659,7 +6823,12 @@
           }
         }
       ],
-      "warnings": [],
+      "objCount": 2,
+      "objCountValid": false,
+      "confidence": "HIGH",
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 2, Parsé: 3"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
@@ -6761,6 +6930,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -7810,6 +7982,9 @@
           }
         }
       ],
+      "objCount": 17,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game",
@@ -8037,6 +8212,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8098,6 +8276,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8204,6 +8385,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8317,6 +8501,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8338,6 +8525,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8360,6 +8550,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8468,6 +8661,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8534,6 +8730,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8600,6 +8799,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8687,6 +8889,9 @@
           }
         }
       ],
+      "objCount": 2,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8769,6 +8974,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -8790,6 +8998,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8812,6 +9023,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -8834,6 +9048,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9169,6 +9386,9 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -9190,6 +9410,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9212,6 +9435,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9234,6 +9460,9 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "empty_slot",
       "sceneType": "empty",
@@ -9569,6 +9798,9 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -9903,6 +10135,9 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -9998,6 +10233,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0xA667"
       ],
@@ -10379,6 +10617,9 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -10479,6 +10720,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
@@ -10862,6 +11106,7 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "confidence": "MEDIUM",
       "warnings": [
         "Aucune structure de Hotspot détectée. Mode fallback."
       ],
@@ -10870,789 +11115,6 @@
     },
     {
       "id": 37,
-      "offset": 50349,
-      "length": 6027,
-      "files": [
-        {
-          "slot": 1,
-          "filename": "fleche.cur",
-          "param": 1,
-          "offset": 50349
-        }
-      ],
-      "initScript": {
-        "offset": 50367,
-        "length": 4321,
-        "commands": [
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "clerouge = 2 then dec_var clerouge 1",
-            "offset": 50367
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "ballon1 = 2 then dec_var ballon1 1",
-            "offset": 50415
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bouee = 2 then dec_var bouee 1",
-            "offset": 50461
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bout_plo = 2 then dec_var bout_plo 1",
-            "offset": 50503
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bus = 2 then dec_var bus 1",
-            "offset": 50551
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "castagnette = 2 then dec_var castagnette 1",
-            "offset": 50589
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "ciseaux = 2 then dec_var ciseaux 1",
-            "offset": 50643
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "clejaune = 2 then dec_var clejaune 1",
-            "offset": 50689
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "guitare = 2 then dec_var guitare 1",
-            "offset": 50737
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "harpon = 2 then dec_var harpon 1",
-            "offset": 50783
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "helice = 2 then dec_var helice 1",
-            "offset": 50827
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "loupe = 2 then dec_var loupe 1",
-            "offset": 50871
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "masque = 2 then dec_var masque 1",
-            "offset": 50913
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "masse = 2 then dec_var masse 1",
-            "offset": 50957
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "pain = 2 then dec_var pain 1",
-            "offset": 50999
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "palme = 2 then dec_var palme 1",
-            "offset": 51039
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "photo = 2 then dec_var photo 1",
-            "offset": 51081
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "piece = 2 then dec_var piece 1",
-            "offset": 51123
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "pier_berlin = 2 then dec_var pier_berlin 1",
-            "offset": 51165
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "raquette = 2 then dec_var raquette 1",
-            "offset": 51219
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "ressort = 2 then dec_var ressort 1",
-            "offset": 51267
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "cheval = 2 then dec_var cheval 1",
-            "offset": 51313
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "riz = 2 then dec_var riz 1",
-            "offset": 51357
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "ruban = 2 then dec_var ruban 1",
-            "offset": 51395
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "sabot1 = 2 then dec_var sabot1 1",
-            "offset": 51437
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "sabot2 = 2 then dec_var sabot2 1",
-            "offset": 51481
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "scotch = 2 then dec_var scotch 1",
-            "offset": 51525
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "taillepierre = 2 then dec_var taillepierre 1",
-            "offset": 51569
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "ap_photo = 2 then dec_var ap_photo 1",
-            "offset": 51625
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "houblon = 2 then dec_var houblon 1",
-            "offset": 51673
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "chewing = 2 then dec_var chewing 1",
-            "offset": 51719
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "cleverte = 2 then dec_var cleverte 1",
-            "offset": 51765
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "partition = 2 then dec_var partition 1",
-            "offset": 51813
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "laine = 2 then dec_var laine 1",
-            "offset": 51863
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "tondeuse = 2 then dec_var tondeuse 1",
-            "offset": 51905
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "tournevis = 2 then dec_var tournevis 1",
-            "offset": 51953
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "cire = 2 then dec_var cire 1",
-            "offset": 52003
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "chianti = 2 then dec_var chianti 1",
-            "offset": 52043
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "rouedent = 2 then dec_var rouedent 1",
-            "offset": 52089
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "pierreor = 2 then dec_var pierreor 1",
-            "offset": 52137
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "papiercado = 2 then dec_var papiercado 1",
-            "offset": 52185
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "hotte = 2 then dec_var  hotte 1",
-            "offset": 52237
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "levure = 2 then dec_var  levure 1",
-            "offset": 52280
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bouteille = 2 then dec_var bouteille 1",
-            "offset": 52325
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "parfum = 2 then dec_var parfum 1",
-            "offset": 52375
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "rouge = 2 then dec_var rouge 1",
-            "offset": 52419
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bisous = 2 then dec_var bisous 1",
-            "offset": 52461
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "ap = 2 then dec_var api 1",
-            "offset": 52505
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "pince = 2 then dec_var pince 1",
-            "offset": 52542
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "tulipejaune = 2 then dec_var tulipejaune 1",
-            "offset": 52584
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "tulipeorange = 2 then dec_var tulipeorange 1",
-            "offset": 52638
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "tuliperouge = 2 then dec_var tuliperouge 1",
-            "offset": 52694
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "tulipeverte = 2 then dec_var tulipeverte 1",
-            "offset": 52748
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "tulipeviolet = 2 then dec_var tulipeviolet 1",
-            "offset": 52802
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "farine = 2 then dec_var farine 1",
-            "offset": 52858
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "saliere = 2 then dec_var saliere 1",
-            "offset": 52902
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bougie = 2 then dec_var bougie 1",
-            "offset": 52948
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "seche = 2 then dec_var seche 1",
-            "offset": 52992
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bout_eau = 2 then dec_var bout_eau 1",
-            "offset": 53034
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "dorade = 2 then dec_var dorade 1",
-            "offset": 53082
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "moule = 2 then dec_var moule 1",
-            "offset": 53126
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "ail = 2 then dec_var ail 1",
-            "offset": 53168
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "poivrouge = 2 then dec_var poivrouge 1",
-            "offset": 53206
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "poivjaune = 2 then dec_var poivjaune 1",
-            "offset": 53256
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "oignon = 2 then dec_var oignon 1",
-            "offset": 53306
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "olive = 2 then dec_var olive 1",
-            "offset": 53350
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bouillon = 2 then dec_var bouillon 1",
-            "offset": 53392
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "violon = 2 then dec_var violon 1",
-            "offset": 53440
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "skate = 2 then dec_var skate 1",
-            "offset": 53484
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "champagne = 2 then dec_var champagne 1",
-            "offset": 53526
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fromage = 2 then dec_var fromage 1",
-            "offset": 53576
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "bonnet = 2 then dec_var bonnet 1",
-            "offset": 53622
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "huile = 2 then dec_var huile 1",
-            "offset": 53666
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "orge = 2 then dec_var orge 1",
-            "offset": 53708
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "burette = 2 then dec_var burette 1",
-            "offset": 53748
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "allumette = 2 then dec_var allumette 1",
-            "offset": 53794
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "chouetteor = 2 then dec_var chouetteor 1",
-            "offset": 53844
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "chouette = 2 then dec_var chouette 1",
-            "offset": 53896
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "sirop = 2 then dec_var sirop 1",
-            "offset": 53944
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fiolegrece = 2 then dec_var  fiolegrece 1",
-            "offset": 53986
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fiolegrece2 = 2 then dec_var  fiolegrece2 1",
-            "offset": 54039
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fioleecosse = 2 then dec_var  fioleecosse 1",
-            "offset": 54094
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fioleirlande = 2 then dec_var  fioleirlande 1",
-            "offset": 54149
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fioleespagne = 2 then dec_var  fioleespagne 1",
-            "offset": 54206
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fiolesuede = 2 then dec_var  fiolesuede 1",
-            "offset": 54263
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fiolefinlande = 2 then dec_var  fiolefinlande 1",
-            "offset": 54316
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fioleautriche = 2 then dec_var  fioleautriche 1",
-            "offset": 54375
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fiolepaysbas = 2 then dec_var  fiolepaysbas 1",
-            "offset": 54434
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fioleespagne2 = 2 then dec_var  fioleespagne2 1",
-            "offset": 54491
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fioleitalie = 2 then dec_var  fioleitalie 1",
-            "offset": 54550
-          },
-          {
-            "id": 21,
-            "subtype": 0,
-            "param": "fioleangleterre = 2 then dec_var  fioleangleterre 1",
-            "offset": 54605
-          },
-          {
-            "id": 2,
-            "subtype": 0,
-            "param": "Zone: [551,463,558,470,3,8,1]",
-            "offset": 54668
-          }
-        ]
-      },
-      "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
-      },
-      "hotspots": [
-        {
-          "index": 0,
-          "offset": 54692,
-          "commands": [
-            {
-              "id": 1,
-              "subtype": 21,
-              "param": "trans = 1 then closedll"
-            },
-            {
-              "id": 1,
-              "subtype": 21,
-              "param": "trans = 1 then closewav"
-            },
-            {
-              "id": 1,
-              "subtype": 21,
-              "param": "trans = 1 then scene 12"
-            },
-            {
-              "id": 0,
-              "subtype": 28,
-              "param": "active"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "trans = 1 then addbmp etoile ..\\..\\barre\\images\\trans2.bmp 6 162 400"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400"
-            }
-          ],
-          "geometry": {
-            "cursorId": 100,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 166,
-                "y": 413
-              },
-              {
-                "x": 222,
-                "y": 454
-              }
-            ],
-            "extraFlag": 3
-          }
-        },
-        {
-          "index": 1,
-          "offset": 55165,
-          "commands": [
-            {
-              "id": 0,
-              "subtype": 28,
-              "param": "telep"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "telephone = 1 then addbmp etoile ..\\..\\barre\\images\\telep2.bmp 6 317 400"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "telephone = 1 then addbmp etoile1 ..\\..\\barre\\images\\textet.bmp 6 0 450"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400"
-            },
-            {
-              "id": 1,
-              "subtype": 21,
-              "param": "telephone = 1 then closedll"
-            },
-            {
-              "id": 1,
-              "subtype": 21,
-              "param": "telephone = 1 then runprj ..\\couleurs1\\couleurs1.vnp 4"
-            },
-            {
-              "id": 1,
-              "subtype": 21,
-              "param": "telephone = 1 then dec_var score 1"
-            },
-            {
-              "id": 1,
-              "subtype": 41,
-              "param": "score 6 15 415 160 470 0 <score>"
-            }
-          ],
-          "geometry": {
-            "cursorId": 100,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 322,
-                "y": 415
-              },
-              {
-                "x": 369,
-                "y": 449
-              }
-            ],
-            "extraFlag": 3
-          }
-        },
-        {
-          "index": 2,
-          "offset": 55811,
-          "commands": [],
-          "geometry": {
-            "cursorId": 100,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 545,
-                "y": 419
-              },
-              {
-                "x": 553,
-                "y": 425
-              }
-            ],
-            "extraFlag": 0
-          }
-        },
-        {
-          "index": -1,
-          "offset": 55891,
-          "commands": [
-            {
-              "id": 0,
-              "subtype": 0,
-              "param": "etoile1 ..\\..\\barre\\images\\texteam.bmp 6 0 452d"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "trans = 1 then addbmp active  ..\\..\\barre\\images\\trans.bmp 6 163 400"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "calc = 1 then addbmp calc1  ..\\..\\barre\\images\\calc1.bmp 6 246 400"
-            },
-            {
-              "id": 0,
-              "subtype": 21,
-              "param": "telephone = 1 then addbmp telep  ..\\..\\barre\\images\\telep.bmp 6 316 400"
-            },
-            {
-              "id": 3,
-              "subtype": 21,
-              "param": "sacados = 1 then addbmp sac  ..\\..\\barre\\images\\sac.bmp 6 384 400d"
-            }
-          ],
-          "geometry": {
-            "cursorId": 100,
-            "pointCount": 2,
-            "points": [
-              {
-                "x": 0,
-                "y": 401
-              },
-              {
-                "x": 639,
-                "y": 479
-              }
-            ],
-            "extraFlag": 0
-          },
-          "isRecovered": true
-        }
-      ],
-      "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0xD5A0"
-      ],
-      "parseMethod": "heuristic_recovered",
-      "sceneType": "unknown"
-    },
-    {
-      "id": 38,
       "offset": 56376,
       "length": 2367,
       "files": [
@@ -12076,12 +11538,15 @@
           }
         }
       ],
+      "objCount": 6,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 39,
+      "id": 38,
       "offset": 58743,
       "length": 929,
       "files": [
@@ -12314,12 +11779,15 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 40,
+      "id": 39,
       "offset": 59672,
       "length": 10834,
       "files": [
@@ -13901,12 +13369,17 @@
           "isRecovered": true
         }
       ],
-      "warnings": [],
+      "objCount": 17,
+      "objCountValid": false,
+      "confidence": "HIGH",
+      "warnings": [
+        "⚠️ P3: objCount mismatch - Déclaré: 17, Parsé: 18"
+      ],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 41,
+      "id": 40,
       "offset": 70506,
       "length": 191,
       "files": [],
@@ -13984,15 +13457,19 @@
           "isRecovered": true
         }
       ],
+      "objCount": 0,
+      "objCountValid": false,
+      "confidence": "MEDIUM",
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11406"
+        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11406",
+        "⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1"
       ],
       "parseMethod": "heuristic_recovered",
       "sceneType": "game",
       "sceneName": "Scène AVI"
     },
     {
-      "id": 42,
+      "id": 41,
       "offset": 70697,
       "length": 158,
       "files": [],
@@ -14027,15 +13504,16 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "confidence": "MEDIUM",
       "warnings": [
         "Aucune structure de Hotspot détectée. Mode fallback."
       ],
       "parseMethod": "heuristic",
-      "sceneType": "game",
+      "sceneType": "transition",
       "sceneName": "Scène d3"
     },
     {
-      "id": 43,
+      "id": 42,
       "offset": 70855,
       "length": 156,
       "files": [],
@@ -14064,15 +13542,18 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11540"
       ],
       "parseMethod": "heuristic_recovered",
-      "sceneType": "game",
+      "sceneType": "transition",
       "sceneName": "Scène d2"
     },
     {
-      "id": 44,
+      "id": 43,
       "offset": 71011,
       "length": 1208,
       "files": [
@@ -14261,12 +13742,15 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 45,
+      "id": 44,
       "offset": 72219,
       "length": 266,
       "files": [
@@ -14345,12 +13829,15 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 46,
+      "id": 45,
       "offset": 72485,
       "length": 914,
       "files": [
@@ -14589,6 +14076,9 @@
           }
         }
       ],
+      "objCount": 5,
+      "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11B94"
       ],
@@ -14596,7 +14086,7 @@
       "sceneType": "game"
     },
     {
-      "id": 47,
+      "id": 46,
       "offset": 73399,
       "length": 309,
       "files": [
@@ -14686,6 +14176,9 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "MEDIUM",
       "warnings": [
         "[RECOVERY] Table Hotspots détectée heuristiquement à 0x11F27"
       ],
@@ -14693,7 +14186,7 @@
       "sceneType": "credits"
     },
     {
-      "id": 48,
+      "id": 47,
       "offset": 73708,
       "length": 315,
       "files": [
@@ -14764,12 +14257,15 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 49,
+      "id": 48,
       "offset": 74023,
       "length": 411,
       "files": [
@@ -14782,19 +14278,25 @@
       ],
       "initScript": {
         "offset": 74105,
-        "length": 299,
+        "length": 0,
         "commands": []
       },
       "config": {
-        "offset": -1,
-        "flag": 0,
-        "ints": [],
-        "foundSignature": false
+        "offset": 74105,
+        "flag": 4294967259,
+        "ints": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "foundSignature": true
       },
       "hotspots": [
         {
-          "index": -1,
-          "offset": 74137,
+          "index": 0,
+          "offset": 74133,
           "commands": [
             {
               "id": 0,
@@ -14807,28 +14309,98 @@
               "param": "50 350 125 365 0 SORTIE"
             },
             {
+              "id": 1,
+              "subtype": 6,
+              "param": "7"
+            },
+            {
               "id": 3,
               "subtype": 21,
-              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54h"
+              "param": "score < 0 then runprj ..\\couleurs1\\couleurs1.vnp 54"
             }
           ],
           "geometry": {
-            "cursorId": 0,
+            "cursorId": 104,
             "pointCount": 0,
             "points": [],
             "extraFlag": 0
-          },
-          "isRecovered": true
+          }
+        },
+        {
+          "index": 1,
+          "offset": 74298,
+          "commands": [],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 0,
+            "points": [],
+            "extraFlag": 0
+          }
+        },
+        {
+          "index": 2,
+          "offset": 74314,
+          "commands": [],
+          "geometry": {
+            "cursorId": 100,
+            "pointCount": 10,
+            "points": [
+              {
+                "x": 2,
+                "y": 304
+              },
+              {
+                "x": 220,
+                "y": 308
+              },
+              {
+                "x": 189,
+                "y": 390
+              },
+              {
+                "x": 206,
+                "y": 398
+              },
+              {
+                "x": 429,
+                "y": 398
+              },
+              {
+                "x": 440,
+                "y": 390
+              },
+              {
+                "x": 406,
+                "y": 313
+              },
+              {
+                "x": 637,
+                "y": 309
+              },
+              {
+                "x": 638,
+                "y": 398
+              },
+              {
+                "x": 3,
+                "y": 399
+              }
+            ],
+            "extraFlag": 0
+          }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [
-        "[RECOVERY] Table Hotspots détectée heuristiquement à 0x122A4"
+        "[WEAK SIG] Signature config trouvée mais validation hotspot partielle"
       ],
-      "parseMethod": "heuristic_recovered",
+      "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 50,
+      "id": 49,
       "offset": 74434,
       "length": 134,
       "files": [
@@ -14857,12 +14429,15 @@
         "foundSignature": true
       },
       "hotspots": [],
+      "objCount": 0,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 51,
+      "id": 50,
       "offset": 74568,
       "length": 713,
       "files": [
@@ -15076,12 +14651,15 @@
           }
         }
       ],
+      "objCount": 3,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 52,
+      "id": 51,
       "offset": 75281,
       "length": 259,
       "files": [
@@ -15150,12 +14728,15 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 53,
+      "id": 52,
       "offset": 75540,
       "length": 296,
       "files": [
@@ -15226,12 +14807,15 @@
           }
         }
       ],
+      "objCount": 1,
+      "objCountValid": true,
+      "confidence": "HIGH",
       "warnings": [],
       "parseMethod": "signature",
       "sceneType": "game"
     },
     {
-      "id": 54,
+      "id": 53,
       "offset": 75836,
       "length": 338,
       "files": [
@@ -15291,6 +14875,7 @@
         "foundSignature": false
       },
       "hotspots": [],
+      "confidence": "MEDIUM",
       "warnings": [
         "Aucune structure de Hotspot détectée. Mode fallback."
       ],
@@ -15300,6 +14885,11 @@
     }
   ],
   "logs": [
+    "✓ P2: 1 signature(s) détectée(s): 0xFFFFFFDB",
+    "✓ Header VND parsé:  v2.13",
+    "  Résolution: 640x480",
+    "  Scene Count (header): 31",
+    "  EXIT_ID: 0, INDEX_ID: 0",
     "PHASE 1: Scanning pour les tables de fichiers...",
     "  [+] Scène détectée @ 0x6A (Table -> 0x115C)",
     "  [+] Scène détectée @ 0x116C (Table -> 0x11BE)",
@@ -15359,18 +14949,38 @@
     "\n--- Analyse Scène #4 (0x2442 -> 0x3B1B) ---",
     "\n--- Analyse Scène #5 (0x3B1B -> 0x471C) ---",
     "\n--- Analyse Scène #6 (0x471C -> 0x51FE) ---",
-    "  [WARN] Hotspot 3: coordonnées invalides (2311, 187)",
-    "  [PEEK] Commande reconstruite: \"35k\" @ 0x5842",
-    "  [PEEK] Commande reconstruite: \"48i\" @ 0x58c8",
-    "  [PEEK] Commande reconstruite: \"49i\" @ 0x594e",
-    "  [DEEP SCAN] 4 structures géométriques orphelines.",
-    "  [MERGE] Commande @0x5709 associée à Géométrie @0x5842",
-    "  [MERGE] Commande @0x59d6 associée à Géométrie @0x5a3a",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2311, 187)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2321, 137)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2352, 134)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2352, 119)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2413, 115)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2421, 137)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2422, 185)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2398, 197)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2392, 237)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2408, 248)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2414, 313)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2323, 319)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2302, 306)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2338, 282)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2326, 247)",
+    "  [INFO] Hotspot 3: scène scrollable détectée (2333, 200)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2004, 325)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2002, 42)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2068, 55)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2073, 95)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2073, 111)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2106, 131)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2094, 189)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2069, 288)",
+    "  [INFO] Hotspot 7: scène scrollable détectée (2065, 325)",
     "\n--- Analyse Scène #7 (0x51FE -> 0x5ACE) ---",
     "  [INFO] 1 tooltip(s) trouvé(s)",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 5, Parsé: 7",
     "\n--- Analyse Scène #8 (0x5ACE -> 0x61AA) ---",
     "\n--- Analyse Scène #9 (0x61AA -> 0x6331) ---",
     "  [INFO] 1 tooltip(s) trouvé(s)",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 2, Parsé: 3",
     "\n--- Analyse Scène #10 (0x6331 -> 0x65F8) ---",
     "\n--- Analyse Scène #11 (0x65F8 -> 0x6750) ---",
     "  [RECOVERY] Structure invalide sautée (+32 bytes) à 0x676b",
@@ -15404,25 +15014,73 @@
     "  [PEEK] Commande reconstruite: \"400d\" @ 0xdc04",
     "  [DEEP SCAN] 1 structures géométriques orphelines.",
     "  [MERGE] Commande @0xda53 associée à Géométrie @0xdc04",
-    "\n--- Analyse Scène #37 (0xC4AD -> 0xDC38) ---",
-    "\n--- Analyse Scène #38 (0xDC38 -> 0xE577) ---",
-    "\n--- Analyse Scène #39 (0xE577 -> 0xE918) ---",
-    "\n--- Analyse Scène #40 (0xE918 -> 0x1136A) ---",
-    "\n--- Analyse Scène #41 (0x1136A -> 0x11429) ---",
-    "\n--- Analyse Scène #42 (0x11429 -> 0x114C7) ---",
-    "\n--- Analyse Scène #43 (0x114C7 -> 0x11563) ---",
-    "\n--- Analyse Scène #44 (0x11563 -> 0x11A1B) ---",
-    "\n--- Analyse Scène #45 (0x11A1B -> 0x11B25) ---",
-    "\n--- Analyse Scène #46 (0x11B25 -> 0x11EB7) ---",
-    "\n--- Analyse Scène #47 (0x11EB7 -> 0x11FEC) ---",
-    "\n--- Analyse Scène #48 (0x11FEC -> 0x12127) ---",
-    "\n--- Analyse Scène #49 (0x12127 -> 0x122C2) ---",
-    "\n--- Analyse Scène #50 (0x122C2 -> 0x12348) ---",
-    "\n--- Analyse Scène #51 (0x12348 -> 0x12611) ---",
-    "\n--- Analyse Scène #52 (0x12611 -> 0x12714) ---",
-    "\n--- Analyse Scène #53 (0x12714 -> 0x1283C) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 3, Parsé: 4",
+    "  [INFO] Scène 'Toolbar' à 0xC4AD - Ignorée du mapping Slot.",
+    "\n--- Analyse Scène #37 (0xDC38 -> 0xE577) ---",
+    "\n--- Analyse Scène #38 (0xE577 -> 0xE918) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 17, Parsé: 18",
+    "\n--- Analyse Scène #39 (0xE918 -> 0x1136A) ---",
+    "  ⚠️ P3: objCount mismatch - Déclaré: 0, Parsé: 1",
+    "\n--- Analyse Scène #40 (0x1136A -> 0x11429) ---",
+    "\n--- Analyse Scène #41 (0x11429 -> 0x114C7) ---",
+    "\n--- Analyse Scène #42 (0x114C7 -> 0x11563) ---",
+    "\n--- Analyse Scène #43 (0x11563 -> 0x11A1B) ---",
+    "\n--- Analyse Scène #44 (0x11A1B -> 0x11B25) ---",
+    "\n--- Analyse Scène #45 (0x11B25 -> 0x11EB7) ---",
+    "\n--- Analyse Scène #46 (0x11EB7 -> 0x11FEC) ---",
+    "\n--- Analyse Scène #47 (0x11FEC -> 0x12127) ---",
+    "\n--- Analyse Scène #48 (0x12127 -> 0x122C2) ---",
+    "\n--- Analyse Scène #49 (0x122C2 -> 0x12348) ---",
+    "\n--- Analyse Scène #50 (0x12348 -> 0x12611) ---",
+    "\n--- Analyse Scène #51 (0x12611 -> 0x12714) ---",
+    "\n--- Analyse Scène #52 (0x12714 -> 0x1283C) ---",
     "  [FIX] Saut corruption après 'perdu.htm' (+58 bytes)",
-    "\n--- Analyse Scène #54 (0x1283C -> 0x1298E) ---"
+    "\n--- Analyse Scène #53 (0x1283C -> 0x1298E) ---",
+    "\n============================================================",
+    "P4: STATISTIQUES SCENE COUNT",
+    "============================================================",
+    "Header Scene Count: 31",
+    "Parser Scene Count: 54",
+    "Différence: +23",
+    "",
+    "Breakdown par type:",
+    "  credits        :   1 (  1.9%)",
+    "  empty          :   8 ( 14.8%)",
+    "  game           :  40 ( 74.1%)",
+    "  game_over      :   1 (  1.9%)",
+    "  global_vars    :   1 (  1.9%)",
+    "  options        :   1 (  1.9%)",
+    "  transition     :   2 (  3.7%)",
+    "",
+    "✓ Parser trouve +23 scènes supplémentaires",
+    "  Cause probable: Scènes système/variations non comptées dans header",
+    "============================================================",
+    "\n============================================================",
+    "P5: STATISTIQUES COMMAND SUBTYPES",
+    "============================================================",
+    "Total commandes: 1079",
+    "Subtypes uniques: 23/49",
+    "",
+    "Top 15 subtypes par fréquence:",
+    "   21 (0x15) IF_THEN        :   491 (45.51%)",
+    "   39 (0x27) FONT           :   131 (12.14%)",
+    "   38 (0x26) PLAYTEXT       :   130 (12.05%)",
+    "    0 (0x00) QUIT           :    73 ( 6.77%)",
+    "    6 (0x06) GOTO_SCENE     :    66 ( 6.12%)",
+    "    9 (0x09) VIDEO          :    34 ( 3.15%)",
+    "   22 (0x16) UNKNOWN_22     :    27 ( 2.50%)",
+    "   23 (0x17) UNKNOWN_23     :    24 ( 2.22%)",
+    "   10 (0x0A) UNKNOWN_10     :    18 ( 1.67%)",
+    "   31 (0x1F) UNKNOWN_31     :    16 ( 1.48%)",
+    "   11 (0x0B) UNKNOWN_11     :    15 ( 1.39%)",
+    "   36 (0x24) UNKNOWN_36     :    13 ( 1.20%)",
+    "    7 (0x07) UNKNOWN_7      :    12 ( 1.11%)",
+    "   16 (0x10) DELAY          :     7 ( 0.65%)",
+    "   32 (0x20) UNKNOWN_32     :     5 ( 0.46%)",
+    "",
+    "✓ Subtypes identifiés: 9/23",
+    "⚠️ Subtypes inconnus: 14/23",
+    "============================================================"
   ],
   "totalBytes": 76174
 }

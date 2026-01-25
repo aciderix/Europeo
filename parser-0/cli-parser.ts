@@ -66,8 +66,12 @@ function main() {
   result.scenes.forEach(scene => {
     const status = scene.parseMethod === 'signature' ? '✓' :
                    scene.parseMethod === 'heuristic_recovered' ? '~' : '?';
-    console.log(`[${status}] Scène #${scene.id} @ 0x${scene.offset.toString(16).toUpperCase()}`);
-    console.log(`    Fichiers: ${scene.files.length}, Hotspots: ${scene.hotspots.length}, Init: ${scene.initScript.commands.length}`);
+    const confIcon = scene.confidence === 'HIGH' ? '★' : scene.confidence === 'MEDIUM' ? '◐' : '○';
+    const objCountStr = scene.objCount !== undefined
+      ? ` (obj=${scene.objCount}${scene.objCountValid ? '✓' : '✗'})`
+      : '';
+    console.log(`[${status}${confIcon}] Scène #${scene.id} @ 0x${scene.offset.toString(16).toUpperCase()} - ${scene.sceneType}${scene.sceneName ? ` "${scene.sceneName}"` : ''}`);
+    console.log(`    Fichiers: ${scene.files.length}, Hotspots: ${scene.hotspots.length}${objCountStr}, Init: ${scene.initScript.commands.length}`);
     if (scene.warnings.length > 0) {
       scene.warnings.forEach(w => console.log(`    ⚠ ${w}`));
     }

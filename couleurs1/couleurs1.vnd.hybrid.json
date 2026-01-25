@@ -1,0 +1,559 @@
+{
+  "header": {
+    "magic": "VNFILE",
+    "version": "2.13",
+    "scene_count": 31,
+    "exit_id": 0,
+    "index_id": 0
+  },
+  "scenes": [
+    {
+      "id": 0,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x11A6",
+      "objCount": 6,
+      "hotspotsCount": 6,
+      "match": true
+    },
+    {
+      "id": 1,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x1AA1",
+      "objCount": 6,
+      "hotspotsCount": 6,
+      "match": true
+    },
+    {
+      "id": 2,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x1E92",
+      "objCount": 5,
+      "hotspotsCount": 5,
+      "match": true
+    },
+    {
+      "id": 3,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x2486",
+      "objCount": 26,
+      "hotspotsCount": 26,
+      "match": true
+    },
+    {
+      "id": 4,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x3B5F",
+      "objCount": 11,
+      "hotspotsCount": 11,
+      "match": true
+    },
+    {
+      "id": 5,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x4767",
+      "objCount": 8,
+      "hotspotsCount": 8,
+      "match": true
+    },
+    {
+      "id": 6,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x5243",
+      "objCount": 8,
+      "hotspotsCount": 3,
+      "match": false
+    },
+    {
+      "id": 7,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x5B0B",
+      "objCount": 5,
+      "hotspotsCount": 5,
+      "match": true
+    },
+    {
+      "id": 8,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x61F1",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 9,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x6373",
+      "objCount": 2,
+      "hotspotsCount": 2,
+      "match": true
+    },
+    {
+      "id": 10,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x663C",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 11,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x67AE",
+      "objCount": 17,
+      "hotspotsCount": 17,
+      "match": true
+    },
+    {
+      "id": 12,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x7482",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 13,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x7C47",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 14,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x7D42",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 15,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x7EC0",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 16,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x8110",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 17,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x8283",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 18,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x8377",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 19,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x846A",
+      "objCount": 2,
+      "hotspotsCount": 2,
+      "match": true
+    },
+    {
+      "id": 20,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x8574",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 21,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x87E9",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true
+    },
+    {
+      "id": 22,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x930F",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true
+    },
+    {
+      "id": 23,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x9CAA",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true
+    },
+    {
+      "id": 24,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0xA79C",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true
+    },
+    {
+      "id": 25,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0xB2AC",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 26,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0xDC77",
+      "objCount": 6,
+      "hotspotsCount": 6,
+      "match": true
+    },
+    {
+      "id": 27,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0xE5C3",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true
+    },
+    {
+      "id": 28,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0xE962",
+      "objCount": 17,
+      "hotspotsCount": 17,
+      "match": true
+    },
+    {
+      "id": 29,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x115A8",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true
+    },
+    {
+      "id": 30,
+      "confidence": "HIGH",
+      "method": "strict",
+      "offset": "0x11A6C",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true
+    },
+    {
+      "id": 31,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x92CB",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 32,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x9C66",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 33,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0xA5EF",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 34,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0xA758",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 35,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0xB270",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 36,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0xB438",
+      "objCount": "N/A",
+      "hotspotsCount": 0,
+      "match": false,
+      "sceneType": "options",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 37,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0xC4AD",
+      "objCount": 3,
+      "hotspotsCount": 4,
+      "match": false,
+      "sceneType": "unknown",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 38,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0xDC38",
+      "objCount": 6,
+      "hotspotsCount": 6,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 39,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0xE577",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 40,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0xE918",
+      "objCount": 17,
+      "hotspotsCount": 18,
+      "match": false,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 41,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x1136A",
+      "objCount": 0,
+      "hotspotsCount": 1,
+      "match": false,
+      "sceneType": "game",
+      "sceneName": "Sc\u00e8ne AVI"
+    },
+    {
+      "id": 42,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x11429",
+      "objCount": "N/A",
+      "hotspotsCount": 0,
+      "match": false,
+      "sceneType": "game",
+      "sceneName": "Sc\u00e8ne d3"
+    },
+    {
+      "id": 43,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x114C7",
+      "objCount": 0,
+      "hotspotsCount": 0,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "Sc\u00e8ne d2"
+    },
+    {
+      "id": 44,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x11563",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 45,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x11A1B",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 46,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x11B25",
+      "objCount": 5,
+      "hotspotsCount": 5,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 47,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x11EB7",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "sceneType": "credits",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 48,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x11FEC",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 49,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x12127",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 50,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x122C2",
+      "objCount": 0,
+      "hotspotsCount": 0,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 51,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x12348",
+      "objCount": 3,
+      "hotspotsCount": 3,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 52,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x12611",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 53,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x12714",
+      "objCount": 1,
+      "hotspotsCount": 1,
+      "match": true,
+      "sceneType": "game",
+      "sceneName": "N/A"
+    },
+    {
+      "id": 54,
+      "confidence": "MEDIUM",
+      "method": "heuristic",
+      "offset": "0x1283C",
+      "objCount": "N/A",
+      "hotspotsCount": 0,
+      "match": false,
+      "sceneType": "game_over",
+      "sceneName": "Fin Perdu"
+    }
+  ],
+  "stats": {
+    "total": 55,
+    "high_confidence": 31,
+    "medium_confidence": 24
+  }
+}

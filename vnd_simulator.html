@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VND Simulator - Europeo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        select, button, input {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        select, input {
+            background: #3a3a3a;
+            color: #fff;
+        }
+
+        button {
+            background: #4a90e2;
+            color: #fff;
+        }
+
+        button:hover {
+            background: #357abd;
+        }
+
+        .game-area {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+        }
+
+        .scene-container {
+            background: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scroll-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 6px;
+            z-index: 200;
+            display: none;
+        }
+
+        .scene-canvas.scrollable + .scroll-controls {
+            display: block;
+        }
+
+        .scroll-btn {
+            background: #4a90e2;
+            border: none;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            margin: 2px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .scroll-btn:hover {
+            background: #357abd;
+        }
+
+        .scroll-info {
+            color: #fff;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .scene-canvas {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background: #000;
+            margin: 0 auto;
+            overflow: auto;
+            border: 2px solid #4a90e2;
+        }
+
+        .scene-canvas.scrollable {
+            border-color: #ff8c00;
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+        }
+
+        .scene-content {
+            position: relative;
+            min-width: 800px;
+            min-height: 600px;
+        }
+
+        .scene-image {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .hotspot {
+            position: absolute;
+            cursor: pointer;
+            pointer-events: all;
+        }
+
+        .hotspot polygon,
+        .hotspot rect {
+            fill: rgba(255, 255, 0, 0.2);
+            stroke: rgba(255, 255, 0, 0.7);
+            stroke-width: 2;
+            transition: all 0.2s;
+        }
+
+        .hotspot:hover polygon,
+        .hotspot:hover rect {
+            fill: rgba(255, 255, 0, 0.4);
+            stroke: rgba(255, 255, 0, 1);
+            stroke-width: 3;
+        }
+
+        .hotspot-label {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .hotspot-tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 100;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: none;
+            line-height: 1.4;
+        }
+
+        .hotspot:hover .hotspot-tooltip {
+            display: block;
+        }
+
+        .tooltip-section {
+            margin: 6px 0;
+            padding: 4px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tooltip-section:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+
+        .tooltip-label {
+            color: #4a90e2;
+            font-weight: bold;
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .tooltip-value {
+            color: #fff;
+            font-size: 11px;
+        }
+
+        .playtext-overlay {
+            position: absolute;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Comic Sans MS', cursive;
+            z-index: 50;
+            white-space: pre-wrap;
+            max-width: 400px;
+        }
+
+        .hotspot-list {
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 12px;
+        }
+
+        .hotspot-item {
+            padding: 6px;
+            margin: 4px 0;
+            background: #1a1a1a;
+            border-radius: 4px;
+            cursor: pointer;
+            border-left: 3px solid #4a90e2;
+        }
+
+        .hotspot-item:hover {
+            background: #2a2a2a;
+            border-left-color: #50c878;
+        }
+
+        .hotspot-item.no-geometry {
+            border-left-color: #ff4444;
+            opacity: 0.6;
+        }
+
+        .text-overlay {
+            position: absolute;
+            color: #fff;
+            pointer-events: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .sidebar {
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+        .info-section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #4a90e2;
+        }
+
+        .info-item {
+            font-size: 14px;
+            margin-bottom: 5px;
+            padding: 5px;
+            background: #1a1a1a;
+            border-radius: 4px;
+        }
+
+        .variables {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .variable {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px;
+            font-size: 12px;
+        }
+
+        .log {
+            background: #1a1a1a;
+            padding: 10px;
+            border-radius: 4px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+        }
+
+        .log-goto { color: #4a90e2; }
+        .log-var { color: #50c878; }
+        .log-text { color: #ffd700; }
+        .log-error { color: #ff4444; }
+
+        .scene-info {
+            background: #1a1a1a;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .scene-size-info {
+            background: #ff8c00;
+            color: #000;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .debug-mode {
+            margin-top: 10px;
+        }
+
+        .debug-mode label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 VND Simulator - Europeo</h1>
+            <div class="controls">
+                <label for="file-input" style="background: #50c878; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                    📂 Choisir JSON...
+                </label>
+                <input type="file" id="file-input" accept=".json" onchange="loadVNDFromFile()" style="display: none;">
+                <span id="file-name" style="font-size: 12px; color: #888;">Aucun fichier</span>
+                <span style="color: #666;">|</span>
+                <span>Scène:</span>
+                <input type="number" id="scene-input" value="1" min="0" style="width: 80px;">
+                <button onclick="gotoSceneInput()">Aller</button>
+                <button onclick="resetGame()">Reset</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="scene-container">
+                <div class="scene-canvas" id="scene-canvas">
+                    <div class="scene-image">Sélectionnez un VND pour commencer</div>
+                </div>
+                <div class="scroll-controls" id="scroll-controls">
+                    <div style="display: grid; grid-template-columns: repeat(3, 40px); gap: 2px;">
+                        <div></div>
+                        <button class="scroll-btn" onclick="scrollScene('up')">↑</button>
+                        <div></div>
+                        <button class="scroll-btn" onclick="scrollScene('left')">←</button>
+                        <button class="scroll-btn" onclick="scrollScene('center')" title="Centrer">⊙</button>
+                        <button class="scroll-btn" onclick="scrollScene('right')">→</button>
+                        <div></div>
+                        <button class="scroll-btn" onclick="scrollScene('down')">↓</button>
+                        <div></div>
+                    </div>
+                    <div class="scroll-info" id="scroll-info">0, 0</div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-section">
+                    <h3>📍 Scène Actuelle</h3>
+                    <div class="scene-info" id="scene-info">
+                        Aucune scène chargée
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>📊 Variables</h3>
+                    <div class="info-item">
+                        Score: <span id="var-score">0</span>
+                    </div>
+                    <div class="variables" id="variables">
+                        <div class="variable">Aucune variable</div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>🎯 Hotspots</h3>
+                    <div class="hotspot-list" id="hotspot-list">
+                        <div style="color: #888; font-size: 11px;">Aucune scène chargée</div>
+                    </div>
+                </div>
+
+                <div class="info-section debug-mode">
+                    <label>
+                        <input type="checkbox" id="debug-checkbox" onchange="toggleDebug()" checked>
+                        Mode Debug (afficher hotspots)
+                    </label>
+                </div>
+
+                <div class="info-section">
+                    <h3>📝 Log</h3>
+                    <div class="log" id="log">
+                        <div class="log-entry">Simulateur initialisé</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // État du jeu
+        let gameState = {
+            vnd: null,
+            currentScene: null,
+            sceneId: 0,
+            variables: { score: 0 },
+            log: [],
+            debugMode: true  // Activé par défaut
+        };
+
+        // Charger un VND depuis fichier manuel
+        function loadVNDFromFile() {
+            const fileInput = document.getElementById('file-input');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                addLog('error', 'Aucun fichier sélectionné');
+                return;
+            }
+
+            // Afficher nom du fichier
+            document.getElementById('file-name').textContent = file.name;
+
+            // Lire le fichier JSON
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+
+                    gameState.vnd = data;
+                    gameState.sceneId = 1; // Commencer à la scène 1 (skip global_vars)
+
+                    addLog('goto', `VND chargé: ${file.name} (${data.scenes.length} scènes)`);
+
+                    resetGame();
+                } catch (error) {
+                    addLog('error', `Erreur parsing JSON: ${error.message}`);
+                }
+            };
+
+            reader.onerror = function() {
+                addLog('error', 'Erreur lecture fichier');
+            };
+
+            reader.readAsText(file);
+        }
+
+        // Charger un VND (ancienne méthode, désactivée)
+        async function loadVND() {
+            const select = document.getElementById('vnd-select');
+            const vndPath = select.value;
+
+            if (!vndPath) {
+                addLog('error', 'Veuillez sélectionner un VND');
+                return;
+            }
+
+            try {
+                const response = await fetch(vndPath);
+                const data = await response.json();
+
+                gameState.vnd = data;
+                gameState.sceneId = 1; // Commencer à la scène 1 (skip global_vars)
+
+                addLog('goto', `VND chargé: ${data.scenes.length} scènes`);
+
+                resetGame();
+            } catch (error) {
+                addLog('error', `Erreur chargement: ${error.message}`);
+            }
+        }
+
+        // Reset le jeu
+        function resetGame() {
+            if (!gameState.vnd) return;
+
+            gameState.variables = { score: 0 };
+            gameState.sceneId = 1;
+
+            addLog('goto', 'Jeu réinitialisé');
+            gotoScene(gameState.sceneId);
+        }
+
+        // Aller à une scène
+        function gotoScene(sceneId) {
+            if (!gameState.vnd) return;
+
+            const scene = gameState.vnd.scenes.find(s => s.id === sceneId);
+
+            if (!scene) {
+                addLog('error', `Scène ${sceneId} introuvable`);
+                return;
+            }
+
+            gameState.currentScene = scene;
+            gameState.sceneId = sceneId;
+
+            renderScene(scene);
+            addLog('goto', `→ Scène ${sceneId}: ${scene.sceneType}`);
+        }
+
+        // Aller à scène (input)
+        function gotoSceneInput() {
+            const input = document.getElementById('scene-input');
+            const sceneId = parseInt(input.value);
+            gotoScene(sceneId);
+        }
+
+        // Render une scène
+        function renderScene(scene) {
+            const canvas = document.getElementById('scene-canvas');
+            canvas.innerHTML = '';
+
+            // Calculer dimensions nécessaires
+            const dimensions = calculateSceneDimensions(scene);
+            const isScrollable = dimensions.width > 800 || dimensions.height > 600;
+
+            // Ajouter classe scrollable
+            if (isScrollable) {
+                canvas.classList.add('scrollable');
+                addLog('text', `📏 Scène scrollable: ${dimensions.width}×${dimensions.height}px`);
+            } else {
+                canvas.classList.remove('scrollable');
+            }
+
+            // Créer conteneur de scène avec dimensions ajustées
+            const sceneContent = document.createElement('div');
+            sceneContent.className = 'scene-content';
+            sceneContent.style.width = `${dimensions.width}px`;
+            sceneContent.style.height = `${dimensions.height}px`;
+
+            // Background
+            const bg = document.createElement('div');
+            bg.className = 'scene-image';
+            bg.style.width = '100%';
+            bg.style.height = '100%';
+
+            const files = scene.files.map(f => f.filename || f.name || f).filter(Boolean);
+            const mainFile = files[0] || 'empty';
+
+            bg.textContent = `📁 ${mainFile}`;
+            sceneContent.appendChild(bg);
+
+            // Info scène
+            const info = document.getElementById('scene-info');
+            const sizeInfo = isScrollable
+                ? `<div class="scene-size-info">⚠️ SCROLLABLE ${dimensions.width}×${dimensions.height}px</div>`
+                : '';
+
+            info.innerHTML = `
+                <strong>Scène #${scene.id}</strong> (${scene.sceneType})<br>
+                Fichiers: ${files.join(', ') || 'aucun'}<br>
+                Hotspots: ${scene.hotspots.length}
+                ${sizeInfo}
+            `;
+
+            // Render hotspots dans le conteneur
+            scene.hotspots.forEach((hotspot, index) => {
+                renderHotspot(sceneContent, hotspot, index, scene);
+            });
+
+            canvas.appendChild(sceneContent);
+
+            // Exécuter InitScript (commandes automatiques)
+            executeInitScript(scene);
+
+            // Update variables display
+            updateVariablesDisplay();
+
+            // Update hotspot list
+            updateHotspotList(scene);
+        }
+
+        // Calculer dimensions scène
+        function calculateSceneDimensions(scene) {
+            let maxX = 800;
+            let maxY = 600;
+
+            // Parcourir tous les hotspots
+            scene.hotspots.forEach(hotspot => {
+                const geometry = hotspot.geometry;
+                if (!geometry || !geometry.points || geometry.points.length < 2) {
+                    return;
+                }
+
+                geometry.points.forEach(point => {
+                    maxX = Math.max(maxX, point.x + 50); // +50 pour marge
+                    maxY = Math.max(maxY, point.y + 50);
+                });
+            });
+
+            return {
+                width: Math.ceil(maxX),
+                height: Math.ceil(maxY)
+            };
+        }
+
+        // Render un hotspot
+        function renderHotspot(canvas, hotspot, index, scene) {
+            const geometry = hotspot.geometry;
+
+            if (!geometry || !geometry.points || geometry.points.length < 2) {
+                return; // Pas de géométrie, hotspot système
+            }
+
+            // Calculer bounding box
+            const points = geometry.points;
+            const xs = points.map(p => p.x);
+            const ys = points.map(p => p.y);
+
+            const minX = Math.min(...xs);
+            const maxX = Math.max(...xs);
+            const minY = Math.min(...ys);
+            const maxY = Math.max(...ys);
+
+            const width = maxX - minX;
+            const height = maxY - minY;
+
+            // Créer div hotspot
+            const div = document.createElement('div');
+            div.className = 'hotspot';
+            div.style.left = `${minX}px`;
+            div.style.top = `${minY}px`;
+            div.style.width = `${width}px`;
+            div.style.height = `${height}px`;
+
+            // Mode debug: afficher ou masquer
+            if (!gameState.debugMode) {
+                div.style.opacity = '0';
+            }
+
+            // Créer SVG pour polygone
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            svg.style.position = 'absolute';
+            svg.style.top = '0';
+            svg.style.left = '0';
+            svg.style.pointerEvents = 'none';
+
+            // Créer polygone ou rectangle
+            if (points.length === 2) {
+                // Rectangle (2 points = coin haut-gauche et bas-droite)
+                const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                rect.setAttribute('x', 0);
+                rect.setAttribute('y', 0);
+                rect.setAttribute('width', width);
+                rect.setAttribute('height', height);
+                svg.appendChild(rect);
+            } else {
+                // Polygone (3+ points)
+                const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+                const pointsStr = points.map(p => `${p.x - minX},${p.y - minY}`).join(' ');
+                polygon.setAttribute('points', pointsStr);
+                svg.appendChild(polygon);
+            }
+
+            div.appendChild(svg);
+
+            // Label avec numéro
+            const label = document.createElement('div');
+            label.className = 'hotspot-label';
+            label.textContent = `#${index}`;
+            label.style.left = '4px';
+            label.style.top = '4px';
+            div.appendChild(label);
+
+            // Tooltip enrichi avec détails
+            const tooltip = createHotspotTooltip(hotspot, index, points.length);
+            tooltip.style.left = `${Math.min(width + 10, 300)}px`;
+            tooltip.style.top = '0';
+
+            div.appendChild(tooltip);
+
+            // Afficher textes PLAYTEXT directement sur la scène
+            displayHotspotTexts(canvas, hotspot, index);
+
+            div.onclick = () => executeHotspotCommands(hotspot, scene, index);
+
+            canvas.appendChild(div);
+        }
+
+        // Créer tooltip enrichi pour hotspot
+        function createHotspotTooltip(hotspot, index, pointCount) {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'hotspot-tooltip';
+
+            const commands = hotspot.commands || [];
+            const commandCount = commands.length;
+
+            // Sections du tooltip
+            let html = `<div class="tooltip-section">
+                <strong>Hotspot #${index}</strong><br>
+                Points: ${pointCount}
+            </div>`;
+
+            // Commandes par type
+            const gotoCommands = commands.filter(c => c.subtype === 6);
+            const textCommands = commands.filter(c => c.subtype === 38);
+            const ifCommands = commands.filter(c => c.subtype === 21);
+            const itemCommands = commands.filter(c => c.subtype === 28);
+            const otherCommands = commands.filter(c => ![6, 21, 28, 38].includes(c.subtype));
+
+            // GOTO
+            if (gotoCommands.length > 0) {
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Navigation (${gotoCommands.length})</div>
+                    ${gotoCommands.map(c => `<div class="tooltip-value">→ Scène ${c.param}</div>`).join('')}
+                </div>`;
+            }
+
+            // PLAYTEXT
+            if (textCommands.length > 0) {
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Textes (${textCommands.length})</div>`;
+
+                textCommands.forEach(c => {
+                    const match = c.param.match(/(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(.+)/);
+                    if (match) {
+                        const text = match[6];
+                        html += `<div class="tooltip-value">💬 "${text.substring(0, 40)}${text.length > 40 ? '...' : ''}"</div>`;
+                    }
+                });
+
+                html += `</div>`;
+            }
+
+            // IF-THEN
+            if (ifCommands.length > 0) {
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Conditions (${ifCommands.length})</div>`;
+
+                ifCommands.slice(0, 3).forEach(c => {
+                    const shortParam = c.param.substring(0, 50);
+                    html += `<div class="tooltip-value">⚡ ${shortParam}${c.param.length > 50 ? '...' : ''}</div>`;
+                });
+
+                if (ifCommands.length > 3) {
+                    html += `<div class="tooltip-value">... et ${ifCommands.length - 3} autres</div>`;
+                }
+
+                html += `</div>`;
+            }
+
+            // ITEM TRIGGER
+            if (itemCommands.length > 0) {
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Items</div>
+                    ${itemCommands.map(c => `<div class="tooltip-value">🎁 ${c.param}</div>`).join('')}
+                </div>`;
+            }
+
+            // Autres commandes
+            if (otherCommands.length > 0) {
+                const types = [...new Set(otherCommands.map(c => c.subtype))].join(', ');
+                html += `<div class="tooltip-section">
+                    <div class="tooltip-label">Autres (${otherCommands.length})</div>
+                    <div class="tooltip-value">Types: ${types}</div>
+                </div>`;
+            }
+
+            tooltip.innerHTML = html;
+            return tooltip;
+        }
+
+        // Afficher textes PLAYTEXT du hotspot
+        function displayHotspotTexts(canvas, hotspot, index) {
+            const commands = hotspot.commands || [];
+            const textCommands = commands.filter(c => c.subtype === 38);
+
+            textCommands.forEach((cmd, textIndex) => {
+                const match = cmd.param.match(/(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(.+)/);
+
+                if (match) {
+                    const [, x, y, w, h, flags, text] = match;
+
+                    const textDiv = document.createElement('div');
+                    textDiv.className = 'playtext-overlay';
+                    textDiv.style.left = `${x}px`;
+                    textDiv.style.top = `${y}px`;
+                    textDiv.style.maxWidth = `${Math.max(parseInt(w), 200)}px`;
+                    textDiv.textContent = text;
+                    textDiv.title = `Hotspot #${index} - Text #${textIndex}`;
+
+                    canvas.appendChild(textDiv);
+                }
+            });
+        }
+
+        // Mettre à jour la liste des hotspots
+        function updateHotspotList(scene) {
+            const listDiv = document.getElementById('hotspot-list');
+            listDiv.innerHTML = '';
+
+            if (!scene || !scene.hotspots || scene.hotspots.length === 0) {
+                listDiv.innerHTML = '<div style="color: #888; font-size: 11px;">Aucun hotspot</div>';
+                return;
+            }
+
+            scene.hotspots.forEach((hotspot, index) => {
+                const geometry = hotspot.geometry;
+                const hasGeometry = geometry && geometry.points && geometry.points.length >= 2;
+                const commandCount = hotspot.commands ? hotspot.commands.length : 0;
+
+                const item = document.createElement('div');
+                item.className = hasGeometry ? 'hotspot-item' : 'hotspot-item no-geometry';
+
+                const gotoTypes = hotspot.commands
+                    ? hotspot.commands.filter(c => c.subtype === 6).map(c => c.param)
+                    : [];
+
+                const gotoInfo = gotoTypes.length > 0 ? ` → ${gotoTypes[0]}` : '';
+
+                item.innerHTML = `
+                    <strong>#${index}</strong>
+                    ${hasGeometry ? '🎯' : '⚙️'}
+                    ${commandCount} cmd${gotoInfo}
+                `;
+
+                item.onclick = () => {
+                    if (hasGeometry) {
+                        addLog('text', `Info Hotspot #${index}: ${commandCount} commandes`);
+                    }
+                };
+
+                listDiv.appendChild(item);
+            });
+        }
+
+        // Exécuter InitScript
+        function executeInitScript(scene) {
+            if (!scene.initScript || !scene.initScript.commands) return;
+
+            scene.initScript.commands.forEach(cmd => {
+                executeCommand(cmd, null);
+            });
+        }
+
+        // Exécuter commandes hotspot
+        function executeHotspotCommands(hotspot, scene, index) {
+            if (!hotspot.commands || hotspot.commands.length === 0) return;
+
+            const commandTypes = [...new Set(hotspot.commands.map(c => c.subtype))].join(', ');
+            addLog('text', `🖱️ Clic Hotspot #${index || '?'} (${hotspot.commands.length} commandes, types: ${commandTypes})`);
+
+            hotspot.commands.forEach(cmd => {
+                executeCommand(cmd, scene);
+            });
+        }
+
+        // Exécuter une commande
+        function executeCommand(cmd, scene) {
+            const subtype = cmd.subtype;
+            const param = cmd.param || '';
+
+            switch (subtype) {
+                case 0: // QUIT
+                    addLog('goto', `QUIT: ${param}`);
+                    break;
+
+                case 6: // GOTO_SCENE
+                    handleGotoScene(param);
+                    break;
+
+                case 21: // IF-THEN
+                    handleIfThen(param, scene);
+                    break;
+
+                case 22: // SET_VAR
+                    handleSetVar(param);
+                    break;
+
+                case 23: // INC_VAR
+                    handleIncVar(param);
+                    break;
+
+                case 24: // DEC_VAR (score operation)
+                    handleDecVar(param);
+                    break;
+
+                case 28: // ITEM TRIGGER
+                    handleItemTrigger(param, scene);
+                    break;
+
+                case 38: // PLAYTEXT
+                    handlePlayText(param);
+                    break;
+
+                case 39: // FONT
+                    // Ignore pour l'instant
+                    break;
+
+                default:
+                    // Ignore autres types
+                    break;
+            }
+        }
+
+        // GOTO_SCENE
+        function handleGotoScene(param) {
+            const trimmed = param.trim();
+
+            if (trimmed.startsWith('+')) {
+                const offset = parseInt(trimmed.substring(1));
+                gotoScene(gameState.sceneId + offset);
+            } else if (trimmed.startsWith('-')) {
+                const offset = parseInt(trimmed.substring(1));
+                gotoScene(gameState.sceneId - offset);
+            } else {
+                const targetScene = parseInt(trimmed);
+                if (!isNaN(targetScene)) {
+                    gotoScene(targetScene);
+                }
+            }
+        }
+
+        // IF-THEN
+        function handleIfThen(param, scene) {
+            // Parser simple IF-THEN
+            // Format: "variable = value then command"
+            const parts = param.split(' then ');
+            if (parts.length !== 2) return;
+
+            const condition = parts[0].trim();
+            const action = parts[1].trim();
+
+            // Évaluer condition
+            if (evaluateCondition(condition)) {
+                // Exécuter action (simplifié)
+                if (action.startsWith('runprj')) {
+                    addLog('goto', `IF-THEN: ${action}`);
+                } else if (action.startsWith('set_var')) {
+                    const match = action.match(/set_var (\w+) (-?\d+)/);
+                    if (match) {
+                        const [, varName, value] = match;
+                        gameState.variables[varName] = parseInt(value);
+                        addLog('var', `${varName} = ${value}`);
+                        updateVariablesDisplay();
+                    }
+                } else if (action.startsWith('inc_var')) {
+                    const match = action.match(/inc_var (\w+) (\d+)/);
+                    if (match) {
+                        const [, varName, amount] = match;
+                        gameState.variables[varName] = (gameState.variables[varName] || 0) + parseInt(amount);
+                        addLog('var', `${varName} +${amount}`);
+                        updateVariablesDisplay();
+                    }
+                } else if (action.startsWith('scene')) {
+                    const sceneId = parseInt(action.replace('scene', '').trim());
+                    if (!isNaN(sceneId)) {
+                        gotoScene(sceneId);
+                    }
+                }
+            }
+        }
+
+        // Évaluer condition
+        function evaluateCondition(condition) {
+            // Format: "variable = value" ou "variable < value" etc.
+            const operators = ['>=', '<=', '!=', '=', '<', '>'];
+
+            for (const op of operators) {
+                if (condition.includes(op)) {
+                    const [left, right] = condition.split(op).map(s => s.trim());
+                    const leftVal = gameState.variables[left] || 0;
+                    const rightVal = parseInt(right) || 0;
+
+                    switch (op) {
+                        case '=': return leftVal === rightVal;
+                        case '!=': return leftVal !== rightVal;
+                        case '<': return leftVal < rightVal;
+                        case '>': return leftVal > rightVal;
+                        case '<=': return leftVal <= rightVal;
+                        case '>=': return leftVal >= rightVal;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        // SET_VAR
+        function handleSetVar(param) {
+            const parts = param.split(' ');
+            if (parts.length >= 2) {
+                const varName = parts[0];
+                const value = parseInt(parts[1]);
+                gameState.variables[varName] = value;
+                addLog('var', `${varName} = ${value}`);
+                updateVariablesDisplay();
+            }
+        }
+
+        // INC_VAR
+        function handleIncVar(param) {
+            const parts = param.split(' ');
+            if (parts.length >= 1) {
+                const varName = parts[0];
+                const amount = parts.length > 1 ? parseInt(parts[1]) : 1;
+                gameState.variables[varName] = (gameState.variables[varName] || 0) + amount;
+                addLog('var', `${varName} +${amount}`);
+                updateVariablesDisplay();
+            }
+        }
+
+        // DEC_VAR (Type 24 - pour le score)
+        function handleDecVar(param) {
+            // Format: "score 1" = perte de 1 point
+            const parts = param.split(' ');
+            if (parts.length >= 2) {
+                const varName = parts[0];
+                const amount = parseInt(parts[1]);
+
+                if (varName === 'score') {
+                    gameState.variables.score = (gameState.variables.score || 0) - amount;
+                    addLog('var', `${varName} -${amount} (pénalité)`);
+                } else {
+                    // Peut être INC_VAR pour d'autres variables
+                    gameState.variables[varName] = (gameState.variables[varName] || 0) + amount;
+                    addLog('var', `${varName} +${amount}`);
+                }
+
+                updateVariablesDisplay();
+            }
+        }
+
+        // ITEM TRIGGER
+        function handleItemTrigger(param, scene) {
+            // Type 28: "miel" etc.
+            addLog('text', `🎁 Trigger: ${param}`);
+
+            // TODO: Logique conditionnelle basée sur variables
+            // Pour "miel": vérifier variable "api"
+            if (param === 'miel') {
+                const api = gameState.variables.api || 0;
+
+                if (api !== 2) {
+                    // Pas de tenue apiculteur → Scene #28 (abeille attaque)
+                    addLog('error', '⚠️ Abeille attaque! (pas de tenue)');
+                    gotoScene(28);
+                } else {
+                    // Tenue OK → Collecter miel
+                    gameState.variables.miel = 1;
+                    addLog('var', 'Miel collecté!');
+                    updateVariablesDisplay();
+                }
+            }
+        }
+
+        // PLAYTEXT
+        function handlePlayText(param) {
+            // Format: "x y w h flags text"
+            const match = param.match(/(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(.+)/);
+
+            if (match) {
+                const [, x, y, , , , text] = match;
+                addLog('text', `💬 "${text}"`);
+
+                // Afficher texte sur canvas
+                const canvas = document.getElementById('scene-canvas');
+                const textDiv = document.createElement('div');
+                textDiv.className = 'text-overlay';
+                textDiv.style.left = `${x}px`;
+                textDiv.style.top = `${y}px`;
+                textDiv.textContent = text;
+
+                canvas.appendChild(textDiv);
+
+                // Retirer après 3 secondes
+                setTimeout(() => textDiv.remove(), 3000);
+            }
+        }
+
+        // Scroll scène
+        function scrollScene(direction) {
+            const canvas = document.getElementById('scene-canvas');
+            const step = 100; // Pixels par clic
+
+            switch (direction) {
+                case 'up':
+                    canvas.scrollTop -= step;
+                    break;
+                case 'down':
+                    canvas.scrollTop += step;
+                    break;
+                case 'left':
+                    canvas.scrollLeft -= step;
+                    break;
+                case 'right':
+                    canvas.scrollLeft += step;
+                    break;
+                case 'center':
+                    canvas.scrollTop = 0;
+                    canvas.scrollLeft = 0;
+                    break;
+            }
+
+            updateScrollInfo();
+        }
+
+        // Mettre à jour info scroll
+        function updateScrollInfo() {
+            const canvas = document.getElementById('scene-canvas');
+            const info = document.getElementById('scroll-info');
+
+            if (info) {
+                info.textContent = `${Math.round(canvas.scrollLeft)}, ${Math.round(canvas.scrollTop)}`;
+            }
+        }
+
+        // Initialiser event listeners scroll
+        function initScrollListeners() {
+            const canvas = document.getElementById('scene-canvas');
+
+            canvas.addEventListener('scroll', updateScrollInfo);
+        }
+
+        // Toggle debug mode
+        function toggleDebug() {
+            gameState.debugMode = document.getElementById('debug-checkbox').checked;
+
+            if (gameState.currentScene) {
+                renderScene(gameState.currentScene);
+            }
+        }
+
+        // Update variables display
+        function updateVariablesDisplay() {
+            document.getElementById('var-score').textContent = gameState.variables.score || 0;
+
+            const varsDiv = document.getElementById('variables');
+            varsDiv.innerHTML = '';
+
+            const vars = Object.keys(gameState.variables).filter(k => k !== 'score');
+
+            if (vars.length === 0) {
+                varsDiv.innerHTML = '<div class="variable">Aucune variable</div>';
+                return;
+            }
+
+            vars.forEach(varName => {
+                const div = document.createElement('div');
+                div.className = 'variable';
+                div.innerHTML = `<span>${varName}</span><span>${gameState.variables[varName]}</span>`;
+                varsDiv.appendChild(div);
+            });
+        }
+
+        // Add log entry
+        function addLog(type, message) {
+            const logDiv = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+
+            // Garder max 50 entrées
+            while (logDiv.children.length > 50) {
+                logDiv.removeChild(logDiv.firstChild);
+            }
+        }
+
+        // Initialisation
+        console.log('VND Simulator chargé');
+        initScrollListeners();
+    </script>
+</body>
+</html>
