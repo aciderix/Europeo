@@ -74,6 +74,45 @@
             background: #2a2a2a;
             border-radius: 8px;
             overflow: hidden;
+            position: relative;
+        }
+
+        .scroll-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 6px;
+            z-index: 200;
+            display: none;
+        }
+
+        .scene-canvas.scrollable + .scroll-controls {
+            display: block;
+        }
+
+        .scroll-btn {
+            background: #4a90e2;
+            border: none;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            margin: 2px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .scroll-btn:hover {
+            background: #357abd;
+        }
+
+        .scroll-info {
+            color: #fff;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 5px;
         }
 
         .scene-canvas {
@@ -82,7 +121,19 @@
             height: 600px;
             background: #000;
             margin: 0 auto;
-            overflow: hidden;
+            overflow: auto;
+            border: 2px solid #4a90e2;
+        }
+
+        .scene-canvas.scrollable {
+            border-color: #ff8c00;
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+        }
+
+        .scene-content {
+            position: relative;
+            min-width: 800px;
+            min-height: 600px;
         }
 
         .scene-image {
@@ -243,6 +294,17 @@
             font-size: 12px;
         }
 
+        .scene-size-info {
+            background: #ff8c00;
+            color: #000;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
         .debug-mode {
             margin-top: 10px;
         }
@@ -277,6 +339,20 @@
             <div class="scene-container">
                 <div class="scene-canvas" id="scene-canvas">
                     <div class="scene-image">Sélectionnez un VND pour commencer</div>
+                </div>
+                <div class="scroll-controls" id="scroll-controls">
+                    <div style="display: grid; grid-template-columns: repeat(3, 40px); gap: 2px;">
+                        <div></div>
+                        <button class="scroll-btn" onclick="scrollScene('up')">↑</button>
+                        <div></div>
+                        <button class="scroll-btn" onclick="scrollScene('left')">←</button>
+                        <button class="scroll-btn" onclick="scrollScene('center')" title="Centrer">⊙</button>
+                        <button class="scroll-btn" onclick="scrollScene('right')">→</button>
+                        <div></div>
+                        <button class="scroll-btn" onclick="scrollScene('down')">↓</button>
+                        <div></div>
+                    </div>
+                    <div class="scroll-info" id="scroll-info">0, 0</div>
                 </div>
             </div>
 
@@ -437,28 +513,55 @@
             const canvas = document.getElementById('scene-canvas');
             canvas.innerHTML = '';
 
+            // Calculer dimensions nécessaires
+            const dimensions = calculateSceneDimensions(scene);
+            const isScrollable = dimensions.width > 800 || dimensions.height > 600;
+
+            // Ajouter classe scrollable
+            if (isScrollable) {
+                canvas.classList.add('scrollable');
+                addLog('text', `📏 Scène scrollable: ${dimensions.width}×${dimensions.height}px`);
+            } else {
+                canvas.classList.remove('scrollable');
+            }
+
+            // Créer conteneur de scène avec dimensions ajustées
+            const sceneContent = document.createElement('div');
+            sceneContent.className = 'scene-content';
+            sceneContent.style.width = `${dimensions.width}px`;
+            sceneContent.style.height = `${dimensions.height}px`;
+
             // Background
             const bg = document.createElement('div');
             bg.className = 'scene-image';
+            bg.style.width = '100%';
+            bg.style.height = '100%';
 
             const files = scene.files.map(f => f.filename || f.name || f).filter(Boolean);
             const mainFile = files[0] || 'empty';
 
             bg.textContent = `📁 ${mainFile}`;
-            canvas.appendChild(bg);
+            sceneContent.appendChild(bg);
 
             // Info scène
             const info = document.getElementById('scene-info');
+            const sizeInfo = isScrollable
+                ? `<div class="scene-size-info">⚠️ SCROLLABLE ${dimensions.width}×${dimensions.height}px</div>`
+                : '';
+
             info.innerHTML = `
                 <strong>Scène #${scene.id}</strong> (${scene.sceneType})<br>
                 Fichiers: ${files.join(', ') || 'aucun'}<br>
                 Hotspots: ${scene.hotspots.length}
+                ${sizeInfo}
             `;
 
-            // Render hotspots
+            // Render hotspots dans le conteneur
             scene.hotspots.forEach((hotspot, index) => {
-                renderHotspot(canvas, hotspot, index, scene);
+                renderHotspot(sceneContent, hotspot, index, scene);
             });
+
+            canvas.appendChild(sceneContent);
 
             // Exécuter InitScript (commandes automatiques)
             executeInitScript(scene);
@@ -468,6 +571,30 @@
 
             // Update hotspot list
             updateHotspotList(scene);
+        }
+
+        // Calculer dimensions scène
+        function calculateSceneDimensions(scene) {
+            let maxX = 800;
+            let maxY = 600;
+
+            // Parcourir tous les hotspots
+            scene.hotspots.forEach(hotspot => {
+                const geometry = hotspot.geometry;
+                if (!geometry || !geometry.points || geometry.points.length < 2) {
+                    return;
+                }
+
+                geometry.points.forEach(point => {
+                    maxX = Math.max(maxX, point.x + 50); // +50 pour marge
+                    maxY = Math.max(maxY, point.y + 50);
+                });
+            });
+
+            return {
+                width: Math.ceil(maxX),
+                height: Math.ceil(maxY)
+            };
         }
 
         // Render un hotspot
@@ -849,6 +976,50 @@
             }
         }
 
+        // Scroll scène
+        function scrollScene(direction) {
+            const canvas = document.getElementById('scene-canvas');
+            const step = 100; // Pixels par clic
+
+            switch (direction) {
+                case 'up':
+                    canvas.scrollTop -= step;
+                    break;
+                case 'down':
+                    canvas.scrollTop += step;
+                    break;
+                case 'left':
+                    canvas.scrollLeft -= step;
+                    break;
+                case 'right':
+                    canvas.scrollLeft += step;
+                    break;
+                case 'center':
+                    canvas.scrollTop = 0;
+                    canvas.scrollLeft = 0;
+                    break;
+            }
+
+            updateScrollInfo();
+        }
+
+        // Mettre à jour info scroll
+        function updateScrollInfo() {
+            const canvas = document.getElementById('scene-canvas');
+            const info = document.getElementById('scroll-info');
+
+            if (info) {
+                info.textContent = `${Math.round(canvas.scrollLeft)}, ${Math.round(canvas.scrollTop)}`;
+            }
+        }
+
+        // Initialiser event listeners scroll
+        function initScrollListeners() {
+            const canvas = document.getElementById('scene-canvas');
+
+            canvas.addEventListener('scroll', updateScrollInfo);
+        }
+
         // Toggle debug mode
         function toggleDebug() {
             gameState.debugMode = document.getElementById('debug-checkbox').checked;
@@ -898,6 +1069,7 @@
 
         // Initialisation
         console.log('VND Simulator chargé');
+        initScrollListeners();
     </script>
 </body>
 </html>
