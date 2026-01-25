@@ -197,25 +197,12 @@
         <div class="header">
             <h1>🎮 VND Simulator - Europeo</h1>
             <div class="controls">
-                <select id="vnd-select">
-                    <option value="">Sélectionner un VND...</option>
-                    <option value="autr/autr.vnd.parsed.json">Autriche</option>
-                    <option value="couleurs1/couleurs1.vnd.parsed.json">Couleurs 1</option>
-                    <option value="allem/allem.vnd.parsed.json">Allemagne</option>
-                    <option value="belge/belge.vnd.parsed.json">Belgique</option>
-                    <option value="danem/danem.vnd.parsed.json">Danemark</option>
-                    <option value="ecosse/ecosse.vnd.parsed.json">Écosse</option>
-                    <option value="espa/espa.vnd.parsed.json">Espagne</option>
-                    <option value="finlan/finlan.vnd.parsed.json">Finlande</option>
-                    <option value="france/france.vnd.parsed.json">France</option>
-                    <option value="grece/grece.vnd.parsed.json">Grèce</option>
-                    <option value="holl/holl.vnd.parsed.json">Pays-Bas</option>
-                    <option value="irland/irland.vnd.parsed.json">Irlande</option>
-                    <option value="italie/italie.vnd.parsed.json">Italie</option>
-                    <option value="portu/portu.vnd.parsed.json">Portugal</option>
-                    <option value="suede/suede.vnd.parsed.json">Suède</option>
-                </select>
-                <button onclick="loadVND()">Charger</button>
+                <label for="file-input" style="background: #50c878; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                    📂 Choisir JSON...
+                </label>
+                <input type="file" id="file-input" accept=".json" onchange="loadVNDFromFile()" style="display: none;">
+                <span id="file-name" style="font-size: 12px; color: #888;">Aucun fichier</span>
+                <span style="color: #666;">|</span>
                 <span>Scène:</span>
                 <input type="number" id="scene-input" value="1" min="0" style="width: 80px;">
                 <button onclick="gotoSceneInput()">Aller</button>
@@ -276,7 +263,45 @@
             debugMode: false
         };
 
-        // Charger un VND
+        // Charger un VND depuis fichier manuel
+        function loadVNDFromFile() {
+            const fileInput = document.getElementById('file-input');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                addLog('error', 'Aucun fichier sélectionné');
+                return;
+            }
+
+            // Afficher nom du fichier
+            document.getElementById('file-name').textContent = file.name;
+
+            // Lire le fichier JSON
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+
+                    gameState.vnd = data;
+                    gameState.sceneId = 1; // Commencer à la scène 1 (skip global_vars)
+
+                    addLog('goto', `VND chargé: ${file.name} (${data.scenes.length} scènes)`);
+
+                    resetGame();
+                } catch (error) {
+                    addLog('error', `Erreur parsing JSON: ${error.message}`);
+                }
+            };
+
+            reader.onerror = function() {
+                addLog('error', 'Erreur lecture fichier');
+            };
+
+            reader.readAsText(file);
+        }
+
+        // Charger un VND (ancienne méthode, désactivée)
         async function loadVND() {
             const select = document.getElementById('vnd-select');
             const vndPath = select.value;
